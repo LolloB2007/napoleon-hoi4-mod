@@ -46,8 +46,7 @@ Build the secondary powers into proper 1789 countries rather than allowing vanil
 
 A 1789 start produces a broadly credible European political map and the major secondary states no longer behave like renamed 1936 countries.
 
-
-> **Implementation note:** Baseline diplomatic opinions are included here. Active wars, guarantees, subjects and the full 1789 diplomatic structure remain Milestone 2. Runtime smoke-testing remains required before declaring the wider campaign slice complete.
+> **Implementation note:** Baseline diplomatic opinions are included here. Runtime smoke-testing remains required before declaring the wider campaign slice complete.
 
 ---
 
@@ -57,24 +56,26 @@ Turn historical relationships and ongoing conflicts into actual game state rathe
 
 ### Active wars
 
-- [ ] Russo–Turkish War
-- [ ] Russo–Swedish War
-- [ ] Austrian involvement against the Ottoman Empire where appropriate
+- [x] Russo–Turkish War
+- [x] Russo–Swedish War
+- [x] Austrian involvement against the Ottoman Empire where appropriate
 
 ### Diplomatic structure
 
-- [ ] British–Hanoverian relationship
-- [ ] Austrian Habsburg possessions and dependencies
-- [ ] Polish geopolitical situation
-- [ ] Relevant guarantees
-- [ ] Relevant alliances
-- [ ] Relevant subjects / personal-union-style relationships
-- [ ] Holy Roman Empire relationships where useful to gameplay
-- [ ] Initial rivalries and strategic hostility
+- [x] British–Hanoverian relationship
+- [x] Austrian Habsburg possessions and dependencies
+- [x] Polish geopolitical situation
+- [x] Relevant guarantees
+- [x] Relevant alliances
+- [x] Relevant subjects / personal-union-style relationships
+- [x] Holy Roman Empire relationships where useful to gameplay
+- [x] Initial rivalries and strategic hostility
 
 ### Done when
 
 The diplomatic screen on 5 May 1789 tells roughly the same geopolitical story as the historical situation, and the wars already underway are mechanically real.
+
+> **Implementation note:** The opening wars are deliberately bounded scripted conflicts rather than normal HOI4 total wars. The Theatre War ends by July 1789, the Russo–Swedish War by the Treaty of Värälä, the Austro–Turkish War by Sistova, and the Russo–Turkish War by Jassy. An `on_capitulation_immediate` guard applies the same limited settlements early if a belligerent collapses, preventing ahistorical full annexations. Jassy transfers only the Odessa/Yedisan state abstraction to Russia. Runtime smoke-testing remains pending.
 
 ---
 
@@ -453,7 +454,7 @@ The preferred development method is chronological. Each era should become genuin
 ## Phase A — 1789–1795
 
 - [x] Complete the 1789 starting world
-- [ ] Real starting diplomacy and wars
+- [x] Real starting diplomacy and wars
 - [ ] Full early French Revolution
 - [ ] Constitutional / Republican / Royalist route separation
 - [ ] First Coalition
@@ -469,7 +470,7 @@ The milestone is achieved when:
 
 - [ ] Europe looks broadly correct on 5 May 1789
 - [ ] Starting armies exist and function
-- [ ] Existing wars are real
+- [x] Existing wars are real
 - [ ] France can pursue Constitutional, Republican or Royalist routes without route contamination
 - [ ] Revolutionary Wars occur coherently
 - [ ] Britain, Austria, Prussia and Russia react plausibly
@@ -552,7 +553,7 @@ Once this milestone is reached, infrastructure work should stop unless a later f
 | Major-power standing OOBs | Restored |
 | French route hardening | Initial pass completed |
 | 1789 secondary-power setup | Implemented; runtime validation pending |
-| 1789 diplomatic setup | Not started |
+| 1789 diplomatic setup | Implemented with bounded treaty system; runtime validation pending |
 | France deep-content pass | Not started |
 | Coalition system | Not started |
 | Britain deep-content pass | Not started |
