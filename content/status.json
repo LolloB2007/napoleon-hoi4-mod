@@ -1,0 +1,16 @@
+{
+  "stage": "Repository source-contract and build pass",
+  "milestones": {
+    "1": "Country setup exists; engine verification pending",
+    "2": "Opening wars and bounded treaties exist; engine verification pending",
+    "3": "29 existing French focuses; expansion target at least 450",
+    "4": "Not implemented beyond opening-war diplomacy",
+    "5": "Existing major-power trees; deep-content pass pending",
+    "6": "Design recorded; reusable systems pending",
+    "7": "Blocked on representative in-game campaign measurements",
+    "8": "Country setup only; deep campaigns and formables pending",
+    "9": "Placeholder assets only; presentation and rights review pending"
+  },
+  "delivered": ["68-country source namespace and placeholder flags", "Explicit ideology subtypes and referenced custom leader traits", "Deterministic source-to-engine build with drift checking", "Comment-aware parser and focus dependency cycle checks"],
+  "tests": "12 unit tests passed locally; no HOI4 process was executed. CI verifies the committed source separately."
+}
