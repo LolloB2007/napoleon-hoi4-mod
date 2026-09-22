@@ -1,0 +1,193 @@
+# Napoleonic Era — Support companies
+# Slot into the division designer as 'support' battalions.
+
+sub_units = {
+
+	# === SAPPERS / ENGINEERS ===
+	# River crossings, sieges, field fortifications.
+	sapper_company = {
+		abbreviation = "SAP"
+		sprite = engineer
+		map_icon_category = infantry
+		priority = 400
+		ai_priority = 100
+		active = yes
+		type = { infantry support }
+		group = support
+
+		categories = { category_front_line category_support_battalions category_army }
+
+		combat_width = 0
+
+		max_strength = 6
+		max_organisation = 40
+		default_morale = 0.40
+		manpower = 300
+		training_time = 120
+		weight = 0.3
+		supply_consumption = 0.05
+
+		need = { nap_support_equipment = 10 }
+
+		soft_attack = 1.0
+		defense = 8
+		breakthrough = 2.0
+
+		# Engineer bonuses applied via division modifier from a brigade tag
+		river = { attack = 0.30 movement = 0.20 }
+		fort = { attack = 0.20 }
+		marsh = { movement = 0.20 }
+	}
+
+	# === TRAIN / WAGON BATTALION ===
+	# Supply wagons. Extends operational range. Without this, armies starve fast.
+	train_battalion = {
+		abbreviation = "TRN"
+		sprite = engineer
+		map_icon_category = infantry
+		priority = 500
+		ai_priority = 100
+		active = yes
+		type = { infantry support }
+		group = support
+
+		categories = { category_front_line category_support_battalions category_army }
+
+		combat_width = 0
+
+		max_strength = 5
+		max_organisation = 25
+		default_morale = 0.20
+		manpower = 250
+		training_time = 60
+		weight = 0.4
+		supply_consumption = -0.30  # NEGATIVE — provides supply, see designer modifiers
+
+		need = { nap_support_equipment = 20 }
+
+		soft_attack = 0.2
+		defense = 4
+		breakthrough = 0.5
+	}
+
+	# === FIELD HOSPITAL ===
+	# Reduces manpower loss + speeds recovery. Surgeons (Larrey-style flying ambulances).
+	field_hospital = {
+		abbreviation = "HSP"
+		sprite = engineer
+		map_icon_category = infantry
+		priority = 400
+		ai_priority = 80
+		active = yes
+		type = { infantry support }
+		group = support
+
+		categories = { category_front_line category_support_battalions category_army }
+
+		combat_width = 0
+
+		max_strength = 4
+		max_organisation = 30
+		default_morale = 0.30
+		manpower = 200
+		training_time = 100
+		weight = 0.2
+		supply_consumption = 0.04
+
+		need = { nap_support_equipment = 10 }
+
+		soft_attack = 0.1
+		defense = 6
+	}
+
+	# === STAFF / HEADQUARTERS COMPANY ===
+	# Better order coordination — boosts org regain & planning. Napoleon's chief-of-staff system (Berthier).
+	staff_company = {
+		abbreviation = "HQ"
+		sprite = engineer
+		map_icon_category = infantry
+		priority = 600
+		ai_priority = 80
+		active = yes
+		type = { infantry support }
+		group = support
+
+		categories = { category_front_line category_support_battalions category_army }
+
+		combat_width = 0
+
+		max_strength = 3
+		max_organisation = 50
+		default_morale = 0.50
+		manpower = 150
+		training_time = 200
+		weight = 0.2
+		supply_consumption = 0.03
+
+		need = { nap_support_equipment = 8 }
+
+		soft_attack = 0.5
+		defense = 10
+	}
+
+	# === SQUARE DRILL COMPANY ===
+	# Trains the division to form square against cavalry. British speciality but learnable.
+	# Mechanically: massive defense vs cavalry, modest defense penalty vs artillery.
+	square_drill_company = {
+		abbreviation = "SQR"
+		sprite = engineer
+		map_icon_category = infantry
+		priority = 500
+		ai_priority = 60
+		active = no  # unlocked via doctrine
+		type = { infantry support }
+		group = support
+
+		categories = { category_front_line category_support_battalions category_army }
+
+		combat_width = 0
+
+		max_strength = 2
+		max_organisation = 40
+		default_morale = 0.50
+		manpower = 100
+		training_time = 150
+		weight = 0.1
+		supply_consumption = 0.02
+
+		need = { nap_support_equipment = 5 }
+
+		defense = 8
+		# Anti-cavalry bonus delivered via brigade modifier on division template — placeholder here
+	}
+
+	# === SIGNAL CORPS (Couriers) ===
+	# Tied to the air-rebrand later. Improves planning speed and reaction time.
+	signal_corps = {
+		abbreviation = "SIG"
+		sprite = engineer
+		map_icon_category = infantry
+		priority = 400
+		ai_priority = 70
+		active = no  # unlocked mid-game via tech (semaphore/Chappe telegraph)
+		type = { infantry support }
+		group = support
+
+		categories = { category_front_line category_support_battalions category_army }
+
+		combat_width = 0
+
+		max_strength = 2
+		max_organisation = 30
+		default_morale = 0.40
+		manpower = 80
+		training_time = 120
+		weight = 0.1
+		supply_consumption = 0.02
+
+		need = { nap_support_equipment = 6 }
+
+		soft_attack = 0.1
+		defense = 4
+	}
+}

@@ -1,0 +1,86 @@
+# Napoleonic Era — Artillery tech tree
+# Equipment tiers + siege/horse-artillery unlocks + ammunition advances.
+
+technologies = {
+
+	artillery_research_1 = {
+		categories = { category_napoleonic_artillery_tech }
+		start_year = 1789
+		research_cost = 0.6
+		enable_equipments = { nap_artillery_equipment_0 }
+		enable_subunits = { foot_artillery horse_artillery }
+
+		path = { leads_to_tech = gribeauval_adoption research_cost_coeff = 1 }
+		path = { leads_to_tech = siege_engineering research_cost_coeff = 1 }
+		path = { leads_to_tech = shrapnel_shell research_cost_coeff = 1 }
+
+		folder = { name = artillery_folder position = { x = 4 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	gribeauval_adoption = {
+		categories = { category_napoleonic_artillery_tech }
+		start_year = 1789
+		research_cost = 1.0
+		enable_equipments = { nap_artillery_equipment_1 }
+
+		# Gribeauval — France adopted it pre-1789, others lag. AI weighting reflects this.
+		path = { leads_to_tech = year_xi_system research_cost_coeff = 1 }
+
+		folder = { name = artillery_folder position = { x = 4 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 10 tag = FRA }   # already done historically
+		}
+	}
+
+	year_xi_system = {
+		categories = { category_napoleonic_artillery_tech }
+		start_year = 1803
+		research_cost = 1.3
+		enable_equipments = { nap_artillery_equipment_2 }
+
+		path = { leads_to_tech = exploding_shell research_cost_coeff = 1 }
+
+		folder = { name = artillery_folder position = { x = 4 y = 4 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 tag = FRA }
+		}
+	}
+
+	exploding_shell = {
+		categories = { category_napoleonic_artillery_tech }
+		start_year = 1820
+		research_cost = 2.0
+		enable_equipments = { nap_artillery_equipment_3 }
+
+		folder = { name = artillery_folder position = { x = 4 y = 6 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	siege_engineering = {
+		categories = { category_napoleonic_artillery_tech }
+		start_year = 1789
+		research_cost = 0.8
+		enable_subunits = { siege_artillery }
+
+		folder = { name = artillery_folder position = { x = 7 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	shrapnel_shell = {
+		categories = { category_napoleonic_artillery_tech }
+		start_year = 1804
+		research_cost = 1.0
+
+		foot_artillery = { soft_attack = 0.10 }
+		horse_artillery = { soft_attack = 0.10 }
+
+		folder = { name = artillery_folder position = { x = 1 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 tag = ENG }   # Henry Shrapnel was British
+		}
+	}
+}

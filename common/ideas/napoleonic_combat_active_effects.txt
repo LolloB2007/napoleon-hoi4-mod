@@ -1,0 +1,53 @@
+# Temporary ideas applied by combat-action decisions.
+# These idea slots are 'hidden' country-wide modifiers — the decisions add_timed_idea them,
+# then remove_effect/clr_country_flag cleans up.
+
+ideas = {
+
+	country = {
+
+		bayonet_charge_active_idea = {
+			picture = generic_attack_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.20
+				army_breakthrough_against_major_factor = 0.15
+				army_morale_factor = 0.10
+				# Risk: small org loss penalty — charges burn troops
+				army_org_factor = -0.05
+			}
+		}
+
+		square_formation_active_idea = {
+			picture = generic_form_nation_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				army_defence_factor = 0.20
+				# Square stands still — no attack benefit, slight speed penalty
+				army_attack_factor = -0.10
+				army_speed_factor = -0.30
+			}
+		}
+
+		cavalry_charge_active_idea = {
+			picture = generic_cavalry_idea
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.30
+				breakthrough_factor = 0.25
+				army_morale_factor = 0.10
+				# Risk: post-charge exhaustion, big org loss
+				army_org_factor = -0.10
+			}
+		}
+	}
+}

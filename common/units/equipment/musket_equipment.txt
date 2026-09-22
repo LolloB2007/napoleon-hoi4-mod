@@ -1,0 +1,88 @@
+# Musket equipment — small arms for infantry battalions.
+# Tier 0 = 1789 baseline (Charleville Modèle 1777, Brown Bess, etc.)
+# Tier 1 = post-revolutionary standardization (~1800)
+# Tier 2 = Napoleonic peak production (~1810)
+# Tier 3 = early percussion-cap experiments (post-1820, late content)
+
+equipments = {
+
+	musket_equipment = {
+		year = 1780
+		is_archetype = yes
+		picture = archetype_infantry_equipment
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		family = musket_equipment
+
+		interface_category = interface_category_land
+
+		# Base resource cost
+		resources = {
+			steel = 1
+		}
+
+		# Reliability — flintlocks misfire often in rain
+		reliability = 0.70
+
+		# Combat — these stats add to the battalion's, not replace
+		soft_attack = 1
+		hard_attack = 0.2
+		defense = 2
+		breakthrough = 1
+		ap_attack = 1
+
+		build_cost_ic = 0.40
+	}
+
+	musket_equipment_0 = {
+		year = 1789
+		archetype = musket_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	musket_equipment_1 = {
+		year = 1798
+		archetype = musket_equipment
+		parent = musket_equipment_0
+		priority = 100
+		visual_level = 1
+
+		reliability = 0.75
+		soft_attack = 1.5
+		defense = 2.5
+		build_cost_ic = 0.55
+	}
+
+	musket_equipment_2 = {
+		year = 1807
+		archetype = musket_equipment
+		parent = musket_equipment_1
+		priority = 110
+		visual_level = 2
+
+		reliability = 0.80
+		soft_attack = 2
+		hard_attack = 0.3
+		defense = 3
+		breakthrough = 1.5
+		build_cost_ic = 0.70
+	}
+
+	musket_equipment_3 = {
+		year = 1822
+		archetype = musket_equipment
+		parent = musket_equipment_2
+		priority = 110
+		visual_level = 3
+
+		reliability = 0.88
+		soft_attack = 2.5
+		hard_attack = 0.4
+		defense = 3.5
+		breakthrough = 2
+		ap_attack = 2
+		build_cost_ic = 0.90
+	}
+}

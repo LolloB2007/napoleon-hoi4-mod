@@ -1,0 +1,121 @@
+# Napoleonic Era — Infantry tech tree
+# Gates the musket equipment tiers and unlocks elite sub-units.
+
+technologies = {
+
+	# === Musket research line ===
+
+	musket_research_1 = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1789
+		research_cost = 0.5
+		enable_equipments = { musket_equipment_0 }
+		enable_subunits = { line_infantry militia }
+
+		path = { leads_to_tech = musket_research_2 research_cost_coeff = 1 }
+		path = { leads_to_tech = bayonet_drill research_cost_coeff = 1 }
+		path = { leads_to_tech = light_infantry_doctrine research_cost_coeff = 1 }
+		path = { leads_to_tech = grenadier_company research_cost_coeff = 1 }
+
+		folder = { name = infantry_folder position = { x = 4 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	musket_research_2 = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1798
+		research_cost = 1.0
+		enable_equipments = { musket_equipment_1 }
+
+		path = { leads_to_tech = musket_research_3 research_cost_coeff = 1 }
+
+		folder = { name = infantry_folder position = { x = 4 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	musket_research_3 = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1807
+		research_cost = 1.4
+		enable_equipments = { musket_equipment_2 }
+
+		path = { leads_to_tech = musket_research_4 research_cost_coeff = 1 }
+
+		folder = { name = infantry_folder position = { x = 4 y = 4 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	musket_research_4 = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1822
+		research_cost = 2.0
+		enable_equipments = { musket_equipment_3 }
+
+		folder = { name = infantry_folder position = { x = 4 y = 6 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	# === Side branches ===
+
+	bayonet_drill = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1795
+		research_cost = 0.7
+
+		line_infantry = { soft_attack = 0.05 breakthrough = 0.05 }
+		grenadier = { soft_attack = 0.05 breakthrough = 0.10 }
+
+		folder = { name = infantry_folder position = { x = 1 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	light_infantry_doctrine = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1789
+		research_cost = 0.8
+		enable_subunits = { light_infantry }
+
+		path = { leads_to_tech = rifled_carbines research_cost_coeff = 1 }
+
+		folder = { name = infantry_folder position = { x = 7 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	rifled_carbines = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1800
+		research_cost = 1.0
+
+		light_infantry = { soft_attack = 0.10 hard_attack = 0.05 }
+
+		folder = { name = infantry_folder position = { x = 7 y = 4 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	grenadier_company = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1789
+		research_cost = 0.7
+		enable_subunits = { grenadier }
+
+		path = { leads_to_tech = guard_organization research_cost_coeff = 1 }
+
+		folder = { name = infantry_folder position = { x = 10 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	guard_organization = {
+		categories = { category_napoleonic_infantry_tech }
+		start_year = 1800
+		research_cost = 1.5
+		enable_subunits = { guard_infantry }
+
+		grenadier = { default_morale = 0.05 }
+
+		folder = { name = infantry_folder position = { x = 10 y = 4 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 OR = { tag = FRA tag = ENG tag = RUS tag = PRU } }
+		}
+	}
+}

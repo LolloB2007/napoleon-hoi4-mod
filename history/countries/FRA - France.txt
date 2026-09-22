@@ -1,0 +1,228 @@
+# France — 1789.5.5 start
+# Estates-General convenes. Treasury is bankrupt. The army is still Royal,
+# but the cracks that will become the Revolution are open.
+
+capital = 16   # Île-de-France (vanilla state ID — verify against map)
+
+oob = "FRA_1789"
+
+set_research_slots = 4
+set_stability = 0.35      # crisis state
+set_war_support = 0.30
+set_convoys = 250
+
+# === Starting tech — France in 1789 ===
+# - Gribeauval system already adopted in artillery (1765 reform — France's edge)
+# - Light infantry tradition strong (chasseurs)
+# - Strong siege tradition (Vauban inheritance)
+# - All baseline equipment available
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	light_infantry_doctrine = 1
+	grenadier_company = 1
+
+	cavalry_research_1 = 1
+	horse_breeding = 1
+
+	artillery_research_1 = 1
+	gribeauval_adoption = 1
+	siege_engineering = 1
+
+	support_research_1 = 1
+	semaphore_telegraph = 0   # Chappe's first line not yet built — 1794
+
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	intelligence_networks_1 = 1
+	privateer_command_1 = 1
+
+	ship_of_the_line_1 = 1
+	frigate_1 = 1
+	sloop_1 = 1
+	bomb_ketch_1 = 1
+	fireship_1 = 1
+	naval_doctrine_line_ahead = 1
+}
+
+# === Politics ===
+# Using vanilla ideologies as placeholders until ideology rework (Phase 3).
+# Mapping: neutrality = "absolutism", democratic = "constitutionalism",
+# communism = "jacobinism", fascism = "bonapartism".
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"     # Estates-General
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 55      # Absolutist court party
+	democratic = 35      # Constitutional reformers (Mirabeau, Lafayette)
+	communism = 8        # Republican / proto-Jacobin
+	fascism = 2          # Future Bonapartism — fringe in 1789
+}
+
+set_country_flag = bourbon_monarchy
+set_country_flag = estates_general_convened
+set_country_flag = treasury_bankrupt
+
+add_ideas = {
+	bourbon_crisis
+	royal_army_of_france
+	gribeauval_artillery
+	foraging_doctrine
+	treasury_bankrupt_idea
+}
+
+# === Leadership ===
+# Modern HOI4 uses common/characters/ for leaders & generals.
+# Inline create_* calls here as fallback / shorthand.
+
+create_country_leader = {
+	name = "Louis XVI"
+	desc = "Last absolute King of France. Indecisive in the face of revolution. Will be deposed in 1792 and executed January 1793."
+	# 	picture = "Portrait_FRA_Louis_XVI.dds"
+	# expire = "1793.1.21"
+	ideology = despotism
+	traits = { indecisive_leader }
+}
+
+create_country_leader = {
+	name = "Honoré Gabriel Riqueti, Comte de Mirabeau"
+	desc = "Constitutional reformer. Could have saved the monarchy if he had lived. Dies April 1791."
+	# 	picture = "Portrait_FRA_Mirabeau.dds"
+	# expire = "1791.4.2"
+	ideology = liberalism
+	traits = { silver_tongued }
+}
+
+create_country_leader = {
+	name = "Maximilien Robespierre"
+	desc = "The Incorruptible. Architect of the Republic of Virtue and the Terror."
+	# 	picture = "Portrait_FRA_Robespierre.dds"
+	# expire = "1794.7.28"
+	ideology = marxism
+	traits = { incorruptible }
+}
+
+create_country_leader = {
+	name = "Napoléon Bonaparte"
+	desc = "Corsican gunner. Master of Europe."
+	# 	picture = "Portrait_FRA_Napoleon.dds"
+	# expire = "1840.1.1"
+	ideology = fascism_ideology
+	traits = { military_genius }
+}
+
+# === Field marshals & generals available 1789 ===
+# Many of these are still junior officers; their traits reflect future trajectory.
+
+create_field_marshal = {
+	name = "Jean-Baptiste Donatien de Vimeur, Comte de Rochambeau"
+	# 	picture = "Portrait_FRA_Rochambeau.dds"
+	traits = { old_guard war_hero }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "François Christophe de Kellermann"
+	# 	picture = "Portrait_FRA_Kellermann.dds"
+	traits = { defensive_doctrine }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Lazare Carnot"
+	# 	picture = "Portrait_FRA_Carnot.dds"
+	desc = "The Organizer of Victory. Currently an engineer captain — will create the armies of the Republic."
+	traits = { organizer career_officer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Charles-François Dumouriez"
+	traits = { politically_connected }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+# Future marshals — still junior officers in 1789, listed here so events can promote them.
+create_corps_commander = {
+	name = "Napoléon Bonaparte"
+	# 	picture = "Portrait_FRA_Napoleon_general.dds"
+	desc = "Artillery lieutenant on garrison duty in Auxonne. The world has not yet heard of him."
+	traits = { trait_engineer brilliant_strategist }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 5
+	legacy_id = -1
+}
+
+create_corps_commander = {
+	name = "Louis-Nicolas Davout"
+	traits = { trickster harsh_leader }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "André Masséna"
+	traits = { war_hero infantry_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Michel Ney"
+	desc = "The bravest of the brave. A cooper's son. Currently a hussar NCO."
+	traits = { cavalry_officer brave }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = "Pierre Charles de Villeneuve"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Charles Henri Hector d'Estaing"
+	traits = { old_guard_navy ironside }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}

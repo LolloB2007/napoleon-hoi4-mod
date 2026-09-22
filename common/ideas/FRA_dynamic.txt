@@ -1,0 +1,73 @@
+# France — Dynamic ideas applied by events through the historical timeline.
+
+ideas = {
+
+	country = {
+
+		# Applied by french_revolution.10 (Reign of Terror)
+		reign_of_terror = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.15
+				conscription = 0.02
+				army_morale_factor = 0.10
+				stability_factor = -0.25
+				political_power_factor = -0.20
+				industrial_capacity_factory = -0.05
+				monthly_population = -0.10
+			}
+		}
+
+		# Applied by french_revolution.12 (Directory)
+		directory_corruption = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_factor = -0.20
+				stability_factor = -0.10
+				experience_gain_army_factor = -0.05
+				war_support_factor = -0.10
+			}
+		}
+
+		# Applied by napoleonic_collapse.6 (Bourbon Restoration)
+		bourbon_restoration_idea = {
+			picture = generic_pp_unity_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				war_support_factor = -0.10
+				conscription_factor = -0.30
+				research_speed_factor = -0.10
+			}
+		}
+
+		# Applied by napoleonic_collapse.8 (Hundred Days return)
+		liberal_empire = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.15
+				war_support_factor = 0.20
+				stability_factor = -0.10        # short, frantic
+				conscription_factor = 0.40
+				political_power_factor = 0.10
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+# Napoleonic Era — Support tech tree
+# Support equipment tiers + signals + medical + staff college + square drill.
+
+technologies = {
+
+	support_research_1 = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1789
+		research_cost = 0.5
+		enable_equipments = { nap_support_equipment_0 }
+		enable_subunits = { sapper_company train_battalion field_hospital staff_company }
+
+		path = { leads_to_tech = field_logistics research_cost_coeff = 1 }
+		path = { leads_to_tech = semaphore_telegraph research_cost_coeff = 1 }
+		path = { leads_to_tech = military_medicine research_cost_coeff = 1 }
+		path = { leads_to_tech = staff_college research_cost_coeff = 1 }
+		path = { leads_to_tech = square_drill_training research_cost_coeff = 1 }
+
+		folder = { name = support_folder position = { x = 4 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	field_logistics = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1805
+		research_cost = 1.0
+		enable_equipments = { nap_support_equipment_1 }
+
+		out_of_supply_factor = -0.10
+		supply_consumption_factor = -0.05
+
+		path = { leads_to_tech = chappe_network research_cost_coeff = 1 }
+
+		folder = { name = support_folder position = { x = 4 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	chappe_network = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1820
+		research_cost = 1.6
+		enable_equipments = { nap_support_equipment_2 }
+
+		planning_speed = 0.10
+
+		folder = { name = support_folder position = { x = 4 y = 4 } }
+		ai_will_do = { factor = 0.5 }
+	}
+
+	semaphore_telegraph = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1794   # Chappe's first line: Lille-Paris, 1794
+		research_cost = 0.8
+		enable_subunits = { signal_corps }
+
+		planning_speed = 0.10
+
+		folder = { name = support_folder position = { x = 1 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 tag = FRA }
+		}
+	}
+
+	military_medicine = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1800
+		research_cost = 0.8
+
+		field_hospital = { max_organisation = 5 defense = 2 }
+		experience_loss_factor = -0.10
+		army_morale_factor = 0.05
+
+		folder = { name = support_folder position = { x = 7 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	staff_college = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1803
+		research_cost = 1.0
+
+		staff_company = { max_organisation = 10 }
+		max_planning = 0.10
+		planning_speed = 0.10
+		army_org_factor = 0.05
+
+		folder = { name = support_folder position = { x = 10 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 OR = { tag = PRU tag = FRA } }
+		}
+	}
+
+	square_drill_training = {
+		categories = { category_napoleonic_support_tech }
+		start_year = 1789
+		research_cost = 0.6
+		enable_subunits = { square_drill_company }
+
+		# Cheaper for Line-doctrine nations (also unlocked free via Line Doctrine tree).
+		# Anyone else can opt in via this tech to slot the support company.
+
+		folder = { name = support_folder position = { x = 13 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 OR = { tag = ENG tag = PRU tag = HAN } }
+		}
+	}
+}
