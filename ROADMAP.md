@@ -76,6 +76,8 @@ Turn historical relationships and ongoing conflicts into actual game state rathe
 The diplomatic screen on 5 May 1789 tells roughly the same geopolitical story as the historical situation, and the wars already underway are mechanically real.
 
 > **Implementation note:** The opening wars are deliberately bounded scripted conflicts rather than normal HOI4 total wars. The Theatre War ends by July 1789, the Russo–Swedish War by the Treaty of Värälä, the Austro–Turkish War by Sistova, and the Russo–Turkish War by Jassy. An `on_capitulation_immediate` guard applies the same limited settlements early if a belligerent collapses, preventing ahistorical full annexations. Jassy transfers only the Odessa/Yedisan state abstraction to Russia. Runtime smoke-testing remains pending.
+>
+> **Future revisit:** The scripted peace system currently prioritises historical / bounded settlements. It must be revisited once non-historical paths are developed so that a decisive victory by the historically losing side can produce an appropriate alternate settlement instead of being forced back into the historical treaty outcome.
 
 ---
 
