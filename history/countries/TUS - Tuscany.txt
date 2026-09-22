@@ -1,0 +1,49 @@
+# Grand Duchy of Tuscany — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 162
+oob = "TUS_1789"
+
+set_research_slots = 3
+set_stability = 0.78
+set_war_support = 0.12
+set_convoys = 20
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 68
+	democratic = 27
+	communism = 3
+	fascism = 2
+}
+
+set_country_flag = leopoldine_tuscany
+
+add_ideas = {
+	leopoldine_reforms
+	tuscan_enlightened_state
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = HAB modifier = nap_1789_dynastic_ties }
+reverse_add_opinion_modifier = { target = HAB modifier = nap_1789_dynastic_ties }
+
+create_country_leader = {
+	name = "Peter Leopold"
+	ideology = oligarchism
+}

@@ -1,0 +1,49 @@
+# Electorate of Hanover — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 59
+oob = "HAN_1789"
+
+set_research_slots = 2
+set_stability = 0.73
+set_war_support = 0.20
+set_convoys = 10
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 80
+	democratic = 17
+	communism = 2
+	fascism = 1
+}
+
+set_country_flag = personal_union_with_britain
+
+add_ideas = {
+	hanoverian_personal_union
+	hanoverian_estates
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = ENG modifier = nap_1789_dynastic_ties }
+reverse_add_opinion_modifier = { target = ENG modifier = nap_1789_dynastic_ties }
+
+create_country_leader = {
+	name = "George III"
+	ideology = despotism
+}

@@ -1,0 +1,65 @@
+# Sweden — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 141
+oob = "SWE_1789"
+
+set_research_slots = 3
+set_stability = 0.55
+set_war_support = 0.52
+set_convoys = 90
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	grenadier_company = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	ship_of_the_line_1 = 1
+	frigate_1 = 1
+	sloop_1 = 1
+	naval_doctrine_line_ahead = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 70
+	democratic = 20
+	communism = 3
+	fascism = 7
+}
+
+set_country_flag = gustavian_monarchy
+
+add_ideas = {
+	gustavian_autocracy
+	swedish_military_tradition
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = RUS modifier = nap_1789_rivalry }
+reverse_add_opinion_modifier = { target = RUS modifier = nap_1789_rivalry }
+add_opinion_modifier = { target = DEN modifier = nap_1789_rivalry }
+
+create_country_leader = {
+	name = "Gustav III"
+	ideology = despotism
+}
+
+create_corps_commander = {
+	name = "Johan Christopher Toll"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}

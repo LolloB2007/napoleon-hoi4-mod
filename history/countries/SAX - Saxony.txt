@@ -1,0 +1,49 @@
+# Electorate of Saxony — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 65
+oob = "SAX_1789"
+
+set_research_slots = 2
+set_stability = 0.70
+set_war_support = 0.22
+set_convoys = 5
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	grenadier_company = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 82
+	democratic = 14
+	communism = 2
+	fascism = 2
+}
+
+set_country_flag = saxon_electorate_1789
+
+add_ideas = {
+	saxon_commercial_state
+	saxon_professional_army
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = PRU modifier = nap_1789_rivalry }
+
+create_country_leader = {
+	name = "Frederick Augustus III"
+	ideology = despotism
+}

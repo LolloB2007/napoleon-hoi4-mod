@@ -14,37 +14,40 @@ Build the secondary powers into proper 1789 countries rather than allowing vanil
 
 ### Priority countries
 
-- [ ] Spain
-- [ ] Portugal
-- [ ] Ottoman Empire
-- [ ] Sweden
-- [ ] Denmark–Norway
-- [ ] Polish–Lithuanian Commonwealth
-- [ ] Netherlands
-- [ ] Kingdom of Naples
-- [ ] Sardinia–Piedmont
-- [ ] Venice
-- [ ] Papal States
-- [ ] Tuscany
-- [ ] Bavaria
-- [ ] Saxony
-- [ ] Hanover
-- [ ] Württemberg
+- [x] Spain
+- [x] Portugal
+- [x] Ottoman Empire
+- [x] Sweden
+- [x] Denmark–Norway
+- [x] Polish–Lithuanian Commonwealth
+- [x] Netherlands
+- [x] Kingdom of Naples
+- [x] Sardinia–Piedmont
+- [x] Venice
+- [x] Papal States
+- [x] Tuscany
+- [x] Bavaria
+- [x] Saxony
+- [x] Hanover
+- [x] Württemberg
 
 ### For each country
 
-- [ ] Correct 1789 government and ideology
-- [ ] Correct ruler / political leadership
-- [ ] Appropriate starting national spirits
-- [ ] Correct diplomatic relationships
-- [ ] Appropriate starting technologies
-- [ ] Historically plausible starting army where relevant
-- [ ] Correct ownership / cores / claims where needed
-- [ ] Remove obvious vanilla 1936 carry-over
+- [x] Correct 1789 government and ideology
+- [x] Correct ruler / political leadership
+- [x] Appropriate starting national spirits
+- [x] Correct diplomatic relationships
+- [x] Appropriate starting technologies
+- [x] Historically plausible starting army where relevant
+- [x] Correct ownership / cores / claims where needed
+- [x] Remove obvious vanilla 1936 carry-over
 
 ### Done when
 
 A 1789 start produces a broadly credible European political map and the major secondary states no longer behave like renamed 1936 countries.
+
+
+> **Implementation note:** Baseline diplomatic opinions are included here. Active wars, guarantees, subjects and the full 1789 diplomatic structure remain Milestone 2. Runtime smoke-testing remains required before declaring the wider campaign slice complete.
 
 ---
 
@@ -449,7 +452,7 @@ The preferred development method is chronological. Each era should become genuin
 
 ## Phase A — 1789–1795
 
-- [ ] Complete the 1789 starting world
+- [x] Complete the 1789 starting world
 - [ ] Real starting diplomacy and wars
 - [ ] Full early French Revolution
 - [ ] Constitutional / Republican / Royalist route separation
@@ -548,7 +551,7 @@ Once this milestone is reached, infrastructure work should stop unless a later f
 | Doctrines | Restored |
 | Major-power standing OOBs | Restored |
 | French route hardening | Initial pass completed |
-| 1789 secondary-power setup | Not started |
+| 1789 secondary-power setup | Implemented; runtime validation pending |
 | 1789 diplomatic setup | Not started |
 | France deep-content pass | Not started |
 | Coalition system | Not started |

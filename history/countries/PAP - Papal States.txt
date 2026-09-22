@@ -1,0 +1,47 @@
+# Papal States — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 2
+oob = "PAP_1789"
+
+set_research_slots = 2
+set_stability = 0.72
+set_war_support = 0.15
+set_convoys = 10
+
+set_technology = {
+	musket_research_1 = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 90
+	democratic = 7
+	communism = 2
+	fascism = 1
+}
+
+set_country_flag = papal_temporal_power
+
+add_ideas = {
+	temporal_power_of_the_pope
+	clerical_administration
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = HAB modifier = nap_1789_close_ties }
+
+create_country_leader = {
+	name = "Pius VI"
+	ideology = despotism
+}
