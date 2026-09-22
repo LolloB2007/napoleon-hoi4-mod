@@ -1,0 +1,164 @@
+###########################################
+# 1789 Diplomacy — opening wars and scripted treaties
+#
+# These wars are intentionally bounded. Historical treaty timers close them
+# automatically, while on_capitulation_immediate applies the same settlement
+# early if a participant collapses.
+###########################################
+
+add_namespace = napoleonic_diplomacy
+
+# ============================================================
+# THEATRE WAR — Denmark-Norway leaves the Swedish war, 9 July 1789
+# ============================================================
+country_event = {
+	id = napoleonic_diplomacy.1
+	title = napoleonic_diplomacy.1.t
+	desc = napoleonic_diplomacy.1.d
+	picture = GFX_report_event_generic_assembly
+	fire_only_once = yes
+
+	trigger = {
+		tag = DEN
+		date > 1789.7.8
+		has_global_flag = nap_theatre_war_active
+		has_war_with = SWE
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = napoleonic_diplomacy.1.a
+		napoleonic_end_theatre_war = yes
+		news_event = { id = napoleonic_diplomacy.101 hours = 6 }
+	}
+}
+
+news_event = {
+	id = napoleonic_diplomacy.101
+	title = napoleonic_diplomacy.101.t
+	desc = napoleonic_diplomacy.101.d
+	picture = GFX_news_event_generic_assembly
+	major = yes
+	is_triggered_only = yes
+	option = { name = napoleonic_diplomacy.101.a }
+}
+
+# ============================================================
+# TREATY OF VÄRÄLÄ — 14 August 1790
+# ============================================================
+country_event = {
+	id = napoleonic_diplomacy.2
+	title = napoleonic_diplomacy.2.t
+	desc = napoleonic_diplomacy.2.d
+	picture = GFX_report_event_generic_assembly
+	fire_only_once = yes
+
+	trigger = {
+		tag = SWE
+		date > 1790.8.13
+		has_global_flag = nap_russo_swedish_war_active
+		has_war_with = RUS
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = napoleonic_diplomacy.2.a
+		napoleonic_end_russo_swedish_war = yes
+		news_event = { id = napoleonic_diplomacy.102 hours = 6 }
+	}
+}
+
+news_event = {
+	id = napoleonic_diplomacy.102
+	title = napoleonic_diplomacy.102.t
+	desc = napoleonic_diplomacy.102.d
+	picture = GFX_news_event_generic_assembly
+	major = yes
+	is_triggered_only = yes
+	option = { name = napoleonic_diplomacy.102.a }
+}
+
+# ============================================================
+# TREATY OF SISTOVA — 4 August 1791
+# ============================================================
+country_event = {
+	id = napoleonic_diplomacy.3
+	title = napoleonic_diplomacy.3.t
+	desc = napoleonic_diplomacy.3.d
+	picture = GFX_report_event_generic_assembly
+	fire_only_once = yes
+
+	trigger = {
+		tag = HAB
+		date > 1791.8.3
+		has_global_flag = nap_austro_turkish_war_active
+		has_war_with = TUR
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = napoleonic_diplomacy.3.a
+		napoleonic_end_austro_turkish_war = yes
+		news_event = { id = napoleonic_diplomacy.103 hours = 6 }
+	}
+}
+
+news_event = {
+	id = napoleonic_diplomacy.103
+	title = napoleonic_diplomacy.103.t
+	desc = napoleonic_diplomacy.103.d
+	picture = GFX_news_event_generic_assembly
+	major = yes
+	is_triggered_only = yes
+	option = { name = napoleonic_diplomacy.103.a }
+}
+
+# ============================================================
+# TREATY OF JASSY — 9 January 1792
+# ============================================================
+country_event = {
+	id = napoleonic_diplomacy.4
+	title = napoleonic_diplomacy.4.t
+	desc = napoleonic_diplomacy.4.d
+	picture = GFX_report_event_generic_assembly
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		date > 1792.1.8
+		has_global_flag = nap_russo_turkish_war_active
+		has_war_with = TUR
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = napoleonic_diplomacy.4.a
+		napoleonic_end_russo_turkish_jassy = yes
+		news_event = { id = napoleonic_diplomacy.104 hours = 6 }
+	}
+}
+
+news_event = {
+	id = napoleonic_diplomacy.104
+	title = napoleonic_diplomacy.104.t
+	desc = napoleonic_diplomacy.104.d
+	picture = GFX_news_event_generic_assembly
+	major = yes
+	is_triggered_only = yes
+	option = { name = napoleonic_diplomacy.104.a }
+}
+
+# Alternative bounded settlement used only when Russia collapses before Jassy.
+news_event = {
+	id = napoleonic_diplomacy.105
+	title = napoleonic_diplomacy.105.t
+	desc = napoleonic_diplomacy.105.d
+	picture = GFX_news_event_generic_assembly
+	major = yes
+	is_triggered_only = yes
+	option = { name = napoleonic_diplomacy.105.a }
+}

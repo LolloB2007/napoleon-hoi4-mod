@@ -1,0 +1,36 @@
+﻿l_english:
+ napoleonic_diplomacy.1.t:0 "Denmark-Norway Withdraws from the Swedish War"
+ napoleonic_diplomacy.1.d:0 "British and Prussian pressure has made continued Danish-Norwegian participation in the war untenable. Copenhagen will declare neutrality and end active operations against Sweden."
+ napoleonic_diplomacy.1.a:0 "The northern diversion is over."
+
+ napoleonic_diplomacy.101.t:0 "Denmark-Norway Leaves the War"
+ napoleonic_diplomacy.101.d:0 "Denmark-Norway has ended its short war with Sweden and declared neutrality in the wider Russo-Swedish conflict. The border returns to the pre-war status quo."
+ napoleonic_diplomacy.101.a:0 "A limited war ends with limited consequences."
+
+ napoleonic_diplomacy.2.t:0 "The Treaty of Värälä"
+ napoleonic_diplomacy.2.d:0 "Neither Sweden nor Russia has secured a decisive strategic advantage. Negotiators at Värälä have agreed to restore the pre-war frontier and end the conflict."
+ napoleonic_diplomacy.2.a:0 "Restore the status quo."
+
+ napoleonic_diplomacy.102.t:0 "Peace at Värälä"
+ napoleonic_diplomacy.102.d:0 "Sweden and Russia have made peace. Their frontier remains unchanged, bringing Gustav III's Russian War to an end without territorial annexations."
+ napoleonic_diplomacy.102.a:0 "The Baltic falls quiet."
+
+ napoleonic_diplomacy.3.t:0 "The Treaty of Sistova"
+ napoleonic_diplomacy.3.d:0 "Austria's war against the Ottoman Empire has become strategically inconvenient as the European crisis deepens. Vienna and the Porte will restore peace. The treaty's small frontier adjustments are below the scale of the HOI4 state map."
+ napoleonic_diplomacy.3.a:0 "End the war."
+
+ napoleonic_diplomacy.103.t:0 "Austria and the Porte Make Peace"
+ napoleonic_diplomacy.103.d:0 "The Treaty of Sistova has ended the Austro-Turkish War. Austria relinquishes its larger wartime conquests and receives no whole HOI4 state in the settlement."
+ napoleonic_diplomacy.103.a:0 "Attention turns back toward Europe."
+
+ napoleonic_diplomacy.4.t:0 "The Treaty of Jassy"
+ napoleonic_diplomacy.4.d:0 "The Ottoman Empire has accepted peace with Russia. The Porte recognizes the existing Russian position on the Black Sea and cedes Yedisan between the Southern Bug and Dniester. On the current map, the settlement is represented by the Odessa state only."
+ napoleonic_diplomacy.4.a:0 "The Dniester becomes the frontier."
+
+ napoleonic_diplomacy.104.t:0 "Russia and the Ottoman Empire Sign the Treaty of Jassy"
+ napoleonic_diplomacy.104.d:0 "The Russo-Turkish War has ended. Russia receives the limited Yedisan settlement, represented by Odessa, while the remainder of the Ottoman Empire is restored intact rather than exposed to a standard HOI4 peace conference."
+ napoleonic_diplomacy.104.a:0 "A bounded peace, not a partition."
+
+ napoleonic_diplomacy.105.t:0 "The Russo-Turkish War Ends Without Jassy"
+ napoleonic_diplomacy.105.d:0 "Russian military reverses have forced an early settlement with the Ottoman Empire. The combatants return to peace without the historical cession of Yedisan."
+ napoleonic_diplomacy.105.a:0 "The Black Sea settlement is postponed."
