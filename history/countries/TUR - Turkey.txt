@@ -1,0 +1,63 @@
+# Ottoman Empire — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 797
+oob = "TUR_1789"
+
+set_research_slots = 3
+set_stability = 0.42
+set_war_support = 0.58
+set_convoys = 90
+
+set_technology = {
+	musket_research_1 = 1
+	cavalry_research_1 = 1
+	irregular_levy = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+	sloop_1 = 1
+	frigate_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 82
+	democratic = 8
+	communism = 3
+	fascism = 7
+}
+
+set_country_flag = selim_iii_reign
+set_country_flag = ottoman_reform_debate
+
+add_ideas = {
+	ottoman_reform_crisis
+	selim_reformers
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = RUS modifier = nap_1789_rivalry }
+reverse_add_opinion_modifier = { target = RUS modifier = nap_1789_rivalry }
+add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry }
+reverse_add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry }
+
+create_country_leader = {
+	name = "Selim III"
+	ideology = oligarchism
+}
+
+create_corps_commander = {
+	name = "Koca Yusuf Pasha"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}

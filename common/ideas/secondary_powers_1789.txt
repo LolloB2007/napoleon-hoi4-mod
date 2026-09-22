@@ -1,0 +1,231 @@
+# Napoleonic Era — Secondary-power starting national spirits, 1789.
+# Compact foundation spirits. Later country passes may evolve them.
+
+ideas = {
+	country = {
+		spanish_bourbon_monarchy = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = SPR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.08 political_power_factor = 0.05 }
+		}
+		spanish_imperial_overstretch = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = SPR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { consumer_goods_factor = 0.05 army_org_factor = -0.05 }
+		}
+		portuguese_atlantic_empire = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = POR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { trade_opinion_factor = 0.15 convoy_escort_efficiency = 0.10 }
+		}
+		portuguese_reform_legacy = {
+			picture = generic_research_bonus
+			allowed = { original_tag = POR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { research_speed_factor = 0.03 stability_factor = 0.05 }
+		}
+		ottoman_reform_crisis = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = TUR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { army_org_factor = -0.08 political_power_factor = -0.05 }
+		}
+		selim_reformers = {
+			picture = generic_research_bonus
+			allowed = { original_tag = TUR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { research_speed_factor = 0.04 experience_gain_army_factor = 0.08 }
+		}
+		gustavian_autocracy = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.08 political_power_factor = 0.08 }
+		}
+		swedish_military_tradition = {
+			picture = generic_army_bonus
+			allowed = { original_tag = SWE }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { army_org_factor = 0.05 experience_gain_army_factor = 0.08 }
+		}
+		danish_norwegian_dual_monarchy = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = DEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.10 political_power_factor = -0.03 }
+		}
+		sound_dues = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = DEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { trade_opinion_factor = 0.15 industrial_capacity_dockyard = 0.05 }
+		}
+		polish_elective_monarchy = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { political_power_factor = -0.12 stability_factor = -0.05 }
+		}
+		four_year_sejm = {
+			picture = generic_research_bonus
+			allowed = { original_tag = POL }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { political_power_factor = 0.08 research_speed_factor = 0.03 }
+		}
+		dutch_merchant_republic = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = NET }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { trade_opinion_factor = 0.20 industrial_capacity_dockyard = 0.08 }
+		}
+		patriot_orangist_divide = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = NET }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = -0.08 political_power_factor = -0.05 }
+		}
+		neapolitan_bourbon_court = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = NAP }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.06 political_power_factor = 0.04 }
+		}
+		feudal_south = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = NAP }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { industrial_capacity_factory = -0.08 research_speed_factor = -0.03 }
+		}
+		savoyard_military_state = {
+			picture = generic_army_bonus
+			allowed = { original_tag = SAR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { army_org_factor = 0.08 experience_gain_army_factor = 0.06 }
+		}
+		alpine_frontier = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = SAR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { army_defence_factor = 0.06 supply_consumption_factor = -0.04 }
+		}
+		temporal_power_of_the_pope = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = PAP }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.12 political_power_factor = 0.05 }
+		}
+		clerical_administration = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = PAP }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { research_speed_factor = -0.03 consumer_goods_factor = 0.03 }
+		}
+		serenissima_legacy = {
+			picture = generic_navy_bonus
+			allowed = { original_tag = VEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { trade_opinion_factor = 0.20 navy_org_factor = 0.08 }
+		}
+		venetian_oligarchy = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = VEN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.08 political_power_factor = -0.05 }
+		}
+		leopoldine_reforms = {
+			picture = generic_research_bonus
+			allowed = { original_tag = TUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { research_speed_factor = 0.05 stability_factor = 0.08 consumer_goods_factor = -0.03 }
+		}
+		tuscan_enlightened_state = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = TUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { political_power_factor = 0.05 production_speed_industrial_complex_factor = 0.05 }
+		}
+		bavarian_electorate = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = BAV }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.08 political_power_factor = 0.04 }
+		}
+		bavarian_reform_state = {
+			picture = generic_research_bonus
+			allowed = { original_tag = BAV }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { research_speed_factor = 0.03 production_speed_industrial_complex_factor = 0.05 }
+		}
+		saxon_commercial_state = {
+			picture = generic_research_bonus
+			allowed = { original_tag = SAX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { industrial_capacity_factory = 0.05 trade_opinion_factor = 0.10 }
+		}
+		saxon_professional_army = {
+			picture = generic_army_bonus
+			allowed = { original_tag = SAX }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { army_org_factor = 0.05 training_time_factor = -0.05 }
+		}
+		hanoverian_personal_union = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = HAN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.08 trade_opinion_factor = 0.10 }
+		}
+		hanoverian_estates = {
+			picture = generic_disjointed_gov
+			allowed = { original_tag = HAN }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { political_power_factor = -0.05 consumer_goods_factor = 0.02 }
+		}
+		wurttemberg_ducal_absolutism = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = WUR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.07 political_power_factor = 0.05 }
+		}
+		swabian_military_obligations = {
+			picture = generic_army_bonus
+			allowed = { original_tag = WUR }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { conscription_factor = 0.05 army_org_factor = -0.03 }
+		}
+	}
+}

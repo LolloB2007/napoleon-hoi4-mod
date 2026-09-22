@@ -1,0 +1,66 @@
+# Spain — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 41
+oob = "SPR_1789"
+
+set_research_slots = 3
+set_stability = 0.58
+set_war_support = 0.35
+set_convoys = 180
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	grenadier_company = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	ship_of_the_line_1 = 1
+	frigate_1 = 1
+	sloop_1 = 1
+	naval_doctrine_line_ahead = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 72
+	democratic = 18
+	communism = 3
+	fascism = 7
+}
+
+set_country_flag = spanish_bourbon_monarchy_1789
+
+add_ideas = {
+	spanish_bourbon_monarchy
+	spanish_imperial_overstretch
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = FRA modifier = nap_1789_dynastic_ties }
+reverse_add_opinion_modifier = { target = FRA modifier = nap_1789_dynastic_ties }
+add_opinion_modifier = { target = NAP modifier = nap_1789_dynastic_ties }
+reverse_add_opinion_modifier = { target = NAP modifier = nap_1789_dynastic_ties }
+
+create_country_leader = {
+	name = "Charles IV"
+	ideology = despotism
+}
+
+create_corps_commander = {
+	name = "Antonio Ricardos"
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}

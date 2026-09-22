@@ -1,0 +1,62 @@
+# Denmark-Norway — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 37
+oob = "DEN_1789"
+
+set_research_slots = 3
+set_stability = 0.72
+set_war_support = 0.25
+set_convoys = 110
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	ship_of_the_line_1 = 1
+	frigate_1 = 1
+	sloop_1 = 1
+	naval_doctrine_line_ahead = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 82
+	democratic = 14
+	communism = 2
+	fascism = 2
+}
+
+set_country_flag = danish_norwegian_monarchy
+
+add_ideas = {
+	danish_norwegian_dual_monarchy
+	sound_dues
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = SWE modifier = nap_1789_rivalry }
+
+create_country_leader = {
+	name = "Christian VII"
+	ideology = despotism
+}
+
+create_corps_commander = {
+	name = "Prince Charles of Hesse-Kassel"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}

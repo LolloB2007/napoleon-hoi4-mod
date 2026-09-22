@@ -1,0 +1,53 @@
+# Kingdom of Naples — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 117
+oob = "NAP_1789"
+
+set_research_slots = 2
+set_stability = 0.61
+set_war_support = 0.25
+set_convoys = 65
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+	frigate_1 = 1
+	sloop_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 82
+	democratic = 13
+	communism = 2
+	fascism = 3
+}
+
+set_country_flag = neapolitan_bourbon_monarchy
+
+add_ideas = {
+	neapolitan_bourbon_court
+	feudal_south
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = SPR modifier = nap_1789_dynastic_ties }
+reverse_add_opinion_modifier = { target = SPR modifier = nap_1789_dynastic_ties }
+add_opinion_modifier = { target = HAB modifier = nap_1789_close_ties }
+reverse_add_opinion_modifier = { target = HAB modifier = nap_1789_close_ties }
+
+create_country_leader = {
+	name = "Ferdinand IV"
+	ideology = despotism
+}

@@ -1,0 +1,62 @@
+# Polish-Lithuanian Commonwealth — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 10
+oob = "POL_1789"
+
+set_research_slots = 3
+set_stability = 0.43
+set_war_support = 0.32
+set_convoys = 15
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	cavalry_research_1 = 1
+	lancer_doctrine = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1789.5.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 38
+	democratic = 52
+	communism = 6
+	fascism = 4
+}
+
+set_country_flag = four_year_sejm_active
+set_country_flag = polish_lithuanian_commonwealth
+
+add_ideas = {
+	polish_elective_monarchy
+	four_year_sejm
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = RUS modifier = nap_1789_partition_grievance }
+add_opinion_modifier = { target = PRU modifier = nap_1789_partition_grievance }
+add_opinion_modifier = { target = HAB modifier = nap_1789_partition_grievance }
+
+create_country_leader = {
+	name = "Stanisław II Augustus"
+	ideology = social_democracy
+}
+
+create_corps_commander = {
+	name = "Józef Poniatowski"
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}

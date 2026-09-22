@@ -1,0 +1,48 @@
+# Electorate of Bavaria — 1789.5.5 starting history
+# Foundation setup for Roadmap Milestone 1. Deep country content comes later.
+
+capital = 52
+oob = "BAV_1789"
+
+set_research_slots = 2
+set_stability = 0.62
+set_war_support = 0.20
+set_convoys = 5
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	cavalry_research_1 = 1
+	artillery_research_1 = 1
+	support_research_1 = 1
+	courier_corps_1 = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.5.5"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 84
+	democratic = 12
+	communism = 2
+	fascism = 2
+}
+
+set_country_flag = bavarian_electorate_1789
+
+add_ideas = {
+	bavarian_electorate
+	bavarian_reform_state
+}
+
+# Baseline 1789 diplomatic posture. Formal wars/subjects/guarantees are Milestone 2.
+add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry }
+
+create_country_leader = {
+	name = "Charles Theodore"
+	ideology = despotism
+}

@@ -1,0 +1,10 @@
+# Baseline 1789 diplomatic posture for secondary powers.
+# Wars, guarantees, subjects and the wider diplomatic system are Milestone 2.
+
+opinion_modifiers = {
+	nap_1789_close_ties = { value = 30 decay = 0 }
+	nap_1789_dynastic_ties = { value = 50 decay = 0 }
+	nap_1789_long_alliance = { value = 60 decay = 0 }
+	nap_1789_rivalry = { value = -30 decay = 0 }
+	nap_1789_partition_grievance = { value = -50 decay = 0 }
+}

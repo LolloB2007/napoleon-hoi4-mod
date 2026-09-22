@@ -91,13 +91,52 @@ for p,s in oob_files:
         if uid not in unit_ids:
             err(f'{p.relative_to(ROOT)}: OOB subunit not defined: {uid}')
 
-# Explicit starting OOBs should exist for the five majors.
-for tag in ('FRA','ENG','HAB','PRU','RUS'):
+# Explicit starting OOBs should exist for all implemented 1789 powers.
+starting_oob_tags = ('FRA','ENG','HAB','PRU','RUS','SPR','POR','TUR','SWE','DEN','POL','NET','NAP','SAR','PAP','VEN','TUS','BAV','SAX','HAN','WUR')
+for tag in starting_oob_tags:
     expected = ROOT / 'history' / 'units' / f'{tag}_1789.txt'
     if not expected.exists(): err(f'missing standing OOB file: history/units/{tag}_1789.txt')
     cf = next((p for p,_ in country_files if p.name.startswith(tag+' ')), None)
     if not cf or f'oob = "{tag}_1789"' not in cf.read_text(encoding='utf-8-sig'):
         err(f'{tag}: country history does not load {tag}_1789')
+
+
+# Every subunit used by a country's starting OOB must be unlocked by one of its
+# starting technologies. This catches an easy-to-miss failure mode where an OOB
+# references a valid battalion that the country itself cannot field.
+subunit_unlockers = {}
+for _, s in tech_files:
+    for tm in re.finditer(r'^\s*([A-Za-z0-9_]+)\s*=\s*\{', s, re.M):
+        tid = tm.group(1)
+        if tid not in tech_ids:
+            continue
+        start = tm.start()
+        next_m = re.search(r'^\s*[A-Za-z0-9_]+\s*=\s*\{', s[tm.end():], re.M)
+        end = tm.end() + next_m.start() if next_m else len(s)
+        block = s[start:end]
+        for ub in re.findall(r'enable_subunits\s*=\s*\{([^}]*)\}', block, re.S):
+            for uid in re.findall(r'\b[a-z][a-z0-9_]+\b', ub):
+                subunit_unlockers.setdefault(uid, set()).add(tid)
+
+for tag in starting_oob_tags:
+    cf = next((p for p,_ in country_files if p.name.startswith(tag+' ')), None)
+    if not cf:
+        continue
+    ctext = cf.read_text(encoding='utf-8-sig')
+    tech_block = re.search(r'set_technology\s*=\s*\{(.*?)\n\}', ctext, re.S)
+    starting_techs = set(re.findall(r'^\s*([A-Za-z0-9_]+)\s*=\s*1\b', tech_block.group(1), re.M)) if tech_block else set()
+    om = re.search(r'oob\s*=\s*"([A-Za-z0-9_\-]+)"', ctext)
+    if not om:
+        continue
+    op = ROOT / 'history' / 'units' / f'{om.group(1)}.txt'
+    if not op.exists():
+        continue
+    otext = op.read_text(encoding='utf-8-sig')
+    used = set(re.findall(r'^\s*([a-z][a-z0-9_]+)\s*=\s*\{\s*x\s*=\s*\d+\s+y\s*=\s*\d+\s*\}', otext, re.M))
+    for uid in sorted(used):
+        unlockers = subunit_unlockers.get(uid, set())
+        if unlockers and not (unlockers & starting_techs):
+            err(f'{tag}: OOB uses {uid} but starting techs lack an unlocker ({sorted(unlockers)})')
 
 # Idea equipment_bonus targets must resolve to an enabled equipment ID.
 for p,s in texts('common/ideas/*.txt'):
