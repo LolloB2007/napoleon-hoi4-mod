@@ -1,0 +1,14 @@
+# Napoleonic Era - startup hooks for HOI4 1.19.x.
+# State ownership is applied at runtime to avoid duplicate-state CTDs caused by
+# version-specific vanilla history/states filenames.
+
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				napoleonic_setup_1789_map = yes
+				news_event = { id = napoleonic_timeline.0 days = 1 }
+			}
+		}
+	}
+}
