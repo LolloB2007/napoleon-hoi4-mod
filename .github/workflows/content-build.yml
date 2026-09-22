@@ -5,27 +5,26 @@ on:
   pull_request:
 permissions:
   contents: read
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
 concurrency:
   group: content-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   generate:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && github.event.created == false
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - name: Restore source snapshot if present
-        run: |
-          if [ -f tools/bootstrap_baseline.py ]; then python3 tools/bootstrap_baseline.py; fi
       - name: Generate engine files
         run: |
           if [ -f tools/build_content.py ]; then python3 tools/build_content.py; fi
       - name: Unit tests
         run: |
           if [ -d tests ]; then python3 -m unittest discover -s tests -v; fi
-      - name: Commit generated files to this development branch only
+      - name: Commit generated game files to this development branch only
         env:
           TARGET_BRANCH: ${{ github.ref_name }}
         run: |
@@ -35,7 +34,7 @@ jobs:
           branch = os.environ['TARGET_BRANCH']
           if not re.fullmatch(r'dev/[A-Za-z0-9_./-]+', branch):
               raise SystemExit('Refusing to write outside dev/ branches')
-          roots = ['common','history','events','localisation','interface','gfx','docs','tests','tools','content']
+          roots = ['common','history','events','localisation','interface','gfx','docs']
           roots += ['README.md','ROADMAP.md','to ask lollo.md','suggestions.md']
           paths = [p for p in roots if Path(p).exists()]
           if paths:
