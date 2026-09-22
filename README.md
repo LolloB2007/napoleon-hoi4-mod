@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Milestone 6: reusable state and army management slice**
+**Current branch: Milestone 3: 450-focus French expansion and legacy route repairs**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -28,12 +28,14 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- 68-country source namespace, placeholder flags and build validation
-- Eight bounded treasury/debt/legitimacy/fervor/exhaustion/prestige/reform/supply meters
-- Twelve paid decisions with explicit resource requirements and cooldowns
-- Eleven threshold or temporary national spirits
-- Country-scoped monthly processing and national army prestige from battle hooks
-- Read-only drift verification and synchronized approval/roadmap/readme documents
+- Repository source contracts and checked-in deterministic engine outputs
+- Eight bounded state/army meters, twelve paid decisions and eleven reusable spirits
+- French tree expanded from 29 to 450 definitions across 28 named policy chapters
+- Focus durations of 14, 21, 28, 35, 49 and 70 days in the new chapters
+- 84 policy dilemmas, 56 programme/settlement spirits, execution-time route and payment guards
+- Girondin/Jacobin programme exclusion and a Directory path that does not require embracing the Terror
+- Explicit leaders for the Convention, Directory, Consulate and Restorations; deposed-king trial no longer retires the current republican leader
+- README, ROADMAP, approval queue and suggestions synchronized; historical date/coring policies unchanged
 
 ## Installation for testing
 
@@ -84,7 +86,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-26 local unit tests pass, covering syntax, resources, route gates, bounds and non-quadratic monthly processing. The reference model is not an engine emulator. No HOI4 process was executed.
+50 local unit tests pass. They cover the 450-node graph, missing references/cycles, branch joins, coordinates, six durations, 84 event references/localisation, idempotent rewards, resource checks, legacy route guards and parser round trips. No HOI4 executable was run; focus layout, AI pacing and campaign balance are not yet certified.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

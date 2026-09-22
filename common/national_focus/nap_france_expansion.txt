@@ -1,0 +1,5489 @@
+shared_focus = {
+ id = FRA_nap_assembly_00
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 18
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_01
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_assembly_00 }
+ mutually_exclusive = { focus = FRA_nap_assembly_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_02
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_assembly_00 }
+ mutually_exclusive = { focus = FRA_nap_assembly_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_03
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_assembly_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_04
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_assembly_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_05
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 21
+ cost = 2
+ prerequisite = { focus = FRA_nap_assembly_03 focus = FRA_nap_assembly_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_06
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_assembly_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_07
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_assembly_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_08
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 23
+ cost = 5
+ prerequisite = { focus = FRA_nap_assembly_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_09
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 23
+ cost = 4
+ prerequisite = { focus = FRA_nap_assembly_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_10
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 24
+ cost = 2
+ prerequisite = { focus = FRA_nap_assembly_08 }
+prerequisite = { focus = FRA_nap_assembly_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_11
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_assembly_10 }
+ mutually_exclusive = { focus = FRA_nap_assembly_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_12
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_assembly_10 }
+ mutually_exclusive = { focus = FRA_nap_assembly_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_13
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 26
+ cost = 3
+ prerequisite = { focus = FRA_nap_assembly_11 focus = FRA_nap_assembly_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_assembly_14
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 27
+ cost = 7
+ prerequisite = { focus = FRA_nap_assembly_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_assembly_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_00
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 18
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_01
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_credit_00 }
+ mutually_exclusive = { focus = FRA_nap_credit_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_02
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_credit_00 }
+ mutually_exclusive = { focus = FRA_nap_credit_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_03
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_credit_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_04
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_credit_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_05
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 21
+ cost = 2
+ prerequisite = { focus = FRA_nap_credit_03 focus = FRA_nap_credit_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_06
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_credit_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_07
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_credit_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_08
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 23
+ cost = 5
+ prerequisite = { focus = FRA_nap_credit_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_09
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 23
+ cost = 4
+ prerequisite = { focus = FRA_nap_credit_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_10
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 24
+ cost = 2
+ prerequisite = { focus = FRA_nap_credit_08 }
+prerequisite = { focus = FRA_nap_credit_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_11
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_credit_10 }
+ mutually_exclusive = { focus = FRA_nap_credit_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_12
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_credit_10 }
+ mutually_exclusive = { focus = FRA_nap_credit_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_13
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 26
+ cost = 3
+ prerequisite = { focus = FRA_nap_credit_11 focus = FRA_nap_credit_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_credit_14
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 27
+ cost = 7
+ prerequisite = { focus = FRA_nap_credit_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_credit_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_00
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 18
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_01
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_departments_00 }
+ mutually_exclusive = { focus = FRA_nap_departments_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_02
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_departments_00 }
+ mutually_exclusive = { focus = FRA_nap_departments_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_03
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_departments_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_04
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_departments_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_05
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 21
+ cost = 2
+ prerequisite = { focus = FRA_nap_departments_03 focus = FRA_nap_departments_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_06
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_departments_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_07
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_departments_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_08
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 23
+ cost = 5
+ prerequisite = { focus = FRA_nap_departments_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_09
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 23
+ cost = 4
+ prerequisite = { focus = FRA_nap_departments_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_10
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 24
+ cost = 2
+ prerequisite = { focus = FRA_nap_departments_08 }
+prerequisite = { focus = FRA_nap_departments_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_11
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_departments_10 }
+ mutually_exclusive = { focus = FRA_nap_departments_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_12
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_departments_10 }
+ mutually_exclusive = { focus = FRA_nap_departments_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_13
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 26
+ cost = 3
+ prerequisite = { focus = FRA_nap_departments_11 focus = FRA_nap_departments_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_departments_14
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 27
+ cost = 7
+ prerequisite = { focus = FRA_nap_departments_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_departments_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_00
+ icon = GFX_goal_generic_scientific_exchange
+ x = 80 y = 18
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_01
+ icon = GFX_goal_generic_scientific_exchange
+ x = 76 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_learning_00 }
+ mutually_exclusive = { focus = FRA_nap_learning_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_02
+ icon = GFX_goal_generic_scientific_exchange
+ x = 84 y = 19
+ cost = 3
+ prerequisite = { focus = FRA_nap_learning_00 }
+ mutually_exclusive = { focus = FRA_nap_learning_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_03
+ icon = GFX_goal_generic_scientific_exchange
+ x = 76 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_learning_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_04
+ icon = GFX_goal_generic_scientific_exchange
+ x = 84 y = 20
+ cost = 4
+ prerequisite = { focus = FRA_nap_learning_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_05
+ icon = GFX_goal_generic_scientific_exchange
+ x = 80 y = 21
+ cost = 2
+ prerequisite = { focus = FRA_nap_learning_03 focus = FRA_nap_learning_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_06
+ icon = GFX_goal_generic_scientific_exchange
+ x = 76 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_learning_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_07
+ icon = GFX_goal_generic_scientific_exchange
+ x = 84 y = 22
+ cost = 3
+ prerequisite = { focus = FRA_nap_learning_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_08
+ icon = GFX_goal_generic_scientific_exchange
+ x = 76 y = 23
+ cost = 5
+ prerequisite = { focus = FRA_nap_learning_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_09
+ icon = GFX_goal_generic_scientific_exchange
+ x = 84 y = 23
+ cost = 4
+ prerequisite = { focus = FRA_nap_learning_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_10
+ icon = GFX_goal_generic_scientific_exchange
+ x = 80 y = 24
+ cost = 2
+ prerequisite = { focus = FRA_nap_learning_08 }
+prerequisite = { focus = FRA_nap_learning_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_11
+ icon = GFX_goal_generic_scientific_exchange
+ x = 76 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_learning_10 }
+ mutually_exclusive = { focus = FRA_nap_learning_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_12
+ icon = GFX_goal_generic_scientific_exchange
+ x = 84 y = 25
+ cost = 5
+ prerequisite = { focus = FRA_nap_learning_10 }
+ mutually_exclusive = { focus = FRA_nap_learning_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_13
+ icon = GFX_goal_generic_scientific_exchange
+ x = 80 y = 26
+ cost = 3
+ prerequisite = { focus = FRA_nap_learning_11 focus = FRA_nap_learning_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_learning_14
+ icon = GFX_goal_generic_scientific_exchange
+ x = 80 y = 27
+ cost = 7
+ prerequisite = { focus = FRA_nap_learning_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_learning_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 30
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_infantry_00 }
+ mutually_exclusive = { focus = FRA_nap_infantry_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_infantry_00 }
+ mutually_exclusive = { focus = FRA_nap_infantry_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_infantry_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_infantry_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 33
+ cost = 2
+ prerequisite = { focus = FRA_nap_infantry_03 focus = FRA_nap_infantry_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_infantry_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_infantry_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 35
+ cost = 5
+ prerequisite = { focus = FRA_nap_infantry_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 35
+ cost = 4
+ prerequisite = { focus = FRA_nap_infantry_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 36
+ cost = 2
+ prerequisite = { focus = FRA_nap_infantry_08 }
+prerequisite = { focus = FRA_nap_infantry_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_infantry_10 }
+ mutually_exclusive = { focus = FRA_nap_infantry_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_infantry_10 }
+ mutually_exclusive = { focus = FRA_nap_infantry_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 38
+ cost = 3
+ prerequisite = { focus = FRA_nap_infantry_11 focus = FRA_nap_infantry_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_infantry_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 39
+ cost = 7
+ prerequisite = { focus = FRA_nap_infantry_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_infantry_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 30
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_cavalry_00 }
+ mutually_exclusive = { focus = FRA_nap_cavalry_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_cavalry_00 }
+ mutually_exclusive = { focus = FRA_nap_cavalry_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_cavalry_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_cavalry_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 33
+ cost = 2
+ prerequisite = { focus = FRA_nap_cavalry_03 focus = FRA_nap_cavalry_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_cavalry_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_cavalry_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 35
+ cost = 5
+ prerequisite = { focus = FRA_nap_cavalry_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 35
+ cost = 4
+ prerequisite = { focus = FRA_nap_cavalry_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 36
+ cost = 2
+ prerequisite = { focus = FRA_nap_cavalry_08 }
+prerequisite = { focus = FRA_nap_cavalry_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_cavalry_10 }
+ mutually_exclusive = { focus = FRA_nap_cavalry_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_cavalry_10 }
+ mutually_exclusive = { focus = FRA_nap_cavalry_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 38
+ cost = 3
+ prerequisite = { focus = FRA_nap_cavalry_11 focus = FRA_nap_cavalry_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_cavalry_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 39
+ cost = 7
+ prerequisite = { focus = FRA_nap_cavalry_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_cavalry_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_00
+ icon = GFX_goal_generic_army_artillery
+ x = 56 y = 30
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_01
+ icon = GFX_goal_generic_army_artillery
+ x = 52 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_guns_00 }
+ mutually_exclusive = { focus = FRA_nap_guns_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_02
+ icon = GFX_goal_generic_army_artillery
+ x = 60 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_guns_00 }
+ mutually_exclusive = { focus = FRA_nap_guns_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_03
+ icon = GFX_goal_generic_army_artillery
+ x = 52 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_guns_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_04
+ icon = GFX_goal_generic_army_artillery
+ x = 60 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_guns_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_05
+ icon = GFX_goal_generic_army_artillery
+ x = 56 y = 33
+ cost = 2
+ prerequisite = { focus = FRA_nap_guns_03 focus = FRA_nap_guns_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_06
+ icon = GFX_goal_generic_army_artillery
+ x = 52 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_guns_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_07
+ icon = GFX_goal_generic_army_artillery
+ x = 60 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_guns_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_08
+ icon = GFX_goal_generic_army_artillery
+ x = 52 y = 35
+ cost = 5
+ prerequisite = { focus = FRA_nap_guns_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_09
+ icon = GFX_goal_generic_army_artillery
+ x = 60 y = 35
+ cost = 4
+ prerequisite = { focus = FRA_nap_guns_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_10
+ icon = GFX_goal_generic_army_artillery
+ x = 56 y = 36
+ cost = 2
+ prerequisite = { focus = FRA_nap_guns_08 }
+prerequisite = { focus = FRA_nap_guns_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_11
+ icon = GFX_goal_generic_army_artillery
+ x = 52 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_guns_10 }
+ mutually_exclusive = { focus = FRA_nap_guns_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_12
+ icon = GFX_goal_generic_army_artillery
+ x = 60 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_guns_10 }
+ mutually_exclusive = { focus = FRA_nap_guns_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_13
+ icon = GFX_goal_generic_army_artillery
+ x = 56 y = 38
+ cost = 3
+ prerequisite = { focus = FRA_nap_guns_11 focus = FRA_nap_guns_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_guns_14
+ icon = GFX_goal_generic_army_artillery
+ x = 56 y = 39
+ cost = 7
+ prerequisite = { focus = FRA_nap_guns_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_guns_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_00
+ icon = GFX_goal_generic_navy_battleship
+ x = 80 y = 30
+ cost = 2
+ prerequisite = { focus = FRA_convene_estates_general }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_01
+ icon = GFX_goal_generic_navy_battleship
+ x = 76 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_fleet_00 }
+ mutually_exclusive = { focus = FRA_nap_fleet_02 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_02
+ icon = GFX_goal_generic_navy_battleship
+ x = 84 y = 31
+ cost = 3
+ prerequisite = { focus = FRA_nap_fleet_00 }
+ mutually_exclusive = { focus = FRA_nap_fleet_01 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_03
+ icon = GFX_goal_generic_navy_battleship
+ x = 76 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_fleet_01 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_04
+ icon = GFX_goal_generic_navy_battleship
+ x = 84 y = 32
+ cost = 4
+ prerequisite = { focus = FRA_nap_fleet_02 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_05
+ icon = GFX_goal_generic_navy_battleship
+ x = 80 y = 33
+ cost = 2
+ prerequisite = { focus = FRA_nap_fleet_03 focus = FRA_nap_fleet_04 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_06
+ icon = GFX_goal_generic_navy_battleship
+ x = 76 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_fleet_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_07
+ icon = GFX_goal_generic_navy_battleship
+ x = 84 y = 34
+ cost = 3
+ prerequisite = { focus = FRA_nap_fleet_05 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_08
+ icon = GFX_goal_generic_navy_battleship
+ x = 76 y = 35
+ cost = 5
+ prerequisite = { focus = FRA_nap_fleet_06 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_09
+ icon = GFX_goal_generic_navy_battleship
+ x = 84 y = 35
+ cost = 4
+ prerequisite = { focus = FRA_nap_fleet_07 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_10
+ icon = GFX_goal_generic_navy_battleship
+ x = 80 y = 36
+ cost = 2
+ prerequisite = { focus = FRA_nap_fleet_08 }
+prerequisite = { focus = FRA_nap_fleet_09 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_11
+ icon = GFX_goal_generic_navy_battleship
+ x = 76 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_fleet_10 }
+ mutually_exclusive = { focus = FRA_nap_fleet_12 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_12
+ icon = GFX_goal_generic_navy_battleship
+ x = 84 y = 37
+ cost = 5
+ prerequisite = { focus = FRA_nap_fleet_10 }
+ mutually_exclusive = { focus = FRA_nap_fleet_11 }
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_13
+ icon = GFX_goal_generic_navy_battleship
+ x = 80 y = 38
+ cost = 3
+ prerequisite = { focus = FRA_nap_fleet_11 focus = FRA_nap_fleet_12 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_fleet_14
+ icon = GFX_goal_generic_navy_battleship
+ x = 80 y = 39
+ cost = 7
+ prerequisite = { focus = FRA_nap_fleet_13 }
+ 
+ available = { nap_fra_route_common = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_fleet_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_00
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 42
+ cost = 2
+ prerequisite = { focus = FRA_constitutional_monarchy }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_01
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_charter_00 }
+ mutually_exclusive = { focus = FRA_nap_charter_02 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_02
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_charter_00 }
+ mutually_exclusive = { focus = FRA_nap_charter_01 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_03
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_charter_01 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_04
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_charter_02 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_05
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 45
+ cost = 2
+ prerequisite = { focus = FRA_nap_charter_03 focus = FRA_nap_charter_04 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_06
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_charter_05 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_07
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_charter_05 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_08
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 47
+ cost = 5
+ prerequisite = { focus = FRA_nap_charter_06 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_09
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 47
+ cost = 4
+ prerequisite = { focus = FRA_nap_charter_07 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_10
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 48
+ cost = 2
+ prerequisite = { focus = FRA_nap_charter_08 }
+prerequisite = { focus = FRA_nap_charter_09 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_11
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_charter_10 }
+ mutually_exclusive = { focus = FRA_nap_charter_12 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_12
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_charter_10 }
+ mutually_exclusive = { focus = FRA_nap_charter_11 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_13
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 50
+ cost = 3
+ prerequisite = { focus = FRA_nap_charter_11 focus = FRA_nap_charter_12 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_charter_14
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 51
+ cost = 10
+ prerequisite = { focus = FRA_nap_charter_13 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_charter_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_00
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 42
+ cost = 2
+ prerequisite = { focus = FRA_constitutional_monarchy }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_01
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_representation_00 }
+ mutually_exclusive = { focus = FRA_nap_representation_02 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_02
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_representation_00 }
+ mutually_exclusive = { focus = FRA_nap_representation_01 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_03
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_representation_01 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_04
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_representation_02 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_05
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 45
+ cost = 2
+ prerequisite = { focus = FRA_nap_representation_03 focus = FRA_nap_representation_04 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_06
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_representation_05 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_07
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_representation_05 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_08
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 47
+ cost = 5
+ prerequisite = { focus = FRA_nap_representation_06 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_09
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 47
+ cost = 4
+ prerequisite = { focus = FRA_nap_representation_07 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_10
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 48
+ cost = 2
+ prerequisite = { focus = FRA_nap_representation_08 }
+prerequisite = { focus = FRA_nap_representation_09 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_11
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_representation_10 }
+ mutually_exclusive = { focus = FRA_nap_representation_12 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_12
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_representation_10 }
+ mutually_exclusive = { focus = FRA_nap_representation_11 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_13
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 50
+ cost = 3
+ prerequisite = { focus = FRA_nap_representation_11 focus = FRA_nap_representation_12 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_representation_14
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 51
+ cost = 10
+ prerequisite = { focus = FRA_nap_representation_13 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_representation_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_00
+ icon = GFX_goal_generic_improve_relations
+ x = 56 y = 42
+ cost = 2
+ prerequisite = { focus = FRA_constitutional_europe }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_01
+ icon = GFX_goal_generic_improve_relations
+ x = 52 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_00 }
+ mutually_exclusive = { focus = FRA_nap_constitutional_diplomacy_02 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_02
+ icon = GFX_goal_generic_improve_relations
+ x = 60 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_00 }
+ mutually_exclusive = { focus = FRA_nap_constitutional_diplomacy_01 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_03
+ icon = GFX_goal_generic_improve_relations
+ x = 52 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_01 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_04
+ icon = GFX_goal_generic_improve_relations
+ x = 60 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_02 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_05
+ icon = GFX_goal_generic_improve_relations
+ x = 56 y = 45
+ cost = 2
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_03 focus = FRA_nap_constitutional_diplomacy_04 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_06
+ icon = GFX_goal_generic_improve_relations
+ x = 52 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_05 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_07
+ icon = GFX_goal_generic_improve_relations
+ x = 60 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_05 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_08
+ icon = GFX_goal_generic_improve_relations
+ x = 52 y = 47
+ cost = 5
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_06 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_09
+ icon = GFX_goal_generic_improve_relations
+ x = 60 y = 47
+ cost = 4
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_07 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_10
+ icon = GFX_goal_generic_improve_relations
+ x = 56 y = 48
+ cost = 2
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_08 }
+prerequisite = { focus = FRA_nap_constitutional_diplomacy_09 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_11
+ icon = GFX_goal_generic_improve_relations
+ x = 52 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_10 }
+ mutually_exclusive = { focus = FRA_nap_constitutional_diplomacy_12 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_12
+ icon = GFX_goal_generic_improve_relations
+ x = 60 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_10 }
+ mutually_exclusive = { focus = FRA_nap_constitutional_diplomacy_11 }
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_13
+ icon = GFX_goal_generic_improve_relations
+ x = 56 y = 50
+ cost = 3
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_11 focus = FRA_nap_constitutional_diplomacy_12 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_constitutional_diplomacy_14
+ icon = GFX_goal_generic_improve_relations
+ x = 56 y = 51
+ cost = 10
+ prerequisite = { focus = FRA_nap_constitutional_diplomacy_13 }
+ 
+ available = { nap_fra_route_constitutional = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_constitutional_diplomacy_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_00
+ icon = GFX_goal_generic_neutrality_focus
+ x = 80 y = 42
+ cost = 2
+ prerequisite = { focus = FRA_restore_ancien_regime }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_01
+ icon = GFX_goal_generic_neutrality_focus
+ x = 76 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_court_00 }
+ mutually_exclusive = { focus = FRA_nap_court_02 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_02
+ icon = GFX_goal_generic_neutrality_focus
+ x = 84 y = 43
+ cost = 3
+ prerequisite = { focus = FRA_nap_court_00 }
+ mutually_exclusive = { focus = FRA_nap_court_01 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_03
+ icon = GFX_goal_generic_neutrality_focus
+ x = 76 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_court_01 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_04
+ icon = GFX_goal_generic_neutrality_focus
+ x = 84 y = 44
+ cost = 4
+ prerequisite = { focus = FRA_nap_court_02 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_05
+ icon = GFX_goal_generic_neutrality_focus
+ x = 80 y = 45
+ cost = 2
+ prerequisite = { focus = FRA_nap_court_03 focus = FRA_nap_court_04 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_06
+ icon = GFX_goal_generic_neutrality_focus
+ x = 76 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_court_05 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_07
+ icon = GFX_goal_generic_neutrality_focus
+ x = 84 y = 46
+ cost = 3
+ prerequisite = { focus = FRA_nap_court_05 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_08
+ icon = GFX_goal_generic_neutrality_focus
+ x = 76 y = 47
+ cost = 5
+ prerequisite = { focus = FRA_nap_court_06 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_09
+ icon = GFX_goal_generic_neutrality_focus
+ x = 84 y = 47
+ cost = 4
+ prerequisite = { focus = FRA_nap_court_07 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_10
+ icon = GFX_goal_generic_neutrality_focus
+ x = 80 y = 48
+ cost = 2
+ prerequisite = { focus = FRA_nap_court_08 }
+prerequisite = { focus = FRA_nap_court_09 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_11
+ icon = GFX_goal_generic_neutrality_focus
+ x = 76 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_court_10 }
+ mutually_exclusive = { focus = FRA_nap_court_12 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_12
+ icon = GFX_goal_generic_neutrality_focus
+ x = 84 y = 49
+ cost = 5
+ prerequisite = { focus = FRA_nap_court_10 }
+ mutually_exclusive = { focus = FRA_nap_court_11 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_13
+ icon = GFX_goal_generic_neutrality_focus
+ x = 80 y = 50
+ cost = 3
+ prerequisite = { focus = FRA_nap_court_11 focus = FRA_nap_court_12 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_court_14
+ icon = GFX_goal_generic_neutrality_focus
+ x = 80 y = 51
+ cost = 7
+ prerequisite = { focus = FRA_nap_court_13 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_court_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 54
+ cost = 2
+ prerequisite = { focus = FRA_emigre_army }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_emigres_00 }
+ mutually_exclusive = { focus = FRA_nap_emigres_02 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_emigres_00 }
+ mutually_exclusive = { focus = FRA_nap_emigres_01 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_emigres_01 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_emigres_02 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 57
+ cost = 2
+ prerequisite = { focus = FRA_nap_emigres_03 focus = FRA_nap_emigres_04 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_emigres_05 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_emigres_05 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 59
+ cost = 5
+ prerequisite = { focus = FRA_nap_emigres_06 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 59
+ cost = 4
+ prerequisite = { focus = FRA_nap_emigres_07 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 60
+ cost = 2
+ prerequisite = { focus = FRA_nap_emigres_08 }
+prerequisite = { focus = FRA_nap_emigres_09 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 4 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_emigres_10 }
+ mutually_exclusive = { focus = FRA_nap_emigres_12 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 12 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_emigres_10 }
+ mutually_exclusive = { focus = FRA_nap_emigres_11 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 62
+ cost = 3
+ prerequisite = { focus = FRA_nap_emigres_11 focus = FRA_nap_emigres_12 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emigres_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 8 y = 63
+ cost = 7
+ prerequisite = { focus = FRA_nap_emigres_13 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emigres_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_00
+ icon = GFX_goal_generic_improve_relations
+ x = 32 y = 54
+ cost = 2
+ prerequisite = { focus = FRA_european_concert }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_01
+ icon = GFX_goal_generic_improve_relations
+ x = 28 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_royal_order_00 }
+ mutually_exclusive = { focus = FRA_nap_royal_order_02 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_02
+ icon = GFX_goal_generic_improve_relations
+ x = 36 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_royal_order_00 }
+ mutually_exclusive = { focus = FRA_nap_royal_order_01 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_03
+ icon = GFX_goal_generic_improve_relations
+ x = 28 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_royal_order_01 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_04
+ icon = GFX_goal_generic_improve_relations
+ x = 36 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_royal_order_02 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_05
+ icon = GFX_goal_generic_improve_relations
+ x = 32 y = 57
+ cost = 2
+ prerequisite = { focus = FRA_nap_royal_order_03 focus = FRA_nap_royal_order_04 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_06
+ icon = GFX_goal_generic_improve_relations
+ x = 28 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_royal_order_05 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_07
+ icon = GFX_goal_generic_improve_relations
+ x = 36 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_royal_order_05 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_08
+ icon = GFX_goal_generic_improve_relations
+ x = 28 y = 59
+ cost = 5
+ prerequisite = { focus = FRA_nap_royal_order_06 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_09
+ icon = GFX_goal_generic_improve_relations
+ x = 36 y = 59
+ cost = 4
+ prerequisite = { focus = FRA_nap_royal_order_07 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_10
+ icon = GFX_goal_generic_improve_relations
+ x = 32 y = 60
+ cost = 2
+ prerequisite = { focus = FRA_nap_royal_order_08 }
+prerequisite = { focus = FRA_nap_royal_order_09 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_11
+ icon = GFX_goal_generic_improve_relations
+ x = 28 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_royal_order_10 }
+ mutually_exclusive = { focus = FRA_nap_royal_order_12 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_12
+ icon = GFX_goal_generic_improve_relations
+ x = 36 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_royal_order_10 }
+ mutually_exclusive = { focus = FRA_nap_royal_order_11 }
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_13
+ icon = GFX_goal_generic_improve_relations
+ x = 32 y = 62
+ cost = 3
+ prerequisite = { focus = FRA_nap_royal_order_11 focus = FRA_nap_royal_order_12 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_royal_order_14
+ icon = GFX_goal_generic_improve_relations
+ x = 32 y = 63
+ cost = 7
+ prerequisite = { focus = FRA_nap_royal_order_13 }
+ 
+ available = { nap_fra_route_royalist = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_royal_order_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_00
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 54
+ cost = 2
+ prerequisite = { focus = FRA_vive_la_republique }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_01
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_convention_00 }
+ mutually_exclusive = { focus = FRA_nap_convention_02 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_02
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_convention_00 }
+ mutually_exclusive = { focus = FRA_nap_convention_01 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_03
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_convention_01 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_04
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_convention_02 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_05
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 57
+ cost = 2
+ prerequisite = { focus = FRA_nap_convention_03 focus = FRA_nap_convention_04 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_06
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_convention_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_07
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_convention_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_08
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 59
+ cost = 5
+ prerequisite = { focus = FRA_nap_convention_06 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_09
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 59
+ cost = 4
+ prerequisite = { focus = FRA_nap_convention_07 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_10
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 60
+ cost = 2
+ prerequisite = { focus = FRA_nap_convention_08 }
+prerequisite = { focus = FRA_nap_convention_09 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_11
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_convention_10 }
+ mutually_exclusive = { focus = FRA_nap_convention_12 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_12
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_convention_10 }
+ mutually_exclusive = { focus = FRA_nap_convention_11 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_13
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 62
+ cost = 3
+ prerequisite = { focus = FRA_nap_convention_11 focus = FRA_nap_convention_12 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_convention_14
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 63
+ cost = 7
+ prerequisite = { focus = FRA_nap_convention_13 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_convention_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_00
+ icon = GFX_goal_generic_political_pressure
+ x = 80 y = 54
+ cost = 2
+ prerequisite = { focus = FRA_vive_la_republique }
+ mutually_exclusive = { focus = FRA_nap_jacobins_00 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_01
+ icon = GFX_goal_generic_political_pressure
+ x = 76 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_girondins_00 }
+ mutually_exclusive = { focus = FRA_nap_girondins_02 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_02
+ icon = GFX_goal_generic_political_pressure
+ x = 84 y = 55
+ cost = 3
+ prerequisite = { focus = FRA_nap_girondins_00 }
+ mutually_exclusive = { focus = FRA_nap_girondins_01 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_03
+ icon = GFX_goal_generic_political_pressure
+ x = 76 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_girondins_01 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_04
+ icon = GFX_goal_generic_political_pressure
+ x = 84 y = 56
+ cost = 4
+ prerequisite = { focus = FRA_nap_girondins_02 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_05
+ icon = GFX_goal_generic_political_pressure
+ x = 80 y = 57
+ cost = 2
+ prerequisite = { focus = FRA_nap_girondins_03 focus = FRA_nap_girondins_04 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_06
+ icon = GFX_goal_generic_political_pressure
+ x = 76 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_girondins_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_07
+ icon = GFX_goal_generic_political_pressure
+ x = 84 y = 58
+ cost = 3
+ prerequisite = { focus = FRA_nap_girondins_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_08
+ icon = GFX_goal_generic_political_pressure
+ x = 76 y = 59
+ cost = 5
+ prerequisite = { focus = FRA_nap_girondins_06 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_09
+ icon = GFX_goal_generic_political_pressure
+ x = 84 y = 59
+ cost = 4
+ prerequisite = { focus = FRA_nap_girondins_07 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_10
+ icon = GFX_goal_generic_political_pressure
+ x = 80 y = 60
+ cost = 2
+ prerequisite = { focus = FRA_nap_girondins_08 }
+prerequisite = { focus = FRA_nap_girondins_09 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_11
+ icon = GFX_goal_generic_political_pressure
+ x = 76 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_girondins_10 }
+ mutually_exclusive = { focus = FRA_nap_girondins_12 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_12
+ icon = GFX_goal_generic_political_pressure
+ x = 84 y = 61
+ cost = 5
+ prerequisite = { focus = FRA_nap_girondins_10 }
+ mutually_exclusive = { focus = FRA_nap_girondins_11 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_13
+ icon = GFX_goal_generic_political_pressure
+ x = 80 y = 62
+ cost = 3
+ prerequisite = { focus = FRA_nap_girondins_11 focus = FRA_nap_girondins_12 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_girondins_14
+ icon = GFX_goal_generic_political_pressure
+ x = 80 y = 63
+ cost = 7
+ prerequisite = { focus = FRA_nap_girondins_13 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_girondins_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_00
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 66
+ cost = 2
+ prerequisite = { focus = FRA_vive_la_republique }
+ mutually_exclusive = { focus = FRA_nap_girondins_00 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_01
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_jacobins_00 }
+ mutually_exclusive = { focus = FRA_nap_jacobins_02 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_02
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_jacobins_00 }
+ mutually_exclusive = { focus = FRA_nap_jacobins_01 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_03
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_jacobins_01 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_04
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_jacobins_02 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_05
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 69
+ cost = 2
+ prerequisite = { focus = FRA_nap_jacobins_03 focus = FRA_nap_jacobins_04 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_06
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_jacobins_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_07
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_jacobins_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_08
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 71
+ cost = 5
+ prerequisite = { focus = FRA_nap_jacobins_06 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_09
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 71
+ cost = 4
+ prerequisite = { focus = FRA_nap_jacobins_07 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_10
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 72
+ cost = 2
+ prerequisite = { focus = FRA_nap_jacobins_08 }
+prerequisite = { focus = FRA_nap_jacobins_09 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_11
+ icon = GFX_goal_generic_political_pressure
+ x = 4 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_jacobins_10 }
+ mutually_exclusive = { focus = FRA_nap_jacobins_12 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_12
+ icon = GFX_goal_generic_political_pressure
+ x = 12 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_jacobins_10 }
+ mutually_exclusive = { focus = FRA_nap_jacobins_11 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_13
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 74
+ cost = 3
+ prerequisite = { focus = FRA_nap_jacobins_11 focus = FRA_nap_jacobins_12 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_jacobins_14
+ icon = GFX_goal_generic_political_pressure
+ x = 8 y = 75
+ cost = 7
+ prerequisite = { focus = FRA_nap_jacobins_13 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_jacobins_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 66
+ cost = 2
+ prerequisite = { focus = FRA_levee_en_masse_focus }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_emergency_00 }
+ mutually_exclusive = { focus = FRA_nap_emergency_02 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_emergency_00 }
+ mutually_exclusive = { focus = FRA_nap_emergency_01 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_emergency_01 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_emergency_02 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 69
+ cost = 2
+ prerequisite = { focus = FRA_nap_emergency_03 focus = FRA_nap_emergency_04 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_emergency_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_emergency_05 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 71
+ cost = 5
+ prerequisite = { focus = FRA_nap_emergency_06 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 71
+ cost = 4
+ prerequisite = { focus = FRA_nap_emergency_07 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 72
+ cost = 2
+ prerequisite = { focus = FRA_nap_emergency_08 }
+prerequisite = { focus = FRA_nap_emergency_09 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 28 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_emergency_10 }
+ mutually_exclusive = { focus = FRA_nap_emergency_12 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 36 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_emergency_10 }
+ mutually_exclusive = { focus = FRA_nap_emergency_11 }
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 74
+ cost = 3
+ prerequisite = { focus = FRA_nap_emergency_11 focus = FRA_nap_emergency_12 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_emergency_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 32 y = 75
+ cost = 7
+ prerequisite = { focus = FRA_nap_emergency_13 }
+ 
+ available = { nap_fra_route_republican = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_emergency_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_00
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 66
+ cost = 2
+ prerequisite = { focus = FRA_vive_la_republique }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_01
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_directory_00 }
+ mutually_exclusive = { focus = FRA_nap_directory_02 }
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_02
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_directory_00 }
+ mutually_exclusive = { focus = FRA_nap_directory_01 }
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_03
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_directory_01 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_04
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_directory_02 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_05
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 69
+ cost = 2
+ prerequisite = { focus = FRA_nap_directory_03 focus = FRA_nap_directory_04 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_06
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_directory_05 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_07
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_directory_05 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_08
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 71
+ cost = 5
+ prerequisite = { focus = FRA_nap_directory_06 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_09
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 71
+ cost = 4
+ prerequisite = { focus = FRA_nap_directory_07 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_10
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 72
+ cost = 2
+ prerequisite = { focus = FRA_nap_directory_08 }
+prerequisite = { focus = FRA_nap_directory_09 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_11
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_directory_10 }
+ mutually_exclusive = { focus = FRA_nap_directory_12 }
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_12
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_directory_10 }
+ mutually_exclusive = { focus = FRA_nap_directory_11 }
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_13
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 74
+ cost = 3
+ prerequisite = { focus = FRA_nap_directory_11 focus = FRA_nap_directory_12 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_directory_14
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 75
+ cost = 7
+ prerequisite = { focus = FRA_nap_directory_13 }
+ 
+ available = { nap_fra_route_directory = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_directory_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 66
+ cost = 2
+ prerequisite = { focus = FRA_italian_campaign }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_italy_00 }
+ mutually_exclusive = { focus = FRA_nap_italy_02 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 67
+ cost = 3
+ prerequisite = { focus = FRA_nap_italy_00 }
+ mutually_exclusive = { focus = FRA_nap_italy_01 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_italy_01 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 68
+ cost = 4
+ prerequisite = { focus = FRA_nap_italy_02 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 69
+ cost = 2
+ prerequisite = { focus = FRA_nap_italy_03 focus = FRA_nap_italy_04 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_italy_05 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 70
+ cost = 3
+ prerequisite = { focus = FRA_nap_italy_05 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 71
+ cost = 5
+ prerequisite = { focus = FRA_nap_italy_06 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 71
+ cost = 4
+ prerequisite = { focus = FRA_nap_italy_07 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 72
+ cost = 2
+ prerequisite = { focus = FRA_nap_italy_08 }
+prerequisite = { focus = FRA_nap_italy_09 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_italy_10 }
+ mutually_exclusive = { focus = FRA_nap_italy_12 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 73
+ cost = 5
+ prerequisite = { focus = FRA_nap_italy_10 }
+ mutually_exclusive = { focus = FRA_nap_italy_11 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 74
+ cost = 3
+ prerequisite = { focus = FRA_nap_italy_11 focus = FRA_nap_italy_12 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_italy_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 75
+ cost = 7
+ prerequisite = { focus = FRA_nap_italy_13 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_italy_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_00
+ icon = GFX_goal_generic_navy_battleship
+ x = 8 y = 78
+ cost = 2
+ prerequisite = { focus = FRA_egyptian_expedition }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_01
+ icon = GFX_goal_generic_navy_battleship
+ x = 4 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_egypt_00 }
+ mutually_exclusive = { focus = FRA_nap_egypt_02 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_02
+ icon = GFX_goal_generic_navy_battleship
+ x = 12 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_egypt_00 }
+ mutually_exclusive = { focus = FRA_nap_egypt_01 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_03
+ icon = GFX_goal_generic_navy_battleship
+ x = 4 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_egypt_01 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_04
+ icon = GFX_goal_generic_navy_battleship
+ x = 12 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_egypt_02 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_05
+ icon = GFX_goal_generic_navy_battleship
+ x = 8 y = 81
+ cost = 2
+ prerequisite = { focus = FRA_nap_egypt_03 focus = FRA_nap_egypt_04 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_06
+ icon = GFX_goal_generic_navy_battleship
+ x = 4 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_egypt_05 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_07
+ icon = GFX_goal_generic_navy_battleship
+ x = 12 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_egypt_05 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_08
+ icon = GFX_goal_generic_navy_battleship
+ x = 4 y = 83
+ cost = 5
+ prerequisite = { focus = FRA_nap_egypt_06 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_09
+ icon = GFX_goal_generic_navy_battleship
+ x = 12 y = 83
+ cost = 4
+ prerequisite = { focus = FRA_nap_egypt_07 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_10
+ icon = GFX_goal_generic_navy_battleship
+ x = 8 y = 84
+ cost = 2
+ prerequisite = { focus = FRA_nap_egypt_08 }
+prerequisite = { focus = FRA_nap_egypt_09 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_11
+ icon = GFX_goal_generic_navy_battleship
+ x = 4 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_egypt_10 }
+ mutually_exclusive = { focus = FRA_nap_egypt_12 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_12
+ icon = GFX_goal_generic_navy_battleship
+ x = 12 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_egypt_10 }
+ mutually_exclusive = { focus = FRA_nap_egypt_11 }
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_13
+ icon = GFX_goal_generic_navy_battleship
+ x = 8 y = 86
+ cost = 3
+ prerequisite = { focus = FRA_nap_egypt_11 focus = FRA_nap_egypt_12 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_egypt_14
+ icon = GFX_goal_generic_navy_battleship
+ x = 8 y = 87
+ cost = 7
+ prerequisite = { focus = FRA_nap_egypt_13 }
+ 
+ available = { nap_fra_route_campaign = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_egypt_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_00
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 78
+ cost = 2
+ prerequisite = { focus = FRA_brumaire_coup }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_01
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_consulate_00 }
+ mutually_exclusive = { focus = FRA_nap_consulate_02 }
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_02
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_consulate_00 }
+ mutually_exclusive = { focus = FRA_nap_consulate_01 }
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_03
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_consulate_01 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_04
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_consulate_02 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_05
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 81
+ cost = 2
+ prerequisite = { focus = FRA_nap_consulate_03 focus = FRA_nap_consulate_04 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_06
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_consulate_05 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_07
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_consulate_05 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_08
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 83
+ cost = 5
+ prerequisite = { focus = FRA_nap_consulate_06 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_09
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 83
+ cost = 4
+ prerequisite = { focus = FRA_nap_consulate_07 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_10
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 84
+ cost = 2
+ prerequisite = { focus = FRA_nap_consulate_08 }
+prerequisite = { focus = FRA_nap_consulate_09 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_11
+ icon = GFX_goal_generic_political_pressure
+ x = 28 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_consulate_10 }
+ mutually_exclusive = { focus = FRA_nap_consulate_12 }
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_12
+ icon = GFX_goal_generic_political_pressure
+ x = 36 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_consulate_10 }
+ mutually_exclusive = { focus = FRA_nap_consulate_11 }
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_13
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 86
+ cost = 3
+ prerequisite = { focus = FRA_nap_consulate_11 focus = FRA_nap_consulate_12 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_consulate_14
+ icon = GFX_goal_generic_political_pressure
+ x = 32 y = 87
+ cost = 7
+ prerequisite = { focus = FRA_nap_consulate_13 }
+ 
+ available = { nap_fra_route_consular = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_consulate_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_00
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 78
+ cost = 2
+ prerequisite = { focus = FRA_proclaim_empire }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_01
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_empire_00 }
+ mutually_exclusive = { focus = FRA_nap_empire_02 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_02
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_empire_00 }
+ mutually_exclusive = { focus = FRA_nap_empire_01 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_03
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_empire_01 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_04
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_empire_02 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_05
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 81
+ cost = 2
+ prerequisite = { focus = FRA_nap_empire_03 focus = FRA_nap_empire_04 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_06
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_empire_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_07
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_empire_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_08
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 83
+ cost = 5
+ prerequisite = { focus = FRA_nap_empire_06 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_09
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 83
+ cost = 4
+ prerequisite = { focus = FRA_nap_empire_07 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_10
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 84
+ cost = 2
+ prerequisite = { focus = FRA_nap_empire_08 }
+prerequisite = { focus = FRA_nap_empire_09 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_11
+ icon = GFX_goal_generic_political_pressure
+ x = 52 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_empire_10 }
+ mutually_exclusive = { focus = FRA_nap_empire_12 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_12
+ icon = GFX_goal_generic_political_pressure
+ x = 60 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_empire_10 }
+ mutually_exclusive = { focus = FRA_nap_empire_11 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_13
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 86
+ cost = 3
+ prerequisite = { focus = FRA_nap_empire_11 focus = FRA_nap_empire_12 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_empire_14
+ icon = GFX_goal_generic_political_pressure
+ x = 56 y = 87
+ cost = 10
+ prerequisite = { focus = FRA_nap_empire_13 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_empire_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 78
+ cost = 2
+ prerequisite = { focus = FRA_grande_armee_focus }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_marshals_00 }
+ mutually_exclusive = { focus = FRA_nap_marshals_02 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 79
+ cost = 3
+ prerequisite = { focus = FRA_nap_marshals_00 }
+ mutually_exclusive = { focus = FRA_nap_marshals_01 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_marshals_01 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 80
+ cost = 4
+ prerequisite = { focus = FRA_nap_marshals_02 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 81
+ cost = 2
+ prerequisite = { focus = FRA_nap_marshals_03 focus = FRA_nap_marshals_04 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_marshals_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 82
+ cost = 3
+ prerequisite = { focus = FRA_nap_marshals_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 83
+ cost = 5
+ prerequisite = { focus = FRA_nap_marshals_06 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 83
+ cost = 4
+ prerequisite = { focus = FRA_nap_marshals_07 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 84
+ cost = 2
+ prerequisite = { focus = FRA_nap_marshals_08 }
+prerequisite = { focus = FRA_nap_marshals_09 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_marshals_10 }
+ mutually_exclusive = { focus = FRA_nap_marshals_12 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 85
+ cost = 5
+ prerequisite = { focus = FRA_nap_marshals_10 }
+ mutually_exclusive = { focus = FRA_nap_marshals_11 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 86
+ cost = 3
+ prerequisite = { focus = FRA_nap_marshals_11 focus = FRA_nap_marshals_12 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_marshals_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 87
+ cost = 10
+ prerequisite = { focus = FRA_nap_marshals_13 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_marshals_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_00
+ icon = GFX_goal_generic_improve_relations
+ x = 8 y = 90
+ cost = 2
+ prerequisite = { focus = FRA_confederation_rhine }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_01
+ icon = GFX_goal_generic_improve_relations
+ x = 4 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_clients_00 }
+ mutually_exclusive = { focus = FRA_nap_clients_02 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_02
+ icon = GFX_goal_generic_improve_relations
+ x = 12 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_clients_00 }
+ mutually_exclusive = { focus = FRA_nap_clients_01 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_03
+ icon = GFX_goal_generic_improve_relations
+ x = 4 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_clients_01 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_04
+ icon = GFX_goal_generic_improve_relations
+ x = 12 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_clients_02 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_05
+ icon = GFX_goal_generic_improve_relations
+ x = 8 y = 93
+ cost = 2
+ prerequisite = { focus = FRA_nap_clients_03 focus = FRA_nap_clients_04 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_06
+ icon = GFX_goal_generic_improve_relations
+ x = 4 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_clients_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_07
+ icon = GFX_goal_generic_improve_relations
+ x = 12 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_clients_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_08
+ icon = GFX_goal_generic_improve_relations
+ x = 4 y = 95
+ cost = 5
+ prerequisite = { focus = FRA_nap_clients_06 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_09
+ icon = GFX_goal_generic_improve_relations
+ x = 12 y = 95
+ cost = 4
+ prerequisite = { focus = FRA_nap_clients_07 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_10
+ icon = GFX_goal_generic_improve_relations
+ x = 8 y = 96
+ cost = 2
+ prerequisite = { focus = FRA_nap_clients_08 }
+prerequisite = { focus = FRA_nap_clients_09 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_11
+ icon = GFX_goal_generic_improve_relations
+ x = 4 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_clients_10 }
+ mutually_exclusive = { focus = FRA_nap_clients_12 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_12
+ icon = GFX_goal_generic_improve_relations
+ x = 12 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_clients_10 }
+ mutually_exclusive = { focus = FRA_nap_clients_11 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_13
+ icon = GFX_goal_generic_improve_relations
+ x = 8 y = 98
+ cost = 3
+ prerequisite = { focus = FRA_nap_clients_11 focus = FRA_nap_clients_12 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_clients_14
+ icon = GFX_goal_generic_improve_relations
+ x = 8 y = 99
+ cost = 10
+ prerequisite = { focus = FRA_nap_clients_13 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_clients_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_00
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 90
+ cost = 2
+ prerequisite = { focus = FRA_continental_system_focus }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_01
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_continental_00 }
+ mutually_exclusive = { focus = FRA_nap_continental_02 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_02
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_continental_00 }
+ mutually_exclusive = { focus = FRA_nap_continental_01 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_03
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_continental_01 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_04
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_continental_02 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_05
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 93
+ cost = 2
+ prerequisite = { focus = FRA_nap_continental_03 focus = FRA_nap_continental_04 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_06
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_continental_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_07
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_continental_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_08
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 95
+ cost = 5
+ prerequisite = { focus = FRA_nap_continental_06 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_09
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 95
+ cost = 4
+ prerequisite = { focus = FRA_nap_continental_07 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_10
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 96
+ cost = 2
+ prerequisite = { focus = FRA_nap_continental_08 }
+prerequisite = { focus = FRA_nap_continental_09 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_11
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 28 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_continental_10 }
+ mutually_exclusive = { focus = FRA_nap_continental_12 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_12
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 36 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_continental_10 }
+ mutually_exclusive = { focus = FRA_nap_continental_11 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_13
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 98
+ cost = 3
+ prerequisite = { focus = FRA_nap_continental_11 focus = FRA_nap_continental_12 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_continental_14
+ icon = GFX_goal_generic_construct_civ_factory
+ x = 32 y = 99
+ cost = 10
+ prerequisite = { focus = FRA_nap_continental_13 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_continental_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 56 y = 90
+ cost = 2
+ prerequisite = { focus = FRA_invade_iberia }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 52 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_peninsula_00 }
+ mutually_exclusive = { focus = FRA_nap_peninsula_02 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 60 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_peninsula_00 }
+ mutually_exclusive = { focus = FRA_nap_peninsula_01 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 52 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_peninsula_01 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 60 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_peninsula_02 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 56 y = 93
+ cost = 2
+ prerequisite = { focus = FRA_nap_peninsula_03 focus = FRA_nap_peninsula_04 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 52 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_peninsula_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 60 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_peninsula_05 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 52 y = 95
+ cost = 5
+ prerequisite = { focus = FRA_nap_peninsula_06 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 60 y = 95
+ cost = 4
+ prerequisite = { focus = FRA_nap_peninsula_07 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 56 y = 96
+ cost = 2
+ prerequisite = { focus = FRA_nap_peninsula_08 }
+prerequisite = { focus = FRA_nap_peninsula_09 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 52 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_peninsula_10 }
+ mutually_exclusive = { focus = FRA_nap_peninsula_12 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 60 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_peninsula_10 }
+ mutually_exclusive = { focus = FRA_nap_peninsula_11 }
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 56 y = 98
+ cost = 3
+ prerequisite = { focus = FRA_nap_peninsula_11 focus = FRA_nap_peninsula_12 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_peninsula_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 56 y = 99
+ cost = 10
+ prerequisite = { focus = FRA_nap_peninsula_13 }
+ 
+ available = { nap_fra_route_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_peninsula_14 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_00
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 90
+ cost = 2
+ prerequisite = { focus = FRA_invade_russia }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_00 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_01
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_russia_00 }
+ mutually_exclusive = { focus = FRA_nap_russia_02 }
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_01 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_02
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 91
+ cost = 3
+ prerequisite = { focus = FRA_nap_russia_00 }
+ mutually_exclusive = { focus = FRA_nap_russia_01 }
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_02 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_03
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_russia_01 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_03 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_04
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 92
+ cost = 4
+ prerequisite = { focus = FRA_nap_russia_02 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_04 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_05
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 93
+ cost = 2
+ prerequisite = { focus = FRA_nap_russia_03 focus = FRA_nap_russia_04 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_05 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_06
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_russia_05 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_06 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_07
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 94
+ cost = 3
+ prerequisite = { focus = FRA_nap_russia_05 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_07 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_08
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 95
+ cost = 5
+ prerequisite = { focus = FRA_nap_russia_06 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_08 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_09
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 95
+ cost = 4
+ prerequisite = { focus = FRA_nap_russia_07 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_09 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_10
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 96
+ cost = 2
+ prerequisite = { focus = FRA_nap_russia_08 }
+prerequisite = { focus = FRA_nap_russia_09 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_10 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_11
+ icon = GFX_goal_generic_army_doctrines
+ x = 76 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_russia_10 }
+ mutually_exclusive = { focus = FRA_nap_russia_12 }
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_11 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_12
+ icon = GFX_goal_generic_army_doctrines
+ x = 84 y = 97
+ cost = 5
+ prerequisite = { focus = FRA_nap_russia_10 }
+ mutually_exclusive = { focus = FRA_nap_russia_11 }
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_12 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_13
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 98
+ cost = 3
+ prerequisite = { focus = FRA_nap_russia_11 focus = FRA_nap_russia_12 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_13 = yes }
+}
+
+shared_focus = {
+ id = FRA_nap_russia_14
+ icon = GFX_goal_generic_army_doctrines
+ x = 80 y = 99
+ cost = 10
+ prerequisite = { focus = FRA_nap_russia_13 }
+ 
+ available = { nap_fra_route_late_imperial = yes }
+ cancel_if_invalid = yes
+ ai_will_do = { factor = 1 }
+ completion_reward = { nap_reward_FRA_nap_russia_14 = yes }
+}
+
+shared_focus = { id = FRA_nap_national_settlement icon = GFX_goal_generic_political_pressure x = 96 y = 20 cost = 2 prerequisite = { focus = FRA_nap_assembly_14 focus = FRA_nap_credit_14 focus = FRA_nap_departments_14 focus = FRA_nap_learning_14 focus = FRA_nap_infantry_14 focus = FRA_nap_cavalry_14 focus = FRA_nap_guns_14 focus = FRA_nap_fleet_14 focus = FRA_nap_charter_14 focus = FRA_nap_representation_14 focus = FRA_nap_constitutional_diplomacy_14 focus = FRA_nap_court_14 focus = FRA_nap_emigres_14 focus = FRA_nap_royal_order_14 focus = FRA_nap_convention_14 focus = FRA_nap_girondins_14 focus = FRA_nap_jacobins_14 focus = FRA_nap_emergency_14 focus = FRA_nap_directory_14 focus = FRA_nap_italy_14 focus = FRA_nap_egypt_14 focus = FRA_nap_consulate_14 focus = FRA_nap_empire_14 focus = FRA_nap_marshals_14 focus = FRA_nap_clients_14 focus = FRA_nap_continental_14 focus = FRA_nap_peninsula_14 focus = FRA_nap_russia_14 } available = { tag = FRA } completion_reward = { if = { limit = { tag = FRA NOT = { has_country_flag = nap_fra_national_settlement_paid } } set_country_flag = nap_fra_national_settlement_paid nap_era_initialize = yes add_to_variable = { nap_legitimacy = 5 } add_political_power = 25 nap_era_clamp = yes nap_era_refresh = yes } } }

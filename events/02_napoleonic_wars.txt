@@ -1,58 +1,108 @@
-###########################################
-# Napoleonic Wars — 1800 to 1812
-# Marengo → Empire → Trafalgar/Austerlitz → Tilsit → Wagram → Russia
-###########################################
-
+# Generated from retained source; preserves historical policy while guarding route and repeat execution.
 add_namespace = napoleonic_wars
-
-# ============================================================
-# EMPIRE PROCLAIMED — 1804.5.18
-# ============================================================
 country_event = {
 	id = napoleonic_wars.3
 	title = napoleonic_wars.3.t
 	desc = napoleonic_wars.3.d
 	picture = GFX_report_event_generic_assembly
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		has_country_flag = consulate_established
 		has_country_flag = french_bonapartist_path
-		NOT = { has_country_flag = french_constitutional_path }
-		NOT = { has_country_flag = french_royalist_path }
+		NOT = {
+			has_country_flag = french_constitutional_path
+		}
+		NOT = {
+			has_country_flag = french_royalist_path
+		}
 		OR = {
 			date > 1804.5.17
 			has_country_flag = proclaim_empire_focus
 		}
 	}
-
-	mean_time_to_happen = { days = 1 }
-
-	option = {
-		name = napoleonic_wars.3.a           # "L'Empire est proclamé!"
-		ai_chance = { factor = 95 }
-		set_country_flag = empire_of_the_french
-		clr_country_flag = consulate_established
-		remove_ideas = revolutionary_republic
-		add_ideas = empire_of_the_french
-		add_popularity = { ideology = fascism popularity = 0.20 }
-		add_war_support = 0.15
-		add_stability = 0.10
-		add_political_power = 100
-
-		country_event = { id = napoleonic_wars.4 days = 200 }    # Coronation Dec 2
+	mean_time_to_happen = {
+		days = 1
 	}
-
 	option = {
-		name = napoleonic_wars.3.b           # Refuse the crown — Republic continues
-		ai_chance = { factor = 5 }
-		add_stability = -0.05
-		add_political_power = -50
+		name = napoleonic_wars.3.a
+		ai_chance = {
+			factor = 95
+		}
+		trigger = {
+			nap_fra_route_consular = yes
+			has_country_flag = consulate_established
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_3_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_consular = yes
+				has_country_flag = consulate_established
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_3_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_3_settled
+			set_country_flag = empire_of_the_french
+			clr_country_flag = consulate_established
+			remove_ideas = revolutionary_republic
+			add_ideas = empire_of_the_french
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+			add_war_support = 0.15
+			add_stability = 0.10
+			add_political_power = 100
+			country_event = {
+				id = napoleonic_wars.4
+				days = 200
+			}
+		}
+	}
+	option = {
+		name = napoleonic_wars.3.b
+		ai_chance = {
+			factor = 5
+		}
+		trigger = {
+			nap_fra_route_consular = yes
+			has_country_flag = consulate_established
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_3_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_consular = yes
+				has_country_flag = consulate_established
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_3_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_3_settled
+			add_stability = -0.05
+			add_political_power = -50
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_consular = yes
+				has_country_flag = consulate_established
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_3_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
 news_event = {
 	id = napoleonic_wars.31
 	title = napoleonic_wars.31.t
@@ -60,194 +110,371 @@ news_event = {
 	picture = GFX_news_event_generic_assembly
 	major = yes
 	is_triggered_only = yes
-
-	option = { name = napoleonic_wars.31.a }
+	option = {
+		name = napoleonic_wars.31.a
+	}
 }
-
-# ============================================================
-# IMPERIAL CORONATION — Notre-Dame — 1804.12.2
-# ============================================================
 country_event = {
 	id = napoleonic_wars.4
 	title = napoleonic_wars.4.t
 	desc = napoleonic_wars.4.d
 	picture = GFX_report_event_generic_assembly
-
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
-		name = napoleonic_wars.4.a           # "He crowns himself"
-		add_war_support = 0.10
-		add_stability = 0.05
-		add_command_power = 100
-		news_event = { id = napoleonic_wars.31 hours = 6 }
+		name = napoleonic_wars.4.a
+		trigger = {
+			nap_fra_route_imperial = yes
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_4_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_4_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_4_settled
+			add_war_support = 0.10
+			add_stability = 0.05
+			add_command_power = 100
+			news_event = {
+				id = napoleonic_wars.31
+				hours = 6
+			}
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_4_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
-# ============================================================
-# TRAFALGAR — 1805.10.21
-# ============================================================
 news_event = {
 	id = napoleonic_wars.5
 	title = napoleonic_wars.5.t
 	desc = napoleonic_wars.5.d
 	picture = GFX_news_event_generic_sinking_ship
-
 	major = yes
-
 	trigger = {
 		date > 1805.10.20
 		OR = {
 			tag = ENG
 			tag = FRA
 		}
-		NOT = { has_global_flag = trafalgar_fought }
+		NOT = {
+			has_global_flag = trafalgar_fought
+		}
 	}
-
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = {
+		days = 1
+	}
 	fire_only_once = yes
-
 	option = {
-		name = napoleonic_wars.5.a           # ENG: "England expects every man..."
-		trigger = { tag = ENG }
+		name = napoleonic_wars.5.a
+		trigger = {
+			tag = ENG
+		}
 		set_global_flag = trafalgar_fought
 		add_war_support = 0.20
 		navy_experience = 100
-		# Cripple French naval combat strength via casualty event
 		FRA = {
 			add_war_support = -0.15
 			add_political_power = -50
 		}
 	}
-
 	option = {
-		name = napoleonic_wars.5.b           # FRA: "Notre flotte est anéantie."
-		trigger = { tag = FRA }
+		name = napoleonic_wars.5.b
+		trigger = {
+			tag = FRA
+		}
 		set_global_flag = trafalgar_fought
 		add_war_support = -0.15
 		add_political_power = -50
 	}
 }
-
-# ============================================================
-# AUSTERLITZ — Battle of the Three Emperors — 1805.12.2
-# ============================================================
 country_event = {
 	id = napoleonic_wars.6
 	title = napoleonic_wars.6.t
 	desc = napoleonic_wars.6.d
 	picture = GFX_report_event_generic_army_formed
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		date > 1805.12.1
 		has_war_with = HAB
 		has_country_flag = empire_of_the_french
 	}
-
-	mean_time_to_happen = { days = 1 }
-
+	mean_time_to_happen = {
+		days = 1
+	}
 	option = {
-		name = napoleonic_wars.6.a           # "The Sun of Austerlitz"
-		add_war_support = 0.20
-		add_command_power = 50
-		add_political_power = 100
-
-		# Forces Austria toward peace
-		HAB = {
-			add_war_support = -0.30
-			add_political_power = -100
-			country_event = { id = napoleonic_wars.61 days = 30 }
+		name = napoleonic_wars.6.a
+		trigger = {
+			nap_fra_route_imperial = yes
+			has_war_with = HAB
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_6_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				has_war_with = HAB
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_6_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_6_settled
+			add_war_support = 0.20
+			add_command_power = 50
+			add_political_power = 100
+			HAB = {
+				add_war_support = -0.30
+				add_political_power = -100
+				country_event = {
+					id = napoleonic_wars.61
+					days = 30
+				}
+			}
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				has_war_with = HAB
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_6_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
-
 country_event = {
 	id = napoleonic_wars.61
 	title = napoleonic_wars.61.t
 	desc = napoleonic_wars.61.d
 	picture = GFX_report_event_generic_assembly
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = napoleonic_wars.61.a          # Treaty of Pressburg — accept
-		ai_chance = { factor = 80 }
-		FRA = { white_peace = HAB }
-		add_stability = -0.10
-		add_political_power = -50
+		name = napoleonic_wars.61.a
+		ai_chance = {
+			factor = 80
+		}
+		trigger = {
+			tag = HAB
+			has_war_with = FRA
+			FRA = {
+				nap_fra_route_imperial = yes
+			}
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_61_settled
+			}
+		}
+		if = {
+			limit = {
+				tag = HAB
+				has_war_with = FRA
+				FRA = {
+					nap_fra_route_imperial = yes
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_61_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_61_settled
+			FRA = {
+				white_peace = HAB
+			}
+			add_stability = -0.10
+			add_political_power = -50
+		}
 	}
 	option = {
-		name = napoleonic_wars.61.b          # Fight on
-		ai_chance = { factor = 20 }
-		add_war_support = 0.05
+		name = napoleonic_wars.61.b
+		ai_chance = {
+			factor = 20
+		}
+		trigger = {
+			tag = HAB
+			has_war_with = FRA
+			FRA = {
+				nap_fra_route_imperial = yes
+			}
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_61_settled
+			}
+		}
+		if = {
+			limit = {
+				tag = HAB
+				has_war_with = FRA
+				FRA = {
+					nap_fra_route_imperial = yes
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_61_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_61_settled
+			add_war_support = 0.05
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				tag = HAB
+				has_war_with = FRA
+				FRA = {
+					nap_fra_route_imperial = yes
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_61_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
-# ============================================================
-# CONFEDERATION OF THE RHINE — 1806.7.12
-# ============================================================
 country_event = {
 	id = napoleonic_wars.7
 	title = napoleonic_wars.7.t
 	desc = napoleonic_wars.7.d
 	picture = GFX_report_event_generic_assembly
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		has_country_flag = empire_of_the_french
 		date > 1806.7.11
 	}
-
-	mean_time_to_happen = { days = 5 }
-
+	mean_time_to_happen = {
+		days = 5
+	}
 	option = {
-		name = napoleonic_wars.7.a           # Establish the Confederation
-		set_country_flag = rheinbund_established
-
-		# Place German clients into a faction or set them as puppets
-		every_country = {
-			limit = {
-				OR = { tag = BAV tag = WUR tag = BAD tag = HES tag = SAX }
+		name = napoleonic_wars.7.a
+		trigger = {
+			nap_fra_route_imperial = yes
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_7_settled
 			}
-			FRA = { puppet = PREV }          # Vassal to France
 		}
-
-		# Dissolve the Holy Roman Empire — fires next
-		country_event = { id = napoleonic_wars.8 days = 25 }
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_7_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_7_settled
+			set_country_flag = rheinbund_established
+			every_country = {
+				limit = {
+					OR = {
+						tag = BAV
+						tag = WUR
+						tag = BAD
+						tag = HES
+						tag = SAX
+					}
+				}
+				FRA = {
+					puppet = PREV
+				}
+			}
+			country_event = {
+				id = napoleonic_wars.8
+				days = 25
+			}
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_7_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
-# ============================================================
-# HRE DISSOLVED — 1806.8.6
-# ============================================================
 country_event = {
 	id = napoleonic_wars.8
 	title = napoleonic_wars.8.t
 	desc = napoleonic_wars.8.d
 	picture = GFX_report_event_generic_assembly
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = napoleonic_wars.8.a           # "The Empire of a Thousand Years is dead."
-		HAB = {
-			clr_country_flag = holy_roman_emperor
-			set_country_flag = austrian_empire
-			add_stability = -0.05
+		name = napoleonic_wars.8.a
+		trigger = {
+			nap_fra_route_imperial = yes
+			has_country_flag = rheinbund_established
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_8_settled
+			}
 		}
-		set_global_flag = hre_dissolved
-		news_event = { id = napoleonic_wars.81 hours = 6 }
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				has_country_flag = rheinbund_established
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_8_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_8_settled
+			HAB = {
+				clr_country_flag = holy_roman_emperor
+				set_country_flag = austrian_empire
+				add_stability = -0.05
+			}
+			set_global_flag = hre_dissolved
+			news_event = {
+				id = napoleonic_wars.81
+				hours = 6
+			}
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				has_country_flag = rheinbund_established
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_8_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
 news_event = {
 	id = napoleonic_wars.81
 	title = napoleonic_wars.81.t
@@ -255,144 +482,305 @@ news_event = {
 	picture = GFX_news_event_generic_assembly
 	major = yes
 	is_triggered_only = yes
-
-	option = { name = napoleonic_wars.81.a }
+	option = {
+		name = napoleonic_wars.81.a
+	}
 }
-
-# ============================================================
-# JENA-AUERSTEDT — 1806.10.14
-# ============================================================
 country_event = {
 	id = napoleonic_wars.9
 	title = napoleonic_wars.9.t
 	desc = napoleonic_wars.9.d
 	picture = GFX_report_event_generic_army_formed
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		date > 1806.10.13
 		has_war_with = PRU
 	}
-
-	mean_time_to_happen = { days = 1 }
-
+	mean_time_to_happen = {
+		days = 1
+	}
 	option = {
-		name = napoleonic_wars.9.a           # The Prussian army is shattered
-		add_war_support = 0.15
-		add_command_power = 30
-
-		PRU = {
-			add_war_support = -0.40
-			add_political_power = -200
-			add_stability = -0.20
-			country_event = { id = napoleonic_wars.91 days = 60 }
+		name = napoleonic_wars.9.a
+		trigger = {
+			nap_fra_route_imperial = yes
+			has_war_with = PRU
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_9_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				has_war_with = PRU
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_9_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_9_settled
+			add_war_support = 0.15
+			add_command_power = 30
+			PRU = {
+				add_war_support = -0.40
+				add_political_power = -200
+				add_stability = -0.20
+				country_event = {
+					id = napoleonic_wars.91
+					days = 60
+				}
+			}
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				has_war_with = PRU
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_9_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
-
 country_event = {
 	id = napoleonic_wars.91
 	title = napoleonic_wars.91.t
 	desc = napoleonic_wars.91.d
 	picture = GFX_report_event_generic_assembly
-
 	is_triggered_only = yes
 	fire_only_once = yes
-
 	option = {
-		name = napoleonic_wars.91.a          # Surrender — Treaty of Tilsit
-		ai_chance = { factor = 90 }
-		FRA = { white_peace = PRU }
-		# Force Prussian reforms
-		add_ideas = scharnhorst_reforms
-		remove_ideas = frederician_inheritance
-		remove_ideas = prussian_army_drill
+		name = napoleonic_wars.91.a
+		ai_chance = {
+			factor = 90
+		}
+		trigger = {
+			tag = PRU
+			has_war_with = FRA
+			FRA = {
+				nap_fra_route_imperial = yes
+			}
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_91_settled
+			}
+		}
+		if = {
+			limit = {
+				tag = PRU
+				has_war_with = FRA
+				FRA = {
+					nap_fra_route_imperial = yes
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_91_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_91_settled
+			FRA = {
+				white_peace = PRU
+			}
+			add_ideas = scharnhorst_reforms
+			remove_ideas = frederician_inheritance
+			remove_ideas = prussian_army_drill
+		}
 	}
 	option = {
-		name = napoleonic_wars.91.b          # Fight to the last
-		ai_chance = { factor = 10 }
+		name = napoleonic_wars.91.b
+		ai_chance = {
+			factor = 10
+		}
+		trigger = {
+			tag = PRU
+			has_war_with = FRA
+			FRA = {
+				nap_fra_route_imperial = yes
+			}
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_91_settled
+			}
+		}
+		if = {
+			limit = {
+				tag = PRU
+				has_war_with = FRA
+				FRA = {
+					nap_fra_route_imperial = yes
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_91_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_91_settled
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				tag = PRU
+				has_war_with = FRA
+				FRA = {
+					nap_fra_route_imperial = yes
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_91_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
-# ============================================================
-# CONTINENTAL SYSTEM — Berlin Decree — 1806.11.21
-# ============================================================
 country_event = {
 	id = napoleonic_wars.10
 	title = napoleonic_wars.10.t
 	desc = napoleonic_wars.10.d
 	picture = GFX_report_event_generic_assembly
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		has_country_flag = empire_of_the_french
 		date > 1806.11.20
 	}
-
-	mean_time_to_happen = { days = 1 }
-
-	option = {
-		name = napoleonic_wars.10.a          # Decree the blockade
-		ai_chance = { factor = 95 }
-		add_ideas = continental_system
-		ENG = { add_ideas = orders_in_council }
-		set_global_flag = continental_system_active
+	mean_time_to_happen = {
+		days = 1
 	}
 	option = {
-		name = napoleonic_wars.10.b          # Don't pursue it
-		ai_chance = { factor = 5 }
+		name = napoleonic_wars.10.a
+		ai_chance = {
+			factor = 95
+		}
+		trigger = {
+			nap_fra_route_imperial = yes
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_10_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_10_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_10_settled
+			add_ideas = continental_system
+			ENG = {
+				add_ideas = orders_in_council
+			}
+			set_global_flag = continental_system_active
+		}
+	}
+	option = {
+		name = napoleonic_wars.10.b
+		ai_chance = {
+			factor = 5
+		}
+		trigger = {
+			nap_fra_route_imperial = yes
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_10_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_10_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_10_settled
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_10_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
-# ============================================================
-# TILSIT — 1807.7.7
-# ============================================================
 country_event = {
 	id = napoleonic_wars.13
 	title = napoleonic_wars.13.t
 	desc = napoleonic_wars.13.d
 	picture = GFX_report_event_generic_assembly
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		has_war_with = RUS
 		date > 1807.7.6
 	}
-
-	mean_time_to_happen = { days = 1 }
-
+	mean_time_to_happen = {
+		days = 1
+	}
 	option = {
-		name = napoleonic_wars.13.a          # Peace and alliance with Russia
-		FRA = { white_peace = RUS }
-		# TODO: create_dynamic_country requires a block in 1.18, not a tag.
-		# Original intent: spawn the Duchy of Warsaw from Prussian Poland after Tilsit.
-		# Implementation: needs WAR country file + state-transfer block (event for v0.0.3).
-		# create_dynamic_country = { original_tag = POL save_event_target_as = duchy_of_warsaw ... }
-		RUS = {
-			add_opinion_modifier = { target = FRA modifier = huge_increase }
+		name = napoleonic_wars.13.a
+		trigger = {
+			nap_fra_route_imperial = yes
+			has_war_with = RUS
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_13_settled
+			}
 		}
-		# Russia joins Continental System (reluctantly)
-		RUS = { add_ideas = continental_system }
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				has_war_with = RUS
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_13_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_13_settled
+			FRA = {
+				white_peace = RUS
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = huge_increase
+				}
+			}
+			RUS = {
+				add_ideas = continental_system
+			}
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				has_war_with = RUS
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_13_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
-# ============================================================
-# INVASION OF RUSSIA — 1812.6.24
-# ============================================================
 country_event = {
 	id = napoleonic_wars.16
 	title = napoleonic_wars.16.t
 	desc = napoleonic_wars.16.d
 	picture = GFX_report_event_generic_army_formed
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = FRA
 		has_country_flag = empire_of_the_french
@@ -400,35 +788,108 @@ country_event = {
 			date > 1812.6.23
 			has_country_flag = invade_russia_focus
 		}
-		NOT = { has_war_with = RUS }
-	}
-
-	mean_time_to_happen = { days = 1 }
-
-	option = {
-		name = napoleonic_wars.16.a          # March!
-		ai_chance = { factor = 70 }
-		declare_war_on = { target = RUS type = annex_everything }
-		add_war_support = 0.10
-
-		# Russia gets the Vast Distances modifier amplified
-		RUS = {
-			add_war_support = 0.20
-			add_ideas = vast_distances
+		NOT = {
+			has_war_with = RUS
 		}
-
-		set_country_flag = russian_campaign_active
-		news_event = { id = napoleonic_wars.161 hours = 6 }
 	}
-
+	mean_time_to_happen = {
+		days = 1
+	}
 	option = {
-		name = napoleonic_wars.16.b          # The greatest blunder is the one you don't make
-		ai_chance = { factor = 30 }
-		add_political_power = -50
-		add_stability = -0.05
+		name = napoleonic_wars.16.a
+		ai_chance = {
+			factor = 70
+		}
+		trigger = {
+			nap_fra_route_imperial = yes
+			NOT = {
+				has_war_with = RUS
+			}
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_16_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_war_with = RUS
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_16_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_16_settled
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = RUS
+					}
+				}
+				declare_war_on = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+			add_war_support = 0.10
+			RUS = {
+				add_war_support = 0.20
+				add_ideas = vast_distances
+			}
+			set_country_flag = russian_campaign_active
+			news_event = {
+				id = napoleonic_wars.161
+				hours = 6
+			}
+		}
+	}
+	option = {
+		name = napoleonic_wars.16.b
+		ai_chance = {
+			factor = 30
+		}
+		trigger = {
+			nap_fra_route_imperial = yes
+			NOT = {
+				has_war_with = RUS
+			}
+			NOT = {
+				has_country_flag = nap_legacy_napoleonic_wars_16_settled
+			}
+		}
+		if = {
+			limit = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_war_with = RUS
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_16_settled
+				}
+			}
+			set_country_flag = nap_legacy_napoleonic_wars_16_settled
+			add_political_power = -50
+			add_stability = -0.05
+		}
+	}
+	option = {
+		name = nap_fra_legacy_superseded
+		trigger = {
+			NOT = {
+				nap_fra_route_imperial = yes
+				NOT = {
+					has_war_with = RUS
+				}
+				NOT = {
+					has_country_flag = nap_legacy_napoleonic_wars_16_settled
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
-
 news_event = {
 	id = napoleonic_wars.161
 	title = napoleonic_wars.161.t
@@ -436,6 +897,7 @@ news_event = {
 	picture = GFX_news_event_generic_army_formed
 	major = yes
 	is_triggered_only = yes
-
-	option = { name = napoleonic_wars.161.a }
+	option = {
+		name = napoleonic_wars.161.a
+	}
 }

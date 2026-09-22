@@ -1,0 +1,58 @@
+ideas = { country = {
+nap_fra_assembly_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_assembly_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.03 } }
+nap_fra_credit_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_credit_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.03 } }
+nap_fra_departments_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.01 } }
+nap_fra_departments_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.03 } }
+nap_fra_learning_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { research_speed_factor = 0.01 } }
+nap_fra_learning_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { research_speed_factor = 0.025 } }
+nap_fra_infantry_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_org_factor = 0.01 } }
+nap_fra_infantry_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_org_factor = 0.025 } }
+nap_fra_cavalry_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_speed_factor = 0.01 } }
+nap_fra_cavalry_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_speed_factor = 0.025 } }
+nap_fra_guns_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_attack_factor = 0.01 } }
+nap_fra_guns_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_attack_factor = 0.025 supply_consumption_factor = 0.015 } }
+nap_fra_fleet_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { navy_org_factor = 0.01 } }
+nap_fra_fleet_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { navy_org_factor = 0.04 } }
+nap_fra_charter_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_charter_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.03 stability_factor = 0.02 } }
+nap_fra_representation_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.01 } }
+nap_fra_representation_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.04 war_support_factor = -0.02 } }
+nap_fra_constitutional_diplomacy_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_constitutional_diplomacy_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { trade_opinion_factor = 0.15 } }
+nap_fra_court_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.01 } }
+nap_fra_court_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.05 } }
+nap_fra_emigres_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_morale_factor = 0.01 } }
+nap_fra_emigres_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_org_factor = 0.03 } }
+nap_fra_royal_order_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_royal_order_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.03 political_power_factor = 0.02 } }
+nap_fra_convention_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { war_support_factor = 0.01 } }
+nap_fra_convention_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { war_support_factor = 0.04 } }
+nap_fra_girondins_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { war_support_factor = 0.01 } }
+nap_fra_girondins_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.04 stability_factor = 0.025 } }
+nap_fra_jacobins_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { war_support_factor = 0.01 } }
+nap_fra_jacobins_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { war_support_factor = 0.05 stability_factor = -0.03 } }
+nap_fra_emergency_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_morale_factor = 0.01 } }
+nap_fra_emergency_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_org_factor = 0.025 war_support_factor = 0.03 } }
+nap_fra_directory_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.01 } }
+nap_fra_directory_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.03 research_speed_factor = 0.02 } }
+nap_fra_italy_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_morale_factor = 0.01 } }
+nap_fra_italy_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { planning_speed = 0.04 } }
+nap_fra_egypt_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { navy_org_factor = 0.01 } }
+nap_fra_egypt_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { supply_consumption_factor = -0.025 } }
+nap_fra_consulate_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.01 } }
+nap_fra_consulate_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { industrial_capacity_factory = 0.025 } }
+nap_fra_empire_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { stability_factor = 0.01 } }
+nap_fra_empire_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.04 } }
+nap_fra_marshals_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_morale_factor = 0.01 } }
+nap_fra_marshals_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { max_planning_factor = 0.04 } }
+nap_fra_clients_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_clients_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { trade_opinion_factor = 0.15 } }
+nap_fra_continental_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { political_power_factor = 0.01 } }
+nap_fra_continental_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { industrial_capacity_factory = 0.025 trade_opinion_factor = -0.05 } }
+nap_fra_peninsula_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_morale_factor = 0.01 } }
+nap_fra_peninsula_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { supply_consumption_factor = -0.03 } }
+nap_fra_russia_programme = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { army_morale_factor = 0.01 } }
+nap_fra_russia_settlement = { picture = generic_morale_bonus allowed = { original_tag = FRA } removal_cost = -1 modifier = { supply_consumption_factor = -0.04 } }
+} }
