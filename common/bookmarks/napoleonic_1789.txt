@@ -1,0 +1,87 @@
+# Napoleonic Era — 1789 bookmark.
+# Structure mirrors vanilla 1.18 common/bookmarks/the_gathering_storm.txt.
+#
+# Note on date: HOI4 bookmark dates use Y.M.D.H format. Picking 1789.5.5 to
+# align with the convening of the Estates-General — the event that opens the
+# napoleonic_timeline.0 news event.
+#
+# default_country = FRA (centerpiece nation).
+# default = yes is required so the launcher selects this bookmark by default.
+
+bookmarks = {
+	bookmark = {
+		name = "NAPOLEONIC_1789_NAME"
+		desc = "NAPOLEONIC_1789_DESC"
+		date = 1789.5.5.12
+		picture = "GFX_select_date_napoleonic"
+		default_country = "FRA"
+		default = yes
+
+		"FRA"={
+			history = "FRA_NAPOLEONIC_1789_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = {
+				FRA_convene_estates_general
+				FRA_adopt_declaration
+				FRA_vive_la_revolution
+			}
+		}
+		"ENG"={
+			history = "ENG_NAPOLEONIC_1789_DESC"
+			ideology = democratic
+			ideas = { }
+			focuses = {
+				ENG_parliamentary_reform
+				ENG_expand_royal_navy
+				ENG_form_first_coalition
+			}
+		}
+		"HAB"={
+			history = "HAB_NAPOLEONIC_1789_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = {
+				HAB_continue_reforms
+				HAB_charles_takes_command
+				HAB_suppress_belgian_revolt
+			}
+		}
+		"RUS"={
+			history = "RUS_NAPOLEONIC_1789_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = {
+				RUS_consolidate_crimea
+				RUS_finish_ottoman_war
+				RUS_partition_poland
+			}
+		}
+		"PRU"={
+			history = "PRU_NAPOLEONIC_1789_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = {
+				PRU_preserve_old_fritz_army
+				PRU_consider_reform
+				PRU_partition_of_poland
+			}
+		}
+		"TUR"={ history = "TUR_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"SPR"={ history = "SPR_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"POL"={ history = "POL_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"SWE"={ history = "SWE_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"---"={ history = "OTHER_NAPOLEONIC_1789_DESC" }
+		"NAP"={ minor = yes history = "NAP_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"SAR"={ minor = yes history = "SAR_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"NET"={ minor = yes history = "NET_NAPOLEONIC_1789_DESC" ideology = democratic focuses = { } }
+		"DEN"={ minor = yes history = "DEN_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"POR"={ minor = yes history = "POR_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"USA"={ minor = yes history = "USA_NAPOLEONIC_1789_DESC" ideology = democratic focuses = { } }
+		"BAV"={ minor = yes history = "BAV_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"SAX"={ minor = yes history = "SAX_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"HAN"={ minor = yes history = "HAN_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"PAP"={ minor = yes history = "PAP_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+		"VEN"={ minor = yes history = "VEN_NAPOLEONIC_1789_DESC" ideology = neutrality focuses = { } }
+	}
+}
