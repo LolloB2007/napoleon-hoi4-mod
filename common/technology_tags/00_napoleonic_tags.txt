@@ -1,0 +1,29 @@
+# Napoleonic Era technology categories.
+# Vanilla folders (infantry_folder, artillery_folder, support_folder,
+# land_doctrine_folder, naval_folder, industry_folder) are deliberately not
+# re-declared here; redefining vanilla technology-folder IDs creates needless
+# load-order ambiguity.
+
+technology_categories = {
+	category_line_doctrine
+	category_column_doctrine
+	category_skirmisher_doctrine
+	category_combined_arms_doctrine
+
+	category_napoleonic_infantry_tech
+	category_napoleonic_cavalry_tech
+	category_napoleonic_artillery_tech
+	category_napoleonic_support_tech
+	category_napoleonic_recon_tech
+	category_napoleonic_naval_tech
+	category_napoleonic_industry_tech
+}
+
+technology_folders = {
+	cavalry_folder = {
+		ledger = army
+	}
+	recon_corps_folder = {
+		ledger = air
+	}
+}

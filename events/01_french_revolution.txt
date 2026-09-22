@@ -1,0 +1,486 @@
+###########################################
+# French Revolution events — 1789 to 1799
+# Bastille → Republic → Brumaire
+###########################################
+
+add_namespace = french_revolution
+add_namespace = napoleonic_timeline
+
+# === Timeline news event — starts the historical clock ===
+# Fires day 1, then re-fires monthly to check timeline progress.
+
+news_event = {
+	id = napoleonic_timeline.0
+	title = napoleonic_timeline.0.t
+	desc = napoleonic_timeline.0.d
+	picture = GFX_news_event_generic_paper
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = napoleonic_timeline.0.a       # "L'ancien régime s'effondre."
+	}
+}
+
+# ============================================================
+# 1. STORMING OF THE BASTILLE — 1789.7.14
+# ============================================================
+country_event = {
+	id = french_revolution.1
+	title = french_revolution.1.t
+	desc = french_revolution.1.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		date > 1789.7.13
+		has_country_flag = bourbon_monarchy
+		NOT = { has_country_flag = bastille_stormed }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.1.a         # "Vive la liberté!"
+		set_country_flag = bastille_stormed
+		add_political_power = -50
+		add_stability = -0.15
+		add_war_support = 0.10
+
+		# Garde Nationale forms (Lafayette commands)
+		load_oob = "FRA_garde_nationale"
+
+		news_event = { id = napoleonic_timeline.1 days = 1 }
+	}
+
+	option = {
+		name = french_revolution.1.b         # "Crush the rebels!" — alt-history hardline
+		set_country_flag = bourbon_crackdown
+		set_country_flag = french_royalist_path
+		clr_country_flag = french_constitutional_path
+		clr_country_flag = french_revolutionary_path
+		clr_country_flag = french_bonapartist_path
+		add_political_power = -100
+		add_stability = -0.30
+		add_war_support = -0.10
+		# Locks the player into a counter-revolutionary path
+	}
+}
+
+news_event = {
+	id = napoleonic_timeline.1
+	title = napoleonic_timeline.1.t
+	desc = napoleonic_timeline.1.d
+	picture = GFX_news_event_generic_riot
+	major = yes
+	is_triggered_only = yes
+
+	option = { name = napoleonic_timeline.1.a }       # "The Bastille has fallen!"
+}
+
+# ============================================================
+# 2. AUGUST DECREES & DECLARATION OF THE RIGHTS OF MAN — 1789.8.26
+# ============================================================
+country_event = {
+	id = french_revolution.2
+	title = french_revolution.2.t
+	desc = french_revolution.2.d
+	picture = GFX_report_event_generic_assembly
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_country_flag = bastille_stormed
+		NOT = { has_country_flag = french_royalist_path }
+		date > 1789.8.25
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = french_revolution.2.a         # "Adopt the Declaration"
+		set_country_flag = rights_of_man_declared
+		add_popularity = { ideology = democratic popularity = 0.10 }
+		add_popularity = { ideology = communism popularity = 0.05 }
+		add_popularity = { ideology = neutrality popularity = -0.15 }
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# ============================================================
+# 3. FLIGHT TO VARENNES — 1791.6.20
+# ============================================================
+country_event = {
+	id = french_revolution.4
+	title = french_revolution.4.t
+	desc = french_revolution.4.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_country_flag = rights_of_man_declared
+		has_country_flag = french_revolutionary_path
+		NOT = { has_country_flag = french_constitutional_path }
+		NOT = { has_country_flag = french_royalist_path }
+		date > 1791.6.19
+		has_country_leader = { name = "Louis XVI" ruling_only = yes }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.4.a         # The king is caught
+		set_country_flag = king_in_flight_caught
+		add_stability = -0.20
+		add_political_power = -75
+		add_popularity = { ideology = communism popularity = 0.15 }
+		add_popularity = { ideology = neutrality popularity = -0.20 }
+	}
+}
+
+# ============================================================
+# 5. WAR OF THE FIRST COALITION — France declares war on Austria
+# ============================================================
+country_event = {
+	id = french_revolution.6
+	title = french_revolution.6.t
+	desc = french_revolution.6.d
+	picture = GFX_report_event_generic_army_formed
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		date > 1792.4.19
+		has_country_flag = french_revolutionary_path
+		NOT = { has_country_flag = french_constitutional_path }
+		NOT = { has_country_flag = french_royalist_path }
+		has_country_flag = king_in_flight_caught
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.6.a         # "La patrie en danger!"
+		declare_war_on = { target = HAB type = annex_everything }
+		add_war_support = 0.20
+		add_political_power = 50
+		add_ideas = levee_en_masse
+		set_country_flag = first_coalition_war
+	}
+
+	option = {
+		name = french_revolution.6.b         # Restraint — alt-history
+		set_country_flag = france_at_peace
+		add_political_power = -100
+		add_stability = -0.10
+	}
+}
+
+# ============================================================
+# 6. REPUBLIC PROCLAIMED — 1792.9.22
+# ============================================================
+# Triggered either by date or by the "Vive la République" focus (which can fire it earlier).
+country_event = {
+	id = french_revolution.8
+	title = french_revolution.8.t
+	desc = french_revolution.8.d
+	picture = GFX_report_event_generic_assembly
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		OR = {
+			date > 1792.9.21
+			has_country_flag = vive_la_republique_focus
+		}
+		has_country_flag = first_coalition_war
+		has_country_flag = french_revolutionary_path
+		NOT = { has_country_flag = french_constitutional_path }
+		NOT = { has_country_flag = french_royalist_path }
+		NOT = { has_country_flag = republic_proclaimed }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.8.a         # "Vive la République!"
+		set_country_flag = republic_proclaimed
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		add_popularity = { ideology = communism popularity = 0.40 }
+		add_popularity = { ideology = neutrality popularity = -0.40 }
+		remove_ideas = bourbon_crisis
+		add_ideas = revolutionary_republic
+		add_war_support = 0.20
+		add_stability = -0.10                # internal turmoil
+		clr_country_flag = bourbon_monarchy
+		set_country_flag = french_republic
+
+		news_event = { id = napoleonic_timeline.8 hours = 6 }
+
+		# Triggers the king's trial sequence
+		country_event = { id = french_revolution.9 days = 90 }
+	}
+}
+
+news_event = {
+	id = napoleonic_timeline.8
+	title = napoleonic_timeline.8.t
+	desc = napoleonic_timeline.8.d
+	picture = GFX_news_event_generic_assembly
+	major = yes
+	is_triggered_only = yes
+
+	option = { name = napoleonic_timeline.8.a }       # "France is a Republic!"
+}
+
+# ============================================================
+# 7. EXECUTION OF LOUIS XVI — 1793.1.21
+# ============================================================
+# Fires automatically 90 days after the Republic is proclaimed (or by focus).
+# This is the event the user specifically requested: "Vive la révolution" focus → king's death.
+country_event = {
+	id = french_revolution.9
+	title = french_revolution.9.t
+	desc = french_revolution.9.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_country_flag = french_republic
+		has_country_flag = french_revolutionary_path
+		NOT = { has_country_flag = french_constitutional_path }
+		NOT = { has_country_flag = french_royalist_path }
+		OR = {
+			has_country_flag = vive_la_revolution_focus
+			date > 1793.1.20
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.9.a         # "Le roi est mort. Vive la République!"
+		set_country_flag = louis_xvi_executed
+		retire_country_leader = yes          # Removes Louis XVI from leader pool
+		add_war_support = 0.10
+		add_political_power = 50
+		add_stability = -0.15
+		add_popularity = { ideology = communism popularity = 0.15 }
+		add_popularity = { ideology = neutrality popularity = -0.10 }
+
+		# Diplomatic consequences — Europe in horror
+		every_country = {
+			limit = {
+				OR = { tag = ENG tag = HAB tag = PRU tag = RUS tag = SPR tag = NAP tag = POR }
+				NOT = { has_war_with = FRA }
+			}
+			country_event = { id = french_revolution.91 days = 2 }
+		}
+
+		news_event = { id = napoleonic_timeline.9 hours = 6 }
+	}
+}
+
+news_event = {
+	id = napoleonic_timeline.9
+	title = napoleonic_timeline.9.t
+	desc = napoleonic_timeline.9.d
+	picture = GFX_news_event_generic_riot
+	major = yes
+	is_triggered_only = yes
+
+	option = { name = napoleonic_timeline.9.a }       # "The King is dead."
+}
+
+# === Foreign reaction to regicide — joins the coalition ===
+country_event = {
+	id = french_revolution.91
+	title = french_revolution.91.t
+	desc = french_revolution.91.d
+	picture = GFX_report_event_generic_assembly
+
+	is_triggered_only = yes
+
+	option = {
+		name = french_revolution.91.a        # "Punish the regicides!"
+		ai_chance = { factor = 90 }
+		add_war_support = 0.10
+		declare_war_on = { target = FRA type = annex_everything }
+	}
+
+	option = {
+		name = french_revolution.91.b        # "Stay neutral for now"
+		ai_chance = { factor = 10 }
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+# ============================================================
+# 8. REIGN OF TERROR — 1793.9.5
+# ============================================================
+country_event = {
+	id = french_revolution.10
+	title = french_revolution.10.t
+	desc = french_revolution.10.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_country_flag = louis_xvi_executed
+		has_country_flag = french_revolutionary_path
+		date > 1793.9.4
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.10.a        # Embrace the Terror (Robespierre)
+		ai_chance = { factor = 70 }
+		add_ideas = reign_of_terror
+		add_war_support = 0.15
+		add_stability = -0.20
+		set_country_flag = reign_of_terror_active
+		country_event = { id = french_revolution.11 days = 320 }    # Thermidor — Jul 1794
+	}
+
+	option = {
+		name = french_revolution.10.b        # Restrain it (Indulgent / Danton-ish path)
+		ai_chance = { factor = 30 }
+		add_stability = 0.05
+		add_political_power = -50
+		add_popularity = { ideology = communism popularity = -0.10 }
+	}
+}
+
+# ============================================================
+# 9. THERMIDOR — Robespierre falls — 1794.7.27
+# ============================================================
+country_event = {
+	id = french_revolution.11
+	title = french_revolution.11.t
+	desc = french_revolution.11.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = french_revolution.11.a        # "À bas le tyran!"
+		clr_country_flag = reign_of_terror_active
+		remove_ideas = reign_of_terror
+		retire_country_leader = yes          # Removes Robespierre
+		add_stability = 0.10
+		add_political_power = 30
+
+		# Directory follows — fires after 14 months (Oct 1795)
+		country_event = { id = french_revolution.12 days = 450 }
+	}
+}
+
+# ============================================================
+# 10. THE DIRECTORY — 1795.10.27
+# ============================================================
+country_event = {
+	id = french_revolution.12
+	title = french_revolution.12.t
+	desc = french_revolution.12.d
+	picture = GFX_report_event_generic_assembly
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = french_revolution.12.a        # "Govern by committee"
+		add_ideas = directory_corruption
+		add_stability = -0.05
+		add_political_power = -25
+		set_country_flag = directory_active
+	}
+}
+
+# ============================================================
+# 11. 18 BRUMAIRE — Bonaparte's coup — 1799.11.9
+# ============================================================
+country_event = {
+	id = french_revolution.14
+	title = french_revolution.14.t
+	desc = french_revolution.14.d
+	picture = GFX_report_event_generic_army_formed
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_country_flag = directory_active
+		has_country_flag = french_revolutionary_path
+		NOT = { has_country_flag = french_constitutional_path }
+		NOT = { has_country_flag = french_royalist_path }
+		OR = {
+			date > 1799.11.8
+			has_country_flag = brumaire_coup_focus
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = french_revolution.14.a        # "The Consul takes power"
+		ai_chance = { factor = 90 }
+		clr_country_flag = directory_active
+		remove_ideas = directory_corruption
+		set_country_flag = consulate_established
+		set_country_flag = french_bonapartist_path
+		clr_country_flag = french_constitutional_path
+		clr_country_flag = french_royalist_path
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		add_popularity = { ideology = fascism popularity = 0.40 }
+		add_popularity = { ideology = communism popularity = -0.20 }
+		add_popularity = { ideology = democratic popularity = -0.10 }
+		add_political_power = 100
+		add_stability = 0.15
+
+		# Promote Napoleon to country leader
+		# (Implementation note: this happens via character system; placeholder here.)
+
+		news_event = { id = napoleonic_timeline.14 hours = 6 }
+	}
+
+	option = {
+		name = french_revolution.14.b        # The coup fails — alt-history Republic survives
+		ai_chance = { factor = 10 }
+		add_stability = -0.10
+		add_political_power = -100
+	}
+}
+
+news_event = {
+	id = napoleonic_timeline.14
+	title = napoleonic_timeline.14.t
+	desc = napoleonic_timeline.14.d
+	picture = GFX_news_event_generic_army_formed
+	major = yes
+	is_triggered_only = yes
+
+	option = { name = napoleonic_timeline.14.a }
+}

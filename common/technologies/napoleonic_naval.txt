@@ -1,0 +1,182 @@
+# Napoleonic Era — Naval tech tree (age of sail).
+# Five hull families. Modules use vanilla for v0.0.1 (separate reskin pass later).
+
+technologies = {
+
+	# === SHIP OF THE LINE ===
+	ship_of_the_line_1 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1789
+		research_cost = 1.0
+		enable_equipments = { ship_of_the_line_hull_1 }
+
+		path = { leads_to_tech = ship_of_the_line_2 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 0 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	ship_of_the_line_2 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1800
+		research_cost = 1.5
+		enable_equipments = { ship_of_the_line_hull_2 }
+
+		path = { leads_to_tech = ship_of_the_line_3 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 0 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	ship_of_the_line_3 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1815
+		research_cost = 2.0
+		enable_equipments = { ship_of_the_line_hull_3 }
+
+		folder = { name = naval_folder position = { x = 0 y = 4 } }
+		ai_will_do = { factor = 0.8 }
+	}
+
+	# === FRIGATE ===
+	frigate_1 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1789
+		research_cost = 0.7
+		enable_equipments = { frigate_hull_1 }
+
+		path = { leads_to_tech = frigate_2 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 3 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	frigate_2 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1798
+		research_cost = 1.0
+		enable_equipments = { frigate_hull_2 }
+
+		path = { leads_to_tech = frigate_3 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 3 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	frigate_3 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1810
+		research_cost = 1.4
+		enable_equipments = { frigate_hull_3 }
+
+		folder = { name = naval_folder position = { x = 3 y = 4 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	# === SLOOP ===
+	sloop_1 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1789
+		research_cost = 0.5
+		enable_equipments = { sloop_hull_1 }
+
+		path = { leads_to_tech = sloop_2 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 6 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	sloop_2 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1800
+		research_cost = 0.8
+		enable_equipments = { sloop_hull_2 }
+
+		path = { leads_to_tech = sloop_3 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 6 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	sloop_3 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1810
+		research_cost = 1.1
+		enable_equipments = { sloop_hull_3 }
+
+		folder = { name = naval_folder position = { x = 6 y = 4 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	# === BOMB KETCH ===
+	bomb_ketch_1 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1789
+		research_cost = 0.8
+		enable_equipments = { bomb_ketch_hull_1 }
+
+		path = { leads_to_tech = bomb_ketch_2 research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 9 y = 0 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 OR = { tag = ENG tag = FRA tag = SPR tag = NET } }
+		}
+	}
+
+	bomb_ketch_2 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1800
+		research_cost = 1.2
+		enable_equipments = { bomb_ketch_hull_2 }
+
+		folder = { name = naval_folder position = { x = 9 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	# === FIRESHIP ===
+	fireship_1 = {
+		categories = { category_napoleonic_naval_tech }
+		start_year = 1789
+		research_cost = 0.4
+		enable_equipments = { fireship_hull_1 }
+
+		folder = { name = naval_folder position = { x = 12 y = 0 } }
+		ai_will_do = { factor = 0.6 }
+	}
+
+	# === Naval doctrines (compact, single branch for v0.0.1) ===
+
+	naval_doctrine_line_ahead = {
+		categories = { category_napoleonic_naval_tech }
+		doctrine = yes
+		research_cost = 0.7
+		start_year = 1789
+
+		naval_damage_factor = 0.05
+		naval_hit_chance = 0.05
+
+		path = { leads_to_tech = naval_doctrine_breaking_the_line research_cost_coeff = 1 }
+
+		folder = { name = naval_folder position = { x = 15 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	naval_doctrine_breaking_the_line = {
+		categories = { category_napoleonic_naval_tech }
+		doctrine = yes
+		research_cost = 1.0
+		start_year = 1797
+
+
+		naval_damage_factor = 0.10
+		naval_speed_factor = 0.05
+		# British innovation — Howe at the Glorious First, Nelson at Trafalgar.
+
+		folder = { name = naval_folder position = { x = 15 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 tag = ENG }
+		}
+	}
+}

@@ -1,0 +1,117 @@
+# Napoleonic Era — Supply / foraging national spirits.
+# Players (and AI via events) pick a supply philosophy per country.
+# Mutually exclusive: only one of the three "Living off the Land" tiers active at once.
+
+ideas = {
+
+	country = {
+
+		# === FORAGING DOCTRINE ===
+		# Default for armies that move fast and live off captured land (French Revolutionary,
+		# Napoleonic Grande Armée up to 1812). Strong in enemy territory with food, terrible in barren land.
+		foraging_doctrine = {
+			picture = generic_pp_unity_bonus
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				out_of_supply_factor = -0.20
+				army_speed_factor = 0.05
+				# Penalty in barren regions handled via dynamic modifier (events)
+				supply_consumption_factor = -0.10
+				experience_loss_factor = 0.05      # ill-disciplined foraging burns experience
+			}
+		}
+
+		# === MAGAZINE SYSTEM ===
+		# Pre-revolutionary supply doctrine — depots, slow advances, expensive but reliable.
+		# Austrian/Prussian/Russian default until reform.
+		magazine_system = {
+			picture = generic_research_bonus
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				out_of_supply_factor = 0.05         # punished hard when cut from depots
+				army_speed_factor = -0.10
+				supply_consumption_factor = 0.05
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
+				experience_loss_factor = -0.10
+			}
+		}
+
+		# === MIXED LOGISTICS ===
+		# Post-1808 reformed armies. Best of both — slower to research, expensive to maintain.
+		mixed_logistics = {
+			picture = generic_disjointed_gov
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				out_of_supply_factor = -0.10
+				supply_consumption_factor = -0.05
+				army_speed_factor = 0.03
+				industrial_capacity_factory = -0.05    # logistics burns IC
+			}
+		}
+
+		# === LEVÉE EN MASSE ===
+		# Revolutionary France's signature mobilisation. Capped to nations in revolutionary government.
+		levee_en_masse = {
+			picture = generic_manpower_bonus
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				conscription_factor = 0.25
+				training_time_factor = -0.20
+				experience_gain_army_factor = -0.10  # fast training = lower quality
+				war_support_factor = 0.10
+			}
+		}
+
+		# === RUSSIAN WINTER (auto-applied via events, decembre to march, to occupiers in Russian states) ===
+		russian_winter = {
+			picture = generic_morale_bonus
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				winter_attrition_factor = 0.50
+				out_of_supply_factor = 0.15
+				army_speed_factor = -0.25
+				army_morale_factor = -0.15
+				supply_consumption_factor = 0.15
+			}
+		}
+
+		# === SPANISH ULCER (auto-applied to occupiers of Spanish states during Peninsular War) ===
+		spanish_ulcer = {
+			picture = generic_disjointed_gov
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				out_of_supply_factor = 0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.40
+				army_morale_factor = -0.10
+				supply_consumption_factor = 0.10
+				monthly_population = -0.05
+			}
+		}
+	}
+}

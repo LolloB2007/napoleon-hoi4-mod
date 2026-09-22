@@ -1,0 +1,120 @@
+# Russian Empire — Country-specific starting national spirits, 1789.
+
+ideas = {
+
+	country = {
+
+		# === Catherinian glory — height of the empire ===
+		catherinian_glory = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				political_power_factor = 0.05
+				monthly_population = 0.15        # rapid expansion phase
+			}
+		}
+
+		# === Russian Imperial Army ===
+		russian_imperial_army = {
+			picture = generic_morale_bonus
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				army_morale_factor = 0.10
+				army_defence_factor = 0.10       # legendary stubbornness
+				experience_loss_factor = -0.10
+				conscription_factor = 0.10
+			}
+		}
+
+		# === Cossack auxiliary forces ===
+		cossack_hosts = {
+			picture = generic_cavalry_bonus
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.05
+				out_of_supply_factor = -0.10
+				supply_consumption_factor = -0.05
+				recon_factor = 0.20
+			}
+			equipment_bonus = {
+				cavalry_equipment = { build_cost_ic = -0.10 instant = yes }
+			}
+		}
+
+		# === Vast distances — strategic depth, slow mobilisation ===
+		vast_distances = {
+			picture = generic_neutrality_drift_bonus
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = -0.10
+				supply_consumption_factor = 0.05
+				out_of_supply_factor = -0.05      # but Russians cope with it
+				attrition = -0.10                  # they take fewer losses to bad weather (acclimatised)
+				training_time_factor = 0.10
+			}
+		}
+
+		# === Serfdom — the economic foundation ===
+		serfdom_economy = {
+			picture = generic_research_bonus
+			allowed = { original_tag = RUS }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				research_speed_factor = -0.05
+				conscription = 0.01                # plentiful peasant recruits
+				political_power_factor = 0.05      # nobility's grip
+				stability_factor = -0.05           # latent unrest
+			}
+		}
+
+		# === Replaces catherinian_glory after 1801 (Alexander's accession) ===
+		alexandrine_dawn = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+				research_speed_factor = 0.05
+				war_support_factor = -0.05         # initial uncertainty
+			}
+		}
+
+		# === Replaces vast_distances after Speransky's reforms (post-1809) ===
+		speranskian_reforms = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.10
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.05           # noble pushback
+			}
+		}
+	}
+}

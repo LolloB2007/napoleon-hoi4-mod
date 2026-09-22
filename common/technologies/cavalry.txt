@@ -1,0 +1,84 @@
+# Napoleonic Era — Cavalry tech tree
+# Equipment tiers + sub-unit unlocks per cavalry type.
+
+technologies = {
+
+	cavalry_research_1 = {
+		categories = { category_napoleonic_cavalry_tech }
+		start_year = 1789
+		research_cost = 0.5
+		enable_equipments = { cavalry_equipment_0 }
+		enable_subunits = { light_cavalry dragoon heavy_cavalry }
+
+		path = { leads_to_tech = cavalry_research_2 research_cost_coeff = 1 }
+		path = { leads_to_tech = lancer_doctrine research_cost_coeff = 1 }
+		path = { leads_to_tech = irregular_levy research_cost_coeff = 1 }
+		path = { leads_to_tech = horse_breeding research_cost_coeff = 1 }
+
+		folder = { name = cavalry_folder position = { x = 4 y = 0 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	cavalry_research_2 = {
+		categories = { category_napoleonic_cavalry_tech }
+		start_year = 1800
+		research_cost = 1.0
+		enable_equipments = { cavalry_equipment_1 }
+
+		path = { leads_to_tech = cavalry_research_3 research_cost_coeff = 1 }
+
+		folder = { name = cavalry_folder position = { x = 4 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	cavalry_research_3 = {
+		categories = { category_napoleonic_cavalry_tech }
+		start_year = 1812
+		research_cost = 1.4
+		enable_equipments = { cavalry_equipment_2 }
+
+		folder = { name = cavalry_folder position = { x = 4 y = 4 } }
+		ai_will_do = { factor = 1 }
+	}
+
+	lancer_doctrine = {
+		categories = { category_napoleonic_cavalry_tech }
+		start_year = 1807
+		research_cost = 1.0
+		enable_subunits = { lancer }
+
+		folder = { name = cavalry_folder position = { x = 7 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 OR = { tag = POL tag = RUS tag = FRA tag = PRU } }
+		}
+	}
+
+	irregular_levy = {
+		categories = { category_napoleonic_cavalry_tech }
+		start_year = 1789
+		research_cost = 0.4
+		enable_subunits = { irregular_cavalry }
+
+		folder = { name = cavalry_folder position = { x = 10 y = 2 } }
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 10 OR = { tag = RUS tag = TUR tag = SPR tag = MEX tag = MOR } }
+			modifier = { factor = 0 OR = { tag = ENG tag = FRA tag = PRU tag = HAB tag = SAR } }
+		}
+	}
+
+	horse_breeding = {
+		categories = { category_napoleonic_cavalry_tech }
+		start_year = 1790
+		research_cost = 0.6
+
+		light_cavalry = { build_cost_ic = -0.05 max_organisation = 3 }
+		dragoon = { build_cost_ic = -0.05 max_organisation = 3 }
+		heavy_cavalry = { max_organisation = 3 }
+		lancer = { max_organisation = 3 }
+
+		folder = { name = cavalry_folder position = { x = 1 y = 2 } }
+		ai_will_do = { factor = 1 }
+	}
+}

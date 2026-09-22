@@ -16,19 +16,30 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 50 y = 1500 }
 
+	# ============================================================
+	# ROOT — Estates-General convened. The fork in history.
+	# ============================================================
+
 	focus = {
 		id = FRA_convene_estates_general
 		icon = GFX_focus_generic_treaty
 		x = 12 y = 0
 		cost = 5
+
 		ai_will_do = { factor = 100 }
+
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.05
 			set_country_flag = estates_general_convened_focus
-			country_event = { id = french_revolution.1 days = 70 }
+			country_event = { id = french_revolution.1 days = 70 }   # Bastille trigger
 		}
 	}
+
+	# ============================================================
+	# BRANCH 1 — REFORMS (Constitutional Monarchy)
+	# Alt-history: a working constitutional settlement, no Republic.
+	# ============================================================
 
 	focus = {
 		id = FRA_adopt_declaration
@@ -37,9 +48,15 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_vive_la_revolution focus = FRA_emigre_response }
 		x = 3 y = 1
 		cost = 10
+
 		available = { has_country_flag = bastille_stormed }
+
 		ai_will_do = { factor = 30 }
+
 		completion_reward = {
+			set_country_flag = french_constitutional_path
+			clr_country_flag = french_revolutionary_path
+			clr_country_flag = french_royalist_path
 			country_event = { id = french_revolution.2 days = 1 }
 			add_popularity = { ideology = democratic popularity = 0.10 }
 		}
@@ -51,6 +68,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_adopt_declaration }
 		x = 1 y = 2
 		cost = 10
+
 		completion_reward = {
 			add_political_power = -50
 			add_stability = -0.10
@@ -66,9 +84,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_civil_constitution_clergy }
 		x = 3 y = 3
 		cost = 10
+
 		completion_reward = {
 			set_country_flag = constitutional_monarchy_established
-			set_politics = { ruling_party = democratic elections_allowed = yes }
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
 			add_popularity = { ideology = democratic popularity = 0.30 }
 			add_stability = 0.10
 			add_political_power = 100
@@ -81,6 +103,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_constitutional_monarchy }
 		x = 1 y = 4
 		cost = 8
+
 		completion_reward = {
 			army_experience = 25
 			add_tech_bonus = { name = army_bonus bonus = 0.5 uses = 1 category = category_napoleonic_infantry_tech }
@@ -93,7 +116,11 @@ focus_tree = {
 		prerequisite = { focus = FRA_constitutional_monarchy }
 		x = 5 y = 4
 		cost = 8
-		completion_reward = { add_political_power = 50 add_research_slot = 1 }
+
+		completion_reward = {
+			add_political_power = 50
+			add_research_slot = 1
+		}
 	}
 
 	focus = {
@@ -103,12 +130,18 @@ focus_tree = {
 		prerequisite = { focus = FRA_modernize_economy }
 		x = 3 y = 5
 		cost = 10
+
 		completion_reward = {
 			create_faction = "constitutional_alliance"
 			add_war_support = 0.10
 			add_stability = 0.10
 		}
 	}
+
+	# ============================================================
+	# BRANCH 2 — REVOLUTION (Jacobin Republic)
+	# Fires Bastille events, Republic, King's execution.
+	# ============================================================
 
 	focus = {
 		id = FRA_vive_la_revolution
@@ -117,15 +150,23 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_adopt_declaration focus = FRA_emigre_response }
 		x = 9 y = 1
 		cost = 10
+
 		available = { has_country_flag = bastille_stormed }
+
 		ai_will_do = { factor = 50 }
+
 		completion_reward = {
+			set_country_flag = french_revolutionary_path
+			clr_country_flag = french_constitutional_path
+			clr_country_flag = french_royalist_path
 			set_country_flag = vive_la_revolution_focus
 			add_popularity = { ideology = communism popularity = 0.20 }
 			add_popularity = { ideology = neutrality popularity = -0.15 }
 			add_stability = -0.10
 			add_war_support = 0.10
-			country_event = { id = french_revolution.4 days = 30 }
+
+			# Triggers the chain leading to Republic
+			country_event = { id = french_revolution.4 days = 30 }    # Flight to Varennes brought forward
 		}
 	}
 
@@ -135,8 +176,9 @@ focus_tree = {
 		prerequisite = { focus = FRA_vive_la_revolution }
 		x = 7 y = 2
 		cost = 10
+
 		completion_reward = {
-			country_event = { id = french_revolution.6 days = 1 }
+			country_event = { id = french_revolution.6 days = 1 }    # War on Austria
 			add_war_support = 0.15
 		}
 	}
@@ -147,22 +189,27 @@ focus_tree = {
 		prerequisite = { focus = FRA_war_on_tyrants }
 		x = 9 y = 3
 		cost = 10
+
 		completion_reward = {
 			set_country_flag = vive_la_republique_focus
-			country_event = { id = french_revolution.8 days = 1 }
+			country_event = { id = french_revolution.8 days = 1 }    # Republic proclaimed
 		}
 	}
 
+	# ★ USER-REQUESTED PATTERN: Focus that fires the King's death event
 	focus = {
 		id = FRA_trial_of_the_king
 		icon = GFX_focus_generic_crush_the_military
 		prerequisite = { focus = FRA_vive_la_republique }
 		x = 9 y = 4
 		cost = 8
+
 		available = { has_country_flag = french_republic }
+
 		ai_will_do = { factor = 80 }
+
 		completion_reward = {
-			set_country_flag = vive_la_revolution_focus
+			set_country_flag = vive_la_revolution_focus      # Triggers king-death event
 			country_event = { id = french_revolution.9 days = 5 }
 		}
 	}
@@ -173,7 +220,11 @@ focus_tree = {
 		prerequisite = { focus = FRA_trial_of_the_king }
 		x = 11 y = 5
 		cost = 10
-		completion_reward = { country_event = { id = french_revolution.10 days = 1 } }
+
+		completion_reward = {
+			country_event = { id = french_revolution.10 days = 1 }
+			add_ideas = levee_en_masse
+		}
 	}
 
 	focus = {
@@ -182,7 +233,12 @@ focus_tree = {
 		prerequisite = { focus = FRA_vive_la_republique }
 		x = 7 y = 5
 		cost = 10
-		completion_reward = { add_manpower = 100000 army_experience = 25 }
+
+		completion_reward = {
+			add_ideas = levee_en_masse
+			add_manpower = 100000
+			army_experience = 25
+		}
 	}
 
 	focus = {
@@ -192,12 +248,19 @@ focus_tree = {
 		prerequisite = { focus = FRA_levee_en_masse_focus }
 		x = 9 y = 6
 		cost = 15
+
 		completion_reward = {
 			create_faction = "sister_republics_league"
 			add_war_support = 0.20
+			# Form sister republics from conquered territory
 			set_country_flag = sister_republics_active
 		}
 	}
+
+	# ============================================================
+	# BRANCH 3 — EMPIRE (Bonapartist)
+	# Requires Republic first (Brumaire only makes sense from Directory).
+	# ============================================================
 
 	focus = {
 		id = FRA_italian_campaign
@@ -205,10 +268,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_vive_la_republique }
 		x = 14 y = 4
 		cost = 10
+
 		available = { has_country_flag = french_republic }
+
 		completion_reward = {
 			army_experience = 50
 			add_command_power = 25
+			# Bonaparte gains experience
 			if = {
 				limit = { exists = yes }
 				create_corps_commander = {
@@ -231,10 +297,12 @@ focus_tree = {
 		prerequisite = { focus = FRA_italian_campaign }
 		x = 14 y = 5
 		cost = 10
+
 		completion_reward = {
 			army_experience = 25
 			add_political_power = -25
 			add_war_support = 0.05
+			# Adds Egypt-related events / lays groundwork for Brumaire
 			set_country_flag = egyptian_expedition_complete
 		}
 	}
@@ -245,11 +313,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_egyptian_expedition }
 		x = 14 y = 6
 		cost = 8
+
 		available = { has_country_flag = directory_active }
+
 		ai_will_do = { factor = 80 }
+
 		completion_reward = {
 			set_country_flag = brumaire_coup_focus
-			country_event = { id = french_revolution.14 days = 1 }
+			country_event = { id = french_revolution.14 days = 1 }   # Brumaire event
 		}
 	}
 
@@ -259,10 +330,12 @@ focus_tree = {
 		prerequisite = { focus = FRA_brumaire_coup }
 		x = 14 y = 7
 		cost = 10
-		available = { has_country_flag = consulate_established }
+
+		available = { has_country_flag = consulate_established has_country_flag = french_bonapartist_path }
+
 		completion_reward = {
 			set_country_flag = proclaim_empire_focus
-			country_event = { id = napoleonic_wars.3 days = 1 }
+			country_event = { id = napoleonic_wars.3 days = 1 }      # Empire proclaimed
 		}
 	}
 
@@ -272,6 +345,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_proclaim_empire }
 		x = 12 y = 8
 		cost = 10
+
 		completion_reward = {
 			army_experience = 50
 			add_tech_bonus = { name = army_bonus bonus = 0.75 uses = 2 category = category_column_doctrine }
@@ -285,7 +359,10 @@ focus_tree = {
 		prerequisite = { focus = FRA_proclaim_empire }
 		x = 14 y = 8
 		cost = 10
-		completion_reward = { country_event = { id = napoleonic_wars.10 days = 1 } }
+
+		completion_reward = {
+			country_event = { id = napoleonic_wars.10 days = 1 }    # Continental System
+		}
 	}
 
 	focus = {
@@ -294,7 +371,10 @@ focus_tree = {
 		prerequisite = { focus = FRA_proclaim_empire }
 		x = 16 y = 8
 		cost = 10
-		completion_reward = { country_event = { id = napoleonic_wars.7 days = 1 } }
+
+		completion_reward = {
+			country_event = { id = napoleonic_wars.7 days = 1 }     # Rheinbund
+		}
 	}
 
 	focus = {
@@ -304,11 +384,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_continental_system_focus }
 		x = 13 y = 9
 		cost = 10
+
 		available = { has_country_flag = empire_of_the_french }
+
 		ai_will_do = { factor = 60 }
+
 		completion_reward = {
 			set_country_flag = invade_russia_focus
-			country_event = { id = napoleonic_wars.16 days = 1 }
+			country_event = { id = napoleonic_wars.16 days = 1 }    # Russian campaign
 		}
 	}
 
@@ -318,10 +401,11 @@ focus_tree = {
 		prerequisite = { focus = FRA_confederation_rhine }
 		x = 16 y = 9
 		cost = 10
+
 		completion_reward = {
 			declare_war_on = { target = SPR type = annex_everything }
 			declare_war_on = { target = POR type = annex_everything }
-			# SPR add_ideas = spanish_ulcer  # stashed until ideas are restored
+			SPR = { add_ideas = spanish_ulcer }
 		}
 	}
 
@@ -331,13 +415,21 @@ focus_tree = {
 		prerequisite = { focus = FRA_invade_russia }
 		x = 13 y = 10
 		cost = 10
+
 		available = { has_country_flag = bourbon_restoration }
+
 		ai_will_do = { factor = 100 }
+
 		completion_reward = {
 			set_country_flag = return_from_elba_focus
-			country_event = { id = napoleonic_collapse.8 days = 1 }
+			country_event = { id = napoleonic_collapse.8 days = 1 } # 100 Days
 		}
 	}
+
+	# ============================================================
+	# BRANCH 4 — RESTORATION (alt-history Counter-Revolution)
+	# Émigré-backed crackdown wins.
+	# ============================================================
 
 	focus = {
 		id = FRA_emigre_response
@@ -346,9 +438,16 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_adopt_declaration focus = FRA_vive_la_revolution }
 		x = 19 y = 1
 		cost = 10
+
 		available = { has_country_flag = bourbon_crackdown }
+
 		ai_will_do = { factor = 10 }
+
 		completion_reward = {
+			set_country_flag = french_royalist_path
+			clr_country_flag = french_constitutional_path
+			clr_country_flag = french_revolutionary_path
+			clr_country_flag = french_bonapartist_path
 			add_political_power = -50
 			add_popularity = { ideology = neutrality popularity = 0.15 }
 			add_stability = -0.10
@@ -362,6 +461,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_emigre_response }
 		x = 19 y = 2
 		cost = 10
+
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = -0.30 }
 			add_popularity = { ideology = democratic popularity = -0.15 }
@@ -377,10 +477,12 @@ focus_tree = {
 		prerequisite = { focus = FRA_crush_sans_culottes }
 		x = 19 y = 3
 		cost = 10
+
 		completion_reward = {
 			army_experience = 25
 			add_command_power = 50
 			add_political_power = 50
+			# Emigrés return as officer corps
 			load_oob = "FRA_emigre_returners"
 		}
 	}
@@ -391,7 +493,9 @@ focus_tree = {
 		prerequisite = { focus = FRA_emigre_army }
 		x = 19 y = 4
 		cost = 15
+
 		completion_reward = {
+			remove_ideas = bourbon_crisis
 			add_stability = 0.20
 			add_political_power = 100
 			add_popularity = { ideology = neutrality popularity = 0.30 }
@@ -405,9 +509,11 @@ focus_tree = {
 		prerequisite = { focus = FRA_restore_ancien_regime }
 		x = 19 y = 5
 		cost = 15
+
 		completion_reward = {
 			create_faction = "holy_league_of_kings"
 			add_war_support = 0.10
+			add_ideas = concert_of_europe
 		}
 	}
 }

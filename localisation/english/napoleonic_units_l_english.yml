@@ -1,0 +1,82 @@
+l_english:
+ # === Battalions ===
+ line_infantry: "Line Infantry"
+ line_infantry_desc: "Standard battalion of musket-armed regulars fighting in close order. The backbone of every Napoleonic army."
+ light_infantry: "Light Infantry"
+ light_infantry_desc: "Skirmishers and voltigeurs trained for loose-order aimed fire and terrain combat."
+ grenadier: "Grenadiers"
+ grenadier_desc: "Elite shock infantry — taller men, higher pay, the storm troops of the line."
+ militia: "Militia"
+ militia_desc: "Locally raised levies. Cheap, plentiful, brittle in the open but stubborn behind walls."
+ guard_infantry: "Guard Infantry"
+ guard_infantry_desc: "The Emperor's Old Guard. The finest soldiers in Europe — and the last reserve."
+
+ light_cavalry: "Light Cavalry"
+ light_cavalry_desc: "Hussars and chasseurs à cheval. Eyes and scourge of the army — reconnaissance, screening, pursuit."
+ dragoon: "Dragoons"
+ dragoon_desc: "Mounted infantry equally willing to fight on horse or on foot."
+ heavy_cavalry: "Heavy Cavalry"
+ heavy_cavalry_desc: "Cuirassiers and carabiniers in steel breastplates. The hammer of the battlefield."
+ lancer: "Lancers"
+ lancer_desc: "Uhlans wielding the lance — reach in the first impact, terror in the pursuit."
+ irregular_cavalry: "Cossacks"
+ irregular_cavalry_desc: "Steppe horsemen. Useless in line battle, devastating in raiding, scouting and the death-ride of routed armies."
+
+ foot_artillery: "Foot Artillery"
+ foot_artillery_desc: "The army's pride and the queen of battles. Slow to move, terrible in mass."
+ horse_artillery: "Horse Artillery"
+ horse_artillery_desc: "Crews mounted, gun teams swift — the elite arm able to keep pace with cavalry."
+ siege_artillery: "Siege Artillery"
+ siege_artillery_desc: "Heavy ordnance for reducing fortresses. Immobile in the field, devastating against walls."
+
+ sapper_company: "Sapper Company"
+ train_battalion: "Train Battalion"
+ field_hospital: "Field Hospital"
+ staff_company: "Staff Company"
+ square_drill_company: "Square Drill Company"
+ signal_corps: "Signal Corps"
+
+ # === Equipment archetypes ===
+ musket_equipment: "Muskets"
+ musket_equipment_0: "Pattern 1777 Musket"
+ musket_equipment_1: "Year IX Musket"
+ musket_equipment_2: "Improved Service Musket"
+ musket_equipment_3: "Percussion-Cap Musket"
+
+ cavalry_equipment: "Cavalry Equipment"
+ cavalry_equipment_0: "Service Pattern Sabre & Carbine"
+ cavalry_equipment_1: "Standardised Cavalry Kit"
+ cavalry_equipment_2: "Late-Pattern Cavalry Kit"
+
+ nap_artillery_equipment: "Field Artillery"
+ nap_artillery_equipment_0: "Pre-Gribeauval Park"
+ nap_artillery_equipment_1: "Gribeauval System"
+ nap_artillery_equipment_2: "Year XI System"
+ nap_artillery_equipment_3: "Rifled Ordnance"
+
+ nap_support_equipment: "Support Equipment"
+ nap_support_equipment_0: "Wagons & Tools"
+ nap_support_equipment_1: "Reformed Train"
+ nap_support_equipment_2: "Telegraph & Modern Logistics"
+
+ # === Recon Corps (the renamed "air force") ===
+ scout_equipment: "Scout Squadron"
+ scout_equipment_0: "Light Scout Squadron"
+ scout_equipment_1: "Trained Scout Squadron"
+ scout_equipment_2: "Elite Scout Squadron"
+
+ courier_equipment: "Courier Corps"
+ courier_equipment_0: "Mounted Couriers"
+ courier_equipment_1: "Reformed Courier Service"
+
+ balloon_equipment: "Observation Balloon"
+ balloon_equipment_0: "Compagnie d'Aérostiers"
+ balloon_equipment_1: "Improved Balloon Corps"
+
+ intelligence_equipment: "Intelligence Network"
+ intelligence_equipment_0: "Spy Ring"
+ intelligence_equipment_1: "Imperial Intelligence Bureau"
+
+ privateer_equipment: "Privateer Squadron"
+ privateer_equipment_0: "Letters of Marque"
+ privateer_equipment_1: "Privateer Command"

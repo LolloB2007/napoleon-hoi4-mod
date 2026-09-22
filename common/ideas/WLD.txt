@@ -1,0 +1,38 @@
+# Wilderness — inert national spirit. Prevents the tag from doing anything.
+
+ideas = {
+
+	country = {
+
+		wilderness_inert = {
+			picture = generic_neutrality_drift_bonus
+			allowed = { original_tag = WLD }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {
+				# Crippled economy + recruitment — tag cannot project power
+				industrial_capacity_factory = -0.99
+				industrial_capacity_dockyard = -0.99
+				production_speed_buildings_factor = -0.99
+				research_speed_factor = -0.99
+				conscription = -0.025
+				conscription_factor = -0.99
+				monthly_population = -1.0
+				political_power_factor = -0.99
+				war_support_factor = -1.0
+				stability_factor = -0.5
+
+				# Diplomatic stasis
+				trade_opinion_factor = -1.0
+				autonomy_gain = -1.0
+
+				# Army neutered
+				army_org_factor = -0.90
+				army_morale_factor = -0.90
+				army_attack_factor = -0.90
+				army_defence_factor = -0.50  # still defends a bit so AI doesn't trivially conquer
+			}
+		}
+	}
+}

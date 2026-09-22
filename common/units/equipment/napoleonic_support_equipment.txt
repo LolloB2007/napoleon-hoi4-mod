@@ -1,0 +1,54 @@
+# Support equipment — wagons, tools, medical kits, semaphore stations.
+# Used by all support companies (sappers, train, hospital, staff, signals).
+
+equipments = {
+
+	nap_support_equipment = {
+		year = 1780
+		is_archetype = yes
+		picture = archetype_nap_support_equipment
+		is_buildable = no
+		type = support
+		group_by = archetype
+		family = nap_support_equipment
+
+		interface_category = interface_category_land
+
+		resources = {
+			steel = 1
+		}
+
+		reliability = 0.85
+
+		build_cost_ic = 0.40
+	}
+
+	nap_support_equipment_0 = {
+		year = 1789
+		archetype = nap_support_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	nap_support_equipment_1 = {
+		year = 1805
+		archetype = nap_support_equipment
+		parent = nap_support_equipment_0
+		priority = 100
+		visual_level = 1
+
+		reliability = 0.88
+		build_cost_ic = 0.55
+	}
+
+	nap_support_equipment_2 = {
+		year = 1820
+		archetype = nap_support_equipment
+		parent = nap_support_equipment_1
+		priority = 110
+		visual_level = 2
+
+		reliability = 0.92
+		build_cost_ic = 0.70
+	}
+}

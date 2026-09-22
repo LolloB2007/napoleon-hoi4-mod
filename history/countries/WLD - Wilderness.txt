@@ -1,0 +1,26 @@
+# Wilderness — inert placeholder for non-European territory.
+# No starting army, no events, no AI activity, no diplomacy.
+# Phase 5 design choice: rather than model Americas / Asia / Africa as active
+# states for a 1789-Europe centerpiece mod, fold them into a passive tag that
+# owns all that territory and does nothing.
+
+capital = 657   # Eastern Siberia (arbitrary, away from European play)
+
+set_research_slots = 1
+set_stability = 0.1
+set_war_support = 0.0
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1789.1.1"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+add_ideas = {
+	wilderness_inert
+}

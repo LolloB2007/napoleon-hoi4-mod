@@ -1,0 +1,614 @@
+# Napoleonic Era — Land Doctrines
+# Four mutually-exclusive trees. Pick one per nation; AI picks historically.
+# Doctrine costs are time-only (no equipment).
+
+technologies = {
+
+	# ============================================================
+	# LINE DOCTRINE — British / Prussian / late Russian
+	# Defensive solidity, volley fire, square formation.
+	# ============================================================
+
+	line_doctrine_drill_and_discipline = {
+		categories = { land_doctrine category_line_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.5
+		start_year = 1780
+		doctrine_name = "LINE_DOCTRINE_NAME"
+
+
+		line_infantry = {
+			max_organisation = 5
+			defense = 0.10
+		}
+		grenadier = {
+			max_organisation = 5
+			defense = 0.05
+		}
+		militia = {
+			max_organisation = 3
+		}
+
+		path = {
+			leads_to_tech = line_doctrine_volley_fire
+			research_cost_coeff = 1
+		}
+
+		xor = { column_doctrine_march_cadence skirmisher_doctrine_light_tradition combined_arms_doctrine_corps_system }
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 OR = { tag = ENG tag = PRU tag = HAN tag = SWE tag = POR } }
+		}
+	}
+
+	line_doctrine_volley_fire = {
+		categories = { land_doctrine category_line_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.7
+		start_year = 1790
+
+
+		line_infantry = { soft_attack = 0.10 }
+		grenadier = { soft_attack = 0.10 }
+
+		path = {
+			leads_to_tech = line_doctrine_form_square
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	line_doctrine_form_square = {
+		categories = { land_doctrine category_line_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.9
+		start_year = 1795
+
+
+		# Unlock square drill battalion for free for Line nations
+		enable_subunits = { square_drill_company }
+
+		# Line infantry get baked-in square capability — bonus vs cavalry attacks
+		line_infantry = {
+			defense = 0.15      # placeholder: scripted trigger applies cavalry-specific bonus
+		}
+		grenadier = {
+			defense = 0.10
+		}
+
+		path = {
+			leads_to_tech = line_doctrine_reverse_slope
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 2 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	line_doctrine_reverse_slope = {
+		categories = { land_doctrine category_line_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.0
+		start_year = 1800
+
+
+		land_reinforce_rate = 0.02
+
+		# Terrain bonuses — Wellington's signature
+		hills = { defence = 0.10 }
+		forest = { defence = 0.05 }
+		urban = { defence = 0.10 }
+		fort = { defence = 0.10 }
+
+		path = {
+			leads_to_tech = line_doctrine_thin_red_line
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 3 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	line_doctrine_thin_red_line = {
+		categories = { land_doctrine category_line_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.2
+		start_year = 1808
+
+
+		line_infantry = {
+			max_organisation = 8
+			defense = 0.15
+			soft_attack = 0.10
+			default_morale = 0.10
+		}
+		grenadier = {
+			max_organisation = 5
+			defense = 0.10
+		}
+		guard_infantry = {
+			defense = 0.10
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 4 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ============================================================
+	# COLUMN DOCTRINE — French (Revolutionary + Napoleonic)
+	# Massed shock columns, breakthrough, élan.
+	# ============================================================
+
+	column_doctrine_march_cadence = {
+		categories = { land_doctrine category_column_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.5
+		start_year = 1780
+
+
+		army_speed_factor = 0.10
+		line_infantry = { max_organisation = 3 }
+		grenadier = { max_organisation = 5 soft_attack = 0.05 }
+
+		path = {
+			leads_to_tech = column_doctrine_massed_column
+			research_cost_coeff = 1
+		}
+
+		xor = { line_doctrine_drill_and_discipline skirmisher_doctrine_light_tradition combined_arms_doctrine_corps_system }
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 4 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 OR = { tag = FRA tag = SAR tag = NAP tag = POL tag = WUR tag = SAX tag = BAT } }
+		}
+	}
+
+	column_doctrine_massed_column = {
+		categories = { land_doctrine category_column_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.7
+		start_year = 1790
+
+
+		line_infantry = { breakthrough = 0.20 soft_attack = 0.05 }
+		grenadier = { breakthrough = 0.20 soft_attack = 0.10 }
+
+		path = {
+			leads_to_tech = column_doctrine_elan
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 4 y = 1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	column_doctrine_elan = {
+		categories = { land_doctrine category_column_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.9
+		start_year = 1795
+
+
+		line_infantry = { default_morale = 0.10 soft_attack = 0.10 }
+		grenadier = { default_morale = 0.15 soft_attack = 0.10 }
+		guard_infantry = { default_morale = 0.10 }
+
+		path = {
+			leads_to_tech = column_doctrine_pas_de_charge
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 4 y = 2 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	column_doctrine_pas_de_charge = {
+		categories = { land_doctrine category_column_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.0
+		start_year = 1800
+
+
+		# Unlocks the "Bayonet Charge" command-power decision (defined in decisions file).
+		# Tag-style flag tech sets a country flag the decision checks for.
+		on_research_complete = {
+			set_country_flag = doctrine_pas_de_charge_unlocked
+		}
+
+		line_infantry = { breakthrough = 0.15 }
+		grenadier = { breakthrough = 0.20 }
+		army_speed_factor = 0.05
+
+		path = {
+			leads_to_tech = column_doctrine_grande_armee
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 4 y = 3 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	column_doctrine_grande_armee = {
+		categories = { land_doctrine category_column_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.2
+		start_year = 1805
+
+
+		conscription = 0.01            # +1% recruitable population
+		army_org_factor = 0.10
+		army_attack_factor = 0.05
+		army_morale_factor = 0.10
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 4 y = 4 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ============================================================
+	# SKIRMISHER DOCTRINE — Spain, Tyrol, frontier nations
+	# Light troops, terrain, attrition, guerrilla.
+	# ============================================================
+
+	skirmisher_doctrine_light_tradition = {
+		categories = { land_doctrine category_skirmisher_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.5
+		start_year = 1780
+
+
+		light_infantry = {
+			max_organisation = 8
+			soft_attack = 0.10
+			defense = 0.10
+		}
+
+		path = {
+			leads_to_tech = skirmisher_doctrine_aimed_fire
+			research_cost_coeff = 1
+		}
+
+		xor = { line_doctrine_drill_and_discipline column_doctrine_march_cadence combined_arms_doctrine_corps_system }
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 8 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 5 OR = { tag = SPR tag = POR tag = USA tag = SWI tag = TYR } }
+		}
+	}
+
+	skirmisher_doctrine_aimed_fire = {
+		categories = { land_doctrine category_skirmisher_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.7
+		start_year = 1790
+
+
+		light_infantry = { soft_attack = 0.15 hard_attack = 0.10 }
+
+		# Terrain bonuses for light infantry baked into the unit; doctrine adds general modifiers
+		forest = { attack = 0.05 defence = 0.05 }
+		hills = { attack = 0.05 defence = 0.05 }
+
+		path = {
+			leads_to_tech = skirmisher_doctrine_guerrilla
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 8 y = 1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	skirmisher_doctrine_guerrilla = {
+		categories = { land_doctrine category_skirmisher_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.9
+		start_year = 1795
+
+
+		out_of_supply_factor = -0.30   # huge — armies stay effective when starved
+		army_attack_against_major_factor = 0.05
+		acclimatization_cold_climate_gain_factor = 0.20
+		acclimatization_hot_climate_gain_factor = 0.20
+
+		path = {
+			leads_to_tech = skirmisher_doctrine_mountain_warfare
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 8 y = 2 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	skirmisher_doctrine_mountain_warfare = {
+		categories = { land_doctrine category_skirmisher_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.0
+		start_year = 1800
+
+
+		mountain = { attack = 0.15 defence = 0.15 movement = 0.10 }
+		hills = { attack = 0.10 defence = 0.10 }
+		forest = { attack = 0.10 defence = 0.10 }
+		jungle = { attack = 0.10 defence = 0.10 }
+
+		path = {
+			leads_to_tech = skirmisher_doctrine_peoples_war
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 8 y = 3 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	skirmisher_doctrine_peoples_war = {
+		categories = { land_doctrine category_skirmisher_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.2
+		start_year = 1808
+
+
+		militia = {
+			max_organisation = 10
+			defense = 0.20
+			soft_attack = 0.10
+		}
+		conscription = 0.02
+		resistance_damage_to_garrison_on_our_occupied_states = -0.25
+		# Bonus when fighting on home soil (delivered via mission system later)
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 8 y = 4 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ============================================================
+	# COMBINED ARMS DOCTRINE — late France, late Prussia (Reform Era)
+	# Corps system, multi-arm coordination, the Napoleonic synthesis.
+	# ============================================================
+
+	combined_arms_doctrine_corps_system = {
+		categories = { land_doctrine category_combined_arms_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.6
+		start_year = 1795
+
+
+		planning_speed = 0.20
+		max_planning = 0.10
+		army_org_factor = 0.05
+
+		path = {
+			leads_to_tech = combined_arms_doctrine_horse_artillery
+			research_cost_coeff = 1
+		}
+
+		xor = { line_doctrine_drill_and_discipline column_doctrine_march_cadence skirmisher_doctrine_light_tradition }
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 12 y = 0 }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 3 date > 1806.1.1 OR = { tag = FRA tag = PRU } }
+		}
+	}
+
+	combined_arms_doctrine_horse_artillery = {
+		categories = { land_doctrine category_combined_arms_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.7
+		start_year = 1798
+
+
+		horse_artillery = {
+			max_organisation = 10
+			soft_attack = 0.15
+			breakthrough = 0.10
+			build_cost_ic = -0.10
+		}
+
+		path = {
+			leads_to_tech = combined_arms_doctrine_reserve_cavalry
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 12 y = 1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	combined_arms_doctrine_reserve_cavalry = {
+		categories = { land_doctrine category_combined_arms_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 0.9
+		start_year = 1802
+
+
+		heavy_cavalry = {
+			max_organisation = 5
+			breakthrough = 0.20
+			soft_attack = 0.10
+		}
+		dragoon = {
+			max_organisation = 5
+			soft_attack = 0.10
+		}
+
+		path = {
+			leads_to_tech = combined_arms_doctrine_massed_battery
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 12 y = 2 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	combined_arms_doctrine_massed_battery = {
+		categories = { land_doctrine category_combined_arms_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.0
+		start_year = 1805
+
+
+		foot_artillery = {
+			soft_attack = 0.15
+			hard_attack = 0.10
+			breakthrough = 0.05
+		}
+		horse_artillery = {
+			soft_attack = 0.10
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = combined_arms_doctrine_napoleonic_synthesis
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 12 y = 3 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	combined_arms_doctrine_napoleonic_synthesis = {
+		categories = { land_doctrine category_combined_arms_doctrine }
+		xp_research_type = army
+		xp_research_cost = 100
+		xp_research_bonus = 1.00
+		doctrine = yes
+		research_cost = 1.3
+		start_year = 1810
+
+
+		army_org_factor = 0.05
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_morale_factor = 0.05
+		planning_speed = 0.20
+		max_planning = 0.05
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 12 y = 4 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
