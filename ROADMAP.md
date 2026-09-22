@@ -1,0 +1,574 @@
+# Napoleonic Era — Development Roadmap
+
+This document tracks the major development work required after the core startup/stabilisation pass.
+
+> **Scope:** This roadmap intentionally begins after the launch/debug and immediate runtime-cleanup steps. Those are operational prerequisites rather than long-term content milestones.
+>
+> **Status convention:** Check items off as they are completed. A milestone should only be considered complete when its **Done when** criteria are satisfied.
+
+---
+
+## Milestone 1 — Finish the 1789 Starting World
+
+Build the secondary powers into proper 1789 countries rather than allowing vanilla-era setup to leak into the campaign.
+
+### Priority countries
+
+- [ ] Spain
+- [ ] Portugal
+- [ ] Ottoman Empire
+- [ ] Sweden
+- [ ] Denmark–Norway
+- [ ] Polish–Lithuanian Commonwealth
+- [ ] Netherlands
+- [ ] Kingdom of Naples
+- [ ] Sardinia–Piedmont
+- [ ] Venice
+- [ ] Papal States
+- [ ] Tuscany
+- [ ] Bavaria
+- [ ] Saxony
+- [ ] Hanover
+- [ ] Württemberg
+
+### For each country
+
+- [ ] Correct 1789 government and ideology
+- [ ] Correct ruler / political leadership
+- [ ] Appropriate starting national spirits
+- [ ] Correct diplomatic relationships
+- [ ] Appropriate starting technologies
+- [ ] Historically plausible starting army where relevant
+- [ ] Correct ownership / cores / claims where needed
+- [ ] Remove obvious vanilla 1936 carry-over
+
+### Done when
+
+A 1789 start produces a broadly credible European political map and the major secondary states no longer behave like renamed 1936 countries.
+
+---
+
+## Milestone 2 — Make 1789 Diplomacy Real
+
+Turn historical relationships and ongoing conflicts into actual game state rather than narrative flags.
+
+### Active wars
+
+- [ ] Russo–Turkish War
+- [ ] Russo–Swedish War
+- [ ] Austrian involvement against the Ottoman Empire where appropriate
+
+### Diplomatic structure
+
+- [ ] British–Hanoverian relationship
+- [ ] Austrian Habsburg possessions and dependencies
+- [ ] Polish geopolitical situation
+- [ ] Relevant guarantees
+- [ ] Relevant alliances
+- [ ] Relevant subjects / personal-union-style relationships
+- [ ] Holy Roman Empire relationships where useful to gameplay
+- [ ] Initial rivalries and strategic hostility
+
+### Done when
+
+The diplomatic screen on 5 May 1789 tells roughly the same geopolitical story as the historical situation, and the wars already underway are mechanically real.
+
+---
+
+## Milestone 3 — Make France Content-Complete
+
+France is the central campaign and should become the first fully developed nation.
+
+### Revolution and constitutional crisis
+
+- [ ] Estates-General mechanics
+- [ ] National Assembly
+- [ ] Legislative Assembly
+- [ ] National Convention
+- [ ] Constitutional-monarchy route depth
+- [ ] Royalist counter-revolution route depth
+- [ ] Republican route depth
+- [ ] Jacobins vs Girondins
+- [ ] Political radicalisation mechanics
+- [ ] Vendée / internal counter-revolution
+- [ ] Assignats and revolutionary financial crisis
+- [ ] Committee of Public Safety
+- [ ] Reign of Terror consequences
+- [ ] Thermidorian Reaction
+- [ ] Directory instability
+
+### Napoleon's rise
+
+- [ ] Italian Campaign content
+- [ ] Egyptian Expedition content
+- [ ] Napoleon prestige / popularity progression
+- [ ] 18 Brumaire mechanics
+- [ ] Consulate government
+- [ ] Coronation / formation of the Empire
+- [ ] Marshals of the Empire
+- [ ] Imperial administration
+
+### Imperial France
+
+- [ ] Client-state creation
+- [ ] Sister republics
+- [ ] Confederation of the Rhine
+- [ ] Continental System
+- [ ] Continental System enforcement
+- [ ] Peninsular War mechanics
+- [ ] Spanish resistance / guerrilla pressure
+- [ ] Russian campaign preparation
+- [ ] Russian campaign logistics
+- [ ] Collapse of the Grande Armée
+- [ ] 1814 abdication
+- [ ] Bourbon Restoration
+- [ ] Hundred Days
+- [ ] Final defeat / post-Napoleonic outcome
+
+### Characters
+
+- [ ] Expand revolutionary political characters
+- [ ] Expand French generals
+- [ ] Add major marshals
+- [ ] Tie important characters into events, decisions and command roles
+
+### Done when
+
+France can be played from 1789 through 1815 on the historical route and its major alternate routes without relying on skeletal placeholder focuses or timeline events.
+
+---
+
+## Milestone 4 — Coalition Wars System
+
+Replace one-off scripted coalition behavior with reusable mechanics.
+
+### Coalition formation
+
+- [ ] Coalition eligibility rules
+- [ ] Threat / expansion checks
+- [ ] Ideological reaction to revolutionary France
+- [ ] Reaction to French territorial expansion
+- [ ] Reaction to French client states
+- [ ] Great-power coalition invitations
+- [ ] AI logic for joining and leaving coalitions
+
+### Coalition warfare
+
+- [ ] British subsidies
+- [ ] Coalition war exhaustion
+- [ ] Separate-peace logic
+- [ ] Peace after decisive French victories
+- [ ] Defeated monarchies leaving coalitions
+- [ ] Re-entry into later coalitions
+- [ ] French satellite-state creation
+- [ ] Sister-republic creation
+- [ ] Balance-of-power reactions
+
+### Historical coalition sequence
+
+- [ ] First Coalition
+- [ ] Second Coalition
+- [ ] Third Coalition
+- [ ] Fourth Coalition
+- [ ] Fifth Coalition
+- [ ] Sixth Coalition
+- [ ] Seventh Coalition
+
+### Done when
+
+The First through Seventh Coalitions are generated by one coherent diplomatic framework rather than seven unrelated piles of scripted war declarations.
+
+---
+
+## Milestone 5 — Complete the Other Four Great Powers
+
+Develop Britain, Austria, Prussia and Russia into full campaigns.
+
+Recommended order:
+
+1. Britain
+2. Austria
+3. Prussia
+4. Russia
+
+### Britain
+
+- [ ] Parliamentary politics
+- [ ] Royal Navy strategy
+- [ ] Coalition financing
+- [ ] Continental blockade
+- [ ] Peninsular intervention
+- [ ] Colonial / imperial commitments
+- [ ] Industrial Revolution
+- [ ] Historical and alternate routes
+
+### Austria
+
+- [ ] Joseph II reform legacy
+- [ ] Conservative reaction
+- [ ] Belgian unrest
+- [ ] Archduke Charles military reform
+- [ ] Coalition leadership
+- [ ] Holy Roman Empire crisis
+- [ ] Austrian Empire formation
+- [ ] Metternich / postwar settlement
+- [ ] Historical and alternate routes
+
+### Prussia
+
+- [ ] Frederician military legacy
+- [ ] Pre-Jena conservatism
+- [ ] Jena catastrophe
+- [ ] Stein reforms
+- [ ] Scharnhorst reforms
+- [ ] Universal conscription
+- [ ] War of Liberation
+- [ ] German leadership question
+- [ ] Historical and alternate routes
+
+### Russia
+
+- [ ] Catherine II late reign
+- [ ] Russo–Turkish conflict
+- [ ] Polish partitions
+- [ ] Paul I
+- [ ] Alexander I
+- [ ] Speransky reform
+- [ ] Coalition involvement
+- [ ] 1812 invasion mechanics
+- [ ] Scorched earth / strategic withdrawal
+- [ ] March on Paris
+- [ ] Holy Alliance
+- [ ] Historical and alternate routes
+
+### Done when
+
+All five central great powers have deep campaigns with historical and credible alternate paths, and each interacts meaningfully with the coalition framework.
+
+---
+
+## Milestone 6 — Reusable Napoleonic Gameplay Mechanics
+
+Create systems that make the mod play like the Napoleonic era rather than merely look like it.
+
+### Candidate systems
+
+- [ ] Army morale
+- [ ] General prestige
+- [ ] War exhaustion
+- [ ] Conscription systems
+- [ ] Levée en masse
+- [ ] Coalition diplomacy
+- [ ] Client-state management
+- [ ] Continental blockade
+- [ ] Revolutionary fervor
+- [ ] Monarchical legitimacy
+- [ ] Nationalism
+- [ ] Occupation resistance
+- [ ] Army reform
+- [ ] Long-range campaign logistics
+- [ ] Supply collapse in hostile territory
+- [ ] Political consequences of military defeat
+
+### Implementation preference
+
+Prefer reusable:
+
+- decisions
+- variables
+- scripted effects
+- scripted triggers
+- national spirits
+- modifiers
+- event targets
+
+Avoid invasive engine-level complexity unless a mechanic cannot reasonably be represented through normal HOI4 scripting.
+
+### Done when
+
+Core strategic decisions of the era — mobilisation, coalition politics, legitimacy, occupation and logistics — matter mechanically in every major campaign.
+
+---
+
+## Milestone 7 — Balance the Military System
+
+Balance only after representative campaigns exist.
+
+### Infantry
+
+- [ ] Line infantry
+- [ ] Light infantry
+- [ ] Grenadiers
+- [ ] Guards
+- [ ] Militia
+
+### Cavalry
+
+- [ ] Hussars / light cavalry
+- [ ] Dragoons
+- [ ] Cuirassiers / heavy cavalry
+- [ ] Lancers
+- [ ] Cossacks
+- [ ] Cavalry pursuit behavior
+- [ ] Cavalry shock role
+
+### Artillery and support
+
+- [ ] Foot artillery
+- [ ] Horse artillery
+- [ ] Siege artillery
+- [ ] Sappers
+- [ ] Wagon trains
+- [ ] Medical support
+- [ ] Staff / headquarters support
+
+### Combat model
+
+- [ ] Organisation values
+- [ ] Morale / recovery
+- [ ] Soft attack
+- [ ] Breakthrough
+- [ ] Defence
+- [ ] Reinforcement
+- [ ] Movement speed
+- [ ] Attrition
+- [ ] Supply consumption
+- [ ] Manpower requirements
+- [ ] Equipment costs
+- [ ] Combat width
+- [ ] Corps-scale division design
+
+### Doctrine balance
+
+- [ ] Line Doctrine
+- [ ] Column Doctrine
+- [ ] Skirmisher Doctrine
+- [ ] Combined Arms Doctrine
+
+### Campaign tests
+
+- [ ] Revolutionary Wars
+- [ ] 1805 campaign
+- [ ] 1806 Prussian campaign
+- [ ] Peninsular War
+- [ ] 1812 Russian campaign
+- [ ] 1813–1814 campaigns
+- [ ] Waterloo
+
+### Design objective
+
+Winning battles should usually destroy organisation and cohesion faster than entire armies. Catastrophic campaigns should emerge primarily through defeat, pursuit, attrition, supply failure and cumulative losses rather than every battle functioning as an annihilation event.
+
+### Done when
+
+Different army compositions and doctrines produce recognisably different Napoleonic battlefield behavior and historical-style campaigns are possible without scripting their outcomes.
+
+---
+
+## Milestone 8 — Broaden Content Geographically
+
+After the five-power core is mature, expand the playable world.
+
+Recommended order:
+
+- [ ] Spain
+- [ ] Poland / Duchy of Warsaw
+- [ ] Ottoman Empire
+- [ ] Sweden
+- [ ] Italian states
+- [ ] German minors
+- [ ] Portugal
+- [ ] Netherlands
+- [ ] United States
+
+### For each expansion country
+
+- [ ] Focus tree
+- [ ] Events
+- [ ] Decisions
+- [ ] Leaders / characters
+- [ ] National spirits
+- [ ] Military setup
+- [ ] Historical route
+- [ ] Credible alternate-history route
+- [ ] Interaction with major-power systems
+- [ ] Localisation
+
+### Done when
+
+Secondary powers offer distinct campaigns and participate naturally in the European systems rather than existing only as targets for the five great powers.
+
+---
+
+## Milestone 9 — Polish and Presentation
+
+Do expensive presentation work after the underlying campaigns are stable.
+
+### Visuals
+
+- [ ] Unique leader portraits
+- [ ] Unique marshal / general portraits
+- [ ] Unique focus icons
+- [ ] Regime-specific flags
+- [ ] Event pictures
+- [ ] Loading screens
+- [ ] Bookmark artwork
+- [ ] Custom map aesthetics
+- [ ] UI improvements where useful
+
+### Audio
+
+- [ ] Period-appropriate music
+- [ ] Music categories / station
+- [ ] Event audio where appropriate
+
+### Historical flavour
+
+- [ ] Historical unit names
+- [ ] Historical army / corps names
+- [ ] Historical ship names
+- [ ] Expanded flavour events
+- [ ] Expanded descriptions and tooltips
+
+### Localisation
+
+- [ ] Final English localisation pass
+- [ ] Terminology consistency
+- [ ] Remove placeholder text
+- [ ] Additional languages if contributors are available
+
+### Done when
+
+The mod is visually coherent, historically atmospheric and no longer exposes obvious placeholder or vanilla-WWII presentation.
+
+---
+
+# Development Sequence
+
+The preferred development method is chronological. Each era should become genuinely playable before moving deeply into the next.
+
+## Phase A — 1789–1795
+
+- [ ] Complete the 1789 starting world
+- [ ] Real starting diplomacy and wars
+- [ ] Full early French Revolution
+- [ ] Constitutional / Republican / Royalist route separation
+- [ ] First Coalition
+- [ ] Terror and Thermidor
+- [ ] Directory
+- [ ] Functional warfare and technology progression
+
+### Playable milestone: **1789–1795**
+
+This is the first major target.
+
+The milestone is achieved when:
+
+- [ ] Europe looks broadly correct on 5 May 1789
+- [ ] Starting armies exist and function
+- [ ] Existing wars are real
+- [ ] France can pursue Constitutional, Republican or Royalist routes without route contamination
+- [ ] Revolutionary Wars occur coherently
+- [ ] Britain, Austria, Prussia and Russia react plausibly
+- [ ] Technology, equipment and doctrines function
+- [ ] No major recurring error-log spam is present
+
+Once this milestone is reached, infrastructure work should stop unless a later feature genuinely requires it.
+
+---
+
+## Phase B — 1796–1804
+
+- [ ] Italian Campaign
+- [ ] Egyptian Expedition
+- [ ] Second Coalition
+- [ ] Directory instability
+- [ ] 18 Brumaire
+- [ ] Consulate
+- [ ] Napoleonic domestic consolidation
+- [ ] Coronation and creation of the Empire
+
+---
+
+## Phase C — 1805–1807
+
+- [ ] Third Coalition
+- [ ] Trafalgar
+- [ ] Ulm / Austerlitz campaign
+- [ ] Treaty of Pressburg
+- [ ] End of the Holy Roman Empire
+- [ ] Confederation of the Rhine
+- [ ] Fourth Coalition
+- [ ] Jena–Auerstedt
+- [ ] Tilsit
+- [ ] Continental System
+
+---
+
+## Phase D — 1808–1811
+
+- [ ] Peninsular War
+- [ ] Spanish resistance
+- [ ] British intervention in Iberia
+- [ ] Fifth Coalition
+- [ ] Austrian reform and renewed war
+- [ ] French imperial administration
+- [ ] Continental System pressure
+
+---
+
+## Phase E — 1812–1815
+
+- [ ] Invasion of Russia
+- [ ] Russian strategic withdrawal
+- [ ] Moscow
+- [ ] Grande Armée collapse
+- [ ] Prussian War of Liberation
+- [ ] Sixth Coalition
+- [ ] Leipzig
+- [ ] Invasion of France
+- [ ] First abdication
+- [ ] Bourbon Restoration
+- [ ] Hundred Days
+- [ ] Seventh Coalition
+- [ ] Waterloo
+- [ ] Second abdication
+- [ ] Concert of Europe
+
+---
+
+# Project Status Summary
+
+| Area | Status |
+|---|---|
+| Startup / parser stabilisation | Foundation completed; runtime testing remains ongoing |
+| Ideas / national spirits | Restored |
+| Technologies | Restored |
+| Custom units | Restored |
+| Doctrines | Restored |
+| Major-power standing OOBs | Restored |
+| French route hardening | Initial pass completed |
+| 1789 secondary-power setup | Not started |
+| 1789 diplomatic setup | Not started |
+| France deep-content pass | Not started |
+| Coalition system | Not started |
+| Britain deep-content pass | Not started |
+| Austria deep-content pass | Not started |
+| Prussia deep-content pass | Not started |
+| Russia deep-content pass | Not started |
+| Reusable era mechanics | Not started |
+| Military balance pass | Not started |
+| Geographic expansion | Not started |
+| Final polish | Not started |
+
+---
+
+## Guiding Principle
+
+Build **playable historical slices**, not hundreds of disconnected unfinished features.
+
+The roadmap therefore advances chronologically:
+
+**1789–1795 → 1796–1804 → 1805–1807 → 1808–1811 → 1812–1815**
+
+Each completed period should be capable of standing on its own as a coherent campaign before the project moves substantially further forward.
