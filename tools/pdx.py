@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 import re
+import json
 
 TOKEN = re.compile(r'\s+|#[^\n]*|"(?:\\.|[^"\\])*"|[{}]|[<>!?]?=|[<>]|[^\s{}=<>!?"#]+')
 
@@ -18,6 +19,32 @@ class Entry:
     def scalar(self, key: str, default: str = '') -> str:
         matches = self.children(key)
         return str(matches[0].value) if matches else default
+
+
+def atom(token: str) -> str:
+    if not token.startswith('"'):
+        return token
+    escapes = {'n': '\n', 't': '\t', 'r': '\r', '"': '"', '\\': '\\'}
+    return re.sub(r'\\(.)', lambda m: escapes.get(m[1], '\\' + m[1]), token[1:-1])
+
+
+def dumps(entries: list[Entry], depth: int = 0) -> str:
+    def encode(value):
+        if value and re.fullmatch(r'[A-Za-z0-9_@.:-]+', value):
+            return value
+        return json.dumps(value, ensure_ascii=False)
+    lines = []
+    for entry in entries:
+        prefix = '\t' * depth + encode(entry.key)
+        if not entry.op:
+            lines.append(prefix)
+        elif isinstance(entry.value, list):
+            lines.append(prefix + ' ' + entry.op + ' {')
+            lines.append(dumps(entry.value, depth + 1).rstrip('\n'))
+            lines.append('\t' * depth + '}')
+        else:
+            lines.append(prefix + ' ' + entry.op + ' ' + encode(entry.value))
+    return '\n'.join(lines) + '\n'
 
 
 def parse(text: str) -> list[Entry]:
@@ -46,7 +73,7 @@ def parse(text: str) -> list[Entry]:
                 return result
             if key in ('{', '=', '>', '<', '>=', '<=', '!=', '?='):
                 raise ValueError(f'unexpected token {key!r}')
-            key = key.strip('"')
+            key = atom(key)
             if pos == len(tokens) or tokens[pos] not in ('=', '>', '<', '>=', '<=', '!=', '?='):
                 result.append(Entry(key, '', ''))
                 continue
@@ -56,7 +83,7 @@ def parse(text: str) -> list[Entry]:
                 raise ValueError(f'missing value for {key}')
             value = tokens[pos]
             pos += 1
-            result.append(Entry(key, block(True) if value == '{' else value.strip('"'), op))
+            result.append(Entry(key, block(True) if value == '{' else atom(value), op))
         if nested:
             raise ValueError('unclosed block')
         return result
