@@ -1,6 +1,6 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: Repository source-contract and build pass**
+**Current branch: Milestone 6: reusable state and army management slice**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
@@ -11,7 +11,7 @@ Implementation, static verification and successful in-game testing are separate 
 | 3 | 29 existing French focuses; expansion target at least 450 |
 | 4 | Not implemented beyond opening-war diplomacy |
 | 5 | Existing major-power trees; deep-content pass pending |
-| 6 | Design recorded; reusable systems pending |
+| 6 | Partial: eight bounded meters, twelve decisions, eleven spirits and battle/peace/occupation pulses; deeper state and client politics pending |
 | 7 | Blocked on representative in-game campaign measurements |
 | 8 | Country setup only; deep campaigns and formables pending |
 | 9 | Placeholder assets only; presentation and rights review pending |
@@ -29,14 +29,16 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Delivered on this branch
 
-- 68-country source namespace and placeholder flags
-- Explicit ideology subtypes and referenced custom leader traits
-- Deterministic source-to-engine build with drift checking
-- Comment-aware parser and focus dependency cycle checks
+- 68-country source namespace, placeholder flags and build validation
+- Eight bounded treasury/debt/legitimacy/fervor/exhaustion/prestige/reform/supply meters
+- Twelve paid decisions with explicit resource requirements and cooldowns
+- Eleven threshold or temporary national spirits
+- Country-scoped monthly processing and national army prestige from battle hooks
+- Read-only drift verification and synchronized approval/roadmap/readme documents
 
 ## Test evidence and remaining acceptance
 
-12 unit tests passed locally; no HOI4 process was executed. CI verifies the committed source separately.
+26 local unit tests pass, covering syntax, resources, route gates, bounds and non-quadratic monthly processing. The reference model is not an engine emulator. No HOI4 process was executed.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.

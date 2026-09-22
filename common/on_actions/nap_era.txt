@@ -1,0 +1,7 @@
+# on_monthly is already country-scoped. Do not nest every_country here.
+on_actions = {
+ on_startup = { effect = { every_country = { limit = { nap_era_country = yes } nap_era_initialize = yes nap_era_refresh = yes } } }
+ on_monthly = { effect = { if = { limit = { nap_era_country = yes } nap_era_monthly = yes } } }
+ on_army_leader_won_combat = { effect = { FROM = { if = { limit = { nap_era_country = yes } nap_era_initialize = yes add_to_variable = { nap_army_prestige = 0.05 } nap_era_clamp = yes } } } }
+ on_army_leader_lost_combat = { effect = { FROM = { if = { limit = { nap_era_country = yes } nap_era_initialize = yes add_to_variable = { nap_army_prestige = -0.10 } nap_era_clamp = yes } } } }
+}

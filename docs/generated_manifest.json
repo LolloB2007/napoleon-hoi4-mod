@@ -1,6 +1,6 @@
 {
-  "README.md": "8f26cdd975ad8ccec7296b178df76d2c0f44928051b37c4a0314784dfa93304f",
-  "ROADMAP.md": "5951738d35638eb6851ad50e41a4baeca6f7e0e8a1dd948709aa92579c92f6ef",
+  "README.md": "30ac956d1880583520afabcdd4312c3573121d0b0173e5858055248f9418199f",
+  "ROADMAP.md": "001a6e2eade2ea599c61ffe8e95f0f0a7f200c2d80f2cd9b8e5826ced53616ec",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -71,7 +71,15 @@
   "common/countries/Wurttemberg.txt": "da449b91d6406e7524e441246045255d069e03da51cfa43d7e6773a13e3e9b4c",
   "common/country_leader/napoleonic_leader_traits.txt": "a9e06e61e98ed16bb94c1e166d946a403552478656ab3bc17b95913e916194cb",
   "common/country_tags/00_napoleonic_countries.txt": "73299a181628724245974ffac7b7d6afa178a9a6a4fc860eee1dbb203533f11f",
+  "common/decisions/categories/nap_era.txt": "ba7ba530b29c29141a2bb9c58967b8b3bc032a83358bcb2a2a4d5cbd89739a2f",
+  "common/decisions/nap_era.txt": "eac7784ef15efa0bdd23f0f6ff45d618efe131745fa17df36aaf53a5c2c99e44",
+  "common/ideas/nap_era.txt": "5e92eacfe0b400a1e4908a6ed9030e5a446976f73943614c4435666d20f7d192",
   "common/ideologies/00_ideologies.txt": "6158aad244a9391bb2633530cc107f39ccf10276a08bac24d6ff1284097cc5d7",
+  "common/on_actions/nap_era.txt": "4f5b42f9d42aaea33ac055be5a42e9371caa146e278697c8efa9e28d1b6808a0",
+  "common/scripted_effects/nap_era.txt": "3d6af8691f5a385a29f81f13d61534bd8c0569f47a0181905a9f88370572f160",
+  "common/scripted_triggers/nap_era.txt": "80398058a721ac4a2efbb62e351e0b711b23b251bf43256f9b7f9c1b1f135333",
+  "docs/era-actions.json": "a8c7b673d6bc4bdc35a6de8a9c970dd02fe93ce26041d55d4c1c8af7a5c860dc",
+  "docs/era-mechanics.md": "e7dd52e3b9f6a908579f20e8f9a92d3c98802b044e893fad3fff79c7c69cdeb0",
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
   "gfx/flags/ALG.tga": "7760d7ed1ac2c13b77431086de1af97ea214d02ed10cd68a257de356be214a6a",
   "gfx/flags/BAD.tga": "a74aceebf5088698bc801e7af2ec1c208be9e45e916ddba9a1d5f1e6baadae2f",
@@ -279,8 +287,9 @@
   "gfx/flags/small/WUR.tga": "729c0cb63327b2b6f3f3ef0217107e8d24d58d4f909347964483a84532f47e03",
   "gfx/interface/select_date_napoleonic.tga": "386179f739d12716b66e985cb8c4ddc5102f28816fb888836ccaef47b7ba286b",
   "interface/napoleonic_bookmark.gfx": "41ba2d55c90aa7e644ed6c655ab2381e021d4bc2e0fc5279f4330a89d86fa1c6",
+  "localisation/english/nap_era_l_english.yml": "ffc155225c96f6b6a46fa331f79f1617a7fc3df891c450399cdf392ec94b590c",
   "localisation/english/replace/nap_countries_l_english.yml": "2bf5ac59835d2ef42c346a8aee194017b5622406664e7ad00669bdffd882a584",
   "localisation/english/replace/nap_ideology_slots_l_english.yml": "a3e12fd40bbca09df1125e59bacabd76c44bdda8f5b32314688d54af3ce01b20",
   "suggestions.md": "2d3101a4bcd079ca535f7552803995903a44900cf40358dc41e6a20b0e1b6ef3",
-  "to ask lollo.md": "e0f7c845c531289966595047a747eaae25d98ab71ca15a2e90b605137da01874"
+  "to ask lollo.md": "0d068afef5760956ecf89ed4ca32dbe86c293349ae03e065417233cdd578b39b"
 }

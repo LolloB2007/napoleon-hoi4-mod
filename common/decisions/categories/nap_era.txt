@@ -1,0 +1,1 @@
+nap_era_management = { icon = generic_political_discourse allowed = { always = yes } visible = { nap_era_country = yes has_country_flag = nap_era_initialized } }
