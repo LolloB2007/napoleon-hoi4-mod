@@ -62,17 +62,17 @@ napoleonic_setup_1789_map = {
 		add_core_of = TUR
 	}
 	every_state = {
-		limit = { OR = { state = 50 state = 978 } }
+		limit = { state = 978 }
 		BAD = { transfer_state = PREV }
 		add_core_of = BAD
 	}
 	every_state = {
-		limit = { state = 52 }
+		limit = { state = 50 }
 		WUR = { transfer_state = PREV }
 		add_core_of = WUR
 	}
 	every_state = {
-		limit = { OR = { state = 53 state = 54 } }
+		limit = { OR = { state = 52 state = 53 state = 54 } }
 		BAV = { transfer_state = PREV }
 		add_core_of = BAV
 	}
@@ -82,7 +82,7 @@ napoleonic_setup_1789_map = {
 		add_core_of = HES
 	}
 	every_state = {
-		limit = { OR = { state = 56 state = 59 state = 60 } }
+		limit = { OR = { state = 56 state = 59 } }
 		HAN = { transfer_state = PREV }
 		add_core_of = HAN
 	}
@@ -97,7 +97,7 @@ napoleonic_setup_1789_map = {
 		add_core_of = MEC
 	}
 	every_state = {
-		limit = { state = 65 }
+		limit = { OR = { state = 60 state = 65 } }
 		SAX = { transfer_state = PREV }
 		add_core_of = SAX
 	}
@@ -112,7 +112,7 @@ napoleonic_setup_1789_map = {
 		add_core_of = ENG
 	}
 	every_state = {
-		limit = { OR = { state = 114 state = 158 } }
+		limit = { OR = { state = 114 state = 158 state = 735 } }
 		SAR = { transfer_state = PREV }
 		add_core_of = SAR
 	}
