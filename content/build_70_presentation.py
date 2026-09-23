@@ -2,8 +2,9 @@
 
 All generated visual/audio assets are deterministic original procedural work. No external
 portrait, painting, flag, recording or game asset is embedded by this module.
-Final art direction, map treatment, soundtrack and translation scope remain
-owner decisions A10-A12.
+A10 visual direction is implemented here: painted/canvas portrait and scene work,
+engraved/cartographic focus and UI work, and restrained map-adjacent styling.
+A11-A12 are implemented by later stacked passes.
 """
 from __future__ import annotations
 import hashlib
@@ -95,67 +96,104 @@ def dds(width,height,pixel):
     return b"DDS "+header+bytes(data)
 
 def art_pixel(label,kind,width,height):
+    """A10 hybrid period language: painted scenes/portraits, engraved UI/focus art."""
     n=_seed(label)
     base=(((n>>8)&127)+55,((n>>24)&127)+45,((n>>40)&127)+35)
-    base=tuple(min(190,max(35,int(c))) for c in base)
-    parchment=(202,188,151)
-    ink=(34,31,28)
-    gold=(177,139,63)
+    base=tuple(min(180,max(38,int(c))) for c in base)
+    canvas=(205,190,153)
+    paper=(214,201,169)
+    ink=(42,35,29)
+    sepia=(104,75,48)
+    gold=(164,126,58)
     def pixel(x,y):
         nx=x/max(1,width-1); ny=y/max(1,height-1)
-        grain=((x*17+y*31+(n&255))%23)-11
-        bg=_mix(parchment,base,0.34+0.20*ny)
-        c=_shade(bg,grain//3)
         border=max(2,min(width,height)//20)
+
+        # Portraits, event scenes and loadings use soft canvas-like tonal modelling.
+        if kind in ("portrait","event","loading","bookmark"):
+            wash=.20+.26*ny+.05*math.sin((x+(n&31))/max(1,width)*math.pi*3)
+            bg=_mix(canvas,base,max(.08,min(.62,wash)))
+            brush=((x*11+y*7+(n&255))%19)-9
+            c=_shade(bg,brush//4)
+        else:
+            # Focuses and UI use light paper, sepia ink and engraved cross-hatching.
+            grain=((x*17+y*31+(n&255))%23)-11
+            c=_shade(_mix(paper,base,.13),grain//4)
+            hatch=((x+2*y+(n&15))%13==0) or ((2*x-y+((n>>5)&15))%17==0)
+            if hatch:
+                c=_mix(c,sepia,.22)
+
         if x<border or x>=width-border or y<border or y>=height-border:
-            return _mix(ink,gold,0.35)
+            return _mix(ink,gold,.22)
+
         if kind=="portrait":
             cx=width//2; head_y=int(height*.34); rr=int(min(width,height)*.16)
+            face=(139,111,85)
+            shadow=_mix(ink,base,.22)
             if (x-cx)**2+(y-head_y)**2 < rr*rr:
-                return _mix((116,91,72),base,.18)
+                light=max(0,min(1,(cx+rr-x)/(2*rr)))
+                return _mix(face,(210,176,132),.28*light)
             shoulder_y=int(height*.58)
             if y>shoulder_y and abs(x-cx) < int((y-shoulder_y)*.65+width*.18):
-                return _mix(ink,base,.28)
+                return shadow
             if ((n>>3)&1) and head_y-rr//2<y<head_y and abs(x-cx)<rr+8:
-                return _mix(ink,gold,.18)
+                return _mix(ink,gold,.12)
+
         elif kind=="focus":
             cx=width//2; cy=height//2
-            if abs(x-cx)<max(2,width//18) or abs(y-cy)<max(2,height//18):
-                return gold
-            if (x-cx)**2+(y-cy)**2 < (min(width,height)//4)**2 and ((x+y+n)%7)<3:
-                return _mix(base,ink,.4)
+            radius=min(width,height)//4
+            if abs(x-cx)<max(1,width//32) or abs(y-cy)<max(1,height//32):
+                return sepia
+            dist=(x-cx)**2+(y-cy)**2
+            if radius*radius*.72 < dist < radius*radius:
+                return ink
+            if dist < radius*radius*.7 and ((x-y+n)%6)<2:
+                return _mix(sepia,base,.28)
+
         elif kind=="event":
             horizon=int(height*.62)
-            if y>horizon:
-                return _mix(ink,base,.28)
+            sky=_mix((189,177,151),base,.20)
+            if y<horizon:
+                c=_mix(c,sky,.42)
+            else:
+                c=_mix(c,_mix(ink,base,.30),.58)
             for k in range(5):
                 px=int(width*(.15+.17*k))+((n>>(k*3))&15)-7
                 roof=int(height*(.38+(.04*(k%2))))
                 if abs(x-px)<width//20 and y>roof:
-                    return _mix(base,ink,.34)
+                    return _mix(base,ink,.38)
                 if abs(x-px)<width//28 and roof-height//9<y<=roof:
-                    return gold
+                    return _mix(gold,canvas,.18)
+
         elif kind=="loading":
             horizon=int(height*.58)
             if y>horizon:
-                c=_mix(base,ink,.42)
+                c=_mix(base,ink,.46)
             ridge=int(height*(.43+.06*math.sin((x+(n&127))/max(1,width)*8)))
             if abs(y-ridge)<max(2,height//120):
-                return ink
+                return _mix(ink,sepia,.15)
             sunx=int(width*.72); suny=int(height*.28); sr=max(8,height//14)
             if (x-sunx)**2+(y-suny)**2<sr*sr:
-                return _mix(gold,(238,222,173),.45)
+                return _mix(gold,(236,215,166),.48)
+
         elif kind=="bookmark":
             if x>width*.58 and y<height*.72:
-                return _mix(base,gold,.22)
+                return _mix(base,gold,.15)
             if abs(y-height*.64)<3:
-                return ink
-        elif kind=="ui":
-            if (x-width/2)**2+(y-height/2)**2 < (min(width,height)*.31)**2:
-                return _mix(base,gold,.28)
+                return sepia
+
+        elif kind in ("ui","cartography"):
+            # Fine cartographic grid/engraving, intentionally understated.
+            major=max(12,min(width,height)//4)
+            minor=max(6,major//3)
+            if x%major==0 or y%major==0:
+                return _mix(sepia,ink,.22)
+            if x%minor==0 or y%minor==0:
+                return _mix(c,sepia,.34)
+            if kind=="ui" and (x-width/2)**2+(y-height/2)**2 < (min(width,height)*.31)**2:
+                return _mix(c,gold,.18)
         return c
     return pixel
-
 def flag_pixel(tag,base,variant,width,height):
     n=_seed(tag+"|"+variant)
     accent={"neutrality":(177,139,63),"democratic":(223,218,192),"communism":(158,45,45),"fascism":(42,57,89),"default":_shade(base,45)}[variant]
@@ -243,7 +281,8 @@ def build(root):
         out[f"gfx/loadingscreens/load_napoleonic_{i}.dds"]=dds(960,540,art_pixel(f"loading-{i}","loading",960,540))
     out["gfx/interface/nap_ui_seal.tga"]=tga(96,96,art_pixel("ui-seal","ui",96,96))
     out["gfx/interface/nap_ui_divider.tga"]=tga(512,24,art_pixel("ui-divider","ui",512,24))
-    out["gfx/interface/nap_map_legend.tga"]=tga(320,96,art_pixel("map-legend","ui",320,96))
+    out["gfx/interface/nap_map_legend.tga"]=tga(320,96,art_pixel("map-legend","cartography",320,96))
+    out["gfx/interface/nap_cartographic_frame.tga"]=tga(512,64,art_pixel("cartographic-frame","cartography",512,64))
     out["sound/nap_dispatch.wav"]=wav_float("dispatch")
     out["sound/nap_crowd.wav"]=wav_float("crowd",1.6)
     out["sound/nap_cannon.wav"]=wav_float("cannon",1.8)
@@ -263,23 +302,24 @@ soundeffect = { name = "nap_cannon_effect" sounds = { sound = "nap_cannon" } loo
 
 All assets generated by \`content/build_70_presentation.py\` are original procedural output created for this repository.
 
-- focus icons: deterministic geometric engravings derived from internal focus IDs
-- leader/commander portraits: stylised silhouette portrait cards, not copies of historical paintings or photographs
-- event pictures, bookmark art, UI pieces and loading screens: original procedural compositions
+- focus icons: deterministic engraved/cartographic compositions derived from internal focus IDs
+- leader/commander portraits: original warm canvas-style portrait cards, not copies of historical paintings or photographs
+- event pictures and loading screens: original painted/canvas-style period scenes
+- bookmark art, map legend and UI pieces: restrained engraved/cartographic compositions
 - default/regime flags: original heraldic placeholders derived from each country's palette
 - event stingers: mathematically synthesised WAV files with no sampled recording
 
-No external painting, photograph, commercial recording, font file or game asset is redistributed by this pass. Final replacement assets must be recorded here with source and licence before merge.
+No external painting, photograph, commercial recording, font file or game asset is redistributed by this pass. A10's visual direction is implemented without copying historical artworks. Any future replacement asset must be recorded here with source and licence before merge.
 """
     out["docs/presentation.md"]="""# Milestone 9 presentation layer
 
 The presentation pipeline gives every current focus a custom icon, every current scripted event a custom period-styled picture, and every inline political/military leader an original portrait card. It also supplies regime flags, three loading screens, 1789 bookmark art, UI ornaments, event stingers, historical division/corps naming groups, sailing-warship names and additional flavour events.
 
-The current visual language is intentionally neutral: parchment, muted national colour, dark ink and restrained gold. It is redistribution-safe and mechanically useful, but A10 can replace the final visual/map direction without changing gameplay IDs.
+A10 is implemented as a hybrid period presentation: portraits, event scenes and loading screens use a warmer painted/canvas treatment; focus art and UI use engraved/cartographic linework; map-adjacent art stays understated rather than recolouring the strategic map. The treatment avoids modern gritty-WWII visual language while retaining stable gameplay IDs.
 
-The event sound layer is functional. A full music station is intentionally not shipped until A11 chooses between original composition, new performances of public-domain repertoire, rights-cleared recordings or no bundled soundtrack.
+The event sound layer remains functional. The A11 stacked pass supplies the approved soundtrack policy.
 
-English is the authoritative localisation after this pass. Additional language scope is A12.
+English remains the authoritative localisation. The A12 stacked pass makes that a build invariant.
 """
     return out
 
@@ -407,6 +447,7 @@ def postprocess(outputs,root):
         'spriteType = { name = "GFX_nap_ui_seal" texturefile = "gfx/interface/nap_ui_seal.tga" }',
         'spriteType = { name = "GFX_nap_ui_divider" texturefile = "gfx/interface/nap_ui_divider.tga" }',
         'spriteType = { name = "GFX_nap_map_legend" texturefile = "gfx/interface/nap_map_legend.tga" }',
+        'spriteType = { name = "GFX_nap_cartographic_frame" texturefile = "gfx/interface/nap_cartographic_frame.tga" }',
     ]
     # Replace solid development flags with deterministic heraldic variants.
     for tag,filename,name,colour in _country_rows():
@@ -447,16 +488,14 @@ def postprocess(outputs,root):
         updates[path]=_polish_loc(_text(outputs,root,path))
     interface.append("}")
     updates["interface/nap_presentation.gfx"]="\n".join(interface)+"\n"
-    # Keep suggestions explicit rather than silently choosing final aesthetics.
     suggestions=outputs.get("suggestions.md","")
     note='''
 
 ## Presentation follow-up
 
-- Replace procedural portrait cards with the approved A10 visual language only after provenance/licensing is recorded.
-- If A10 chooses map recolouring, prototype it on a separate visual branch because terrain/colourmap replacement has a much larger compatibility surface than UI art.
-- Build the A11 soundtrack as a self-contained radio station with provenance for every recording.
-- Treat English as the source localisation and generate no machine-translated release files without A12 approval and human review.
+- A10 is implemented as the approved painted/engraved/cartographic hybrid without invasive strategic-map recolouring.
+- Any historical-art replacement must be redistribution-safe and added to the provenance ledger.
+- A11 and A12 are implemented in their own stacked passes.
 '''
     if "## Presentation follow-up" not in suggestions: suggestions+=note
     updates["suggestions.md"]=suggestions

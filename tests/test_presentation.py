@@ -75,6 +75,15 @@ class PresentationTests(unittest.TestCase):
             self.assertGreater(len(data),100000)
         self.assertTrue(self.outputs['gfx/interface/select_date_napoleonic.tga'].startswith(b'\x00\x00\x02'))
 
+    def test_a10_hybrid_visual_assets_registered(self):
+        self.assertIn('gfx/interface/nap_cartographic_frame.tga',self.outputs)
+        gfx=self.text('interface/nap_presentation.gfx')
+        self.assertIn('GFX_nap_cartographic_frame',gfx)
+        docs=self.text('docs/presentation.md')
+        self.assertIn('hybrid period presentation',docs)
+        self.assertIn('engraved/cartographic',docs)
+        self.assertIn('painted/canvas',docs)
+
     def test_event_audio_is_generated_and_registered(self):
         for name in ('dispatch','crowd','cannon'):
             data=self.outputs[f'sound/nap_{name}.wav']
