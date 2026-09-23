@@ -30,8 +30,8 @@ class FranceTests(unittest.TestCase):
                         if node.scalar('id') in cls.events: raise ValueError('duplicate event')
                         cls.events[node.scalar('id')]=node
         cls.loc=cls.files['localisation/english/nap_french_development_l_english.yml']
-    def test_450_distinct_foci(self):
-        self.assertEqual(len(self.nodes),450)
+    def test_630_distinct_foci(self):
+        self.assertEqual(len(self.nodes),630)
     def test_named_chapters(self):
         names=[name for ch in CHAPTERS for name in ch['names']]
         self.assertEqual(len(names),600)
@@ -62,8 +62,8 @@ class FranceTests(unittest.TestCase):
         self.assertEqual(len(imports),41)
         for chapter in CHAPTERS:
             self.assertIn(fid(chapter,0),imports)
-    def test_84_new_events(self):
-        self.assertEqual(len([e for e in self.events if e.startswith('nap_fra_development.')]),84)
+    def test_120_new_events(self):
+        self.assertEqual(len([e for e in self.events if e.startswith('nap_fra_development.')]),120)
     def test_events_have_localisation(self):
         for key,e in self.events.items():
             if not key.startswith('nap_fra_development.'): continue
