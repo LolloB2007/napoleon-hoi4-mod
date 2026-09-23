@@ -1,6 +1,6 @@
 {
-  "README.md": "e93128633e8d954d3ddf2dc0474655be7f986e001ca3ef1607164f9124f44bdf",
-  "ROADMAP.md": "622e7e76e65a00061b53708dfde8708712573e0197480a26c0a0eb915a4ee0bd",
+  "README.md": "f4d1d36f000b741236ef182ff35bf7e655c8155ff02fae5bc322d2b5c7debffe",
+  "ROADMAP.md": "ba60b64a5e7de69acf3751dded118d3c801c8736ce183f07238eb9b2e3d7e4a6",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -109,14 +109,14 @@
   "common/national_focus/secondary_tuscany.txt": "b01de4c9a8b0d60db78e5c09bf41fb6320207694ad6c3fa88753ad73150b767a",
   "common/national_focus/secondary_usa.txt": "e7523687d2f077ae0a8ec662a58f46aaf0a75e704a50feb01079ae2165492fc0",
   "common/national_focus/secondary_venice.txt": "e2aa2c5df68d3f6402464738ad896c55c25f8ca94ca0e3abc22eb43d790dae33",
-  "common/on_actions/nap_coalitions.txt": "028d054cb11ecf92402a6d88882db20886e9d0a387b66a784303eb389ecbc817",
+  "common/on_actions/nap_coalitions.txt": "c2a3d9456005d32386a1bea2a3ef64df9638cf0f087f90880093face9ed349f9",
   "common/on_actions/nap_era.txt": "4f5b42f9d42aaea33ac055be5a42e9371caa146e278697c8efa9e28d1b6808a0",
   "common/on_actions/napoleonic_on_actions.txt": "de7cd5dd50d8921f3cf977cb031c1724a9194e1f3dc36d6cfb97e8106e7a9d6e",
-  "common/scripted_effects/nap_coalitions.txt": "e54e56dee7cbd5ea1a5b300f2258b3ac84bf861d85386999a1e8a2575404821e",
+  "common/scripted_effects/nap_coalitions.txt": "4c9d2e9719373903b0eef1a2a182a685fbc2968ba72571144b0a0d218229453f",
   "common/scripted_effects/nap_era.txt": "3d6af8691f5a385a29f81f13d61534bd8c0569f47a0181905a9f88370572f160",
   "common/scripted_effects/nap_france_rewards.txt": "d0a495285e6d278d2aef19f046bfd1263d4f56537c355b02f18af7cc7dd37e2d",
   "common/scripted_effects/nap_territorial.txt": "7ace62e06e01a1550a9f3617e5975bcc9d081a9091ae1aeb9ccce3cdd64b1291",
-  "common/scripted_effects/napoleonic_diplomacy_setup.txt": "5d94373a3fa8d3c4e436b66f38bec874d54d2ec706254c3ef5f79f195871ec7b",
+  "common/scripted_effects/napoleonic_diplomacy_setup.txt": "a6e95490cd85b2ec706dad73366622c34324f1e46cf02cde6b0866cc4244b899",
   "common/scripted_triggers/nap_clients.txt": "9313df383ace69abdc12ae6db6083c5b61ee3392e73595e51f54ca51d34f21dc",
   "common/scripted_triggers/nap_coalitions.txt": "0a8ea1261ba4dd8efd0124f0722bef6ff1d14dc8066b1e1bbcca96ac92c467cd",
   "common/scripted_triggers/nap_era.txt": "80398058a721ac4a2efbb62e351e0b711b23b251bf43256f9b7f9c1b1f135333",
@@ -124,7 +124,7 @@
   "common/units/names_divisions/napoleonic_names_divisions.txt": "7ac82a915dc72902d7fb68e8668844568f23f1786a254f4f426cfd7f7b7f2f64",
   "common/units/names_ships/napoleonic_ship_names.txt": "064b150077dc3befa38ee0490b1b5017356e7fddfb178e85f683112642e3b4a0",
   "docs/asset-provenance.md": "a38c97cfd488264ae8bf87850df37df1544eec5b81bf4b08747ff253654660d1",
-  "docs/coalition-framework.md": "f4bb5d8ec4f406fb5b417722b6116ebc672a15fbdcece3c5a73c833ab0fe74e4",
+  "docs/coalition-framework.md": "cb327169e6ab793a5a829a48d608786b1b072415c6040e1bf52b6534f5222eb6",
   "docs/coalition-rounds.json": "cd31cc63899464a4c5f6c1af242367646a3a43bb7a135c52741a31bca8c6a789",
   "docs/era-actions.json": "a8c7b673d6bc4bdc35a6de8a9c970dd02fe93ce26041d55d4c1c8af7a5c860dc",
   "docs/era-mechanics.md": "e7dd52e3b9f6a908579f20e8f9a92d3c98802b044e893fad3fff79c7c69cdeb0",
@@ -2258,5 +2258,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "f068970a2c1217a1b724fdea3f171c230d8b38561842071ebc9bc2f63cba8cb7",
-  "to ask lollo.md": "305ce30b3f5ac4154dcf2469c044730b651f735183e70173b2e88e9ad7f28fa4"
+  "to ask lollo.md": "4a65d06d3bc26ee8f765aa54273f3e56e04d4aa395178e6027b7695ddcf5f217"
 }

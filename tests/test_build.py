@@ -21,6 +21,10 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(len(files['gfx/flags/FRA.tga']), 18 + 82 * 52 * 3)
         self.assertEqual(len(files['gfx/flags/medium/FRA.tga']), 18 + 41 * 26 * 3)
         self.assertEqual(len(files['gfx/flags/small/FRA.tga']), 18 + 10 * 7 * 3)
+    def test_a02_open_ended_campaign(self):
+        defines=(ROOT/'common/defines/napoleonic_defines.lua').read_text()
+        self.assertIn('END_DATE = "9999.1.1.1"',defines)
+        self.assertNotIn('END_DATE = "1821.1.1.1"',defines)
     def test_localisation_bom(self):
         for path, text in build(ROOT).items():
             if path.endswith('.yml'):
