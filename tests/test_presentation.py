@@ -18,12 +18,23 @@ class PresentationTests(unittest.TestCase):
 
     def test_focus_icons_are_custom_and_unique_by_id(self):
         focus_paths=[p for p in self.outputs if p.startswith('common/national_focus/') and p.endswith('.txt')]
-        text='\n'.join(self.text(p) for p in focus_paths)
-        ids=re.findall(r'\bfocus\s*=\s*\{[^{}]*?\bid\s*=\s*([A-Za-z0-9_]+)',text,re.S)
-        icons=re.findall(r'\bicon\s*=\s*(GFX_NAP_FOCUS_[A-Z0-9_]+)',text)
+        from pdx import parse, walk
+        ids=[]; icons=[]
+        for path in focus_paths:
+            for node in walk(parse(self.text(path))):
+                if node.key!='focus' or not isinstance(node.value,list):
+                    continue
+                fid=node.scalar('id')
+                if not fid:
+                    continue
+                ids.append(fid)
+                icon=node.scalar('icon')
+                self.assertIsNotNone(icon,path+': '+fid)
+                self.assertTrue(icon.startswith('GFX_NAP_FOCUS_'),path+': '+fid+' -> '+icon)
+                icons.append(icon)
         self.assertGreaterEqual(len(ids),800)
-        self.assertGreaterEqual(len(icons),len(ids))
-        self.assertGreaterEqual(len({i for i in icons}),800)
+        self.assertEqual(len(icons),len(ids))
+        self.assertGreaterEqual(len(set(icons)),800)
 
     def test_event_blocks_have_period_art(self):
         for path in [p for p in self.outputs if p.startswith('events/') and p.endswith('.txt')]:

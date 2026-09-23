@@ -355,7 +355,7 @@ def _patch_events(text):
     return text
 
 def _patch_people(text,tag,updates,interface,people):
-    spans=_blocks(text,r"^\s*create_(?:country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{")
+    spans=_blocks(text,r"\bcreate_(?:country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{")
     for start,end in reversed(spans):
         block=text[start:end]
         m=re.search(r'\bname\s*=\s*"([^"]+)"',block)
