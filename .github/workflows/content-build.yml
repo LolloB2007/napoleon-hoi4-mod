@@ -21,6 +21,24 @@ jobs:
       - name: Generate engine files
         run: |
           if [ -f tools/build_content.py ]; then python3 tools/build_content.py; fi
+      - name: France expansion tests
+        run: python3 -m unittest discover -s tests -p 'test_france.py' -v
+      - name: Formable and territorial tests
+        run: python3 -m unittest discover -s tests -p 'test_territorial.py' -v
+      - name: Major depth tests
+        run: python3 -m unittest discover -s tests -p 'test_major_depth.py' -v
+      - name: Secondary depth tests
+        run: python3 -m unittest discover -s tests -p 'test_secondary_depth.py' -v
+      - name: Core regression tests
+        run: python3 -m unittest tests.test_build tests.test_pdx tests.test_compatibility tests.test_localisation_policy -v
+      - name: Era and diplomacy regression tests
+        run: python3 -m unittest tests.test_era tests.test_coalitions tests.test_geography -v
+      - name: Existing major and secondary regression tests
+        run: python3 -m unittest tests.test_majors tests.test_secondary -v
+      - name: Presentation regression tests
+        run: python3 -m unittest tests.test_presentation -v
+      - name: Music regression tests
+        run: python3 -m unittest tests.test_music -v
       - name: Unit tests
         run: |
           if [ -d tests ]; then python3 -m unittest discover -s tests -v; fi

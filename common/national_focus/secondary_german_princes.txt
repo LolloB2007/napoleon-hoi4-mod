@@ -1,25 +1,8603 @@
-focus_tree = { id = nap_secondary_german_princes_tree country = { factor = 0 modifier = { add = 10 tag = BAV } modifier = { add = 10 tag = SAX } modifier = { add = 10 tag = HAN } modifier = { add = 10 tag = WUR } modifier = { add = 10 tag = BAD } modifier = { add = 10 tag = HES } modifier = { add = 10 tag = MEC } } default = no continuous_focus_position = { x = 30 y = 1000 }
-focus = { id = NAP_GERMAN_PRINCES_ROOT icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ROOT x = 10 y = 0 cost = 5 completion_reward = { set_country_flag = nap_german_princes_campaign_started add_political_power = 50 } }
-focus = { id = NAP_GERMAN_PRINCES_INST_1 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_1 x = 3 y = 1 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_ROOT } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_GERMAN_PRINCES_INST_2 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_2 x = 3 y = 2 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_INST_1 } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_GERMAN_PRINCES_INST_3 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_3 x = 3 y = 3 cost = 10 prerequisite = { focus = NAP_GERMAN_PRINCES_INST_2 } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_GERMAN_PRINCES_INST_4 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_4 x = 3 y = 4 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_INST_3 } completion_reward = { add_political_power = 35 add_stability = 0.01 add_ideas = nap_german_princes_institutions } }
-focus = { id = NAP_GERMAN_PRINCES_MIL_1 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_1 x = 7 y = 1 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_ROOT } completion_reward = { army_experience = 10 add_war_support = 0.01 } }
-focus = { id = NAP_GERMAN_PRINCES_MIL_2 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_2 x = 7 y = 2 cost = 10 prerequisite = { focus = NAP_GERMAN_PRINCES_MIL_1 } completion_reward = { army_experience = 10 add_war_support = 0.01 } }
-focus = { id = NAP_GERMAN_PRINCES_MIL_3 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_3 x = 7 y = 3 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_MIL_2 } completion_reward = { army_experience = 10 add_war_support = 0.01 country_event = { id = nap_secondary.1093 days = 1 } } }
-focus = { id = NAP_GERMAN_PRINCES_MIL_4 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_4 x = 7 y = 4 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_MIL_3 } completion_reward = { army_experience = 10 add_war_support = 0.01 add_ideas = nap_german_princes_military } }
-focus = { id = NAP_GERMAN_PRINCES_HIST_1 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_1 x = 11 y = 1 cost = 10 prerequisite = { focus = NAP_GERMAN_PRINCES_ROOT } mutually_exclusive = { focus = NAP_GERMAN_PRINCES_ALT_1 } completion_reward = { set_country_flag = nap_german_princes_historical clr_country_flag = nap_german_princes_alternate add_ideas = nap_german_princes_historical_course country_event = { id = nap_secondary.1091 days = 1 } } }
-focus = { id = NAP_GERMAN_PRINCES_HIST_2 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_2 x = 11 y = 2 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_HIST_1 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_GERMAN_PRINCES_HIST_3 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_3 x = 11 y = 3 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_HIST_2 } completion_reward = { add_stability = 0.03 add_political_power = 40 } }
-focus = { id = NAP_GERMAN_PRINCES_HIST_4 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_4 x = 11 y = 4 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_HIST_3 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_GERMAN_PRINCES_HIST_5 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_5 x = 11 y = 5 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_HIST_4 } completion_reward = { add_war_support = 0.04 add_political_power = 50 } }
-focus = { id = NAP_GERMAN_PRINCES_ALT_1 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_1 x = 15 y = 1 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_ROOT } mutually_exclusive = { focus = NAP_GERMAN_PRINCES_HIST_1 } completion_reward = { set_country_flag = nap_german_princes_alternate clr_country_flag = nap_german_princes_historical add_ideas = nap_german_princes_alternate_course country_event = { id = nap_secondary.1092 days = 1 } } }
-focus = { id = NAP_GERMAN_PRINCES_ALT_2 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_2 x = 15 y = 2 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_ALT_1 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_GERMAN_PRINCES_ALT_3 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_3 x = 15 y = 3 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_ALT_2 } completion_reward = { add_stability = 0.02 add_political_power = 50 } }
-focus = { id = NAP_GERMAN_PRINCES_ALT_4 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_4 x = 15 y = 4 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_ALT_3 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_GERMAN_PRINCES_ALT_5 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_5 x = 15 y = 5 cost = 10 prerequisite = { focus = NAP_GERMAN_PRINCES_ALT_4 } completion_reward = { add_stability = 0.04 add_political_power = 40 } }
-focus = { id = NAP_GERMAN_PRINCES_DIP_1 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DIP_1 x = 19 y = 1 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_ROOT } completion_reward = { add_political_power = 35 } }
-focus = { id = NAP_GERMAN_PRINCES_DIP_2 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DIP_2 x = 19 y = 2 cost = 5 prerequisite = { focus = NAP_GERMAN_PRINCES_DIP_1 } completion_reward = { add_political_power = 35 country_event = { id = nap_secondary.1094 days = 1 } } }
-focus = { id = NAP_GERMAN_PRINCES_DIP_3 icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DIP_3 x = 19 y = 3 cost = 7 prerequisite = { focus = NAP_GERMAN_PRINCES_DIP_2 } completion_reward = { add_political_power = 35 } }
-focus = { id = NAP_GERMAN_PRINCES_SETTLEMENT icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SETTLEMENT x = 10 y = 7 cost = 10 prerequisite = { focus = NAP_GERMAN_PRINCES_INST_4 } prerequisite = { focus = NAP_GERMAN_PRINCES_MIL_4 } prerequisite = { focus = NAP_GERMAN_PRINCES_DIP_3 } available = { OR = { has_country_flag = nap_german_princes_historical has_country_flag = nap_german_princes_alternate } } completion_reward = { add_ideas = nap_german_princes_national_settlement add_stability = 0.04 add_political_power = 75 } }
+focus_tree = {
+	id = nap_secondary_german_princes_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAV
+		}
+		modifier = {
+			add = 10
+			tag = SAX
+		}
+		modifier = {
+			add = 10
+			tag = HAN
+		}
+		modifier = {
+			add = 10
+			tag = WUR
+		}
+		modifier = {
+			add = 10
+			tag = BAD
+		}
+		modifier = {
+			add = 10
+			tag = HES
+		}
+		modifier = {
+			add = 10
+			tag = MEC
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 30
+		y = 1000
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_ROOT
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ROOT
+		x = 10
+		y = 0
+		cost = 5
+		completion_reward = {
+			set_country_flag = nap_german_princes_campaign_started
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_INST_1
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_1
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ROOT
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_INST_2
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_2
+		x = 3
+		y = 2
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_INST_1
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_INST_3
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_3
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_INST_2
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_INST_4
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_INST_4
+		x = 3
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_INST_3
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+			add_ideas = nap_german_princes_institutions
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MIL_1
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_1
+		x = 7
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ROOT
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MIL_2
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_2
+		x = 7
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MIL_1
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MIL_3
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_3
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MIL_2
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+			country_event = {
+				id = nap_secondary.1093
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MIL_4
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MIL_4
+		x = 7
+		y = 4
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MIL_3
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+			add_ideas = nap_german_princes_military
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HIST_1
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_1
+		x = 11
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ROOT
+		}
+		mutually_exclusive = {
+			focus = NAP_GERMAN_PRINCES_ALT_1
+		}
+		completion_reward = {
+			set_country_flag = nap_german_princes_historical
+			clr_country_flag = nap_german_princes_alternate
+			add_ideas = nap_german_princes_historical_course
+			country_event = {
+				id = nap_secondary.1091
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HIST_2
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_2
+		x = 11
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HIST_1
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HIST_3
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_3
+		x = 11
+		y = 3
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HIST_2
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HIST_4
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_4
+		x = 11
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HIST_3
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HIST_5
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HIST_5
+		x = 11
+		y = 5
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HIST_4
+		}
+		completion_reward = {
+			add_war_support = 0.04
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_ALT_1
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_1
+		x = 15
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ROOT
+		}
+		mutually_exclusive = {
+			focus = NAP_GERMAN_PRINCES_HIST_1
+		}
+		completion_reward = {
+			set_country_flag = nap_german_princes_alternate
+			clr_country_flag = nap_german_princes_historical
+			add_ideas = nap_german_princes_alternate_course
+			country_event = {
+				id = nap_secondary.1092
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_ALT_2
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_2
+		x = 15
+		y = 2
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ALT_1
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_ALT_3
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_3
+		x = 15
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ALT_2
+		}
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_ALT_4
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_4
+		x = 15
+		y = 4
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ALT_3
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_ALT_5
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_ALT_5
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ALT_4
+		}
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DIP_1
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DIP_1
+		x = 19
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_ROOT
+		}
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DIP_2
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DIP_2
+		x = 19
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DIP_1
+		}
+		completion_reward = {
+			add_political_power = 35
+			country_event = {
+				id = nap_secondary.1094
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DIP_3
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DIP_3
+		x = 19
+		y = 3
+		cost = 7
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DIP_2
+		}
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SETTLEMENT
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SETTLEMENT
+		x = 10
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_INST_4
+		}
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MIL_4
+		}
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DIP_3
+		}
+		available = {
+			OR = {
+				has_country_flag = nap_german_princes_historical
+				has_country_flag = nap_german_princes_alternate
+			}
+		}
+		completion_reward = {
+			add_ideas = nap_german_princes_national_settlement
+			add_stability = 0.04
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_01
+		x = 26
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_02
+		x = 26
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_01
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_03
+		x = 26
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_02
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_04
+		x = 26
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_03
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_05
+		x = 26
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_04
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_06
+		x = 26
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_05
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_07
+		x = 26
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_06
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_08
+		x = 26
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_07
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_09
+		x = 26
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_08
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_10
+		x = 26
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_09
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_11
+		x = 26
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_10
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_12
+		x = 26
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_11
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_13
+		x = 26
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_12
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_14
+		x = 26
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_13
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_15
+		x = 26
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_14
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_16
+		x = 26
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_15
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_17
+		x = 26
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_16
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_18
+		x = 26
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_17
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_STATE_ADMINISTRATION_19
+		x = 26
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_18
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_8E89F712815
+		x = 38
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_9243E9E5B62
+		x = 38
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_01
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_6D0CA258168
+		x = 38
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_02
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_2F09BBC1548
+		x = 38
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_03
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_46E790268B6
+		x = 38
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_04
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_C43EECA86AD
+		x = 38
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_05
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_425595D83C8
+		x = 38
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_06
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_74DBA013B57
+		x = 38
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_07
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_8A054A02A9E
+		x = 38
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_08
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_7400812DCDB
+		x = 38
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_09
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_EB6BBC88438
+		x = 38
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_10
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_57812DC688F
+		x = 38
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_11
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_258B5E9B8EB
+		x = 38
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_12
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_EA364AD7F69
+		x = 38
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_13
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_A7C6B77DDC3
+		x = 38
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_14
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_5E38485230B
+		x = 38
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_15
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_0C19943D32F
+		x = 38
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_16
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_5EFA76089E5
+		x = 38
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_17
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_REVENUE_AND_P_AD3C0A8EE51
+		x = 38
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_18
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_01
+		x = 50
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_02
+		x = 50
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_01
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_03
+		x = 50
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_02
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_04
+		x = 50
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_03
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_05
+		x = 50
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_04
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_06
+		x = 50
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_05
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_07
+		x = 50
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_06
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_08
+		x = 50
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_07
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_09
+		x = 50
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_08
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_10
+		x = 50
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_09
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_11
+		x = 50
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_10
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_12
+		x = 50
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_11
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_13
+		x = 50
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_12
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_14
+		x = 50
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_13
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_15
+		x = 50
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_14
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_16
+		x = 50
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_15
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_17
+		x = 50
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_16
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_18
+		x = 50
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_17
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_ARMY_REFORM_19
+		x = 50
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_army_reform_18
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_F24BB0A7623
+		x = 62
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_B9F5E1E4F27
+		x = 62
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_01
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_162AB4DC3B0
+		x = 62
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_02
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_5B7A6CC3F1F
+		x = 62
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_03
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_1B1499752D8
+		x = 62
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_04
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_EF38021B3D9
+		x = 62
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_05
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_3C07E71091F
+		x = 62
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_06
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_55A46A540AB
+		x = 62
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_07
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_F36C0D0D020
+		x = 62
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_08
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_E97B382386E
+		x = 62
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_09
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_8F7B09E4643
+		x = 62
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_10
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_5EC80578A38
+		x = 62
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_11
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_6D30837C593
+		x = 62
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_12
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_1103404E641
+		x = 62
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_13
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_6A5D0BCCC38
+		x = 62
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_14
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_19070D10944
+		x = 62
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_15
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_6983C592E78
+		x = 62
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_16
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_2CCA57BE39F
+		x = 62
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_17
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_INFRASTRUCTUR_06C7BC3F060
+		x = 62
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_infrastructure_and_supply_18
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 4
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_01
+		x = 26
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_state_administration_19
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_02
+		x = 26
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_01
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_03
+		x = 26
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_02
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_04
+		x = 26
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_03
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_05
+		x = 26
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_04
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_06
+		x = 26
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_05
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_07
+		x = 26
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_06
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_08
+		x = 26
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_07
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_09
+		x = 26
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_08
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_10
+		x = 26
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_09
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_11
+		x = 26
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_10
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_12
+		x = 26
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_11
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_13
+		x = 26
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_12
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_14
+		x = 26
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_13
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_15
+		x = 26
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_14
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_16
+		x = 26
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_15
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_17
+		x = 26
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_16
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_18
+		x = 26
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_17
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_FOREIGN_POLICY_19
+		x = 26
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_foreign_policy_18
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_political_power = 6
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_40D8EF4DE0E
+		x = 38
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_revenue_and_public_credit_19
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_2374CC4F053
+		x = 38
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_01
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_DFE3C6816CA
+		x = 38
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_02
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_BEA4B294201
+		x = 38
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_03
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_1EA05B169C0
+		x = 38
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_04
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_E4645169AD8
+		x = 38
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_05
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_6EAC3FBB05F
+		x = 38
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_06
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_C003F04AD2E
+		x = 38
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_07
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_74BF34FC085
+		x = 38
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_08
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_095D3F5D064
+		x = 38
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_09
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_88B155794CC
+		x = 38
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_10
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_F6E4C6563F9
+		x = 38
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_11
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_A2A4A624681
+		x = 38
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_12
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_025BB3D0A03
+		x = 38
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_13
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_33B2E525AED
+		x = 38
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_14
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_3EB1BE4515D
+		x = 38
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_15
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_B8756EF7CA0
+		x = 38
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_16
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_2321C548B4E
+		x = 38
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_17
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_DEPTH_GERMAN_PRINCIPALITIES_SOCIAL_AND_IN_E538063D5EF
+		x = 38
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_DEPTH_german_principalities_social_and_institutional_settlement_18
+		}
+		available = {
+			OR = {
+				tag = BAV
+				tag = SAX
+				tag = HAN
+				tag = WUR
+				tag = BAD
+				tag = HES
+				tag = MEC
+			}
+		}
+		completion_reward = {
+			add_stability = 0.003
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_01
+		x = 110
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = BAV
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_02
+		x = 110
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_01
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_03
+		x = 110
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_02
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_04
+		x = 110
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_03
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_05
+		x = 110
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_04
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_06
+		x = 110
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_05
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_07
+		x = 110
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_06
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_08
+		x = 110
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_07
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_09
+		x = 110
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_08
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_10
+		x = 110
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_09
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_11
+		x = 110
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_10
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_12
+		x = 110
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_11
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_13
+		x = 110
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_12
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_14
+		x = 110
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_13
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_15
+		x = 110
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_14
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_16
+		x = 110
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_15
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_17
+		x = 110
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_16
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_18
+		x = 110
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_17
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_THE_BAVARIAN_ELECTORATE_19
+		x = 110
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_18
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_01
+		x = 110
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_the_bavarian_electorate_19
+		}
+		allow_branch = {
+			tag = BAV
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_02
+		x = 110
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_01
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_03
+		x = 110
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_02
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_04
+		x = 110
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_03
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_05
+		x = 110
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_04
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_06
+		x = 110
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_05
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_07
+		x = 110
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_06
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_08
+		x = 110
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_07
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_09
+		x = 110
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_08
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_10
+		x = 110
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_09
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_11
+		x = 110
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_10
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_12
+		x = 110
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_11
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_13
+		x = 110
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_12
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_14
+		x = 110
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_13
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_15
+		x = 110
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_14
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_16
+		x = 110
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_15
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_17
+		x = 110
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_16
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_18
+		x = 110
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_17
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAV_DEPTH_BAVARIAN_ARMY_AND_ISAR_DEFENCE_19
+		x = 110
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAV_DEPTH_bavarian_army_and_isar_defence_18
+		}
+		available = {
+			tag = BAV
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_01
+		x = 124
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = SAX
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_02
+		x = 124
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_01
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_03
+		x = 124
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_02
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_04
+		x = 124
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_03
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_05
+		x = 124
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_04
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_06
+		x = 124
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_05
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_07
+		x = 124
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_06
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_08
+		x = 124
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_07
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_09
+		x = 124
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_08
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_10
+		x = 124
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_09
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_11
+		x = 124
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_10
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_12
+		x = 124
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_11
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_13
+		x = 124
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_12
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_14
+		x = 124
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_13
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_15
+		x = 124
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_14
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_16
+		x = 124
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_15
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_17
+		x = 124
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_16
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_18
+		x = 124
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_17
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_THE_SAXON_ELECTORATE_19
+		x = 124
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_18
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_01
+		x = 124
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_the_saxon_electorate_19
+		}
+		allow_branch = {
+			tag = SAX
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_02
+		x = 124
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_01
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_03
+		x = 124
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_02
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_04
+		x = 124
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_03
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_05
+		x = 124
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_04
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_06
+		x = 124
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_05
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_07
+		x = 124
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_06
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_08
+		x = 124
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_07
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_09
+		x = 124
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_08
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_10
+		x = 124
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_09
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_11
+		x = 124
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_10
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_12
+		x = 124
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_11
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_13
+		x = 124
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_12
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_14
+		x = 124
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_13
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_15
+		x = 124
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_14
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_16
+		x = 124
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_15
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_17
+		x = 124
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_16
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_18
+		x = 124
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_17
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_SAX_DEPTH_SAXON_ARMY_AND_MANUFACTURES_19
+		x = 124
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SAX_DEPTH_saxon_army_and_manufactures_18
+		}
+		available = {
+			tag = SAX
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_01
+		x = 138
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = HAN
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_02
+		x = 138
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_01
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_03
+		x = 138
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_02
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_04
+		x = 138
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_03
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_05
+		x = 138
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_04
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_06
+		x = 138
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_05
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_07
+		x = 138
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_06
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_08
+		x = 138
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_07
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_09
+		x = 138
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_08
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_10
+		x = 138
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_09
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_11
+		x = 138
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_10
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_12
+		x = 138
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_11
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_13
+		x = 138
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_12
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_14
+		x = 138
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_13
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_15
+		x = 138
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_14
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_16
+		x = 138
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_15
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_17
+		x = 138
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_16
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_18
+		x = 138
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_17
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVER_AND_THE_BRITISH_CONNECTION_19
+		x = 138
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_18
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_01
+		x = 138
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanover_and_the_british_connection_19
+		}
+		allow_branch = {
+			tag = HAN
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_02
+		x = 138
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_01
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_03
+		x = 138
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_02
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_04
+		x = 138
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_03
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_05
+		x = 138
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_04
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_06
+		x = 138
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_05
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_07
+		x = 138
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_06
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_08
+		x = 138
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_07
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_09
+		x = 138
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_08
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_10
+		x = 138
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_09
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_11
+		x = 138
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_10
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_12
+		x = 138
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_11
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_13
+		x = 138
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_12
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_14
+		x = 138
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_13
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_15
+		x = 138
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_14
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_16
+		x = 138
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_15
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_17
+		x = 138
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_16
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_18
+		x = 138
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_17
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HAN_DEPTH_HANOVERIAN_ARMY_AND_NORTH_GERMAN_DEFENCE_19
+		x = 138
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HAN_DEPTH_hanoverian_army_and_north_german_defence_18
+		}
+		available = {
+			tag = HAN
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_01
+		x = 152
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = WUR
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_02
+		x = 152
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_01
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_03
+		x = 152
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_02
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_04
+		x = 152
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_03
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_05
+		x = 152
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_04
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_06
+		x = 152
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_05
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_07
+		x = 152
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_06
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_08
+		x = 152
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_07
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_09
+		x = 152
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_08
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_10
+		x = 152
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_09
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_11
+		x = 152
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_10
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_12
+		x = 152
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_11
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_13
+		x = 152
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_12
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_14
+		x = 152
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_13
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_15
+		x = 152
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_14
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_16
+		x = 152
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_15
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_17
+		x = 152
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_16
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_18
+		x = 152
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_17
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_STATE_REFORM_19
+		x = 152
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_18
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_01
+		x = 152
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_state_reform_19
+		}
+		allow_branch = {
+			tag = WUR
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_02
+		x = 152
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_01
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_03
+		x = 152
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_02
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_04
+		x = 152
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_03
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_05
+		x = 152
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_04
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_06
+		x = 152
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_05
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_07
+		x = 152
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_06
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_08
+		x = 152
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_07
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_09
+		x = 152
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_08
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_10
+		x = 152
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_09
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_11
+		x = 152
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_10
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_12
+		x = 152
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_11
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_13
+		x = 152
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_12
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_14
+		x = 152
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_13
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_15
+		x = 152
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_14
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_16
+		x = 152
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_15
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_17
+		x = 152
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_16
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_18
+		x = 152
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_17
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_WUR_DEPTH_WURTTEMBERG_ARMY_AND_SWABIAN_DEFENCE_19
+		x = 152
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_WUR_DEPTH_wurttemberg_army_and_swabian_defence_18
+		}
+		available = {
+			tag = WUR
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_01
+		x = 166
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = BAD
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_02
+		x = 166
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_01
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_03
+		x = 166
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_02
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_04
+		x = 166
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_03
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_05
+		x = 166
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_04
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_06
+		x = 166
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_05
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_07
+		x = 166
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_06
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_08
+		x = 166
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_07
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_09
+		x = 166
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_08
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_10
+		x = 166
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_09
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_11
+		x = 166
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_10
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_12
+		x = 166
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_11
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_13
+		x = 166
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_12
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_14
+		x = 166
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_13
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_15
+		x = 166
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_14
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_16
+		x = 166
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_15
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_17
+		x = 166
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_16
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_18
+		x = 166
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_17
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADENESE_STATE_REFORM_19
+		x = 166
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_18
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_01
+		x = 166
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_badenese_state_reform_19
+		}
+		allow_branch = {
+			tag = BAD
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_02
+		x = 166
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_01
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_03
+		x = 166
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_02
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_04
+		x = 166
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_03
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_05
+		x = 166
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_04
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_06
+		x = 166
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_05
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_07
+		x = 166
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_06
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_08
+		x = 166
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_07
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_09
+		x = 166
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_08
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_10
+		x = 166
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_09
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_11
+		x = 166
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_10
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_12
+		x = 166
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_11
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_13
+		x = 166
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_12
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_14
+		x = 166
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_13
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_15
+		x = 166
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_14
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_16
+		x = 166
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_15
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_17
+		x = 166
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_16
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_18
+		x = 166
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_17
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_BAD_DEPTH_BADEN_ARMY_AND_UPPER_RHINE_DEFENCE_19
+		x = 166
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_BAD_DEPTH_baden_army_and_upper_rhine_defence_18
+		}
+		available = {
+			tag = BAD
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_01
+		x = 180
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = HES
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_02
+		x = 180
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_01
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_03
+		x = 180
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_02
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_04
+		x = 180
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_03
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_05
+		x = 180
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_04
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_06
+		x = 180
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_05
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_07
+		x = 180
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_06
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_08
+		x = 180
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_07
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_09
+		x = 180
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_08
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_10
+		x = 180
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_09
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_11
+		x = 180
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_10
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_12
+		x = 180
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_11
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_13
+		x = 180
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_12
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_14
+		x = 180
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_13
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_15
+		x = 180
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_14
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_16
+		x = 180
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_15
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_17
+		x = 180
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_16
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_18
+		x = 180
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_17
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_THE_HESSIAN_FISCAL_STATE_19
+		x = 180
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_18
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_01
+		x = 180
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_the_hessian_fiscal_state_19
+		}
+		allow_branch = {
+			tag = HES
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_02
+		x = 180
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_01
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_03
+		x = 180
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_02
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_04
+		x = 180
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_03
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_05
+		x = 180
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_04
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_06
+		x = 180
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_05
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_07
+		x = 180
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_06
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_08
+		x = 180
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_07
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_09
+		x = 180
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_08
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_10
+		x = 180
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_09
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_11
+		x = 180
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_10
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_12
+		x = 180
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_11
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_13
+		x = 180
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_12
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_14
+		x = 180
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_13
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_15
+		x = 180
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_14
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_16
+		x = 180
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_15
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_17
+		x = 180
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_16
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_18
+		x = 180
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_17
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_HES_DEPTH_HESSIAN_ARMY_AND_SUBSIDY_TRADITION_19
+		x = 180
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_HES_DEPTH_hessian_army_and_subsidy_tradition_18
+		}
+		available = {
+			tag = HES
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_01
+		x = 194
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_SETTLEMENT
+		}
+		allow_branch = {
+			tag = MEC
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_02
+		x = 194
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_01
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_03
+		x = 194
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_02
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_04
+		x = 194
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_03
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_05
+		x = 194
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_04
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_06
+		x = 194
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_05
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_07
+		x = 194
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_06
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_08
+		x = 194
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_07
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_09
+		x = 194
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_08
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_10
+		x = 194
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_09
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_11
+		x = 194
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_10
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_12
+		x = 194
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_11
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_13
+		x = 194
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_12
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_14
+		x = 194
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_13
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_15
+		x = 194
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_14
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_16
+		x = 194
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_15
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_17
+		x = 194
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_16
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_18
+		x = 194
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_17
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ESTATES_AND_DUCAL_GOVERNMENT_19
+		x = 194
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_18
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_01
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_01
+		x = 194
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_estates_and_ducal_government_19
+		}
+		allow_branch = {
+			tag = MEC
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_02
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_02
+		x = 194
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_01
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_03
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_03
+		x = 194
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_02
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_04
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_04
+		x = 194
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_03
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_05
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_05
+		x = 194
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_04
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_06
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_06
+		x = 194
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_05
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_07
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_07
+		x = 194
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_06
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_08
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_08
+		x = 194
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_07
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_09
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_09
+		x = 194
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_08
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_10
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_10
+		x = 194
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_09
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_11
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_11
+		x = 194
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_10
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_12
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_12
+		x = 194
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_11
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_13
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_13
+		x = 194
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_12
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_14
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_14
+		x = 194
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_13
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_15
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_15
+		x = 194
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_14
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_16
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_16
+		x = 194
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_15
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_17
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_17
+		x = 194
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_16
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_18
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_18
+		x = 194
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_17
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_19
+		icon = GFX_NAP_FOCUS_NAP_GERMAN_PRINCES_MEC_DEPTH_MECKLENBURG_ARMY_AND_BALTIC_DEFENCE_19
+		x = 194
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_GERMAN_PRINCES_MEC_DEPTH_mecklenburg_army_and_baltic_defence_18
+		}
+		available = {
+			tag = MEC
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

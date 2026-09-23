@@ -36,7 +36,7 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Authorized end-product requirements
 
-- [ ] At least **450 distinct French focuses** across the existing and subsequently approved routes.
+- [x] France in the **600-650 focus** range (implemented target: 630).\n- [x] Britain, Austria, Prussia and Russia in the **350-400 focus** range.\n- [x] Each secondary campaign with content in the **150-200 focus** range, including at least 30-40 country-specific focuses.
 - [ ] Varied focus lengths, meaningful branching and route-safe outcomes.
 - [ ] Substantial events and decisions with consequences, not repeated filler rewards.
 - [ ] Earned integration of eligible territory, with the catalogue approved under A04.
@@ -70,7 +70,7 @@ Build playable historical slices: **1789-1795 > 1796-1804 > 1805-1807 > 1808-181
 
 {header}
 
-This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
+This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation and validation are authorized. The current owner target is 600-650 French focuses, 350-400 for each other major, and 150-200 for each secondary campaign with at least 30-40 country-specific focuses. Approving a PR does not approve all proposals listed here.
 
 '''
     for key,title,question,default in QUESTIONS:
@@ -96,7 +96,7 @@ A Europe-first campaign beginning on **5 May 1789**, centred on the French Revol
 
 The inherited framework starts in 1789. Under approved A01, historical dates are minimum focus gates rather than autonomous event timers; A02 removes the practical campaign end. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
 
-France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The end-product requirement is at least **450 distinct French focuses**, different durations, meaningful policy choices, many events, territorial integration and client-state interactions. A node-count target alone is not campaign completion.
+France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The current content target is **600-650 French focuses**, with **350-400** for each other major and **150-200** for each secondary campaign with substantial personalised material. A node-count target alone is not campaign completion.
 
 The engine slots map neutrality to Absolutism, democratic to Constitutionalism, communism to Republicanism and fascism to Bonapartism. These are technical identifiers, not historical equivalences between eighteenth- and twentieth-century movements.
 
@@ -180,12 +180,12 @@ These are proposals, not approvals. Evaluate them against a playable campaign an
 | Route-specific integration | Coring becomes an investment rather than a conquest reward | Approve states, delay, compliance and failures; A04 |
 | Formable/releasable registry | Auditable founders, borders and client status | A05/A06 |
 | Temporary coalitions | Separate peace, exit and later re-entry | Prevent automatic total-war escalation and recursive calls |
-| Focus panels and navigation | Keep 450+ nodes usable | Requires in-game layout and accessibility testing |
+| Focus panels and navigation | Keep 4,000+ campaign focus nodes usable | Requires in-game layout and accessibility testing |
 | Campaign measurement fixtures | Balance organisation, supply and casualties using evidence | Manual logs/saves first; no remote player telemetry |
 | Installed-definition compatibility audit | Catch unsupported effects/modifiers | Requires the user's game baseline; A08 |
 | Asset provenance ledger | Avoid unlicensed redistribution | A10 |
 
-The end date, chronology policy, speculative political routes and expanded core eligibility are unchanged until approved.
+A01-A12 remain approved policy. The current focus-depth targets and explicit formable core-state rule are owner-directed implementation work; further speculative territorial expansion still requires explicit source entries.
 '''
     contracts = '''# Repository source contracts
 

@@ -6,7 +6,7 @@ A04 activates only the two explicitly catalogued, historically grounded French i
 
 Approved integration requires continued ownership, control, peace, route eligibility, high compliance and low resistance. Cancellation clears progress; reacquiring the territory does not finish an old programme. The cost is paid once at the beginning, and the completion effect repeats the non-financial checks before adding a core.
 
-Each approved formable changes cosmetic identity only. It preserves the base tag, leaders and focus tree, grants no automatic cores, and never annexes an existing country. Required states are explicit in content/territorial_registry.json so border changes remain reviewable rather than inferred.
+Each approved formable preserves the base tag, leaders and focus tree and never annexes an existing country. On formation it grants cores on the explicit core_states catalogue for that formable. Required states and core states are both audited in content/territorial_registry.json so the territorial meaning of formation remains reviewable rather than inferred.
 
 The original three French diplomatic focuses now use dedicated native faction templates and refuse to replace an unrelated existing faction. Their political names and existing route intent are retained.
 

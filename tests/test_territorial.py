@@ -98,16 +98,18 @@ class TerritorialTests(unittest.TestCase):
     def test_approval_queue_lists_actual_proposals(self):
         queue=postprocess(france(ROOT)|{'to ask lollo.md':'# Queue'},ROOT)['to ask lollo.md']
         for row in self.data['integrations']+self.data['formables']:self.assertIn(row['id'],queue)
-    def test_a05_formables_have_explicit_borders_and_no_automatic_cores(self):
+    def test_formables_grant_explicit_reasonable_cores(self):
         text=build(ROOT)['common/decisions/nap_territorial.txt']
         for row in self.data['formables']:
             self.assertTrue(row['approved'])
             self.assertTrue(row['required_states'])
+            self.assertTrue(row['core_states'])
+            self.assertTrue(set(row['required_states']).issubset(set(row['core_states'])))
             decision=next(e for e in parse(text)[0].value if e.key=='nap_form_'+row['id'])
             rendered=dumps([decision])
             for sid in row['required_states']:
                 self.assertIn(f'{sid} =',rendered)
-            self.assertNotIn('add_core_of',rendered)
+            self.assertEqual(rendered.count('add_core_of = ROOT'),len(row['core_states']))
             self.assertNotIn('annex_country',rendered)
     def test_default_decision_count(self):
         decisions=parse(build(ROOT)['common/decisions/nap_territorial.txt'])[0].value

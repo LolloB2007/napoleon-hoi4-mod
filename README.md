@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: A01-A12 implemented in the stacked approval series; static validation and HOI4 runtime certification remain**
+**Current branch: Deep focus expansion implemented on development branch; static and HOI4 runtime validation pending**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -18,7 +18,7 @@ A Europe-first campaign beginning on **5 May 1789**, centred on the French Revol
 
 The inherited framework starts in 1789. Under approved A01, historical dates are minimum focus gates rather than autonomous event timers; A02 removes the practical campaign end. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
 
-France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The end-product requirement is at least **450 distinct French focuses**, different durations, meaningful policy choices, many events, territorial integration and client-state interactions. A node-count target alone is not campaign completion.
+France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The current content target is **600-650 French focuses**, with **350-400** for each other major and **150-200** for each secondary campaign with substantial personalised material. A node-count target alone is not campaign completion.
 
 The engine slots map neutrality to Absolutism, democratic to Constitutionalism, communism to Republicanism and fascism to Bonapartism. These are technical identifiers, not historical equivalences between eighteenth- and twentieth-century movements.
 
@@ -28,9 +28,9 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- 450 French focus definitions, 108 additional great-power focuses and 299 secondary-power focuses
+- 630 French focuses; Britain 368, Austria 368, Prussia 364 and Russia 366 estimated total focuses; thirteen secondary campaigns at 175 focuses each
 - Reusable era mechanics and seven temporary coalition rounds
-- Territorial/client foundation with approval-gated integration and formable registries
+- Formables grant cores only from explicit audited core-state catalogues on successful formation
 - Thirteen secondary campaign packs covering every Milestone 8 geography
 - A deterministic original focus icon for every current focus ID and period-styled pictures for every scripted event
 - Original portrait cards wired to current inline political leaders, marshals, generals and admirals
@@ -92,7 +92,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-A01-A12 add regression coverage for chronology gates, open-ended campaign, outcome-aware settlements, coring/formables/clients, geographic scope, DLC baseline, alternate-route plausibility, presentation, music provenance, and English-only localisation. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
+Deep expansion regression coverage checks France at 630 focuses, each major in the 350-400 range, each secondary campaign at 175 focuses with 38 personalised focuses, explicit formable core sets, syntax, localisation and territorial safety. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

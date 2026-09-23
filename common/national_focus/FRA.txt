@@ -744,5 +744,17 @@ focus_tree = {
 	shared_focus = FRA_nap_continental_00
 	shared_focus = FRA_nap_peninsula_00
 	shared_focus = FRA_nap_russia_00
+	shared_focus = FRA_nap_civil_code_00
+	shared_focus = FRA_nap_prefectures_00
+	shared_focus = FRA_nap_concordat_00
+	shared_focus = FRA_nap_gendarmerie_00
+	shared_focus = FRA_nap_conscription_00
+	shared_focus = FRA_nap_veterans_00
+	shared_focus = FRA_nap_arsenals_00
+	shared_focus = FRA_nap_commerce_00
+	shared_focus = FRA_nap_colonial_00
+	shared_focus = FRA_nap_police_00
+	shared_focus = FRA_nap_notables_00
+	shared_focus = FRA_nap_postwar_00
 	shared_focus = FRA_nap_national_settlement
 }

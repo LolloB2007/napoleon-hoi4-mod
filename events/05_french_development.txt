@@ -2603,3 +2603,1119 @@ country_event = {
  }
  option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_27_3_resolved } } } ai_chance = { factor = 100 } }
 }
+
+country_event = {
+ id = nap_fra_development.1281
+ title = nap_fra_development.1281.t
+ desc = nap_fra_development.1281.d
+ picture = GFX_NAP_EVENT_01
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1281.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_28_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1281.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_1_resolved } }
+   set_country_flag = nap_fra_event_28_1_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1282
+ title = nap_fra_development.1282.t
+ desc = nap_fra_development.1282.d
+ picture = GFX_NAP_EVENT_05
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1282.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_28_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1282.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_2_resolved } }
+   set_country_flag = nap_fra_event_28_2_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1283
+ title = nap_fra_development.1283.t
+ desc = nap_fra_development.1283.d
+ picture = GFX_NAP_EVENT_03
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1283.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_28_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1283.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_3_resolved } }
+   set_country_flag = nap_fra_event_28_3_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_28_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1291
+ title = nap_fra_development.1291.t
+ desc = nap_fra_development.1291.d
+ picture = GFX_NAP_EVENT_05
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1291.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_29_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1291.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_1_resolved } }
+   set_country_flag = nap_fra_event_29_1_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1292
+ title = nap_fra_development.1292.t
+ desc = nap_fra_development.1292.d
+ picture = GFX_NAP_EVENT_12
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1292.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_29_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1292.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_2_resolved } }
+   set_country_flag = nap_fra_event_29_2_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1293
+ title = nap_fra_development.1293.t
+ desc = nap_fra_development.1293.d
+ picture = GFX_NAP_EVENT_04
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1293.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_29_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1293.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_3_resolved } }
+   set_country_flag = nap_fra_event_29_3_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_29_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1301
+ title = nap_fra_development.1301.t
+ desc = nap_fra_development.1301.d
+ picture = GFX_NAP_EVENT_10
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1301.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_30_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1301.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_1_resolved } }
+   set_country_flag = nap_fra_event_30_1_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1302
+ title = nap_fra_development.1302.t
+ desc = nap_fra_development.1302.d
+ picture = GFX_NAP_EVENT_03
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1302.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_30_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1302.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_2_resolved } }
+   set_country_flag = nap_fra_event_30_2_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1303
+ title = nap_fra_development.1303.t
+ desc = nap_fra_development.1303.d
+ picture = GFX_NAP_EVENT_08
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1303.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_30_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1303.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_3_resolved } }
+   set_country_flag = nap_fra_event_30_3_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_30_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1311
+ title = nap_fra_development.1311.t
+ desc = nap_fra_development.1311.d
+ picture = GFX_NAP_EVENT_04
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1311.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_31_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1311.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_1_resolved } }
+   set_country_flag = nap_fra_event_31_1_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1312
+ title = nap_fra_development.1312.t
+ desc = nap_fra_development.1312.d
+ picture = GFX_NAP_EVENT_07
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1312.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_31_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1312.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_2_resolved } }
+   set_country_flag = nap_fra_event_31_2_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1313
+ title = nap_fra_development.1313.t
+ desc = nap_fra_development.1313.d
+ picture = GFX_NAP_EVENT_01
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1313.a
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_31_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1313.b
+  trigger = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_3_resolved } }
+   set_country_flag = nap_fra_event_31_3_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_consular = yes NOT = { has_country_flag = nap_fra_event_31_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1321
+ title = nap_fra_development.1321.t
+ desc = nap_fra_development.1321.d
+ picture = GFX_NAP_EVENT_02
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1321.a
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_32_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1321.b
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_1_resolved } }
+   set_country_flag = nap_fra_event_32_1_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1322
+ title = nap_fra_development.1322.t
+ desc = nap_fra_development.1322.d
+ picture = GFX_NAP_EVENT_08
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1322.a
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_32_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1322.b
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_2_resolved } }
+   set_country_flag = nap_fra_event_32_2_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1323
+ title = nap_fra_development.1323.t
+ desc = nap_fra_development.1323.d
+ picture = GFX_NAP_EVENT_01
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1323.a
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_32_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1323.b
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_3_resolved } }
+   set_country_flag = nap_fra_event_32_3_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_32_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1331
+ title = nap_fra_development.1331.t
+ desc = nap_fra_development.1331.d
+ picture = GFX_NAP_EVENT_09
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1331.a
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_33_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1331.b
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_1_resolved } }
+   set_country_flag = nap_fra_event_33_1_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1332
+ title = nap_fra_development.1332.t
+ desc = nap_fra_development.1332.d
+ picture = GFX_NAP_EVENT_11
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1332.a
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_33_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1332.b
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_2_resolved } }
+   set_country_flag = nap_fra_event_33_2_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1333
+ title = nap_fra_development.1333.t
+ desc = nap_fra_development.1333.d
+ picture = GFX_NAP_EVENT_08
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1333.a
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_33_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1333.b
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_3_resolved } }
+   set_country_flag = nap_fra_event_33_3_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_33_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1341
+ title = nap_fra_development.1341.t
+ desc = nap_fra_development.1341.d
+ picture = GFX_NAP_EVENT_06
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1341.a
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_34_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1341.b
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_1_resolved } }
+   set_country_flag = nap_fra_event_34_1_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1342
+ title = nap_fra_development.1342.t
+ desc = nap_fra_development.1342.d
+ picture = GFX_NAP_EVENT_11
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1342.a
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_34_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1342.b
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_2_resolved } }
+   set_country_flag = nap_fra_event_34_2_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1343
+ title = nap_fra_development.1343.t
+ desc = nap_fra_development.1343.d
+ picture = GFX_NAP_EVENT_04
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1343.a
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_34_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1343.b
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_3_resolved } }
+   set_country_flag = nap_fra_event_34_3_resolved
+   add_to_variable = { nap_army_prestige = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_34_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1351
+ title = nap_fra_development.1351.t
+ desc = nap_fra_development.1351.d
+ picture = GFX_NAP_EVENT_11
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1351.a
+  trigger = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_35_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_treasury = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1351.b
+  trigger = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_1_resolved } }
+   set_country_flag = nap_fra_event_35_1_resolved
+   add_to_variable = { nap_treasury = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1352
+ title = nap_fra_development.1352.t
+ desc = nap_fra_development.1352.d
+ picture = GFX_NAP_EVENT_01
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1352.a
+  trigger = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_35_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_treasury = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1352.b
+  trigger = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_2_resolved } }
+   set_country_flag = nap_fra_event_35_2_resolved
+   add_to_variable = { nap_treasury = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1353
+ title = nap_fra_development.1353.t
+ desc = nap_fra_development.1353.d
+ picture = GFX_NAP_EVENT_02
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1353.a
+  trigger = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_35_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_treasury = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1353.b
+  trigger = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_3_resolved } }
+   set_country_flag = nap_fra_event_35_3_resolved
+   add_to_variable = { nap_treasury = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_common = yes NOT = { has_country_flag = nap_fra_event_35_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1361
+ title = nap_fra_development.1361.t
+ desc = nap_fra_development.1361.d
+ picture = GFX_NAP_EVENT_10
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1361.a
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_36_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1361.b
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_1_resolved } }
+   set_country_flag = nap_fra_event_36_1_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1362
+ title = nap_fra_development.1362.t
+ desc = nap_fra_development.1362.d
+ picture = GFX_NAP_EVENT_08
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1362.a
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_36_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1362.b
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_2_resolved } }
+   set_country_flag = nap_fra_event_36_2_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1363
+ title = nap_fra_development.1363.t
+ desc = nap_fra_development.1363.d
+ picture = GFX_NAP_EVENT_06
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1363.a
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_36_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1363.b
+  trigger = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_3_resolved } }
+   set_country_flag = nap_fra_event_36_3_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_campaign = yes NOT = { has_country_flag = nap_fra_event_36_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1371
+ title = nap_fra_development.1371.t
+ desc = nap_fra_development.1371.d
+ picture = GFX_NAP_EVENT_04
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1371.a
+  trigger = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_37_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1371.b
+  trigger = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_1_resolved } }
+   set_country_flag = nap_fra_event_37_1_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1372
+ title = nap_fra_development.1372.t
+ desc = nap_fra_development.1372.d
+ picture = GFX_NAP_EVENT_03
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1372.a
+  trigger = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_37_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1372.b
+  trigger = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_2_resolved } }
+   set_country_flag = nap_fra_event_37_2_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1373
+ title = nap_fra_development.1373.t
+ desc = nap_fra_development.1373.d
+ picture = GFX_NAP_EVENT_07
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1373.a
+  trigger = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_37_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1373.b
+  trigger = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_3_resolved } }
+   set_country_flag = nap_fra_event_37_3_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_directory = yes NOT = { has_country_flag = nap_fra_event_37_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1381
+ title = nap_fra_development.1381.t
+ desc = nap_fra_development.1381.d
+ picture = GFX_NAP_EVENT_07
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1381.a
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_38_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1381.b
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_1_resolved } }
+   set_country_flag = nap_fra_event_38_1_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1382
+ title = nap_fra_development.1382.t
+ desc = nap_fra_development.1382.d
+ picture = GFX_NAP_EVENT_10
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1382.a
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_38_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1382.b
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_2_resolved } }
+   set_country_flag = nap_fra_event_38_2_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1383
+ title = nap_fra_development.1383.t
+ desc = nap_fra_development.1383.d
+ picture = GFX_NAP_EVENT_04
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1383.a
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_38_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_legitimacy = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1383.b
+  trigger = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_3_resolved } }
+   set_country_flag = nap_fra_event_38_3_resolved
+   add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_imperial = yes NOT = { has_country_flag = nap_fra_event_38_3_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1391
+ title = nap_fra_development.1391.t
+ desc = nap_fra_development.1391.d
+ picture = GFX_NAP_EVENT_09
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1391.a
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_1_resolved } NOT = { check_variable = { nap_treasury < 12 } } }
+   set_country_flag = nap_fra_event_39_1_resolved
+   add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1391.b
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_1_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_1_resolved } }
+   set_country_flag = nap_fra_event_39_1_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_1_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1392
+ title = nap_fra_development.1392.t
+ desc = nap_fra_development.1392.d
+ picture = GFX_NAP_EVENT_04
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1392.a
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_2_resolved } NOT = { check_variable = { nap_treasury < 16 } } }
+   set_country_flag = nap_fra_event_39_2_resolved
+   add_to_variable = { nap_treasury = -16 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1392.b
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_2_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_2_resolved } }
+   set_country_flag = nap_fra_event_39_2_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_2_resolved } } } ai_chance = { factor = 100 } }
+}
+
+country_event = {
+ id = nap_fra_development.1393
+ title = nap_fra_development.1393.t
+ desc = nap_fra_development.1393.d
+ picture = GFX_NAP_EVENT_10
+ is_triggered_only = yes
+ fire_only_once = yes
+ immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
+ option = {
+  name = nap_fra_development.1393.a
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+  ai_chance = { factor = 60 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_3_resolved } NOT = { check_variable = { nap_treasury < 20 } } }
+   set_country_flag = nap_fra_event_39_3_resolved
+   add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_reform = 2 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = {
+  name = nap_fra_development.1393.b
+  trigger = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_3_resolved } }
+  ai_chance = { factor = 40 }
+  if = { limit = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_3_resolved } }
+   set_country_flag = nap_fra_event_39_3_resolved
+   add_to_variable = { nap_reform = 2 } add_to_variable = { nap_legitimacy = -1 }
+   nap_era_clamp = yes nap_era_refresh = yes
+  }
+ }
+ option = { name = nap_fra_superseded trigger = { NOT = { nap_fra_route_late_imperial = yes NOT = { has_country_flag = nap_fra_event_39_3_resolved } } } ai_chance = { factor = 100 } }
+}

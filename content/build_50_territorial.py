@@ -86,9 +86,10 @@ def build(root):
         key='nap_form_'+row['id'];flag=key+'_settled'
         founders='OR = { '+' '.join('tag = '+t for t in row['founders'])+' }'
         land=' '.join(f'{sid} = {{ is_owned_by = ROOT is_controlled_by = ROOT }}' for sid in row['required_states'])
+        cores=' '.join(f'{sid} = {{ add_core_of = ROOT }}' for sid in row['core_states'])
         guard=f'{founders} is_subject = no has_war = no NOT = {{ has_country_flag = {flag} }} {land}'
-        decisions.append(f'{key} = {{ icon = generic_political_discourse cost = 100 fire_only_once = yes visible = {{ {founders} }} available = {{ {guard} }} complete_effect = {{ if = {{ limit = {{ {guard} }} set_country_flag = {flag} set_cosmetic_tag = {row["cosmetic_tag"]} }} }} ai_will_do = {{ factor = 1 }} }}')
-        loc += [f' {key}:0 "Proclaim {row["title"]}"',f' {key}_desc:0 "This approved cosmetic formation requires independent, peaceful ownership and control of the approved state set. It preserves the original country tag, leaders and focus tree, grants no new cores, and annexes no country."']
+        decisions.append(f'{key} = {{ icon = generic_political_discourse cost = 100 fire_only_once = yes visible = {{ {founders} }} available = {{ {guard} }} complete_effect = {{ if = {{ limit = {{ {guard} }} set_country_flag = {flag} set_cosmetic_tag = {row["cosmetic_tag"]} {cores} }} }} ai_will_do = {{ factor = 1 }} }}')
+        loc += [f' {key}:0 "Proclaim {row["title"]}"',f' {key}_desc:0 "This approved formation requires independent, peaceful ownership and control of its required state set. On proclamation it grants cores on the explicitly audited core-state set associated with the formable, while preserving the original country tag, leaders and focus tree and annexing no country."']
         for suffix in ('','_DEF','_ADJ','_neutrality','_democratic','_communism','_fascism'):
             loc.append(f' {row["cosmetic_tag"]}{suffix}:0 "{row["title"]}"')
     decisions.append('}')
@@ -123,7 +124,7 @@ A04 activates only the two explicitly catalogued, historically grounded French i
 
 Approved integration requires continued ownership, control, peace, route eligibility, high compliance and low resistance. Cancellation clears progress; reacquiring the territory does not finish an old programme. The cost is paid once at the beginning, and the completion effect repeats the non-financial checks before adding a core.
 
-Each approved formable changes cosmetic identity only. It preserves the base tag, leaders and focus tree, grants no automatic cores, and never annexes an existing country. Required states are explicit in content/territorial_registry.json so border changes remain reviewable rather than inferred.
+Each approved formable preserves the base tag, leaders and focus tree and never annexes an existing country. On formation it grants cores on the explicit core_states catalogue for that formable. Required states and core states are both audited in content/territorial_registry.json so the territorial meaning of formation remains reviewable rather than inferred.
 
 The original three French diplomatic focuses now use dedicated native faction templates and refuse to replace an unrelated existing faction. Their political names and existing route intent are retained.
 

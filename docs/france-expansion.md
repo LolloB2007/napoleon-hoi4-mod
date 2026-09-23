@@ -1,8 +1,8 @@
 # French expansion: Milestone 3 implementation slice
 
-29 original focuses are retained. 28 authored policy chapters add 420 focuses, and one cross-route administrative capstone brings the tree to **450**. There are **84 new policy events** and 56 chapter-related spirits (28 temporary programmes, 28 persistent settlements).
+29 original focuses are retained. 40 authored policy chapters add 600 focuses, and one cross-route administrative capstone brings the tree to **630**. There are **120 new policy events** and 80 chapter-related spirits (40 temporary programmes, 40 persistent settlements).
 
-The new chapter durations in days are: {14: 84, 21: 140, 28: 84, 35: 84, 49: 19, 70: 9}. A focus is not a promise that every route can take it: each chapter contains exclusive policies, and Girondin/Jacobin programmes are mutually exclusive. The original four political routes remain the main paths.
+The new chapter durations in days are: {14: 120, 21: 200, 28: 120, 35: 120, 49: 27, 70: 13}. A focus is not a promise that every route can take it: each chapter contains exclusive policies, and Girondin/Jacobin programmes are mutually exclusive. The original four political routes remain the main paths.
 
 Each chapter has two exclusive forks, parallel preparation work, three event dilemmas and a concluding institution. Events distinguish a funded policy from a lower-cost settlement. Resource checks are repeated on execution. Rewards and event choices have completion flags to prevent repeated payouts. No chapter grants unrestricted territorial cores, seizes a foreign state or invents a new political route.
 
