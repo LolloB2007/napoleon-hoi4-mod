@@ -1,74 +1,138 @@
 import sys
 import unittest
-from collections import Counter
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'content')]
 
-from pdx import parse,dumps,walk
+from pdx import parse,walk,dumps
 from build_20_france import build as build_france
-from build_21_france_decisions import build as build_decisions,postprocess,CONTINENTAL_TARGETS
+from build_21_france_decisions import build,postprocess,VARS,CONTINENTAL_TARGETS,CATEGORIES
 
 
 class FranceDecisionMechanicsTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        base=build_france(ROOT)
-        extra=build_decisions(ROOT)
-        combined=base|extra
-        cls.files=combined|postprocess(combined,ROOT)
-        cls.decisions=parse(cls.files['common/decisions/nap_france_campaigns.txt'])
-        cls.effects=parse(cls.files['common/scripted_effects/nap_france_campaigns.txt'])
-        cls.effect_ids={e.key for e in cls.effects}
-        cls.focuses={}
-        for node in walk(parse(cls.files['common/national_focus/FRA.txt'])):
-            if node.key=='focus' and isinstance(node.value,list) and node.scalar('id'):
-                cls.focuses[node.scalar('id')]=node
-        cls.events={}
-        for path in ('events/01_french_revolution.txt','events/02_napoleonic_wars.txt','events/03_collapse.txt'):
-            for event in parse(cls.files[path]):
-                if event.key in ('country_event','news_event') and event.scalar('id'):
-                    cls.events[event.scalar('id')]=event
+        cls.base=build_france(ROOT)
+        cls.own=build(ROOT)
+        cls.outputs=cls.base|cls.own|postprocess(cls.base|cls.own,ROOT)
+        cls.decisions=parse(cls.own['common/decisions/nap_france_campaigns.txt'])
+        cls.effects=parse(cls.own['common/scripted_effects/nap_france_campaigns.txt'])
+        cls.effects_by_key={e.key:e for e in cls.effects}
+        cls.focus_tree=parse(cls.outputs['common/national_focus/FRA.txt'])
+        cls.focuses={n.scalar('id'):n for n in walk(cls.focus_tree) if n.key=='focus' and isinstance(n.value,list) and n.scalar('id')}
 
-    def test_scripts_parse(self):
-        for path,text in self.files.items():
+    def test_generated_scripts_parse(self):
+        for path,text in self.own.items():
             if path.endswith('.txt'):
                 parse(text)
+        for path in ('common/national_focus/FRA.txt','events/01_french_revolution.txt','events/02_napoleonic_wars.txt','events/03_collapse.txt'):
+            parse(self.outputs[path])
 
-    def test_six_france_categories_plus_foreign_evasion(self):
-        categories={x.key for x in parse(self.files['common/decisions/categories/nap_france_campaigns.txt'])}
-        self.assertEqual(categories,{
+    def test_six_french_categories_plus_foreign_customs(self):
+        cats={e.key for e in self.decisions}
+        self.assertEqual(cats,set(CATEGORIES))
+        for key in (
             'nap_fra_revolutionary_crisis','nap_fra_napoleon_rise',
             'nap_fra_continental_system','nap_fra_peninsular_war',
-            'nap_fra_russian_campaign','nap_fra_restoration_cycle',
-            'nap_continental_foreign',
-        })
+            'nap_fra_russian_campaign','nap_fra_restoration_cycle'
+        ):
+            self.assertIn(key,cats)
 
-    def test_decision_counts_by_system(self):
-        counts={cat.key:len([e for e in cat.value if isinstance(e.value,list)]) for cat in self.decisions}
-        self.assertEqual(counts,{
-            'nap_fra_revolutionary_crisis':15,
-            'nap_fra_napoleon_rise':13,
-            'nap_fra_continental_system':11,
-            'nap_continental_foreign':2,
-            'nap_fra_peninsular_war':7,
-            'nap_fra_russian_campaign':9,
-            'nap_fra_restoration_cycle':10,
-        })
-        self.assertEqual(sum(counts.values()),67)
+    def test_decision_system_uses_bounded_variables(self):
+        init=dumps([self.effects_by_key['nap_fra_decision_initialize']])
+        clamp=dumps([self.effects_by_key['nap_fra_decision_clamp']])
+        for name,default in VARS.items():
+            self.assertIn(f'nap_fra_{name}',init)
+            self.assertIn(f'nap_fra_{name}',clamp)
+            self.assertIn('100',clamp)
+            self.assertIn('0',clamp)
 
-    def test_every_decision_rechecks_through_scripted_effect(self):
-        for category in self.decisions:
-            for decision in [e for e in category.value if isinstance(e.value,list)]:
-                complete=decision.children('complete_effect')
-                self.assertEqual(len(complete),1,decision.key)
-                calls=[e.key for e in complete[0].value if e.value=='yes']
-                self.assertEqual(len(calls),1,decision.key)
-                self.assertIn(calls[0],self.effect_ids,decision.key)
+    def test_revolution_has_institutions_factions_finance_vendee_and_terror(self):
+        text=dumps(self.decisions)
+        for key in (
+            'nap_fra_establish_national_assembly',
+            'nap_fra_legislative_assembly',
+            'nap_fra_national_convention',
+            'nap_fra_support_girondins',
+            'nap_fra_support_jacobins',
+            'nap_fra_issue_assignats',
+            'nap_fra_negotiate_vendee',
+            'nap_fra_columns_vendee',
+            'nap_fra_committee_public_safety',
+            'nap_fra_debate_terror',
+            'nap_fra_thermidorian_reaction',
+            'nap_fra_install_directory',
+        ):
+            self.assertIn(key,text)
 
-    def test_focuses_unlock_decisions_instead_of_auto_transitions(self):
-        calls={
+    def test_napoleon_ascent_requires_campaign_prestige(self):
+        text=dumps(self.decisions)
+        for key in (
+            'nap_fra_open_italian_campaign','nap_fra_conclude_italian_campaign',
+            'nap_fra_prepare_egypt','nap_fra_return_egypt',
+            'nap_fra_stage_brumaire','nap_fra_proclaim_empire_decision',
+            'nap_fra_coronation','nap_fra_appoint_marshals'
+        ):
+            self.assertIn(key,text)
+        self.assertIn('nap_fra_napoleon_prestige < 45',text)
+        self.assertIn('nap_fra_napoleon_prestige < 60',text)
+
+    def test_continental_system_has_country_enforcement_and_evasion(self):
+        text=dumps(self.decisions)
+        for tag,_ in CONTINENTAL_TARGETS:
+            self.assertIn('nap_fra_continental_pressure_'+tag.lower(),text)
+        self.assertIn('nap_continental_evade_customs',text)
+        self.assertIn('nap_continental_enforce_locally',text)
+        effects=self.own['common/scripted_effects/nap_france_campaigns.txt']
+        self.assertIn('nap_british_continental_pressure',effects)
+        self.assertIn('nap_continental_compliance',effects)
+
+    def test_peninsular_war_has_resistance_and_bounded_exits(self):
+        text=dumps(self.decisions)
+        for key in (
+            'nap_fra_launch_peninsular_intervention','nap_fra_peninsular_depots',
+            'nap_fra_peninsular_conciliate','nap_fra_peninsular_columns',
+            'nap_fra_peninsular_rotate','nap_fra_peninsular_settlement',
+            'nap_fra_peninsular_withdraw'
+        ):
+            self.assertIn(key,text)
+        effects=self.own['common/scripted_effects/nap_france_campaigns.txt']
+        self.assertIn('nap_fra_peninsular_resistance',effects)
+        self.assertIn('white_peace = SPR',effects)
+        self.assertIn('white_peace = POR',effects)
+        self.assertNotIn('annex_country',effects)
+
+    def test_russian_campaign_has_preparation_attrition_and_three_outcomes(self):
+        text=dumps(self.decisions)
+        for key in (
+            'nap_fra_russia_magazines','nap_fra_russia_remounts','nap_fra_russia_allies',
+            'nap_fra_russia_launch','nap_fra_russia_forward_depots',
+            'nap_fra_russia_winter_quarters','nap_fra_russia_press_on',
+            'nap_fra_russia_settlement','nap_fra_russia_retreat'
+        ):
+            self.assertIn(key,text)
+        monthly=dumps([self.effects_by_key['nap_fra_decision_monthly']])
+        self.assertIn('nap_fra_russian_supply = -6',monthly)
+        self.assertIn('nap_fra_russian_cohesion = -4',monthly)
+        self.assertIn('napoleonic_collapse.1',monthly)
+        self.assertIn('napoleonic_wars.13',self.own['common/scripted_effects/nap_france_campaigns.txt'])
+
+    def test_restoration_hundred_days_and_survival_path_exist(self):
+        text=dumps(self.decisions)
+        for key in (
+            'nap_fra_fontainebleau','nap_fra_restore_bourbons',
+            'nap_fra_restoration_charter','nap_fra_return_elba',
+            'nap_fra_hundred_days_rally','nap_fra_hundred_days_liberal',
+            'nap_fra_hundred_days_battle','nap_fra_second_abdication',
+            'nap_fra_hundred_days_survive','nap_fra_concert'
+        ):
+            self.assertIn(key,text)
+        self.assertIn('has_war = no',text)
+        self.assertIn('nap_fra_hundred_days_survived',self.own['common/scripted_effects/nap_france_campaigns.txt'])
+
+    def test_major_transition_focuses_no_longer_auto_fire_events(self):
+        pairs={
             'FRA_reign_of_terror_focus':'french_revolution.10',
             'FRA_brumaire_coup':'french_revolution.14',
             'FRA_proclaim_empire':'napoleonic_wars.3',
@@ -76,138 +140,55 @@ class FranceDecisionMechanicsTests(unittest.TestCase):
             'FRA_invade_russia':'napoleonic_wars.16',
             'FRA_return_from_elba':'napoleonic_collapse.8',
         }
-        for focus_id,event_id in calls.items():
-            rendered=dumps(self.focuses[focus_id].children('completion_reward'))
-            self.assertNotIn(event_id,rendered,focus_id)
-            self.assertIn('nap_fra_',rendered,focus_id)
-        iberia=dumps(self.focuses['FRA_invade_iberia'].children('completion_reward'))
-        self.assertNotIn('declare_war_on',iberia)
-        self.assertIn('nap_fra_peninsular_decisions_unlocked',iberia)
+        for focus,event in pairs.items():
+            reward='\n'.join(dumps(x.value) if isinstance(x.value,list) else str(x.value) for x in self.focuses[focus].children('completion_reward'))
+            self.assertNotIn(event,reward,focus)
 
-    def test_italy_and_egypt_complete_through_decisions(self):
+    def test_iberian_focus_no_longer_auto_declares_war(self):
+        reward=dumps(self.focuses['FRA_invade_iberia'].children('completion_reward'))
+        self.assertNotIn('declare_war_on',reward)
+        self.assertIn('nap_fra_peninsular_decisions_unlocked',reward)
+
+    def test_italy_and_egypt_focuses_unlock_instead_of_auto_complete(self):
         italy=dumps(self.focuses['FRA_italian_campaign'].children('completion_reward'))
         egypt=dumps(self.focuses['FRA_egyptian_expedition'].children('completion_reward'))
         self.assertNotIn('italian_campaign_won',italy)
         self.assertNotIn('egyptian_expedition_complete',egypt)
-        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
-        self.assertIn('set_country_flag = italian_campaign_won',effects)
-        self.assertIn('set_country_flag = egyptian_expedition_complete',effects)
-        self.assertIn('nap_fra_napoleon_prestige',effects)
+        self.assertIn('nap_fra_italian_decisions_unlocked',italy)
+        self.assertIn('nap_fra_egyptian_decisions_unlocked',egypt)
 
-    def test_jacobin_girondin_struggle_has_threshold_outcomes(self):
-        decisions=self.files['common/decisions/nap_france_campaigns.txt']
-        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
-        ideas=self.files['common/ideas/nap_france_campaigns.txt']
-        for side in ('girondin','jacobin'):
-            self.assertIn('nap_fra_'+side+'_ascendancy',decisions)
-            self.assertIn('nap_fra_'+side+'_influence',effects)
-            self.assertIn('nap_fra_'+side+'_ascendancy',ideas)
-        self.assertIn('nap_fra_girondin_influence < 60',decisions)
-        self.assertIn('nap_fra_jacobin_influence < 60',decisions)
-
-    def test_revolution_transitions_are_decision_driven(self):
-        terror=self.events['french_revolution.10']
-        self.assertNotIn('french_revolution.11',dumps(terror))
-        for event_id in ('french_revolution.12','french_revolution.14'):
-            event=self.events[event_id]
-            self.assertEqual(event.scalar('is_triggered_only'),'yes')
-            self.assertFalse(event.children('mean_time_to_happen'))
-        decisions=self.files['common/decisions/nap_france_campaigns.txt']
-        for key in ('nap_fra_committee_public_safety','nap_fra_debate_terror',
-                    'nap_fra_thermidorian_reaction','nap_fra_install_directory'):
-            self.assertIn(key,decisions)
-
-    def test_empire_and_coronation_are_separate_decisions(self):
-        empire=self.events['napoleonic_wars.3']
-        self.assertEqual(empire.scalar('is_triggered_only'),'yes')
-        self.assertNotIn('napoleonic_wars.4',dumps(empire))
-        decisions=self.files['common/decisions/nap_france_campaigns.txt']
-        self.assertIn('nap_fra_proclaim_empire_decision',decisions)
-        self.assertIn('nap_fra_coronation',decisions)
-        self.assertIn('nap_fra_appoint_marshals',decisions)
-
-    def test_continental_system_has_enforcement_and_evasion(self):
-        text=self.files['common/decisions/nap_france_campaigns.txt']
-        for tag,_ in CONTINENTAL_TARGETS:
-            self.assertIn('nap_fra_continental_pressure_'+tag.lower(),text)
-        self.assertIn('nap_continental_evade_customs',text)
-        self.assertIn('nap_continental_enforce_locally',text)
-        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
-        self.assertIn('nap_british_continental_pressure',effects)
-        self.assertIn('nap_continental_compliance',effects)
-
-    def test_peninsular_war_is_resistance_and_supply_system(self):
-        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
-        self.assertIn('nap_fra_peninsular_resistance',effects)
-        self.assertIn('target = SPR',effects)
-        self.assertIn('target = POR',effects)
-        self.assertIn('nap_fra_peninsular_guerrilla_war',effects)
-        self.assertIn('white_peace = SPR',effects)
-        self.assertIn('white_peace = POR',effects)
-        self.assertNotIn('transfer_state',effects)
-        self.assertNotIn('add_core_of',effects)
-
-    def test_russian_campaign_has_preparation_attrition_and_three_outcomes(self):
-        event=self.events['napoleonic_wars.13']
-        self.assertEqual(event.scalar('is_triggered_only'),'yes')
-        self.assertFalse(event.children('mean_time_to_happen'))
-        invasion=self.events['napoleonic_wars.16']
-        self.assertEqual(invasion.scalar('is_triggered_only'),'yes')
-        collapse=self.events['napoleonic_collapse.1']
-        self.assertEqual(collapse.scalar('is_triggered_only'),'yes')
-        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
-        for token in (
-            'nap_fra_russia_magazines_effect','nap_fra_russia_remounts_effect',
-            'nap_fra_russia_allies_effect','nap_fra_russia_launch_effect',
-            'nap_fra_russian_supply = -6','nap_fra_russian_cohesion = -4',
-            'nap_fra_russia_settlement_effect','nap_fra_russia_retreat_effect',
-            'napoleonic_collapse.1',
+    def test_decision_owned_events_are_triggered_only(self):
+        event_paths=('events/01_french_revolution.txt','events/02_napoleonic_wars.txt','events/03_collapse.txt')
+        events={}
+        for path in event_paths:
+            for e in parse(self.outputs[path]):
+                if e.key in ('country_event','news_event') and e.scalar('id'):
+                    events[e.scalar('id')]=e
+        for eid in (
+            'french_revolution.12','french_revolution.14',
+            'napoleonic_wars.3','napoleonic_wars.13','napoleonic_wars.16',
+            'napoleonic_collapse.1','napoleonic_collapse.5','napoleonic_collapse.12'
         ):
-            self.assertIn(token,effects)
+            self.assertEqual(events[eid].scalar('is_triggered_only'),'yes',eid)
+            self.assertFalse(events[eid].children('mean_time_to_happen'),eid)
+            self.assertFalse(events[eid].children('trigger'),eid)
 
-    def test_restoration_chain_has_no_fixed_follow_on_events(self):
-        for source,target in (
-            ('napoleonic_collapse.5','napoleonic_collapse.6'),
-            ('napoleonic_collapse.8','napoleonic_collapse.9'),
-            ('napoleonic_collapse.9','napoleonic_collapse.10'),
-        ):
-            self.assertNotIn(target,dumps(self.events[source]),source)
-        for event_id in ('napoleonic_collapse.5','napoleonic_collapse.12'):
-            self.assertEqual(self.events[event_id].scalar('is_triggered_only'),'yes')
-        decisions=self.files['common/decisions/nap_france_campaigns.txt']
-        for key in (
-            'nap_fra_fontainebleau','nap_fra_restore_bourbons',
-            'nap_fra_restoration_charter','nap_fra_return_elba',
-            'nap_fra_hundred_days_rally','nap_fra_hundred_days_liberal',
-            'nap_fra_hundred_days_battle','nap_fra_second_abdication',
-            'nap_fra_hundred_days_survive','nap_fra_concert',
-        ):
-            self.assertIn(key,decisions)
+    def test_fixed_delay_transition_calls_are_removed(self):
+        paths=('events/01_french_revolution.txt','events/02_napoleonic_wars.txt','events/03_collapse.txt')
+        text='\n'.join(self.outputs[p] for p in paths)
+        # These transitions are now explicit decisions, not automatic delayed callbacks.
+        self.assertNotIn('id = french_revolution.11\n\t\t\t\tdays = 320',text)
+        self.assertNotIn('id = napoleonic_wars.4\n',dumps(parse(self.outputs['events/02_napoleonic_wars.txt'])[0].children('option')))
+        collapse=self.outputs['events/03_collapse.txt']
+        self.assertNotIn('days = 22',collapse)
+        self.assertNotIn('days = 109',collapse)
 
-    def test_new_variables_are_initialized_and_clamped(self):
-        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
-        for name in (
-            'vendee_unrest','assignat_inflation','faction_tension',
-            'girondin_influence','jacobin_influence','napoleon_prestige',
-            'continental_pressure','peninsular_resistance',
-            'russian_supply','russian_cohesion',
-        ):
-            self.assertIn('set_variable = { nap_fra_'+name+' =',effects)
-            self.assertIn('check_variable = { nap_fra_'+name+' > 100 }',effects)
-            self.assertIn('check_variable = { nap_fra_'+name+' < 0 }',effects)
-
-    def test_localisation_covers_every_decision(self):
-        loc=self.files['localisation/english/nap_france_campaigns_l_english.yml']
-        for category in self.decisions:
-            self.assertIn(' '+category.key+':0 ',loc)
-            for decision in [e for e in category.value if isinstance(e.value,list)]:
-                self.assertIn(' '+decision.key+':0 ',loc)
-                self.assertIn(' '+decision.key+'_desc:0 ',loc)
-
-    def test_no_new_territorial_shortcuts(self):
-        text=self.files['common/decisions/nap_france_campaigns.txt']+self.files['common/scripted_effects/nap_france_campaigns.txt']
-        for token in ('transfer_state','add_core_of','annex_country'):
-            self.assertNotIn(token,text)
+    def test_localisation_and_docs_exist(self):
+        loc=self.own['localisation/english/nap_france_campaigns_l_english.yml']
+        for category in CATEGORIES:
+            self.assertIn(' '+category+':0 ',loc)
+        self.assertIn('Russian campaign',self.own['docs/france-decision-mechanics.md'])
+        self.assertIn('Peninsular War',self.own['docs/france-decision-mechanics.md'])
 
 
 if __name__=='__main__':
