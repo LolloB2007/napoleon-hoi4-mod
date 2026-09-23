@@ -176,7 +176,7 @@ def build(root):
     outputs['common/ideas/nap_france_programmes.txt'] = '\n'.join(ideas)+'\n'
     outputs['events/05_french_development.txt'] = '\n\n'.join(events)+'\n'
     outputs['localisation/english/nap_french_development_l_english.yml'] = '\n'.join(loc)+'\n'
-    legacy = parse((root/'content/legacy/FRA.txt').read_text(encoding='utf-8-sig'))
+    legacy = apply_focus_date_gates(parse((root/'content/legacy/FRA.txt').read_text(encoding='utf-8-sig')))
     tree = next(e for e in legacy if e.key=='focus_tree')
     for e in tree.children('focus'):
         if e.scalar('id')=='FRA_constitutional_monarchy':
@@ -192,7 +192,7 @@ def build(root):
     for chapter in CHAPTERS:
         tree.value.append(Entry('shared_focus',fid(chapter,0)))
     tree.value.append(Entry('shared_focus',capstone))
-    outputs['common/national_focus/FRA.txt'] = '# Generated from retained legacy tree and the French chapter catalogue.\n'+dumps(legacy)
+    outputs['common/national_focus/FRA.txt'] = '# Generated from retained legacy tree and the French chapter catalogue. Historical dates are minimum focus gates under A01.\n'+dumps(legacy)
     outputs.update(patch_legacy(root))
     outputs['docs/france-focus-index.json'] = json.dumps(index,indent=2)+'\n'
     durations = dict(sorted(Counter(x['days'] for x in index).items()))
@@ -206,9 +206,9 @@ Each chapter has two exclusive forks, parallel preparation work, three event dil
 
 The new focuses are grouped in four columns of chapter panels below the retained tree. Coordinates are statically unique; actual rendering, line routing and usability at this scale must be checked inside HOI4.
 
-The existing French event files are retained under content/legacy and normalized through a parser for route/duplicate guards. The Directory receives a date-and-route fallback so a republic that restrains the Terror is not stranded before the Consulate. Current rulers are not accidentally retired by an event ostensibly about a deposed king. Collective governments and restoration leaders receive explicit legacy leader creation where necessary.
+The existing French event files are retained under content/legacy and normalized through a parser for route/duplicate guards. Under A01, historical dates are minimum gates on the relevant legacy focuses; event progression is route/state-driven. The Directory follows the Thermidor transition so a republic that restrains the Terror is not stranded before the Consulate. Current rulers are not accidentally retired by an event ostensibly about a deposed king. Collective governments and restoration leaders receive explicit legacy leader creation where necessary.
 
-This is not a declaration that all of Milestone 3 is finished. Deep scripted campaigns, state-level Vendee warfare, a complete modern-character conversion, active client-state management, final coring policy, full blockade enforcement and engine-tested balance remain further work. Existing hard historical dates and historical collapse outcomes are not globally replaced without A01/A03 approval.
+This is not a declaration that all of Milestone 3 is finished. Deep scripted campaigns, state-level Vendee warfare, a complete modern-character conversion, active client-state management, final coring policy, full blockade enforcement and engine-tested balance remain further work. A01 chronology is implemented here; outcome-aware bounded peace is implemented by the stacked A03 pass.
 
 The focus index JSON records IDs, titles, routes, durations, coordinates, prerequisites and exclusions. Names and event subjects are authored in france_catalogue.py; engine repetition is generated, not hand-copied.
 '''
