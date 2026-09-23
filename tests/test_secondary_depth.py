@@ -43,9 +43,10 @@ class SecondaryDepthTests(unittest.TestCase):
         for tag,branches in GERMAN_PERSONALISED.items():
             root=generated(next(p for p in PROFILES if p['slug']=='german_princes'))[1]
             first_id=next(row['id'] for row in root if row['personalised_tag']==tag)
-            from pdx import dumps
             node=next(n for n in walk(parse(text)) if n.key=='focus' and n.scalar('id')==first_id)
-            self.assertIn(f'allow_branch = {{\n\t\ttag = {tag}',dumps([node]))
+            allow=node.children('allow_branch')
+            self.assertEqual(len(allow),1)
+            self.assertEqual(allow[0].scalar('tag'),tag)
 
     def test_new_focus_ids_unique(self):
         ids=[]
