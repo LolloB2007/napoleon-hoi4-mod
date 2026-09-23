@@ -1,4 +1,4 @@
-"""Compile the 450-focus French tree and 84 policy dilemmas.
+"""Compile the 630-focus French tree and 120 policy dilemmas.
 
 Hand-authored chapter names and subjects live in france_catalogue.py. This
 compiler defines graph contracts, route guards, bounded rewards and localisation.
@@ -198,7 +198,7 @@ def build(root):
     durations = dict(sorted(Counter(x['days'] for x in index).items()))
     outputs['docs/france-expansion.md'] = f'''# French expansion: Milestone 3 implementation slice
 
-29 original focuses are retained. 28 authored policy chapters add 420 focuses, and one cross-route administrative capstone brings the tree to **450**. There are **84 new policy events** and 56 chapter-related spirits (28 temporary programmes, 28 persistent settlements).
+29 original focuses are retained. 40 authored policy chapters add 600 focuses, and one cross-route administrative capstone brings the tree to **630**. There are **120 new policy events** and 80 chapter-related spirits (40 temporary programmes, 40 persistent settlements).
 
 The new chapter durations in days are: {durations}. A focus is not a promise that every route can take it: each chapter contains exclusive policies, and Girondin/Jacobin programmes are mutually exclusive. The original four political routes remain the main paths.
 

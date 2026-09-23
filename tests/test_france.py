@@ -34,8 +34,8 @@ class FranceTests(unittest.TestCase):
         self.assertEqual(len(self.nodes),450)
     def test_named_chapters(self):
         names=[name for ch in CHAPTERS for name in ch['names']]
-        self.assertEqual(len(names),420)
-        self.assertEqual(len(set(names)),420)
+        self.assertEqual(len(names),600)
+        self.assertEqual(len(set(names)),600)
         self.assertTrue(all(len(ch['questions'])==3 for ch in CHAPTERS))
     def test_generated_scripts_parse(self):
         for path,text in self.files.items():
@@ -59,7 +59,7 @@ class FranceTests(unittest.TestCase):
     def test_all_chapter_roots_imported(self):
         tree=parse(self.files['common/national_focus/FRA.txt'])[0]
         imports={str(e.value) for e in tree.children('shared_focus')}
-        self.assertEqual(len(imports),29)
+        self.assertEqual(len(imports),41)
         for chapter in CHAPTERS:
             self.assertIn(fid(chapter,0),imports)
     def test_84_new_events(self):
@@ -120,7 +120,7 @@ class FranceTests(unittest.TestCase):
         self.assertIn('tag = PRU',dumps(self.events['napoleonic_wars.91'].children('option')[0].children('if')[0].children('limit')))
     def test_ideas_count(self):
         ideas=parse(self.files['common/ideas/nap_france_programmes.txt'])[0].children('country')[0]
-        self.assertEqual(len(ideas.value),56)
+        self.assertEqual(len(ideas.value),80)
     def test_programmes_do_not_transfer_or_core_territory(self):
         text=self.files['common/scripted_effects/nap_france_rewards.txt']
         self.assertNotIn('transfer_state',text)

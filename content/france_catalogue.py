@@ -123,3 +123,47 @@ chapter('russia','Distance and Recovery','late_imperial','FRA_invade_russia','mi
  'Preparing for Distance|The Costs of Retreat|Rebuilding after Defeat',
  'A long campaign tests the entire military and political system. Preserving cadres, protecting communications and organizing recovery may become more important than pursuing another distant objective.')
 ]
+
+
+# Deep-campaign expansion: twelve additional French chapters. These remain
+# inside the four approved political routes and use the same bounded reward
+# contract as the original twenty-eight chapters.
+def expansion_chapter(key,title,route,anchor,domain,modifier,subject,dilemma):
+    stages = [
+        f"Survey {subject}",
+        f"Define the {subject} Mandate",
+        f"Consult the Established Interests in {subject}",
+        f"Create a Permanent {subject} Commission",
+        f"Publish the First {subject} Returns",
+        f"The {subject} Funding Question",
+        f"Train a Professional {subject} Cadre",
+        f"Coordinate {subject} with the Departments",
+        f"Inspect the {subject} Establishment",
+        f"Standardize {subject} Procedures",
+        f"The Public Burden of {subject}",
+        f"Centralize the Strongest {subject} Institutions",
+        f"Preserve Local Adaptation in {subject}",
+        f"Audit the Results of {subject}",
+        f"A Durable Settlement for {subject}",
+    ]
+    questions = [
+        f"Who Pays for {subject}?",
+        f"How Centralized Should {subject} Become?",
+        f"What Does France Expect from {subject}?",
+    ]
+    return chapter(key,title,route,anchor,domain,modifier,'|'.join(stages),'|'.join(questions),dilemma)
+
+CHAPTERS += [
+    expansion_chapter('civil_code','The Civil Code','consular','FRA_brumaire_coup','administration','political_power_factor = 0.025','Civil Law and the Courts','The revolutionary legal inheritance must be consolidated without turning every local practice into an enemy of the state.'),
+    expansion_chapter('prefectures','Prefects and Departments','consular','FRA_brumaire_coup','administration','stability_factor = 0.025','Prefectural Administration','Central supervision can make the state effective, but durable administration still depends on local information and cooperation.'),
+    expansion_chapter('concordat','Church and Concordat','consular','FRA_brumaire_coup','politics','stability_factor = 0.03','Church-State Relations','Religious peace can stabilize the regime only if civil authority, clerical legitimacy and revolutionary property settlements can coexist.'),
+    expansion_chapter('gendarmerie','Gendarmerie and Internal Security','consular','FRA_brumaire_coup','military','political_power_factor = 0.02','Internal Security','Public order requires reliable institutions rather than permanent emergency rule, and those institutions carry fiscal and political costs.'),
+    expansion_chapter('conscription','Conscription and the Nation in Arms','campaign','FRA_war_on_tyrants','military','army_org_factor = 0.025','National Conscription','Mass mobilization can sustain the wars of the Republic and Empire only if exemptions, replacement systems and local burdens remain politically survivable.'),
+    expansion_chapter('veterans','Veterans and Military Society','late_imperial','FRA_grande_armee_focus','military','army_morale_factor = 0.025','Veteran Institutions','A state that consumes experienced soldiers without reintegrating them wastes both military skill and political loyalty.'),
+    expansion_chapter('arsenals','Ports, Arsenals and Maritime War','imperial','FRA_continental_system_focus','navy','navy_org_factor = 0.03','Naval Arsenals','France cannot challenge maritime power by decree alone; shipyards, ports, stores and trained personnel require sustained investment.'),
+    expansion_chapter('commerce','Commerce and Continental Markets','common','FRA_adopt_declaration','finance','political_power_factor = 0.02','Internal and Continental Commerce','Revolution and war have broken old commercial networks; rebuilding credit and exchange must balance state demands against private recovery.'),
+    expansion_chapter('colonial','Colonial Administration and Expeditions','campaign','FRA_egyptian_expedition','diplomacy','trade_opinion_factor = 0.10','Overseas Administration','Overseas ambition must reconcile naval limits, local institutions, expeditionary supply and the political costs of imperial commitments.'),
+    expansion_chapter('police','Police, Censorship and Public Order','directory','FRA_vive_la_republique','politics','political_power_factor = 0.025','Political Policing','The regime needs information and security without allowing emergency institutions to consume the legitimacy they are meant to protect.'),
+    expansion_chapter('notables','Notables and Imperial Society','imperial','FRA_proclaim_empire','royal','stability_factor = 0.025','Imperial Notables','The imperial settlement needs administrators, property holders and decorated servants who can bind revolutionary achievement to political continuity.'),
+    expansion_chapter('postwar','Postwar Settlement and National Recovery','late_imperial','FRA_return_from_elba','administration','stability_factor = 0.03','Postwar Reconstruction','Defeat, restoration and renewed war leave debts, veterans and institutions that must be reconciled if France is to remain governable after the great campaigns.'),
+]
