@@ -1,0 +1,217 @@
+# Great Britain — 1789.5.5 start
+# William Pitt the Younger's first ministry. The Royal Navy is master of the seas.
+# The army is small by Continental standards; the wealth is unmatched.
+# The factory system is being born around Manchester.
+
+capital = 126                              # Greater London (vanilla state ID)
+
+oob = "ENG_1789"
+
+set_research_slots = 4
+set_stability = 0.65
+set_war_support = 0.40
+set_convoys = 500                          # the world's merchant marine
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1
+	light_infantry_doctrine = 1
+	grenadier_company = 1
+	guard_organization = 1                 # Foot Guards already organised
+
+	cavalry_research_1 = 1
+	horse_breeding = 1
+
+	artillery_research_1 = 1
+	siege_engineering = 1
+	# Britain lags on Gribeauval — gets it through allied transfer later
+
+	support_research_1 = 1
+	square_drill_training = 1              # British speciality
+
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	intelligence_networks_1 = 1
+	privateer_command_1 = 1                # Royal Navy + private commerce raiders
+
+	ship_of_the_line_1 = 1
+	frigate_1 = 1
+	sloop_1 = 1
+	bomb_ketch_1 = 1
+	fireship_1 = 1
+	naval_doctrine_line_ahead = 1
+}
+
+# === Politics ===
+# democratic = "Whig / Reform party"; neutrality = "Tory / Crown party";
+# fascism = "Imperialist faction"; communism = "Radical / Painite"
+set_politics = {
+	ruling_party = neutrality              # Tory (Pitt the Younger nominally "Independent Whig" but led Tories)
+	last_election = "1784.4.1"             # Pitt's election victory
+	election_frequency = 84                # 7 years between general elections
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 55                        # Pittite Tories
+	democratic = 38                        # Foxite Whigs
+	communism = 5                          # Radicals (Paine, Thelwall)
+	fascism = 2                            # Hardline imperialist fringe
+}
+
+set_country_flag = constitutional_monarchy
+set_country_flag = royal_navy_supremacy
+
+add_ideas = {
+	pax_britannica
+	royal_navy_supremacy_idea
+	industrial_revolution_dawn
+	rotten_boroughs
+	magazine_system
+}
+
+# === Leadership ===
+
+create_country_leader = {
+	name = "William Pitt the Younger"
+	desc = "Prime Minister at 24. Master of the Treasury and the war effort."
+	# 	picture = "Portrait_ENG_Pitt.dds"
+	# expire = "1806.1.23"
+	ideology = conservatism
+	traits = { silver_tongued the_cloak_n_dagger_schemer }
+}
+
+create_country_leader = {
+	name = "Charles James Fox"
+	desc = "Whig orator. Friend of liberty and of the French Revolution."
+	# 	picture = "Portrait_ENG_Fox.dds"
+	# expire = "1806.9.13"
+	ideology = liberalism
+	traits = { silver_tongued }
+}
+
+create_country_leader = {
+	name = "Lord Liverpool"
+	desc = "The post-Napoleonic conservative — long ministry through the troubled peace."
+	# 	picture = "Portrait_ENG_Liverpool.dds"
+	# expire = "1827.4.10"
+	ideology = conservatism
+	traits = { backroom_backstabber }
+}
+
+# === Field marshals & generals ===
+
+create_field_marshal = {
+	name = "Frederick, Duke of York"
+	desc = "Commander-in-Chief. Reformed army administration despite his battlefield record."
+	# 	picture = "Portrait_ENG_Duke_of_York.dds"
+	traits = { politically_connected organizer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Charles Cornwallis"
+	desc = "Lost America at Yorktown. Now Governor-General of India — and a Marquess."
+	# 	picture = "Portrait_ENG_Cornwallis.dds"
+	traits = { old_guard career_officer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Sir John Moore"
+	desc = "Pioneer of British light infantry. Will die a hero at Corunna in 1809."
+	traits = { trait_reckless infantry_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Arthur Wellesley"
+	desc = "An Anglo-Irish ensign of twenty. The world has not yet heard of Wellington."
+	# 	picture = "Portrait_ENG_Wellesley.dds"
+	traits = { defensive_doctrine logistics_wizard }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Ralph Abercromby"
+	traits = { infantry_officer trait_engineer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Sir Eyre Coote"
+	desc = "Victor of Wandiwash in India. Veteran of the Carnatic Wars."
+	traits = { old_guard }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "Richard Howe"
+	desc = "Black Dick. Will win the Glorious First of June in 1794."
+	# 	picture = "Portrait_ENG_Howe.dds"
+	traits = { old_guard_navy fly_swatter }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Samuel Hood, 1st Viscount Hood"
+	traits = { old_guard_navy ironside }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "John Jervis"
+	desc = "The future Earl of St Vincent. Disciplinarian. Nelson's mentor."
+	# 	picture = "Portrait_ENG_Jervis.dds"
+	traits = { old_guard_navy bold }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	maneuvering_skill = 4
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Horatio Nelson"
+	desc = "Captain on half-pay, living on his uncle's farm in Norfolk. The world has not yet heard of Trafalgar."
+	# 	picture = "Portrait_ENG_Nelson.dds"
+	traits = { spotter ironside seawolf bold }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	maneuvering_skill = 5
+	coordination_skill = 5
+	legacy_id = -1
+}

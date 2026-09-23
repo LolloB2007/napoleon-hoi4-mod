@@ -1,0 +1,256 @@
+###############################################################
+# Russian Empire — National Focus Tree
+# Four branches:
+#   1. CATHERINIAN — continue expansion, Crimea/Poland/Caucasus
+#   2. PAVLOVIAN — Paul I's erratic reign (alt-history if survives)
+#   3. ALEXANDRINE — Speransky reforms, anti-Napoleon
+#   4. HOLY ALLIANCE — post-1815 European policeman
+###############################################################
+
+focus_tree = {
+	id = RUS_focus_tree
+	country = {
+		factor = 0
+		modifier = { add = 10 tag = RUS }
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	# === ROOT ===
+	focus = {
+		id = RUS_empress_in_majesty
+		icon = GFX_focus_generic_monarchy_1
+		x = 10 y = 0
+		cost = 5
+		ai_will_do = { factor = 100 }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	# ============================================================
+	# BRANCH 1 — CATHERINIAN EXPANSION
+	# ============================================================
+
+	focus = {
+		id = RUS_consolidate_crimea
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = RUS_empress_in_majesty }
+		x = 3 y = 1
+		cost = 10
+		completion_reward = {
+			add_state_core = 137  # Crimea
+			add_manpower = 25000
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = RUS_partition_poland
+		icon = GFX_focus_generic_attack_poland
+		prerequisite = { focus = RUS_consolidate_crimea }
+		x = 2 y = 2
+		cost = 10
+		available = { date > 1792.1.1 }
+		completion_reward = {
+			add_state_claim = 206   # Minsk
+			add_state_claim = 205   # Hrodna
+			add_state_claim = 11    # Kaunas
+			add_state_claim = 189   # Kaunas
+			declare_war_on = { target = POL type = annex_everything }
+		}
+	}
+
+	focus = {
+		id = RUS_conquer_caucasus
+		icon = GFX_focus_generic_attack_baltics
+		prerequisite = { focus = RUS_consolidate_crimea }
+		x = 4 y = 2
+		cost = 10
+		completion_reward = {
+			add_state_claim = 419   # Azerbaijan
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = RUS_finish_ottoman_war
+		icon = GFX_focus_generic_attack_czechoslovakia
+		prerequisite = { focus = RUS_consolidate_crimea }
+		x = 0 y = 2
+		cost = 10
+		available = { has_country_flag = russo_turkish_war_active }
+		completion_reward = {
+			TUR = {
+				add_war_support = -0.10
+				white_peace = RUS
+			}
+			RUS = { add_state_claim = 192 add_state_claim = 196 }
+			clr_country_flag = russo_turkish_war_active
+		}
+	}
+
+	# ============================================================
+	# BRANCH 2 — PAVLOVIAN REACTION (alt-history)
+	# ============================================================
+
+	focus = {
+		id = RUS_paul_succeeds
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = RUS_empress_in_majesty }
+		x = 8 y = 1
+		cost = 10
+		available = { date > 1796.11.17 }
+		completion_reward = {
+			add_stability = -0.15
+			add_war_support = -0.05
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = RUS_anglophobe_policy
+		icon = GFX_focus_generic_attack_usa
+		prerequisite = { focus = RUS_paul_succeeds }
+		x = 7 y = 2
+		cost = 10
+		completion_reward = {
+			ENG = { add_opinion_modifier = { target = RUS modifier = huge_decrease } }
+			add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = RUS_armed_neutrality
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = RUS_paul_succeeds }
+		x = 9 y = 2
+		cost = 10
+		completion_reward = {
+			create_faction = "league_of_armed_neutrality"
+			add_political_power = 50
+		}
+	}
+
+	# ============================================================
+	# BRANCH 3 — ALEXANDRINE REFORM
+	# ============================================================
+
+	focus = {
+		id = RUS_alexander_succeeds
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = RUS_empress_in_majesty }
+		x = 12 y = 1
+		cost = 10
+		available = {
+			OR = {
+				date > 1801.3.23
+				has_country_flag = alexander_acceded
+			}
+		}
+		completion_reward = {
+			remove_ideas = catherinian_glory
+			add_ideas = alexandrine_dawn
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = RUS_speransky_reforms
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = RUS_alexander_succeeds }
+		x = 11 y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = speranskian_reforms
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = RUS_fight_napoleon
+		icon = GFX_focus_generic_attack_czechoslovakia
+		prerequisite = { focus = RUS_alexander_succeeds }
+		x = 13 y = 2
+		cost = 10
+		available = { FRA = { has_country_flag = empire_of_the_french } }
+		completion_reward = {
+			add_war_support = 0.20
+			create_field_marshal = {
+				name = "Mikhail Kutuzov"
+				traits = { defensive_doctrine old_guard }
+				skill = 5
+				attack_skill = 3
+				defense_skill = 5
+				planning_skill = 5
+				logistics_skill = 5
+			}
+			declare_war_on = { target = FRA type = annex_everything }
+		}
+	}
+
+	focus = {
+		id = RUS_burn_moscow
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = RUS_fight_napoleon }
+		x = 13 y = 3
+		cost = 10
+		available = {
+			FRA = { has_country_flag = russian_campaign_active }
+		}
+		completion_reward = {
+			# Trigger the retreat from Moscow event for France
+			FRA = { country_event = { id = napoleonic_collapse.1 days = 1 } }
+			add_war_support = 0.10
+		}
+	}
+
+	# ============================================================
+	# BRANCH 4 — HOLY ALLIANCE
+	# ============================================================
+
+	focus = {
+		id = RUS_march_on_paris
+		icon = GFX_focus_generic_attack_czechoslovakia
+		prerequisite = { focus = RUS_burn_moscow }
+		x = 16 y = 4
+		cost = 10
+		available = {
+			has_global_flag = leipzig_fought
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_command_power = 50
+		}
+	}
+
+	focus = {
+		id = RUS_holy_alliance
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = RUS_alexander_succeeds }
+		x = 17 y = 2
+		cost = 15
+		available = {
+			has_global_flag = waterloo_fought
+		}
+		completion_reward = {
+			add_ideas = concert_of_europe
+			create_faction = "holy_alliance"
+			add_stability = 0.10
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = RUS_partition_polish_kingdom
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = RUS_holy_alliance }
+		x = 17 y = 3
+		cost = 10
+		completion_reward = {
+			# Congress Poland — semi-autonomous Polish state under Tsar
+			add_political_power = 25
+		}
+	}
+}

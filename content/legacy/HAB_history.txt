@@ -1,0 +1,193 @@
+# Habsburg Monarchy — 1789.5.5 start
+# Joseph II is dying. His reform programme is collapsing — the Austrian Netherlands
+# are in revolt, Hungary is restive, the Turkish war drags on.
+# The Habsburgs hold the Holy Roman Emperor's crown plus the Hereditary Lands
+# (Austria, Bohemia, Hungary, Lombardy, the Austrian Netherlands until 1790,
+# Tuscany via cadet branch).
+
+capital = 4                                # Austria (Vienna) — verify state ID
+
+oob = "HAB_1789"
+
+set_research_slots = 3
+set_stability = 0.40                       # reforms failing, revolts, war
+set_war_support = 0.55                     # actively at war with Ottomans
+set_convoys = 50                           # tiny merchant marine via Trieste
+
+set_technology = {
+	musket_research_1 = 1
+	grenadier_company = 1
+
+	cavalry_research_1 = 1
+	horse_breeding = 1
+	irregular_levy = 0                     # Grenzer-style, modelled separately
+
+	artillery_research_1 = 1
+	# Austrian artillery is improving — Liechtenstein system pre-Gribeauval-equivalent
+
+	support_research_1 = 1
+
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	intelligence_networks_1 = 1
+
+	sloop_1 = 1                             # token Adriatic flotilla
+	frigate_1 = 1
+}
+
+# === Politics ===
+# Habsburg politics 1789: enlightened-despotism / reformist nobles / Hungarian estates / clerical reaction.
+set_politics = {
+	ruling_party = neutrality              # Court / Crown — enlightened absolutism
+	last_election = "1780.11.29"           # Joseph II's accession
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 60                        # Crown party (Joseph II reformers + court)
+	democratic = 22                        # Reformist nobles & burghers
+	fascism = 15                           # Clerical-conservative reaction (post-Josephine)
+	communism = 3                          # Jacobin sympathisers — small and watched
+}
+
+set_country_flag = holy_roman_emperor
+set_country_flag = at_war_with_ottomans
+set_country_flag = belgian_revolt          # Austrian Netherlands rising
+
+add_ideas = {
+	josephine_reforms_collapse
+	multi_ethnic_empire
+	kuk_army
+	austrian_netherlands_revolt
+	magazine_system
+}
+
+# === Leadership ===
+
+create_country_leader = {
+	name = "Joseph II"
+	desc = "The Enlightened Emperor. His reforms — religious tolerance, abolition of serfdom — have alienated nobles, church, and Hungarians alike. He will die in February 1790, broken."
+	# 	picture = "Portrait_HAB_Joseph_II.dds"
+	# expire = "1790.2.20"
+	ideology = despotism
+	traits = { reformer }
+}
+
+create_country_leader = {
+	name = "Leopold II"
+	desc = "Joseph's brother, formerly Grand Duke of Tuscany. A subtle reformer who will dismantle just enough to save the throne."
+	# 	picture = "Portrait_HAB_Leopold_II.dds"
+	# expire = "1792.3.1"
+	ideology = despotism
+	traits = { silent_workhorse }
+}
+
+create_country_leader = {
+	name = "Franz II"
+	desc = "The last Holy Roman Emperor and the first Emperor of Austria. The wars of his reign will reshape Europe."
+	# 	picture = "Portrait_HAB_Franz_II.dds"
+	# expire = "1835.3.2"
+	ideology = despotism
+	traits = { stout_defender }
+}
+
+create_country_leader = {
+	name = "Klemens von Metternich"
+	desc = "The architect of the post-Napoleonic order. Currently a young diplomat."
+	# 	picture = "Portrait_HAB_Metternich.dds"
+	# expire = "1859.6.11"
+	ideology = conservatism
+	traits = { backroom_backstabber the_cloak_n_dagger_schemer }
+}
+
+# === Field marshals & generals ===
+
+create_field_marshal = {
+	name = "Gideon Ernst von Laudon"
+	desc = "Hero of the Seven Years' War. Conqueror of Belgrade in 1789. Will die July 1790."
+	# 	picture = "Portrait_HAB_Laudon.dds"
+	# expire = "1790.7.14"
+	traits = { old_guard war_hero offensive_doctrine }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Andreas Hadik von Futak"
+	traits = { old_guard organizer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Dagobert Sigmund von Wurmser"
+	desc = "Will face Napoleon at Mantua and lose."
+	traits = { old_guard defensive_doctrine }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Archduke Charles of Austria"
+	desc = "Eighteen years old. The Habsburg dynasty's one military talent of the coming wars."
+	# 	picture = "Portrait_HAB_Charles.dds"
+	traits = { politically_connected brilliant_strategist }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 4
+	legacy_id = -1
+}
+
+create_corps_commander = {
+	name = "Karl Mack von Leiberich"
+	desc = "Will surrender an entire army at Ulm in 1805."
+	traits = { politically_connected harsh_leader }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Johann Beaulieu"
+	traits = { defensive_doctrine }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Karl Schwarzenberg"
+	desc = "Will command the Allied army at Leipzig in 1813."
+	traits = { organizer politically_connected }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Michael Melas"
+	traits = { old_guard defensive_doctrine }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
