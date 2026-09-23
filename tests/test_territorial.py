@@ -90,7 +90,7 @@ class TerritorialTests(unittest.TestCase):
         self.assertNotIn('puppet',[e.key for e in walk(event.value)])
         self.assertIn('nap_clients.10',dumps([event]))
     def test_french_factions_protect_other_factions(self):
-        outputs=france(ROOT)|{'to ask lollo.md':'# Queue'}
+        outputs=france(ROOT)|build(ROOT)
         text=postprocess(outputs,ROOT)['common/national_focus/FRA.txt']
         self.assertNotIn('create_faction =',text)
         self.assertEqual(text.count('create_faction_from_template'),3)
