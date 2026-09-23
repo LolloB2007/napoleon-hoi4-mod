@@ -184,14 +184,16 @@ Use a branch per milestone or named general pass. Include merge dependencies, ex
 
 The mod has enough focus nodes. **Do not solve the next quality problems by adding another thousand generic focuses.** Use events, decisions, variables, characters, scripted peace and campaign-specific mechanics.
 
-### France
+### France — decision mechanics implemented
 
-- Turn the Revolution into a real political crisis system: Estates-General, Assembly/Convention transitions, Jacobin–Girondin struggle, Vendée, assignats, Committee of Public Safety, Terror and Thermidor.
-- Give Napoleon's rise bespoke mechanics for the Italian Campaign, Egypt, prestige, Brumaire, Consulate, coronation and Marshals rather than relying mostly on focus completion.
-- Build the Continental System as an actual enforcement/evasion mechanic affecting subjects, allies, neutrals and British trade.
-- Make the Peninsular War a sustained occupation/guerrilla problem rather than a normal front.
-- Make the 1812 campaign about preparation, depots, attrition, retreat and army collapse, with meaningful outcomes short of scripted historical defeat.
-- Give 1814, the Restoration, Hundred Days and the postwar settlement proper state transitions.
+The six former France proposals are now implemented in the source-owned decision layer: revolutionary crisis management, Bonaparte's prestige/rise, Continental enforcement and evasion, Peninsular resistance, Russian campaign logistics/outcomes, and the 1814–1815 restoration cycle.
+
+Next France priorities:
+- Runtime-balance the new 0–100 crisis/campaign meters so choices are consequential without becoming repetitive click maintenance.
+- Add more bespoke narrative events around decision thresholds, especially the Vendée, assignat crisis, Italian/Egyptian campaign outcomes and Russian retreat.
+- Replace the remaining date-driven French-adjacent European collapse events where state-driven triggers would produce better campaigns.
+- Give the most important decision systems dedicated UI/tooltips only after their ordinary decision presentation is proven insufficient in game.
+- Measure AI use of the decision systems and tune decision weights so historical AI can progress without being railroaded into a fixed outcome.
 
 ### Britain, Austria, Prussia and Russia
 
