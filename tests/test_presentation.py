@@ -22,7 +22,7 @@ class PresentationTests(unittest.TestCase):
         ids=[]; icons=[]
         for path in focus_paths:
             for node in walk(parse(self.text(path))):
-                if node.key!='focus' or not isinstance(node.value,list):
+                if node.key not in ('focus','shared_focus') or not isinstance(node.value,list):
                     continue
                 fid=node.scalar('id')
                 if not fid:
@@ -39,7 +39,7 @@ class PresentationTests(unittest.TestCase):
         raw_custom_icon_count=0
         for path in focus_paths:
             raw=self.text(path)
-            raw_focus_count += len(re.findall(r'(?m)^\\s*focus\\s*=\\s*\\{',raw))
+            raw_focus_count += len(re.findall(r'(?m)^\\s*(?:focus|shared_focus)\\s*=\\s*\\{',raw))
             raw_custom_icon_count += len(re.findall(r'\\bicon\\s*=\\s*GFX_NAP_FOCUS_[A-Z0-9_]+',raw))
         self.assertGreaterEqual(raw_focus_count,800)
         self.assertEqual(raw_custom_icon_count,raw_focus_count)

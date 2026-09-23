@@ -321,7 +321,7 @@ def _blocks(text,pattern):
     return spans
 
 def _patch_focuses(text,updates,interface):
-    spans=_blocks(text,r"^\s*focus\s*=\s*\{")
+    spans=_blocks(text,r"^\s*(?:focus|shared_focus)\s*=\s*\{")
     for start,end in reversed(spans):
         block=text[start:end]
         m=re.search(r"\bid\s*=\s*([A-Za-z0-9_]+)",block)
