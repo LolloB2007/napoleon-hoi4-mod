@@ -800,6 +800,9 @@ spriteType = { name = "GFX_NAP_PORTRAIT_THERMIDORIAN_CONVENTION" texturefile = "
 spriteType = { name = "GFX_NAP_PORTRAIT_MAXIMILIEN_ROBESPIERRE" texturefile = "gfx/leaders/NAP/maximilien_robespierre.tga" }
 spriteType = { name = "GFX_NAP_PORTRAIT_NATIONAL_CONVENTION" texturefile = "gfx/leaders/NAP/national_convention.tga" }
 spriteType = { name = "GFX_NAP_PORTRAIT_LOUIS_XVIII" texturefile = "gfx/leaders/NAP/louis_xviii.tga" }
+spriteType = { name = "GFX_NAP_PORTRAIT_FRIEDRICH_WILHELM_III" texturefile = "gfx/leaders/NAP/friedrich_wilhelm_iii.tga" }
+spriteType = { name = "GFX_NAP_PORTRAIT_FRANZ_II" texturefile = "gfx/leaders/NAP/franz_ii.tga" }
+spriteType = { name = "GFX_NAP_PORTRAIT_LEOPOLD_II" texturefile = "gfx/leaders/NAP/leopold_ii.tga" }
 spriteType = { name = "GFX_NAP_PORTRAIT_CHARLES_FREDERICK" texturefile = "gfx/leaders/NAP/charles_frederick.tga" }
 spriteType = { name = "GFX_NAP_PORTRAIT_CHARLES_THEODORE" texturefile = "gfx/leaders/NAP/charles_theodore.tga" }
 spriteType = { name = "GFX_NAP_PORTRAIT_PRINCE_CHARLES_OF_HESSE_KASSEL" texturefile = "gfx/leaders/NAP/prince_charles_of_hesse_kassel.tga" }
