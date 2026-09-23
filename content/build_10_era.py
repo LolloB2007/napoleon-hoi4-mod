@@ -1,7 +1,7 @@
 """Reusable, country-scoped era mechanics. All numeric balance is provisional."""
 import json
 
-TAGS = 'FRA ENG HAB PRU RUS SPR POR TUR SWE DEN POL NET NAP SAR PAP VEN TUS BAV SAX HAN WUR ITA BAT HOL WES RHC WAR'.split()
+TAGS = 'FRA ENG HAB PRU RUS SPR POR TUR SWE DEN POL NET NAP SAR PAP VEN TUS BAV SAX HAN WUR ITA BAT HOL WES RHC WAR MOR TUN ALG TRP EGY USA CAN HAI MEX BRA MUG MYS MAR HYD SIK'.split()
 DEFAULTS = {'treasury':50, 'debt':0, 'legitimacy':55, 'fervor':0, 'war_exhaustion':0, 'army_prestige':50, 'reform':0, 'supply_pressure':0}
 # name, title, PP cost, cooldown, minima, maxima, deltas, extra condition, extra effect, description
 ACTIONS = [
