@@ -8,7 +8,7 @@ Implementation, static verification and successful in-game testing are separate 
 |---|---|
 | 1 | Country setup exists; four great-power rulers corrected; engine verification pending |
 | 2 | Opening diplomacy and bounded treaties implemented; engine verification pending |
-| 3 | Partial: 630 French focuses plus 67 decision-driven campaign actions covering the Revolution, Bonaparte's rise, Continental System, Peninsular War, Russia and 1814-1815 state transitions; runtime balance/acceptance pending |
+| 3 | Partial: 630 French focuses plus 65 decision actions covering the Revolution, Bonaparte's rise, Continental System, Peninsular War, Russia and 1814-1815 state transitions; runtime balance/acceptance pending |
 | 4 | Partial: seven coalition rounds, consent, funding and separate peace; bespoke treaties and fallback leadership remain |
 | 5 | Partial: Britain and Austria target 368 focuses each, Prussia 364 and Russia 366; runtime pacing and bespoke crisis validation remain |
 | 6 | Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses |
@@ -49,7 +49,7 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Test evidence and remaining acceptance
 
-French decision regression coverage verifies 67 decisions, transition-event rewiring, variable clamping, Continental enforcement/evasion, Peninsular resistance, Russian preparation/attrition/outcomes and restoration/Hundred Days state transitions, alongside the existing full repository suite. HOI4 1.19.x + La Résistance runtime acceptance remains required.
+French decision regression coverage verifies 65 decision actions, transition-event rewiring, variable clamping, Continental enforcement/evasion, Peninsular resistance, Russian preparation/attrition/outcomes and restoration/Hundred Days state transitions, alongside the existing full repository suite. HOI4 1.19.x + La Résistance runtime acceptance remains required.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.
@@ -58,10 +58,10 @@ French decision regression coverage verifies 67 decisions, transition-event rewi
 - [ ] Focus-tree rendering, reachability and visible localisation in game.
 - [ ] Campaign measurements before military balance is declared complete.
 
-## Approval and development rules
+## Development rules
 
-The queue is [to ask lollo.md](to%20ask%20lollo.md). **Revisit scripted peace deals when the historically losing side wins.** A01-A12 are approved implementation policy. New decisions that materially change them require a new owner entry.
+A01-A12 are established implementation policy. **Revisit scripted peace deals when the historically losing side wins.** New changes that materially alter those policies should be documented explicitly in the relevant design/source file.
 
-Each milestone gets its own PR, even when only an explicitly identified slice is implemented. Dependent PRs may be stacked: merge the parent first, then retarget its child to master. No workflow merges PRs. Every PR keeps README, this roadmap, the approval queue and test evidence current.
+Each milestone gets its own PR, even when only an explicitly identified slice is implemented. Dependent PRs may be stacked: merge the parent first, then retarget its child to master. No workflow merges PRs. Every PR keeps the README, roadmap and test evidence current.
 
 Build playable historical slices: **1789-1795 > 1796-1804 > 1805-1807 > 1808-1811 > 1812-1815**. Do not equate generated file counts with finished campaigns.

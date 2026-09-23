@@ -1,6 +1,6 @@
 {
-  "README.md": "8ae8704917e62089576b75e4c1c8f64f4b84369320f3693bcf6d0929b9625f79",
-  "ROADMAP.md": "4ef1943cd3b0167788b66f1299d7ad278e0fc6f1223c9819bec6622f43294678",
+  "README.md": "5e2c87fb956ae54209fd3cb76aea06384f27af0e78cc62779d563d9e1ec7b9a4",
+  "ROADMAP.md": "97d55feef33ad28b30a416da2e3c8ceaf9403ca42574a98ed2194aad76249569",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -160,7 +160,7 @@
   "docs/secondary-depth-summary.json": "d60b0497452cc9ea2475810176142c32b319f3d1912603ffaa32feca4a4fcf84",
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
   "docs/territorial-registry.json": "634f0addfaacc8a9bc8fc842f37563d45be502ca8e85813fcaf8cc58c8358b49",
-  "docs/territorial-systems.md": "be084f3b89d0631d0e80b10faf038b3221a309bc4b8b7c997cc07a7b170e8db5",
+  "docs/territorial-systems.md": "15d010c4c89950967601ec5acc801bdc0d769a4d8e0006e4d10f966b40bc2be0",
   "events/00_compatibility.txt": "cb9d6046ff91b96b4776b608598a58a2037701d2c345a6cd9b33ebbe96af6e2f",
   "events/01_french_revolution.txt": "9a3159fc799d3e332ce1c07479eb708fb43745a6a3bc21a6d29024d14657b0c0",
   "events/02_napoleonic_wars.txt": "0bc9b0555280c8b3f58743c7edf2bac74e9f31ceb8203b58efa0473cf1476abe",
@@ -2491,6 +2491,5 @@
   "sound/nap_crowd.wav": "84b399ee22eb99533c08a67ffb37e43b2b5239adacb92562b8350c5b0cb4ae51",
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
-  "suggestions.md": "053366dbfc9c00d25e4a4cc7d22f40d0be3052ab57b879c5f62bcfb3991fbcc4",
-  "to ask lollo.md": "10ea7438aafe1aa1980de2830dfe5f11bb94c89698cfa94c700d9d7dca7fbff7"
+  "suggestions.md": "053366dbfc9c00d25e4a4cc7d22f40d0be3052ab57b879c5f62bcfb3991fbcc4"
 }
