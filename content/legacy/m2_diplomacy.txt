@@ -1,0 +1,241 @@
+# Napoleonic Era — 1789 diplomatic setup and bounded peace settlements.
+#
+# The opening wars are real wars, but they are deliberately NOT allowed to use
+# standard HOI4 total-war outcomes. Historical treaty timers and the
+# on_capitulation_immediate guard in napoleonic_on_actions.txt both route them
+# through the scripted settlements below.
+
+napoleonic_setup_1789_diplomacy = {
+	if = {
+		limit = { NOT = { has_global_flag = nap_1789_diplomacy_initialized } }
+		set_global_flag = nap_1789_diplomacy_initialized
+
+		# ------------------------------------------------------------
+		# Ongoing wars on 5 May 1789
+		# ------------------------------------------------------------
+
+		# Ottoman Empire declared war on Russia in 1787.
+		TUR = {
+			declare_war_on = { target = RUS type = annex_everything }
+			set_country_flag = russo_turkish_war_active
+		}
+		RUS = { set_country_flag = russo_turkish_war_active }
+		set_global_flag = nap_russo_turkish_war_active
+
+		# Sweden attacked Russia in 1788.
+		SWE = {
+			declare_war_on = { target = RUS type = annex_everything }
+			set_country_flag = russo_swedish_war_active
+		}
+		RUS = { set_country_flag = russo_swedish_war_active }
+		set_global_flag = nap_russo_swedish_war_active
+
+		# Austria entered the Ottoman war as Russia's ally in 1788.
+		HAB = {
+			declare_war_on = { target = TUR type = annex_everything }
+			set_country_flag = at_war_with_ottomans
+		}
+		TUR = { set_country_flag = austro_turkish_war_active }
+		set_global_flag = nap_austro_turkish_war_active
+
+		# Denmark-Norway was still formally at war with Sweden until July 1789.
+		DEN = {
+			declare_war_on = { target = SWE type = annex_everything }
+			set_country_flag = theatre_war_active
+		}
+		SWE = { set_country_flag = theatre_war_active }
+		set_global_flag = nap_theatre_war_active
+
+		# ------------------------------------------------------------
+		# Dynastic, defensive and strategic relationships
+		# ------------------------------------------------------------
+
+		# Great Britain / Hanover: one monarch, two states. Model the personal
+		# union without using puppet autonomy, which would be too restrictive.
+		ENG = {
+			give_guarantee = HAN
+			give_military_access = HAN
+			set_country_flag = hanoverian_personal_union_overlord
+		}
+		HAN = {
+			give_military_access = ENG
+			set_country_flag = british_personal_union
+		}
+
+		# Austro-Russian alliance against the Porte: cooperation without a
+		# faction, so Sweden's separate war with Russia does not drag Austria in.
+		RUS = {
+			give_military_access = HAB
+			diplomatic_relation = { country = HAB relation = non_aggression_pact active = yes }
+			add_opinion_modifier = { target = HAB modifier = nap_1789_close_ties }
+		}
+		HAB = {
+			give_military_access = RUS
+			diplomatic_relation = { country = RUS relation = non_aggression_pact active = yes }
+			add_opinion_modifier = { target = RUS modifier = nap_1789_close_ties }
+		}
+
+		# Denmark-Norway's treaty relationship with Russia.
+		RUS = {
+			give_guarantee = DEN
+			add_opinion_modifier = { target = DEN modifier = nap_1789_long_alliance }
+		}
+		DEN = {
+			give_guarantee = RUS
+			add_opinion_modifier = { target = RUS modifier = nap_1789_long_alliance }
+		}
+
+		# Triple Alliance of 1788: Britain, Prussia and the Dutch Republic.
+		# Defensive guarantees reproduce the alliance without forcing all three
+		# into one permanent HOI4 faction.
+		ENG = {
+			give_guarantee = PRU
+			give_guarantee = NET
+			diplomatic_relation = { country = PRU relation = non_aggression_pact active = yes }
+			diplomatic_relation = { country = NET relation = non_aggression_pact active = yes }
+		}
+		PRU = {
+			give_guarantee = ENG
+			give_guarantee = NET
+			diplomatic_relation = { country = ENG relation = non_aggression_pact active = yes }
+			diplomatic_relation = { country = NET relation = non_aggression_pact active = yes }
+			add_opinion_modifier = { target = NET modifier = nap_1789_close_ties }
+		}
+		NET = {
+			give_guarantee = ENG
+			give_guarantee = PRU
+			diplomatic_relation = { country = ENG relation = non_aggression_pact active = yes }
+			diplomatic_relation = { country = PRU relation = non_aggression_pact active = yes }
+		}
+
+		# Poland in 1789 remained formally independent but under heavy Russian
+		# influence. A guarantee + Russian military access models the protectorate
+		# pressure without turning the Commonwealth into a puppet.
+		RUS = {
+			give_guarantee = POL
+			set_country_flag = polish_protectorate_influence
+		}
+		POL = {
+			give_military_access = RUS
+			set_country_flag = russian_influence_1789
+		}
+
+		# Habsburg dynastic network. Austrian Netherlands and Lombardy are
+		# already directly owned by HAB; Tuscany remains independent under the
+		# Habsburg-Lorraine cadet branch.
+		HAB = {
+			give_guarantee = TUS
+			set_country_flag = habsburg_dynastic_network_1789
+		}
+		TUS = {
+			give_military_access = HAB
+			set_country_flag = habsburg_lorraine_cadet
+		}
+
+		# Holy Roman Empire: Austria is Emperor and provides a lightweight
+		# external-security umbrella to the smaller represented member states.
+		BAV = { set_country_flag = hre_member_1789 }
+		SAX = { set_country_flag = hre_member_1789 }
+		HAN = { set_country_flag = hre_member_1789 }
+		WUR = { set_country_flag = hre_member_1789 }
+		BAD = { set_country_flag = hre_member_1789 }
+		HES = { set_country_flag = hre_member_1789 }
+		MEC = { set_country_flag = hre_member_1789 }
+		PRU = { set_country_flag = hre_member_1789 }
+
+		HAB = {
+			give_guarantee = BAV
+			give_guarantee = SAX
+			give_guarantee = WUR
+			give_guarantee = BAD
+			give_guarantee = HES
+			give_guarantee = MEC
+		}
+
+		# Initial great-power rivalry inside Germany.
+		HAB = { add_opinion_modifier = { target = PRU modifier = nap_1789_rivalry } }
+		PRU = { add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry } }
+	}
+}
+
+# ------------------------------------------------------------
+# Scripted peace settlements
+# ------------------------------------------------------------
+
+napoleonic_end_theatre_war = {
+	if = {
+		limit = { DEN = { has_war_with = SWE } }
+		DEN = { white_peace = SWE }
+	}
+	DEN = {
+		clr_country_flag = theatre_war_active
+		add_stability = 0.03
+	}
+	SWE = { clr_country_flag = theatre_war_active }
+	clr_global_flag = nap_theatre_war_active
+	set_global_flag = nap_theatre_war_ended
+}
+
+napoleonic_end_russo_swedish_war = {
+	if = {
+		limit = { SWE = { has_war_with = RUS } }
+		SWE = { white_peace = RUS }
+	}
+	SWE = {
+		clr_country_flag = russo_swedish_war_active
+		add_stability = 0.04
+	}
+	RUS = { clr_country_flag = russo_swedish_war_active }
+	clr_global_flag = nap_russo_swedish_war_active
+	set_global_flag = nap_treaty_varala_signed
+}
+
+napoleonic_end_austro_turkish_war = {
+	if = {
+		limit = { HAB = { has_war_with = TUR } }
+		HAB = { white_peace = TUR }
+	}
+	HAB = {
+		clr_country_flag = at_war_with_ottomans
+		add_stability = 0.04
+	}
+	TUR = { clr_country_flag = austro_turkish_war_active }
+	clr_global_flag = nap_austro_turkish_war_active
+	set_global_flag = nap_treaty_sistova_signed
+}
+
+napoleonic_end_russo_turkish_jassy = {
+	if = {
+		limit = { RUS = { has_war_with = TUR } }
+		RUS = { white_peace = TUR }
+	}
+
+	# HOI4 state 192 (Odessa) is used as the map-scale abstraction for Yedisan.
+	# No other Ottoman states may transfer through this settlement.
+	RUS = {
+		transfer_state = 192
+		add_state_core = 192
+		clr_country_flag = russo_turkish_war_active
+		add_war_support = 0.05
+	}
+	TUR = {
+		remove_state_core = 192
+		clr_country_flag = russo_turkish_war_active
+	}
+	clr_global_flag = nap_russo_turkish_war_active
+	set_global_flag = nap_treaty_jassy_signed
+}
+
+napoleonic_end_russo_turkish_ottoman_success = {
+	if = {
+		limit = { TUR = { has_war_with = RUS } }
+		TUR = { white_peace = RUS }
+	}
+	RUS = { clr_country_flag = russo_turkish_war_active }
+	TUR = {
+		clr_country_flag = russo_turkish_war_active
+		add_stability = 0.04
+	}
+	clr_global_flag = nap_russo_turkish_war_active
+	set_global_flag = nap_russo_turkish_war_ended_without_jassy
+}
