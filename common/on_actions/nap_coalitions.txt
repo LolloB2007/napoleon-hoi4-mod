@@ -4,24 +4,32 @@ on_actions = {
   if = { limit = { tag = ENG has_global_flag = nap_coalition_active OR = { NOT = { FRA = { exists = yes } } NOT = { has_faction_template = nap_coalition_template } } } nap_coalition_end_round = yes }
  } }
  on_capitulation_immediate = { effect = {
-if = { limit = { has_global_flag = nap_theatre_war_active OR = { AND = { ROOT = { tag = DEN } FROM = { tag = SWE } } AND = { ROOT = { tag = SWE } FROM = { tag = DEN } } } } napoleonic_end_theatre_war = yes }
-if = { limit = { has_global_flag = nap_russo_swedish_war_active OR = { AND = { ROOT = { tag = SWE } FROM = { tag = RUS } } AND = { ROOT = { tag = RUS } FROM = { tag = SWE } } } } napoleonic_end_russo_swedish_war = yes }
-if = { limit = { has_global_flag = nap_austro_turkish_war_active OR = { AND = { ROOT = { tag = HAB } FROM = { tag = TUR } } AND = { ROOT = { tag = TUR } FROM = { tag = HAB } } } } napoleonic_end_austro_turkish_war = yes }
-if = { limit = { has_global_flag = nap_russo_turkish_war_active ROOT = { tag = RUS } FROM = { tag = TUR } } napoleonic_end_russo_turkish_ottoman_success = yes }
-if = { limit = { has_global_flag = nap_russo_turkish_war_active ROOT = { tag = TUR } FROM = { tag = RUS } } napoleonic_end_russo_turkish_jassy = yes }
+if = { limit = { has_global_flag = nap_theatre_war_active ROOT = { tag = DEN } FROM = { tag = SWE } } napoleonic_end_theatre_war_b_victory = yes }
+if = { limit = { has_global_flag = nap_theatre_war_active ROOT = { tag = SWE } FROM = { tag = DEN } } napoleonic_end_theatre_war_a_victory = yes }
+if = { limit = { has_global_flag = nap_russo_swedish_war_active ROOT = { tag = SWE } FROM = { tag = RUS } } napoleonic_end_russo_swedish_war_b_victory = yes }
+if = { limit = { has_global_flag = nap_russo_swedish_war_active ROOT = { tag = RUS } FROM = { tag = SWE } } napoleonic_end_russo_swedish_war_a_victory = yes }
+if = { limit = { has_global_flag = nap_austro_turkish_war_active ROOT = { tag = HAB } FROM = { tag = TUR } } napoleonic_end_austro_turkish_war_b_victory = yes }
+if = { limit = { has_global_flag = nap_austro_turkish_war_active ROOT = { tag = TUR } FROM = { tag = HAB } } napoleonic_end_austro_turkish_war_a_victory = yes }
+if = { limit = { has_global_flag = nap_russo_turkish_war_active ROOT = { tag = RUS } FROM = { tag = TUR } } napoleonic_end_russo_turkish_jassy_b_victory = yes }
+if = { limit = { has_global_flag = nap_russo_turkish_war_active ROOT = { tag = TUR } FROM = { tag = RUS } } napoleonic_end_russo_turkish_jassy_a_victory = yes }
 if = { limit = { has_global_flag = nap_coalition_active NOT = { has_global_flag = nap_coalition_peace_busy } }
- if = { limit = { OR = { AND = { ROOT = { tag = FRA } FROM = { has_country_flag = nap_coalition_member } } AND = { FROM = { tag = FRA } ROOT = { tag = ENG has_country_flag = nap_coalition_member } } } } nap_coalition_end_round = yes }
+ if = { limit = { ROOT = { tag = FRA } FROM = { has_country_flag = nap_coalition_member } } nap_coalition_coalition_victory_settlement = yes }
+ else_if = { limit = { FROM = { tag = FRA } ROOT = { tag = ENG has_country_flag = nap_coalition_member } } nap_coalition_french_victory_settlement = yes }
  else_if = { limit = { FROM = { tag = FRA } ROOT = { has_country_flag = nap_coalition_member } } ROOT = { nap_coalition_separate_peace = yes } }
 }
  } }
  on_before_peace_conference_start = { effect = {
-if = { limit = { has_global_flag = nap_theatre_war_active OR = { AND = { FROM = { tag = DEN } ROOT = { tag = SWE } } AND = { FROM = { tag = SWE } ROOT = { tag = DEN } } } } napoleonic_end_theatre_war = yes }
-if = { limit = { has_global_flag = nap_russo_swedish_war_active OR = { AND = { FROM = { tag = SWE } ROOT = { tag = RUS } } AND = { FROM = { tag = RUS } ROOT = { tag = SWE } } } } napoleonic_end_russo_swedish_war = yes }
-if = { limit = { has_global_flag = nap_austro_turkish_war_active OR = { AND = { FROM = { tag = HAB } ROOT = { tag = TUR } } AND = { FROM = { tag = TUR } ROOT = { tag = HAB } } } } napoleonic_end_austro_turkish_war = yes }
-if = { limit = { has_global_flag = nap_russo_turkish_war_active FROM = { tag = RUS } ROOT = { tag = TUR } } napoleonic_end_russo_turkish_ottoman_success = yes }
-if = { limit = { has_global_flag = nap_russo_turkish_war_active FROM = { tag = TUR } ROOT = { tag = RUS } } napoleonic_end_russo_turkish_jassy = yes }
+if = { limit = { has_global_flag = nap_theatre_war_active FROM = { tag = DEN } ROOT = { tag = SWE } } napoleonic_end_theatre_war_b_victory = yes }
+if = { limit = { has_global_flag = nap_theatre_war_active FROM = { tag = SWE } ROOT = { tag = DEN } } napoleonic_end_theatre_war_a_victory = yes }
+if = { limit = { has_global_flag = nap_russo_swedish_war_active FROM = { tag = SWE } ROOT = { tag = RUS } } napoleonic_end_russo_swedish_war_b_victory = yes }
+if = { limit = { has_global_flag = nap_russo_swedish_war_active FROM = { tag = RUS } ROOT = { tag = SWE } } napoleonic_end_russo_swedish_war_a_victory = yes }
+if = { limit = { has_global_flag = nap_austro_turkish_war_active FROM = { tag = HAB } ROOT = { tag = TUR } } napoleonic_end_austro_turkish_war_b_victory = yes }
+if = { limit = { has_global_flag = nap_austro_turkish_war_active FROM = { tag = TUR } ROOT = { tag = HAB } } napoleonic_end_austro_turkish_war_a_victory = yes }
+if = { limit = { has_global_flag = nap_russo_turkish_war_active FROM = { tag = RUS } ROOT = { tag = TUR } } napoleonic_end_russo_turkish_jassy_b_victory = yes }
+if = { limit = { has_global_flag = nap_russo_turkish_war_active FROM = { tag = TUR } ROOT = { tag = RUS } } napoleonic_end_russo_turkish_jassy_a_victory = yes }
 if = { limit = { has_global_flag = nap_coalition_active NOT = { has_global_flag = nap_coalition_peace_busy } }
- if = { limit = { OR = { AND = { FROM = { tag = FRA } ROOT = { has_country_flag = nap_coalition_member } } AND = { ROOT = { tag = FRA } FROM = { tag = ENG has_country_flag = nap_coalition_member } } } } nap_coalition_end_round = yes }
+ if = { limit = { FROM = { tag = FRA } ROOT = { has_country_flag = nap_coalition_member } } nap_coalition_coalition_victory_settlement = yes }
+ else_if = { limit = { ROOT = { tag = FRA } FROM = { tag = ENG has_country_flag = nap_coalition_member } } nap_coalition_french_victory_settlement = yes }
  else_if = { limit = { ROOT = { tag = FRA } FROM = { has_country_flag = nap_coalition_member } } FROM = { nap_coalition_separate_peace = yes } }
 }
  } }
