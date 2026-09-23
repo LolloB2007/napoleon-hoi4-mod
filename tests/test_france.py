@@ -8,7 +8,7 @@ sys.path.insert(0,str(ROOT/'tools'))
 sys.path.insert(0,str(ROOT/'content'))
 from pdx import Entry,parse,dumps,walk,validate_graph
 from build_20_france import build,CHAPTERS,COSTS,PARENTS,ROUTES,fid,event_id
-from france_legacy import RULES
+from france_legacy import RULES,FOCUS_DATE_GATES
 
 class FranceTests(unittest.TestCase):
     @classmethod
@@ -98,11 +98,17 @@ class FranceTests(unittest.TestCase):
     def test_brumaire_clears_old_route(self):
         entries=list(walk(self.events['french_revolution.14'].children('option')[0].value))
         self.assertTrue(any(e.key=='clr_country_flag' and e.value=='french_revolutionary_path' for e in entries))
+    def test_a01_dates_are_focus_gates(self):
+        for focus_id,gate in FOCUS_DATE_GATES.items():
+            available=dumps(self.nodes[focus_id].children('available'))
+            self.assertIn(f'date > {gate}',available,focus_id)
+        for key in RULES:
+            self.assertNotIn('date >',dumps(self.events[key].children('trigger')),key)
     def test_directory_without_terror(self):
         event=self.events['french_revolution.12']
         trigger=dumps(event.children('trigger'))
-        self.assertIn('date > 1795.10.26',trigger)
-        self.assertNotIn('is_triggered_only',[e.key for e in event.value])
+        self.assertNotIn('date >',trigger)
+        self.assertIn('nap_fra_thermidor_settled',trigger)
         self.assertNotIn('reign_of_terror_active',trigger)
         self.assertNotIn('french_revolution.12',dumps(self.events['french_revolution.11'].children('option')))
     def test_restoration_not_replaying_once_event(self):

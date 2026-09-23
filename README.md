@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Milestone 9 non-gated presentation pass complete; final visual, soundtrack and translation direction await owner decisions**
+**Current branch: A01 implemented: historical dates are focus minimums; A02-A12 approved and queued in the stacked implementation series**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -16,7 +16,7 @@ A Europe-first campaign beginning on **5 May 1789**, centred on the French Revol
 
 ## Campaign and political paths
 
-The inherited framework starts in 1789 and has an end-date define in 1821. Exact-date events remain until the timing policy is approved. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
+The inherited framework starts in 1789. Under approved A01, historical dates are minimum focus gates rather than autonomous event timers; A02 removes the practical campaign end. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
 
 France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The end-product requirement is at least **450 distinct French focuses**, different durations, meaningful policy choices, many events, territorial integration and client-state interactions. A node-count target alone is not campaign completion.
 

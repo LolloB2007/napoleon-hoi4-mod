@@ -1,4 +1,4 @@
-# Generated from retained source; preserves historical policy while guarding route and repeat execution.
+# Generated from retained source; A01 uses focus date floors, route state and repeat guards rather than autonomous historical dates.
 add_namespace = french_revolution
 add_namespace = napoleonic_timeline
 news_event = {
@@ -20,14 +20,10 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
-		date > 1789.7.13
 		has_country_flag = bourbon_monarchy
 		NOT = {
 			has_country_flag = bastille_stormed
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.1.a
@@ -111,6 +107,7 @@ country_event = {
 			add_war_support = -0.10
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -156,10 +153,6 @@ country_event = {
 		NOT = {
 			has_country_flag = french_royalist_path
 		}
-		date > 1789.8.25
-	}
-	mean_time_to_happen = {
-		days = 3
 	}
 	option = {
 		name = french_revolution.2.a
@@ -208,6 +201,7 @@ country_event = {
 			add_stability = 0.05
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -246,14 +240,10 @@ country_event = {
 		NOT = {
 			has_country_flag = french_royalist_path
 		}
-		date > 1791.6.19
 		has_country_leader = {
 			name = "Louis XVI"
 			ruling_only = yes
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.4.a
@@ -290,6 +280,7 @@ country_event = {
 			}
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -316,7 +307,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
-		date > 1792.4.19
 		has_country_flag = french_revolutionary_path
 		NOT = {
 			has_country_flag = french_constitutional_path
@@ -325,9 +315,6 @@ country_event = {
 			has_country_flag = french_royalist_path
 		}
 		has_country_flag = king_in_flight_caught
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.6.a
@@ -383,6 +370,7 @@ country_event = {
 			add_stability = -0.10
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -407,7 +395,6 @@ country_event = {
 	trigger = {
 		tag = FRA
 		OR = {
-			date > 1792.9.21
 			has_country_flag = vive_la_republique_focus
 		}
 		has_country_flag = first_coalition_war
@@ -421,9 +408,6 @@ country_event = {
 		NOT = {
 			has_country_flag = republic_proclaimed
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.8.a
@@ -486,6 +470,7 @@ country_event = {
 			}
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -533,11 +518,7 @@ country_event = {
 		}
 		OR = {
 			has_country_flag = vive_la_revolution_focus
-			date > 1793.1.20
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.9.a
@@ -597,6 +578,7 @@ country_event = {
 			}
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -741,13 +723,9 @@ country_event = {
 		tag = FRA
 		has_country_flag = louis_xvi_executed
 		has_country_flag = french_revolutionary_path
-		date > 1793.9.4
 		NOT = {
 			has_country_flag = nap_fra_girondins_programme
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.10.a
@@ -827,6 +805,7 @@ country_event = {
 			set_country_flag = nap_fra_terror_restrained
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -912,6 +891,7 @@ country_event = {
 		trigger = {
 			nap_fra_route_republican = yes
 			has_country_flag = french_republic
+			has_country_flag = nap_fra_thermidor_settled
 			NOT = {
 				has_country_flag = directory_active
 			}
@@ -923,6 +903,7 @@ country_event = {
 			limit = {
 				nap_fra_route_republican = yes
 				has_country_flag = french_republic
+				has_country_flag = nap_fra_thermidor_settled
 				NOT = {
 					has_country_flag = directory_active
 				}
@@ -950,16 +931,16 @@ country_event = {
 	trigger = {
 		nap_fra_route_republican = yes
 		has_country_flag = french_republic
+		has_country_flag = nap_fra_thermidor_settled
 		NOT = {
 			has_country_flag = directory_active
 		}
 		NOT = {
 			has_country_flag = nap_legacy_french_revolution_12_settled
 		}
-		date > 1795.10.26
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 30
 	}
 	option = {
 		name = nap_fra_legacy_superseded
@@ -967,6 +948,7 @@ country_event = {
 			NOT = {
 				nap_fra_route_republican = yes
 				has_country_flag = french_republic
+				has_country_flag = nap_fra_thermidor_settled
 				NOT = {
 					has_country_flag = directory_active
 				}
@@ -997,12 +979,8 @@ country_event = {
 			has_country_flag = french_royalist_path
 		}
 		OR = {
-			date > 1799.11.8
 			has_country_flag = brumaire_coup_focus
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = french_revolution.14.a
@@ -1090,6 +1068,7 @@ country_event = {
 			add_political_power = -100
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {

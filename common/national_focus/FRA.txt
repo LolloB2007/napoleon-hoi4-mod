@@ -30,6 +30,9 @@ focus_tree = {
 				days = 70
 			}
 		}
+		available = {
+			date > 1789.5.5
+		}
 	}
 	focus = {
 		id = FRA_adopt_declaration
@@ -46,6 +49,7 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_country_flag = bastille_stormed
+			date > 1789.8.26
 		}
 		ai_will_do = {
 			factor = 30
@@ -194,6 +198,7 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_country_flag = bastille_stormed
+			date > 1791.6.20
 		}
 		ai_will_do = {
 			factor = 50
@@ -235,6 +240,9 @@ focus_tree = {
 			}
 			add_war_support = 0.15
 		}
+		available = {
+			date > 1792.4.20
+		}
 	}
 	focus = {
 		id = FRA_vive_la_republique
@@ -252,6 +260,9 @@ focus_tree = {
 				days = 1
 			}
 		}
+		available = {
+			date > 1792.9.22
+		}
 	}
 	focus = {
 		id = FRA_trial_of_the_king
@@ -264,6 +275,7 @@ focus_tree = {
 		cost = 8
 		available = {
 			has_country_flag = french_republic
+			date > 1793.1.21
 		}
 		ai_will_do = {
 			factor = 80
@@ -291,6 +303,9 @@ focus_tree = {
 				days = 1
 			}
 			add_ideas = levee_en_masse
+		}
+		available = {
+			date > 1793.9.5
 		}
 		available = {
 			NOT = {
@@ -351,6 +366,7 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_country_flag = french_republic
+			date > 1796.3.1
 		}
 		completion_reward = {
 			army_experience = 50
@@ -392,6 +408,9 @@ focus_tree = {
 			add_war_support = 0.05
 			set_country_flag = egyptian_expedition_complete
 		}
+		available = {
+			date > 1798.7.1
+		}
 	}
 	focus = {
 		id = FRA_brumaire_coup
@@ -404,6 +423,7 @@ focus_tree = {
 		cost = 8
 		available = {
 			has_country_flag = directory_active
+			date > 1799.11.9
 		}
 		ai_will_do = {
 			factor = 80
@@ -428,6 +448,7 @@ focus_tree = {
 		available = {
 			has_country_flag = consulate_established
 			has_country_flag = french_bonapartist_path
+			date > 1804.5.18
 		}
 		completion_reward = {
 			set_country_flag = proclaim_empire_focus
@@ -472,6 +493,9 @@ focus_tree = {
 				days = 1
 			}
 		}
+		available = {
+			date > 1806.11.21
+		}
 	}
 	focus = {
 		id = FRA_confederation_rhine
@@ -488,6 +512,9 @@ focus_tree = {
 				days = 1
 			}
 		}
+		available = {
+			date > 1806.7.12
+		}
 	}
 	focus = {
 		id = FRA_invade_russia
@@ -503,6 +530,7 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_country_flag = empire_of_the_french
+			date > 1812.6.24
 		}
 		ai_will_do = {
 			factor = 60
@@ -549,6 +577,7 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_country_flag = bourbon_restoration
+			date > 1815.3.1
 		}
 		ai_will_do = {
 			factor = 100

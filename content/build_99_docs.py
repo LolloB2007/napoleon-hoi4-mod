@@ -2,18 +2,18 @@
 import json
 
 QUESTIONS = [
-('A01','Calendar model','Keep mandatory historical dates, use historical order, or offer both as game rules?','Keep inherited date gates until approved.'),
-('A02','Campaign end','Remove or extend the 1821 end-date define, and what postwar progression should follow?','Keep the inherited end date.'),
-('A03','Alternate peace outcomes','Approve bounded territorial and political terms when the historically losing side wins.','Preserve limited settlements; no unrestricted annexation.'),
-('A04','Coring policy','Approve the eligible states, route restrictions, peace/compliance requirements and integration delay.','Preserve existing cores; do not grant broad conquest cores.'),
-('A05','Formable catalogue','Approve founders and borders for Italy, Germany, Scandinavia, a restored Commonwealth and imperial federations.','Prepare an auditable registry; speculative unions remain disabled.'),
-('A06','Clients and releasables','Which clients should be puppets, independent allies, personal unions or occupation governments?','Never transfer unrelated third-party land or silently annex existing clients.'),
-('A07','Geographic scope','Keep Europe-first development or expand colonies and overseas theatres now?','Preserve existing overseas content and the current Wilderness abstraction.'),
-('A08','Compatibility baseline','Confirm the installed HOI4 version and DLC set with a real launch.','Retain the inherited 1.19.* descriptor, without asserting engine compatibility.'),
-('A09','Alternate-route limits','Approve speculative dynastic candidates and routes beyond the four existing French alternatives.','Constitutional, Republican, Royalist and Bonapartist routes are authorized.'),
-('A10','Visual and map art direction','Choose the final presentation language for portraits, focus/event art, flags and map treatment.','Use original procedural engravings/cards and avoid invasive map recolouring.'),
-('A11','Soundtrack direction','Choose the music strategy and redistribution policy for the final soundtrack.','Ship event stingers only; do not bundle third-party recordings.'),
-('A12','Translation scope','Choose which languages should follow the final English pass and who maintains them.','Keep English authoritative until a maintained translation scope is approved.')]
+('A01','Calendar model','Historical chronology policy.','APPROVED: historical dates are minimum-date focus gates only; events, wars and peace deals are state-driven.'),
+('A02','Campaign end','Campaign end policy.','APPROVED: remove the practical campaign end and allow open-ended continuation.'),
+('A03','Alternate peace outcomes','Bounded-war settlement policy.','APPROVED: settlements follow the actual victor and war objectives; no unrestricted annexation.'),
+('A04','Coring policy','Coring and occupation policy.','APPROVED: no broad conquest coring; only historical/formable cores, with targeted compliance support where appropriate.'),
+('A05','Formable catalogue','Formable policy.','APPROVED IN PRINCIPLE: conventional and limited credible alternate formables with explicit founders and borders.'),
+('A06','Clients and releasables','Client-state policy.','APPROVED: standard HOI4 puppet relationships are the default; never transfer unrelated third-party land.'),
+('A07','Geographic scope','World-scope policy.','APPROVED: Europe plus relevant colonial possessions, North Africa, USA, Canada and India; irrelevant regions may remain inert/abstract.'),
+('A08','Compatibility baseline','Compatibility policy.','APPROVED: target HOI4 1.19.x and require La Résistance; runtime compatibility still needs a real launch.'),
+('A09','Alternate-route limits','Alternate-history policy.','APPROVED: credible historical near-counterfactuals and plausible dynastic/political alternatives; no meme/fantasy routes.'),
+('A10','Visual and map art direction','Presentation policy.','APPROVED: painted/historical scenes and portraits, engraved/cartographic UI and focus art, understated period map styling.'),
+('A11','Soundtrack direction','Music policy.','APPROVED: original scoring plus newly rendered public-domain Revolutionary/Napoleonic repertoire, with provenance.'),
+('A12','Translation scope','Localisation policy.','APPROVED: English only for now; community translations may be accepted later, but no machine-translated release padding.')]
 
 
 def build(root):
@@ -60,7 +60,7 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Approval and development rules
 
-The queue is [to ask lollo.md](to%20ask%20lollo.md). **Revisit scripted peace deals when the historically losing side wins.** Calendar flexibility, the end date, expansive coring and speculative union borders remain approval-dependent.
+The queue is [to ask lollo.md](to%20ask%20lollo.md). **Revisit scripted peace deals when the historically losing side wins.** A01-A12 are approved implementation policy. New decisions that materially change them require a new owner entry.
 
 Each milestone gets its own PR, even when only an explicitly identified slice is implemented. Dependent PRs may be stacked: merge the parent first, then retarget its child to master. No workflow merges PRs. Every PR keeps README, this roadmap, the approval queue and test evidence current.
 
@@ -70,11 +70,11 @@ Build playable historical slices: **1789-1795 > 1796-1804 > 1805-1807 > 1808-181
 
 {header}
 
-This is the live approval queue. No answer is presumed. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
+This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
 
 '''
     for key,title,question,default in QUESTIONS:
-        asks += f'## {key}: {title}\n\n**Awaiting approval.** {question}\n\nSafe interim policy: {default}\n\n'
+        asks += f'## {key}: {title}\n\n**Approved.** {default}\n\n'
     asks += '## Not approval blockers\n\nNamespacing, missing references, scope corrections, finite costs, cooldowns, idempotency, localisation encoding, tests and preserving existing work can proceed. Prototype balance numbers remain provisional until campaign testing.\n'
     readme = f'''# Napoleonic Era for Hearts of Iron IV
 
@@ -94,7 +94,7 @@ A Europe-first campaign beginning on **5 May 1789**, centred on the French Revol
 
 ## Campaign and political paths
 
-The inherited framework starts in 1789 and has an end-date define in 1821. Exact-date events remain until the timing policy is approved. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
+The inherited framework starts in 1789. Under approved A01, historical dates are minimum focus gates rather than autonomous event timers; A02 removes the practical campaign end. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
 
 France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The end-product requirement is at least **450 distinct French focuses**, different durations, meaningful policy choices, many events, territorial integration and client-state interactions. A node-count target alone is not campaign completion.
 
