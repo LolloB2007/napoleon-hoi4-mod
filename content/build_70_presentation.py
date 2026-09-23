@@ -1,6 +1,6 @@
 """Milestone 9 presentation, naming and localisation integration.
 
-All generated visual/audio assets are original procedural work. No external
+All generated visual/audio assets are deterministic original procedural work. No external
 portrait, painting, flag, recording or game asset is embedded by this module.
 Final art direction, map treatment, soundtrack and translation scope remain
 owner decisions A10-A12.
