@@ -1,6 +1,6 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: A01-A12 implemented in the stacked approval series; static validation and HOI4 runtime certification remain**
+**Current branch: Deep focus expansion implemented on development branch; static and HOI4 runtime validation pending**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
@@ -8,19 +8,21 @@ Implementation, static verification and successful in-game testing are separate 
 |---|---|
 | 1 | Country setup exists; four great-power rulers corrected; engine verification pending |
 | 2 | Opening diplomacy and bounded treaties implemented; engine verification pending |
-| 3 | Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper bespoke campaigns remain |
+| 3 | Partial: 630 French focuses, 120 policy events and 80 chapter spirits; deep campaign runtime validation remains |
 | 4 | Partial: seven coalition rounds, consent, funding and separate peace; bespoke treaties and fallback leadership remain |
-| 5 | Partial: 108 new great-power focuses, 24 policy reviews, 12 spirits and starting-leader/succession repairs |
+| 5 | Partial: Britain and Austria target 368 focuses each, Prussia 364 and Russia 366; runtime pacing and bespoke crisis validation remain |
 | 6 | Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses |
 | 7 | Campaign measurement infrastructure pending; actual balance requires in-game evidence |
-| 8 | Implementation complete: territorial/client foundation plus 13 secondary campaign packs; runtime validation pending |
+| 8 | Implementation complete in source: 13 secondary campaigns target 175 focuses each, including 38 personalised focuses per campaign; runtime validation pending |
 | 9 | Implementation complete for approved A10-A12 direction: painted/engraved/cartographic presentation, provenance-tracked soundtrack seed, and enforced English-only localisation. Runtime validation pending. |
 
 All original detailed milestone checklists and chronological phases are retained in [the milestone catalogue](docs/roadmap-milestones.md). This file is the current status authority; historic checkmarks in the catalogue are not runtime certification.
 
 ## Authorized end-product requirements
 
-- [ ] At least **450 distinct French focuses** across the existing and subsequently approved routes.
+- [x] France in the **600-650 focus** range (implemented target: 630).
+- [x] Britain, Austria, Prussia and Russia in the **350-400 focus** range.
+- [x] Each secondary campaign with content in the **150-200 focus** range, including at least 30-40 country-specific focuses.
 - [ ] Varied focus lengths, meaningful branching and route-safe outcomes.
 - [ ] Substantial events and decisions with consequences, not repeated filler rewards.
 - [ ] Earned integration of eligible territory, with the catalogue approved under A04.
@@ -29,9 +31,9 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Delivered on this branch
 
-- 450 French focus definitions, 108 additional great-power focuses and 299 secondary-power focuses
+- 630 French focuses; Britain 368, Austria 368, Prussia 364 and Russia 366 estimated total focuses; thirteen secondary campaigns at 175 focuses each
 - Reusable era mechanics and seven temporary coalition rounds
-- Territorial/client foundation with approval-gated integration and formable registries
+- Formables grant cores only from explicit audited core-state catalogues on successful formation
 - Thirteen secondary campaign packs covering every Milestone 8 geography
 - A deterministic original focus icon for every current focus ID and period-styled pictures for every scripted event
 - Original portrait cards wired to current inline political leaders, marshals, generals and admirals
@@ -46,7 +48,7 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Test evidence and remaining acceptance
 
-A01-A12 add regression coverage for chronology gates, open-ended campaign, outcome-aware settlements, coring/formables/clients, geographic scope, DLC baseline, alternate-route plausibility, presentation, music provenance, and English-only localisation. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
+Deep expansion regression coverage checks France at 630 focuses, each major in the 350-400 range, each secondary campaign at 175 focuses with 38 personalised focuses, explicit formable core sets, syntax, localisation and territorial safety. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.

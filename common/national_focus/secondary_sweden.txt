@@ -1,25 +1,3281 @@
-focus_tree = { id = nap_secondary_sweden_tree country = { factor = 0 modifier = { add = 10 tag = SWE } } default = no continuous_focus_position = { x = 30 y = 1000 }
-focus = { id = NAP_SWEDEN_ROOT icon = GFX_NAP_FOCUS_NAP_SWEDEN_ROOT x = 10 y = 0 cost = 5 completion_reward = { set_country_flag = nap_sweden_campaign_started add_political_power = 50 } }
-focus = { id = NAP_SWEDEN_INST_1 icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_1 x = 3 y = 1 cost = 5 prerequisite = { focus = NAP_SWEDEN_ROOT } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_SWEDEN_INST_2 icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_2 x = 3 y = 2 cost = 7 prerequisite = { focus = NAP_SWEDEN_INST_1 } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_SWEDEN_INST_3 icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_3 x = 3 y = 3 cost = 10 prerequisite = { focus = NAP_SWEDEN_INST_2 } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_SWEDEN_INST_4 icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_4 x = 3 y = 4 cost = 5 prerequisite = { focus = NAP_SWEDEN_INST_3 } completion_reward = { add_political_power = 35 add_stability = 0.01 add_ideas = nap_sweden_institutions } }
-focus = { id = NAP_SWEDEN_MIL_1 icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_1 x = 7 y = 1 cost = 7 prerequisite = { focus = NAP_SWEDEN_ROOT } completion_reward = { army_experience = 10 add_war_support = 0.01 } }
-focus = { id = NAP_SWEDEN_MIL_2 icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_2 x = 7 y = 2 cost = 10 prerequisite = { focus = NAP_SWEDEN_MIL_1 } completion_reward = { army_experience = 10 add_war_support = 0.01 } }
-focus = { id = NAP_SWEDEN_MIL_3 icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_3 x = 7 y = 3 cost = 5 prerequisite = { focus = NAP_SWEDEN_MIL_2 } completion_reward = { army_experience = 10 add_war_support = 0.01 country_event = { id = nap_secondary.1033 days = 1 } } }
-focus = { id = NAP_SWEDEN_MIL_4 icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_4 x = 7 y = 4 cost = 7 prerequisite = { focus = NAP_SWEDEN_MIL_3 } completion_reward = { army_experience = 10 add_war_support = 0.01 add_ideas = nap_sweden_military } }
-focus = { id = NAP_SWEDEN_HIST_1 icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_1 x = 11 y = 1 cost = 10 prerequisite = { focus = NAP_SWEDEN_ROOT } mutually_exclusive = { focus = NAP_SWEDEN_ALT_1 } completion_reward = { set_country_flag = nap_sweden_historical clr_country_flag = nap_sweden_alternate add_ideas = nap_sweden_historical_course country_event = { id = nap_secondary.1031 days = 1 } } }
-focus = { id = NAP_SWEDEN_HIST_2 icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_2 x = 11 y = 2 cost = 5 prerequisite = { focus = NAP_SWEDEN_HIST_1 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SWEDEN_HIST_3 icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_3 x = 11 y = 3 cost = 7 prerequisite = { focus = NAP_SWEDEN_HIST_2 } completion_reward = { add_stability = 0.03 add_political_power = 40 } }
-focus = { id = NAP_SWEDEN_HIST_4 icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_4 x = 11 y = 4 cost = 5 prerequisite = { focus = NAP_SWEDEN_HIST_3 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SWEDEN_HIST_5 icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_5 x = 11 y = 5 cost = 7 prerequisite = { focus = NAP_SWEDEN_HIST_4 } completion_reward = { add_war_support = 0.04 add_political_power = 50 } }
-focus = { id = NAP_SWEDEN_ALT_1 icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_1 x = 15 y = 1 cost = 5 prerequisite = { focus = NAP_SWEDEN_ROOT } mutually_exclusive = { focus = NAP_SWEDEN_HIST_1 } completion_reward = { set_country_flag = nap_sweden_alternate clr_country_flag = nap_sweden_historical add_ideas = nap_sweden_alternate_course country_event = { id = nap_secondary.1032 days = 1 } } }
-focus = { id = NAP_SWEDEN_ALT_2 icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_2 x = 15 y = 2 cost = 7 prerequisite = { focus = NAP_SWEDEN_ALT_1 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SWEDEN_ALT_3 icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_3 x = 15 y = 3 cost = 5 prerequisite = { focus = NAP_SWEDEN_ALT_2 } completion_reward = { add_stability = 0.02 add_political_power = 50 } }
-focus = { id = NAP_SWEDEN_ALT_4 icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_4 x = 15 y = 4 cost = 7 prerequisite = { focus = NAP_SWEDEN_ALT_3 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SWEDEN_ALT_5 icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_5 x = 15 y = 5 cost = 10 prerequisite = { focus = NAP_SWEDEN_ALT_4 } completion_reward = { add_stability = 0.04 add_political_power = 40 } }
-focus = { id = NAP_SWEDEN_DIP_1 icon = GFX_NAP_FOCUS_NAP_SWEDEN_DIP_1 x = 19 y = 1 cost = 7 prerequisite = { focus = NAP_SWEDEN_ROOT } completion_reward = { add_political_power = 35 } }
-focus = { id = NAP_SWEDEN_DIP_2 icon = GFX_NAP_FOCUS_NAP_SWEDEN_DIP_2 x = 19 y = 2 cost = 5 prerequisite = { focus = NAP_SWEDEN_DIP_1 } completion_reward = { add_political_power = 35 country_event = { id = nap_secondary.1034 days = 1 } } }
-focus = { id = NAP_SWEDEN_DIP_3 icon = GFX_NAP_FOCUS_NAP_SWEDEN_DIP_3 x = 19 y = 3 cost = 7 prerequisite = { focus = NAP_SWEDEN_DIP_2 } completion_reward = { add_political_power = 35 } }
-focus = { id = NAP_SWEDEN_SETTLEMENT icon = GFX_NAP_FOCUS_NAP_SWEDEN_SETTLEMENT x = 10 y = 7 cost = 10 prerequisite = { focus = NAP_SWEDEN_INST_4 } prerequisite = { focus = NAP_SWEDEN_MIL_4 } prerequisite = { focus = NAP_SWEDEN_DIP_3 } available = { OR = { has_country_flag = nap_sweden_historical has_country_flag = nap_sweden_alternate } } completion_reward = { add_ideas = nap_sweden_national_settlement add_stability = 0.04 add_political_power = 75 } }
+focus_tree = {
+	id = nap_secondary_sweden_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SWE
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 30
+		y = 1000
+	}
+	focus = {
+		id = NAP_SWEDEN_ROOT
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_ROOT
+		x = 10
+		y = 0
+		cost = 5
+		completion_reward = {
+			set_country_flag = nap_sweden_campaign_started
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_INST_1
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_1
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_ROOT
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_INST_2
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_2
+		x = 3
+		y = 2
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_INST_1
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_INST_3
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_3
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = NAP_SWEDEN_INST_2
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_INST_4
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_INST_4
+		x = 3
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_INST_3
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+			add_ideas = nap_sweden_institutions
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_MIL_1
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_1
+		x = 7
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_ROOT
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_MIL_2
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_2
+		x = 7
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = NAP_SWEDEN_MIL_1
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_MIL_3
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_3
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_MIL_2
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+			country_event = {
+				id = nap_secondary.1033
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_MIL_4
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_MIL_4
+		x = 7
+		y = 4
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_MIL_3
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+			add_ideas = nap_sweden_military
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_HIST_1
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_1
+		x = 11
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = NAP_SWEDEN_ROOT
+		}
+		mutually_exclusive = {
+			focus = NAP_SWEDEN_ALT_1
+		}
+		completion_reward = {
+			set_country_flag = nap_sweden_historical
+			clr_country_flag = nap_sweden_alternate
+			add_ideas = nap_sweden_historical_course
+			country_event = {
+				id = nap_secondary.1031
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_HIST_2
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_2
+		x = 11
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_HIST_1
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_HIST_3
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_3
+		x = 11
+		y = 3
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_HIST_2
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_HIST_4
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_4
+		x = 11
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_HIST_3
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_HIST_5
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_HIST_5
+		x = 11
+		y = 5
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_HIST_4
+		}
+		completion_reward = {
+			add_war_support = 0.04
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_ALT_1
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_1
+		x = 15
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_ROOT
+		}
+		mutually_exclusive = {
+			focus = NAP_SWEDEN_HIST_1
+		}
+		completion_reward = {
+			set_country_flag = nap_sweden_alternate
+			clr_country_flag = nap_sweden_historical
+			add_ideas = nap_sweden_alternate_course
+			country_event = {
+				id = nap_secondary.1032
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_ALT_2
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_2
+		x = 15
+		y = 2
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_ALT_1
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_ALT_3
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_3
+		x = 15
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_ALT_2
+		}
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_ALT_4
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_4
+		x = 15
+		y = 4
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_ALT_3
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_ALT_5
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_ALT_5
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = NAP_SWEDEN_ALT_4
+		}
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DIP_1
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DIP_1
+		x = 19
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_ROOT
+		}
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DIP_2
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DIP_2
+		x = 19
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DIP_1
+		}
+		completion_reward = {
+			add_political_power = 35
+			country_event = {
+				id = nap_secondary.1034
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DIP_3
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DIP_3
+		x = 19
+		y = 3
+		cost = 7
+		prerequisite = {
+			focus = NAP_SWEDEN_DIP_2
+		}
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_SETTLEMENT
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_SETTLEMENT
+		x = 10
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = NAP_SWEDEN_INST_4
+		}
+		prerequisite = {
+			focus = NAP_SWEDEN_MIL_4
+		}
+		prerequisite = {
+			focus = NAP_SWEDEN_DIP_3
+		}
+		available = {
+			OR = {
+				has_country_flag = nap_sweden_historical
+				has_country_flag = nap_sweden_alternate
+			}
+		}
+		completion_reward = {
+			add_ideas = nap_sweden_national_settlement
+			add_stability = 0.04
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_01
+		x = 26
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_SETTLEMENT
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_02
+		x = 26
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_03
+		x = 26
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_04
+		x = 26
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_05
+		x = 26
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_06
+		x = 26
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_07
+		x = 26
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_08
+		x = 26
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_09
+		x = 26
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_10
+		x = 26
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_11
+		x = 26
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_12
+		x = 26
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_13
+		x = 26
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_14
+		x = 26
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_15
+		x = 26
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_16
+		x = 26
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_17
+		x = 26
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_18
+		x = 26
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_state_administration_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_STATE_ADMINISTRATION_19
+		x = 26
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_01
+		x = 38
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_SETTLEMENT
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_02
+		x = 38
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_03
+		x = 38
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_04
+		x = 38
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_05
+		x = 38
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_06
+		x = 38
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_07
+		x = 38
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_08
+		x = 38
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_09
+		x = 38
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_10
+		x = 38
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_11
+		x = 38
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_12
+		x = 38
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_13
+		x = 38
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_14
+		x = 38
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_15
+		x = 38
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_16
+		x = 38
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_17
+		x = 38
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_18
+		x = 38
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_REVENUE_AND_PUBLIC_CREDIT_19
+		x = 38
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_01
+		x = 50
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_SETTLEMENT
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_02
+		x = 50
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_03
+		x = 50
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_04
+		x = 50
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_05
+		x = 50
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_06
+		x = 50
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_07
+		x = 50
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_08
+		x = 50
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_09
+		x = 50
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_10
+		x = 50
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_11
+		x = 50
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_12
+		x = 50
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_13
+		x = 50
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_14
+		x = 50
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_15
+		x = 50
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_16
+		x = 50
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_17
+		x = 50
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_18
+		x = 50
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_army_reform_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_ARMY_REFORM_19
+		x = 50
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_army_reform_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_01
+		x = 62
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_SETTLEMENT
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_02
+		x = 62
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_03
+		x = 62
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_04
+		x = 62
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_05
+		x = 62
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_06
+		x = 62
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_07
+		x = 62
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_08
+		x = 62
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_09
+		x = 62
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_10
+		x = 62
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_11
+		x = 62
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_12
+		x = 62
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_13
+		x = 62
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_14
+		x = 62
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_15
+		x = 62
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_16
+		x = 62
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_17
+		x = 62
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_18
+		x = 62
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_INFRASTRUCTURE_AND_SUPPLY_19
+		x = 62
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_infrastructure_and_supply_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 4
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_01
+		x = 26
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_state_administration_19
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_02
+		x = 26
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_03
+		x = 26
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_04
+		x = 26
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_05
+		x = 26
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_06
+		x = 26
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_07
+		x = 26
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_08
+		x = 26
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_09
+		x = 26
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_10
+		x = 26
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_11
+		x = 26
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_12
+		x = 26
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_13
+		x = 26
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_14
+		x = 26
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_15
+		x = 26
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_16
+		x = 26
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_17
+		x = 26
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_18
+		x = 26
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_foreign_policy_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_FOREIGN_POLICY_19
+		x = 26
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_foreign_policy_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 6
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_01
+		x = 38
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_revenue_and_public_credit_19
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_02
+		x = 38
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_03
+		x = 38
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_04
+		x = 38
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_05
+		x = 38
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_06
+		x = 38
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_07
+		x = 38
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_08
+		x = 38
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_09
+		x = 38
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_10
+		x = 38
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_11
+		x = 38
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_12
+		x = 38
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_13
+		x = 38
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_14
+		x = 38
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_15
+		x = 38
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_16
+		x = 38
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_17
+		x = 38
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_18
+		x = 38
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_SWEDEN_SOCIAL_AND_INSTITUTIONAL_SETTLEMENT_19
+		x = 38
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_sweden_social_and_institutional_settlement_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_stability = 0.003
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_01
+		x = 110
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_SETTLEMENT
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_02
+		x = 110
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_03
+		x = 110
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_04
+		x = 110
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_05
+		x = 110
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_06
+		x = 110
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_07
+		x = 110
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_08
+		x = 110
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_09
+		x = 110
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_10
+		x = 110
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_11
+		x = 110
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_12
+		x = 110
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_13
+		x = 110
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_14
+		x = 110
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_15
+		x = 110
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_16
+		x = 110
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_17
+		x = 110
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_18
+		x = 110
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_the_gustavian_state_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_THE_GUSTAVIAN_STATE_19
+		x = 110
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_01
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_01
+		x = 110
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_the_gustavian_state_19
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_02
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_02
+		x = 110
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_01
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_03
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_03
+		x = 110
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_02
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_04
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_04
+		x = 110
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_03
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_05
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_05
+		x = 110
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_04
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_06
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_06
+		x = 110
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_05
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_07
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_07
+		x = 110
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_06
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_08
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_08
+		x = 110
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_07
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_09
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_09
+		x = 110
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_08
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_10
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_10
+		x = 110
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_09
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_11
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_11
+		x = 110
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_10
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_12
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_12
+		x = 110
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_11
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_13
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_13
+		x = 110
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_12
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_14
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_14
+		x = 110
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_13
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_15
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_15
+		x = 110
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_14
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_16
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_16
+		x = 110
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_15
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_17
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_17
+		x = 110
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_16
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_18
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_18
+		x = 110
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_17
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_19
+		icon = GFX_NAP_FOCUS_NAP_SWEDEN_DEPTH_FINNISH_AND_BALTIC_DEFENCE_19
+		x = 110
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_SWEDEN_DEPTH_finnish_and_baltic_defence_18
+		}
+		available = {
+			tag = SWE
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

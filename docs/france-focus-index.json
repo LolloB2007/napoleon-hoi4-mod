@@ -6666,5 +6666,2861 @@
       ]
     ],
     "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_00",
+    "title": "Survey Civil Law and the Courts",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 14,
+    "x": 8,
+    "y": 102,
+    "prerequisites": [
+      [
+        "FRA_brumaire_coup"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_01",
+    "title": "Define the Civil Law and the Courts Mandate",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 21,
+    "x": 4,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_civil_code_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_civil_code_02",
+    "title": "Consult the Established Interests in Civil Law and the Courts",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 21,
+    "x": 12,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_civil_code_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_civil_code_03",
+    "title": "Create a Permanent Civil Law and the Courts Commission",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 28,
+    "x": 4,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_04",
+    "title": "Publish the First Civil Law and the Courts Returns",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 28,
+    "x": 12,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_05",
+    "title": "The Civil Law and the Courts Funding Question",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 14,
+    "x": 8,
+    "y": 105,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_03",
+        "FRA_nap_civil_code_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_06",
+    "title": "Train a Professional Civil Law and the Courts Cadre",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 21,
+    "x": 4,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_07",
+    "title": "Coordinate Civil Law and the Courts with the Departments",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 21,
+    "x": 12,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_08",
+    "title": "Inspect the Civil Law and the Courts Establishment",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 35,
+    "x": 4,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_09",
+    "title": "Standardize Civil Law and the Courts Procedures",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 28,
+    "x": 12,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_10",
+    "title": "The Public Burden of Civil Law and the Courts",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 14,
+    "x": 8,
+    "y": 108,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_08"
+      ],
+      [
+        "FRA_nap_civil_code_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_11",
+    "title": "Centralize the Strongest Civil Law and the Courts Institutions",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 35,
+    "x": 4,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_civil_code_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_civil_code_12",
+    "title": "Preserve Local Adaptation in Civil Law and the Courts",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 35,
+    "x": 12,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_civil_code_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_civil_code_13",
+    "title": "Audit the Results of Civil Law and the Courts",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 21,
+    "x": 8,
+    "y": 110,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_11",
+        "FRA_nap_civil_code_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_civil_code_14",
+    "title": "A Durable Settlement for Civil Law and the Courts",
+    "chapter": "The Civil Code",
+    "route": "consular",
+    "days": 49,
+    "x": 8,
+    "y": 111,
+    "prerequisites": [
+      [
+        "FRA_nap_civil_code_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_00",
+    "title": "Survey Prefectural Administration",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 14,
+    "x": 32,
+    "y": 102,
+    "prerequisites": [
+      [
+        "FRA_brumaire_coup"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_01",
+    "title": "Define the Prefectural Administration Mandate",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 21,
+    "x": 28,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_prefectures_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_prefectures_02",
+    "title": "Consult the Established Interests in Prefectural Administration",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 21,
+    "x": 36,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_prefectures_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_prefectures_03",
+    "title": "Create a Permanent Prefectural Administration Commission",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 28,
+    "x": 28,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_04",
+    "title": "Publish the First Prefectural Administration Returns",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 28,
+    "x": 36,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_05",
+    "title": "The Prefectural Administration Funding Question",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 14,
+    "x": 32,
+    "y": 105,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_03",
+        "FRA_nap_prefectures_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_06",
+    "title": "Train a Professional Prefectural Administration Cadre",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 21,
+    "x": 28,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_07",
+    "title": "Coordinate Prefectural Administration with the Departments",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 21,
+    "x": 36,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_08",
+    "title": "Inspect the Prefectural Administration Establishment",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 35,
+    "x": 28,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_09",
+    "title": "Standardize Prefectural Administration Procedures",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 28,
+    "x": 36,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_10",
+    "title": "The Public Burden of Prefectural Administration",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 14,
+    "x": 32,
+    "y": 108,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_08"
+      ],
+      [
+        "FRA_nap_prefectures_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_11",
+    "title": "Centralize the Strongest Prefectural Administration Institutions",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 35,
+    "x": 28,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_prefectures_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_prefectures_12",
+    "title": "Preserve Local Adaptation in Prefectural Administration",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 35,
+    "x": 36,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_prefectures_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_prefectures_13",
+    "title": "Audit the Results of Prefectural Administration",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 21,
+    "x": 32,
+    "y": 110,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_11",
+        "FRA_nap_prefectures_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_prefectures_14",
+    "title": "A Durable Settlement for Prefectural Administration",
+    "chapter": "Prefects and Departments",
+    "route": "consular",
+    "days": 49,
+    "x": 32,
+    "y": 111,
+    "prerequisites": [
+      [
+        "FRA_nap_prefectures_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_00",
+    "title": "Survey Church-State Relations",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 14,
+    "x": 56,
+    "y": 102,
+    "prerequisites": [
+      [
+        "FRA_brumaire_coup"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_01",
+    "title": "Define the Church-State Relations Mandate",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 21,
+    "x": 52,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_concordat_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_concordat_02",
+    "title": "Consult the Established Interests in Church-State Relations",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 21,
+    "x": 60,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_concordat_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_concordat_03",
+    "title": "Create a Permanent Church-State Relations Commission",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 28,
+    "x": 52,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_04",
+    "title": "Publish the First Church-State Relations Returns",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 28,
+    "x": 60,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_05",
+    "title": "The Church-State Relations Funding Question",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 14,
+    "x": 56,
+    "y": 105,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_03",
+        "FRA_nap_concordat_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_06",
+    "title": "Train a Professional Church-State Relations Cadre",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 21,
+    "x": 52,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_07",
+    "title": "Coordinate Church-State Relations with the Departments",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 21,
+    "x": 60,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_08",
+    "title": "Inspect the Church-State Relations Establishment",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 35,
+    "x": 52,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_09",
+    "title": "Standardize Church-State Relations Procedures",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 28,
+    "x": 60,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_10",
+    "title": "The Public Burden of Church-State Relations",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 14,
+    "x": 56,
+    "y": 108,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_08"
+      ],
+      [
+        "FRA_nap_concordat_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_11",
+    "title": "Centralize the Strongest Church-State Relations Institutions",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 35,
+    "x": 52,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_concordat_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_concordat_12",
+    "title": "Preserve Local Adaptation in Church-State Relations",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 35,
+    "x": 60,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_concordat_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_concordat_13",
+    "title": "Audit the Results of Church-State Relations",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 21,
+    "x": 56,
+    "y": 110,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_11",
+        "FRA_nap_concordat_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_concordat_14",
+    "title": "A Durable Settlement for Church-State Relations",
+    "chapter": "Church and Concordat",
+    "route": "consular",
+    "days": 49,
+    "x": 56,
+    "y": 111,
+    "prerequisites": [
+      [
+        "FRA_nap_concordat_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_00",
+    "title": "Survey Internal Security",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 14,
+    "x": 80,
+    "y": 102,
+    "prerequisites": [
+      [
+        "FRA_brumaire_coup"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_01",
+    "title": "Define the Internal Security Mandate",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 21,
+    "x": 76,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_gendarmerie_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_gendarmerie_02",
+    "title": "Consult the Established Interests in Internal Security",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 21,
+    "x": 84,
+    "y": 103,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_gendarmerie_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_gendarmerie_03",
+    "title": "Create a Permanent Internal Security Commission",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 28,
+    "x": 76,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_04",
+    "title": "Publish the First Internal Security Returns",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 28,
+    "x": 84,
+    "y": 104,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_05",
+    "title": "The Internal Security Funding Question",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 14,
+    "x": 80,
+    "y": 105,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_03",
+        "FRA_nap_gendarmerie_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_06",
+    "title": "Train a Professional Internal Security Cadre",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 21,
+    "x": 76,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_07",
+    "title": "Coordinate Internal Security with the Departments",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 21,
+    "x": 84,
+    "y": 106,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_08",
+    "title": "Inspect the Internal Security Establishment",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 35,
+    "x": 76,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_09",
+    "title": "Standardize Internal Security Procedures",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 28,
+    "x": 84,
+    "y": 107,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_10",
+    "title": "The Public Burden of Internal Security",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 14,
+    "x": 80,
+    "y": 108,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_08"
+      ],
+      [
+        "FRA_nap_gendarmerie_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_11",
+    "title": "Centralize the Strongest Internal Security Institutions",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 35,
+    "x": 76,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_gendarmerie_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_gendarmerie_12",
+    "title": "Preserve Local Adaptation in Internal Security",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 35,
+    "x": 84,
+    "y": 109,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_gendarmerie_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_gendarmerie_13",
+    "title": "Audit the Results of Internal Security",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 21,
+    "x": 80,
+    "y": 110,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_11",
+        "FRA_nap_gendarmerie_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_gendarmerie_14",
+    "title": "A Durable Settlement for Internal Security",
+    "chapter": "Gendarmerie and Internal Security",
+    "route": "consular",
+    "days": 49,
+    "x": 80,
+    "y": 111,
+    "prerequisites": [
+      [
+        "FRA_nap_gendarmerie_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_00",
+    "title": "Survey National Conscription",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 114,
+    "prerequisites": [
+      [
+        "FRA_war_on_tyrants"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_01",
+    "title": "Define the National Conscription Mandate",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 21,
+    "x": 4,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_conscription_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_conscription_02",
+    "title": "Consult the Established Interests in National Conscription",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 21,
+    "x": 12,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_conscription_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_conscription_03",
+    "title": "Create a Permanent National Conscription Commission",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 28,
+    "x": 4,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_04",
+    "title": "Publish the First National Conscription Returns",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 28,
+    "x": 12,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_05",
+    "title": "The National Conscription Funding Question",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 117,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_03",
+        "FRA_nap_conscription_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_06",
+    "title": "Train a Professional National Conscription Cadre",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 21,
+    "x": 4,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_07",
+    "title": "Coordinate National Conscription with the Departments",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 21,
+    "x": 12,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_08",
+    "title": "Inspect the National Conscription Establishment",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 35,
+    "x": 4,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_09",
+    "title": "Standardize National Conscription Procedures",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 28,
+    "x": 12,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_10",
+    "title": "The Public Burden of National Conscription",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 120,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_08"
+      ],
+      [
+        "FRA_nap_conscription_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_11",
+    "title": "Centralize the Strongest National Conscription Institutions",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 35,
+    "x": 4,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_conscription_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_conscription_12",
+    "title": "Preserve Local Adaptation in National Conscription",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 35,
+    "x": 12,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_conscription_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_conscription_13",
+    "title": "Audit the Results of National Conscription",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 21,
+    "x": 8,
+    "y": 122,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_11",
+        "FRA_nap_conscription_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_conscription_14",
+    "title": "A Durable Settlement for National Conscription",
+    "chapter": "Conscription and the Nation in Arms",
+    "route": "campaign",
+    "days": 49,
+    "x": 8,
+    "y": 123,
+    "prerequisites": [
+      [
+        "FRA_nap_conscription_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_00",
+    "title": "Survey Veteran Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 32,
+    "y": 114,
+    "prerequisites": [
+      [
+        "FRA_grande_armee_focus"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_01",
+    "title": "Define the Veteran Institutions Mandate",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 28,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_veterans_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_veterans_02",
+    "title": "Consult the Established Interests in Veteran Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 36,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_veterans_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_veterans_03",
+    "title": "Create a Permanent Veteran Institutions Commission",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 28,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_04",
+    "title": "Publish the First Veteran Institutions Returns",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 36,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_05",
+    "title": "The Veteran Institutions Funding Question",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 32,
+    "y": 117,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_03",
+        "FRA_nap_veterans_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_06",
+    "title": "Train a Professional Veteran Institutions Cadre",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 28,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_07",
+    "title": "Coordinate Veteran Institutions with the Departments",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 36,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_08",
+    "title": "Inspect the Veteran Institutions Establishment",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 28,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_09",
+    "title": "Standardize Veteran Institutions Procedures",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 36,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_10",
+    "title": "The Public Burden of Veteran Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 32,
+    "y": 120,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_08"
+      ],
+      [
+        "FRA_nap_veterans_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_11",
+    "title": "Centralize the Strongest Veteran Institutions Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 28,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_veterans_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_veterans_12",
+    "title": "Preserve Local Adaptation in Veteran Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 36,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_veterans_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_veterans_13",
+    "title": "Audit the Results of Veteran Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 32,
+    "y": 122,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_11",
+        "FRA_nap_veterans_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_veterans_14",
+    "title": "A Durable Settlement for Veteran Institutions",
+    "chapter": "Veterans and Military Society",
+    "route": "late_imperial",
+    "days": 70,
+    "x": 32,
+    "y": 123,
+    "prerequisites": [
+      [
+        "FRA_nap_veterans_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_00",
+    "title": "Survey Naval Arsenals",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 114,
+    "prerequisites": [
+      [
+        "FRA_continental_system_focus"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_01",
+    "title": "Define the Naval Arsenals Mandate",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_arsenals_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_arsenals_02",
+    "title": "Consult the Established Interests in Naval Arsenals",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_arsenals_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_arsenals_03",
+    "title": "Create a Permanent Naval Arsenals Commission",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 28,
+    "x": 52,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_04",
+    "title": "Publish the First Naval Arsenals Returns",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_05",
+    "title": "The Naval Arsenals Funding Question",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 117,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_03",
+        "FRA_nap_arsenals_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_06",
+    "title": "Train a Professional Naval Arsenals Cadre",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_07",
+    "title": "Coordinate Naval Arsenals with the Departments",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_08",
+    "title": "Inspect the Naval Arsenals Establishment",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_09",
+    "title": "Standardize Naval Arsenals Procedures",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_10",
+    "title": "The Public Burden of Naval Arsenals",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 120,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_08"
+      ],
+      [
+        "FRA_nap_arsenals_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_11",
+    "title": "Centralize the Strongest Naval Arsenals Institutions",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_arsenals_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_arsenals_12",
+    "title": "Preserve Local Adaptation in Naval Arsenals",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 35,
+    "x": 60,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_arsenals_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_arsenals_13",
+    "title": "Audit the Results of Naval Arsenals",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 21,
+    "x": 56,
+    "y": 122,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_11",
+        "FRA_nap_arsenals_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_arsenals_14",
+    "title": "A Durable Settlement for Naval Arsenals",
+    "chapter": "Ports, Arsenals and Maritime War",
+    "route": "imperial",
+    "days": 70,
+    "x": 56,
+    "y": 123,
+    "prerequisites": [
+      [
+        "FRA_nap_arsenals_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_00",
+    "title": "Survey Internal and Continental Commerce",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 114,
+    "prerequisites": [
+      [
+        "FRA_adopt_declaration"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_01",
+    "title": "Define the Internal and Continental Commerce Mandate",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 21,
+    "x": 76,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_commerce_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_commerce_02",
+    "title": "Consult the Established Interests in Internal and Continental Commerce",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 21,
+    "x": 84,
+    "y": 115,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_commerce_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_commerce_03",
+    "title": "Create a Permanent Internal and Continental Commerce Commission",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 28,
+    "x": 76,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_04",
+    "title": "Publish the First Internal and Continental Commerce Returns",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 28,
+    "x": 84,
+    "y": 116,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_05",
+    "title": "The Internal and Continental Commerce Funding Question",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 117,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_03",
+        "FRA_nap_commerce_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_06",
+    "title": "Train a Professional Internal and Continental Commerce Cadre",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 21,
+    "x": 76,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_07",
+    "title": "Coordinate Internal and Continental Commerce with the Departments",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 21,
+    "x": 84,
+    "y": 118,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_08",
+    "title": "Inspect the Internal and Continental Commerce Establishment",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 35,
+    "x": 76,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_09",
+    "title": "Standardize Internal and Continental Commerce Procedures",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 28,
+    "x": 84,
+    "y": 119,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_10",
+    "title": "The Public Burden of Internal and Continental Commerce",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 120,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_08"
+      ],
+      [
+        "FRA_nap_commerce_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_11",
+    "title": "Centralize the Strongest Internal and Continental Commerce Institutions",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 35,
+    "x": 76,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_commerce_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_commerce_12",
+    "title": "Preserve Local Adaptation in Internal and Continental Commerce",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 35,
+    "x": 84,
+    "y": 121,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_commerce_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_commerce_13",
+    "title": "Audit the Results of Internal and Continental Commerce",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 21,
+    "x": 80,
+    "y": 122,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_11",
+        "FRA_nap_commerce_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_commerce_14",
+    "title": "A Durable Settlement for Internal and Continental Commerce",
+    "chapter": "Commerce and Continental Markets",
+    "route": "common",
+    "days": 49,
+    "x": 80,
+    "y": 123,
+    "prerequisites": [
+      [
+        "FRA_nap_commerce_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_00",
+    "title": "Survey Overseas Administration",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 126,
+    "prerequisites": [
+      [
+        "FRA_egyptian_expedition"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_01",
+    "title": "Define the Overseas Administration Mandate",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 21,
+    "x": 4,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_colonial_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_colonial_02",
+    "title": "Consult the Established Interests in Overseas Administration",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 21,
+    "x": 12,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_colonial_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_colonial_03",
+    "title": "Create a Permanent Overseas Administration Commission",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 28,
+    "x": 4,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_04",
+    "title": "Publish the First Overseas Administration Returns",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 28,
+    "x": 12,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_05",
+    "title": "The Overseas Administration Funding Question",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 129,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_03",
+        "FRA_nap_colonial_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_06",
+    "title": "Train a Professional Overseas Administration Cadre",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 21,
+    "x": 4,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_07",
+    "title": "Coordinate Overseas Administration with the Departments",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 21,
+    "x": 12,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_08",
+    "title": "Inspect the Overseas Administration Establishment",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 35,
+    "x": 4,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_09",
+    "title": "Standardize Overseas Administration Procedures",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 28,
+    "x": 12,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_10",
+    "title": "The Public Burden of Overseas Administration",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 132,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_08"
+      ],
+      [
+        "FRA_nap_colonial_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_11",
+    "title": "Centralize the Strongest Overseas Administration Institutions",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 35,
+    "x": 4,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_colonial_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_colonial_12",
+    "title": "Preserve Local Adaptation in Overseas Administration",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 35,
+    "x": 12,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_colonial_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_colonial_13",
+    "title": "Audit the Results of Overseas Administration",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 21,
+    "x": 8,
+    "y": 134,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_11",
+        "FRA_nap_colonial_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_colonial_14",
+    "title": "A Durable Settlement for Overseas Administration",
+    "chapter": "Colonial Administration and Expeditions",
+    "route": "campaign",
+    "days": 49,
+    "x": 8,
+    "y": 135,
+    "prerequisites": [
+      [
+        "FRA_nap_colonial_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_00",
+    "title": "Survey Political Policing",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 14,
+    "x": 32,
+    "y": 126,
+    "prerequisites": [
+      [
+        "FRA_vive_la_republique"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_01",
+    "title": "Define the Political Policing Mandate",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 21,
+    "x": 28,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_police_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_police_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_police_02",
+    "title": "Consult the Established Interests in Political Policing",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 21,
+    "x": 36,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_police_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_police_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_police_03",
+    "title": "Create a Permanent Political Policing Commission",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 28,
+    "x": 28,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_police_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_04",
+    "title": "Publish the First Political Policing Returns",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 28,
+    "x": 36,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_police_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_05",
+    "title": "The Political Policing Funding Question",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 14,
+    "x": 32,
+    "y": 129,
+    "prerequisites": [
+      [
+        "FRA_nap_police_03",
+        "FRA_nap_police_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_06",
+    "title": "Train a Professional Political Policing Cadre",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 21,
+    "x": 28,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_police_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_07",
+    "title": "Coordinate Political Policing with the Departments",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 21,
+    "x": 36,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_police_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_08",
+    "title": "Inspect the Political Policing Establishment",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 35,
+    "x": 28,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_police_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_09",
+    "title": "Standardize Political Policing Procedures",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 28,
+    "x": 36,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_police_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_10",
+    "title": "The Public Burden of Political Policing",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 14,
+    "x": 32,
+    "y": 132,
+    "prerequisites": [
+      [
+        "FRA_nap_police_08"
+      ],
+      [
+        "FRA_nap_police_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_11",
+    "title": "Centralize the Strongest Political Policing Institutions",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 35,
+    "x": 28,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_police_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_police_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_police_12",
+    "title": "Preserve Local Adaptation in Political Policing",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 35,
+    "x": 36,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_police_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_police_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_police_13",
+    "title": "Audit the Results of Political Policing",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 21,
+    "x": 32,
+    "y": 134,
+    "prerequisites": [
+      [
+        "FRA_nap_police_11",
+        "FRA_nap_police_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_police_14",
+    "title": "A Durable Settlement for Political Policing",
+    "chapter": "Police, Censorship and Public Order",
+    "route": "directory",
+    "days": 49,
+    "x": 32,
+    "y": 135,
+    "prerequisites": [
+      [
+        "FRA_nap_police_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_00",
+    "title": "Survey Imperial Notables",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 126,
+    "prerequisites": [
+      [
+        "FRA_proclaim_empire"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_01",
+    "title": "Define the Imperial Notables Mandate",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_notables_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_notables_02",
+    "title": "Consult the Established Interests in Imperial Notables",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_notables_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_notables_03",
+    "title": "Create a Permanent Imperial Notables Commission",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 28,
+    "x": 52,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_04",
+    "title": "Publish the First Imperial Notables Returns",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_05",
+    "title": "The Imperial Notables Funding Question",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 129,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_03",
+        "FRA_nap_notables_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_06",
+    "title": "Train a Professional Imperial Notables Cadre",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_07",
+    "title": "Coordinate Imperial Notables with the Departments",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_08",
+    "title": "Inspect the Imperial Notables Establishment",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_09",
+    "title": "Standardize Imperial Notables Procedures",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_10",
+    "title": "The Public Burden of Imperial Notables",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 132,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_08"
+      ],
+      [
+        "FRA_nap_notables_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_11",
+    "title": "Centralize the Strongest Imperial Notables Institutions",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_notables_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_notables_12",
+    "title": "Preserve Local Adaptation in Imperial Notables",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 35,
+    "x": 60,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_notables_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_notables_13",
+    "title": "Audit the Results of Imperial Notables",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 21,
+    "x": 56,
+    "y": 134,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_11",
+        "FRA_nap_notables_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_notables_14",
+    "title": "A Durable Settlement for Imperial Notables",
+    "chapter": "Notables and Imperial Society",
+    "route": "imperial",
+    "days": 70,
+    "x": 56,
+    "y": 135,
+    "prerequisites": [
+      [
+        "FRA_nap_notables_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_00",
+    "title": "Survey Postwar Reconstruction",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 80,
+    "y": 126,
+    "prerequisites": [
+      [
+        "FRA_return_from_elba"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_01",
+    "title": "Define the Postwar Reconstruction Mandate",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 76,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_postwar_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_postwar_02",
+    "title": "Consult the Established Interests in Postwar Reconstruction",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 84,
+    "y": 127,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_postwar_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_postwar_03",
+    "title": "Create a Permanent Postwar Reconstruction Commission",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 76,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_04",
+    "title": "Publish the First Postwar Reconstruction Returns",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 84,
+    "y": 128,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_05",
+    "title": "The Postwar Reconstruction Funding Question",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 80,
+    "y": 129,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_03",
+        "FRA_nap_postwar_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_06",
+    "title": "Train a Professional Postwar Reconstruction Cadre",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 76,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_07",
+    "title": "Coordinate Postwar Reconstruction with the Departments",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 84,
+    "y": 130,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_08",
+    "title": "Inspect the Postwar Reconstruction Establishment",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 76,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_09",
+    "title": "Standardize Postwar Reconstruction Procedures",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 84,
+    "y": 131,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_10",
+    "title": "The Public Burden of Postwar Reconstruction",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 80,
+    "y": 132,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_08"
+      ],
+      [
+        "FRA_nap_postwar_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_11",
+    "title": "Centralize the Strongest Postwar Reconstruction Institutions",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 76,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_postwar_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_postwar_12",
+    "title": "Preserve Local Adaptation in Postwar Reconstruction",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 84,
+    "y": 133,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_postwar_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_postwar_13",
+    "title": "Audit the Results of Postwar Reconstruction",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 80,
+    "y": 134,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_11",
+        "FRA_nap_postwar_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_postwar_14",
+    "title": "A Durable Settlement for Postwar Reconstruction",
+    "chapter": "Postwar Settlement and National Recovery",
+    "route": "late_imperial",
+    "days": 70,
+    "x": 80,
+    "y": 135,
+    "prerequisites": [
+      [
+        "FRA_nap_postwar_13"
+      ]
+    ],
+    "exclusive": []
   }
 ]

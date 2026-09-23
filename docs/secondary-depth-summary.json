@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "spain",
+    "name": "Spain",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "poland",
+    "name": "Polish State",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "ottoman",
+    "name": "Ottoman Empire",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "sweden",
+    "name": "Sweden",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "sardinia",
+    "name": "Sardinia-Piedmont",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "naples",
+    "name": "Kingdom of Naples",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "papal",
+    "name": "Papal States",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "venice",
+    "name": "Republic of Venice",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "tuscany",
+    "name": "Grand Duchy of Tuscany",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "german_princes",
+    "name": "German Principalities",
+    "existing_focuses": 23,
+    "shared_new_focuses": 114,
+    "personalised_focuses_per_tag": 38,
+    "effective_total_focuses_per_tag": {
+      "BAV": 175,
+      "SAX": 175,
+      "HAN": 175,
+      "WUR": 175,
+      "BAD": 175,
+      "HES": 175,
+      "MEC": 175
+    },
+    "raw_tree_definitions": 403
+  },
+  {
+    "slug": "portugal",
+    "name": "Portugal",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "netherlands",
+    "name": "The Netherlands",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  },
+  {
+    "slug": "usa",
+    "name": "United States",
+    "existing_focuses": 23,
+    "new_focuses": 152,
+    "personalised_focuses": 38,
+    "total_focuses": 175
+  }
+]

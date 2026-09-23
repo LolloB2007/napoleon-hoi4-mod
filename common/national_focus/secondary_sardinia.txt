@@ -1,25 +1,3281 @@
-focus_tree = { id = nap_secondary_sardinia_tree country = { factor = 0 modifier = { add = 10 tag = SAR } } default = no continuous_focus_position = { x = 30 y = 1000 }
-focus = { id = NAP_SARDINIA_ROOT icon = GFX_NAP_FOCUS_NAP_SARDINIA_ROOT x = 10 y = 0 cost = 5 completion_reward = { set_country_flag = nap_sardinia_campaign_started add_political_power = 50 } }
-focus = { id = NAP_SARDINIA_INST_1 icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_1 x = 3 y = 1 cost = 5 prerequisite = { focus = NAP_SARDINIA_ROOT } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_SARDINIA_INST_2 icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_2 x = 3 y = 2 cost = 7 prerequisite = { focus = NAP_SARDINIA_INST_1 } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_SARDINIA_INST_3 icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_3 x = 3 y = 3 cost = 10 prerequisite = { focus = NAP_SARDINIA_INST_2 } completion_reward = { add_political_power = 35 add_stability = 0.01 } }
-focus = { id = NAP_SARDINIA_INST_4 icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_4 x = 3 y = 4 cost = 5 prerequisite = { focus = NAP_SARDINIA_INST_3 } completion_reward = { add_political_power = 35 add_stability = 0.01 add_ideas = nap_sardinia_institutions } }
-focus = { id = NAP_SARDINIA_MIL_1 icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_1 x = 7 y = 1 cost = 7 prerequisite = { focus = NAP_SARDINIA_ROOT } completion_reward = { army_experience = 10 add_war_support = 0.01 } }
-focus = { id = NAP_SARDINIA_MIL_2 icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_2 x = 7 y = 2 cost = 10 prerequisite = { focus = NAP_SARDINIA_MIL_1 } completion_reward = { army_experience = 10 add_war_support = 0.01 } }
-focus = { id = NAP_SARDINIA_MIL_3 icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_3 x = 7 y = 3 cost = 5 prerequisite = { focus = NAP_SARDINIA_MIL_2 } completion_reward = { army_experience = 10 add_war_support = 0.01 country_event = { id = nap_secondary.1043 days = 1 } } }
-focus = { id = NAP_SARDINIA_MIL_4 icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_4 x = 7 y = 4 cost = 7 prerequisite = { focus = NAP_SARDINIA_MIL_3 } completion_reward = { army_experience = 10 add_war_support = 0.01 add_ideas = nap_sardinia_military } }
-focus = { id = NAP_SARDINIA_HIST_1 icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_1 x = 11 y = 1 cost = 10 prerequisite = { focus = NAP_SARDINIA_ROOT } mutually_exclusive = { focus = NAP_SARDINIA_ALT_1 } completion_reward = { set_country_flag = nap_sardinia_historical clr_country_flag = nap_sardinia_alternate add_ideas = nap_sardinia_historical_course country_event = { id = nap_secondary.1041 days = 1 } } }
-focus = { id = NAP_SARDINIA_HIST_2 icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_2 x = 11 y = 2 cost = 5 prerequisite = { focus = NAP_SARDINIA_HIST_1 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SARDINIA_HIST_3 icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_3 x = 11 y = 3 cost = 7 prerequisite = { focus = NAP_SARDINIA_HIST_2 } completion_reward = { add_stability = 0.03 add_political_power = 40 } }
-focus = { id = NAP_SARDINIA_HIST_4 icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_4 x = 11 y = 4 cost = 5 prerequisite = { focus = NAP_SARDINIA_HIST_3 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SARDINIA_HIST_5 icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_5 x = 11 y = 5 cost = 7 prerequisite = { focus = NAP_SARDINIA_HIST_4 } completion_reward = { add_war_support = 0.04 add_political_power = 50 } }
-focus = { id = NAP_SARDINIA_ALT_1 icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_1 x = 15 y = 1 cost = 5 prerequisite = { focus = NAP_SARDINIA_ROOT } mutually_exclusive = { focus = NAP_SARDINIA_HIST_1 } completion_reward = { set_country_flag = nap_sardinia_alternate clr_country_flag = nap_sardinia_historical add_ideas = nap_sardinia_alternate_course country_event = { id = nap_secondary.1042 days = 1 } } }
-focus = { id = NAP_SARDINIA_ALT_2 icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_2 x = 15 y = 2 cost = 7 prerequisite = { focus = NAP_SARDINIA_ALT_1 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SARDINIA_ALT_3 icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_3 x = 15 y = 3 cost = 5 prerequisite = { focus = NAP_SARDINIA_ALT_2 } completion_reward = { add_stability = 0.02 add_political_power = 50 } }
-focus = { id = NAP_SARDINIA_ALT_4 icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_4 x = 15 y = 4 cost = 7 prerequisite = { focus = NAP_SARDINIA_ALT_3 } completion_reward = { add_political_power = 30 } }
-focus = { id = NAP_SARDINIA_ALT_5 icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_5 x = 15 y = 5 cost = 10 prerequisite = { focus = NAP_SARDINIA_ALT_4 } completion_reward = { add_stability = 0.04 add_political_power = 40 } }
-focus = { id = NAP_SARDINIA_DIP_1 icon = GFX_NAP_FOCUS_NAP_SARDINIA_DIP_1 x = 19 y = 1 cost = 7 prerequisite = { focus = NAP_SARDINIA_ROOT } completion_reward = { add_political_power = 35 } }
-focus = { id = NAP_SARDINIA_DIP_2 icon = GFX_NAP_FOCUS_NAP_SARDINIA_DIP_2 x = 19 y = 2 cost = 5 prerequisite = { focus = NAP_SARDINIA_DIP_1 } completion_reward = { add_political_power = 35 country_event = { id = nap_secondary.1044 days = 1 } } }
-focus = { id = NAP_SARDINIA_DIP_3 icon = GFX_NAP_FOCUS_NAP_SARDINIA_DIP_3 x = 19 y = 3 cost = 7 prerequisite = { focus = NAP_SARDINIA_DIP_2 } completion_reward = { add_political_power = 35 } }
-focus = { id = NAP_SARDINIA_SETTLEMENT icon = GFX_NAP_FOCUS_NAP_SARDINIA_SETTLEMENT x = 10 y = 7 cost = 10 prerequisite = { focus = NAP_SARDINIA_INST_4 } prerequisite = { focus = NAP_SARDINIA_MIL_4 } prerequisite = { focus = NAP_SARDINIA_DIP_3 } available = { OR = { has_country_flag = nap_sardinia_historical has_country_flag = nap_sardinia_alternate } } completion_reward = { add_ideas = nap_sardinia_national_settlement add_stability = 0.04 add_political_power = 75 } }
+focus_tree = {
+	id = nap_secondary_sardinia_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SAR
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 30
+		y = 1000
+	}
+	focus = {
+		id = NAP_SARDINIA_ROOT
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_ROOT
+		x = 10
+		y = 0
+		cost = 5
+		completion_reward = {
+			set_country_flag = nap_sardinia_campaign_started
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_INST_1
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_1
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_ROOT
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_INST_2
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_2
+		x = 3
+		y = 2
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_INST_1
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_INST_3
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_3
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = NAP_SARDINIA_INST_2
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_INST_4
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_INST_4
+		x = 3
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_INST_3
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.01
+			add_ideas = nap_sardinia_institutions
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_MIL_1
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_1
+		x = 7
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_ROOT
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_MIL_2
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_2
+		x = 7
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = NAP_SARDINIA_MIL_1
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_MIL_3
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_3
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_MIL_2
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+			country_event = {
+				id = nap_secondary.1043
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_MIL_4
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_MIL_4
+		x = 7
+		y = 4
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_MIL_3
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.01
+			add_ideas = nap_sardinia_military
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_HIST_1
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_1
+		x = 11
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = NAP_SARDINIA_ROOT
+		}
+		mutually_exclusive = {
+			focus = NAP_SARDINIA_ALT_1
+		}
+		completion_reward = {
+			set_country_flag = nap_sardinia_historical
+			clr_country_flag = nap_sardinia_alternate
+			add_ideas = nap_sardinia_historical_course
+			country_event = {
+				id = nap_secondary.1041
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_HIST_2
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_2
+		x = 11
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_HIST_1
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_HIST_3
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_3
+		x = 11
+		y = 3
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_HIST_2
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_HIST_4
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_4
+		x = 11
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_HIST_3
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_HIST_5
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_HIST_5
+		x = 11
+		y = 5
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_HIST_4
+		}
+		completion_reward = {
+			add_war_support = 0.04
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_ALT_1
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_1
+		x = 15
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_ROOT
+		}
+		mutually_exclusive = {
+			focus = NAP_SARDINIA_HIST_1
+		}
+		completion_reward = {
+			set_country_flag = nap_sardinia_alternate
+			clr_country_flag = nap_sardinia_historical
+			add_ideas = nap_sardinia_alternate_course
+			country_event = {
+				id = nap_secondary.1042
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_ALT_2
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_2
+		x = 15
+		y = 2
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_ALT_1
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_ALT_3
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_3
+		x = 15
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_ALT_2
+		}
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_ALT_4
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_4
+		x = 15
+		y = 4
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_ALT_3
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_ALT_5
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_ALT_5
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = NAP_SARDINIA_ALT_4
+		}
+		completion_reward = {
+			add_stability = 0.04
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DIP_1
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DIP_1
+		x = 19
+		y = 1
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_ROOT
+		}
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DIP_2
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DIP_2
+		x = 19
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DIP_1
+		}
+		completion_reward = {
+			add_political_power = 35
+			country_event = {
+				id = nap_secondary.1044
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DIP_3
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DIP_3
+		x = 19
+		y = 3
+		cost = 7
+		prerequisite = {
+			focus = NAP_SARDINIA_DIP_2
+		}
+		completion_reward = {
+			add_political_power = 35
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_SETTLEMENT
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_SETTLEMENT
+		x = 10
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = NAP_SARDINIA_INST_4
+		}
+		prerequisite = {
+			focus = NAP_SARDINIA_MIL_4
+		}
+		prerequisite = {
+			focus = NAP_SARDINIA_DIP_3
+		}
+		available = {
+			OR = {
+				has_country_flag = nap_sardinia_historical
+				has_country_flag = nap_sardinia_alternate
+			}
+		}
+		completion_reward = {
+			add_ideas = nap_sardinia_national_settlement
+			add_stability = 0.04
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_01
+		x = 26
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_SETTLEMENT
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_02
+		x = 26
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_03
+		x = 26
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_04
+		x = 26
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_05
+		x = 26
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_06
+		x = 26
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_07
+		x = 26
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_08
+		x = 26
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_09
+		x = 26
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_10
+		x = 26
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_11
+		x = 26
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_12
+		x = 26
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_13
+		x = 26
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_14
+		x = 26
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_15
+		x = 26
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_16
+		x = 26
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_17
+		x = 26
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_18
+		x = 26
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_STATE_ADMINISTRATION_19
+		x = 26
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_01
+		x = 38
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_SETTLEMENT
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_02
+		x = 38
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_03
+		x = 38
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_04
+		x = 38
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_05
+		x = 38
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_06
+		x = 38
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_07
+		x = 38
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_08
+		x = 38
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_09
+		x = 38
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_10
+		x = 38
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_11
+		x = 38
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_12
+		x = 38
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_13
+		x = 38
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_14
+		x = 38
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_15
+		x = 38
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_16
+		x = 38
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_17
+		x = 38
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_18
+		x = 38
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_REVENUE_AND_PUBLIC_CREDIT_19
+		x = 38
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_01
+		x = 50
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_SETTLEMENT
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_02
+		x = 50
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_03
+		x = 50
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_04
+		x = 50
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_05
+		x = 50
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_06
+		x = 50
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_07
+		x = 50
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_08
+		x = 50
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_09
+		x = 50
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_10
+		x = 50
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_11
+		x = 50
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_12
+		x = 50
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_13
+		x = 50
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_14
+		x = 50
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_15
+		x = 50
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_16
+		x = 50
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_17
+		x = 50
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_18
+		x = 50
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_ARMY_REFORM_19
+		x = 50
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_army_reform_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			army_experience = 4
+			add_war_support = 0.002
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_01
+		x = 62
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_SETTLEMENT
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_02
+		x = 62
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_03
+		x = 62
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_04
+		x = 62
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_05
+		x = 62
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_06
+		x = 62
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_07
+		x = 62
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_08
+		x = 62
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_09
+		x = 62
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_10
+		x = 62
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_11
+		x = 62
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_12
+		x = 62
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_13
+		x = 62
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_14
+		x = 62
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_15
+		x = 62
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_16
+		x = 62
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_17
+		x = 62
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_18
+		x = 62
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_INFRASTRUCTURE_AND_SUPPLY_19
+		x = 62
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_infrastructure_and_supply_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 4
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_01
+		x = 26
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_state_administration_19
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_02
+		x = 26
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_03
+		x = 26
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_04
+		x = 26
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_05
+		x = 26
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_06
+		x = 26
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_07
+		x = 26
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_08
+		x = 26
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_09
+		x = 26
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_10
+		x = 26
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_11
+		x = 26
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_12
+		x = 26
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_13
+		x = 26
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_14
+		x = 26
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_15
+		x = 26
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_16
+		x = 26
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_17
+		x = 26
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_18
+		x = 26
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_FOREIGN_POLICY_19
+		x = 26
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_foreign_policy_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 6
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_C3F984FC085
+		x = 38
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_revenue_and_public_credit_19
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_C83029765E2
+		x = 38
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_5D2C114897C
+		x = 38
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_49AB154CE61
+		x = 38
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_5C4BF0B59DB
+		x = 38
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_5D279CC0BFD
+		x = 38
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_8FA6F1D9107
+		x = 38
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_A0487D52103
+		x = 38
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_7F8F777D8BD
+		x = 38
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_E4A95049B40
+		x = 38
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_44020F06A2B
+		x = 38
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_F0644A98E3F
+		x = 38
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_CAEDE6D7E4F
+		x = 38
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_368752B42FD
+		x = 38
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_9D0AD124580
+		x = 38
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_1521CA3B82C
+		x = 38
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_246A126D5D1
+		x = 38
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_8EF238FEF2C
+		x = 38
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_SARDINIA_PIEDMONT_SOCIAL_AND_INSTITUTIONA_7462017DED7
+		x = 38
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_sardinia_piedmont_social_and_institutional_settlement_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_stability = 0.003
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_01
+		x = 110
+		y = 10
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_SETTLEMENT
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_02
+		x = 110
+		y = 11
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_03
+		x = 110
+		y = 12
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_04
+		x = 110
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_05
+		x = 110
+		y = 14
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_06
+		x = 110
+		y = 15
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_07
+		x = 110
+		y = 16
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_08
+		x = 110
+		y = 17
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_09
+		x = 110
+		y = 18
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_10
+		x = 110
+		y = 19
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_11
+		x = 110
+		y = 20
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_12
+		x = 110
+		y = 21
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_13
+		x = 110
+		y = 22
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_14
+		x = 110
+		y = 23
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_15
+		x = 110
+		y = 24
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_16
+		x = 110
+		y = 25
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_17
+		x = 110
+		y = 26
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_18
+		x = 110
+		y = 27
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_the_savoyard_state_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_THE_SAVOYARD_STATE_19
+		x = 110
+		y = 28
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_01
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_01
+		x = 110
+		y = 34
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_the_savoyard_state_19
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_02
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_02
+		x = 110
+		y = 35
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_01
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_03
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_03
+		x = 110
+		y = 36
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_02
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_04
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_04
+		x = 110
+		y = 37
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_03
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_05
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_05
+		x = 110
+		y = 38
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_04
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_06
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_06
+		x = 110
+		y = 39
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_05
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_07
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_07
+		x = 110
+		y = 40
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_06
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_08
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_08
+		x = 110
+		y = 41
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_07
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_09
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_09
+		x = 110
+		y = 42
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_08
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_10
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_10
+		x = 110
+		y = 43
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_09
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_11
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_11
+		x = 110
+		y = 44
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_10
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_12
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_12
+		x = 110
+		y = 45
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_11
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_13
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_13
+		x = 110
+		y = 46
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_12
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_14
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_14
+		x = 110
+		y = 47
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_13
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_15
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_15
+		x = 110
+		y = 48
+		cost = 2
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_14
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_16
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_16
+		x = 110
+		y = 49
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_15
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_17
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_17
+		x = 110
+		y = 50
+		cost = 4
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_16
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_18
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_18
+		x = 110
+		y = 51
+		cost = 5
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_17
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_19
+		icon = GFX_NAP_FOCUS_NAP_SARDINIA_DEPTH_ALPINE_ARMY_AND_FORTRESSES_19
+		x = 110
+		y = 52
+		cost = 3
+		prerequisite = {
+			focus = NAP_SARDINIA_DEPTH_alpine_army_and_fortresses_18
+		}
+		available = {
+			tag = SAR
+		}
+		completion_reward = {
+			add_political_power = 5
+			add_stability = 0.01
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

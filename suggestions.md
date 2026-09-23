@@ -11,12 +11,12 @@ These are proposals, not approvals. Evaluate them against a playable campaign an
 | Route-specific integration | Coring becomes an investment rather than a conquest reward | Approve states, delay, compliance and failures; A04 |
 | Formable/releasable registry | Auditable founders, borders and client status | A05/A06 |
 | Temporary coalitions | Separate peace, exit and later re-entry | Prevent automatic total-war escalation and recursive calls |
-| Focus panels and navigation | Keep 450+ nodes usable | Requires in-game layout and accessibility testing |
+| Focus panels and navigation | Keep 4,000+ campaign focus nodes usable | Requires in-game layout and accessibility testing |
 | Campaign measurement fixtures | Balance organisation, supply and casualties using evidence | Manual logs/saves first; no remote player telemetry |
 | Installed-definition compatibility audit | Catch unsupported effects/modifiers | Requires the user's game baseline; A08 |
 | Asset provenance ledger | Avoid unlicensed redistribution | A10 |
 
-The end date, chronology policy, speculative political routes and expanded core eligibility are unchanged until approved.
+A01-A12 remain approved policy. The current focus-depth targets and explicit formable core-state rule are owner-directed implementation work; further speculative territorial expansion still requires explicit source entries.
 
 
 ## Secondary-campaign follow-up ideas
