@@ -1,0 +1,113 @@
+{
+  "meaningful_tags": [
+    "FRA",
+    "ENG",
+    "HAB",
+    "RUS",
+    "PRU",
+    "SPR",
+    "POR",
+    "TUR",
+    "SWE",
+    "DEN",
+    "POL",
+    "NET",
+    "SAR",
+    "NAP",
+    "PAP",
+    "VEN",
+    "GEN",
+    "TUS",
+    "MOD",
+    "PAR",
+    "LUC",
+    "MAL",
+    "HRE",
+    "BAV",
+    "SAX",
+    "HAN",
+    "WUR",
+    "BAD",
+    "HES",
+    "MEC",
+    "HAM",
+    "BRE",
+    "LUB",
+    "TYR",
+    "SWI",
+    "RAG",
+    "MTN",
+    "WLD",
+    "ITA",
+    "BAT",
+    "HOL",
+    "WES",
+    "RHC",
+    "WAR",
+    "NOR",
+    "GER",
+    "MOR",
+    "TUN",
+    "ALG",
+    "TRP",
+    "EGY",
+    "USA",
+    "CAN",
+    "HAI",
+    "MEX",
+    "BRA",
+    "MUG",
+    "MYS",
+    "MAR",
+    "HYD",
+    "SIK"
+  ],
+  "groups": {
+    "north_africa": [
+      "MOR",
+      "TUN",
+      "ALG",
+      "TRP",
+      "EGY"
+    ],
+    "north_america": [
+      "USA",
+      "CAN"
+    ],
+    "colonial_americas": [
+      "HAI",
+      "MEX",
+      "BRA"
+    ],
+    "india": [
+      "MUG",
+      "MYS",
+      "MAR",
+      "HYD",
+      "SIK"
+    ]
+  },
+  "colonial_subjects": [
+    {
+      "overlord": "FRA",
+      "subject": "HAI",
+      "label": "Saint-Domingue"
+    },
+    {
+      "overlord": "SPR",
+      "subject": "MEX",
+      "label": "New Spain"
+    },
+    {
+      "overlord": "POR",
+      "subject": "BRA",
+      "label": "Brazil"
+    },
+    {
+      "overlord": "ENG",
+      "subject": "CAN",
+      "label": "British North America"
+    }
+  ],
+  "outside_scope_policy": "Countries outside the approved scope receive an abstraction spirit at startup rather than fabricated country content."
+}

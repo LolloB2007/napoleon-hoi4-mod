@@ -1,0 +1,4 @@
+﻿l_english:
+ nap_compatibility.1.t:0 "Required DLC Missing"
+ nap_compatibility.1.d:0 "Napoleonic Era targets Hearts of Iron IV 1.19.x and requires La Résistance. This configuration is unsupported without that DLC enabled."
+ nap_compatibility.1.a:0 "Return with La Résistance enabled."

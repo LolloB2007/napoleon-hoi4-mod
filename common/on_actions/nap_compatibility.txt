@@ -1,0 +1,5 @@
+on_actions = {
+ on_startup = { effect = {
+  FRA = { if = { limit = { NOT = { nap_required_dlc_available = yes } } country_event = { id = nap_compatibility.1 hours = 1 } } }
+ } }
+}

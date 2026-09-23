@@ -14,6 +14,7 @@ spriteType = { name = "GFX_NAP_EVENT_12" texturefile = "gfx/event_pictures/nap_e
 spriteType = { name = "GFX_nap_ui_seal" texturefile = "gfx/interface/nap_ui_seal.tga" }
 spriteType = { name = "GFX_nap_ui_divider" texturefile = "gfx/interface/nap_ui_divider.tga" }
 spriteType = { name = "GFX_nap_map_legend" texturefile = "gfx/interface/nap_map_legend.tga" }
+spriteType = { name = "GFX_nap_cartographic_frame" texturefile = "gfx/interface/nap_cartographic_frame.tga" }
 spriteType = { name = "GFX_NAP_FOCUS_ENG_PAX_BRITANNICA_FOCUS" texturefile = "gfx/interface/goals/eng_pax_britannica_focus.tga" }
 spriteType = { name = "GFX_NAP_FOCUS_ENG_PAX_BRITANNICA_FOCUS_shine" texturefile = "gfx/interface/goals/eng_pax_britannica_focus.tga" }
 spriteType = { name = "GFX_NAP_FOCUS_ENG_FACTORY_ACTS" texturefile = "gfx/interface/goals/eng_factory_acts.tga" }

@@ -29,7 +29,6 @@ The end date, chronology policy, speculative political routes and expanded core 
 
 ## Presentation follow-up
 
-- Replace procedural portrait cards with the approved A10 visual language only after provenance/licensing is recorded.
-- If A10 chooses map recolouring, prototype it on a separate visual branch because terrain/colourmap replacement has a much larger compatibility surface than UI art.
-- Build the A11 soundtrack as a self-contained radio station with provenance for every recording.
-- Treat English as the source localisation and generate no machine-translated release files without A12 approval and human review.
+- A10 is implemented as the approved painted/engraved/cartographic hybrid without invasive strategic-map recolouring.
+- Any historical-art replacement must be redistribution-safe and added to the provenance ledger.
+- A11 and A12 are implemented in their own stacked passes.
