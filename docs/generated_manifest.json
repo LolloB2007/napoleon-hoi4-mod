@@ -1,6 +1,6 @@
 {
-  "README.md": "125828fcd8596ad9ee2b82f793e33a1c818bc35cea69c59bcde55f72481eacdb",
-  "ROADMAP.md": "2858b9153fc8567235246a78a44125e4da91e53fedc75330ae55be75aad5aceb",
+  "README.md": "829a20e4b5fe22e9be8d07993744e2b277e58687cedce07e922f7c15e4be7c2b",
+  "ROADMAP.md": "893c9dbec3b0891306d0922ca693146af4cf6f045d8829289a17c3945d9faeb0",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -2271,5 +2271,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "cccbf598a8fbcaab9d6a5e9e15b53382522beb8c0c5d2ab588ebfc9d43399743",
-  "to ask lollo.md": "b68674a753df943846aba0963b34ed4fb5a5230467c963b7340f0437265d2a49"
+  "to ask lollo.md": "cab82cc210a633a8264fe55cd0802fa6b6cbc1aa01165302ef32744839949edf"
 }

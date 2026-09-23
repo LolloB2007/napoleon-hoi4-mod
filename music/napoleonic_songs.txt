@@ -1,0 +1,17 @@
+music_station = "base_music"
+
+music = {
+ song = "Napoleonic Era - Council of Europe"
+ chance = {
+  base = 6
+  modifier = { has_war = yes add = 3 }
+ }
+}
+music = {
+ song = "Napoleonic Era - La Marseillaise Rendering"
+ chance = {
+  base = 2
+  modifier = { original_tag = FRA add = 10 }
+  modifier = { has_country_flag = french_revolutionary_path add = 8 }
+ }
+}
