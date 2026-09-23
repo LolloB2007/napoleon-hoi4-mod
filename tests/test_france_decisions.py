@@ -1,3 +1,4 @@
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -28,6 +29,10 @@ class FranceDecisionMechanicsTests(unittest.TestCase):
                 parse(text)
         for path in ('common/national_focus/FRA.txt','events/01_french_revolution.txt','events/02_napoleonic_wars.txt','events/03_collapse.txt'):
             parse(self.outputs[path])
+
+    def test_generated_decision_count(self):
+        index=json.loads(self.own['docs/france-decision-index.json'])
+        self.assertEqual(len(index),65)
 
     def test_six_french_categories_plus_foreign_customs(self):
         cats={e.key for e in self.decisions}
