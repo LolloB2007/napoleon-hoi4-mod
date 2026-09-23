@@ -39,8 +39,8 @@ class PresentationTests(unittest.TestCase):
         raw_custom_icon_count=0
         for path in focus_paths:
             raw=self.text(path)
-            raw_focus_count += len(re.findall(r'(?m)^\\s*(?:focus|shared_focus)\\s*=\\s*\\{',raw))
-            raw_custom_icon_count += len(re.findall(r'\\bicon\\s*=\\s*GFX_NAP_FOCUS_[A-Z0-9_]+',raw))
+            raw_focus_count += len(re.findall(r'(?m)^\s*(?:focus|shared_focus)\s*=\s*\{',raw))
+            raw_custom_icon_count += len(re.findall(r'\bicon\s*=\s*GFX_NAP_FOCUS_[A-Z0-9_]+',raw))
         self.assertGreaterEqual(raw_focus_count,800)
         self.assertEqual(raw_custom_icon_count,raw_focus_count)
         self.assertEqual(len(icons),len(ids))
