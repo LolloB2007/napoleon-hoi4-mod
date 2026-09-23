@@ -1,0 +1,10 @@
+music = {
+ name = "Napoleonic Era - Council of Europe"
+ file = "nap_council_of_europe.ogg"
+ volume = 0.75
+}
+music = {
+ name = "Napoleonic Era - La Marseillaise Rendering"
+ file = "nap_marseillaise_rendering.ogg"
+ volume = 0.72
+}
