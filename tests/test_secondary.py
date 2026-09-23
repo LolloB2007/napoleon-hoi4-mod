@@ -1,3 +1,4 @@
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -14,6 +15,13 @@ class SecondaryCampaignTests(unittest.TestCase):
 
     def test_profile_count(self):
         self.assertEqual(len(PROFILES),13)
+    def test_a09_all_alternate_routes_have_period_basis(self):
+        registry=json.loads((ROOT/'content/alternate_routes.json').read_text())
+        for profile in PROFILES:
+            row=registry['secondary'][profile['slug']]
+            self.assertEqual(row['title'],profile['alt'])
+            self.assertGreater(len(row['basis']),40)
+        self.assertEqual({r['id'] for r in registry['france']},{'constitutional','republican','royalist','bonapartist'})
 
     def test_roadmap_families_covered(self):
         tags={t for p in PROFILES for t in p['tags']}

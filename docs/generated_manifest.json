@@ -1,6 +1,6 @@
 {
-  "README.md": "b7602209bae657ac194493f43cb383b1925880024851cbbbc9d4dc75a68a24a2",
-  "ROADMAP.md": "217df91d7977a695112b0dd981d61385cf5f221027c88d3123d3aac7a254426f",
+  "README.md": "d1799077d0c0cd9753d91105179129fdf884cdf849aebc1677d83a84de05b60e",
+  "ROADMAP.md": "802e2c50263f6a36110a22df0984663650482a6d526180117386a06e568d48c3",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -142,8 +142,8 @@
   "docs/great-power-programmes.md": "03ec67e7f5413d2ab6fbbf5c335a057d99a0b363ae2a4619e52f984a676cdd35",
   "docs/major-focus-index.json": "4be7697bca4ba65525ac0fd74db52f56e82d6f5f6a72133e886b263a6b1c82c6",
   "docs/presentation.md": "3b41fb0cd8156fe96f37c4320ce37bdaaa632a48a5198d7559a0201a5c3144ae",
-  "docs/secondary-campaigns.json": "430e313e1538e357ba4168a449a7579be061bb00ae3316f4e793e36616b3e1ee",
-  "docs/secondary-campaigns.md": "c41a11b68dcbf49c629f7623d5585f47d6108467a7786d888129b44780df3b56",
+  "docs/secondary-campaigns.json": "c169a460ef54db1911cb32238f51f2e8163d418bcf325ca6ab942cb4705150e2",
+  "docs/secondary-campaigns.md": "8489d8aa633fbd2cd4dec9a8fb2446472ba6085b2189c0d34714e48eda680cd6",
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
   "docs/territorial-registry.json": "9b574a1d618066bb0b9d2154866744539f7417d055eb0398f6b24b907112fcd1",
   "docs/territorial-systems.md": "98d0d0d53042f46d03a8c0d6d924515f8dccc6bffc0b7e39d7415991e4c5d0ff",
@@ -2258,7 +2258,7 @@
   "localisation/english/nap_french_development_l_english.yml": "c1683864127d89fb2372f62ccdd1c906a91239038fa869f9bef3b603af6fc315",
   "localisation/english/nap_geography_l_english.yml": "172b1b67d5f80cb7546bb5aa5ee839e615dfe3367fc8553fe96119bcb3183fca",
   "localisation/english/nap_major_programmes_l_english.yml": "bb78913837cf34bed76246b17cb955c7607572978dac8832b0cda4d5affddd86",
-  "localisation/english/nap_secondary_campaigns_l_english.yml": "2bcb39910cae442576514f9cc721211b75a2c3aa4254c87450b8383d2116f725",
+  "localisation/english/nap_secondary_campaigns_l_english.yml": "11e11c083d03c7ff6d8f8107d7c301c917bce92648257fb63156e270638060c2",
   "localisation/english/nap_territorial_l_english.yml": "e880d980f58b5f2fca25493c32378a58062722b8a5cb297db1bb87441428f955",
   "localisation/english/napoleonic_diplomacy_l_english.yml": "8405a588420991f13ac7fb09ee1f6507443280695880eb545d29d26448c00fdf",
   "localisation/english/napoleonic_units_l_english.yml": "e495f08bc359a7fb66a97af958528423868d62c3a86f7aae02ade9fe250c6a60",
@@ -2270,5 +2270,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "f068970a2c1217a1b724fdea3f171c230d8b38561842071ebc9bc2f63cba8cb7",
-  "to ask lollo.md": "a5a53c986e955053131e43b6d7778ccac92b501cdabecd8e078b84e25545a2d8"
+  "to ask lollo.md": "9b036eb690d85b33bc6a858eaa7e8fb05360f7df73253b8d535c88366dc6958c"
 }
