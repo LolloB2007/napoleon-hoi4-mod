@@ -1,0 +1,11 @@
+# Coalition framework (Milestone 4 slice)
+
+Seven finite rounds share a British convenor, candidate checks, consent events, paid subsidies, membership flags, exhaustion-aware peace requests and re-entry cooldowns. Dates are eligibility floors; neither invitations nor foreign declarations occur merely because a date is reached. Britain can decline a round, and invitees can refuse without being forced into war.
+
+The framework creates its own temporary native faction only when Britain is independent and faction-free. It does not dismantle unrelated factions or recruit their members. The inherited British coalition focus becomes a readiness flag rather than creating an incompatible permanent faction early.
+
+Twelve subsidy decisions transfer 15 treasury from donor to recipient without exceeding the cap. Thirteen participant peace requests can be accepted or rejected by France; British acceptance closes the round, while another participant can leave separately. Participants detach before white peace. Automatically attached subject members are included in end-of-round cleanup. Template checks protect unrelated factions. Flags and transaction locks precede peace callbacks.
+
+Opening-war treaties keep their dates and bounded terms but settle in event immediate effects, not delayed player acknowledgement. Jassy changes state 192 only if still Ottoman-owned; core edits use state scope. Capitulation and pre-conference hooks have opposite ROOT/FROM conventions. Third-party victories do not grant Russia a treaty windfall.
+
+This does not finish all of Milestone 4. Britain remains the convenor; fallback leadership, bespoke treaty terms, client conversion and historical war-goal catalogues remain future work. The faction manifest is a neutral placeholder, not a progression reward. Native faction/peace behavior requires a real engine test. The source protects the intended transactions but does not establish how every simultaneous-war callback behaves in HOI4.

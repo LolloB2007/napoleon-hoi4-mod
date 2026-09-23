@@ -1,0 +1,1 @@
+nap_coalition_council = { icon = generic_political_discourse allowed = { always = yes } visible = { OR = { tag = FRA tag = ENG has_country_flag = nap_coalition_member } } }

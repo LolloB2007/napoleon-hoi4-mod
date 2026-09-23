@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Milestone 3: 450-focus French expansion and legacy route repairs**
+**Current branch: Milestone 4: coalition rounds, funding, separate peace and treaty safety**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -28,14 +28,14 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- Repository source contracts and checked-in deterministic engine outputs
-- Eight bounded state/army meters, twelve paid decisions and eleven reusable spirits
-- French tree expanded from 29 to 450 definitions across 28 named policy chapters
-- Focus durations of 14, 21, 28, 35, 49 and 70 days in the new chapters
-- 84 policy dilemmas, 56 programme/settlement spirits, execution-time route and payment guards
-- Girondin/Jacobin programme exclusion and a Directory path that does not require embracing the Terror
-- Explicit leaders for the Convention, Directory, Consulate and Restorations; deposed-king trial no longer retires the current republican leader
-- README, ROADMAP, approval queue and suggestions synchronized; historical date/coring policies unchanged
+- 450 French focus definitions and 84 policy events retained
+- Eight reusable state/army meters and twelve management decisions
+- Seven coalition rounds with native temporary factions and voluntary entry
+- Twelve funded subsidies and thirteen negotiated peace requests
+- Settlement locks, re-entry cooldowns, own-faction checks and third-party territory protection
+- Opening treaties execute immediately rather than waiting for player acknowledgement
+- Jassy uses valid state-scoped core edits and cannot seize third-party Odessa
+- Tracking documents updated; alternate-winner treaty terms and territorial approvals remain open
 
 ## Installation for testing
 
@@ -86,7 +86,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-50 local unit tests pass. They cover the 450-node graph, missing references/cycles, branch joins, coordinates, six durations, 84 event references/localisation, idempotent rewards, resource checks, legacy route guards and parser round trips. No HOI4 executable was run; focus layout, AI pacing and campaign balance are not yet certified.
+72 local unit tests pass. Coalition integration uses local fixtures, while the CI generator also reads exact retained master blobs. Tests cover ordering, payment conservation, consent checks, bounded/idempotent settlement, scope conventions and output path safety. No HOI4 runtime test has been performed; simultaneous-war and faction behavior remains an engine acceptance item.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

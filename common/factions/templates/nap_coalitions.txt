@@ -1,0 +1,1 @@
+nap_coalition_template = { name = nap_coalition_template_name icon = GFX_faction_logo_generic_16 manifest = nap_coalition_manifest visible = { always = no } }

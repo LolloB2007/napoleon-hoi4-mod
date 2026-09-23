@@ -1,0 +1,1 @@
+ideas = { country = { nap_coalition_coordination = { picture = generic_army_bonus allowed = { always = yes } removal_cost = -1 modifier = { planning_speed = 0.03 } } } }

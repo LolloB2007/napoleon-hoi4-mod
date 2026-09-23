@@ -1,6 +1,6 @@
 # To ask Lollo
 
-**Current branch: Milestone 3: 450-focus French expansion and legacy route repairs**
+**Current branch: Milestone 4: coalition rounds, funding, separate peace and treaty safety**
 
 This is the live approval queue. No answer is presumed. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
 
