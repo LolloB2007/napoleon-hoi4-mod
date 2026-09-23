@@ -1,4 +1,3 @@
-# Generated from retained source; A01 uses focus date floors, route state and repeat guards rather than autonomous historical dates.
 add_namespace = french_revolution
 add_namespace = napoleonic_timeline
 news_event = {
@@ -756,11 +755,6 @@ country_event = {
 			add_war_support = 0.15
 			add_stability = -0.20
 			set_country_flag = reign_of_terror_active
-			country_event = {
-				id = french_revolution.11
- picture = GFX_NAP_EVENT_03
-				days = 320
-			}
 			create_country_leader = {
 				name = "Maximilien Robespierre"
 	picture = GFX_NAP_PORTRAIT_MAXIMILIEN_ROBESPIERRE
@@ -928,20 +922,6 @@ country_event = {
 			}
 		}
 	}
-	trigger = {
-		nap_fra_route_republican = yes
-		has_country_flag = french_republic
-		has_country_flag = nap_fra_thermidor_settled
-		NOT = {
-			has_country_flag = directory_active
-		}
-		NOT = {
-			has_country_flag = nap_legacy_french_revolution_12_settled
-		}
-	}
-	mean_time_to_happen = {
-		days = 30
-	}
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -961,6 +941,7 @@ country_event = {
 			factor = 100
 		}
 	}
+	is_triggered_only = yes
 }
 country_event = {
 	id = french_revolution.14
@@ -968,20 +949,6 @@ country_event = {
 	desc = french_revolution.14.d
 	picture = GFX_NAP_EVENT_05
 	fire_only_once = yes
-	trigger = {
-		tag = FRA
-		has_country_flag = directory_active
-		has_country_flag = french_revolutionary_path
-		NOT = {
-			has_country_flag = french_constitutional_path
-		}
-		NOT = {
-			has_country_flag = french_royalist_path
-		}
-		OR = {
-			has_country_flag = brumaire_coup_focus
-		}
-	}
 	option = {
 		name = french_revolution.14.a
 		ai_chance = {

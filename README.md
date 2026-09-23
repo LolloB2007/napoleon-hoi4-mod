@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Deep focus expansion implemented on development branch; static and HOI4 runtime validation pending**
+**Current branch: French decision-driven campaign mechanics implemented in source; full HOI4 runtime validation pending**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -29,6 +29,7 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
 - 630 French focuses; Britain 368, Austria 368, Prussia 364 and Russia 366 estimated total focuses; thirteen secondary campaigns at 175 focuses each
+- Decision-driven French campaign layer: revolutionary crisis, Bonaparte prestige/rise, Continental enforcement/evasion, Peninsular resistance, Russian logistics/outcomes and 1814-1815 transitions
 - Reusable era mechanics and seven temporary coalition rounds
 - Formables grant cores only from explicit audited core-state catalogues on successful formation
 - Thirteen secondary campaign packs covering every Milestone 8 geography
@@ -92,7 +93,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-Deep expansion regression coverage checks France at 630 focuses, each major in the 350-400 range, each secondary campaign at 175 focuses with 38 personalised focuses, explicit formable core sets, syntax, localisation and territorial safety. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
+French decision regression coverage verifies 67 decisions, transition-event rewiring, variable clamping, Continental enforcement/evasion, Peninsular resistance, Russian preparation/attrition/outcomes and restoration/Hundred Days state transitions, alongside the existing full repository suite. HOI4 1.19.x + La Résistance runtime acceptance remains required.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

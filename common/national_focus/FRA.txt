@@ -298,11 +298,8 @@ focus_tree = {
 		y = 5
 		cost = 10
 		completion_reward = {
-			country_event = {
-				id = french_revolution.10
-				days = 1
-			}
 			add_ideas = levee_en_masse
+			set_country_flag = nap_fra_terror_decisions_unlocked
 		}
 		available = {
 			date > 1793.9.5
@@ -390,7 +387,7 @@ focus_tree = {
 					logistics_skill = 5
 				}
 			}
-			set_country_flag = italian_campaign_won
+			set_country_flag = nap_fra_italian_decisions_unlocked
 		}
 	}
 	focus = {
@@ -406,7 +403,7 @@ focus_tree = {
 			army_experience = 25
 			add_political_power = -25
 			add_war_support = 0.05
-			set_country_flag = egyptian_expedition_complete
+			set_country_flag = nap_fra_egyptian_decisions_unlocked
 		}
 		available = {
 			date > 1798.7.1
@@ -430,10 +427,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_country_flag = brumaire_coup_focus
-			country_event = {
-				id = french_revolution.14
-				days = 1
-			}
+			set_country_flag = nap_fra_brumaire_decisions_unlocked
 		}
 	}
 	focus = {
@@ -452,10 +446,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_country_flag = proclaim_empire_focus
-			country_event = {
-				id = napoleonic_wars.3
-				days = 1
-			}
+			set_country_flag = nap_fra_empire_decisions_unlocked
 		}
 	}
 	focus = {
@@ -488,10 +479,7 @@ focus_tree = {
 		y = 8
 		cost = 10
 		completion_reward = {
-			country_event = {
-				id = napoleonic_wars.10
-				days = 1
-			}
+			set_country_flag = nap_fra_continental_decisions_unlocked
 		}
 		available = {
 			date > 1806.11.21
@@ -537,10 +525,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_country_flag = invade_russia_focus
-			country_event = {
-				id = napoleonic_wars.16
-				days = 1
-			}
+			set_country_flag = nap_fra_russia_decisions_unlocked
 		}
 	}
 	focus = {
@@ -553,17 +538,7 @@ focus_tree = {
 		y = 9
 		cost = 10
 		completion_reward = {
-			declare_war_on = {
-				target = SPR
-				type = annex_everything
-			}
-			declare_war_on = {
-				target = POR
-				type = annex_everything
-			}
-			SPR = {
-				add_ideas = spanish_ulcer
-			}
+			set_country_flag = nap_fra_peninsular_decisions_unlocked
 		}
 	}
 	focus = {
@@ -584,10 +559,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_country_flag = return_from_elba_focus
-			country_event = {
-				id = napoleonic_collapse.8
-				days = 1
-			}
+			set_country_flag = nap_fra_elba_decisions_unlocked
 		}
 	}
 	focus = {

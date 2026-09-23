@@ -1,0 +1,7 @@
+nap_fra_revolutionary_crisis = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
+nap_fra_napoleon_rise = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
+nap_fra_continental_system = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
+nap_fra_peninsular_war = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
+nap_fra_russian_campaign = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
+nap_fra_restoration_cycle = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
+nap_continental_foreign = { icon = generic_political_discourse allowed = { always = yes } visible = { has_global_flag = continental_system_active has_idea = nap_continental_compliance NOT = { tag = FRA } NOT = { tag = ENG } } }

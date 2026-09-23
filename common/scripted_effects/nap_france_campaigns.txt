@@ -1,0 +1,192 @@
+nap_fra_decision_initialize = {
+ if = { limit = { tag = FRA NOT = { has_country_flag = nap_fra_decision_system_initialized } }
+  nap_era_initialize = yes
+  set_country_flag = nap_fra_decision_system_initialized
+  set_variable = { nap_fra_vendee_unrest = 15 } set_variable = { nap_fra_assignat_inflation = 5 } set_variable = { nap_fra_faction_tension = 20 } set_variable = { nap_fra_girondin_influence = 40 } set_variable = { nap_fra_jacobin_influence = 40 } set_variable = { nap_fra_napoleon_prestige = 10 } set_variable = { nap_fra_continental_pressure = 0 } set_variable = { nap_fra_peninsular_resistance = 0 } set_variable = { nap_fra_russian_supply = 0 } set_variable = { nap_fra_russian_cohesion = 100 }
+ }
+}
+
+nap_fra_decision_clamp = { if = { limit = { check_variable = { nap_fra_vendee_unrest > 100 } } set_variable = { nap_fra_vendee_unrest = 100 } } if = { limit = { check_variable = { nap_fra_vendee_unrest < 0 } } set_variable = { nap_fra_vendee_unrest = 0 } } if = { limit = { check_variable = { nap_fra_assignat_inflation > 100 } } set_variable = { nap_fra_assignat_inflation = 100 } } if = { limit = { check_variable = { nap_fra_assignat_inflation < 0 } } set_variable = { nap_fra_assignat_inflation = 0 } } if = { limit = { check_variable = { nap_fra_faction_tension > 100 } } set_variable = { nap_fra_faction_tension = 100 } } if = { limit = { check_variable = { nap_fra_faction_tension < 0 } } set_variable = { nap_fra_faction_tension = 0 } } if = { limit = { check_variable = { nap_fra_girondin_influence > 100 } } set_variable = { nap_fra_girondin_influence = 100 } } if = { limit = { check_variable = { nap_fra_girondin_influence < 0 } } set_variable = { nap_fra_girondin_influence = 0 } } if = { limit = { check_variable = { nap_fra_jacobin_influence > 100 } } set_variable = { nap_fra_jacobin_influence = 100 } } if = { limit = { check_variable = { nap_fra_jacobin_influence < 0 } } set_variable = { nap_fra_jacobin_influence = 0 } } if = { limit = { check_variable = { nap_fra_napoleon_prestige > 100 } } set_variable = { nap_fra_napoleon_prestige = 100 } } if = { limit = { check_variable = { nap_fra_napoleon_prestige < 0 } } set_variable = { nap_fra_napoleon_prestige = 0 } } if = { limit = { check_variable = { nap_fra_continental_pressure > 100 } } set_variable = { nap_fra_continental_pressure = 100 } } if = { limit = { check_variable = { nap_fra_continental_pressure < 0 } } set_variable = { nap_fra_continental_pressure = 0 } } if = { limit = { check_variable = { nap_fra_peninsular_resistance > 100 } } set_variable = { nap_fra_peninsular_resistance = 100 } } if = { limit = { check_variable = { nap_fra_peninsular_resistance < 0 } } set_variable = { nap_fra_peninsular_resistance = 0 } } if = { limit = { check_variable = { nap_fra_russian_supply > 100 } } set_variable = { nap_fra_russian_supply = 100 } } if = { limit = { check_variable = { nap_fra_russian_supply < 0 } } set_variable = { nap_fra_russian_supply = 0 } } if = { limit = { check_variable = { nap_fra_russian_cohesion > 100 } } set_variable = { nap_fra_russian_cohesion = 100 } } if = { limit = { check_variable = { nap_fra_russian_cohesion < 0 } } set_variable = { nap_fra_russian_cohesion = 0 } } }
+
+nap_fra_decision_refresh = {
+ nap_fra_decision_clamp = yes
+ if = { limit = { check_variable = { nap_fra_vendee_unrest > 59 } NOT = { has_idea = nap_fra_vendee_revolt } } add_ideas = nap_fra_vendee_revolt }
+ if = { limit = { NOT = { check_variable = { nap_fra_vendee_unrest > 39 } } has_idea = nap_fra_vendee_revolt } remove_ideas = nap_fra_vendee_revolt }
+ if = { limit = { check_variable = { nap_fra_assignat_inflation > 59 } NOT = { has_idea = nap_fra_assignat_crisis } } add_ideas = nap_fra_assignat_crisis }
+ if = { limit = { NOT = { check_variable = { nap_fra_assignat_inflation > 39 } } has_idea = nap_fra_assignat_crisis } remove_ideas = nap_fra_assignat_crisis }
+ if = { limit = { has_country_flag = nap_legacy_french_revolution_10_settled NOT = { has_country_flag = reign_of_terror_active } has_idea = nap_fra_committee_public_safety } remove_ideas = nap_fra_committee_public_safety }
+ if = { limit = { has_global_flag = continental_system_active check_variable = { nap_fra_continental_pressure > 39 } ENG = { exists = yes } } ENG = { if = { limit = { NOT = { has_idea = nap_british_continental_pressure } } add_ideas = nap_british_continental_pressure } } }
+ if = { limit = { OR = { NOT = { has_global_flag = continental_system_active } NOT = { check_variable = { nap_fra_continental_pressure > 24 } } } ENG = { exists = yes } } ENG = { if = { limit = { has_idea = nap_british_continental_pressure } remove_ideas = nap_british_continental_pressure } } }
+ if = { limit = { has_country_flag = nap_fra_peninsular_active NOT = { OR = { has_war_with = SPR has_war_with = POR } } } clr_country_flag = nap_fra_peninsular_active remove_ideas = nap_fra_peninsular_guerrilla_war set_country_flag = nap_fra_peninsular_resolved add_stability = 0.02 }
+ if = { limit = { has_country_flag = russian_campaign_active NOT = { has_war_with = RUS } } clr_country_flag = russian_campaign_active remove_ideas = nap_fra_russian_logistics remove_ideas = nap_fra_russian_prepared set_country_flag = nap_fra_russian_campaign_resolved }
+ if = { limit = { NOT = { has_country_flag = hundred_days } has_idea = nap_fra_hundred_days_mobilization } remove_ideas = nap_fra_hundred_days_mobilization }
+}
+
+nap_fra_decision_monthly = {
+ if = { limit = { tag = FRA }
+  nap_fra_decision_initialize = yes
+  if = { limit = { has_country_flag = french_revolutionary_path has_war = yes } add_to_variable = { nap_fra_vendee_unrest = 2 } add_to_variable = { nap_fra_faction_tension = 1 } }
+  if = { limit = { has_country_flag = nap_fra_assignats_active } add_to_variable = { nap_fra_assignat_inflation = 3 } }
+  if = { limit = { has_country_flag = reign_of_terror_active } add_to_variable = { nap_fra_faction_tension = 4 } add_to_variable = { nap_legitimacy = -1 } }
+  if = { limit = { OR = { has_country_flag = nap_fra_italian_campaign_active has_country_flag = nap_fra_egyptian_expedition_active has_country_flag = russian_campaign_active } check_variable = { nap_army_prestige > 59 } } add_to_variable = { nap_fra_napoleon_prestige = 1 } }
+  if = { limit = { has_country_flag = nap_fra_peninsular_active OR = { has_war_with = SPR has_war_with = POR } } add_to_variable = { nap_fra_peninsular_resistance = 4 } add_to_variable = { nap_war_exhaustion = 1 } add_to_variable = { nap_supply_pressure = 2 } }
+  if = { limit = { has_country_flag = russian_campaign_active has_war_with = RUS } add_to_variable = { nap_fra_russian_supply = -6 } add_to_variable = { nap_fra_russian_cohesion = -4 } add_to_variable = { nap_supply_pressure = 3 } add_to_variable = { nap_war_exhaustion = 2 }
+    if = { limit = { OR = { check_variable = { nap_fra_russian_supply < 10 } check_variable = { nap_fra_russian_cohesion < 15 } } NOT = { has_country_flag = nap_fra_russia_disaster_queued } } set_country_flag = nap_fra_russia_disaster_queued country_event = { id = napoleonic_collapse.1 hours = 6 } }
+  }
+  if = { limit = { has_country_flag = grande_armee_destroyed has_country_flag = russian_campaign_active } clr_country_flag = russian_campaign_active remove_ideas = nap_fra_russian_logistics remove_ideas = nap_fra_russian_prepared set_variable = { nap_fra_russian_supply = 0 } }
+  nap_fra_decision_clamp = yes
+  nap_fra_decision_refresh = yes
+ }
+}
+
+nap_fra_establish_national_assembly_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_convene_estates_general NOT = { has_country_flag = nap_fra_national_assembly } } set_country_flag = nap_fra_national_assembly add_to_variable = { nap_reform = 3 } add_to_variable = { nap_legitimacy = 3 } add_to_variable = { nap_fra_faction_tension = 5 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_legislative_assembly_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_national_assembly has_completed_focus = FRA_adopt_declaration NOT = { has_country_flag = nap_fra_legislative_assembly } } set_country_flag = nap_fra_legislative_assembly add_to_variable = { nap_reform = 3 } add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_fra_faction_tension = 4 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_national_convention_effect = { if = { limit = { tag = FRA has_country_flag = french_republic NOT = { has_country_flag = nap_fra_national_convention } } clr_country_flag = nap_fra_national_assembly clr_country_flag = nap_fra_legislative_assembly set_country_flag = nap_fra_national_convention add_to_variable = { nap_fervor = 5 } add_to_variable = { nap_fra_faction_tension = 8 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_support_girondins_effect = { if = { limit = { tag = FRA nap_fra_route_republican = yes NOT = { has_country_flag = directory_active } } add_to_variable = { nap_fra_girondin_influence = 10 } add_to_variable = { nap_fra_faction_tension = 4 } add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_fervor = -1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_support_jacobins_effect = { if = { limit = { tag = FRA nap_fra_route_republican = yes NOT = { has_country_flag = directory_active } } add_to_variable = { nap_fra_jacobin_influence = 10 } add_to_variable = { nap_fra_faction_tension = 5 } add_to_variable = { nap_fervor = 3 } add_to_variable = { nap_legitimacy = -1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_issue_assignats_effect = { if = { limit = { tag = FRA has_country_flag = french_revolutionary_path NOT = { check_variable = { nap_treasury > 84 } } } set_country_flag = nap_fra_assignats_active add_to_variable = { nap_treasury = 18 } add_to_variable = { nap_debt = 8 } add_to_variable = { nap_legitimacy = -2 } add_to_variable = { nap_fra_assignat_inflation = 12 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_redeem_assignats_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_assignats_active NOT = { check_variable = { nap_fra_assignat_inflation < 10 } } NOT = { check_variable = { nap_treasury < 15 } } } add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_debt = -5 } add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_fra_assignat_inflation = -15 } if = { limit = { check_variable = { nap_fra_assignat_inflation < 10 } } clr_country_flag = nap_fra_assignats_active } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_negotiate_vendee_effect = { if = { limit = { tag = FRA has_country_flag = french_revolutionary_path NOT = { check_variable = { nap_fra_vendee_unrest < 10 } } NOT = { check_variable = { nap_treasury < 8 } } } add_to_variable = { nap_treasury = -8 } add_to_variable = { nap_legitimacy = 4 } add_to_variable = { nap_fervor = -2 } add_to_variable = { nap_fra_vendee_unrest = -15 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_columns_vendee_effect = { if = { limit = { tag = FRA has_country_flag = french_revolutionary_path NOT = { check_variable = { nap_fra_vendee_unrest < 15 } } } add_to_variable = { nap_war_exhaustion = 4 } add_to_variable = { nap_legitimacy = -5 } add_to_variable = { nap_fervor = 3 } add_to_variable = { nap_fra_vendee_unrest = -20 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_committee_public_safety_effect = { if = { limit = { tag = FRA nap_fra_route_republican = yes has_completed_focus = FRA_reign_of_terror_focus NOT = { has_country_flag = nap_fra_committee_public_safety } } set_country_flag = nap_fra_committee_public_safety add_ideas = nap_fra_committee_public_safety add_to_variable = { nap_fra_faction_tension = 10 } add_to_variable = { nap_fervor = 4 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_debate_terror_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_committee_public_safety NOT = { has_country_flag = nap_legacy_french_revolution_10_settled } } country_event = { id = french_revolution.10 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_thermidor_effect = { if = { limit = { tag = FRA has_country_flag = reign_of_terror_active OR = { NOT = { check_variable = { nap_fra_faction_tension < 55 } } check_variable = { nap_war_exhaustion > 39 } } } remove_ideas = nap_fra_committee_public_safety add_to_variable = { nap_fra_faction_tension = -20 } add_to_variable = { nap_fra_jacobin_influence = -15 } country_event = { id = french_revolution.11 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_install_directory_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_thermidor_settled NOT = { has_country_flag = directory_active } } country_event = { id = french_revolution.12 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_open_italian_campaign_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_italian_campaign NOT = { has_country_flag = nap_fra_italian_campaign_active } NOT = { has_country_flag = italian_campaign_won } } set_country_flag = nap_fra_italian_campaign_active if = { limit = { check_variable = { nap_fra_napoleon_prestige < 25 } } set_variable = { nap_fra_napoleon_prestige = 25 } } add_timed_idea = { idea = nap_funded_magazines days = 120 } add_to_variable = { nap_treasury = -8 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_italian_requisitions_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_italian_campaign_active } add_to_variable = { nap_treasury = 8 } add_to_variable = { nap_supply_pressure = -5 } add_to_variable = { nap_legitimacy = -3 } add_to_variable = { nap_fra_napoleon_prestige = 3 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_italian_republics_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_italian_campaign_active } add_political_power = -20 add_to_variable = { nap_legitimacy = 2 } add_to_variable = { nap_fervor = 2 } add_to_variable = { nap_fra_napoleon_prestige = 5 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_conclude_italian_campaign_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_italian_campaign_active NOT = { check_variable = { nap_fra_napoleon_prestige < 35 } } } clr_country_flag = nap_fra_italian_campaign_active set_country_flag = italian_campaign_won add_to_variable = { nap_army_prestige = 5 } add_to_variable = { nap_fra_napoleon_prestige = 10 } add_stability = 0.02 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_prepare_egypt_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_egyptian_expedition has_country_flag = italian_campaign_won NOT = { has_country_flag = nap_fra_egyptian_expedition_active } NOT = { has_country_flag = egyptian_expedition_complete } } set_country_flag = nap_fra_egyptian_expedition_active add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_supply_pressure = 10 } add_to_variable = { nap_fra_napoleon_prestige = 5 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_institute_egypt_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_egyptian_expedition_active NOT = { check_variable = { nap_treasury < 8 } } } add_to_variable = { nap_treasury = -8 } add_to_variable = { nap_reform = 4 } add_to_variable = { nap_fra_napoleon_prestige = 4 } add_political_power = 15 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_egypt_supply_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_egyptian_expedition_active NOT = { check_variable = { nap_treasury < 10 } } } add_to_variable = { nap_treasury = -10 } add_to_variable = { nap_supply_pressure = -10 } add_to_variable = { nap_fra_napoleon_prestige = 2 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_return_egypt_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_egyptian_expedition_active NOT = { check_variable = { nap_supply_pressure > 70 } } } clr_country_flag = nap_fra_egyptian_expedition_active set_country_flag = egyptian_expedition_complete add_to_variable = { nap_fra_napoleon_prestige = 10 } add_to_variable = { nap_legitimacy = 2 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_stage_brumaire_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_brumaire_coup has_country_flag = directory_active has_country_flag = egyptian_expedition_complete NOT = { check_variable = { nap_fra_napoleon_prestige < 45 } } NOT = { has_country_flag = nap_legacy_french_revolution_14_settled } } country_event = { id = french_revolution.14 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_constitution_year_viii_effect = { if = { limit = { tag = FRA has_country_flag = consulate_established NOT = { has_country_flag = nap_fra_year_viii_settled } } set_country_flag = nap_fra_year_viii_settled add_ideas = nap_fra_consular_machine add_to_variable = { nap_reform = 5 } add_to_variable = { nap_legitimacy = 5 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_proclaim_empire_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_proclaim_empire has_country_flag = consulate_established NOT = { check_variable = { nap_fra_napoleon_prestige < 60 } } NOT = { has_country_flag = nap_legacy_napoleonic_wars_3_settled } } country_event = { id = napoleonic_wars.3 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_coronation_effect = { if = { limit = { tag = FRA has_country_flag = empire_of_the_french NOT = { has_country_flag = nap_legacy_napoleonic_wars_4_settled } } country_event = { id = napoleonic_wars.4 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_appoint_marshals_effect = { if = { limit = { tag = FRA has_country_flag = empire_of_the_french has_completed_focus = FRA_grande_armee_focus NOT = { has_country_flag = nap_fra_marshals_appointed } } set_country_flag = nap_fra_marshals_appointed add_ideas = nap_fra_marshals_empire add_to_variable = { nap_army_prestige = 8 } add_to_variable = { nap_fra_napoleon_prestige = 10 } add_command_power = 50 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_activate_continental_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_continental_system_focus has_country_flag = empire_of_the_french NOT = { has_global_flag = continental_system_active } } country_event = { id = napoleonic_wars.10 hours = 1 } add_to_variable = { nap_fra_continental_pressure = 10 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_rus_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active RUS = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_rus } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } RUS = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_rus days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_pru_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active PRU = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_pru } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } PRU = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_pru days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_hab_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active HAB = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_hab } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } HAB = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_hab days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_spr_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active SPR = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_spr } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } SPR = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_spr days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_por_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active POR = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_por } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } POR = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_por days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_net_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active NET = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_net } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } NET = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_net days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_den_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active DEN = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_den } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } DEN = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_den days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_continental_pressure_swe_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active SWE = { exists = yes NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_continental_enforced_swe } } NOT = { check_variable = { nap_treasury < 5 } } } add_to_variable = { nap_treasury = -5 } add_to_variable = { nap_fra_continental_pressure = 8 } SWE = { add_timed_idea = { idea = nap_continental_compliance days = 180 } set_country_flag = { flag = nap_continental_enforced_swe days = 180 } add_opinion_modifier = { target = FRA modifier = small_decrease } } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_tighten_continental_customs_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active NOT = { check_variable = { nap_treasury < 10 } } } add_to_variable = { nap_treasury = -10 } add_to_variable = { nap_legitimacy = -2 } add_to_variable = { nap_fra_continental_pressure = 10 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_relax_continental_customs_effect = { if = { limit = { tag = FRA has_global_flag = continental_system_active } add_to_variable = { nap_legitimacy = 3 } add_to_variable = { nap_fra_continental_pressure = -12 } add_stability = 0.01 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_continental_evade_customs_effect = {
+ if = { limit = { has_global_flag = continental_system_active has_idea = nap_continental_compliance NOT = { tag = FRA } NOT = { tag = ENG } }
+  remove_ideas = nap_continental_compliance
+  set_country_flag = { flag = nap_continental_smuggling days = 120 }
+  add_political_power = 20
+  FRA = { if = { limit = { exists = yes } add_to_variable = { nap_fra_continental_pressure = -8 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+  ENG = { if = { limit = { exists = yes } add_political_power = 10 } }
+ }
+}
+
+nap_continental_enforce_locally_effect = {
+ if = { limit = { has_global_flag = continental_system_active has_idea = nap_continental_compliance NOT = { tag = FRA } NOT = { tag = ENG } }
+  add_political_power = -10
+  add_stability = 0.01
+  FRA = { if = { limit = { exists = yes } add_to_variable = { nap_fra_continental_pressure = 4 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+ }
+}
+
+nap_fra_launch_peninsular_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_invade_iberia has_country_flag = empire_of_the_french NOT = { has_country_flag = nap_fra_peninsular_active } OR = { SPR = { exists = yes } POR = { exists = yes } } } set_country_flag = nap_fra_peninsular_active set_variable = { nap_fra_peninsular_resistance = 35 } add_ideas = nap_fra_peninsular_guerrilla_war
+      SPR = { if = { limit = { exists = yes NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } add_ideas = spanish_ulcer } }
+      POR = { if = { limit = { exists = yes NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } }
+      add_to_variable = { nap_supply_pressure = 8 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_peninsular_depots_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_peninsular_active NOT = { check_variable = { nap_treasury < 12 } } } add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_supply_pressure = -10 } add_to_variable = { nap_fra_peninsular_resistance = -4 } add_timed_idea = { idea = nap_funded_magazines days = 90 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_peninsular_conciliate_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_peninsular_active } add_to_variable = { nap_legitimacy = 3 } add_to_variable = { nap_fervor = -1 } add_to_variable = { nap_fra_peninsular_resistance = -12 } add_political_power = -25 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_peninsular_columns_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_peninsular_active } add_to_variable = { nap_fra_peninsular_resistance = -18 } add_to_variable = { nap_war_exhaustion = 5 } add_to_variable = { nap_legitimacy = -5 } add_to_variable = { nap_army_prestige = 2 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_peninsular_rotate_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_peninsular_active NOT = { check_variable = { nap_treasury < 8 } } } add_to_variable = { nap_treasury = -8 } add_to_variable = { nap_war_exhaustion = -5 } add_to_variable = { nap_army_prestige = -2 } add_timed_idea = { idea = nap_army_rotation days = 45 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_peninsular_settlement_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_peninsular_active NOT = { check_variable = { nap_fra_peninsular_resistance > 25 } } NOT = { check_variable = { nap_fra_napoleon_prestige < 55 } } OR = { has_war_with = SPR has_war_with = POR } } set_country_flag = nap_fra_peninsular_victory clr_country_flag = nap_fra_peninsular_active remove_ideas = nap_fra_peninsular_guerrilla_war add_to_variable = { nap_fra_napoleon_prestige = 6 } add_to_variable = { nap_legitimacy = 4 }
+      if = { limit = { has_war_with = SPR } white_peace = SPR }
+      if = { limit = { has_war_with = POR } white_peace = POR } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_peninsular_withdraw_effect = { if = { limit = { tag = FRA has_country_flag = nap_fra_peninsular_active OR = { NOT = { check_variable = { nap_fra_peninsular_resistance < 65 } } check_variable = { nap_war_exhaustion > 59 } } } set_country_flag = nap_fra_peninsular_withdrawal clr_country_flag = nap_fra_peninsular_active remove_ideas = nap_fra_peninsular_guerrilla_war add_to_variable = { nap_fra_napoleon_prestige = -8 } add_to_variable = { nap_legitimacy = -5 } add_to_variable = { nap_war_exhaustion = -8 }
+      if = { limit = { has_war_with = SPR } white_peace = SPR }
+      if = { limit = { has_war_with = POR } white_peace = POR } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_magazines_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_invade_russia has_country_flag = empire_of_the_french NOT = { has_country_flag = russian_campaign_active } NOT = { has_country_flag = nap_fra_russian_campaign_resolved } NOT = { check_variable = { nap_treasury < 15 } } } add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_fra_russian_supply = 20 } add_timed_idea = { idea = nap_fra_russian_prepared days = 180 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_remounts_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_invade_russia has_country_flag = empire_of_the_french NOT = { has_country_flag = russian_campaign_active } NOT = { has_country_flag = nap_fra_russian_campaign_resolved } NOT = { check_variable = { nap_treasury < 10 } } } add_to_variable = { nap_treasury = -10 } add_to_variable = { nap_fra_russian_supply = 12 } add_to_variable = { nap_fra_russian_cohesion = 5 } add_to_variable = { nap_army_prestige = 2 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_allies_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_invade_russia has_country_flag = empire_of_the_french NOT = { has_country_flag = russian_campaign_active } NOT = { has_country_flag = nap_fra_russian_campaign_resolved } } add_political_power = -30 add_to_variable = { nap_fra_russian_supply = 8 } add_to_variable = { nap_fra_russian_cohesion = 8 } add_to_variable = { nap_legitimacy = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_launch_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_invade_russia has_country_flag = empire_of_the_french NOT = { has_country_flag = russian_campaign_active } NOT = { has_country_flag = nap_fra_russian_campaign_resolved } NOT = { check_variable = { nap_fra_russian_supply < 45 } } RUS = { exists = yes } NOT = { has_war_with = RUS } } set_country_flag = nap_fra_russian_launch_authorized add_ideas = nap_fra_russian_logistics add_to_variable = { nap_fra_napoleon_prestige = 5 } country_event = { id = napoleonic_wars.16 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_forward_depots_effect = { if = { limit = { tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS NOT = { check_variable = { nap_treasury < 15 } } } add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_fra_russian_supply = 20 } add_to_variable = { nap_fra_russian_cohesion = 5 } add_to_variable = { nap_supply_pressure = -8 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_winter_quarters_effect = { if = { limit = { tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS } add_to_variable = { nap_fra_russian_supply = 10 } add_to_variable = { nap_fra_russian_cohesion = 15 } add_to_variable = { nap_army_prestige = -4 } add_to_variable = { nap_war_exhaustion = -3 } add_timed_idea = { idea = nap_army_rotation days = 60 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_press_on_effect = { if = { limit = { tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS } add_to_variable = { nap_fra_russian_supply = -20 } add_to_variable = { nap_fra_russian_cohesion = -10 } add_to_variable = { nap_fra_napoleon_prestige = 8 } add_to_variable = { nap_war_exhaustion = 4 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_settlement_effect = { if = { limit = { tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS NOT = { check_variable = { nap_fra_russian_supply < 40 } } NOT = { check_variable = { nap_fra_russian_cohesion < 40 } } NOT = { check_variable = { nap_fra_napoleon_prestige < 65 } } } set_country_flag = nap_fra_russian_victory add_to_variable = { nap_fra_napoleon_prestige = 8 } add_to_variable = { nap_legitimacy = 5 } country_event = { id = napoleonic_wars.13 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_russia_retreat_effect = { if = { limit = { tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS OR = { check_variable = { nap_fra_russian_supply < 35 } check_variable = { nap_war_exhaustion > 54 } } } set_country_flag = nap_fra_russian_organized_retreat clr_country_flag = russian_campaign_active remove_ideas = nap_fra_russian_logistics remove_ideas = nap_fra_russian_prepared
+      white_peace = RUS add_to_variable = { nap_fra_napoleon_prestige = -12 } add_to_variable = { nap_army_prestige = -8 } add_to_variable = { nap_legitimacy = -5 } add_to_variable = { nap_war_exhaustion = -8 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_fontainebleau_effect = { if = { limit = { tag = FRA has_country_flag = empire_of_the_french OR = { has_country_flag = grande_armee_destroyed check_variable = { nap_war_exhaustion > 59 } } OR = { has_war_with = ENG has_war_with = PRU has_war_with = HAB has_war_with = RUS } NOT = { has_country_flag = napoleon_on_elba } } country_event = { id = napoleonic_collapse.5 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_restore_bourbons_effect = { if = { limit = { tag = FRA has_country_flag = napoleon_on_elba NOT = { has_country_flag = bourbon_restoration } NOT = { has_country_flag = nap_legacy_napoleonic_collapse_6_settled } } country_event = { id = napoleonic_collapse.6 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_restoration_charter_effect = { if = { limit = { tag = FRA has_country_flag = bourbon_restoration NOT = { has_country_flag = nap_fra_restoration_charter } } set_country_flag = nap_fra_restoration_charter add_ideas = nap_fra_restoration_charter add_to_variable = { nap_legitimacy = 6 } add_to_variable = { nap_reform = 3 } add_stability = 0.04 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_return_elba_effect = { if = { limit = { tag = FRA has_completed_focus = FRA_return_from_elba has_country_flag = bourbon_restoration has_country_flag = napoleon_on_elba NOT = { has_country_flag = nap_legacy_napoleonic_collapse_8_settled } } country_event = { id = napoleonic_collapse.8 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_hundred_days_rally_effect = { if = { limit = { tag = FRA has_country_flag = hundred_days NOT = { has_country_flag = nap_fra_hundred_days_rallied } } set_country_flag = nap_fra_hundred_days_rallied add_ideas = nap_fra_hundred_days_mobilization add_to_variable = { nap_army_prestige = 6 } add_to_variable = { nap_war_exhaustion = 4 } add_command_power = 40 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_hundred_days_liberal_effect = { if = { limit = { tag = FRA has_country_flag = hundred_days NOT = { has_country_flag = nap_fra_hundred_days_liberal_act } } set_country_flag = nap_fra_hundred_days_liberal_act add_to_variable = { nap_legitimacy = 6 } add_to_variable = { nap_reform = 4 } add_to_variable = { nap_fra_napoleon_prestige = -3 } add_stability = 0.03 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_hundred_days_battle_effect = { if = { limit = { tag = FRA has_country_flag = hundred_days OR = { has_war_with = ENG has_war_with = PRU } NOT = { has_global_flag = waterloo_fought } } news_event = { id = napoleonic_collapse.9 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_second_abdication_effect = { if = { limit = { tag = FRA has_global_flag = waterloo_fought NOT = { has_country_flag = napoleon_on_st_helena } } remove_ideas = nap_fra_hundred_days_mobilization country_event = { id = napoleonic_collapse.10 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_hundred_days_survive_effect = { if = { limit = { tag = FRA has_country_flag = hundred_days has_war = no NOT = { has_global_flag = waterloo_fought } } clr_country_flag = hundred_days set_country_flag = nap_fra_hundred_days_survived remove_ideas = nap_fra_hundred_days_mobilization add_ideas = liberal_empire add_to_variable = { nap_legitimacy = 5 } add_stability = 0.05 nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }
+
+nap_fra_concert_effect = { if = { limit = { tag = FRA has_war = no OR = { has_country_flag = bourbon_restoration has_country_flag = nap_fra_hundred_days_survived } NOT = { has_global_flag = concert_of_europe_established } } set_country_flag = nap_fra_postwar_settlement add_ideas = nap_fra_postwar_exhaustion add_to_variable = { nap_war_exhaustion = -12 } news_event = { id = napoleonic_collapse.12 hours = 1 } nap_fra_decision_clamp = yes nap_fra_decision_refresh = yes } }

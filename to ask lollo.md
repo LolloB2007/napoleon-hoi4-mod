@@ -1,6 +1,6 @@
 # To ask Lollo
 
-**Current branch: Deep focus expansion implemented on development branch; static and HOI4 runtime validation pending**
+**Current branch: French decision-driven campaign mechanics implemented in source; full HOI4 runtime validation pending**
 
 This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation and validation are authorized. The current owner target is 600-650 French focuses, 350-400 for each other major, and 150-200 for each secondary campaign with at least 30-40 country-specific focuses. Approving a PR does not approve all proposals listed here.
 

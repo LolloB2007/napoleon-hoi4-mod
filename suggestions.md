@@ -15,14 +15,16 @@
 
 The mod has enough focus nodes. **Do not solve the next quality problems by adding another thousand generic focuses.** Use events, decisions, variables, characters, scripted peace and campaign-specific mechanics.
 
-### France
+### France — decision mechanics implemented
 
-- Turn the Revolution into a real political crisis system: Estates-General, Assembly/Convention transitions, Jacobin–Girondin struggle, Vendée, assignats, Committee of Public Safety, Terror and Thermidor.
-- Give Napoleon's rise bespoke mechanics for the Italian Campaign, Egypt, prestige, Brumaire, Consulate, coronation and Marshals rather than relying mostly on focus completion.
-- Build the Continental System as an actual enforcement/evasion mechanic affecting subjects, allies, neutrals and British trade.
-- Make the Peninsular War a sustained occupation/guerrilla problem rather than a normal front.
-- Make the 1812 campaign about preparation, depots, attrition, retreat and army collapse, with meaningful outcomes short of scripted historical defeat.
-- Give 1814, the Restoration, Hundred Days and the postwar settlement proper state transitions.
+The six former France proposals are now implemented in the source-owned decision layer: revolutionary crisis management, Bonaparte's prestige/rise, Continental enforcement and evasion, Peninsular resistance, Russian campaign logistics/outcomes, and the 1814–1815 restoration cycle.
+
+Next France priorities:
+- Runtime-balance the new 0–100 crisis/campaign meters so choices are consequential without becoming repetitive click maintenance.
+- Add more bespoke narrative events around decision thresholds, especially the Vendée, assignat crisis, Italian/Egyptian campaign outcomes and Russian retreat.
+- Replace the remaining date-driven French-adjacent European collapse events where state-driven triggers would produce better campaigns.
+- Give the most important decision systems dedicated UI/tooltips only after their ordinary decision presentation is proven insufficient in game.
+- Measure AI use of the decision systems and tune decision weights so historical AI can progress without being railroaded into a fixed outcome.
 
 ### Britain, Austria, Prussia and Russia
 
@@ -169,3 +171,11 @@ These are already decided or implemented unless a new owner decision explicitly 
 7. **Presentation replacement/polish only after the gameplay slices are stable.**
 
 The repository now has enough breadth. The next gains come from **engine proof, bespoke mechanics, AI quality and campaign balance**, not raw file or focus counts.
+
+
+## Secondary-campaign follow-up ideas
+
+- Replace the reusable four-event policy skeleton with bespoke multi-event crisis chains once in-game pacing is measured.
+- Add dynamic transition events for WAR, BAT and HOL so their inherited Polish/Dutch campaigns acknowledge the regime change explicitly.
+- Give the represented German principalities differentiated diplomacy panels after the shared regional campaign proves stable in play.
+- Reconstruct the United States' 1789 territorial and military map only after geographic-scope decision A07 is answered.
