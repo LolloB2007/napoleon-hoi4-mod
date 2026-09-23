@@ -50,11 +50,13 @@ reverse_add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Selim III"
+	picture = GFX_NAP_PORTRAIT_SELIM_III
 	ideology = oligarchism
 }
 
 create_corps_commander = {
 	name = "Koca Yusuf Pasha"
+	picture = GFX_NAP_PORTRAIT_KOCA_YUSUF_PASHA
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

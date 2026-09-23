@@ -47,6 +47,7 @@ add_ideas = {
 }
 create_country_leader = {
 	name = "Catherine II"
+	picture = GFX_NAP_PORTRAIT_CATHERINE_II
 	desc = "Catherine the Great. German-born usurper turned Russian empress, friend of philosophes and conqueror of the Crimea."
 	ideology = despotism
 	traits = {
@@ -56,6 +57,7 @@ create_country_leader = {
 }
 create_field_marshal = {
 	name = "Aleksandr Vasilyevich Suvorov"
+	picture = GFX_NAP_PORTRAIT_ALEKSANDR_VASILYEVICH_SUVOROV
 	desc = "Never lost a battle. Master of speed, attack, and the bayonet. Currently fighting in the south."
 	traits = {
 		old_guard
@@ -72,6 +74,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Grigory Potemkin"
+	picture = GFX_NAP_PORTRAIT_GRIGORY_POTEMKIN
 	desc = "Catherine's favourite. Builder of the Black Sea Fleet, conqueror of the Crimea. Dies 1791."
 	traits = {
 		politically_connected
@@ -85,6 +88,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Pyotr Rumyantsev"
+	picture = GFX_NAP_PORTRAIT_PYOTR_RUMYANTSEV
 	desc = "Victor at Kagul and Larga. The grand old man of Russian arms."
 	traits = {
 		old_guard
@@ -98,6 +102,7 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Mikhail Kutuzov"
+	picture = GFX_NAP_PORTRAIT_MIKHAIL_KUTUZOV
 	desc = "Recovering from a head wound that took out his right eye at Ochakov. Will trade Moscow for the destruction of the Grande Armée in 1812."
 	traits = {
 		defensive_doctrine
@@ -111,6 +116,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Pyotr Bagration"
+	picture = GFX_NAP_PORTRAIT_PYOTR_BAGRATION
 	desc = "Georgian prince, Suvorov's protégé. Lion of the army."
 	traits = {
 		trait_reckless
@@ -125,6 +131,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Mikhail Barclay de Tolly"
+	picture = GFX_NAP_PORTRAIT_MIKHAIL_BARCLAY_DE_TOLLY
 	desc = "Scottish-Baltic-German Russian. Architect of the scorched-earth strategy of 1812 — and hated for it."
 	traits = {
 		defensive_doctrine
@@ -138,6 +145,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Matvei Platov"
+	picture = GFX_NAP_PORTRAIT_MATVEI_PLATOV
 	desc = "Ataman of the Don Cossacks."
 	traits = {
 		cavalry_officer
@@ -151,6 +159,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Nikolai Repnin"
+	picture = GFX_NAP_PORTRAIT_NIKOLAI_REPNIN
 	traits = {
 		politically_connected
 	}
@@ -162,6 +171,7 @@ create_corps_commander = {
 }
 create_navy_leader = {
 	name = "Fyodor Ushakov"
+	picture = GFX_NAP_PORTRAIT_FYODOR_USHAKOV
 	desc = "Father of the Black Sea Fleet. Will revolutionise Russian naval tactics."
 	traits = {
 		spotter
@@ -176,6 +186,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Vasily Chichagov"
+	picture = GFX_NAP_PORTRAIT_VASILY_CHICHAGOV
 	desc = "Baltic Fleet commander against the Swedes."
 	traits = {
 		old_guard_navy

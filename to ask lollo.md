@@ -1,6 +1,6 @@
 # To ask Lollo
 
-**Current branch: Milestone 8 complete: secondary-power campaigns and territorial/client framework**
+**Current branch: Milestone 9 non-gated presentation pass complete; final visual, soundtrack and translation direction await owner decisions**
 
 This is the live approval queue. No answer is presumed. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
 
@@ -58,11 +58,23 @@ Safe interim policy: Retain the inherited 1.19.* descriptor, without asserting e
 
 Safe interim policy: Constitutional, Republican, Royalist and Bonapartist routes are authorized.
 
-## A10: Art and audio
+## A10: Visual and map art direction
 
-**Awaiting approval.** Approve the visual direction and identify assets we may legally redistribute.
+**Awaiting approval.** Choose the final presentation language for portraits, focus/event art, flags and map treatment.
 
-Safe interim policy: Use plainly labelled original placeholders; no commercial portraits or music.
+Safe interim policy: Use original procedural engravings/cards and avoid invasive map recolouring.
+
+## A11: Soundtrack direction
+
+**Awaiting approval.** Choose the music strategy and redistribution policy for the final soundtrack.
+
+Safe interim policy: Ship event stingers only; do not bundle third-party recordings.
+
+## A12: Translation scope
+
+**Awaiting approval.** Choose which languages should follow the final English pass and who maintains them.
+
+Safe interim policy: Keep English authoritative until a maintained translation scope is approved.
 
 ## Not approval blockers
 

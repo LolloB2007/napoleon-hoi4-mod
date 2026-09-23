@@ -53,11 +53,13 @@ reverse_add_opinion_modifier = { target = NAP modifier = nap_1789_dynastic_ties 
 
 create_country_leader = {
 	name = "Charles IV"
+	picture = GFX_NAP_PORTRAIT_CHARLES_IV
 	ideology = despotism
 }
 
 create_corps_commander = {
 	name = "Antonio Ricardos"
+	picture = GFX_NAP_PORTRAIT_ANTONIO_RICARDOS
 	skill = 3
 	attack_skill = 4
 	defense_skill = 3

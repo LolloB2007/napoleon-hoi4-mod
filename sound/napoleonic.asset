@@ -1,0 +1,6 @@
+sound = { name = "nap_dispatch" file = "nap_dispatch.wav" always_load = yes volume = 0.55 }
+sound = { name = "nap_crowd" file = "nap_crowd.wav" always_load = yes volume = 0.45 }
+sound = { name = "nap_cannon" file = "nap_cannon.wav" always_load = yes volume = 0.60 }
+soundeffect = { name = "nap_dispatch_effect" sounds = { sound = "nap_dispatch" } loop = no is3d = no max_audible = 1 max_audible_behaviour = fail volume = 0.65 }
+soundeffect = { name = "nap_crowd_effect" sounds = { sound = "nap_crowd" } loop = no is3d = no max_audible = 1 max_audible_behaviour = fail volume = 0.55 }
+soundeffect = { name = "nap_cannon_effect" sounds = { sound = "nap_cannon" } loop = no is3d = no max_audible = 1 max_audible_behaviour = fail volume = 0.60 }

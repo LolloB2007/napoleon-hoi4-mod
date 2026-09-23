@@ -42,6 +42,7 @@ add_ideas = {
 }
 create_country_leader = {
 	name = "Joseph II"
+	picture = GFX_NAP_PORTRAIT_JOSEPH_II
 	desc = "The Enlightened Emperor. His reforms — religious tolerance, abolition of serfdom — have alienated nobles, church, and Hungarians alike. He will die in February 1790, broken."
 	ideology = despotism
 	traits = {
@@ -50,6 +51,7 @@ create_country_leader = {
 }
 create_field_marshal = {
 	name = "Gideon Ernst von Laudon"
+	picture = GFX_NAP_PORTRAIT_GIDEON_ERNST_VON_LAUDON
 	desc = "Hero of the Seven Years' War. Conqueror of Belgrade in 1789. Will die July 1790."
 	traits = {
 		old_guard
@@ -64,6 +66,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Andreas Hadik von Futak"
+	picture = GFX_NAP_PORTRAIT_ANDREAS_HADIK_VON_FUTAK
 	traits = {
 		old_guard
 		organizer
@@ -76,6 +79,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Dagobert Sigmund von Wurmser"
+	picture = GFX_NAP_PORTRAIT_DAGOBERT_SIGMUND_VON_WURMSER
 	desc = "Will face Napoleon at Mantua and lose."
 	traits = {
 		old_guard
@@ -89,6 +93,7 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Archduke Charles of Austria"
+	picture = GFX_NAP_PORTRAIT_ARCHDUKE_CHARLES_OF_AUSTRIA
 	desc = "Eighteen years old. The Habsburg dynasty's one military talent of the coming wars."
 	traits = {
 		politically_connected
@@ -103,6 +108,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Karl Mack von Leiberich"
+	picture = GFX_NAP_PORTRAIT_KARL_MACK_VON_LEIBERICH
 	desc = "Will surrender an entire army at Ulm in 1805."
 	traits = {
 		politically_connected
@@ -116,6 +122,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Johann Beaulieu"
+	picture = GFX_NAP_PORTRAIT_JOHANN_BEAULIEU
 	traits = {
 		defensive_doctrine
 	}
@@ -127,6 +134,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Karl Schwarzenberg"
+	picture = GFX_NAP_PORTRAIT_KARL_SCHWARZENBERG
 	desc = "Will command the Allied army at Leipzig in 1813."
 	traits = {
 		organizer
@@ -140,6 +148,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Michael Melas"
+	picture = GFX_NAP_PORTRAIT_MICHAEL_MELAS
 	traits = {
 		old_guard
 		defensive_doctrine

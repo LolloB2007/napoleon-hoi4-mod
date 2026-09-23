@@ -14,7 +14,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_convene_estates_general
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_FRA_CONVENE_ESTATES_GENERAL
 		x = 12
 		y = 0
 		cost = 5
@@ -33,7 +33,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_adopt_declaration
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_FRA_ADOPT_DECLARATION
 		prerequisite = {
 			focus = FRA_convene_estates_general
 		}
@@ -66,7 +66,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_civil_constitution_clergy
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_FRA_CIVIL_CONSTITUTION_CLERGY
 		prerequisite = {
 			focus = FRA_adopt_declaration
 		}
@@ -88,7 +88,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_constitutional_monarchy
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_FRA_CONSTITUTIONAL_MONARCHY
 		prerequisite = {
 			focus = FRA_adopt_declaration
 		}
@@ -112,6 +112,7 @@ focus_tree = {
 			add_political_power = 100
 			create_country_leader = {
 				name = "Louis XVI"
+	picture = GFX_NAP_PORTRAIT_LOUIS_XVI
 				ideology = conservatism
 				traits = {
 
@@ -121,7 +122,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_reform_army_constitutional
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_FRA_REFORM_ARMY_CONSTITUTIONAL
 		prerequisite = {
 			focus = FRA_constitutional_monarchy
 		}
@@ -140,7 +141,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_modernize_economy
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_NAP_FOCUS_FRA_MODERNIZE_ECONOMY
 		prerequisite = {
 			focus = FRA_constitutional_monarchy
 		}
@@ -154,7 +155,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_constitutional_europe
-		icon = GFX_focus_generic_the_council_of_europe
+		icon = GFX_NAP_FOCUS_FRA_CONSTITUTIONAL_EUROPE
 		prerequisite = {
 			focus = FRA_reform_army_constitutional
 		}
@@ -180,7 +181,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_vive_la_revolution
-		icon = GFX_focus_generic_workers_and_farmers_rise
+		icon = GFX_NAP_FOCUS_FRA_VIVE_LA_REVOLUTION
 		prerequisite = {
 			focus = FRA_convene_estates_general
 		}
@@ -220,7 +221,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_war_on_tyrants
-		icon = GFX_focus_generic_attack_usa
+		icon = GFX_NAP_FOCUS_FRA_WAR_ON_TYRANTS
 		prerequisite = {
 			focus = FRA_vive_la_revolution
 		}
@@ -237,7 +238,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_vive_la_republique
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_FRA_VIVE_LA_REPUBLIQUE
 		prerequisite = {
 			focus = FRA_war_on_tyrants
 		}
@@ -254,7 +255,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_trial_of_the_king
-		icon = GFX_focus_generic_crush_the_military
+		icon = GFX_NAP_FOCUS_FRA_TRIAL_OF_THE_KING
 		prerequisite = {
 			focus = FRA_vive_la_republique
 		}
@@ -277,7 +278,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_reign_of_terror_focus
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_FRA_REIGN_OF_TERROR_FOCUS
 		prerequisite = {
 			focus = FRA_trial_of_the_king
 		}
@@ -299,7 +300,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_levee_en_masse_focus
-		icon = GFX_focus_generic_manpower
+		icon = GFX_NAP_FOCUS_FRA_LEVEE_EN_MASSE_FOCUS
 		prerequisite = {
 			focus = FRA_vive_la_republique
 		}
@@ -314,7 +315,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_sister_republics
-		icon = GFX_focus_generic_the_council_of_europe
+		icon = GFX_NAP_FOCUS_FRA_SISTER_REPUBLICS
 		prerequisite = {
 			focus = FRA_reign_of_terror_focus
 			focus = FRA_nap_girondins_14
@@ -341,7 +342,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_italian_campaign
-		icon = GFX_focus_generic_attack_yugoslavia
+		icon = GFX_NAP_FOCUS_FRA_ITALIAN_CAMPAIGN
 		prerequisite = {
 			focus = FRA_vive_la_republique
 		}
@@ -360,6 +361,7 @@ focus_tree = {
 				}
 				create_corps_commander = {
 					name = "Napoléon Bonaparte"
+	picture = GFX_NAP_PORTRAIT_NAPOLON_BONAPARTE
 					traits = {
 						trait_engineer
 						brilliant_strategist
@@ -377,7 +379,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_egyptian_expedition
-		icon = GFX_focus_generic_secret_service_agency
+		icon = GFX_NAP_FOCUS_FRA_EGYPTIAN_EXPEDITION
 		prerequisite = {
 			focus = FRA_italian_campaign
 		}
@@ -393,7 +395,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_brumaire_coup
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_NAP_FOCUS_FRA_BRUMAIRE_COUP
 		prerequisite = {
 			focus = FRA_egyptian_expedition
 		}
@@ -416,7 +418,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_proclaim_empire
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_FRA_PROCLAIM_EMPIRE
 		prerequisite = {
 			focus = FRA_brumaire_coup
 		}
@@ -437,7 +439,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_grande_armee_focus
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_FRA_GRANDE_ARMEE_FOCUS
 		prerequisite = {
 			focus = FRA_proclaim_empire
 		}
@@ -457,7 +459,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_continental_system_focus
-		icon = GFX_focus_generic_economic_recovery
+		icon = GFX_NAP_FOCUS_FRA_CONTINENTAL_SYSTEM_FOCUS
 		prerequisite = {
 			focus = FRA_proclaim_empire
 		}
@@ -473,7 +475,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_confederation_rhine
-		icon = GFX_focus_generic_the_council_of_europe
+		icon = GFX_NAP_FOCUS_FRA_CONFEDERATION_RHINE
 		prerequisite = {
 			focus = FRA_proclaim_empire
 		}
@@ -489,7 +491,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_invade_russia
-		icon = GFX_focus_generic_attack_baltics
+		icon = GFX_NAP_FOCUS_FRA_INVADE_RUSSIA
 		prerequisite = {
 			focus = FRA_grande_armee_focus
 		}
@@ -515,7 +517,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_invade_iberia
-		icon = GFX_focus_generic_attack_republican_spain
+		icon = GFX_NAP_FOCUS_FRA_INVADE_IBERIA
 		prerequisite = {
 			focus = FRA_confederation_rhine
 		}
@@ -538,7 +540,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_return_from_elba
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_FRA_RETURN_FROM_ELBA
 		prerequisite = {
 			focus = FRA_invade_russia
 		}
@@ -561,7 +563,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_emigre_response
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_FRA_EMIGRE_RESPONSE
 		prerequisite = {
 			focus = FRA_convene_estates_general
 		}
@@ -594,7 +596,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_crush_sans_culottes
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_NAP_FOCUS_FRA_CRUSH_SANS_CULOTTES
 		prerequisite = {
 			focus = FRA_emigre_response
 		}
@@ -620,7 +622,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_emigre_army
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_FRA_EMIGRE_ARMY
 		prerequisite = {
 			focus = FRA_crush_sans_culottes
 		}
@@ -636,7 +638,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_restore_ancien_regime
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_FRA_RESTORE_ANCIEN_REGIME
 		prerequisite = {
 			focus = FRA_emigre_army
 		}
@@ -654,6 +656,7 @@ focus_tree = {
 			set_country_flag = ancien_regime_restored
 			create_country_leader = {
 				name = "Louis XVI"
+	picture = GFX_NAP_PORTRAIT_LOUIS_XVI
 				ideology = despotism
 				traits = {
 					indecisive_leader
@@ -663,7 +666,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_european_concert
-		icon = GFX_focus_generic_the_council_of_europe
+		icon = GFX_NAP_FOCUS_FRA_EUROPEAN_CONCERT
 		prerequisite = {
 			focus = FRA_restore_ancien_regime
 		}

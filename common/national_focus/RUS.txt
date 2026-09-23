@@ -14,7 +14,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_empress_in_majesty
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_RUS_EMPRESS_IN_MAJESTY
 		x = 10
 		y = 0
 		cost = 5
@@ -28,7 +28,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_consolidate_crimea
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_RUS_CONSOLIDATE_CRIMEA
 		prerequisite = {
 			focus = RUS_empress_in_majesty
 		}
@@ -43,7 +43,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_partition_poland
-		icon = GFX_focus_generic_attack_poland
+		icon = GFX_NAP_FOCUS_RUS_PARTITION_POLAND
 		prerequisite = {
 			focus = RUS_consolidate_crimea
 		}
@@ -66,7 +66,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_conquer_caucasus
-		icon = GFX_focus_generic_attack_baltics
+		icon = GFX_NAP_FOCUS_RUS_CONQUER_CAUCASUS
 		prerequisite = {
 			focus = RUS_consolidate_crimea
 		}
@@ -80,7 +80,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_finish_ottoman_war
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_RUS_FINISH_OTTOMAN_WAR
 		prerequisite = {
 			focus = RUS_consolidate_crimea
 		}
@@ -104,7 +104,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_paul_succeeds
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_RUS_PAUL_SUCCEEDS
 		prerequisite = {
 			focus = RUS_empress_in_majesty
 		}
@@ -125,6 +125,7 @@ focus_tree = {
 				}
 				create_country_leader = {
 					name = "Paul I"
+	picture = GFX_NAP_PORTRAIT_PAUL_I
 					ideology = despotism
 				}
 			}
@@ -132,7 +133,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_anglophobe_policy
-		icon = GFX_focus_generic_attack_usa
+		icon = GFX_NAP_FOCUS_RUS_ANGLOPHOBE_POLICY
 		prerequisite = {
 			focus = RUS_paul_succeeds
 		}
@@ -151,7 +152,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_armed_neutrality
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_RUS_ARMED_NEUTRALITY
 		prerequisite = {
 			focus = RUS_paul_succeeds
 		}
@@ -165,7 +166,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_alexander_succeeds
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_RUS_ALEXANDER_SUCCEEDS
 		prerequisite = {
 			focus = RUS_empress_in_majesty
 		}
@@ -189,6 +190,7 @@ focus_tree = {
 				}
 				create_country_leader = {
 					name = "Alexander I"
+	picture = GFX_NAP_PORTRAIT_ALEXANDER_I
 					ideology = despotism
 				}
 			}
@@ -196,7 +198,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_speransky_reforms
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_RUS_SPERANSKY_REFORMS
 		prerequisite = {
 			focus = RUS_alexander_succeeds
 		}
@@ -210,7 +212,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_fight_napoleon
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_RUS_FIGHT_NAPOLEON
 		prerequisite = {
 			focus = RUS_alexander_succeeds
 		}
@@ -226,6 +228,7 @@ focus_tree = {
 			add_war_support = 0.20
 			create_field_marshal = {
 				name = "Mikhail Kutuzov"
+	picture = GFX_NAP_PORTRAIT_MIKHAIL_KUTUZOV
 				traits = {
 					defensive_doctrine
 					old_guard
@@ -244,7 +247,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_burn_moscow
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_RUS_BURN_MOSCOW
 		prerequisite = {
 			focus = RUS_fight_napoleon
 		}
@@ -268,7 +271,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_march_on_paris
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_RUS_MARCH_ON_PARIS
 		prerequisite = {
 			focus = RUS_burn_moscow
 		}
@@ -285,7 +288,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_holy_alliance
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_RUS_HOLY_ALLIANCE
 		prerequisite = {
 			focus = RUS_alexander_succeeds
 		}
@@ -304,7 +307,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_partition_polish_kingdom
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_RUS_PARTITION_POLISH_KINGDOM
 		prerequisite = {
 			focus = RUS_holy_alliance
 		}

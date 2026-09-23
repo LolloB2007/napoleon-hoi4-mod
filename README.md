@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Milestone 8 complete: secondary-power campaigns and territorial/client framework**
+**Current branch: Milestone 9 non-gated presentation pass complete; final visual, soundtrack and translation direction await owner decisions**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -28,14 +28,17 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- 450 French focus definitions, 108 additional great-power focuses and their policy events
+- 450 French focus definitions, 108 additional great-power focuses and 299 secondary-power focuses
 - Reusable era mechanics and seven temporary coalition rounds
-- Sixteen peaceful independent-release decisions and twelve client-aid decisions
-- Approval-gated integration/formable registry and consent-based Rhine client charters
-- Thirteen secondary campaign packs covering Spain, Poland/Warsaw, the Ottoman Empire, Sweden, five Italian states, German principalities, Portugal, the Netherlands and the United States
-- 299 secondary focuses, 52 secondary events, 39 recurring decisions and 65 campaign spirits
-- Historical and bounded alternate routes, military-development branches, major-power diplomatic links and localisation for every Milestone 8 campaign family
-- Dynamic WAR, BAT and HOL tags inherit the Polish or Dutch campaign; USA, Baden, Hesse and Mecklenburg receive missing political-character baselines
+- Territorial/client foundation with approval-gated integration and formable registries
+- Thirteen secondary campaign packs covering every Milestone 8 geography
+- A deterministic original focus icon for every current focus ID and period-styled pictures for every scripted event
+- Original portrait cards wired to current inline political leaders, marshals, generals and admirals
+- Default plus four regime-specific generated flags across the 68-tag namespace
+- Three original loading screens, refreshed 1789 bookmark artwork and common Napoleonic UI ornaments
+- Original event stingers, twelve additional flavour events, historical corps/division naming groups and sailing-warship names
+- English localisation cleanup removing obvious generator/temporary language and normalising terminology
+- Asset-provenance documentation with no external commercial imagery, recordings or font files
 
 ## Installation for testing
 
@@ -86,7 +89,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-The suite adds 14 dedicated Milestone 8 tests on top of the existing 104-test baseline. It checks campaign coverage, 299 unique focus IDs, route exclusivity, 52 unique events, 39 decisions, 65 spirits, localisation, dynamic-tag inheritance, bounded great-power links, USA baseline data and absence of unapproved territorial effects. GitHub Actions must still pass, and no HOI4 executable was run.
+Milestone 9 adds presentation tests for focus-icon coverage, event pictures, leader portraits, regime flags, loading/bookmark formats, event audio, flavour events, historical namelists, OOB naming integration, English localisation cleanup and asset provenance. GitHub Actions must still pass, and no HOI4 executable was run.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

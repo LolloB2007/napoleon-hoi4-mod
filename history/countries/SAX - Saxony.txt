@@ -45,5 +45,6 @@ add_opinion_modifier = { target = PRU modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Frederick Augustus III"
+	picture = GFX_NAP_PORTRAIT_FREDERICK_AUGUSTUS_III
 	ideology = despotism
 }

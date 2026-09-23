@@ -2,6 +2,7 @@
 
 division_template = {
 	name = "1789 Line Infantry"
+	division_names_group = POR_NAP_INF
 	regiments = {
 		line_infantry = { x = 0 y = 0 }
 		line_infantry = { x = 0 y = 1 }
@@ -14,6 +15,7 @@ division_template = {
 
 division_template = {
 	name = "1789 Militia"
+	division_names_group = POR_NAP_INF
 	regiments = {
 		militia = { x = 0 y = 0 }
 		militia = { x = 0 y = 1 }
@@ -25,6 +27,7 @@ division_template = {
 
 division_template = {
 	name = "1789 Cavalry"
+	division_names_group = POR_NAP_CAV
 	regiments = {
 		light_cavalry = { x = 0 y = 0 }
 		light_cavalry = { x = 0 y = 1 }

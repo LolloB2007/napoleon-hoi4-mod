@@ -14,7 +14,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_pitt_ministry
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_ENG_PITT_MINISTRY
 		x = 10
 		y = 0
 		cost = 5
@@ -28,7 +28,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_parliamentary_reform
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_ENG_PARLIAMENTARY_REFORM
 		prerequisite = {
 			focus = ENG_pitt_ministry
 		}
@@ -46,7 +46,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_catholic_emancipation
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_ENG_CATHOLIC_EMANCIPATION
 		prerequisite = {
 			focus = ENG_parliamentary_reform
 		}
@@ -64,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_abolish_slave_trade
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_ENG_ABOLISH_SLAVE_TRADE
 		prerequisite = {
 			focus = ENG_parliamentary_reform
 		}
@@ -82,7 +82,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_reform_act
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_ENG_REFORM_ACT
 		prerequisite = {
 			focus = ENG_abolish_slave_trade
 		}
@@ -104,7 +104,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_expand_royal_navy
-		icon = GFX_focus_generic_navy_research_bonus
+		icon = GFX_NAP_FOCUS_ENG_EXPAND_ROYAL_NAVY
 		prerequisite = {
 			focus = ENG_pitt_ministry
 		}
@@ -123,7 +123,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_blockade_french_ports
-		icon = GFX_focus_generic_navy_battleship2
+		icon = GFX_NAP_FOCUS_ENG_BLOCKADE_FRENCH_PORTS
 		prerequisite = {
 			focus = ENG_expand_royal_navy
 		}
@@ -140,7 +140,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_fight_trafalgar
-		icon = GFX_focus_generic_navy_research_bonus
+		icon = GFX_NAP_FOCUS_ENG_FIGHT_TRAFALGAR
 		prerequisite = {
 			focus = ENG_blockade_french_ports
 		}
@@ -162,7 +162,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_continental_blockade_response
-		icon = GFX_focus_generic_economic_recovery
+		icon = GFX_NAP_FOCUS_ENG_CONTINENTAL_BLOCKADE_RESPONSE
 		prerequisite = {
 			focus = ENG_expand_royal_navy
 		}
@@ -179,7 +179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_form_first_coalition
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_ENG_FORM_FIRST_COALITION
 		prerequisite = {
 			focus = ENG_pitt_ministry
 		}
@@ -199,7 +199,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_subsidies_to_coalitions
-		icon = GFX_focus_generic_stockpile_currency
+		icon = GFX_NAP_FOCUS_ENG_SUBSIDIES_TO_COALITIONS
 		prerequisite = {
 			focus = ENG_form_first_coalition
 		}
@@ -213,7 +213,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_intervention_in_iberia
-		icon = GFX_focus_generic_attack_republican_spain
+		icon = GFX_NAP_FOCUS_ENG_INTERVENTION_IN_IBERIA
 		prerequisite = {
 			focus = ENG_form_first_coalition
 		}
@@ -230,6 +230,7 @@ focus_tree = {
 			add_command_power = 30
 			create_corps_commander = {
 				name = "Arthur Wellesley, Duke of Wellington"
+	picture = GFX_NAP_PORTRAIT_ARTHUR_WELLESLEY_DUKE_OF_WELLINGTON
 				traits = {
 					defensive_doctrine
 					logistics_wizard
@@ -245,7 +246,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_lead_seventh_coalition
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_ENG_LEAD_SEVENTH_COALITION
 		prerequisite = {
 			focus = ENG_subsidies_to_coalitions
 		}
@@ -267,7 +268,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_industrial_revolution
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_NAP_FOCUS_ENG_INDUSTRIAL_REVOLUTION
 		prerequisite = {
 			focus = ENG_pitt_ministry
 		}
@@ -281,7 +282,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_consolidate_india
-		icon = GFX_focus_generic_secret_service_agency
+		icon = GFX_NAP_FOCUS_ENG_CONSOLIDATE_INDIA
 		prerequisite = {
 			focus = ENG_industrial_revolution
 		}
@@ -300,7 +301,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_factory_acts
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_NAP_FOCUS_ENG_FACTORY_ACTS
 		prerequisite = {
 			focus = ENG_industrial_revolution
 		}
@@ -314,7 +315,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_pax_britannica_focus
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_ENG_PAX_BRITANNICA_FOCUS
 		prerequisite = {
 			focus = ENG_consolidate_india
 		}

@@ -81,6 +81,7 @@ add_ideas = {
 
 create_country_leader = {
 	name = "Louis XVI"
+	picture = GFX_NAP_PORTRAIT_LOUIS_XVI
 	desc = "Last absolute King of France. Indecisive in the face of revolution. Will be deposed in 1792 and executed January 1793."
 	# 	picture = "Portrait_FRA_Louis_XVI.dds"
 	# expire = "1793.1.21"
@@ -90,6 +91,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Honoré Gabriel Riqueti, Comte de Mirabeau"
+	picture = GFX_NAP_PORTRAIT_HONOR_GABRIEL_RIQUETI_COMTE_DE_MIRABEAU
 	desc = "Constitutional reformer. Could have saved the monarchy if he had lived. Dies April 1791."
 	# 	picture = "Portrait_FRA_Mirabeau.dds"
 	# expire = "1791.4.2"
@@ -99,6 +101,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Maximilien Robespierre"
+	picture = GFX_NAP_PORTRAIT_MAXIMILIEN_ROBESPIERRE
 	desc = "The Incorruptible. Architect of the Republic of Virtue and the Terror."
 	# 	picture = "Portrait_FRA_Robespierre.dds"
 	# expire = "1794.7.28"
@@ -108,6 +111,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Napoléon Bonaparte"
+	picture = GFX_NAP_PORTRAIT_NAPOLON_BONAPARTE
 	desc = "Corsican gunner. Master of Europe."
 	# 	picture = "Portrait_FRA_Napoleon.dds"
 	# expire = "1840.1.1"
@@ -120,6 +124,7 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Jean-Baptiste Donatien de Vimeur, Comte de Rochambeau"
+	picture = GFX_NAP_PORTRAIT_JEAN_BAPTISTE_DONATIEN_DE_VIMEUR_COMTE_DE_ROCHAMBEAU
 	# 	picture = "Portrait_FRA_Rochambeau.dds"
 	traits = { old_guard war_hero }
 	skill = 4
@@ -131,6 +136,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "François Christophe de Kellermann"
+	picture = GFX_NAP_PORTRAIT_FRANOIS_CHRISTOPHE_DE_KELLERMANN
 	# 	picture = "Portrait_FRA_Kellermann.dds"
 	traits = { defensive_doctrine }
 	skill = 4
@@ -142,6 +148,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Lazare Carnot"
+	picture = GFX_NAP_PORTRAIT_LAZARE_CARNOT
 	# 	picture = "Portrait_FRA_Carnot.dds"
 	desc = "The Organizer of Victory. Currently an engineer captain — will create the armies of the Republic."
 	traits = { organizer career_officer }
@@ -154,6 +161,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Charles-François Dumouriez"
+	picture = GFX_NAP_PORTRAIT_CHARLES_FRANOIS_DUMOURIEZ
 	traits = { politically_connected }
 	skill = 3
 	attack_skill = 4
@@ -165,6 +173,7 @@ create_corps_commander = {
 # Future marshals — still junior officers in 1789, listed here so events can promote them.
 create_corps_commander = {
 	name = "Napoléon Bonaparte"
+	picture = GFX_NAP_PORTRAIT_NAPOLON_BONAPARTE
 	# 	picture = "Portrait_FRA_Napoleon_general.dds"
 	desc = "Artillery lieutenant on garrison duty in Auxonne. The world has not yet heard of him."
 	traits = { trait_engineer brilliant_strategist }
@@ -178,6 +187,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Louis-Nicolas Davout"
+	picture = GFX_NAP_PORTRAIT_LOUIS_NICOLAS_DAVOUT
 	traits = { trickster harsh_leader }
 	skill = 5
 	attack_skill = 5
@@ -188,6 +198,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "André Masséna"
+	picture = GFX_NAP_PORTRAIT_ANDR_MASSNA
 	traits = { war_hero infantry_officer }
 	skill = 4
 	attack_skill = 4
@@ -198,6 +209,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Michel Ney"
+	picture = GFX_NAP_PORTRAIT_MICHEL_NEY
 	desc = "The bravest of the brave. A cooper's son. Currently a hussar NCO."
 	traits = { cavalry_officer brave }
 	skill = 4
@@ -209,6 +221,7 @@ create_corps_commander = {
 
 create_navy_leader = {
 	name = "Pierre Charles de Villeneuve"
+	picture = GFX_NAP_PORTRAIT_PIERRE_CHARLES_DE_VILLENEUVE
 	traits = { spotter }
 	skill = 2
 	attack_skill = 2
@@ -219,6 +232,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Charles Henri Hector d'Estaing"
+	picture = GFX_NAP_PORTRAIT_CHARLES_HENRI_HECTOR_D_ESTAING
 	traits = { old_guard_navy ironside }
 	skill = 3
 	attack_skill = 3

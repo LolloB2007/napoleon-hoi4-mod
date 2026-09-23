@@ -45,5 +45,6 @@ reverse_add_opinion_modifier = { target = HAB modifier = nap_1789_dynastic_ties 
 
 create_country_leader = {
 	name = "Peter Leopold"
+	picture = GFX_NAP_PORTRAIT_PETER_LEOPOLD
 	ideology = oligarchism
 }

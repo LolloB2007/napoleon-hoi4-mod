@@ -4,7 +4,7 @@ country_event = {
 	id = napoleonic_collapse.1
 	title = napoleonic_collapse.1.t
 	desc = napoleonic_collapse.1.d
-	picture = GFX_report_event_generic_riot
+	picture = GFX_NAP_EVENT_02
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -39,6 +39,7 @@ country_event = {
 			set_country_flag = grande_armee_destroyed
 			news_event = {
 				id = napoleonic_collapse.11
+ picture = GFX_NAP_EVENT_05
 				hours = 6
 			}
 		}
@@ -63,7 +64,7 @@ news_event = {
 	id = napoleonic_collapse.11
 	title = napoleonic_collapse.11.t
 	desc = napoleonic_collapse.11.d
-	picture = GFX_news_event_generic_riot
+	picture = GFX_NAP_EVENT_05
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -74,7 +75,7 @@ country_event = {
 	id = napoleonic_collapse.2
 	title = napoleonic_collapse.2.t
 	desc = napoleonic_collapse.2.d
-	picture = GFX_report_event_generic_army_formed
+	picture = GFX_NAP_EVENT_10
 	fire_only_once = yes
 	trigger = {
 		tag = PRU
@@ -192,7 +193,7 @@ news_event = {
 	id = napoleonic_collapse.3
 	title = napoleonic_collapse.3.t
 	desc = napoleonic_collapse.3.d
-	picture = GFX_news_event_generic_army_formed
+	picture = GFX_NAP_EVENT_04
 	major = yes
 	trigger = {
 		date > 1813.10.15
@@ -245,7 +246,7 @@ country_event = {
 	id = napoleonic_collapse.5
 	title = napoleonic_collapse.5.t
 	desc = napoleonic_collapse.5.d
-	picture = GFX_report_event_generic_riot
+	picture = GFX_NAP_EVENT_10
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -294,6 +295,7 @@ country_event = {
 			}
 			country_event = {
 				id = napoleonic_collapse.6
+ picture = GFX_NAP_EVENT_10
 				days = 22
 			}
 		}
@@ -340,7 +342,7 @@ country_event = {
 	id = napoleonic_collapse.6
 	title = napoleonic_collapse.6.t
 	desc = napoleonic_collapse.6.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_10
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -382,10 +384,12 @@ country_event = {
 			add_stability = -0.10
 			news_event = {
 				id = napoleonic_collapse.61
+ picture = GFX_NAP_EVENT_11
 				hours = 6
 			}
 			create_country_leader = {
 				name = "Louis XVIII"
+	picture = GFX_NAP_PORTRAIT_LOUIS_XVIII
 				ideology = despotism
 				traits = {
 
@@ -413,7 +417,7 @@ news_event = {
 	id = napoleonic_collapse.61
 	title = napoleonic_collapse.61.t
 	desc = napoleonic_collapse.61.d
-	picture = GFX_news_event_generic_assembly
+	picture = GFX_NAP_EVENT_11
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -424,7 +428,7 @@ country_event = {
 	id = napoleonic_collapse.8
 	title = napoleonic_collapse.8.t
 	desc = napoleonic_collapse.8.d
-	picture = GFX_report_event_generic_army_formed
+	picture = GFX_NAP_EVENT_04
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -501,10 +505,12 @@ country_event = {
 			}
 			news_event = {
 				id = napoleonic_collapse.81
+ picture = GFX_NAP_EVENT_10
 				hours = 6
 			}
 			country_event = {
 				id = napoleonic_collapse.9
+ picture = GFX_NAP_EVENT_02
 				days = 109
 			}
 			set_country_flag = french_bonapartist_path
@@ -513,6 +519,7 @@ country_event = {
 			clr_country_flag = french_revolutionary_path
 			create_country_leader = {
 				name = "Napoleon Bonaparte"
+	picture = GFX_NAP_PORTRAIT_NAPOLEON_BONAPARTE
 				ideology = fascism_ideology
 				traits = {
 					military_genius
@@ -566,7 +573,7 @@ news_event = {
 	id = napoleonic_collapse.81
 	title = napoleonic_collapse.81.t
 	desc = napoleonic_collapse.81.d
-	picture = GFX_news_event_generic_army_formed
+	picture = GFX_NAP_EVENT_10
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -577,7 +584,7 @@ news_event = {
 	id = napoleonic_collapse.9
 	title = napoleonic_collapse.9.t
 	desc = napoleonic_collapse.9.d
-	picture = GFX_news_event_generic_army_formed
+	picture = GFX_NAP_EVENT_02
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -590,6 +597,7 @@ news_event = {
 			clr_country_flag = hundred_days
 			country_event = {
 				id = napoleonic_collapse.10
+ picture = GFX_NAP_EVENT_05
 				days = 5
 			}
 		}
@@ -605,7 +613,7 @@ country_event = {
 	id = napoleonic_collapse.10
 	title = napoleonic_collapse.10.t
 	desc = napoleonic_collapse.10.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_05
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -645,6 +653,7 @@ country_event = {
 			}
 			create_country_leader = {
 				name = "Louis XVIII"
+	picture = GFX_NAP_PORTRAIT_LOUIS_XVIII
 				ideology = despotism
 				traits = {
 
@@ -675,7 +684,7 @@ news_event = {
 	id = napoleonic_collapse.12
 	title = napoleonic_collapse.12.t
 	desc = napoleonic_collapse.12.d
-	picture = GFX_news_event_generic_assembly
+	picture = GFX_NAP_EVENT_11
 	major = yes
 	trigger = {
 		date > 1815.11.19

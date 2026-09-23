@@ -53,5 +53,6 @@ reverse_add_opinion_modifier = { target = ENG modifier = nap_1789_close_ties }
 
 create_country_leader = {
 	name = "William V of Orange"
+	picture = GFX_NAP_PORTRAIT_WILLIAM_V_OF_ORANGE
 	ideology = conservatism
 }
