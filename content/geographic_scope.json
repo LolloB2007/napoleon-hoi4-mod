@@ -1,0 +1,51 @@
+{
+ "schema_version": 1,
+ "meaningful_groups": {
+  "north_africa": [
+   "MOR",
+   "TUN",
+   "ALG",
+   "TRP",
+   "EGY"
+  ],
+  "north_america": [
+   "USA",
+   "CAN"
+  ],
+  "colonial_americas": [
+   "HAI",
+   "MEX",
+   "BRA"
+  ],
+  "india": [
+   "MUG",
+   "MYS",
+   "MAR",
+   "HYD",
+   "SIK"
+  ]
+ },
+ "colonial_subjects": [
+  {
+   "overlord": "FRA",
+   "subject": "HAI",
+   "label": "Saint-Domingue"
+  },
+  {
+   "overlord": "SPR",
+   "subject": "MEX",
+   "label": "New Spain"
+  },
+  {
+   "overlord": "POR",
+   "subject": "BRA",
+   "label": "Brazil"
+  },
+  {
+   "overlord": "ENG",
+   "subject": "CAN",
+   "label": "British North America"
+  }
+ ],
+ "note": "Europe remains the core theatre. These groups are the approved additional meaningful scope; other vanilla countries may be abstracted/inert until specifically promoted."
+}
