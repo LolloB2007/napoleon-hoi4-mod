@@ -158,7 +158,8 @@ def build_events(profile,event_base):
         names={'a':'Adopt the stronger programme.','b':'Proceed cautiously.','c':'Preserve room for manoeuvre.'}
         loc.extend(f' {eid}.{letter}:0 "{names[letter]}"' for letter,_ in options)
     ev(event_base+1,profile['hist'],f'The historical course for {profile["name"]} still leaves choices about the pace and cost of reform.',[('a','add_political_power = -25 add_stability = 0.03'),('b','add_political_power = 25')])
-    ev(event_base+2,profile['alt'],f'The alternate settlement for {profile["name"]} must reconcile reform with institutions that did not vanish merely because a focus was clicked.',[('a','add_political_power = -25 add_stability = 0.02 add_war_support = 0.02'),('b','add_political_power = 30')])
+    basis=profile.get('alt_basis','')
+    ev(event_base+2,profile['alt'],f'The alternate settlement for {profile["name"]} must reconcile reform with institutions that did not vanish merely because a focus was clicked. {basis}',[('a','add_political_power = -25 add_stability = 0.02 add_war_support = 0.02'),('b','add_political_power = 30')])
     ev(event_base+3,'The Military Commission',f'Officers of {profile["name"]} disagree over whether scarce resources belong in readiness now or professional reform for later.',[('a','army_experience = 20 add_war_support = 0.02'),('b','army_experience = 10 add_stability = 0.02')])
     ev(event_base+4,'The Foreign Mission',f'{profile["name"]} can lean toward one great power without surrendering its sovereignty or joining a faction automatically.',[('a',f'add_opinion_modifier = {{ target = {major_a} modifier = nap_1789_close_ties }} set_country_flag = nap_{slug}_alignment_{major_a}'),('b',f'add_opinion_modifier = {{ target = {major_b} modifier = nap_1789_close_ties }} set_country_flag = nap_{slug}_alignment_{major_b}'),('c','add_political_power = 35')])
     return '\n'.join(events)+'\n',loc
@@ -181,14 +182,20 @@ def build_decisions(profile,event_base):
     return text,loc
 
 def build(root):
+    route_registry=json.loads((root/'content/alternate_routes.json').read_text())
+    for profile in PROFILES:
+        approved=route_registry['secondary'].get(profile['slug'])
+        if not approved or approved['title']!=profile['alt'] or not approved.get('basis','').strip():
+            raise ValueError(f'unregistered or unsupported A09 alternate route: {profile["slug"]}')
     output={};events=['add_namespace = nap_secondary'];ideas=['ideas = {',' country = {'];decisions=['nap_secondary_policy = {'];loc=['\ufeffl_english:',' nap_secondary_policy:0 "Secondary-Power Government"',' nap_secondary_policy_desc:0 "Country-specific administrative, military and diplomatic actions for the expanded Napoleonic campaigns."'];registry=[]
     for index,profile in enumerate(PROFILES):
         base=1000+index*10
         tree,l=build_tree(profile,base);output[f'common/national_focus/secondary_{profile["slug"]}.txt']=tree;loc+=l
+        profile=profile|{'alt_basis':route_registry['secondary'][profile['slug']]['basis']}
         ev,l=build_events(profile,base);events.append(ev);loc+=l
         idea,l=build_ideas(profile);ideas.append(idea);loc+=l
         dec,l=build_decisions(profile,base);decisions.append(dec);loc+=l
-        registry.append({'slug':profile['slug'],'tags':list(profile['tags']),'name':profile['name'],'focuses':23,'events':4,'decisions':3,'ideas':5,'historical_route':profile['hist'],'alternate_route':profile['alt'],'major_links':list(profile['majors'])})
+        registry.append({'slug':profile['slug'],'tags':list(profile['tags']),'name':profile['name'],'focuses':23,'events':4,'decisions':3,'ideas':5,'historical_route':profile['hist'],'alternate_route':profile['alt'],'alternate_basis':profile['alt_basis'],'major_links':list(profile['majors'])})
     ideas += [' }','}'];decisions.append('}')
     output['events/09_secondary_campaigns.txt']='\n'.join(events)
     output['common/ideas/nap_secondary_campaigns.txt']='\n'.join(ideas)+'\n'
@@ -202,7 +209,7 @@ This pack completes the implementation checklist for Spain, Poland / the Duchy o
 
 Each campaign has a dedicated or regional focus tree, four events, three recurring decisions, five spirits, a military-development branch, a historical route, a bounded alternate route, great-power diplomacy and English localisation. Existing 1789 histories and OOBs remain the starting military layer for the European countries. Dynamic tags (WAR, BAT and HOL) inherit the relevant Polish or Dutch campaign tree when they exist.
 
-No focus, event or decision in this pack transfers a state, adds a core, annexes a country, creates a formable or forces faction membership. Those choices remain behind the territorial/approval registries. Coalition-eligible tags continue to interact with the existing seven-round coalition framework.
+A09 now requires every alternate route in this pack to appear in content/alternate_routes.json with an explicit period basis. No focus, event or decision in this pack transfers a state, adds a core, annexes a country, creates a formable or forces faction membership. Those choices remain behind the territorial/approval registries. Coalition-eligible tags continue to interact with the existing seven-round coalition framework.
 
 The United States receives campaign content without changing the Europe-first geographic policy. Its detailed 1789 territorial reconstruction and overseas balance remain part of approval A07 rather than being silently inferred here.
 

@@ -1,0 +1,80 @@
+{
+ "schema_version": 1,
+ "principles": [
+  "Routes require a defensible political, dynastic, diplomatic, constitutional or ideological basis in the period.",
+  "Near-counterfactuals may diverge from history but must not depend on fantasy or novelty premises.",
+  "Territorial rewards remain governed by A03-A06 rather than being implied by route flavour."
+ ],
+ "france": [
+  {
+   "id": "constitutional",
+   "basis": "A constitutional monarchy was a live revolutionary settlement, especially in 1789-1791."
+  },
+  {
+   "id": "republican",
+   "basis": "Republican and Jacobin political currents became governing realities during the Revolution."
+  },
+  {
+   "id": "royalist",
+   "basis": "Royalist counter-revolution and émigré restoration were active political projects."
+  },
+  {
+   "id": "bonapartist",
+   "basis": "Bonaparte's Consulate and Empire emerged from a contingent post-revolutionary settlement."
+  }
+ ],
+ "secondary": {
+  "spain": {
+   "title": "Summon a National Cortes",
+   "basis": "Late Bourbon reform currents and representative institutions provided a credible constitutional alternative before the 1812 Cádiz settlement."
+  },
+  "poland": {
+   "title": "The Magnate Compromise",
+   "basis": "The Commonwealth's reform crisis included a persistent conservative-magnate alternative to stronger central reform."
+  },
+  "ottoman": {
+   "title": "Preserve the Old Establishment",
+   "basis": "Selim III's reform programme faced organised institutional resistance from established military and political interests."
+  },
+  "sweden": {
+   "title": "Restore the Power of the Estates",
+   "basis": "Gustavian royal authority remained contested by aristocratic and representative traditions."
+  },
+  "sardinia": {
+   "title": "Piedmontese Constitutional Reform",
+   "basis": "Savoyard administrative reform and later constitutional currents make a limited chartered route plausible."
+  },
+  "naples": {
+   "title": "A Neapolitan Constitutional Settlement",
+   "basis": "Southern Italian reformism and constitutional currents offer a credible bounded alternative to Bourbon reaction."
+  },
+  "papal": {
+   "title": "Reform the Papal Administration",
+   "basis": "Administrative reform within temporal papal rule is plausible without requiring secular fantasy outcomes."
+  },
+  "venice": {
+   "title": "Broaden the Venetian Constitution",
+   "basis": "Venetian institutional reform debates make a limited broadening of civic participation plausible."
+  },
+  "tuscany": {
+   "title": "Reconcile Crown, Church and Estates",
+   "basis": "Leopoldine reform could plausibly have been slowed or bargained into a more conservative institutional compact."
+  },
+  "german_princes": {
+   "title": "A League of Reforming Princes",
+   "basis": "Coordination among reforming German territorial states is plausible within late-imperial politics."
+  },
+  "portugal": {
+   "title": "An Independent Reform Course",
+   "basis": "Portugal could plausibly seek greater diplomatic autonomy while retaining Atlantic commercial priorities."
+  },
+  "netherlands": {
+   "title": "Revive the Patriot Programme",
+   "basis": "The Patriot movement and Orangist reaction were immediate pre-1789 political realities."
+  },
+  "usa": {
+   "title": "Guard Republican Decentralization",
+   "basis": "Federalist versus decentralist disputes were central to the new republic from its founding."
+  }
+ }
+}

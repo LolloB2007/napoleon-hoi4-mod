@@ -1,5 +1,5 @@
 {
- "stage": "A01-A08 implemented; A09-A12 approved and queued in the stacked implementation series",
+ "stage": "A01-A09 implemented; A10-A12 approved and queued in the stacked implementation series",
  "milestones": {
   "1": "Country setup exists; four great-power rulers corrected; engine verification pending",
   "2": "Opening diplomacy and bounded treaties implemented; engine verification pending",
