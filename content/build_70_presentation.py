@@ -96,7 +96,7 @@ def dds(width,height,pixel):
 
 def art_pixel(label,kind,width,height):
     n=_seed(label)
-    base=((n>>8)&127+55,(n>>24)&127+45,(n>>40)&127+35)
+    base=(((n>>8)&127)+55,((n>>24)&127)+45,((n>>40)&127)+35)
     base=tuple(min(190,max(35,int(c))) for c in base)
     parchment=(202,188,151)
     ink=(34,31,28)
