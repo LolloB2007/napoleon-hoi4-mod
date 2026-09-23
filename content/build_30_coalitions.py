@@ -40,17 +40,29 @@ def settle_model(state,*,winner,loser,jassy=False):
     pair=frozenset((winner,loser))
     if pair in result['resolved'] or pair not in result['wars']:return result
     result['resolved'].add(pair);result['wars'].discard(pair)
-    if jassy and winner=='RUS' and loser=='TUR' and result['owners'].get(192)=='TUR':result['owners'][192]='RUS'
+    if jassy and winner=='RUS' and loser=='TUR' and result['owners'].get(192)=='TUR':
+        result['owners'][192]='RUS'
+    if jassy and winner=='TUR' and loser=='RUS' and result['owners'].get(192)=='RUS':
+        result['owners'][192]='TUR'
     return result
+
+def _winner_terms(winner,loser):
+    """Bounded political settlement used when no approved territorial term exists."""
+    return f'''{winner} = {{ add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }}
+{loser} = {{ add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }}'''
 
 
 def opening_effects():
     result=[]
     for key,effect,a,b,active,done,aflag,bflag,_,_,news in OPENING:
-        transfer=''
-        if key=='jassy':
-            transfer='if = { limit = { 192 = { is_owned_by = TUR } RUS = { exists = yes } } RUS = { transfer_state = 192 } 192 = { add_core_of = RUS remove_core_of = TUR } }'
-        result.append(f'''{effect} = {{
+        for winner,loser in ((a,b),(b,a)):
+            transfer=''
+            if key=='jassy' and winner=='RUS':
+                transfer='if = { limit = { 192 = { is_owned_by = TUR } RUS = { exists = yes } } RUS = { transfer_state = 192 } 192 = { add_core_of = RUS remove_core_of = TUR } }'
+            elif key=='jassy' and winner=='TUR':
+                transfer='if = { limit = { 192 = { is_owned_by = RUS } TUR = { exists = yes } } TUR = { transfer_state = 192 } 192 = { add_core_of = TUR remove_core_of = RUS } }'
+            suffix='a_victory' if winner==a else 'b_victory'
+            result.append(f'''{effect}_{suffix} = {{
  if = {{ limit = {{ has_global_flag = {active} {a} = {{ has_war_with = {b} }} NOT = {{ has_global_flag = nap_opening_peace_busy }} }}
   set_global_flag = nap_opening_peace_busy
   clr_global_flag = {active}
@@ -59,22 +71,14 @@ def opening_effects():
   {b} = {{ clr_country_flag = {bflag} }}
   if = {{ limit = {{ {a} = {{ has_war_with = {b} }} }} {a} = {{ white_peace = {b} }} }}
   {transfer}
-  {a} = {{ add_stability = 0.03 news_event = {{ id = napoleonic_diplomacy.{news} hours = 6 }} }}
+  {_winner_terms(winner,loser)}
+  {winner} = {{ news_event = {{ id = napoleonic_diplomacy.{news} hours = 6 }} }}
   clr_global_flag = nap_opening_peace_busy
  }}
 }}''')
-    result.append('''napoleonic_end_russo_turkish_ottoman_success = {
- if = { limit = { has_global_flag = nap_russo_turkish_war_active TUR = { has_war_with = RUS } NOT = { has_global_flag = nap_opening_peace_busy } }
-  set_global_flag = nap_opening_peace_busy
-  clr_global_flag = nap_russo_turkish_war_active
-  set_global_flag = nap_russo_turkish_war_ended_without_jassy
-  RUS = { clr_country_flag = russo_turkish_war_active }
-  TUR = { clr_country_flag = russo_turkish_war_active }
-  if = { limit = { TUR = { has_war_with = RUS } } TUR = { white_peace = RUS } }
-  TUR = { add_stability = 0.03 news_event = { id = napoleonic_diplomacy.105 hours = 6 } }
-  clr_global_flag = nap_opening_peace_busy
- }
-}''')
+        result.append(f'''{effect} = {{
+ if = {{ limit = {{ has_global_flag = {active} {a} = {{ has_war_with = {b} }} }} {effect}_a_victory = yes }}
+}}''')
     return '\n'.join(result)+'\n'
 
 
@@ -82,12 +86,11 @@ def cap_guard(reverse=False):
     loser,winner=('FROM','ROOT') if reverse else ('ROOT','FROM')
     parts=[]
     for key,effect,a,b,active,*_ in OPENING:
-        if key=='jassy':
-            parts += [f'if = {{ limit = {{ has_global_flag = {active} {loser} = {{ tag = RUS }} {winner} = {{ tag = TUR }} }} napoleonic_end_russo_turkish_ottoman_success = yes }}',f'if = {{ limit = {{ has_global_flag = {active} {loser} = {{ tag = TUR }} {winner} = {{ tag = RUS }} }} {effect} = yes }}']
-        else:
-            parts.append(f'if = {{ limit = {{ has_global_flag = {active} OR = {{ AND = {{ {loser} = {{ tag = {a} }} {winner} = {{ tag = {b} }} }} AND = {{ {loser} = {{ tag = {b} }} {winner} = {{ tag = {a} }} }} }} }} {effect} = yes }}')
+        parts.append(f'if = {{ limit = {{ has_global_flag = {active} {loser} = {{ tag = {a} }} {winner} = {{ tag = {b} }} }} {effect}_b_victory = yes }}')
+        parts.append(f'if = {{ limit = {{ has_global_flag = {active} {loser} = {{ tag = {b} }} {winner} = {{ tag = {a} }} }} {effect}_a_victory = yes }}')
     parts.append(f'''if = {{ limit = {{ has_global_flag = nap_coalition_active NOT = {{ has_global_flag = nap_coalition_peace_busy }} }}
- if = {{ limit = {{ OR = {{ AND = {{ {loser} = {{ tag = FRA }} {winner} = {{ has_country_flag = nap_coalition_member }} }} AND = {{ {winner} = {{ tag = FRA }} {loser} = {{ tag = ENG has_country_flag = nap_coalition_member }} }} }} }} nap_coalition_end_round = yes }}
+ if = {{ limit = {{ {loser} = {{ tag = FRA }} {winner} = {{ has_country_flag = nap_coalition_member }} }} nap_coalition_coalition_victory_settlement = yes }}
+ else_if = {{ limit = {{ {winner} = {{ tag = FRA }} {loser} = {{ tag = ENG has_country_flag = nap_coalition_member }} }} nap_coalition_french_victory_settlement = yes }}
  else_if = {{ limit = {{ {winner} = {{ tag = FRA }} {loser} = {{ has_country_flag = nap_coalition_member }} }} {loser} = {{ nap_coalition_separate_peace = yes }} }}
 }}''')
     return '\n'.join(parts)
@@ -133,7 +136,21 @@ def build(root):
 }}''')
         loc += [f' nap_coalition_{n}_name:0 "{name}"',f' nap_coalition.{n}.t:0 "Organizing the {name}"',f' nap_coalition.{n}.d:0 "The current French crisis permits a new coalition. Britain can organize a temporary alliance and invite the relevant governments. Invitations are not automatic declarations on their behalf. Existing unrelated factions are not replaced."',f' nap_coalition.{n}.a:0 "Open the coalition council and commit Britain."',f' nap_coalition.{n}.b:0 "Decline this round of commitments."',f' nap_coalition.{100+n}.t:0 "Invitation to the {name}"',f' nap_coalition.{100+n}.d:0 "Britain proposes joint action against France. Joining costs 8 treasury and commits us to the war, but retains a route to separate peace. Refusal does not create a war or transfer territory."',f' nap_coalition.{100+n}.a:0 "Commit to this coalition."',f' nap_coalition.{100+n}.b:0 "Remain outside the coalition."']
     finished='\n'.join(f'if = {{ limit = {{ ENG = {{ check_variable = {{ nap_coalition_round = {n} }} }} }} set_global_flag = nap_coalition_{n}_finished }}' for n in range(1,8))
-    effects.append(f'''nap_coalition_end_round = {{
+    effects.append(f'''nap_coalition_french_victory_settlement = {{
+ if = {{ limit = {{ has_global_flag = nap_coalition_active }}
+  FRA = {{ add_stability = 0.05 add_war_support = 0.04 add_political_power = 100 }}
+  ENG = {{ if = {{ limit = {{ exists = yes }} add_stability = -0.03 add_political_power = -50 }} }}
+  nap_coalition_end_round = yes
+ }}
+}}
+nap_coalition_coalition_victory_settlement = {{
+ if = {{ limit = {{ has_global_flag = nap_coalition_active }}
+  FRA = {{ add_stability = -0.06 add_war_support = -0.05 add_political_power = -100 }}
+  ENG = {{ if = {{ limit = {{ exists = yes }} add_stability = 0.04 add_political_power = 75 }} }}
+  nap_coalition_end_round = yes
+ }}
+}}
+nap_coalition_end_round = {{
  if = {{ limit = {{ has_global_flag = nap_coalition_active NOT = {{ has_global_flag = nap_coalition_peace_busy }} }}
   set_global_flag = nap_coalition_peace_busy clr_global_flag = nap_coalition_active
   {finished}
@@ -213,7 +230,7 @@ Twelve subsidy decisions transfer 15 treasury from donor to recipient without ex
 
 Opening-war settlements are no longer fired by historical dates. Capitulation and pre-conference hooks settle them; A03 adds outcome-aware bounded terms. Jassy changes state 192 only if still Ottoman-owned; core edits use state scope. Capitulation and pre-conference hooks have opposite ROOT/FROM conventions. Third-party victories do not grant Russia a treaty windfall.
 
-This does not finish all of Milestone 4. Britain remains the convenor; fallback leadership, bespoke treaty terms, client conversion and historical war-goal catalogues remain future work. The faction manifest is a neutral placeholder, not a progression reward. Native faction/peace behavior requires a real engine test. The source protects the intended transactions but does not establish how every simultaneous-war callback behaves in HOI4.
+A03 makes opening-war and coalition-capitulation settlements outcome-aware. Historical terms are applied only to the historical winner; reverse outcomes receive bounded political terms, and the Russo-Turkish reverse outcome restores state 192 only if Russia actually owns it. Britain remains the convenor; fallback leadership and deeper war-goal-specific territorial catalogues remain future work. The faction manifest is a neutral placeholder, not a progression reward. Native faction/peace behavior requires a real engine test. The source protects the intended transactions but does not establish how every simultaneous-war callback behaves in HOI4.
 '''
     return output
 

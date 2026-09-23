@@ -44,8 +44,13 @@ class CoalitionTests(unittest.TestCase):
         state={'wars':{frozenset(('RUS','TUR'))},'resolved':set(),'owners':{192:'TUR'}}
         once=settle_model(state,winner='RUS',loser='TUR',jassy=True)
         self.assertEqual(once,settle_model(once,winner='RUS',loser='TUR',jassy=True))
-    def test_no_land_when_russia_loses(self):
-        state={'wars':{frozenset(('RUS','TUR'))},'resolved':set(),'owners':{192:'TUR'}}
+    def test_reverse_jassy_restores_ottoman_land_only_if_russian_owned(self):
+        state={'wars':{frozenset(('RUS','TUR'))},'resolved':set(),'owners':{192:'RUS',797:'HAB'}}
+        result=settle_model(state,winner='TUR',loser='RUS',jassy=True)
+        self.assertEqual(result['owners'][192],'TUR')
+        self.assertEqual(result['owners'][797],'HAB')
+    def test_no_land_change_when_reverse_jassy_has_third_party_owner(self):
+        state={'wars':{frozenset(('RUS','TUR'))},'resolved':set(),'owners':{192:'HAB'}}
         self.assertEqual(settle_model(state,winner='TUR',loser='RUS',jassy=True)['owners'],state['owners'])
     def test_no_settlement_without_war(self):
         state={'wars':set(),'resolved':set(),'owners':{192:'TUR'}}
@@ -94,6 +99,16 @@ class CoalitionTests(unittest.TestCase):
     def test_callback_scope_reversal(self):
         self.assertIn('ROOT = { tag = RUS } FROM = { tag = TUR }',cap_guard())
         self.assertIn('FROM = { tag = RUS } ROOT = { tag = TUR }',cap_guard(True))
+        self.assertIn('napoleonic_end_russo_turkish_jassy_a_victory',cap_guard())
+        self.assertIn('napoleonic_end_russo_turkish_jassy_b_victory',cap_guard())
+        self.assertIn('nap_coalition_coalition_victory_settlement',cap_guard())
+        self.assertIn('nap_coalition_french_victory_settlement',cap_guard())
+    def test_a03_coalition_has_outcome_aware_settlements(self):
+        text=build(ROOT)['common/scripted_effects/nap_coalitions.txt']
+        self.assertIn('nap_coalition_french_victory_settlement',text)
+        self.assertIn('nap_coalition_coalition_victory_settlement',text)
+        self.assertIn('add_political_power = 100',text)
+        self.assertIn('add_political_power = -100',text)
     def test_monthly_not_quadratic(self):
         hooks=parse(build(ROOT)['common/on_actions/nap_coalitions.txt'])[0]
         self.assertNotIn('every_country',[e.key for e in walk(hooks.children('on_monthly')[0].value)])
