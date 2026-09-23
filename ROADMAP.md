@@ -1,6 +1,6 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: A01-A11 implemented; A12 approved and queued in the stacked implementation series**
+**Current branch: A01-A12 implemented in the stacked approval series; static validation and HOI4 runtime certification remain**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
@@ -14,7 +14,7 @@ Implementation, static verification and successful in-game testing are separate 
 | 6 | Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses |
 | 7 | Campaign measurement infrastructure pending; actual balance requires in-game evidence |
 | 8 | Implementation complete: territorial/client foundation plus 13 secondary campaign packs; runtime validation pending |
-| 9 | Non-gated implementation complete: original focus/event/portrait/flag/loading/bookmark/UI assets, event audio, historical namelists, flavour events and English polish. Final map/art direction, soundtrack and translation scope await A10-A12. |
+| 9 | Implementation complete for approved A10-A12 direction: painted/engraved/cartographic presentation, provenance-tracked soundtrack seed, and enforced English-only localisation. Runtime validation pending. |
 
 All original detailed milestone checklists and chronological phases are retained in [the milestone catalogue](docs/roadmap-milestones.md). This file is the current status authority; historic checkmarks in the catalogue are not runtime certification.
 
@@ -40,10 +40,13 @@ All original detailed milestone checklists and chronological phases are retained
 - Original event stingers, twelve additional flavour events, historical corps/division naming groups and sailing-warship names
 - English localisation cleanup removing obvious generator/temporary language and normalising terminology
 - Asset-provenance documentation with no external commercial imagery, recordings or font files
+- A10 hybrid painted/engraved/cartographic presentation direction
+- A11 HOI4 music registration with original scoring and a newly rendered public-domain period composition
+- A12 enforced English-only maintained localisation policy
 
 ## Test evidence and remaining acceptance
 
-Milestone 9 adds presentation tests for focus-icon coverage, event pictures, leader portraits, regime flags, loading/bookmark formats, event audio, flavour events, historical namelists, OOB naming integration, English localisation cleanup and asset provenance. GitHub Actions must still pass, and no HOI4 executable was run.
+A01-A12 add regression coverage for chronology gates, open-ended campaign, outcome-aware settlements, coring/formables/clients, geographic scope, DLC baseline, alternate-route plausibility, presentation, music provenance, and English-only localisation. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.

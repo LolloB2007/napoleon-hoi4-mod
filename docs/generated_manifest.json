@@ -1,6 +1,6 @@
 {
-  "README.md": "829a20e4b5fe22e9be8d07993744e2b277e58687cedce07e922f7c15e4be7c2b",
-  "ROADMAP.md": "893c9dbec3b0891306d0922ca693146af4cf6f045d8829289a17c3945d9faeb0",
+  "README.md": "898750967097d39ce40028f8295b5a81616e515fbebfac9d8686bb295d79a3df",
+  "ROADMAP.md": "d24b0840fa43abe70f15da3269fef35353f4e90f47fe2ee44f48f877e35da3a8",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -140,8 +140,9 @@
   "docs/geographic-scope.json": "fed1ec2c66b7996e3e51a9d27b91d57da2491d0de9c8b1178ee1eb70313c8e5b",
   "docs/geographic-scope.md": "3b995d28b9170e208e7105f0417289caaba60fa2093b3b7890757423d49993eb",
   "docs/great-power-programmes.md": "03ec67e7f5413d2ab6fbbf5c335a057d99a0b363ae2a4619e52f984a676cdd35",
+  "docs/localisation-policy.md": "6bd4cb5390d3a14239ce342f57758d2e4f6e0adcd60bd33cfa5cf0fa7563dac4",
   "docs/major-focus-index.json": "4be7697bca4ba65525ac0fd74db52f56e82d6f5f6a72133e886b263a6b1c82c6",
-  "docs/presentation.md": "857bddf4bb5883855102bc13fe34948a47ad10725994151b8c71151cfa70e63c",
+  "docs/presentation.md": "12f088dde5e8329e80f0e33735014eabcd080d373196f51852bb3dc39ecdc325",
   "docs/secondary-campaigns.json": "c169a460ef54db1911cb32238f51f2e8163d418bcf325ca6ab942cb4705150e2",
   "docs/secondary-campaigns.md": "8489d8aa633fbd2cd4dec9a8fb2446472ba6085b2189c0d34714e48eda680cd6",
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
@@ -2271,5 +2272,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "cccbf598a8fbcaab9d6a5e9e15b53382522beb8c0c5d2ab588ebfc9d43399743",
-  "to ask lollo.md": "cab82cc210a633a8264fe55cd0802fa6b6cbc1aa01165302ef32744839949edf"
+  "to ask lollo.md": "3dbb99637ddaff945e202930c4c446ab12c7290c79c422896da7a61d277adc30"
 }
