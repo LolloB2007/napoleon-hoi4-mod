@@ -414,40 +414,40 @@ Do expensive presentation work after the underlying campaigns are stable.
 
 ### Visuals
 
-- [ ] Unique leader portraits
-- [ ] Unique marshal / general portraits
-- [ ] Unique focus icons
-- [ ] Regime-specific flags
-- [ ] Event pictures
-- [ ] Loading screens
-- [ ] Bookmark artwork
-- [ ] Custom map aesthetics
-- [ ] UI improvements where useful
+- [x] Unique leader portraits — original procedural portrait cards wired to current leaders
+- [x] Unique marshal / general portraits — original procedural portrait cards wired to current commanders
+- [x] Unique focus icons — deterministic original icon per current focus ID
+- [x] Regime-specific flags — generated default + four political-slot variants
+- [x] Event pictures — custom period-styled event art replaces vanilla-WWII event imagery
+- [x] Loading screens — three original Napoleonic loading screens
+- [x] Bookmark artwork — original 1789 bookmark art
+- [ ] Custom map aesthetics — final terrain/map treatment requires A10
+- [x] UI improvements where useful — common seals, dividers and presentation sprites
 
 ### Audio
 
-- [ ] Period-appropriate music
-- [ ] Music categories / station
-- [ ] Event audio where appropriate
+- [ ] Period-appropriate music — final soundtrack direction requires A11
+- [ ] Music categories / station — implement with the approved A11 soundtrack
+- [x] Event audio where appropriate — original generated dispatch, crowd and artillery stingers
 
 ### Historical flavour
 
-- [ ] Historical unit names
-- [ ] Historical army / corps names
-- [ ] Historical ship names
-- [ ] Expanded flavour events
-- [ ] Expanded descriptions and tooltips
+- [x] Historical unit names
+- [x] Historical army / corps names — the mod's corps-scale division naming groups now use period formations/patterns
+- [x] Historical ship names
+- [x] Expanded flavour events
+- [x] Expanded descriptions and tooltips
 
 ### Localisation
 
-- [ ] Final English localisation pass
-- [ ] Terminology consistency
-- [ ] Remove placeholder text
-- [ ] Additional languages if contributors are available
+- [x] Final English localisation pass — first full mechanical/prose cleanup complete
+- [x] Terminology consistency
+- [x] Remove placeholder text from player-facing localisation
+- [ ] Additional languages if contributors are available — scope/maintenance requires A12
 
 ### Done when
 
-The mod is visually coherent, historically atmospheric and no longer exposes obvious placeholder or vanilla-WWII presentation.
+The non-gated implementation is complete. Final Milestone 9 acceptance still requires owner decisions on A10 (visual/map direction), A11 (soundtrack strategy) and A12 (translation scope), followed by an in-game presentation review. The current assets are original and redistribution-safe; they are deliberately replaceable if the approved art direction changes.
 
 ---
 

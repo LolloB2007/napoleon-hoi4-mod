@@ -11,7 +11,9 @@ QUESTIONS = [
 ('A07','Geographic scope','Keep Europe-first development or expand colonies and overseas theatres now?','Preserve existing overseas content and the current Wilderness abstraction.'),
 ('A08','Compatibility baseline','Confirm the installed HOI4 version and DLC set with a real launch.','Retain the inherited 1.19.* descriptor, without asserting engine compatibility.'),
 ('A09','Alternate-route limits','Approve speculative dynastic candidates and routes beyond the four existing French alternatives.','Constitutional, Republican, Royalist and Bonapartist routes are authorized.'),
-('A10','Art and audio','Approve the visual direction and identify assets we may legally redistribute.','Use plainly labelled original placeholders; no commercial portraits or music.')]
+('A10','Visual and map art direction','Choose the final presentation language for portraits, focus/event art, flags and map treatment.','Use original procedural engravings/cards and avoid invasive map recolouring.'),
+('A11','Soundtrack direction','Choose the music strategy and redistribution policy for the final soundtrack.','Ship event stingers only; do not bundle third-party recordings.'),
+('A12','Translation scope','Choose which languages should follow the final English pass and who maintains them.','Keep English authoritative until a maintained translation scope is approved.')]
 
 
 def build(root):
