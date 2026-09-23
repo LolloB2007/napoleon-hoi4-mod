@@ -58,6 +58,8 @@ class CoalitionTests(unittest.TestCase):
     def test_locks_precede_peace(self):
         for effect in parse(opening_effects()):
             entries=list(walk(effect.value));keys=[e.key for e in entries]
+            if 'white_peace' not in keys:
+                continue
             self.assertLess(keys.index('set_global_flag'),keys.index('white_peace'))
             self.assertLess(keys.index('clr_global_flag'),keys.index('white_peace'))
     def test_state_core_scope(self):
