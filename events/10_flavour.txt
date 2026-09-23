@@ -5,7 +5,7 @@ country_event = {
  desc = nap_flavour.1.d
  picture = GFX_NAP_EVENT_05
  fire_only_once = yes
- trigger = { tag = FRA date > 1790.1.1 }
+ trigger = { tag = FRA }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.1.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -15,7 +15,7 @@ country_event = {
  desc = nap_flavour.2.d
  picture = GFX_NAP_EVENT_09
  fire_only_once = yes
- trigger = { tag = ENG date > 1791.1.1 }
+ trigger = { tag = ENG }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.2.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -25,7 +25,7 @@ country_event = {
  desc = nap_flavour.3.d
  picture = GFX_NAP_EVENT_07
  fire_only_once = yes
- trigger = { tag = HAB date > 1792.1.1 }
+ trigger = { tag = HAB }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.3.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -35,7 +35,7 @@ country_event = {
  desc = nap_flavour.4.d
  picture = GFX_NAP_EVENT_08
  fire_only_once = yes
- trigger = { tag = PRU date > 1789.1.1 }
+ trigger = { tag = PRU }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.4.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -45,7 +45,7 @@ country_event = {
  desc = nap_flavour.5.d
  picture = GFX_NAP_EVENT_05
  fire_only_once = yes
- trigger = { tag = RUS date > 1790.1.1 }
+ trigger = { tag = RUS }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.5.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -55,7 +55,7 @@ country_event = {
  desc = nap_flavour.6.d
  picture = GFX_NAP_EVENT_07
  fire_only_once = yes
- trigger = { tag = SPR date > 1791.1.1 }
+ trigger = { tag = SPR }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.6.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -65,7 +65,7 @@ country_event = {
  desc = nap_flavour.7.d
  picture = GFX_NAP_EVENT_03
  fire_only_once = yes
- trigger = { tag = POL date > 1792.1.1 }
+ trigger = { tag = POL }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.7.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -75,7 +75,7 @@ country_event = {
  desc = nap_flavour.8.d
  picture = GFX_NAP_EVENT_08
  fire_only_once = yes
- trigger = { tag = SWE date > 1789.1.1 }
+ trigger = { tag = SWE }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.8.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -85,7 +85,7 @@ country_event = {
  desc = nap_flavour.9.d
  picture = GFX_NAP_EVENT_12
  fire_only_once = yes
- trigger = { tag = TUR date > 1790.1.1 }
+ trigger = { tag = TUR }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.9.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -95,7 +95,7 @@ country_event = {
  desc = nap_flavour.10.d
  picture = GFX_NAP_EVENT_07
  fire_only_once = yes
- trigger = { tag = VEN date > 1791.1.1 }
+ trigger = { tag = VEN }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.10.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -105,7 +105,7 @@ country_event = {
  desc = nap_flavour.11.d
  picture = GFX_NAP_EVENT_01
  fire_only_once = yes
- trigger = { tag = POR date > 1792.1.1 }
+ trigger = { tag = POR }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.11.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }
@@ -115,7 +115,7 @@ country_event = {
  desc = nap_flavour.12.d
  picture = GFX_NAP_EVENT_08
  fire_only_once = yes
- trigger = { tag = USA date > 1789.1.1 }
+ trigger = { tag = USA }
  mean_time_to_happen = { months = 8 }
  option = { name = nap_flavour.12.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
 }

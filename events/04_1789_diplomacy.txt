@@ -5,18 +5,10 @@ country_event = {
 	desc = napoleonic_diplomacy.1.d
 	picture = GFX_NAP_EVENT_08
 	fire_only_once = yes
-	trigger = {
-		tag = DEN
-		date > 1789.7.8
-		has_global_flag = nap_theatre_war_active
-		has_war_with = SWE
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
 	option = {
 		name = napoleonic_diplomacy.1.a
 	}
+	is_triggered_only = yes
 	immediate = {
 		napoleonic_end_theatre_war = yes
 	}
@@ -38,18 +30,10 @@ country_event = {
 	desc = napoleonic_diplomacy.2.d
 	picture = GFX_NAP_EVENT_09
 	fire_only_once = yes
-	trigger = {
-		tag = SWE
-		date > 1790.8.13
-		has_global_flag = nap_russo_swedish_war_active
-		has_war_with = RUS
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
 	option = {
 		name = napoleonic_diplomacy.2.a
 	}
+	is_triggered_only = yes
 	immediate = {
 		napoleonic_end_russo_swedish_war = yes
 	}
@@ -71,18 +55,10 @@ country_event = {
 	desc = napoleonic_diplomacy.3.d
 	picture = GFX_NAP_EVENT_04
 	fire_only_once = yes
-	trigger = {
-		tag = HAB
-		date > 1791.8.3
-		has_global_flag = nap_austro_turkish_war_active
-		has_war_with = TUR
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
 	option = {
 		name = napoleonic_diplomacy.3.a
 	}
+	is_triggered_only = yes
 	immediate = {
 		napoleonic_end_austro_turkish_war = yes
 	}
@@ -104,18 +80,10 @@ country_event = {
 	desc = napoleonic_diplomacy.4.d
 	picture = GFX_NAP_EVENT_11
 	fire_only_once = yes
-	trigger = {
-		tag = RUS
-		date > 1792.1.8
-		has_global_flag = nap_russo_turkish_war_active
-		has_war_with = TUR
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
 	option = {
 		name = napoleonic_diplomacy.4.a
 	}
+	is_triggered_only = yes
 	immediate = {
 		napoleonic_end_russo_turkish_jassy = yes
 	}

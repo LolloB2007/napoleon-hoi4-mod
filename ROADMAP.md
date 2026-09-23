@@ -1,6 +1,6 @@
 # Napoleonic Era: development roadmap
 
-**Current status: Milestone 9 merged; A01–A12 approved; next step is implementation of the owner decisions**
+**Current branch: A01 implemented: historical dates are focus minimums; A02-A12 approved and queued in the stacked implementation series**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
@@ -14,30 +14,9 @@ Implementation, static verification and successful in-game testing are separate 
 | 6 | Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses |
 | 7 | Campaign measurement infrastructure pending; actual balance requires in-game evidence |
 | 8 | Implementation complete: territorial/client foundation plus 13 secondary campaign packs; runtime validation pending |
-| 9 | Non-gated implementation complete and merged. A10 visual direction, A11 soundtrack direction and A12 translation scope are now approved; implementation of those final choices is the next pass. |
+| 9 | Non-gated implementation complete: original focus/event/portrait/flag/loading/bookmark/UI assets, event audio, historical namelists, flavour events and English polish. Final map/art direction, soundtrack and translation scope await A10-A12. |
 
 All original detailed milestone checklists and chronological phases are retained in [the milestone catalogue](docs/roadmap-milestones.md). This file is the current status authority; historic checkmarks in the catalogue are not runtime certification.
-
-## Next development pass — implement approved owner decisions
-
-The immediate next step is to implement the decisions recorded under **A01–A12** in [to ask lollo.md](to%20ask%20lollo.md).
-
-Priority work:
-
-- [ ] Convert historical focus dates to **minimum-date focus gates only**; remove exact-date forcing from unrelated systems.
-- [ ] Remove the hard practical campaign end date.
-- [ ] Expand bounded scripted peace logic so the actual victor receives a war-appropriate settlement, including non-historical winners.
-- [ ] Enforce historical/formable-only coring and add approved targeted compliance bonuses instead of conquest cores.
-- [ ] Implement the conventional + limited credible alternate-history formable catalogue with explicit founders and borders.
-- [ ] Standardize client/releasable mechanics around HOI4 puppet relationships.
-- [ ] Expand the world scope to European states, European colonial possessions, North Africa, USA, Canada and India while leaving irrelevant regions impassable/inert where appropriate.
-- [ ] Declare **La Résistance** as required and keep the runtime target on HOI4 1.19.x.
-- [ ] Expand plausible alternate political/dynastic routes without meme paths.
-- [ ] Move presentation toward the approved painted/engraved/cartographic hybrid aesthetic with asset provenance.
-- [ ] Build a soundtrack from original scoring plus newly rendered public-domain Revolutionary/Napoleonic repertoire.
-- [ ] Keep English as the only maintained localisation for now.
-
-This pass should be broken into reviewable PRs where the implementation areas are logically separable. Owner approval is no longer required for work that stays within these rules.
 
 ## Authorized end-product requirements
 
@@ -75,7 +54,7 @@ Milestone 9 adds presentation tests for focus-icon coverage, event pictures, lea
 
 ## Approval and development rules
 
-The approval record is [to ask lollo.md](to%20ask%20lollo.md). **A01–A12 are now approved and define the next implementation pass.** Scripted peace deals must produce bounded outcomes appropriate to the actual victor; historical treaties must not be forced when the opposite side wins.
+The queue is [to ask lollo.md](to%20ask%20lollo.md). **Revisit scripted peace deals when the historically losing side wins.** A01-A12 are approved implementation policy. New decisions that materially change them require a new owner entry.
 
 Each milestone gets its own PR, even when only an explicitly identified slice is implemented. Dependent PRs may be stacked: merge the parent first, then retarget its child to master. No workflow merges PRs. Every PR keeps README, this roadmap, the approval queue and test evidence current.
 

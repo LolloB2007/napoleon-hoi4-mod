@@ -16,12 +16,8 @@ country_event = {
 			has_country_flag = french_royalist_path
 		}
 		OR = {
-			date > 1804.5.17
 			has_country_flag = proclaim_empire_focus
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = napoleonic_wars.3.a
@@ -87,6 +83,7 @@ country_event = {
 			add_political_power = -50
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -213,7 +210,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
-		date > 1805.12.1
 		has_war_with = HAB
 		has_country_flag = empire_of_the_french
 	}
@@ -367,10 +363,6 @@ country_event = {
 	trigger = {
 		tag = FRA
 		has_country_flag = empire_of_the_french
-		date > 1806.7.11
-	}
-	mean_time_to_happen = {
-		days = 5
 	}
 	option = {
 		name = napoleonic_wars.7.a
@@ -421,6 +413,7 @@ country_event = {
 			}
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -509,7 +502,6 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
-		date > 1806.10.13
 		has_war_with = PRU
 	}
 	mean_time_to_happen = {
@@ -662,10 +654,6 @@ country_event = {
 	trigger = {
 		tag = FRA
 		has_country_flag = empire_of_the_french
-		date > 1806.11.20
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = napoleonic_wars.10.a
@@ -714,6 +702,7 @@ country_event = {
 			set_country_flag = nap_legacy_napoleonic_wars_10_settled
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
@@ -738,7 +727,6 @@ country_event = {
 	trigger = {
 		tag = FRA
 		has_war_with = RUS
-		date > 1807.7.6
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -801,15 +789,11 @@ country_event = {
 		tag = FRA
 		has_country_flag = empire_of_the_french
 		OR = {
-			date > 1812.6.23
 			has_country_flag = invade_russia_focus
 		}
 		NOT = {
 			has_war_with = RUS
 		}
-	}
-	mean_time_to_happen = {
-		days = 1
 	}
 	option = {
 		name = napoleonic_wars.16.a
@@ -889,6 +873,7 @@ country_event = {
 			add_stability = -0.05
 		}
 	}
+	is_triggered_only = yes
 	option = {
 		name = nap_fra_legacy_superseded
 		trigger = {
