@@ -55,7 +55,7 @@ jobs:
           if not re.fullmatch(r'dev/[A-Za-z0-9_./-]+', branch):
               raise SystemExit('Refusing to write outside dev/ branches')
           roots = ['common','history','events','localisation','interface','gfx','sound','music','docs']
-          roots += ['README.md','ROADMAP.md','to ask lollo.md','suggestions.md']
+          roots += ['README.md','ROADMAP.md','suggestions.md']
           paths = [p for p in roots if Path(p).exists()]
           if paths:
               subprocess.run(['git','add','-A','--',*paths], check=True)
