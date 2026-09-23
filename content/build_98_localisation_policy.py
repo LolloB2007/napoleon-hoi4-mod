@@ -25,7 +25,7 @@ def validate_localisation_policy(root, outputs=None):
             parts=Path(path).parts
             if len(parts)<3 or parts[1] != ALLOWED_LANGUAGE:
                 errors.append(f'generated non-English localisation: {path}')
-            text=value.decode('utf-8-sig') if isinstance(value,bytes) else value
+            text=value.decode('utf-8-sig') if isinstance(value,bytes) else value.removeprefix('\ufeff')
             first=next((line.strip() for line in text.splitlines() if line.strip() and not line.lstrip().startswith('#')),'')
             if first != ALLOWED_HEADER:
                 errors.append(f'bad generated localisation header: {path} -> {first!r}')

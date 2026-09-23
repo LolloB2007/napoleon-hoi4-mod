@@ -1,0 +1,7 @@
+nap_geography_initialize = {
+ FRA = { if = { limit = { exists = yes HAI = { exists = yes is_subject = no } } puppet = HAI } }
+ SPR = { if = { limit = { exists = yes MEX = { exists = yes is_subject = no } } puppet = MEX } }
+ POR = { if = { limit = { exists = yes BRA = { exists = yes is_subject = no } } puppet = BRA } }
+ ENG = { if = { limit = { exists = yes CAN = { exists = yes is_subject = no } } puppet = CAN } }
+ every_country = { limit = { nap_geography_outside_scope_country = yes } set_country_flag = nap_outside_scope add_ideas = nap_outside_scope_inert }
+}

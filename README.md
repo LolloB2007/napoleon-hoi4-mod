@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: A01-A02 implemented; A03-A12 approved and queued in the stacked implementation series**
+**Current branch: A01-A12 implemented in the stacked approval series; static validation and HOI4 runtime certification remain**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -39,6 +39,9 @@ The four opening northern and Ottoman conflicts use bounded scripted peace. The 
 - Original event stingers, twelve additional flavour events, historical corps/division naming groups and sailing-warship names
 - English localisation cleanup removing obvious generator/temporary language and normalising terminology
 - Asset-provenance documentation with no external commercial imagery, recordings or font files
+- A10 hybrid painted/engraved/cartographic presentation direction
+- A11 HOI4 music registration with original scoring and a newly rendered public-domain period composition
+- A12 enforced English-only maintained localisation policy
 
 ## Installation for testing
 
@@ -89,7 +92,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-Milestone 9 adds presentation tests for focus-icon coverage, event pictures, leader portraits, regime flags, loading/bookmark formats, event audio, flavour events, historical namelists, OOB naming integration, English localisation cleanup and asset provenance. GitHub Actions must still pass, and no HOI4 executable was run.
+A01-A12 add regression coverage for chronology gates, open-ended campaign, outcome-aware settlements, coring/formables/clients, geographic scope, DLC baseline, alternate-route plausibility, presentation, music provenance, and English-only localisation. GitHub Actions and a real HOI4 1.19.x + La Résistance launch remain the final certification gates.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

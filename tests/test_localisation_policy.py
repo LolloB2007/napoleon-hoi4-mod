@@ -18,6 +18,11 @@ class LocalisationPolicyTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_localisation_policy(root,{'localisation/french/x_l_french.yml':'\ufeffl_french:\n x:0 "X"\n'})
 
+    def test_generated_english_with_bom_is_accepted(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); (root/'localisation/english').mkdir(parents=True)
+            validate_localisation_policy(root,{'localisation/english/x_l_english.yml':'\ufeffl_english:\n x:0 "X"\n'})
+
     def test_bad_english_header_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); (root/'localisation/english').mkdir(parents=True)

@@ -1,0 +1,15 @@
+ideas = { country = {
+ nap_outside_scope_inert = {
+  picture = generic_disjointed_gov
+  allowed = { always = yes }
+  removal_cost = -1
+  modifier = {
+   political_power_factor = -0.90
+   research_speed_factor = -0.90
+   industrial_capacity_factory = -0.75
+   industrial_capacity_dockyard = -0.75
+   training_time_factor = 1.00
+   conscription_factor = -0.90
+  }
+ }
+} }
