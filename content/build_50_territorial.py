@@ -165,5 +165,5 @@ def postprocess(outputs,root):
         for row in data[kind]:
             states=row.get('states',row.get('required_states',[]))
             rows.append(f'| {row["id"]} | {row["title"]} | {states or "Not specified"} | {"Approved" if row["approved"] else "Awaiting approval"} ({row["approval"]}) |')
-    result['to ask lollo.md']=outputs['to ask lollo.md']+'\n## Territorial registry status\n\nThe registry below is implementation data under approved A04/A05 policy. Approved entries require explicit borders and attribution in source.\n\n| ID | Proposal | State IDs | Status |\n|---|---|---|---|\n'+'\n'.join(rows)+'\n'
+    result['docs/territorial-systems.md']=outputs['docs/territorial-systems.md']+'\n## Territorial registry status\n\nThe registry below is implementation data under approved A04/A05 policy. Approved entries require explicit borders and attribution in source.\n\n| ID | Proposal | State IDs | Status |\n|---|---|---|---|\n'+'\n'.join(rows)+'\n'
     return result

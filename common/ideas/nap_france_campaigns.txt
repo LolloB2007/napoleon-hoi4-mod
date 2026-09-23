@@ -1,0 +1,15 @@
+ideas = { country = {
+nap_fra_vendee_revolt = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = -0.06 political_power_factor = -0.05 supply_consumption_factor = 0.04 } }
+nap_fra_assignat_crisis = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = -0.04 political_power_factor = -0.06 } }
+nap_fra_committee_public_safety = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { war_support_factor = 0.05 political_power_factor = 0.03 stability_factor = -0.03 } }
+nap_fra_consular_machine = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { political_power_factor = 0.04 stability_factor = 0.03 } }
+nap_fra_marshals_empire = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_morale_factor = 0.04 planning_speed = 0.04 } }
+nap_continental_compliance = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { trade_opinion_factor = -0.10 political_power_factor = -0.02 } }
+nap_british_continental_pressure = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { trade_opinion_factor = -0.15 political_power_factor = -0.03 } }
+nap_fra_peninsular_guerrilla_war = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { supply_consumption_factor = 0.10 army_morale_factor = -0.03 war_support_factor = -0.03 } }
+nap_fra_russian_logistics = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { supply_consumption_factor = 0.14 army_morale_factor = -0.05 } }
+nap_fra_russian_prepared = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { supply_consumption_factor = -0.06 planning_speed = 0.04 } }
+nap_fra_hundred_days_mobilization = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_morale_factor = 0.05 army_attack_factor = 0.03 stability_factor = -0.03 } }
+nap_fra_restoration_charter = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = 0.04 political_power_factor = 0.03 } }
+nap_fra_postwar_exhaustion = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { war_support_factor = -0.06 political_power_factor = -0.03 } }
+} }

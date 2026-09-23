@@ -1,4 +1,3 @@
-# Generated from retained source; A01 uses focus date floors, route state and repeat guards rather than autonomous historical dates.
 add_namespace = napoleonic_collapse
 country_event = {
 	id = napoleonic_collapse.1
@@ -6,13 +5,6 @@ country_event = {
 	desc = napoleonic_collapse.1.d
 	picture = GFX_NAP_EVENT_02
 	fire_only_once = yes
-	trigger = {
-		tag = FRA
-		has_country_flag = russian_campaign_active
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
 	option = {
 		name = napoleonic_collapse.1.a
 		trigger = {
@@ -58,6 +50,7 @@ country_event = {
 			factor = 100
 		}
 	}
+	is_triggered_only = yes
 }
 news_event = {
 	id = napoleonic_collapse.11
@@ -246,19 +239,6 @@ country_event = {
 	desc = napoleonic_collapse.5.d
 	picture = GFX_NAP_EVENT_10
 	fire_only_once = yes
-	trigger = {
-		tag = FRA
-		has_country_flag = empire_of_the_french
-		OR = {
-			has_war_with = PRU
-			has_war_with = HAB
-			has_war_with = RUS
-			has_war_with = ENG
-		}
-	}
-	mean_time_to_happen = {
-		days = 7
-	}
 	option = {
 		name = napoleonic_collapse.5.a
 		ai_chance = {
@@ -289,11 +269,6 @@ country_event = {
 				FRA = {
 					white_peace = PREV
 				}
-			}
-			country_event = {
-				id = napoleonic_collapse.6
- picture = GFX_NAP_EVENT_10
-				days = 22
 			}
 		}
 	}
@@ -334,6 +309,7 @@ country_event = {
 			factor = 100
 		}
 	}
+	is_triggered_only = yes
 }
 country_event = {
 	id = napoleonic_collapse.6
@@ -501,11 +477,6 @@ country_event = {
  picture = GFX_NAP_EVENT_10
 				hours = 6
 			}
-			country_event = {
-				id = napoleonic_collapse.9
- picture = GFX_NAP_EVENT_02
-				days = 109
-			}
 			set_country_flag = french_bonapartist_path
 			clr_country_flag = french_constitutional_path
 			clr_country_flag = french_royalist_path
@@ -589,11 +560,6 @@ news_event = {
 			add_political_power = -200
 			add_command_power = -100
 			clr_country_flag = hundred_days
-			country_event = {
-				id = napoleonic_collapse.10
- picture = GFX_NAP_EVENT_05
-				days = 5
-			}
 		}
 		ENG = {
 			add_war_support = 0.20
@@ -680,16 +646,6 @@ news_event = {
 	desc = napoleonic_collapse.12.d
 	picture = GFX_NAP_EVENT_11
 	major = yes
-	trigger = {
-		date > 1815.11.19
-		has_global_flag = waterloo_fought
-		NOT = {
-			has_global_flag = concert_of_europe_established
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
 	fire_only_once = yes
 	option = {
 		name = napoleonic_collapse.12.a
@@ -706,4 +662,5 @@ news_event = {
 			add_ideas = concert_of_europe
 		}
 	}
+	is_triggered_only = yes
 }

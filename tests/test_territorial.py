@@ -84,20 +84,23 @@ class TerritorialTests(unittest.TestCase):
             self.assertIn('is_subject_of = FRA',dumps([node]))
             self.assertIn('nap_treasury > 88',dumps([node]))
     def test_rhine_offer_replaces_unconditional_puppet(self):
-        outputs=france(ROOT)|{'to ask lollo.md':'# Queue'}
+        outputs=france(ROOT)|build(ROOT)
         result=postprocess(outputs,ROOT)
         event=next(e for e in parse(result['events/02_napoleonic_wars.txt']) if e.key=='country_event' and e.scalar('id')=='napoleonic_wars.7')
         self.assertNotIn('puppet',[e.key for e in walk(event.value)])
         self.assertIn('nap_clients.10',dumps([event]))
     def test_french_factions_protect_other_factions(self):
-        outputs=france(ROOT)|{'to ask lollo.md':'# Queue'}
+        outputs=france(ROOT)|build(ROOT)
         text=postprocess(outputs,ROOT)['common/national_focus/FRA.txt']
         self.assertNotIn('create_faction =',text)
         self.assertEqual(text.count('create_faction_from_template'),3)
         self.assertEqual(text.count('is_in_faction = no'),3)
-    def test_approval_queue_lists_actual_proposals(self):
-        queue=postprocess(france(ROOT)|{'to ask lollo.md':'# Queue'},ROOT)['to ask lollo.md']
-        for row in self.data['integrations']+self.data['formables']:self.assertIn(row['id'],queue)
+    def test_territorial_docs_list_actual_proposals(self):
+        result=postprocess(france(ROOT)|build(ROOT),ROOT)
+        self.assertNotIn('to ask lollo.md',result)
+        docs=result['docs/territorial-systems.md']
+        for row in self.data['integrations']+self.data['formables']:
+            self.assertIn(row['id'],docs)
     def test_formables_grant_explicit_reasonable_cores(self):
         text=build(ROOT)['common/decisions/nap_territorial.txt']
         for row in self.data['formables']:

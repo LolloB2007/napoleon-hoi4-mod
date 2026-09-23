@@ -1,0 +1,6 @@
+on_actions = {
+ on_startup = { effect = { every_country = { limit = { tag = FRA } nap_fra_decision_initialize = yes nap_fra_decision_refresh = yes } } }
+ on_monthly = { effect = { if = { limit = { tag = FRA } nap_fra_decision_monthly = yes } } }
+ on_army_leader_won_combat = { effect = { FROM = { if = { limit = { tag = FRA OR = { has_country_flag = nap_fra_italian_campaign_active has_country_flag = nap_fra_egyptian_expedition_active has_country_flag = russian_campaign_active } } add_to_variable = { nap_fra_napoleon_prestige = 0.35 } nap_fra_decision_clamp = yes } } } }
+ on_army_leader_lost_combat = { effect = { FROM = { if = { limit = { tag = FRA OR = { has_country_flag = nap_fra_italian_campaign_active has_country_flag = nap_fra_egyptian_expedition_active has_country_flag = russian_campaign_active } } add_to_variable = { nap_fra_napoleon_prestige = -0.25 } nap_fra_decision_clamp = yes } } } }
+}

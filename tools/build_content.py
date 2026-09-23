@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'content'))
 sys.path.insert(0, str(ROOT / 'tools'))
 ALLOWED = {'common','events','history','localisation','interface','gfx','docs','sound','music'}
-DOCS = {'README.md','ROADMAP.md','to ask lollo.md','suggestions.md'}
+DOCS = {'README.md','ROADMAP.md','suggestions.md'}
 
 
 def validate_path(name):

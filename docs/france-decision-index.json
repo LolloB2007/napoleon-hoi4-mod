@@ -1,0 +1,392 @@
+[
+  {
+    "id": "nap_fra_establish_national_assembly",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Assert the National Assembly",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_legislative_assembly",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Reconstitute the Legislative Assembly",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_national_convention",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Convene the National Convention",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_support_girondins",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Support the Girondin Clubs",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_support_jacobins",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Mobilize the Jacobin Clubs",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_issue_assignats",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Issue a New Assignat Tranche",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_redeem_assignats",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Redeem Assignats from Circulation",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_negotiate_vendee",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Negotiate with Refractory Parishes",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_columns_vendee",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Dispatch Republican Columns to the West",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_committee_public_safety",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Establish the Committee of Public Safety",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_debate_terror",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Debate Emergency Terror",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_thermidorian_reaction",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Trigger a Thermidorian Reaction",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_install_directory",
+    "category": "nap_fra_revolutionary_crisis",
+    "title": "Establish the Executive Directory",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_open_italian_campaign",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Organize the Army of Italy",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_italian_requisitions",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Requisition Italian Magazines",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_italian_republics",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Court the Italian Patriots",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_conclude_italian_campaign",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Conclude the Italian Campaign",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_prepare_egypt",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Prepare the Egyptian Expedition",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_institute_egypt",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Found the Institut d\u2019\u00c9gypte",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_egypt_supply",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Secure Mediterranean Supply",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_return_egypt",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Return from Egypt",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_stage_brumaire",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Stage the Coup of Brumaire",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_constitution_year_viii",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Consolidate the Constitution of Year VIII",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_proclaim_empire_decision",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Submit the Empire to Plebiscitary Legitimacy",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_coronation",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Hold the Imperial Coronation",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_appoint_marshals",
+    "category": "nap_fra_napoleon_rise",
+    "title": "Create the Marshals of the Empire",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_activate_continental_system",
+    "category": "nap_fra_continental_system",
+    "title": "Issue the Continental Decrees",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_continental_pressure_rus",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Russia to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_pru",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Prussia to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_hab",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Austria to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_spr",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Spain to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_por",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Portugal to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_net",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure the Netherlands to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_den",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Denmark to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_continental_pressure_swe",
+    "category": "nap_fra_continental_system",
+    "title": "Pressure Sweden to Enforce the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_tighten_continental_customs",
+    "category": "nap_fra_continental_system",
+    "title": "Tighten Continental Customs",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_relax_continental_customs",
+    "category": "nap_fra_continental_system",
+    "title": "Permit Licensed Continental Trade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_continental_evade_customs",
+    "category": "nap_continental_foreign",
+    "title": "Tolerate Smuggling through the Blockade",
+    "repeatable": true
+  },
+  {
+    "id": "nap_continental_enforce_locally",
+    "category": "nap_continental_foreign",
+    "title": "Enforce the French Customs Regime",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_launch_peninsular_intervention",
+    "category": "nap_fra_peninsular_war",
+    "title": "Intervene in Iberia",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_peninsular_depots",
+    "category": "nap_fra_peninsular_war",
+    "title": "Fortify the Iberian Depots",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_peninsular_conciliate",
+    "category": "nap_fra_peninsular_war",
+    "title": "Conciliate Spanish Elites",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_peninsular_columns",
+    "category": "nap_fra_peninsular_war",
+    "title": "Deploy Mobile Counter-Guerrilla Columns",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_peninsular_rotate",
+    "category": "nap_fra_peninsular_war",
+    "title": "Rotate the Occupation Army",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_peninsular_settlement",
+    "category": "nap_fra_peninsular_war",
+    "title": "Impose a Bounded Iberian Settlement",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_peninsular_withdraw",
+    "category": "nap_fra_peninsular_war",
+    "title": "Abandon the Deep Iberian Occupation",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_russia_magazines",
+    "category": "nap_fra_russian_campaign",
+    "title": "Build Polish Forward Magazines",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_russia_remounts",
+    "category": "nap_fra_russian_campaign",
+    "title": "Accumulate Remounts and Wagons",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_russia_allies",
+    "category": "nap_fra_russian_campaign",
+    "title": "Coordinate Allied Contingents",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_russia_launch",
+    "category": "nap_fra_russian_campaign",
+    "title": "Cross the Niemen",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_russia_forward_depots",
+    "category": "nap_fra_russian_campaign",
+    "title": "Establish Forward Depots",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_russia_winter_quarters",
+    "category": "nap_fra_russian_campaign",
+    "title": "Halt for Winter Quarters",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_russia_press_on",
+    "category": "nap_fra_russian_campaign",
+    "title": "Press Deeper into Russia",
+    "repeatable": true
+  },
+  {
+    "id": "nap_fra_russia_settlement",
+    "category": "nap_fra_russian_campaign",
+    "title": "Offer Russia a Continental Settlement",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_russia_retreat",
+    "category": "nap_fra_russian_campaign",
+    "title": "Order an Organized Retreat",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_fontainebleau",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Convene the Fontainebleau Abdication Council",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_restore_bourbons",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Restore Louis XVIII",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_restoration_charter",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Grant a Constitutional Charter",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_return_elba",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Return from Elba",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_hundred_days_rally",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Rally the Veterans of the Empire",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_hundred_days_liberal",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Issue an Additional Act",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_hundred_days_battle",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Seek a Decisive Battle in Belgium",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_second_abdication",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Accept the Second Abdication",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_hundred_days_survive",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Consolidate a Surviving Hundred Days Regime",
+    "repeatable": false
+  },
+  {
+    "id": "nap_fra_concert",
+    "category": "nap_fra_restoration_cycle",
+    "title": "Accept the European Postwar Settlement",
+    "repeatable": false
+  }
+]

@@ -1,19 +1,5 @@
-"""Generate the owner's three tracking documents from branch status."""
+"""Generate project-facing documentation from branch status."""
 import json
-
-QUESTIONS = [
-('A01','Calendar model','Historical chronology policy.','APPROVED: historical dates are minimum-date focus gates only; events, wars and peace deals are state-driven.'),
-('A02','Campaign end','Campaign end policy.','APPROVED: remove the practical campaign end and allow open-ended continuation.'),
-('A03','Alternate peace outcomes','Bounded-war settlement policy.','APPROVED: settlements follow the actual victor and war objectives; no unrestricted annexation.'),
-('A04','Coring policy','Coring and occupation policy.','APPROVED: no broad conquest coring; only historical/formable cores, with targeted compliance support where appropriate.'),
-('A05','Formable catalogue','Formable policy.','APPROVED IN PRINCIPLE: conventional and limited credible alternate formables with explicit founders and borders.'),
-('A06','Clients and releasables','Client-state policy.','APPROVED: standard HOI4 puppet relationships are the default; never transfer unrelated third-party land.'),
-('A07','Geographic scope','World-scope policy.','APPROVED: Europe plus relevant colonial possessions, North Africa, USA, Canada and India; irrelevant regions may remain inert/abstract.'),
-('A08','Compatibility baseline','Compatibility policy.','APPROVED: target HOI4 1.19.x and require La Résistance; runtime compatibility still needs a real launch.'),
-('A09','Alternate-route limits','Alternate-history policy.','APPROVED: credible historical near-counterfactuals and plausible dynastic/political alternatives; no meme/fantasy routes.'),
-('A10','Visual and map art direction','Presentation policy.','APPROVED: painted/historical scenes and portraits, engraved/cartographic UI and focus art, understated period map styling.'),
-('A11','Soundtrack direction','Music policy.','APPROVED: original scoring plus newly rendered public-domain Revolutionary/Napoleonic repertoire, with provenance.'),
-('A12','Translation scope','Localisation policy.','APPROVED: English only for now; community translations may be accepted later, but no machine-translated release padding.')]
 
 
 def build(root):
@@ -58,114 +44,117 @@ All original detailed milestone checklists and chronological phases are retained
 - [ ] Focus-tree rendering, reachability and visible localisation in game.
 - [ ] Campaign measurements before military balance is declared complete.
 
-## Approval and development rules
+## Development rules
 
-The queue is [to ask lollo.md](to%20ask%20lollo.md). **Revisit scripted peace deals when the historically losing side wins.** A01-A12 are approved implementation policy. New decisions that materially change them require a new owner entry.
+A01-A12 are established implementation policy. **Revisit scripted peace deals when the historically losing side wins.** New changes that materially alter those policies should be documented explicitly in the relevant design/source file.
 
-Each milestone gets its own PR, even when only an explicitly identified slice is implemented. Dependent PRs may be stacked: merge the parent first, then retarget its child to master. No workflow merges PRs. Every PR keeps README, this roadmap, the approval queue and test evidence current.
+Each milestone gets its own PR, even when only an explicitly identified slice is implemented. Dependent PRs may be stacked: merge the parent first, then retarget its child to master. No workflow merges PRs. Every PR keeps the README, roadmap and test evidence current.
 
 Build playable historical slices: **1789-1795 > 1796-1804 > 1805-1807 > 1808-1811 > 1812-1815**. Do not equate generated file counts with finished campaigns.
 '''
-    asks = f'''# To ask Lollo
+    readme = '''# Napoleonic Era
 
-{header}
+**Napoleonic Era** is a Hearts of Iron IV total-conversion project beginning on **5 May 1789**, built around the French Revolution, the Revolutionary Wars and the Napoleonic era.
 
-This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation and validation are authorized. The current owner target is 600-650 French focuses, 350-400 for each other major, and 150-200 for each secondary campaign with at least 30-40 country-specific focuses. Approving a PR does not approve all proposals listed here.
+The campaign is Europe-first, with France as the narrative centre and substantial playable content for Britain, Austria, Prussia, Russia and a broad set of secondary powers.
 
-'''
-    for key,title,question,default in QUESTIONS:
-        asks += f'## {key}: {title}\n\n**Approved.** {default}\n\n'
-    asks += '## Not approval blockers\n\nNamespacing, missing references, scope corrections, finite costs, cooldowns, idempotency, localisation encoding, tests and preserving existing work can proceed. Prototype balance numbers remain provisional until campaign testing.\n'
-    readme = f'''# Napoleonic Era for Hearts of Iron IV
+## What is in the mod
 
-A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
+### Major campaigns
 
-{header}
+- **France:** 630 focuses across constitutional, republican, royalist and Bonapartist paths.
+- **Britain:** roughly 368 focuses.
+- **Habsburg Austria:** roughly 368 focuses.
+- **Prussia:** roughly 364 focuses.
+- **Russia:** roughly 366 focuses.
+- **Secondary campaigns:** 175 effective focuses per supported campaign, including at least 38 country-specific focuses.
 
-> Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
+### France
 
-## Project documents
+France combines the focus tree with decision-driven campaign systems for:
 
-- [ROADMAP.md](ROADMAP.md): live implementation and acceptance status.
-- [Detailed milestone catalogue](docs/roadmap-milestones.md): all retained milestone checklists.
-- [to ask lollo.md](to%20ask%20lollo.md): owner decisions awaiting approval.
-- [suggestions.md](suggestions.md): proposals, not silently enabled changes.
-- [Legacy architecture](docs/legacy-architecture.md): retained earlier documentation; historic counts and completion claims are superseded by the current roadmap.
+- the Estates-General, revolutionary assemblies, Girondin/Jacobin politics, assignats, the Vendée, the Committee of Public Safety, the Terror and Thermidor;
+- Bonaparte's Italian and Egyptian campaigns, personal prestige, Brumaire, the Consulate, the Empire, coronation and the Marshals;
+- the Continental System, including enforcement pressure and foreign evasion;
+- the Peninsular War, with resistance, supply pressure and bounded settlement/withdrawal outcomes;
+- the Russian campaign, with preparation, depots, cohesion, attrition, retreat and non-scripted victory/defeat outcomes;
+- abdication, the Bourbon Restoration, the Hundred Days and the postwar European settlement.
 
-## Campaign and political paths
+### Warfare and campaign systems
 
-The inherited framework starts in 1789. Under approved A01, historical dates are minimum focus gates rather than autonomous event timers; A02 removes the practical campaign end. Development follows playable slices: 1789-1795, 1796-1804, 1805-1807, 1808-1811 and 1812-1815.
+The mod replaces vanilla-era assumptions with Napoleonic infantry, cavalry, artillery, support units, equipment and age-of-sail naval technology.
 
-France retains constitutional-monarchy, revolutionary-republican, royalist and Bonapartist routes. The current content target is **600-650 French focuses**, with **350-400** for each other major and **150-200** for each secondary campaign with substantial personalised material. A node-count target alone is not campaign completion.
+Shared campaign mechanics include treasury, debt, legitimacy, political fervour, war exhaustion, army prestige, reform and foreign-campaign supply pressure. Coalition wars use bounded scripted settlements instead of unrestricted vanilla total-war annexation.
 
-The engine slots map neutrality to Absolutism, democratic to Constitutionalism, communism to Republicanism and fascism to Bonapartism. These are technical identifiers, not historical equivalences between eighteenth- and twentieth-century movements.
+### Territorial and diplomatic systems
 
-## Existing foundations and this branch
+- historical/formable-only coring;
+- explicit formable state and core catalogues;
+- normal HOI4 puppet relationships for restored/client states;
+- seven coalition rounds with consent, subsidy and separate-peace mechanics;
+- Europe-centred campaign scope with relevant North African, Atlantic and Indian states represented where approved.
 
-The project includes five major trees, sixteen secondary-country setups, national spirits, technologies, custom infantry/cavalry/artillery/support units, equipment and standing OOBs. Missing source contracts are restored in this branch. Flags and bookmark artwork are placeholders, not researched final art. Country-history overlays and the untouched vanilla world still require an engine/database audit.
+### Presentation
 
-The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
+The mod includes generated period-style focus art, portraits, event pictures, flags, loading screens, UI elements and a small provenance-tracked soundtrack. English is the maintained localisation language.
 
-{delivered}
+## Start date and compatibility
 
-## Installation for testing
+- **Start date:** 5 May 1789
+- **Campaign end:** open-ended
+- **Target HOI4 version:** 1.19.x
+- **Required DLC:** La Résistance
 
-1. Download the **complete branch**, not just a PR patch, into a local HOI4 mod directory.
-2. Create/update the launcher's external .mod file to point to the directory containing descriptor.mod. Do not hardcode another contributor's local path.
-3. Enable only this mod in a separate test playset and start a **new** 1789 campaign.
-4. Launch with -debug. Inspect error.log and game.log under the Hearts of Iron IV user-data logs directory.
-5. Verify rulers, territory, armies, research, focus rendering, decisions and scripted wars before a long campaign.
+This is an active development build. Script and regression tests are extensive, but a clean in-engine campaign is still the final authority for compatibility and balance.
 
-The inherited descriptor targets 1.19.*. Confirm your actual version/DLC configuration before treating compatibility as established. The repository does not distribute game files or guarantee save compatibility across development branches.
+## Installation
 
-## Sources and build
+1. Download or clone the repository into a Hearts of Iron IV mod directory.
+2. Point a launcher .mod descriptor at the directory containing descriptor.mod.
+3. Enable the mod in its own playset.
+4. Start a new 1789 campaign.
 
-New content is authored in content/build_*.py and compiled into ordinary checked-in .txt/.yml/.gfx/.tga files. Players do not need Python. A SHA-256 manifest identifies generated outputs and their source ownership.
+For development testing, launching HOI4 with -debug and checking error.log / game.log is strongly recommended.
 
-```sh
+## Repository structure
+
+~~~text
+content/                  Source-owned content generators and registries
+common/                   Focuses, decisions, ideas, units, technologies and scripted mechanics
+history/                  Country setup and starting OOB data
+events/                   Narrative and mechanical events
+localisation/english/     Maintained English localisation
+interface/ and gfx/       UI registrations and generated visual assets
+music/ and sound/         Soundtrack and event audio
+tests/                    Regression and structural tests
+tools/                    Content compiler and validation tooling
+docs/                     Design, scope and generated reference documentation
+~~~
+
+## Building from source
+
+Most large content systems are authored under content/build_*.py and compiled into checked-in HOI4 files.
+
+~~~sh
 python3 tools/build_content.py
 python3 tools/build_content.py --check
 python3 -m unittest discover -s tests -v
 python3 tools/check_content.py
-```
+~~~
 
-Edit the source module, not a generated output. Hand-authored files stay hand-authored unless explicitly listed in docs/generated_manifest.json. The build rejects unsafe paths and duplicate outputs.
+Edit the source generator or registry that owns a generated file rather than hand-editing compiled output. Ownership is recorded in docs/generated_manifest.json.
 
-The GitHub workflow builds and tests dev/* branches, then commits generated outputs to that same branch only. Pull-request verification is read-only. No workflow merges PRs, changes master, collects player data or launches HOI4. Write permission is limited to the generator job.
+## Project documentation
 
-## Layout
+- [ROADMAP.md](ROADMAP.md) — current implementation and acceptance status.
+- [suggestions.md](suggestions.md) — forward-looking proposals and priorities.
+- [Detailed milestone catalogue](docs/roadmap-milestones.md) — retained milestone checklists.
+- [France decision mechanics](docs/france-decision-mechanics.md) — current French decision-system design.
+- [Generated manifest](docs/generated_manifest.json) — generated-file ownership and hashes.
 
-```text
-content/                  Editable content modules and branch status
-common/country_tags/      Country namespace
-common/countries/         Country colours and graphical cultures
-common/national_focus/    Focus trees and shared branches
-common/ideas/             National spirits
-common/scripted_effects/  State-changing mechanics
-common/scripted_triggers/ Reusable conditions
-common/decisions/         Player and AI actions
-common/on_actions/       Startup and periodic hooks
-common/technologies/     Technologies and inherited doctrines
-common/units/            Subunits and equipment
-history/                 Starting governments and OOBs
-events/                  Narrative and mechanical events
-localisation/english/    English text with UTF-8 BOM
-interface/ and gfx/      UI registrations and assets
-tests/ and tools/        Build, parser and validation
-docs/                   Scope, manifests and test evidence
-```
+## Development status
 
-## Testing limits
-
-{report}
-
-The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
-
-New mechanics need explicit scope, costs, repeatability and cleanup. Territorial transfers must verify ownership and protect third-party land. Peace effects need idempotency and recursion guards. Events must recheck routes when effects execute, not merely when queued. Do not restore version-specific state files without checking the installed map.
-
-## Contribution and acceptance
-
-Use a branch per milestone or named general pass. Include merge dependencies, exact delivered scope, evidence, runtime limits and approval blockers. Update the three tracking documents through content/status.json and the documentation builder. Milestone 7 requires campaign measurements; Milestone 9 requires rights-cleared assets and an in-game presentation review.
+The project already has broad campaign content. The main remaining work is **runtime certification, bespoke historical depth outside France, AI/pacing, map/OOB accuracy and balance based on actual campaign evidence**, not raw focus-count expansion.
 '''
     suggestions = '''# Suggestions
 
@@ -184,14 +173,16 @@ Use a branch per milestone or named general pass. Include merge dependencies, ex
 
 The mod has enough focus nodes. **Do not solve the next quality problems by adding another thousand generic focuses.** Use events, decisions, variables, characters, scripted peace and campaign-specific mechanics.
 
-### France
+### France — decision mechanics implemented
 
-- Turn the Revolution into a real political crisis system: Estates-General, Assembly/Convention transitions, Jacobin–Girondin struggle, Vendée, assignats, Committee of Public Safety, Terror and Thermidor.
-- Give Napoleon's rise bespoke mechanics for the Italian Campaign, Egypt, prestige, Brumaire, Consulate, coronation and Marshals rather than relying mostly on focus completion.
-- Build the Continental System as an actual enforcement/evasion mechanic affecting subjects, allies, neutrals and British trade.
-- Make the Peninsular War a sustained occupation/guerrilla problem rather than a normal front.
-- Make the 1812 campaign about preparation, depots, attrition, retreat and army collapse, with meaningful outcomes short of scripted historical defeat.
-- Give 1814, the Restoration, Hundred Days and the postwar settlement proper state transitions.
+The six former France proposals are now implemented in the source-owned decision layer: revolutionary crisis management, Bonaparte's prestige/rise, Continental enforcement and evasion, Peninsular resistance, Russian campaign logistics/outcomes, and the 1814–1815 restoration cycle.
+
+Next France priorities:
+- Runtime-balance the new 0–100 crisis/campaign meters so choices are consequential without becoming repetitive click maintenance.
+- Add more bespoke narrative events around decision thresholds, especially the Vendée, assignat crisis, Italian/Egyptian campaign outcomes and Russian retreat.
+- Replace the remaining date-driven French-adjacent European collapse events where state-driven triggers would produce better campaigns.
+- Give the most important decision systems dedicated UI/tooltips only after their ordinary decision presentation is proven insufficient in game.
+- Measure AI use of the decision systems and tune decision weights so historical AI can progress without being railroaded into a fixed outcome.
 
 ### Britain, Austria, Prussia and Russia
 
@@ -349,4 +340,4 @@ PRU, HOL and GER overlap vanilla identities. Vanilla country-tag load order, cou
 
 Legacy focus/event/technology localisation prose is still a separate reconciliation item. Missing translations are content defects; they do not themselves prove a startup crash. Original architecture documentation is retained, not treated as runtime evidence.
 '''
-    return {'README.md':readme, 'ROADMAP.md':roadmap, 'to ask lollo.md':asks, 'suggestions.md':suggestions, 'docs/source-contracts.md':contracts}
+    return {'README.md':readme, 'ROADMAP.md':roadmap, 'suggestions.md':suggestions, 'docs/source-contracts.md':contracts}
