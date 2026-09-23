@@ -14,19 +14,19 @@ class TerritorialTests(unittest.TestCase):
     def setUp(self):
         self.data=json.loads((ROOT/'content/territorial_registry.json').read_text())
     def test_valid_registry(self):validate_registry(self.data)
-    def test_a04_only_approved_historical_integrations_emitted(self):
+    def test_a04_integrations_and_a05_formables_emitted(self):
         text=build(ROOT)['common/decisions/nap_territorial.txt']
         self.assertIn('nap_integrate_savoy_735',text)
         self.assertIn('nap_integrate_austrian_netherlands_6',text)
-        self.assertNotIn('nap_form_',text)
+        for row in self.data['formables']:
+            self.assertIn('nap_form_'+row['id'],text)
         self.assertEqual(text.count('add_core_of = FRA'),2)
     def test_all_new_scripts_parse(self):
         for path,text in build(ROOT).items():
             if path.endswith('.txt'):parse(text)
     def test_six_formable_proposals(self):self.assertEqual(len(self.data['formables']),6)
     def test_approved_empty_formable_fails(self):
-        self.data['formables'][0]['approved']=True
-        self.data['formables'][0]['approved_by']='fixture'
+        self.data['formables'][0]['required_states']=[]
         with self.assertRaises(ValueError):validate_registry(self.data)
     def test_unattributed_approval_fails(self):
         self.data['integrations'][0]['approved_by']=''
@@ -90,8 +90,19 @@ class TerritorialTests(unittest.TestCase):
     def test_approval_queue_lists_actual_proposals(self):
         queue=postprocess(france(ROOT)|{'to ask lollo.md':'# Queue'},ROOT)['to ask lollo.md']
         for row in self.data['integrations']+self.data['formables']:self.assertIn(row['id'],queue)
+    def test_a05_formables_have_explicit_borders_and_no_automatic_cores(self):
+        text=build(ROOT)['common/decisions/nap_territorial.txt']
+        for row in self.data['formables']:
+            self.assertTrue(row['approved'])
+            self.assertTrue(row['required_states'])
+            decision=next(e for e in parse(text)[0].value if e.key=='nap_form_'+row['id'])
+            rendered=dumps([decision])
+            for sid in row['required_states']:
+                self.assertIn(f'{sid} =',rendered)
+            self.assertNotIn('add_core_of',rendered)
+            self.assertNotIn('annex_country',rendered)
     def test_default_decision_count(self):
         decisions=parse(build(ROOT)['common/decisions/nap_territorial.txt'])[0].value
-        self.assertEqual(len(decisions),30)
+        self.assertEqual(len(decisions),36)
 
 if __name__=='__main__':unittest.main()
