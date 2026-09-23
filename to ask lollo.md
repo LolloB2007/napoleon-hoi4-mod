@@ -1,6 +1,6 @@
 # To ask Lollo
 
-**Current branch: Milestone 5: distinct great-power programmes and starting-leader correction**
+**Current branch: Milestone 8: releases, client aid and approval-gated territorial interfaces**
 
 This is the live approval queue. No answer is presumed. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
 
@@ -67,3 +67,18 @@ Safe interim policy: Use plainly labelled original placeholders; no commercial p
 ## Not approval blockers
 
 Namespacing, missing references, scope corrections, finite costs, cooldowns, idempotency, localisation encoding, tests and preserving existing work can proceed. Prototype balance numbers remain provisional until campaign testing.
+
+## Territorial registry: actual pending entries
+
+No entries below are authorized by this implementation PR. Update content/territorial_registry.json only after the owner decides.
+
+| ID | Proposal | State IDs | Status |
+|---|---|---|---|
+| savoy | Savoy | [735] | Awaiting approval (A04) |
+| austrian_netherlands | Austrian Netherlands (draft map abstraction) | [6] | Awaiting approval (A04) |
+| italian_kingdom | Kingdom of Italy | Not specified | Awaiting approval (A05) |
+| german_confederation | German Confederation | Not specified | Awaiting approval (A05) |
+| scandinavian_union | Scandinavian Union | Not specified | Awaiting approval (A05) |
+| restored_commonwealth | Restored Commonwealth | Not specified | Awaiting approval (A05) |
+| danubian_federation | Danubian Federation | Not specified | Awaiting approval (A05/A09) |
+| rhine_federation | Rhine Federation | Not specified | Awaiting approval (A05/A06) |

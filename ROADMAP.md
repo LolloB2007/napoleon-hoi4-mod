@@ -1,20 +1,20 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: Milestone 5: distinct great-power programmes and starting-leader correction**
+**Current branch: Milestone 8: releases, client aid and approval-gated territorial interfaces**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
 | Milestone | Current status |
 |---|---|
-| 1 | Country setup exists; four great-power starting rulers corrected; engine verification pending |
+| 1 | Country setup exists; four great-power rulers corrected; engine verification pending |
 | 2 | Opening diplomacy and bounded treaties implemented; engine verification pending |
-| 3 | Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper campaigns and territorial policy remain |
-| 4 | Partial: seven coalition rounds, consent, funding, separate peace and guarded treaties; bespoke settlements and fallback leadership remain |
-| 5 | Partial: 108 new focuses, 24 policy reviews, 12 spirits, three guarded successions and starting-leader fixes; full country campaigns remain |
-| 6 | Partial: eight bounded meters, twelve decisions, eleven spirits and campaign pulses |
-| 7 | Blocked on representative in-game campaign measurements |
-| 8 | Country setup only; deep campaigns and formables pending |
-| 9 | Placeholders only; legacy localisation, presentation and rights review pending |
+| 3 | Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper bespoke campaigns remain |
+| 4 | Partial: seven coalition rounds, consent, funding and separate peace; bespoke treaties and fallback leadership remain |
+| 5 | Partial: 108 new great-power focuses, 24 policy reviews, 12 spirits and starting-leader/succession repairs |
+| 6 | Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses |
+| 7 | Campaign measurement infrastructure pending; actual balance requires in-game evidence |
+| 8 | Partial: 16 releases, 12 client-aid decisions and Rhine consent; integration/formable interfaces implemented but territorial proposals disabled pending approval; deep secondary campaigns remain |
+| 9 | Placeholder assets only; legacy localisation and presentation review pending |
 
 All original detailed milestone checklists and chronological phases are retained in [the milestone catalogue](docs/roadmap-milestones.md). This file is the current status authority; historic checkmarks in the catalogue are not runtime certification.
 
@@ -29,19 +29,18 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Delivered on this branch
 
-- French 450-focus expansion and reusable era mechanics retained
-- Seven shared-framework coalition rounds with paid subsidies and bounded peace
-- Britain: parliamentary credit, maritime policy and sustainable allied finance
-- Austria: provincial institutions, field-command reform and the dynastic network
-- Prussia: state institutions, army reform and mobilization/recovery
-- Russia: provincial administration, long-distance armies and ministerial reform
-- Four starting histories no longer create later rulers immediately
-- Three succession events check the previous reigning monarch; Russian succession focuses create their named leaders
-- README, roadmap, approval queue and suggestions synchronized
+- 450 French focus definitions, 108 additional great-power focuses and their policy events
+- Reusable era mechanics and seven temporary coalition rounds
+- Sixteen peaceful independent-release decisions using existing owned cores only
+- Twelve paid client-aid transfers with subject and treasury-cap checks
+- Rhine clients now accept or refuse a charter instead of becoming unconditional puppets
+- Three French diplomatic paths use guarded native faction templates
+- Paid continuous integration and cosmetic-formable generators, disabled by default until borders and approvals are recorded
+- Actual integration and formable proposals appended to the approval queue
 
 ## Test evidence and remaining acceptance
 
-86 local unit tests pass. Great-power tests cover 108 unique focus names, reference graphs, policy payment/credit limits, safe deferral, four starting rulers, guarded succession and localisation. Exact retained repository sources are also built by CI. No HOI4 process was run; these are substantial implementation slices, not certified full campaigns.
+104 local unit tests pass, including default-disabled approval gates, rejection of empty/duplicate/unattributed borders, continuous integration, safe releases, subject-only aid, faction preservation and Rhine consent. Integration tests use explicitly approved synthetic fixtures, not approval of live maps. No HOI4 runtime test was performed.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.

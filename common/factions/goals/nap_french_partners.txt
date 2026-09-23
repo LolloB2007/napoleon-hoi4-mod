@@ -1,0 +1,1 @@
+nap_partner_manifest = { name = nap_partner_manifest_name description = nap_partner_manifest_desc is_manifest = yes ratio_progress = { total_amount = 1 completed_amount = 0 } }

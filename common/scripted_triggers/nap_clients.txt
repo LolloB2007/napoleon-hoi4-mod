@@ -1,0 +1,1 @@
+nap_rhine_client_candidate = { OR = { tag = BAV tag = WUR tag = BAD tag = HES tag = SAX } exists = yes is_subject = no NOT = { has_war_with = FRA } NOT = { has_country_flag = nap_rhine_declined } OR = { is_in_faction = no is_in_faction_with = FRA } FRA = { nap_fra_route_imperial = yes } }

@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Milestone 5: distinct great-power programmes and starting-leader correction**
+**Current branch: Milestone 8: releases, client aid and approval-gated territorial interfaces**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -28,15 +28,14 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- French 450-focus expansion and reusable era mechanics retained
-- Seven shared-framework coalition rounds with paid subsidies and bounded peace
-- Britain: parliamentary credit, maritime policy and sustainable allied finance
-- Austria: provincial institutions, field-command reform and the dynastic network
-- Prussia: state institutions, army reform and mobilization/recovery
-- Russia: provincial administration, long-distance armies and ministerial reform
-- Four starting histories no longer create later rulers immediately
-- Three succession events check the previous reigning monarch; Russian succession focuses create their named leaders
-- README, roadmap, approval queue and suggestions synchronized
+- 450 French focus definitions, 108 additional great-power focuses and their policy events
+- Reusable era mechanics and seven temporary coalition rounds
+- Sixteen peaceful independent-release decisions using existing owned cores only
+- Twelve paid client-aid transfers with subject and treasury-cap checks
+- Rhine clients now accept or refuse a charter instead of becoming unconditional puppets
+- Three French diplomatic paths use guarded native faction templates
+- Paid continuous integration and cosmetic-formable generators, disabled by default until borders and approvals are recorded
+- Actual integration and formable proposals appended to the approval queue
 
 ## Installation for testing
 
@@ -87,7 +86,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-86 local unit tests pass. Great-power tests cover 108 unique focus names, reference graphs, policy payment/credit limits, safe deferral, four starting rulers, guarded succession and localisation. Exact retained repository sources are also built by CI. No HOI4 process was run; these are substantial implementation slices, not certified full campaigns.
+104 local unit tests pass, including default-disabled approval gates, rejection of empty/duplicate/unattributed borders, continuous integration, safe releases, subject-only aid, faction preservation and Rhine consent. Integration tests use explicitly approved synthetic fixtures, not approval of live maps. No HOI4 runtime test was performed.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

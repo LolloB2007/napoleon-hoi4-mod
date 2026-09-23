@@ -1,0 +1,3 @@
+nap_fra_constitutional_alliance = { name = constitutional_alliance icon = GFX_faction_logo_generic_16 manifest = nap_partner_manifest visible = { always = no } }
+nap_fra_sister_republics_league = { name = sister_republics_league icon = GFX_faction_logo_generic_16 manifest = nap_partner_manifest visible = { always = no } }
+nap_fra_holy_league_of_kings = { name = holy_league_of_kings icon = GFX_faction_logo_generic_16 manifest = nap_partner_manifest visible = { always = no } }

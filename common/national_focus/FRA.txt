@@ -1,4 +1,3 @@
-# Generated from retained legacy tree and the French chapter catalogue.
 focus_tree = {
 	id = FRA_focus_tree
 	country = {
@@ -166,7 +165,15 @@ focus_tree = {
 		y = 5
 		cost = 10
 		completion_reward = {
-			create_faction = constitutional_alliance
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction_from_template = {
+					template = nap_fra_constitutional_alliance
+					name = constitutional_alliance
+				}
+			}
 			add_war_support = 0.10
 			add_stability = 0.10
 		}
@@ -319,7 +326,15 @@ focus_tree = {
 		y = 6
 		cost = 15
 		completion_reward = {
-			create_faction = sister_republics_league
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction_from_template = {
+					template = nap_fra_sister_republics_league
+					name = sister_republics_league
+				}
+			}
 			add_war_support = 0.20
 			set_country_flag = sister_republics_active
 		}
@@ -656,7 +671,15 @@ focus_tree = {
 		y = 5
 		cost = 15
 		completion_reward = {
-			create_faction = holy_league_of_kings
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction_from_template = {
+					template = nap_fra_holy_league_of_kings
+					name = holy_league_of_kings
+				}
+			}
 			add_war_support = 0.10
 			add_ideas = concert_of_europe
 		}
