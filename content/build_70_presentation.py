@@ -513,6 +513,6 @@ def postprocess(outputs,root):
 - Any historical-art replacement must be redistribution-safe and added to the provenance ledger.
 - A11 and A12 are implemented in their own stacked passes.
 '''
-    if "## Presentation follow-up" not in suggestions: suggestions+=note
+    if "Presentation follow-up" not in suggestions: suggestions+=note
     updates["suggestions.md"]=suggestions
     return updates
