@@ -307,7 +307,7 @@
    "approved": true,
    "approved_by": "A05",
    "approval": "A05",
-   "note": "Explicit 1789 Commonwealth state set; no retroactive annexation or extra cores.",
+   "note": "Explicit 1789 Commonwealth state set. Formation grants cores on the audited Commonwealth core-state catalogue but does not annex missing countries or third-party land.",
    "core_states": [
     10,
     11,
