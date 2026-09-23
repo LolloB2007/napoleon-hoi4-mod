@@ -14,11 +14,12 @@ class TerritorialTests(unittest.TestCase):
     def setUp(self):
         self.data=json.loads((ROOT/'content/territorial_registry.json').read_text())
     def test_valid_registry(self):validate_registry(self.data)
-    def test_pending_not_emitted(self):
+    def test_a04_only_approved_historical_integrations_emitted(self):
         text=build(ROOT)['common/decisions/nap_territorial.txt']
-        self.assertNotIn('nap_integrate_',text)
+        self.assertIn('nap_integrate_savoy_735',text)
+        self.assertIn('nap_integrate_austrian_netherlands_6',text)
         self.assertNotIn('nap_form_',text)
-        self.assertNotIn('add_core_of',text)
+        self.assertEqual(text.count('add_core_of = FRA'),2)
     def test_all_new_scripts_parse(self):
         for path,text in build(ROOT).items():
             if path.endswith('.txt'):parse(text)
@@ -28,7 +29,10 @@ class TerritorialTests(unittest.TestCase):
         self.data['formables'][0]['approved_by']='fixture'
         with self.assertRaises(ValueError):validate_registry(self.data)
     def test_unattributed_approval_fails(self):
-        self.data['integrations'][0]['approved']=True
+        self.data['integrations'][0]['approved_by']=''
+        with self.assertRaises(ValueError):validate_registry(self.data)
+    def test_approved_integration_requires_historical_basis(self):
+        self.data['integrations'][0]['basis']=''
         with self.assertRaises(ValueError):validate_registry(self.data)
     def test_duplicate_state_fails(self):
         self.data['integrations'][0]['states']=[735,735]
@@ -37,7 +41,7 @@ class TerritorialTests(unittest.TestCase):
         self.data['integrations'][0]['approved']='false'
         with self.assertRaises(ValueError):validate_registry(self.data)
     def test_approved_fixture_generates_delayed_coring(self):
-        row=self.data['integrations'][0];row['approved']=True;row['approved_by']='test fixture only'
+        row=self.data['integrations'][0]
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'content').mkdir();(root/'content/territorial_registry.json').write_text(json.dumps(self.data))
             text=build(root)['common/decisions/nap_territorial.txt']
@@ -48,14 +52,14 @@ class TerritorialTests(unittest.TestCase):
             self.assertIn('clr_country_flag',dumps(decision.children('cancel_effect')))
             self.assertNotIn('nap_treasury',dumps(decision.children('remove_effect')))
     def test_integration_requires_continuity(self):
-        row=self.data['integrations'][0]|{'approved':True,'approved_by':'fixture'}
+        row=self.data['integrations'][0]
         frame=dict(owner='FRA',controller='FRA',route='imperial',compliance=85,resistance=5,at_war=False,already_core=False)
         self.assertTrue(integrate_model(row,[frame]*180))
         self.assertFalse(integrate_model(row,[frame]*179))
         interrupted=[frame]*180;interrupted[90]=frame|{'controller':'HAB'}
         self.assertFalse(integrate_model(row,interrupted))
-    def test_pending_cannot_core(self):
-        row=self.data['integrations'][0]
+    def test_unapproved_entry_cannot_core(self):
+        row=self.data['integrations'][0]|{'approved':False}
         self.assertFalse(integration_eligible(row,owner='FRA',controller='FRA',route='imperial',compliance=100,resistance=0,at_war=False,already_core=False))
     def test_release_preserves_foreign_land(self):
         states={1:dict(owner='FRA',controller='FRA',cores=['POL']),2:dict(owner='HAB',controller='HAB',cores=['POL']),3:dict(owner='FRA',controller='RUS',cores=['POL']),4:dict(owner='FRA',controller='FRA',cores=['FRA'])}
@@ -88,6 +92,6 @@ class TerritorialTests(unittest.TestCase):
         for row in self.data['integrations']+self.data['formables']:self.assertIn(row['id'],queue)
     def test_default_decision_count(self):
         decisions=parse(build(ROOT)['common/decisions/nap_territorial.txt'])[0].value
-        self.assertEqual(len(decisions),28)
+        self.assertEqual(len(decisions),30)
 
 if __name__=='__main__':unittest.main()

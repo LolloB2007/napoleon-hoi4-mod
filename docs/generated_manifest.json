@@ -1,6 +1,6 @@
 {
-  "README.md": "f4d1d36f000b741236ef182ff35bf7e655c8155ff02fae5bc322d2b5c7debffe",
-  "ROADMAP.md": "ba60b64a5e7de69acf3751dded118d3c801c8736ce183f07238eb9b2e3d7e4a6",
+  "README.md": "9e18587eda12264a552d304e1521de866e9463fed228171516695e608891dabe",
+  "ROADMAP.md": "aa81fb9e4fff0a074a9560c880f8241bec79b0479e09e6fada25ccacd8b38c25",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -78,7 +78,7 @@
   "common/decisions/nap_coalitions.txt": "2fc28399ca1fa3b95a96e70881fcb9867584cc88e5384031cf88feffb2ad9ce5",
   "common/decisions/nap_era.txt": "eac7784ef15efa0bdd23f0f6ff45d618efe131745fa17df36aaf53a5c2c99e44",
   "common/decisions/nap_secondary_campaigns.txt": "3f444b75407ca7833b19c7c7172c696a107b025f735ee9da97196a2bf59a5e90",
-  "common/decisions/nap_territorial.txt": "25dcb9476ec2cadada20bd0740ececc3d0fc1a87ce57cbd38972940035eb328e",
+  "common/decisions/nap_territorial.txt": "5ce72c3996834669230b64ad189df5e51db6af5b570a90edaef6e8dd7d1bcc3d",
   "common/factions/goals/nap_coalitions.txt": "80ccf4d3729318f0da7b0e619fabf42852dea7a28997ca60354b15a5aa0dc43d",
   "common/factions/goals/nap_french_partners.txt": "35139411ee3bccdac2bc8585d9e998c5fdd58677fbc26e99f5d13c9e74dd64d9",
   "common/factions/templates/nap_coalitions.txt": "cc572af4cebf9b4d65c66868511791dbe5ba982d393af4643e84016d8c3cc836",
@@ -136,8 +136,8 @@
   "docs/secondary-campaigns.json": "430e313e1538e357ba4168a449a7579be061bb00ae3316f4e793e36616b3e1ee",
   "docs/secondary-campaigns.md": "c41a11b68dcbf49c629f7623d5585f47d6108467a7786d888129b44780df3b56",
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
-  "docs/territorial-registry.json": "ecc1f4f3a789521b90a51cbe9970cbd5d3140d1a5f5b7ec18e8c857ec5129e2a",
-  "docs/territorial-systems.md": "142afe1ca0a634261db672b03ef3fd8b5ad01a9525483e6e24ef55244912c620",
+  "docs/territorial-registry.json": "ee0e230c44f830af4b9a3000a8c1dfc634bca73b049f5685b5a6ff4236496389",
+  "docs/territorial-systems.md": "70b6594fdf1999a680e50340c26bd9c9da2d7ff6922fee67f1a548cc8b123290",
   "events/01_french_revolution.txt": "55f610d01e6fc3911b9d455828f9be422691a8f92370964f3f679fa006f5b68e",
   "events/02_napoleonic_wars.txt": "a861adba5f27fe9a7be83145ab84f4c214aa3b8825d64f62939a0531962e2fd7",
   "events/03_collapse.txt": "fc3303d54c7c6aa1ac123e79e3e3ce75a793e6f57e708e58c2a5cd260cefa6ce",
@@ -2247,7 +2247,7 @@
   "localisation/english/nap_french_development_l_english.yml": "c1683864127d89fb2372f62ccdd1c906a91239038fa869f9bef3b603af6fc315",
   "localisation/english/nap_major_programmes_l_english.yml": "bb78913837cf34bed76246b17cb955c7607572978dac8832b0cda4d5affddd86",
   "localisation/english/nap_secondary_campaigns_l_english.yml": "2bcb39910cae442576514f9cc721211b75a2c3aa4254c87450b8383d2116f725",
-  "localisation/english/nap_territorial_l_english.yml": "569f17eea08d28de3515e16f3a1fabd7e87f29685445b44e786bdc51f0ce2cd7",
+  "localisation/english/nap_territorial_l_english.yml": "74570fc4b16b226ae27fbe80e271eb26252aaf93c6c79edf0abad0d3b3273739",
   "localisation/english/napoleonic_diplomacy_l_english.yml": "8405a588420991f13ac7fb09ee1f6507443280695880eb545d29d26448c00fdf",
   "localisation/english/napoleonic_units_l_english.yml": "e495f08bc359a7fb66a97af958528423868d62c3a86f7aae02ade9fe250c6a60",
   "localisation/english/replace/nap_countries_l_english.yml": "2bf5ac59835d2ef42c346a8aee194017b5622406664e7ad00669bdffd882a584",
@@ -2258,5 +2258,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "f068970a2c1217a1b724fdea3f171c230d8b38561842071ebc9bc2f63cba8cb7",
-  "to ask lollo.md": "4a65d06d3bc26ee8f765aa54273f3e56e04d4aa395178e6027b7695ddcf5f217"
+  "to ask lollo.md": "f0d9480c4619293cede943e1b0945e186f03e5af75e7d953b057afd636eccab1"
 }

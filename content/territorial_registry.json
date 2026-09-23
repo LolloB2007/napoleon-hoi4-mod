@@ -1,17 +1,161 @@
 {
  "schema_version": 1,
- "releasables": ["SPR","POR","TUR","SWE","DEN","POL","NET","NAP","SAR","PAP","VEN","TUS","BAV","SAX","HAN","WUR"],
- "clients": ["BAT","HOL","WAR","ITA","WES","RHC","BAV","SAX","WUR","NAP","NET","SAR"],
+ "releasables": [
+  "SPR",
+  "POR",
+  "TUR",
+  "SWE",
+  "DEN",
+  "POL",
+  "NET",
+  "NAP",
+  "SAR",
+  "PAP",
+  "VEN",
+  "TUS",
+  "BAV",
+  "SAX",
+  "HAN",
+  "WUR"
+ ],
+ "clients": [
+  "BAT",
+  "HOL",
+  "WAR",
+  "ITA",
+  "WES",
+  "RHC",
+  "BAV",
+  "SAX",
+  "WUR",
+  "NAP",
+  "NET",
+  "SAR"
+ ],
  "integrations": [
-  {"id":"savoy","country":"FRA","title":"Savoy","states":[735],"route":"imperial","days":180,"treasury":20,"compliance":80,"resistance_max":10,"approved":false,"approved_by":"","approval":"A04"},
-  {"id":"austrian_netherlands","country":"FRA","title":"Austrian Netherlands (draft map abstraction)","states":[6],"route":"imperial","days":270,"treasury":25,"compliance":85,"resistance_max":10,"approved":false,"approved_by":"","approval":"A04"}
+  {
+   "id": "savoy",
+   "country": "FRA",
+   "title": "Savoy",
+   "states": [
+    735
+   ],
+   "route": "imperial",
+   "days": 180,
+   "treasury": 20,
+   "compliance": 80,
+   "resistance_max": 10,
+   "approved": true,
+   "approved_by": "A04",
+   "approval": "A04",
+   "basis": "Revolutionary France annexed Savoy in 1792 and integrated it into the departmental system."
+  },
+  {
+   "id": "austrian_netherlands",
+   "country": "FRA",
+   "title": "Austrian Netherlands (draft map abstraction)",
+   "states": [
+    6
+   ],
+   "route": "imperial",
+   "days": 270,
+   "treasury": 25,
+   "compliance": 85,
+   "resistance_max": 10,
+   "approved": true,
+   "approved_by": "A04",
+   "approval": "A04",
+   "basis": "France annexed the Austrian Netherlands in 1795 and reorganised the territory as departments."
+  }
  ],
  "formables": [
-  {"id":"italian_kingdom","title":"Kingdom of Italy","founders":["SAR","NAP"],"required_states":[],"cosmetic_tag":"NAP_FORMED_ITALY","approved":false,"approved_by":"","approval":"A05","note":"Approve extent, republican versus royal variants and coexistence with an existing Italian client."},
-  {"id":"german_confederation","title":"German Confederation","founders":["PRU","HAB","BAV","SAX"],"required_states":[],"cosmetic_tag":"NAP_FORMED_GERMANY","approved":false,"approved_by":"","approval":"A05","note":"A federation of independent states may be preferable to territorial unification; no annexation is currently generated."},
-  {"id":"scandinavian_union","title":"Scandinavian Union","founders":["SWE","DEN","NOR"],"required_states":[],"cosmetic_tag":"NAP_FORMED_SCANDINAVIA","approved":false,"approved_by":"","approval":"A05","note":"Decide whether the union is dynastic, federal or unitary and how Norway participates."},
-  {"id":"restored_commonwealth","title":"Restored Commonwealth","founders":["POL","WAR"],"required_states":[],"cosmetic_tag":"NAP_FORMED_COMMONWEALTH","approved":false,"approved_by":"","approval":"A05","note":"Approve pre-partition territorial claims and constituent arrangements; no retroactive core grants."},
-  {"id":"danubian_federation","title":"Danubian Federation","founders":["HAB"],"required_states":[],"cosmetic_tag":"NAP_FORMED_DANUBE","approved":false,"approved_by":"","approval":"A05/A09","note":"Speculative alternate route; requires a political settlement rather than renaming conquest."},
-  {"id":"rhine_federation","title":"Rhine Federation","founders":["RHC","BAV","WUR","WES"],"required_states":[],"cosmetic_tag":"NAP_FORMED_RHINE","approved":false,"approved_by":"","approval":"A05/A06","note":"Decide between a French client, independent federation or faction framework."}
+  {
+   "id": "italian_kingdom",
+   "title": "Kingdom of Italy",
+   "founders": [
+    "SAR",
+    "NAP"
+   ],
+   "required_states": [],
+   "cosmetic_tag": "NAP_FORMED_ITALY",
+   "approved": false,
+   "approved_by": "",
+   "approval": "A05",
+   "note": "Approve extent, republican versus royal variants and coexistence with an existing Italian client."
+  },
+  {
+   "id": "german_confederation",
+   "title": "German Confederation",
+   "founders": [
+    "PRU",
+    "HAB",
+    "BAV",
+    "SAX"
+   ],
+   "required_states": [],
+   "cosmetic_tag": "NAP_FORMED_GERMANY",
+   "approved": false,
+   "approved_by": "",
+   "approval": "A05",
+   "note": "A federation of independent states may be preferable to territorial unification; no annexation is currently generated."
+  },
+  {
+   "id": "scandinavian_union",
+   "title": "Scandinavian Union",
+   "founders": [
+    "SWE",
+    "DEN",
+    "NOR"
+   ],
+   "required_states": [],
+   "cosmetic_tag": "NAP_FORMED_SCANDINAVIA",
+   "approved": false,
+   "approved_by": "",
+   "approval": "A05",
+   "note": "Decide whether the union is dynastic, federal or unitary and how Norway participates."
+  },
+  {
+   "id": "restored_commonwealth",
+   "title": "Restored Commonwealth",
+   "founders": [
+    "POL",
+    "WAR"
+   ],
+   "required_states": [],
+   "cosmetic_tag": "NAP_FORMED_COMMONWEALTH",
+   "approved": false,
+   "approved_by": "",
+   "approval": "A05",
+   "note": "Approve pre-partition territorial claims and constituent arrangements; no retroactive core grants."
+  },
+  {
+   "id": "danubian_federation",
+   "title": "Danubian Federation",
+   "founders": [
+    "HAB"
+   ],
+   "required_states": [],
+   "cosmetic_tag": "NAP_FORMED_DANUBE",
+   "approved": false,
+   "approved_by": "",
+   "approval": "A05/A09",
+   "note": "Speculative alternate route; requires a political settlement rather than renaming conquest."
+  },
+  {
+   "id": "rhine_federation",
+   "title": "Rhine Federation",
+   "founders": [
+    "RHC",
+    "BAV",
+    "WUR",
+    "WES"
+   ],
+   "required_states": [],
+   "cosmetic_tag": "NAP_FORMED_RHINE",
+   "approved": false,
+   "approved_by": "",
+   "approval": "A05/A06",
+   "note": "Decide between a French client, independent federation or faction framework."
+  }
  ]
 }

@@ -45,9 +45,10 @@
       "treasury": 20,
       "compliance": 80,
       "resistance_max": 10,
-      "approved": false,
-      "approved_by": "",
-      "approval": "A04"
+      "approved": true,
+      "approved_by": "A04",
+      "approval": "A04",
+      "basis": "Revolutionary France annexed Savoy in 1792 and integrated it into the departmental system."
     },
     {
       "id": "austrian_netherlands",
@@ -61,9 +62,10 @@
       "treasury": 25,
       "compliance": 85,
       "resistance_max": 10,
-      "approved": false,
-      "approved_by": "",
-      "approval": "A04"
+      "approved": true,
+      "approved_by": "A04",
+      "approval": "A04",
+      "basis": "France annexed the Austrian Netherlands in 1795 and reorganised the territory as departments."
     }
   ],
   "formables": [

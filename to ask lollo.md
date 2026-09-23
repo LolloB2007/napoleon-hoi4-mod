@@ -1,6 +1,6 @@
 # To ask Lollo
 
-**Current branch: A01-A03 implemented; A04-A12 approved and queued in the stacked implementation series**
+**Current branch: A01-A04 implemented; A05-A12 approved and queued in the stacked implementation series**
 
 This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
 
@@ -56,14 +56,14 @@ This is the owner-decision register. A01-A12 are approved; implementation status
 
 Namespacing, missing references, scope corrections, finite costs, cooldowns, idempotency, localisation encoding, tests and preserving existing work can proceed. Prototype balance numbers remain provisional until campaign testing.
 
-## Territorial registry: actual pending entries
+## Territorial registry status
 
-No entries below are authorized by this implementation PR. Update content/territorial_registry.json only after the owner decides.
+The registry below is implementation data under approved A04/A05 policy. Approved entries require explicit borders and attribution in source.
 
 | ID | Proposal | State IDs | Status |
 |---|---|---|---|
-| savoy | Savoy | [735] | Awaiting approval (A04) |
-| austrian_netherlands | Austrian Netherlands (draft map abstraction) | [6] | Awaiting approval (A04) |
+| savoy | Savoy | [735] | Approved (A04) |
+| austrian_netherlands | Austrian Netherlands (draft map abstraction) | [6] | Approved (A04) |
 | italian_kingdom | Kingdom of Italy | Not specified | Awaiting approval (A05) |
 | german_confederation | German Confederation | Not specified | Awaiting approval (A05) |
 | scandinavian_union | Scandinavian Union | Not specified | Awaiting approval (A05) |

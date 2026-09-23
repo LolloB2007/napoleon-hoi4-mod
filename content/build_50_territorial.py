@@ -26,6 +26,7 @@ def validate_registry(data):
             if kind=='formables' and not re.fullmatch('[A-Z][A-Z0-9_]*',row['cosmetic_tag']):raise ValueError('invalid cosmetic tag')
             if kind=='integrations':
                 if row['country']!='FRA' or row['route'] not in ('constitutional','republican','royalist','imperial'):raise ValueError('unimplemented integration route')
+                if row['approved'] and (row.get('approval')!='A04' or not row.get('basis','').strip()):raise ValueError('approved A04 integration requires explicit historical basis')
                 if row['days']<180 or row['treasury']<=0 or not 0<=row['compliance']<=100 or not 0<=row['resistance_max']<=100:raise ValueError('invalid integration policy')
     for kind in ('releasables','clients'):
         if len(set(data[kind]))!=len(data[kind]) or any(t not in TAGS for t in data[kind]):raise ValueError('invalid country list')
@@ -118,11 +119,11 @@ country_event = {{ id = nap_clients.10 title = nap_client_offer.t desc = nap_cli
 
 Active now: sixteen independent-release decisions based strictly on existing cores, twelve paid aid decisions for existing French subjects, and an explicit acceptance/refusal event replacing the unconditional Rhine puppet command. Releases do not overwrite a living country or take third-party territory. Clients are not automatically annexed.
 
-The registry also supports paid, cancellable 180+ day integration and cosmetic formables. **Both integration candidates and all six formable proposals are disabled pending approval.** The builder emits no such decision until approved=true, approval attribution is filled, and a non-empty state set passes validation. No coring territory is silently approved by merging this PR.
+A04 activates only the two explicitly catalogued, historically grounded French integration programmes: Savoy and the Austrian Netherlands. Both remain paid, cancellable 180+ day programmes with route, peace, ownership, control, compliance and resistance checks. Generic conquest receives no route to coring. All six formable proposals remain separately gated by A05.
 
 Approved integration requires continued ownership, control, peace, route eligibility, high compliance and low resistance. Cancellation clears progress; reacquiring the territory does not finish an old programme. The cost is paid once at the beginning, and the completion effect repeats the non-financial checks before adding a core.
 
-An approved formable changes the cosmetic identity only. It preserves the base tag and focus tree, grants no cores, and never annexes an existing country. This is an interface, not the final design for multinational federations or a complete formable catalogue.
+An A05-approved formable changes the cosmetic identity only. It preserves the base tag and focus tree, grants no cores, and never annexes an existing country. This is an interface, not the final design for multinational federations or a complete formable catalogue.
 
 The original three French diplomatic focuses now use dedicated native faction templates and refuse to replace an unrelated existing faction. Their political names and existing route intent are retained.
 
@@ -163,5 +164,5 @@ def postprocess(outputs,root):
         for row in data[kind]:
             states=row.get('states',row.get('required_states',[]))
             rows.append(f'| {row["id"]} | {row["title"]} | {states or "Not specified"} | {"Approved" if row["approved"] else "Awaiting approval"} ({row["approval"]}) |')
-    result['to ask lollo.md']=outputs['to ask lollo.md']+'\n## Territorial registry: actual pending entries\n\nNo entries below are authorized by this implementation PR. Update content/territorial_registry.json only after the owner decides.\n\n| ID | Proposal | State IDs | Status |\n|---|---|---|---|\n'+'\n'.join(rows)+'\n'
+    result['to ask lollo.md']=outputs['to ask lollo.md']+'\n## Territorial registry status\n\nThe registry below is implementation data under approved A04/A05 policy. Approved entries require explicit borders and attribution in source.\n\n| ID | Proposal | State IDs | Status |\n|---|---|---|---|\n'+'\n'.join(rows)+'\n'
     return result
