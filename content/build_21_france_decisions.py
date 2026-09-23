@@ -28,11 +28,11 @@ CONTINENTAL_TARGETS = [
 ]
 
 CATEGORIES = {
- 'nap_fra_revolutionary_crisis':('Revolutionary Government','Manage institutions, factional pressure, the Vendée, emergency finance and the Terror.'),
- 'nap_fra_napoleon_rise':("Bonaparte's Ascent",'Turn military prestige into political authority through Italy, Egypt, Brumaire, the Consulate and Empire.'),
- 'nap_fra_continental_system':('The Continental System','Enforce or relax the blockade and pressure European states while Britain adapts.'),
- 'nap_fra_peninsular_war':('The Peninsular War','Manage occupation, guerrilla resistance, supply and the political cost of Iberian intervention.'),
- 'nap_fra_russian_campaign':('The Russian Campaign','Prepare magazines and remounts, preserve cohesion and choose between settlement, retreat and disaster.'),
+ 'nap_fra_revolutionary_crisis':('Revolutionary Government','Manage institutions, factional pressure, the Vendée, emergency finance and the Terror. Vendée: [?ROOT.nap_fra_vendee_unrest|0]/100 | Assignat inflation: [?ROOT.nap_fra_assignat_inflation|0]/100 | Faction tension: [?ROOT.nap_fra_faction_tension|0]/100.'),
+ 'nap_fra_napoleon_rise':("Bonaparte's Ascent",'Turn military prestige into political authority through Italy, Egypt, Brumaire, the Consulate and Empire. Napoleon prestige: [?ROOT.nap_fra_napoleon_prestige|0]/100.'),
+ 'nap_fra_continental_system':('The Continental System','Enforce or relax the blockade and pressure European states while Britain adapts. Continental pressure: [?ROOT.nap_fra_continental_pressure|0]/100.'),
+ 'nap_fra_peninsular_war':('The Peninsular War','Manage occupation, guerrilla resistance, supply and the political cost of Iberian intervention. Resistance: [?ROOT.nap_fra_peninsular_resistance|0]/100.'),
+ 'nap_fra_russian_campaign':('The Russian Campaign','Prepare magazines and remounts, preserve cohesion and choose between settlement, retreat and disaster. Supply: [?ROOT.nap_fra_russian_supply|0]/100 | Cohesion: [?ROOT.nap_fra_russian_cohesion|0]/100.'),
  'nap_fra_restoration_cycle':('Collapse, Restoration and the Hundred Days','Control abdication, restoration, the return from Elba and the final European settlement.'),
  'nap_continental_foreign':('Continental Customs','Comply with French customs enforcement or tolerate smuggling and British trade.'),
 }
