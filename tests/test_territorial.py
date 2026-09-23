@@ -69,6 +69,14 @@ class TerritorialTests(unittest.TestCase):
     def test_existing_country_not_overwritten(self):
         states={1:dict(owner='FRA',controller='FRA',cores=['POL'])}
         self.assertEqual(release_model('FRA','POL',states,{'POL'}),states)
+    def test_a06_restorations_become_puppets(self):
+        text=build(ROOT)['common/scripted_effects/nap_territorial.txt']
+        for tag in self.data['releasables']:
+            node=next(e for e in parse(text) if e.key=='nap_restore_'+tag+'_effect')
+            rendered=dumps([node])
+            self.assertIn('release = '+tag,rendered)
+            self.assertIn('puppet = '+tag,rendered)
+            self.assertNotIn('annex_country',rendered)
     def test_client_aid_uses_only_existing_subjects(self):
         text=build(ROOT)['common/scripted_effects/nap_territorial.txt']
         for tag in self.data['clients']:
