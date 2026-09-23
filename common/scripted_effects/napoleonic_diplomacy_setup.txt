@@ -205,7 +205,7 @@ napoleonic_setup_1789_diplomacy = {
 		}
 	}
 }
-napoleonic_end_theatre_war = {
+napoleonic_end_theatre_war_a_victory = {
  if = { limit = { has_global_flag = nap_theatre_war_active DEN = { has_war_with = SWE } NOT = { has_global_flag = nap_opening_peace_busy } }
   set_global_flag = nap_opening_peace_busy
   clr_global_flag = nap_theatre_war_active
@@ -214,11 +214,31 @@ napoleonic_end_theatre_war = {
   SWE = { clr_country_flag = theatre_war_active }
   if = { limit = { DEN = { has_war_with = SWE } } DEN = { white_peace = SWE } }
   
-  DEN = { add_stability = 0.03 news_event = { id = napoleonic_diplomacy.101 hours = 6 } }
+  DEN = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+SWE = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  DEN = { news_event = { id = napoleonic_diplomacy.101 hours = 6 } }
   clr_global_flag = nap_opening_peace_busy
  }
 }
-napoleonic_end_russo_swedish_war = {
+napoleonic_end_theatre_war_b_victory = {
+ if = { limit = { has_global_flag = nap_theatre_war_active DEN = { has_war_with = SWE } NOT = { has_global_flag = nap_opening_peace_busy } }
+  set_global_flag = nap_opening_peace_busy
+  clr_global_flag = nap_theatre_war_active
+  set_global_flag = nap_theatre_war_ended
+  DEN = { clr_country_flag = theatre_war_active }
+  SWE = { clr_country_flag = theatre_war_active }
+  if = { limit = { DEN = { has_war_with = SWE } } DEN = { white_peace = SWE } }
+  
+  SWE = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+DEN = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  SWE = { news_event = { id = napoleonic_diplomacy.101 hours = 6 } }
+  clr_global_flag = nap_opening_peace_busy
+ }
+}
+napoleonic_end_theatre_war = {
+ if = { limit = { has_global_flag = nap_theatre_war_active DEN = { has_war_with = SWE } } napoleonic_end_theatre_war_a_victory = yes }
+}
+napoleonic_end_russo_swedish_war_a_victory = {
  if = { limit = { has_global_flag = nap_russo_swedish_war_active SWE = { has_war_with = RUS } NOT = { has_global_flag = nap_opening_peace_busy } }
   set_global_flag = nap_opening_peace_busy
   clr_global_flag = nap_russo_swedish_war_active
@@ -227,11 +247,31 @@ napoleonic_end_russo_swedish_war = {
   RUS = { clr_country_flag = russo_swedish_war_active }
   if = { limit = { SWE = { has_war_with = RUS } } SWE = { white_peace = RUS } }
   
-  SWE = { add_stability = 0.03 news_event = { id = napoleonic_diplomacy.102 hours = 6 } }
+  SWE = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+RUS = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  SWE = { news_event = { id = napoleonic_diplomacy.102 hours = 6 } }
   clr_global_flag = nap_opening_peace_busy
  }
 }
-napoleonic_end_austro_turkish_war = {
+napoleonic_end_russo_swedish_war_b_victory = {
+ if = { limit = { has_global_flag = nap_russo_swedish_war_active SWE = { has_war_with = RUS } NOT = { has_global_flag = nap_opening_peace_busy } }
+  set_global_flag = nap_opening_peace_busy
+  clr_global_flag = nap_russo_swedish_war_active
+  set_global_flag = nap_treaty_varala_signed
+  SWE = { clr_country_flag = russo_swedish_war_active }
+  RUS = { clr_country_flag = russo_swedish_war_active }
+  if = { limit = { SWE = { has_war_with = RUS } } SWE = { white_peace = RUS } }
+  
+  RUS = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+SWE = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  RUS = { news_event = { id = napoleonic_diplomacy.102 hours = 6 } }
+  clr_global_flag = nap_opening_peace_busy
+ }
+}
+napoleonic_end_russo_swedish_war = {
+ if = { limit = { has_global_flag = nap_russo_swedish_war_active SWE = { has_war_with = RUS } } napoleonic_end_russo_swedish_war_a_victory = yes }
+}
+napoleonic_end_austro_turkish_war_a_victory = {
  if = { limit = { has_global_flag = nap_austro_turkish_war_active HAB = { has_war_with = TUR } NOT = { has_global_flag = nap_opening_peace_busy } }
   set_global_flag = nap_opening_peace_busy
   clr_global_flag = nap_austro_turkish_war_active
@@ -240,11 +280,31 @@ napoleonic_end_austro_turkish_war = {
   TUR = { clr_country_flag = austro_turkish_war_active }
   if = { limit = { HAB = { has_war_with = TUR } } HAB = { white_peace = TUR } }
   
-  HAB = { add_stability = 0.03 news_event = { id = napoleonic_diplomacy.103 hours = 6 } }
+  HAB = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+TUR = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  HAB = { news_event = { id = napoleonic_diplomacy.103 hours = 6 } }
   clr_global_flag = nap_opening_peace_busy
  }
 }
-napoleonic_end_russo_turkish_jassy = {
+napoleonic_end_austro_turkish_war_b_victory = {
+ if = { limit = { has_global_flag = nap_austro_turkish_war_active HAB = { has_war_with = TUR } NOT = { has_global_flag = nap_opening_peace_busy } }
+  set_global_flag = nap_opening_peace_busy
+  clr_global_flag = nap_austro_turkish_war_active
+  set_global_flag = nap_treaty_sistova_signed
+  HAB = { clr_country_flag = at_war_with_ottomans }
+  TUR = { clr_country_flag = austro_turkish_war_active }
+  if = { limit = { HAB = { has_war_with = TUR } } HAB = { white_peace = TUR } }
+  
+  TUR = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+HAB = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  TUR = { news_event = { id = napoleonic_diplomacy.103 hours = 6 } }
+  clr_global_flag = nap_opening_peace_busy
+ }
+}
+napoleonic_end_austro_turkish_war = {
+ if = { limit = { has_global_flag = nap_austro_turkish_war_active HAB = { has_war_with = TUR } } napoleonic_end_austro_turkish_war_a_victory = yes }
+}
+napoleonic_end_russo_turkish_jassy_a_victory = {
  if = { limit = { has_global_flag = nap_russo_turkish_war_active RUS = { has_war_with = TUR } NOT = { has_global_flag = nap_opening_peace_busy } }
   set_global_flag = nap_opening_peace_busy
   clr_global_flag = nap_russo_turkish_war_active
@@ -253,19 +313,27 @@ napoleonic_end_russo_turkish_jassy = {
   TUR = { clr_country_flag = russo_turkish_war_active }
   if = { limit = { RUS = { has_war_with = TUR } } RUS = { white_peace = TUR } }
   if = { limit = { 192 = { is_owned_by = TUR } RUS = { exists = yes } } RUS = { transfer_state = 192 } 192 = { add_core_of = RUS remove_core_of = TUR } }
-  RUS = { add_stability = 0.03 news_event = { id = napoleonic_diplomacy.104 hours = 6 } }
+  RUS = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+TUR = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  RUS = { news_event = { id = napoleonic_diplomacy.104 hours = 6 } }
   clr_global_flag = nap_opening_peace_busy
  }
 }
-napoleonic_end_russo_turkish_ottoman_success = {
- if = { limit = { has_global_flag = nap_russo_turkish_war_active TUR = { has_war_with = RUS } NOT = { has_global_flag = nap_opening_peace_busy } }
+napoleonic_end_russo_turkish_jassy_b_victory = {
+ if = { limit = { has_global_flag = nap_russo_turkish_war_active RUS = { has_war_with = TUR } NOT = { has_global_flag = nap_opening_peace_busy } }
   set_global_flag = nap_opening_peace_busy
   clr_global_flag = nap_russo_turkish_war_active
-  set_global_flag = nap_russo_turkish_war_ended_without_jassy
+  set_global_flag = nap_treaty_jassy_signed
   RUS = { clr_country_flag = russo_turkish_war_active }
   TUR = { clr_country_flag = russo_turkish_war_active }
-  if = { limit = { TUR = { has_war_with = RUS } } TUR = { white_peace = RUS } }
-  TUR = { add_stability = 0.03 news_event = { id = napoleonic_diplomacy.105 hours = 6 } }
+  if = { limit = { RUS = { has_war_with = TUR } } RUS = { white_peace = TUR } }
+  if = { limit = { 192 = { is_owned_by = RUS } TUR = { exists = yes } } TUR = { transfer_state = 192 } 192 = { add_core_of = TUR remove_core_of = RUS } }
+  TUR = { add_stability = 0.04 add_war_support = 0.03 add_political_power = 75 }
+RUS = { add_stability = -0.04 add_war_support = -0.03 add_political_power = -50 }
+  TUR = { news_event = { id = napoleonic_diplomacy.104 hours = 6 } }
   clr_global_flag = nap_opening_peace_busy
  }
+}
+napoleonic_end_russo_turkish_jassy = {
+ if = { limit = { has_global_flag = nap_russo_turkish_war_active RUS = { has_war_with = TUR } } napoleonic_end_russo_turkish_jassy_a_victory = yes }
 }
