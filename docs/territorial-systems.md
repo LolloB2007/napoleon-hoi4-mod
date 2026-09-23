@@ -1,6 +1,6 @@
 # Territorial and client interfaces (Milestone 8 slice)
 
-Active now: sixteen independent-release decisions based strictly on existing cores, twelve paid aid decisions for existing French subjects, and an explicit acceptance/refusal event replacing the unconditional Rhine puppet command. Releases do not overwrite a living country or take third-party territory. Clients are not automatically annexed.
+A06 standardises clients on native HOI4 puppet relationships. Sixteen restoration decisions release only existing cores owned/controlled by the releasing country and then make the restored state its puppet; twelve paid aid decisions operate only on existing French subjects. The Rhine charter remains an explicit acceptance/refusal event. No path overwrites a living country, annexes a client, or transfers unrelated third-party land.
 
 A04 activates only the two explicitly catalogued, historically grounded French integration programmes: Savoy and the Austrian Netherlands. Both remain paid, cancellable 180+ day programmes with route, peace, ownership, control, compliance and resistance checks. Generic conquest receives no route to coring. A05 activates the six audited formables with explicit state sets derived from the mod's 1789 ownership map.
 

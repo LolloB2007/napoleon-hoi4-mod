@@ -56,9 +56,9 @@ def build(root):
     for target in data['releasables']:
         name=TAGS[target];key='nap_restore_'+target
         guard=f'nap_era_country = yes is_subject = no has_war = no {target} = {{ exists = no }} any_owned_state = {{ is_core_of = {target} is_controlled_by = ROOT }} NOT = {{ any_owned_state = {{ is_core_of = {target} NOT = {{ is_controlled_by = ROOT }} }} }} NOT = {{ check_variable = {{ nap_treasury < 12 }} }}'
-        effects.append(f'{key}_effect = {{ if = {{ limit = {{ {guard} }} release = {target} if = {{ limit = {{ {target} = {{ exists = yes }} }} {change("treasury",-12)} nap_era_clamp = yes }} else = {{ add_political_power = 35 }} }} }}')
+        effects.append(f'{key}_effect = {{ if = {{ limit = {{ {guard} }} release = {target} if = {{ limit = {{ {target} = {{ exists = yes }} }} puppet = {target} {change("treasury",-12)} nap_era_clamp = yes }} else = {{ add_political_power = 35 }} }} }}')
         decisions.append(f'{key} = {{ icon = generic_political_discourse cost = 35 days_re_enable = 365 visible = {{ nap_era_country = yes {target} = {{ exists = no }} any_owned_state = {{ is_core_of = {target} }} }} available = {{ {guard} }} complete_effect = {{ {key}_effect = yes }} ai_will_do = {{ factor = 0 }} }}')
-        loc += [f' {key}:0 "Restore {name}"',f' {key}_desc:0 "Release this country as independent using only its existing cores that we own. It must not already exist, and its releasable states must be under our control while we are at peace. Costs 12 treasury after a successful release. No cores are invented and no third-party land is transferred."']
+        loc += [f' {key}:0 "Restore {name} as a Client"',f' {key}_desc:0 "Release this country from only its existing cores that we own, then establish the standard HOI4 puppet relationship under A06. It must not already exist, and releasable states must be under our control while we are at peace. Costs 12 treasury after a successful release. No cores are invented and no third-party land is transferred."']
     for target in data['clients']:
         name=TAGS[target];key='nap_client_aid_'+target
         guard=f'tag = FRA has_country_flag = nap_era_initialized NOT = {{ check_variable = {{ nap_treasury < 12 }} }} {target} = {{ exists = yes is_subject_of = FRA has_country_flag = nap_era_initialized NOT = {{ check_variable = {{ nap_treasury > 88 }} }} }}'
@@ -117,7 +117,7 @@ country_event = {{ id = nap_clients.10 title = nap_client_offer.t desc = nap_cli
     output['docs/territorial-registry.json']=json.dumps(data,indent=2)+'\n'
     output['docs/territorial-systems.md']='''# Territorial and client interfaces (Milestone 8 slice)
 
-Active now: sixteen independent-release decisions based strictly on existing cores, twelve paid aid decisions for existing French subjects, and an explicit acceptance/refusal event replacing the unconditional Rhine puppet command. Releases do not overwrite a living country or take third-party territory. Clients are not automatically annexed.
+A06 standardises clients on native HOI4 puppet relationships. Sixteen restoration decisions release only existing cores owned/controlled by the releasing country and then make the restored state its puppet; twelve paid aid decisions operate only on existing French subjects. The Rhine charter remains an explicit acceptance/refusal event. No path overwrites a living country, annexes a client, or transfers unrelated third-party land.
 
 A04 activates only the two explicitly catalogued, historically grounded French integration programmes: Savoy and the Austrian Netherlands. Both remain paid, cancellable 180+ day programmes with route, peace, ownership, control, compliance and resistance checks. Generic conquest receives no route to coring. A05 activates the six audited formables with explicit state sets derived from the mod's 1789 ownership map.
 

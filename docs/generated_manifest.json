@@ -1,6 +1,6 @@
 {
-  "README.md": "9abb6a12f39964a7c12d2ff198676a861f9aff67ce5721a6172cea7d8a2fd9d6",
-  "ROADMAP.md": "da0dd92bc0acd4e3a0f40ae8327f37ce28a75d82e28f6671c92e1098ceec1dec",
+  "README.md": "7d28db241236e54ff3d06ce11cf5e5a02d8e28302e314247c7ca1b229784c8cb",
+  "ROADMAP.md": "0673b6958bbdd7ac082a6bafcb93f35aa8a24a0c50ce45434fd9915b6315600f",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -115,7 +115,7 @@
   "common/scripted_effects/nap_coalitions.txt": "4c9d2e9719373903b0eef1a2a182a685fbc2968ba72571144b0a0d218229453f",
   "common/scripted_effects/nap_era.txt": "3d6af8691f5a385a29f81f13d61534bd8c0569f47a0181905a9f88370572f160",
   "common/scripted_effects/nap_france_rewards.txt": "d0a495285e6d278d2aef19f046bfd1263d4f56537c355b02f18af7cc7dd37e2d",
-  "common/scripted_effects/nap_territorial.txt": "7ace62e06e01a1550a9f3617e5975bcc9d081a9091ae1aeb9ccce3cdd64b1291",
+  "common/scripted_effects/nap_territorial.txt": "5004e0902486640b36e7f8e8f713df9ae073fd5cf5f8d03224787743ef473d98",
   "common/scripted_effects/napoleonic_diplomacy_setup.txt": "a6e95490cd85b2ec706dad73366622c34324f1e46cf02cde6b0866cc4244b899",
   "common/scripted_triggers/nap_clients.txt": "9313df383ace69abdc12ae6db6083c5b61ee3392e73595e51f54ca51d34f21dc",
   "common/scripted_triggers/nap_coalitions.txt": "0a8ea1261ba4dd8efd0124f0722bef6ff1d14dc8066b1e1bbcca96ac92c467cd",
@@ -137,7 +137,7 @@
   "docs/secondary-campaigns.md": "c41a11b68dcbf49c629f7623d5585f47d6108467a7786d888129b44780df3b56",
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
   "docs/territorial-registry.json": "9b574a1d618066bb0b9d2154866744539f7417d055eb0398f6b24b907112fcd1",
-  "docs/territorial-systems.md": "1053bd3b918d698975b33ddbf32222a64e10f60ffc76f1b21877122b52c0c3a1",
+  "docs/territorial-systems.md": "98d0d0d53042f46d03a8c0d6d924515f8dccc6bffc0b7e39d7415991e4c5d0ff",
   "events/01_french_revolution.txt": "55f610d01e6fc3911b9d455828f9be422691a8f92370964f3f679fa006f5b68e",
   "events/02_napoleonic_wars.txt": "a861adba5f27fe9a7be83145ab84f4c214aa3b8825d64f62939a0531962e2fd7",
   "events/03_collapse.txt": "fc3303d54c7c6aa1ac123e79e3e3ce75a793e6f57e708e58c2a5cd260cefa6ce",
@@ -2247,7 +2247,7 @@
   "localisation/english/nap_french_development_l_english.yml": "c1683864127d89fb2372f62ccdd1c906a91239038fa869f9bef3b603af6fc315",
   "localisation/english/nap_major_programmes_l_english.yml": "bb78913837cf34bed76246b17cb955c7607572978dac8832b0cda4d5affddd86",
   "localisation/english/nap_secondary_campaigns_l_english.yml": "2bcb39910cae442576514f9cc721211b75a2c3aa4254c87450b8383d2116f725",
-  "localisation/english/nap_territorial_l_english.yml": "b84393a8e481653b2001ea165f1fa7805cf218b2f5ef677ffb0e9107f507523f",
+  "localisation/english/nap_territorial_l_english.yml": "e880d980f58b5f2fca25493c32378a58062722b8a5cb297db1bb87441428f955",
   "localisation/english/napoleonic_diplomacy_l_english.yml": "8405a588420991f13ac7fb09ee1f6507443280695880eb545d29d26448c00fdf",
   "localisation/english/napoleonic_units_l_english.yml": "e495f08bc359a7fb66a97af958528423868d62c3a86f7aae02ade9fe250c6a60",
   "localisation/english/replace/nap_countries_l_english.yml": "2bf5ac59835d2ef42c346a8aee194017b5622406664e7ad00669bdffd882a584",
@@ -2258,5 +2258,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "f068970a2c1217a1b724fdea3f171c230d8b38561842071ebc9bc2f63cba8cb7",
-  "to ask lollo.md": "1bfb5658ccba186c4889de4fbc76ec1aa1d497aa70c378464d88d30aadee4229"
+  "to ask lollo.md": "c7699d5084a76691877d0fd517433f025e6f9407bc2e820a64a95500431b222a"
 }

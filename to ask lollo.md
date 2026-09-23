@@ -1,6 +1,6 @@
 # To ask Lollo
 
-**Current branch: A01-A05 implemented; A06-A12 approved and queued in the stacked implementation series**
+**Current branch: A01-A06 implemented; A07-A12 approved and queued in the stacked implementation series**
 
 This is the owner-decision register. A01-A12 are approved; implementation status is tracked separately. Existing French routes, ordinary implementation, validation and the target of at least 450 focuses are authorized. Approving a PR does not approve all proposals listed here.
 
