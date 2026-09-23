@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Milestone 4: coalition rounds, funding, separate peace and treaty safety**
+**Current branch: Milestone 5: distinct great-power programmes and starting-leader correction**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -28,14 +28,15 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- 450 French focus definitions and 84 policy events retained
-- Eight reusable state/army meters and twelve management decisions
-- Seven coalition rounds with native temporary factions and voluntary entry
-- Twelve funded subsidies and thirteen negotiated peace requests
-- Settlement locks, re-entry cooldowns, own-faction checks and third-party territory protection
-- Opening treaties execute immediately rather than waiting for player acknowledgement
-- Jassy uses valid state-scoped core edits and cannot seize third-party Odessa
-- Tracking documents updated; alternate-winner treaty terms and territorial approvals remain open
+- French 450-focus expansion and reusable era mechanics retained
+- Seven shared-framework coalition rounds with paid subsidies and bounded peace
+- Britain: parliamentary credit, maritime policy and sustainable allied finance
+- Austria: provincial institutions, field-command reform and the dynastic network
+- Prussia: state institutions, army reform and mobilization/recovery
+- Russia: provincial administration, long-distance armies and ministerial reform
+- Four starting histories no longer create later rulers immediately
+- Three succession events check the previous reigning monarch; Russian succession focuses create their named leaders
+- README, roadmap, approval queue and suggestions synchronized
 
 ## Installation for testing
 
@@ -86,7 +87,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-72 local unit tests pass. Coalition integration uses local fixtures, while the CI generator also reads exact retained master blobs. Tests cover ordering, payment conservation, consent checks, bounded/idempotent settlement, scope conventions and output path safety. No HOI4 runtime test has been performed; simultaneous-war and faction behavior remains an engine acceptance item.
+86 local unit tests pass. Great-power tests cover 108 unique focus names, reference graphs, policy payment/credit limits, safe deferral, four starting rulers, guarded succession and localisation. Exact retained repository sources are also built by CI. No HOI4 process was run; these are substantial implementation slices, not certified full campaigns.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

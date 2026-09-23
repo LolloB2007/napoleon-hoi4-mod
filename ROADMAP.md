@@ -1,17 +1,17 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: Milestone 4: coalition rounds, funding, separate peace and treaty safety**
+**Current branch: Milestone 5: distinct great-power programmes and starting-leader correction**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
 | Milestone | Current status |
 |---|---|
-| 1 | Country setup exists; engine verification pending |
-| 2 | Opening wars retain their starting structure; treaty effects now idempotent and ownership-guarded; engine verification pending |
-| 3 | Partial: 450 French focuses, 84 policy events and 56 chapter spirits; bespoke campaigns and approved territorial policy remain |
-| 4 | Partial: seven shared-framework coalition rounds, consent invitations, 12 subsidies, 13 peace requests and guarded settlement; bespoke treaties and fallback leadership remain |
-| 5 | Existing major-power trees; deep-content pass pending |
-| 6 | Partial: eight bounded meters, twelve decisions, eleven spirits and battle/peace/occupation pulses; deeper politics pending |
+| 1 | Country setup exists; four great-power starting rulers corrected; engine verification pending |
+| 2 | Opening diplomacy and bounded treaties implemented; engine verification pending |
+| 3 | Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper campaigns and territorial policy remain |
+| 4 | Partial: seven coalition rounds, consent, funding, separate peace and guarded treaties; bespoke settlements and fallback leadership remain |
+| 5 | Partial: 108 new focuses, 24 policy reviews, 12 spirits, three guarded successions and starting-leader fixes; full country campaigns remain |
+| 6 | Partial: eight bounded meters, twelve decisions, eleven spirits and campaign pulses |
 | 7 | Blocked on representative in-game campaign measurements |
 | 8 | Country setup only; deep campaigns and formables pending |
 | 9 | Placeholders only; legacy localisation, presentation and rights review pending |
@@ -29,18 +29,19 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Delivered on this branch
 
-- 450 French focus definitions and 84 policy events retained
-- Eight reusable state/army meters and twelve management decisions
-- Seven coalition rounds with native temporary factions and voluntary entry
-- Twelve funded subsidies and thirteen negotiated peace requests
-- Settlement locks, re-entry cooldowns, own-faction checks and third-party territory protection
-- Opening treaties execute immediately rather than waiting for player acknowledgement
-- Jassy uses valid state-scoped core edits and cannot seize third-party Odessa
-- Tracking documents updated; alternate-winner treaty terms and territorial approvals remain open
+- French 450-focus expansion and reusable era mechanics retained
+- Seven shared-framework coalition rounds with paid subsidies and bounded peace
+- Britain: parliamentary credit, maritime policy and sustainable allied finance
+- Austria: provincial institutions, field-command reform and the dynastic network
+- Prussia: state institutions, army reform and mobilization/recovery
+- Russia: provincial administration, long-distance armies and ministerial reform
+- Four starting histories no longer create later rulers immediately
+- Three succession events check the previous reigning monarch; Russian succession focuses create their named leaders
+- README, roadmap, approval queue and suggestions synchronized
 
 ## Test evidence and remaining acceptance
 
-72 local unit tests pass. Coalition integration uses local fixtures, while the CI generator also reads exact retained master blobs. Tests cover ordering, payment conservation, consent checks, bounded/idempotent settlement, scope conventions and output path safety. No HOI4 runtime test has been performed; simultaneous-war and faction behavior remains an engine acceptance item.
+86 local unit tests pass. Great-power tests cover 108 unique focus names, reference graphs, policy payment/credit limits, safe deferral, four starting rulers, guarded succession and localisation. Exact retained repository sources are also built by CI. No HOI4 process was run; these are substantial implementation slices, not certified full campaigns.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.

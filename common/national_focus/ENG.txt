@@ -333,4 +333,7 @@ focus_tree = {
 			add_ideas = concert_of_europe
 		}
 	}
+	shared_focus = ENG_nap_parliament_00
+	shared_focus = ENG_nap_admiralty_00
+	shared_focus = ENG_nap_finance_allies_00
 }

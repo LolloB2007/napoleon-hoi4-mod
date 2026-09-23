@@ -1,84 +1,99 @@
-###############################################################
-# Habsburg Monarchy — National Focus Tree
-# Four branches:
-#   1. JOSEPHINE — continue Enlightened reforms
-#   2. CONSERVATIVE — reverse Joseph's reforms, conciliate nobles/Church
-#   3. MILITARY — Archduke Charles + Stadion army reform
-#   4. IMPERIAL — manage the polyglot empire, lose then survive HRE
-###############################################################
-
 focus_tree = {
 	id = HAB_focus_tree
 	country = {
 		factor = 0
-		modifier = { add = 10 tag = HAB }
+		modifier = {
+			add = 10
+			tag = HAB
+		}
 	}
 	default = no
-	continuous_focus_position = { x = 50 y = 1500 }
-
-	# === ROOT ===
+	continuous_focus_position = {
+		x = 50
+		y = 1500
+	}
 	focus = {
 		id = HAB_emperor_dying
 		icon = GFX_focus_generic_monarchy_1
-		x = 10 y = 0
+		x = 10
+		y = 0
 		cost = 5
-		ai_will_do = { factor = 100 }
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			add_political_power = 25
 			add_stability = -0.05
 		}
 	}
-
-	# ============================================================
-	# BRANCH 1 — CONTINUE JOSEPHINE REFORMS
-	# ============================================================
-
 	focus = {
 		id = HAB_continue_reforms
 		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = HAB_emperor_dying }
-		mutually_exclusive = { focus = HAB_reverse_reforms }
-		x = 4 y = 1
+		prerequisite = {
+			focus = HAB_emperor_dying
+		}
+		mutually_exclusive = {
+			focus = HAB_reverse_reforms
+		}
+		x = 4
+		y = 1
 		cost = 10
 		completion_reward = {
-			add_popularity = { ideology = democratic popularity = 0.10 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
 			add_political_power = -50
 			add_stability = -0.10
 		}
 	}
-
 	focus = {
 		id = HAB_abolish_serfdom
 		icon = GFX_focus_generic_court
-		prerequisite = { focus = HAB_continue_reforms }
-		x = 3 y = 2
+		prerequisite = {
+			focus = HAB_continue_reforms
+		}
+		x = 3
+		y = 2
 		cost = 10
 		completion_reward = {
 			add_manpower = 100000
 			add_stability = -0.10
-			add_popularity = { ideology = democratic popularity = 0.10 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
 		}
 	}
-
 	focus = {
 		id = HAB_religious_tolerance
 		icon = GFX_focus_generic_court
-		prerequisite = { focus = HAB_continue_reforms }
-		x = 5 y = 2
+		prerequisite = {
+			focus = HAB_continue_reforms
+		}
+		x = 5
+		y = 2
 		cost = 10
 		completion_reward = {
 			add_stability = 0.05
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 			add_political_power = 25
 		}
 	}
-
 	focus = {
 		id = HAB_enlightened_empire
 		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = HAB_abolish_serfdom }
-		prerequisite = { focus = HAB_religious_tolerance }
-		x = 4 y = 3
+		prerequisite = {
+			focus = HAB_abolish_serfdom
+		}
+		prerequisite = {
+			focus = HAB_religious_tolerance
+		}
+		x = 4
+		y = 3
 		cost = 15
 		completion_reward = {
 			remove_ideas = josephine_reforms_collapse
@@ -86,139 +101,165 @@ focus_tree = {
 			add_stability = 0.10
 		}
 	}
-
-	# ============================================================
-	# BRANCH 2 — CONSERVATIVE REACTION
-	# ============================================================
-
 	focus = {
 		id = HAB_reverse_reforms
 		icon = GFX_focus_generic_monarchy_1
-		prerequisite = { focus = HAB_emperor_dying }
-		mutually_exclusive = { focus = HAB_continue_reforms }
-		x = 8 y = 1
+		prerequisite = {
+			focus = HAB_emperor_dying
+		}
+		mutually_exclusive = {
+			focus = HAB_continue_reforms
+		}
+		x = 8
+		y = 1
 		cost = 10
 		completion_reward = {
 			remove_ideas = josephine_reforms_collapse
 			add_stability = 0.05
-			add_popularity = { ideology = neutrality popularity = 0.15 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 			add_political_power = 50
 		}
 	}
-
 	focus = {
 		id = HAB_hungarian_compromise
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = HAB_reverse_reforms }
-		x = 7 y = 2
+		prerequisite = {
+			focus = HAB_reverse_reforms
+		}
+		x = 7
+		y = 2
 		cost = 10
 		completion_reward = {
 			add_stability = 0.10
 			add_political_power = 50
-			# Reduce the "multi-ethnic" penalty by 50% (handled via dynamic mod)
 		}
 	}
-
 	focus = {
 		id = HAB_concordat_with_rome
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = HAB_reverse_reforms }
-		x = 9 y = 2
+		prerequisite = {
+			focus = HAB_reverse_reforms
+		}
+		x = 9
+		y = 2
 		cost = 10
 		completion_reward = {
 			add_stability = 0.05
-			add_popularity = { ideology = neutrality popularity = 0.10 }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
+			}
 		}
 	}
-
 	focus = {
 		id = HAB_old_order_restored
 		icon = GFX_focus_generic_monarchy_1
-		prerequisite = { focus = HAB_hungarian_compromise }
-		prerequisite = { focus = HAB_concordat_with_rome }
-		x = 8 y = 3
+		prerequisite = {
+			focus = HAB_hungarian_compromise
+		}
+		prerequisite = {
+			focus = HAB_concordat_with_rome
+		}
+		x = 8
+		y = 3
 		cost = 15
 		completion_reward = {
 			add_stability = 0.15
 			add_political_power = 100
 		}
 	}
-
-	# ============================================================
-	# BRANCH 3 — MILITARY REFORM (Archduke Charles)
-	# ============================================================
-
 	focus = {
 		id = HAB_charles_takes_command
 		icon = GFX_focus_generic_army_doctrines_2
-		prerequisite = { focus = HAB_emperor_dying }
-		x = 13 y = 1
+		prerequisite = {
+			focus = HAB_emperor_dying
+		}
+		x = 13
+		y = 1
 		cost = 10
 		completion_reward = {
 			army_experience = 50
 			add_command_power = 30
 		}
 	}
-
 	focus = {
 		id = HAB_modernize_artillery
 		icon = GFX_focus_generic_military_industry
-		prerequisite = { focus = HAB_charles_takes_command }
-		x = 12 y = 2
+		prerequisite = {
+			focus = HAB_charles_takes_command
+		}
+		x = 12
+		y = 2
 		cost = 10
 		completion_reward = {
-			add_tech_bonus = { name = arty_bonus bonus = 0.5 uses = 2 category = category_napoleonic_artillery_tech }
+			add_tech_bonus = {
+				name = arty_bonus
+				bonus = 0.5
+				uses = 2
+				category = category_napoleonic_artillery_tech
+			}
 		}
 	}
-
 	focus = {
 		id = HAB_landwehr_organization
 		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = HAB_charles_takes_command }
-		x = 14 y = 2
+		prerequisite = {
+			focus = HAB_charles_takes_command
+		}
+		x = 14
+		y = 2
 		cost = 10
 		completion_reward = {
 			add_manpower = 80000
 			army_experience = 25
 		}
 	}
-
 	focus = {
 		id = HAB_stadion_reforms_focus
 		icon = GFX_focus_generic_army_doctrines_2
-		prerequisite = { focus = HAB_modernize_artillery }
-		prerequisite = { focus = HAB_landwehr_organization }
-		x = 13 y = 3
+		prerequisite = {
+			focus = HAB_modernize_artillery
+		}
+		prerequisite = {
+			focus = HAB_landwehr_organization
+		}
+		x = 13
+		y = 3
 		cost = 15
 		completion_reward = {
 			add_ideas = stadion_reforms
 			army_experience = 50
 		}
 	}
-
-	# ============================================================
-	# BRANCH 4 — IMPERIAL CONSOLIDATION
-	# ============================================================
-
 	focus = {
 		id = HAB_suppress_belgian_revolt
 		icon = GFX_focus_generic_military_dictatorship
-		prerequisite = { focus = HAB_emperor_dying }
-		x = 17 y = 1
+		prerequisite = {
+			focus = HAB_emperor_dying
+		}
+		x = 17
+		y = 1
 		cost = 10
-		available = { has_country_flag = belgian_revolt }
+		available = {
+			has_country_flag = belgian_revolt
+		}
 		completion_reward = {
 			remove_ideas = austrian_netherlands_revolt
 			add_war_support = 0.05
 			add_political_power = 25
 		}
 	}
-
 	focus = {
 		id = HAB_become_austrian_empire
 		icon = GFX_focus_generic_monarchy_1
-		prerequisite = { focus = HAB_emperor_dying }
-		x = 17 y = 2
+		prerequisite = {
+			focus = HAB_emperor_dying
+		}
+		x = 17
+		y = 2
 		cost = 15
 		available = {
 			OR = {
@@ -233,28 +274,32 @@ focus_tree = {
 			add_political_power = 50
 		}
 	}
-
 	focus = {
 		id = HAB_recover_lombardy
 		icon = GFX_focus_generic_attack_yugoslavia
-		prerequisite = { focus = HAB_become_austrian_empire }
-		x = 16 y = 3
+		prerequisite = {
+			focus = HAB_become_austrian_empire
+		}
+		x = 16
+		y = 3
 		cost = 10
 		available = {
 			has_global_flag = waterloo_fought
 		}
 		completion_reward = {
-			add_state_claim = 159   # Lombardy
-			add_state_claim = 160   # Veneto
+			add_state_claim = 159
+			add_state_claim = 160
 			add_war_support = 0.05
 		}
 	}
-
 	focus = {
 		id = HAB_concert_of_europe_focus
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = HAB_become_austrian_empire }
-		x = 18 y = 3
+		prerequisite = {
+			focus = HAB_become_austrian_empire
+		}
+		x = 18
+		y = 3
 		cost = 15
 		available = {
 			has_global_flag = concert_of_europe_established
@@ -265,4 +310,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
+	shared_focus = HAB_nap_provinces_00
+	shared_focus = HAB_nap_charles_00
+	shared_focus = HAB_nap_dynastic_00
 }
