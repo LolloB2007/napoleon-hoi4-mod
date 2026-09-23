@@ -8,7 +8,7 @@ from collections import Counter
 from pdx import Entry, parse, dumps, walk
 from build_10_era import change
 from france_catalogue import CHAPTERS
-from france_legacy import patch_legacy, leader
+from france_legacy import patch_legacy, leader, apply_focus_date_gates
 
 ROUTES = {
  'common': 'tag = FRA',

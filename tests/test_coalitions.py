@@ -19,7 +19,7 @@ class CoalitionTests(unittest.TestCase):
         self.assertTrue(eligible_round(4,{1,2,3}))
         self.assertFalse(eligible_round(4,{1,2,3,4}))
     def test_no_round_without_context(self):
-        for args in ({'at_date':False},{'french_context':False},{'host_free':False}):
+        for args in ({'french_context':False},{'host_free':False}):
             self.assertFalse(eligible_round(1,set(),**args))
     def test_subsidy_conserves_treasury(self):
         for a in range(101):
@@ -111,6 +111,9 @@ class CoalitionTests(unittest.TestCase):
             self.assertNotIn('create_faction',out['common/national_focus/ENG.txt'])
             for e in parse(out['events/04_1789_diplomacy.txt']):
                 self.assertEqual(len(e.children('immediate')),1)
+                self.assertEqual(len(e.children('is_triggered_only')),1)
+                self.assertFalse(e.children('trigger'))
+                self.assertFalse(e.children('mean_time_to_happen'))
                 self.assertEqual(len(e.children('option')[0].value),1)
     def test_compiler_postpass(self):
         with tempfile.TemporaryDirectory() as tmp:

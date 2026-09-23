@@ -1,17 +1,17 @@
 {
- "stage": "Milestone 9 non-gated presentation pass complete; final visual, soundtrack and translation direction await owner decisions",
+ "stage": "A01 implemented: historical dates are focus minimums; A02-A12 approved and queued in the stacked implementation series",
  "milestones": {
-  "1":"Country setup exists; four great-power rulers corrected; engine verification pending",
-  "2":"Opening diplomacy and bounded treaties implemented; engine verification pending",
-  "3":"Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper bespoke campaigns remain",
-  "4":"Partial: seven coalition rounds, consent, funding and separate peace; bespoke treaties and fallback leadership remain",
-  "5":"Partial: 108 new great-power focuses, 24 policy reviews, 12 spirits and starting-leader/succession repairs",
-  "6":"Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses",
-  "7":"Campaign measurement infrastructure pending; actual balance requires in-game evidence",
-  "8":"Implementation complete: territorial/client foundation plus 13 secondary campaign packs; runtime validation pending",
-  "9":"Non-gated implementation complete: original focus/event/portrait/flag/loading/bookmark/UI assets, event audio, historical namelists, flavour events and English polish. Final map/art direction, soundtrack and translation scope await A10-A12."
+  "1": "Country setup exists; four great-power rulers corrected; engine verification pending",
+  "2": "Opening diplomacy and bounded treaties implemented; engine verification pending",
+  "3": "Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper bespoke campaigns remain",
+  "4": "Partial: seven coalition rounds, consent, funding and separate peace; bespoke treaties and fallback leadership remain",
+  "5": "Partial: 108 new great-power focuses, 24 policy reviews, 12 spirits and starting-leader/succession repairs",
+  "6": "Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses",
+  "7": "Campaign measurement infrastructure pending; actual balance requires in-game evidence",
+  "8": "Implementation complete: territorial/client foundation plus 13 secondary campaign packs; runtime validation pending",
+  "9": "Non-gated implementation complete: original focus/event/portrait/flag/loading/bookmark/UI assets, event audio, historical namelists, flavour events and English polish. Final map/art direction, soundtrack and translation scope await A10-A12."
  },
- "delivered":[
+ "delivered": [
   "450 French focus definitions, 108 additional great-power focuses and 299 secondary-power focuses",
   "Reusable era mechanics and seven temporary coalition rounds",
   "Territorial/client foundation with approval-gated integration and formable registries",
@@ -24,5 +24,5 @@
   "English localisation cleanup removing obvious generator/temporary language and normalising terminology",
   "Asset-provenance documentation with no external commercial imagery, recordings or font files"
  ],
- "tests":"Milestone 9 adds presentation tests for focus-icon coverage, event pictures, leader portraits, regime flags, loading/bookmark formats, event audio, flavour events, historical namelists, OOB naming integration, English localisation cleanup and asset provenance. GitHub Actions must still pass, and no HOI4 executable was run."
+ "tests": "Milestone 9 adds presentation tests for focus-icon coverage, event pictures, leader portraits, regime flags, loading/bookmark formats, event audio, flavour events, historical namelists, OOB naming integration, English localisation cleanup and asset provenance. GitHub Actions must still pass, and no HOI4 executable was run."
 }

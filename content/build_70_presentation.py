@@ -221,14 +221,13 @@ def _flavour_events():
     events=["add_namespace = nap_flavour"]
     loc=["\ufeffl_english:"]
     for i,(tag,title,desc,option) in enumerate(FLAVOUR,1):
-        date_year=1789+(i%4)
         events.append(f'''country_event = {{
  id = nap_flavour.{i}
  title = nap_flavour.{i}.t
  desc = nap_flavour.{i}.d
  picture = GFX_NAP_EVENT_01
  fire_only_once = yes
- trigger = {{ tag = {tag} date > {date_year}.1.1 }}
+ trigger = {{ tag = {tag} }}
  mean_time_to_happen = {{ months = 8 }}
  option = {{ name = nap_flavour.{i}.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }}
 }}''')

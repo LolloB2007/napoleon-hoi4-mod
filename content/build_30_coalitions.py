@@ -1,7 +1,8 @@
 """Bounded coalition framework: invitations, subsidies, exits and finite rounds.
 
-Dates are eligibility floors, not declarations by timer. Historical opening
-settlements are retained; alternate territorial outcomes remain approval A03.
+A01 removes calendar-driven coalition/treaty execution. Rounds advance from
+political state and prior-round completion; the dates below are documentation
+metadata only. Alternate territorial outcomes are implemented separately by A03.
 """
 import json
 from pdx import Entry,parse,dumps,walk
@@ -25,8 +26,8 @@ OPENING=[
 ]
 
 
-def eligible_round(number,finished,*,at_date=True,french_context=True,host_free=True):
-    return at_date and french_context and host_free and number not in finished and (number==1 or number-1 in finished)
+def eligible_round(number,finished,*,french_context=True,host_free=True):
+    return french_context and host_free and number not in finished and (number==1 or number-1 in finished)
 
 
 def transfer_subsidy(donor,recipient,active=True):
@@ -101,7 +102,7 @@ def build(root):
     output['common/factions/goals/nap_coalitions.txt']='nap_coalition_manifest = { name = nap_coalition_manifest_name description = nap_coalition_manifest_desc is_manifest = yes ratio_progress = { total_amount = 1 completed_amount = 0 } }\n'
     for n,name,date,context,roster in ROUNDS:
         previous=f'has_global_flag = nap_coalition_{n-1}_finished' if n>1 else ''
-        guard=f'tag = ENG exists = yes is_subject = no is_in_faction = no NOT = {{ has_global_flag = nap_coalition_active }} NOT = {{ has_country_flag = nap_coalition_cooldown }} NOT = {{ has_global_flag = nap_coalition_{n}_finished }} {previous} date > {date} {context} NOT = {{ is_in_faction_with = FRA }}'
+        guard=f'tag = ENG exists = yes is_subject = no is_in_faction = no NOT = {{ has_global_flag = nap_coalition_active }} NOT = {{ has_country_flag = nap_coalition_cooldown }} NOT = {{ has_global_flag = nap_coalition_{n}_finished }} {previous} {context} NOT = {{ is_in_faction_with = FRA }}'
         triggers.append(f'nap_coalition_{n}_eligible = {{ {guard} }}')
         invites='\n'.join(f'{tag} = {{ if = {{ limit = {{ nap_coalition_candidate = yes }} set_country_flag = {{ flag = nap_invited_round_{n} days = 60 }} country_event = {{ id = nap_coalition.{100+n} days = 3 }} }} }}' for tag in roster.split())
         effects.append(f'''nap_coalition_start_{n} = {{ if = {{ limit = {{ nap_coalition_{n}_eligible = yes }}
@@ -210,7 +211,7 @@ The framework creates its own temporary native faction only when Britain is inde
 
 Twelve subsidy decisions transfer 15 treasury from donor to recipient without exceeding the cap. Thirteen participant peace requests can be accepted or rejected by France; British acceptance closes the round, while another participant can leave separately. Participants detach before white peace. Automatically attached subject members are included in end-of-round cleanup. Template checks protect unrelated factions. Flags and transaction locks precede peace callbacks.
 
-Opening-war treaties keep their dates and bounded terms but settle in event immediate effects, not delayed player acknowledgement. Jassy changes state 192 only if still Ottoman-owned; core edits use state scope. Capitulation and pre-conference hooks have opposite ROOT/FROM conventions. Third-party victories do not grant Russia a treaty windfall.
+Opening-war settlements are no longer fired by historical dates. Capitulation and pre-conference hooks settle them; A03 adds outcome-aware bounded terms. Jassy changes state 192 only if still Ottoman-owned; core edits use state scope. Capitulation and pre-conference hooks have opposite ROOT/FROM conventions. Third-party victories do not grant Russia a treaty windfall.
 
 This does not finish all of Milestone 4. Britain remains the convenor; fallback leadership, bespoke treaty terms, client conversion and historical war-goal catalogues remain future work. The faction manifest is a neutral placeholder, not a progression reward. Native faction/peace behavior requires a real engine test. The source protects the intended transactions but does not establish how every simultaneous-war callback behaves in HOI4.
 '''
@@ -226,7 +227,9 @@ def postprocess(outputs,root):
     for event in events:
         if event.key!='country_event':continue
         row=next(r for r in OPENING if event.scalar('id')=='napoleonic_diplomacy.'+str(r[9]))
-        event.value=[e for e in event.value if e.key!='immediate']
+        event.value=[e for e in event.value if e.key not in ('immediate','trigger','mean_time_to_happen')]
+        if not event.children('is_triggered_only'):
+            event.value.append(Entry('is_triggered_only','yes'))
         event.value.append(Entry('immediate',parse(row[1]+' = yes')))
         for option in event.children('option'):
             option.value=[e for e in option.value if e.key in ('name','trigger','ai_chance')]
