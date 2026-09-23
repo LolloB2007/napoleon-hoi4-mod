@@ -1,12 +1,12 @@
 add_namespace = nap_coalition
 
-country_event = { id = nap_coalition.1 title = nap_coalition.1.t desc = nap_coalition.1.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.1 title = nap_coalition.1.t desc = nap_coalition.1.d picture = GFX_NAP_EVENT_12 fire_only_once = yes
  trigger = { nap_coalition_1_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.1.a ai_chance = { factor = 80 } trigger = { nap_coalition_1_eligible = yes } nap_coalition_start_1 = yes }
  option = { name = nap_coalition.1.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_1_eligible = yes } set_global_flag = nap_coalition_1_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.101 title = nap_coalition.101.t desc = nap_coalition.101.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.101 title = nap_coalition.101.t desc = nap_coalition.101.d picture = GFX_NAP_EVENT_12 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.101.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_1 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 1 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_1 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 1 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_1 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 1 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -14,13 +14,13 @@ country_event = { id = nap_coalition.101 title = nap_coalition.101.t desc = nap_
  option = { name = nap_coalition.101.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_1 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.2 title = nap_coalition.2.t desc = nap_coalition.2.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.2 title = nap_coalition.2.t desc = nap_coalition.2.d picture = GFX_NAP_EVENT_08 fire_only_once = yes
  trigger = { nap_coalition_2_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.2.a ai_chance = { factor = 80 } trigger = { nap_coalition_2_eligible = yes } nap_coalition_start_2 = yes }
  option = { name = nap_coalition.2.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_2_eligible = yes } set_global_flag = nap_coalition_2_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.102 title = nap_coalition.102.t desc = nap_coalition.102.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.102 title = nap_coalition.102.t desc = nap_coalition.102.d picture = GFX_NAP_EVENT_06 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.102.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_2 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 2 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_2 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 2 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_2 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 2 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -28,13 +28,13 @@ country_event = { id = nap_coalition.102 title = nap_coalition.102.t desc = nap_
  option = { name = nap_coalition.102.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_2 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.3 title = nap_coalition.3.t desc = nap_coalition.3.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.3 title = nap_coalition.3.t desc = nap_coalition.3.d picture = GFX_NAP_EVENT_02 fire_only_once = yes
  trigger = { nap_coalition_3_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.3.a ai_chance = { factor = 80 } trigger = { nap_coalition_3_eligible = yes } nap_coalition_start_3 = yes }
  option = { name = nap_coalition.3.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_3_eligible = yes } set_global_flag = nap_coalition_3_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.103 title = nap_coalition.103.t desc = nap_coalition.103.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.103 title = nap_coalition.103.t desc = nap_coalition.103.d picture = GFX_NAP_EVENT_01 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.103.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_3 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 3 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_3 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 3 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_3 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 3 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -42,13 +42,13 @@ country_event = { id = nap_coalition.103 title = nap_coalition.103.t desc = nap_
  option = { name = nap_coalition.103.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_3 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.4 title = nap_coalition.4.t desc = nap_coalition.4.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.4 title = nap_coalition.4.t desc = nap_coalition.4.d picture = GFX_NAP_EVENT_12 fire_only_once = yes
  trigger = { nap_coalition_4_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.4.a ai_chance = { factor = 80 } trigger = { nap_coalition_4_eligible = yes } nap_coalition_start_4 = yes }
  option = { name = nap_coalition.4.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_4_eligible = yes } set_global_flag = nap_coalition_4_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.104 title = nap_coalition.104.t desc = nap_coalition.104.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.104 title = nap_coalition.104.t desc = nap_coalition.104.d picture = GFX_NAP_EVENT_08 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.104.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_4 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 4 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_4 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 4 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_4 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 4 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -56,13 +56,13 @@ country_event = { id = nap_coalition.104 title = nap_coalition.104.t desc = nap_
  option = { name = nap_coalition.104.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_4 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.5 title = nap_coalition.5.t desc = nap_coalition.5.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.5 title = nap_coalition.5.t desc = nap_coalition.5.d picture = GFX_NAP_EVENT_07 fire_only_once = yes
  trigger = { nap_coalition_5_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.5.a ai_chance = { factor = 80 } trigger = { nap_coalition_5_eligible = yes } nap_coalition_start_5 = yes }
  option = { name = nap_coalition.5.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_5_eligible = yes } set_global_flag = nap_coalition_5_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.105 title = nap_coalition.105.t desc = nap_coalition.105.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.105 title = nap_coalition.105.t desc = nap_coalition.105.d picture = GFX_NAP_EVENT_06 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.105.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_5 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 5 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_5 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 5 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_5 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 5 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -70,13 +70,13 @@ country_event = { id = nap_coalition.105 title = nap_coalition.105.t desc = nap_
  option = { name = nap_coalition.105.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_5 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.6 title = nap_coalition.6.t desc = nap_coalition.6.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.6 title = nap_coalition.6.t desc = nap_coalition.6.d picture = GFX_NAP_EVENT_12 fire_only_once = yes
  trigger = { nap_coalition_6_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.6.a ai_chance = { factor = 80 } trigger = { nap_coalition_6_eligible = yes } nap_coalition_start_6 = yes }
  option = { name = nap_coalition.6.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_6_eligible = yes } set_global_flag = nap_coalition_6_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.106 title = nap_coalition.106.t desc = nap_coalition.106.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.106 title = nap_coalition.106.t desc = nap_coalition.106.d picture = GFX_NAP_EVENT_04 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.106.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_6 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 6 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_6 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 6 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_6 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 6 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -84,13 +84,13 @@ country_event = { id = nap_coalition.106 title = nap_coalition.106.t desc = nap_
  option = { name = nap_coalition.106.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_6 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.7 title = nap_coalition.7.t desc = nap_coalition.7.d picture = GFX_report_event_generic_assembly fire_only_once = yes
+country_event = { id = nap_coalition.7 title = nap_coalition.7.t desc = nap_coalition.7.d picture = GFX_NAP_EVENT_02 fire_only_once = yes
  trigger = { nap_coalition_7_eligible = yes } mean_time_to_happen = { days = 14 }
  option = { name = nap_coalition.7.a ai_chance = { factor = 80 } trigger = { nap_coalition_7_eligible = yes } nap_coalition_start_7 = yes }
  option = { name = nap_coalition.7.b ai_chance = { factor = 20 } if = { limit = { nap_coalition_7_eligible = yes } set_global_flag = nap_coalition_7_finished set_country_flag = { flag = nap_coalition_cooldown days = 365 } } }
 }
 
-country_event = { id = nap_coalition.107 title = nap_coalition.107.t desc = nap_coalition.107.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.107 title = nap_coalition.107.t desc = nap_coalition.107.d picture = GFX_NAP_EVENT_01 is_triggered_only = yes
  immediate = { nap_era_initialize = yes }
  option = { name = nap_coalition.107.a ai_chance = { factor = 75 } trigger = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_7 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 7 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } }
   if = { limit = { nap_coalition_candidate = yes has_country_flag = nap_invited_round_7 has_global_flag = nap_coalition_active ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes check_variable = { nap_coalition_round = 7 } has_war_with = FRA } NOT = { check_variable = { nap_treasury < 8 } } } clr_country_flag = nap_invited_round_7 set_country_flag = nap_coalition_member set_variable = { nap_member_round = 7 } add_to_variable = { nap_treasury = -8 } ENG = { add_to_faction = ROOT } add_ideas = nap_coalition_coordination if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } } nap_era_clamp = yes }
@@ -98,79 +98,79 @@ country_event = { id = nap_coalition.107 title = nap_coalition.107.t desc = nap_
  option = { name = nap_coalition.107.b ai_chance = { factor = 25 } clr_country_flag = nap_invited_round_7 set_country_flag = { flag = nap_coalition_cooldown days = 180 } }
 }
 
-country_event = { id = nap_coalition.200 title = nap_coalition.200.t desc = nap_coalition.200.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.200 title = nap_coalition.200.t desc = nap_coalition.200.d picture = GFX_NAP_EVENT_05 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA ENG = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA ENG = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ENG = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA ENG = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA ENG = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ENG = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA ENG = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.201 title = nap_coalition.201.t desc = nap_coalition.201.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.201 title = nap_coalition.201.t desc = nap_coalition.201.d picture = GFX_NAP_EVENT_12 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA HAB = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA HAB = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } HAB = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA HAB = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA HAB = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } HAB = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA HAB = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.202 title = nap_coalition.202.t desc = nap_coalition.202.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.202 title = nap_coalition.202.t desc = nap_coalition.202.d picture = GFX_NAP_EVENT_11 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA PRU = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA PRU = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } PRU = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA PRU = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA PRU = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } PRU = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA PRU = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.203 title = nap_coalition.203.t desc = nap_coalition.203.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.203 title = nap_coalition.203.t desc = nap_coalition.203.d picture = GFX_NAP_EVENT_09 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA RUS = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA RUS = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } RUS = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA RUS = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA RUS = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } RUS = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA RUS = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.204 title = nap_coalition.204.t desc = nap_coalition.204.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.204 title = nap_coalition.204.t desc = nap_coalition.204.d picture = GFX_NAP_EVENT_01 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA SPR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA SPR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SPR = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA SPR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA SPR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SPR = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA SPR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.205 title = nap_coalition.205.t desc = nap_coalition.205.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.205 title = nap_coalition.205.t desc = nap_coalition.205.d picture = GFX_NAP_EVENT_03 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA POR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA POR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } POR = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA POR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA POR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } POR = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA POR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.206 title = nap_coalition.206.t desc = nap_coalition.206.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.206 title = nap_coalition.206.t desc = nap_coalition.206.d picture = GFX_NAP_EVENT_06 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA SWE = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA SWE = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SWE = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA SWE = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA SWE = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SWE = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA SWE = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.207 title = nap_coalition.207.t desc = nap_coalition.207.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.207 title = nap_coalition.207.t desc = nap_coalition.207.d picture = GFX_NAP_EVENT_11 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA DEN = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA DEN = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } DEN = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA DEN = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA DEN = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } DEN = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA DEN = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.208 title = nap_coalition.208.t desc = nap_coalition.208.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.208 title = nap_coalition.208.t desc = nap_coalition.208.d picture = GFX_NAP_EVENT_11 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA NET = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA NET = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } NET = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA NET = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA NET = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } NET = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA NET = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.209 title = nap_coalition.209.t desc = nap_coalition.209.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.209 title = nap_coalition.209.t desc = nap_coalition.209.d picture = GFX_NAP_EVENT_04 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA SAR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA SAR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SAR = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA SAR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA SAR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SAR = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA SAR = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.210 title = nap_coalition.210.t desc = nap_coalition.210.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.210 title = nap_coalition.210.t desc = nap_coalition.210.d picture = GFX_NAP_EVENT_12 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA NAP = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA NAP = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } NAP = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA NAP = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA NAP = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } NAP = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA NAP = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.211 title = nap_coalition.211.t desc = nap_coalition.211.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.211 title = nap_coalition.211.t desc = nap_coalition.211.d picture = GFX_NAP_EVENT_07 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA BAV = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA BAV = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } BAV = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA BAV = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA BAV = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } BAV = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA BAV = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }
 }
 
-country_event = { id = nap_coalition.212 title = nap_coalition.212.t desc = nap_coalition.212.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+country_event = { id = nap_coalition.212 title = nap_coalition.212.t desc = nap_coalition.212.d picture = GFX_NAP_EVENT_09 is_triggered_only = yes
  option = { name = nap_coalition_peace_accept trigger = { tag = FRA SAX = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 80 } if = { limit = { tag = FRA SAX = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SAX = { nap_coalition_separate_peace = yes } } }
  option = { name = nap_coalition_peace_refuse trigger = { tag = FRA SAX = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } ai_chance = { factor = 20 } if = { limit = { tag = FRA SAX = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } SAX = { clr_country_flag = nap_coalition_peace_requested set_country_flag = { flag = nap_coalition_peace_refused days = 180 } } add_political_power = -15 } }
  option = { name = nap_coalition_superseded trigger = { NOT = { tag = FRA SAX = { has_country_flag = nap_coalition_peace_requested has_country_flag = nap_coalition_member has_war_with = FRA } } } }

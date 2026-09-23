@@ -14,7 +14,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_kingdom_of_drill
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_PRU_KINGDOM_OF_DRILL
 		x = 10
 		y = 0
 		cost = 5
@@ -28,7 +28,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_preserve_old_fritz_army
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_PRU_PRESERVE_OLD_FRITZ_ARMY
 		prerequisite = {
 			focus = PRU_kingdom_of_drill
 		}
@@ -45,7 +45,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_neutral_in_revolutionary_wars
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_PRU_NEUTRAL_IN_REVOLUTIONARY_WARS
 		prerequisite = {
 			focus = PRU_preserve_old_fritz_army
 		}
@@ -64,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_partition_of_poland
-		icon = GFX_focus_generic_attack_poland
+		icon = GFX_NAP_FOCUS_PRU_PARTITION_OF_POLAND
 		prerequisite = {
 			focus = PRU_preserve_old_fritz_army
 		}
@@ -85,7 +85,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_face_napoleon
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_PRU_FACE_NAPOLEON
 		prerequisite = {
 			focus = PRU_preserve_old_fritz_army
 		}
@@ -107,7 +107,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_consider_reform
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_PRU_CONSIDER_REFORM
 		prerequisite = {
 			focus = PRU_kingdom_of_drill
 		}
@@ -127,7 +127,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_scharnhorst_reforms_focus
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_PRU_SCHARNHORST_REFORMS_FOCUS
 		prerequisite = {
 			focus = PRU_consider_reform
 		}
@@ -143,7 +143,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_stein_reforms
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_PRU_STEIN_REFORMS
 		prerequisite = {
 			focus = PRU_consider_reform
 		}
@@ -162,7 +162,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_universal_conscription
-		icon = GFX_focus_generic_manpower
+		icon = GFX_NAP_FOCUS_PRU_UNIVERSAL_CONSCRIPTION
 		prerequisite = {
 			focus = PRU_scharnhorst_reforms_focus
 		}
@@ -180,7 +180,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_war_of_liberation
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_PRU_WAR_OF_LIBERATION
 		prerequisite = {
 			focus = PRU_universal_conscription
 		}
@@ -200,6 +200,7 @@ focus_tree = {
 			add_war_support = 0.30
 			create_field_marshal = {
 				name = "Gebhard Leberecht von Blücher"
+	picture = GFX_NAP_PORTRAIT_GEBHARD_LEBERECHT_VON_BLCHER
 				traits = {
 					trait_reckless
 					cavalry_officer
@@ -216,7 +217,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_march_on_paris_pru
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_PRU_MARCH_ON_PARIS_PRU
 		prerequisite = {
 			focus = PRU_war_of_liberation
 		}
@@ -233,7 +234,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_acquire_rhineland
-		icon = GFX_focus_generic_attack_czechoslovakia
+		icon = GFX_NAP_FOCUS_PRU_ACQUIRE_RHINELAND
 		prerequisite = {
 			focus = PRU_march_on_paris_pru
 		}
@@ -251,7 +252,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PRU_german_confederation
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_PRU_GERMAN_CONFEDERATION
 		prerequisite = {
 			focus = PRU_march_on_paris_pru
 		}

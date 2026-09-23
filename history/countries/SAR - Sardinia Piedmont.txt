@@ -49,5 +49,6 @@ add_opinion_modifier = { target = FRA modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Victor Amadeus III"
+	picture = GFX_NAP_PORTRAIT_VICTOR_AMADEUS_III
 	ideology = despotism
 }

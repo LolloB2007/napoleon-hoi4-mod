@@ -4,7 +4,7 @@ country_event = {
  id = nap_fra_development.1001
  title = nap_fra_development.1001.t
  desc = nap_fra_development.1001.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -35,7 +35,7 @@ country_event = {
  id = nap_fra_development.1002
  title = nap_fra_development.1002.t
  desc = nap_fra_development.1002.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -66,7 +66,7 @@ country_event = {
  id = nap_fra_development.1003
  title = nap_fra_development.1003.t
  desc = nap_fra_development.1003.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -97,7 +97,7 @@ country_event = {
  id = nap_fra_development.1011
  title = nap_fra_development.1011.t
  desc = nap_fra_development.1011.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -128,7 +128,7 @@ country_event = {
  id = nap_fra_development.1012
  title = nap_fra_development.1012.t
  desc = nap_fra_development.1012.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -159,7 +159,7 @@ country_event = {
  id = nap_fra_development.1013
  title = nap_fra_development.1013.t
  desc = nap_fra_development.1013.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_02
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -190,7 +190,7 @@ country_event = {
  id = nap_fra_development.1021
  title = nap_fra_development.1021.t
  desc = nap_fra_development.1021.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -221,7 +221,7 @@ country_event = {
  id = nap_fra_development.1022
  title = nap_fra_development.1022.t
  desc = nap_fra_development.1022.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_06
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -252,7 +252,7 @@ country_event = {
  id = nap_fra_development.1023
  title = nap_fra_development.1023.t
  desc = nap_fra_development.1023.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -283,7 +283,7 @@ country_event = {
  id = nap_fra_development.1031
  title = nap_fra_development.1031.t
  desc = nap_fra_development.1031.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_06
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -314,7 +314,7 @@ country_event = {
  id = nap_fra_development.1032
  title = nap_fra_development.1032.t
  desc = nap_fra_development.1032.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -345,7 +345,7 @@ country_event = {
  id = nap_fra_development.1033
  title = nap_fra_development.1033.t
  desc = nap_fra_development.1033.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_09
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -376,7 +376,7 @@ country_event = {
  id = nap_fra_development.1041
  title = nap_fra_development.1041.t
  desc = nap_fra_development.1041.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -407,7 +407,7 @@ country_event = {
  id = nap_fra_development.1042
  title = nap_fra_development.1042.t
  desc = nap_fra_development.1042.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -438,7 +438,7 @@ country_event = {
  id = nap_fra_development.1043
  title = nap_fra_development.1043.t
  desc = nap_fra_development.1043.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -469,7 +469,7 @@ country_event = {
  id = nap_fra_development.1051
  title = nap_fra_development.1051.t
  desc = nap_fra_development.1051.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -500,7 +500,7 @@ country_event = {
  id = nap_fra_development.1052
  title = nap_fra_development.1052.t
  desc = nap_fra_development.1052.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -531,7 +531,7 @@ country_event = {
  id = nap_fra_development.1053
  title = nap_fra_development.1053.t
  desc = nap_fra_development.1053.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -562,7 +562,7 @@ country_event = {
  id = nap_fra_development.1061
  title = nap_fra_development.1061.t
  desc = nap_fra_development.1061.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -593,7 +593,7 @@ country_event = {
  id = nap_fra_development.1062
  title = nap_fra_development.1062.t
  desc = nap_fra_development.1062.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_11
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -624,7 +624,7 @@ country_event = {
  id = nap_fra_development.1063
  title = nap_fra_development.1063.t
  desc = nap_fra_development.1063.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -655,7 +655,7 @@ country_event = {
  id = nap_fra_development.1071
  title = nap_fra_development.1071.t
  desc = nap_fra_development.1071.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -686,7 +686,7 @@ country_event = {
  id = nap_fra_development.1072
  title = nap_fra_development.1072.t
  desc = nap_fra_development.1072.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -717,7 +717,7 @@ country_event = {
  id = nap_fra_development.1073
  title = nap_fra_development.1073.t
  desc = nap_fra_development.1073.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -748,7 +748,7 @@ country_event = {
  id = nap_fra_development.1081
  title = nap_fra_development.1081.t
  desc = nap_fra_development.1081.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -779,7 +779,7 @@ country_event = {
  id = nap_fra_development.1082
  title = nap_fra_development.1082.t
  desc = nap_fra_development.1082.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -810,7 +810,7 @@ country_event = {
  id = nap_fra_development.1083
  title = nap_fra_development.1083.t
  desc = nap_fra_development.1083.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_05
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -841,7 +841,7 @@ country_event = {
  id = nap_fra_development.1091
  title = nap_fra_development.1091.t
  desc = nap_fra_development.1091.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -872,7 +872,7 @@ country_event = {
  id = nap_fra_development.1092
  title = nap_fra_development.1092.t
  desc = nap_fra_development.1092.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_05
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -903,7 +903,7 @@ country_event = {
  id = nap_fra_development.1093
  title = nap_fra_development.1093.t
  desc = nap_fra_development.1093.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -934,7 +934,7 @@ country_event = {
  id = nap_fra_development.1101
  title = nap_fra_development.1101.t
  desc = nap_fra_development.1101.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -965,7 +965,7 @@ country_event = {
  id = nap_fra_development.1102
  title = nap_fra_development.1102.t
  desc = nap_fra_development.1102.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -996,7 +996,7 @@ country_event = {
  id = nap_fra_development.1103
  title = nap_fra_development.1103.t
  desc = nap_fra_development.1103.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_09
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1027,7 +1027,7 @@ country_event = {
  id = nap_fra_development.1111
  title = nap_fra_development.1111.t
  desc = nap_fra_development.1111.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_01
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1058,7 +1058,7 @@ country_event = {
  id = nap_fra_development.1112
  title = nap_fra_development.1112.t
  desc = nap_fra_development.1112.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1089,7 +1089,7 @@ country_event = {
  id = nap_fra_development.1113
  title = nap_fra_development.1113.t
  desc = nap_fra_development.1113.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1120,7 +1120,7 @@ country_event = {
  id = nap_fra_development.1121
  title = nap_fra_development.1121.t
  desc = nap_fra_development.1121.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1151,7 +1151,7 @@ country_event = {
  id = nap_fra_development.1122
  title = nap_fra_development.1122.t
  desc = nap_fra_development.1122.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_02
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1182,7 +1182,7 @@ country_event = {
  id = nap_fra_development.1123
  title = nap_fra_development.1123.t
  desc = nap_fra_development.1123.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_05
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1213,7 +1213,7 @@ country_event = {
  id = nap_fra_development.1131
  title = nap_fra_development.1131.t
  desc = nap_fra_development.1131.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1244,7 +1244,7 @@ country_event = {
  id = nap_fra_development.1132
  title = nap_fra_development.1132.t
  desc = nap_fra_development.1132.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1275,7 +1275,7 @@ country_event = {
  id = nap_fra_development.1133
  title = nap_fra_development.1133.t
  desc = nap_fra_development.1133.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1306,7 +1306,7 @@ country_event = {
  id = nap_fra_development.1141
  title = nap_fra_development.1141.t
  desc = nap_fra_development.1141.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1337,7 +1337,7 @@ country_event = {
  id = nap_fra_development.1142
  title = nap_fra_development.1142.t
  desc = nap_fra_development.1142.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1368,7 +1368,7 @@ country_event = {
  id = nap_fra_development.1143
  title = nap_fra_development.1143.t
  desc = nap_fra_development.1143.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1399,7 +1399,7 @@ country_event = {
  id = nap_fra_development.1151
  title = nap_fra_development.1151.t
  desc = nap_fra_development.1151.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_05
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1430,7 +1430,7 @@ country_event = {
  id = nap_fra_development.1152
  title = nap_fra_development.1152.t
  desc = nap_fra_development.1152.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1461,7 +1461,7 @@ country_event = {
  id = nap_fra_development.1153
  title = nap_fra_development.1153.t
  desc = nap_fra_development.1153.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1492,7 +1492,7 @@ country_event = {
  id = nap_fra_development.1161
  title = nap_fra_development.1161.t
  desc = nap_fra_development.1161.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1523,7 +1523,7 @@ country_event = {
  id = nap_fra_development.1162
  title = nap_fra_development.1162.t
  desc = nap_fra_development.1162.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1554,7 +1554,7 @@ country_event = {
  id = nap_fra_development.1163
  title = nap_fra_development.1163.t
  desc = nap_fra_development.1163.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_01
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1585,7 +1585,7 @@ country_event = {
  id = nap_fra_development.1171
  title = nap_fra_development.1171.t
  desc = nap_fra_development.1171.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_02
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1616,7 +1616,7 @@ country_event = {
  id = nap_fra_development.1172
  title = nap_fra_development.1172.t
  desc = nap_fra_development.1172.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1647,7 +1647,7 @@ country_event = {
  id = nap_fra_development.1173
  title = nap_fra_development.1173.t
  desc = nap_fra_development.1173.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1678,7 +1678,7 @@ country_event = {
  id = nap_fra_development.1181
  title = nap_fra_development.1181.t
  desc = nap_fra_development.1181.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1709,7 +1709,7 @@ country_event = {
  id = nap_fra_development.1182
  title = nap_fra_development.1182.t
  desc = nap_fra_development.1182.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1740,7 +1740,7 @@ country_event = {
  id = nap_fra_development.1183
  title = nap_fra_development.1183.t
  desc = nap_fra_development.1183.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_03
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1771,7 +1771,7 @@ country_event = {
  id = nap_fra_development.1191
  title = nap_fra_development.1191.t
  desc = nap_fra_development.1191.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_06
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1802,7 +1802,7 @@ country_event = {
  id = nap_fra_development.1192
  title = nap_fra_development.1192.t
  desc = nap_fra_development.1192.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_06
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1833,7 +1833,7 @@ country_event = {
  id = nap_fra_development.1193
  title = nap_fra_development.1193.t
  desc = nap_fra_development.1193.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1864,7 +1864,7 @@ country_event = {
  id = nap_fra_development.1201
  title = nap_fra_development.1201.t
  desc = nap_fra_development.1201.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_11
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1895,7 +1895,7 @@ country_event = {
  id = nap_fra_development.1202
  title = nap_fra_development.1202.t
  desc = nap_fra_development.1202.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_05
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1926,7 +1926,7 @@ country_event = {
  id = nap_fra_development.1203
  title = nap_fra_development.1203.t
  desc = nap_fra_development.1203.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_07
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1957,7 +1957,7 @@ country_event = {
  id = nap_fra_development.1211
  title = nap_fra_development.1211.t
  desc = nap_fra_development.1211.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -1988,7 +1988,7 @@ country_event = {
  id = nap_fra_development.1212
  title = nap_fra_development.1212.t
  desc = nap_fra_development.1212.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_02
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2019,7 +2019,7 @@ country_event = {
  id = nap_fra_development.1213
  title = nap_fra_development.1213.t
  desc = nap_fra_development.1213.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_05
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2050,7 +2050,7 @@ country_event = {
  id = nap_fra_development.1221
  title = nap_fra_development.1221.t
  desc = nap_fra_development.1221.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2081,7 +2081,7 @@ country_event = {
  id = nap_fra_development.1222
  title = nap_fra_development.1222.t
  desc = nap_fra_development.1222.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2112,7 +2112,7 @@ country_event = {
  id = nap_fra_development.1223
  title = nap_fra_development.1223.t
  desc = nap_fra_development.1223.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2143,7 +2143,7 @@ country_event = {
  id = nap_fra_development.1231
  title = nap_fra_development.1231.t
  desc = nap_fra_development.1231.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2174,7 +2174,7 @@ country_event = {
  id = nap_fra_development.1232
  title = nap_fra_development.1232.t
  desc = nap_fra_development.1232.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_10
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2205,7 +2205,7 @@ country_event = {
  id = nap_fra_development.1233
  title = nap_fra_development.1233.t
  desc = nap_fra_development.1233.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_02
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2236,7 +2236,7 @@ country_event = {
  id = nap_fra_development.1241
  title = nap_fra_development.1241.t
  desc = nap_fra_development.1241.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_01
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2267,7 +2267,7 @@ country_event = {
  id = nap_fra_development.1242
  title = nap_fra_development.1242.t
  desc = nap_fra_development.1242.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2298,7 +2298,7 @@ country_event = {
  id = nap_fra_development.1243
  title = nap_fra_development.1243.t
  desc = nap_fra_development.1243.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_02
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2329,7 +2329,7 @@ country_event = {
  id = nap_fra_development.1251
  title = nap_fra_development.1251.t
  desc = nap_fra_development.1251.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2360,7 +2360,7 @@ country_event = {
  id = nap_fra_development.1252
  title = nap_fra_development.1252.t
  desc = nap_fra_development.1252.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_06
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2391,7 +2391,7 @@ country_event = {
  id = nap_fra_development.1253
  title = nap_fra_development.1253.t
  desc = nap_fra_development.1253.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_04
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2422,7 +2422,7 @@ country_event = {
  id = nap_fra_development.1261
  title = nap_fra_development.1261.t
  desc = nap_fra_development.1261.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2453,7 +2453,7 @@ country_event = {
  id = nap_fra_development.1262
  title = nap_fra_development.1262.t
  desc = nap_fra_development.1262.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_08
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2484,7 +2484,7 @@ country_event = {
  id = nap_fra_development.1263
  title = nap_fra_development.1263.t
  desc = nap_fra_development.1263.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_12
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2515,7 +2515,7 @@ country_event = {
  id = nap_fra_development.1271
  title = nap_fra_development.1271.t
  desc = nap_fra_development.1271.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_09
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2546,7 +2546,7 @@ country_event = {
  id = nap_fra_development.1272
  title = nap_fra_development.1272.t
  desc = nap_fra_development.1272.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_09
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }
@@ -2577,7 +2577,7 @@ country_event = {
  id = nap_fra_development.1273
  title = nap_fra_development.1273.t
  desc = nap_fra_development.1273.d
- picture = GFX_report_event_generic_assembly
+ picture = GFX_NAP_EVENT_06
  is_triggered_only = yes
  fire_only_once = yes
  immediate = { if = { limit = { tag = FRA } nap_era_initialize = yes } }

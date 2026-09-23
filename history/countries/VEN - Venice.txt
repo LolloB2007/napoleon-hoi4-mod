@@ -48,11 +48,13 @@ add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Ludovico Manin"
+	picture = GFX_NAP_PORTRAIT_LUDOVICO_MANIN
 	ideology = conservatism
 }
 
 create_navy_leader = {
 	name = "Angelo Emo"
+	picture = GFX_NAP_PORTRAIT_ANGELO_EMO
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4

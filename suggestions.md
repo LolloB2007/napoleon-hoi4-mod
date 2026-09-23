@@ -25,3 +25,11 @@ The end date, chronology policy, speculative political routes and expanded core 
 - Add dynamic transition events for WAR, BAT and HOL so their inherited Polish/Dutch campaigns acknowledge the regime change explicitly.
 - Give the represented German principalities differentiated diplomacy panels after the shared regional campaign proves stable in play.
 - Reconstruct the United States' 1789 territorial and military map only after geographic-scope decision A07 is answered.
+
+
+## Presentation follow-up
+
+- Replace procedural portrait cards with the approved A10 visual language only after provenance/licensing is recorded.
+- If A10 chooses map recolouring, prototype it on a separate visual branch because terrain/colourmap replacement has a much larger compatibility surface than UI art.
+- Build the A11 soundtrack as a self-contained radio station with provenance for every recording.
+- Treat English as the source localisation and generate no machine-translated release files without A12 approval and human review.

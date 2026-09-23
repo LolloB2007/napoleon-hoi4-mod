@@ -3,7 +3,7 @@ country_event = {
 	id = napoleonic_wars.3
 	title = napoleonic_wars.3.t
 	desc = napoleonic_wars.3.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_10
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -57,6 +57,7 @@ country_event = {
 			add_political_power = 100
 			country_event = {
 				id = napoleonic_wars.4
+ picture = GFX_NAP_EVENT_02
 				days = 200
 			}
 		}
@@ -106,7 +107,7 @@ news_event = {
 	id = napoleonic_wars.31
 	title = napoleonic_wars.31.t
 	desc = napoleonic_wars.31.d
-	picture = GFX_news_event_generic_assembly
+	picture = GFX_NAP_EVENT_09
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -117,7 +118,7 @@ country_event = {
 	id = napoleonic_wars.4
 	title = napoleonic_wars.4.t
 	desc = napoleonic_wars.4.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_02
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -141,6 +142,7 @@ country_event = {
 			add_command_power = 100
 			news_event = {
 				id = napoleonic_wars.31
+ picture = GFX_NAP_EVENT_09
 				hours = 6
 			}
 		}
@@ -164,7 +166,7 @@ news_event = {
 	id = napoleonic_wars.5
 	title = napoleonic_wars.5.t
 	desc = napoleonic_wars.5.d
-	picture = GFX_news_event_generic_sinking_ship
+	picture = GFX_NAP_EVENT_05
 	major = yes
 	trigger = {
 		date > 1805.10.20
@@ -207,7 +209,7 @@ country_event = {
 	id = napoleonic_wars.6
 	title = napoleonic_wars.6.t
 	desc = napoleonic_wars.6.d
-	picture = GFX_report_event_generic_army_formed
+	picture = GFX_NAP_EVENT_07
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -244,6 +246,7 @@ country_event = {
 				add_political_power = -100
 				country_event = {
 					id = napoleonic_wars.61
+ picture = GFX_NAP_EVENT_11
 					days = 30
 				}
 			}
@@ -269,7 +272,7 @@ country_event = {
 	id = napoleonic_wars.61
 	title = napoleonic_wars.61.t
 	desc = napoleonic_wars.61.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_11
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -359,7 +362,7 @@ country_event = {
 	id = napoleonic_wars.7
 	title = napoleonic_wars.7.t
 	desc = napoleonic_wars.7.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_05
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -406,12 +409,14 @@ country_event = {
 					}
 					country_event = {
 						id = nap_clients.10
+ picture = GFX_NAP_EVENT_02
 						days = 1
 					}
 				}
 			}
 			country_event = {
 				id = napoleonic_wars.8
+ picture = GFX_NAP_EVENT_07
 				days = 25
 			}
 		}
@@ -435,7 +440,7 @@ country_event = {
 	id = napoleonic_wars.8
 	title = napoleonic_wars.8.t
 	desc = napoleonic_wars.8.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_07
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -464,6 +469,7 @@ country_event = {
 			set_global_flag = hre_dissolved
 			news_event = {
 				id = napoleonic_wars.81
+ picture = GFX_NAP_EVENT_02
 				hours = 6
 			}
 		}
@@ -488,7 +494,7 @@ news_event = {
 	id = napoleonic_wars.81
 	title = napoleonic_wars.81.t
 	desc = napoleonic_wars.81.d
-	picture = GFX_news_event_generic_assembly
+	picture = GFX_NAP_EVENT_02
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -499,7 +505,7 @@ country_event = {
 	id = napoleonic_wars.9
 	title = napoleonic_wars.9.t
 	desc = napoleonic_wars.9.d
-	picture = GFX_report_event_generic_army_formed
+	picture = GFX_NAP_EVENT_10
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -535,6 +541,7 @@ country_event = {
 				add_stability = -0.20
 				country_event = {
 					id = napoleonic_wars.91
+ picture = GFX_NAP_EVENT_02
 					days = 60
 				}
 			}
@@ -560,7 +567,7 @@ country_event = {
 	id = napoleonic_wars.91
 	title = napoleonic_wars.91.t
 	desc = napoleonic_wars.91.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_02
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -650,7 +657,7 @@ country_event = {
 	id = napoleonic_wars.10
 	title = napoleonic_wars.10.t
 	desc = napoleonic_wars.10.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_03
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -726,7 +733,7 @@ country_event = {
 	id = napoleonic_wars.13
 	title = napoleonic_wars.13.t
 	desc = napoleonic_wars.13.d
-	picture = GFX_report_event_generic_assembly
+	picture = GFX_NAP_EVENT_07
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -788,7 +795,7 @@ country_event = {
 	id = napoleonic_wars.16
 	title = napoleonic_wars.16.t
 	desc = napoleonic_wars.16.d
-	picture = GFX_report_event_generic_army_formed
+	picture = GFX_NAP_EVENT_03
 	fire_only_once = yes
 	trigger = {
 		tag = FRA
@@ -848,6 +855,7 @@ country_event = {
 			set_country_flag = russian_campaign_active
 			news_event = {
 				id = napoleonic_wars.161
+ picture = GFX_NAP_EVENT_10
 				hours = 6
 			}
 		}
@@ -903,7 +911,7 @@ news_event = {
 	id = napoleonic_wars.161
 	title = napoleonic_wars.161.t
 	desc = napoleonic_wars.161.d
-	picture = GFX_news_event_generic_army_formed
+	picture = GFX_NAP_EVENT_10
 	major = yes
 	is_triggered_only = yes
 	option = {

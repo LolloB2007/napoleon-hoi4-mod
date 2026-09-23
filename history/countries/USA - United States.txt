@@ -8,5 +8,7 @@ set_technology = { musket_research_1 = 1 bayonet_drill = 1 cavalry_research_1 = 
 set_politics = { ruling_party = democratic last_election = "1789.1.7" election_frequency = 48 elections_allowed = yes }
 set_popularities = { democratic = 80 neutrality = 15 communism = 3 fascism = 2 }
 set_country_flag = american_federal_republic
-create_country_leader = { name = "George Washington" ideology = conservatism traits = { popular_figurehead } }
-create_corps_commander = { name = "Anthony Wayne" skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
+create_country_leader = { name = "George Washington"
+	picture = GFX_NAP_PORTRAIT_GEORGE_WASHINGTON ideology = conservatism traits = { popular_figurehead } }
+create_corps_commander = { name = "Anthony Wayne"
+	picture = GFX_NAP_PORTRAIT_ANTHONY_WAYNE skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }

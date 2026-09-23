@@ -14,7 +14,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_emperor_dying
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_HAB_EMPEROR_DYING
 		x = 10
 		y = 0
 		cost = 5
@@ -28,7 +28,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_continue_reforms
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_HAB_CONTINUE_REFORMS
 		prerequisite = {
 			focus = HAB_emperor_dying
 		}
@@ -49,7 +49,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_abolish_serfdom
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_HAB_ABOLISH_SERFDOM
 		prerequisite = {
 			focus = HAB_continue_reforms
 		}
@@ -67,7 +67,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_religious_tolerance
-		icon = GFX_focus_generic_court
+		icon = GFX_NAP_FOCUS_HAB_RELIGIOUS_TOLERANCE
 		prerequisite = {
 			focus = HAB_continue_reforms
 		}
@@ -85,7 +85,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_enlightened_empire
-		icon = GFX_focus_generic_self_management
+		icon = GFX_NAP_FOCUS_HAB_ENLIGHTENED_EMPIRE
 		prerequisite = {
 			focus = HAB_abolish_serfdom
 		}
@@ -103,7 +103,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_reverse_reforms
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_HAB_REVERSE_REFORMS
 		prerequisite = {
 			focus = HAB_emperor_dying
 		}
@@ -125,7 +125,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_hungarian_compromise
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_HAB_HUNGARIAN_COMPROMISE
 		prerequisite = {
 			focus = HAB_reverse_reforms
 		}
@@ -139,7 +139,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_concordat_with_rome
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_HAB_CONCORDAT_WITH_ROME
 		prerequisite = {
 			focus = HAB_reverse_reforms
 		}
@@ -156,7 +156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_old_order_restored
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_HAB_OLD_ORDER_RESTORED
 		prerequisite = {
 			focus = HAB_hungarian_compromise
 		}
@@ -173,7 +173,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_charles_takes_command
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_HAB_CHARLES_TAKES_COMMAND
 		prerequisite = {
 			focus = HAB_emperor_dying
 		}
@@ -187,7 +187,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_modernize_artillery
-		icon = GFX_focus_generic_military_industry
+		icon = GFX_NAP_FOCUS_HAB_MODERNIZE_ARTILLERY
 		prerequisite = {
 			focus = HAB_charles_takes_command
 		}
@@ -205,7 +205,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_landwehr_organization
-		icon = GFX_focus_generic_manpower
+		icon = GFX_NAP_FOCUS_HAB_LANDWEHR_ORGANIZATION
 		prerequisite = {
 			focus = HAB_charles_takes_command
 		}
@@ -219,7 +219,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_stadion_reforms_focus
-		icon = GFX_focus_generic_army_doctrines_2
+		icon = GFX_NAP_FOCUS_HAB_STADION_REFORMS_FOCUS
 		prerequisite = {
 			focus = HAB_modernize_artillery
 		}
@@ -236,7 +236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_suppress_belgian_revolt
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_NAP_FOCUS_HAB_SUPPRESS_BELGIAN_REVOLT
 		prerequisite = {
 			focus = HAB_emperor_dying
 		}
@@ -254,7 +254,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_become_austrian_empire
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_NAP_FOCUS_HAB_BECOME_AUSTRIAN_EMPIRE
 		prerequisite = {
 			focus = HAB_emperor_dying
 		}
@@ -276,7 +276,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_recover_lombardy
-		icon = GFX_focus_generic_attack_yugoslavia
+		icon = GFX_NAP_FOCUS_HAB_RECOVER_LOMBARDY
 		prerequisite = {
 			focus = HAB_become_austrian_empire
 		}
@@ -294,7 +294,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HAB_concert_of_europe_focus
-		icon = GFX_focus_generic_treaty
+		icon = GFX_NAP_FOCUS_HAB_CONCERT_OF_EUROPE_FOCUS
 		prerequisite = {
 			focus = HAB_become_austrian_empire
 		}

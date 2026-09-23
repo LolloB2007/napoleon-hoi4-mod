@@ -1,6 +1,6 @@
 shared_focus = {
  id = FRA_nap_assembly_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_00
  x = 8 y = 18
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -13,7 +13,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_01
  x = 4 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_assembly_00 }
@@ -26,7 +26,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_02
  x = 12 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_assembly_00 }
@@ -39,7 +39,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_03
  x = 4 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_assembly_01 }
@@ -52,7 +52,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_04
  x = 12 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_assembly_02 }
@@ -65,7 +65,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_05
  x = 8 y = 21
  cost = 2
  prerequisite = { focus = FRA_nap_assembly_03 focus = FRA_nap_assembly_04 }
@@ -78,7 +78,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_06
  x = 4 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_assembly_05 }
@@ -91,7 +91,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_07
  x = 12 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_assembly_05 }
@@ -104,7 +104,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_08
  x = 4 y = 23
  cost = 5
  prerequisite = { focus = FRA_nap_assembly_06 }
@@ -117,7 +117,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_09
  x = 12 y = 23
  cost = 4
  prerequisite = { focus = FRA_nap_assembly_07 }
@@ -130,7 +130,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_10
  x = 8 y = 24
  cost = 2
  prerequisite = { focus = FRA_nap_assembly_08 }
@@ -144,7 +144,7 @@ prerequisite = { focus = FRA_nap_assembly_09 }
 
 shared_focus = {
  id = FRA_nap_assembly_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_11
  x = 4 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_assembly_10 }
@@ -157,7 +157,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_12
  x = 12 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_assembly_10 }
@@ -170,7 +170,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_13
  x = 8 y = 26
  cost = 3
  prerequisite = { focus = FRA_nap_assembly_11 focus = FRA_nap_assembly_12 }
@@ -183,7 +183,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_assembly_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_ASSEMBLY_14
  x = 8 y = 27
  cost = 7
  prerequisite = { focus = FRA_nap_assembly_13 }
@@ -196,7 +196,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_00
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_00
  x = 32 y = 18
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -209,7 +209,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_01
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_01
  x = 28 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_credit_00 }
@@ -222,7 +222,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_02
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_02
  x = 36 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_credit_00 }
@@ -235,7 +235,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_03
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_03
  x = 28 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_credit_01 }
@@ -248,7 +248,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_04
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_04
  x = 36 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_credit_02 }
@@ -261,7 +261,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_05
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_05
  x = 32 y = 21
  cost = 2
  prerequisite = { focus = FRA_nap_credit_03 focus = FRA_nap_credit_04 }
@@ -274,7 +274,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_06
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_06
  x = 28 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_credit_05 }
@@ -287,7 +287,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_07
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_07
  x = 36 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_credit_05 }
@@ -300,7 +300,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_08
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_08
  x = 28 y = 23
  cost = 5
  prerequisite = { focus = FRA_nap_credit_06 }
@@ -313,7 +313,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_09
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_09
  x = 36 y = 23
  cost = 4
  prerequisite = { focus = FRA_nap_credit_07 }
@@ -326,7 +326,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_10
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_10
  x = 32 y = 24
  cost = 2
  prerequisite = { focus = FRA_nap_credit_08 }
@@ -340,7 +340,7 @@ prerequisite = { focus = FRA_nap_credit_09 }
 
 shared_focus = {
  id = FRA_nap_credit_11
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_11
  x = 28 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_credit_10 }
@@ -353,7 +353,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_12
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_12
  x = 36 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_credit_10 }
@@ -366,7 +366,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_13
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_13
  x = 32 y = 26
  cost = 3
  prerequisite = { focus = FRA_nap_credit_11 focus = FRA_nap_credit_12 }
@@ -379,7 +379,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_credit_14
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CREDIT_14
  x = 32 y = 27
  cost = 7
  prerequisite = { focus = FRA_nap_credit_13 }
@@ -392,7 +392,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_00
  x = 56 y = 18
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -405,7 +405,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_01
  x = 52 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_departments_00 }
@@ -418,7 +418,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_02
  x = 60 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_departments_00 }
@@ -431,7 +431,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_03
  x = 52 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_departments_01 }
@@ -444,7 +444,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_04
  x = 60 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_departments_02 }
@@ -457,7 +457,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_05
  x = 56 y = 21
  cost = 2
  prerequisite = { focus = FRA_nap_departments_03 focus = FRA_nap_departments_04 }
@@ -470,7 +470,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_06
  x = 52 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_departments_05 }
@@ -483,7 +483,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_07
  x = 60 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_departments_05 }
@@ -496,7 +496,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_08
  x = 52 y = 23
  cost = 5
  prerequisite = { focus = FRA_nap_departments_06 }
@@ -509,7 +509,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_09
  x = 60 y = 23
  cost = 4
  prerequisite = { focus = FRA_nap_departments_07 }
@@ -522,7 +522,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_10
  x = 56 y = 24
  cost = 2
  prerequisite = { focus = FRA_nap_departments_08 }
@@ -536,7 +536,7 @@ prerequisite = { focus = FRA_nap_departments_09 }
 
 shared_focus = {
  id = FRA_nap_departments_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_11
  x = 52 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_departments_10 }
@@ -549,7 +549,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_12
  x = 60 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_departments_10 }
@@ -562,7 +562,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_13
  x = 56 y = 26
  cost = 3
  prerequisite = { focus = FRA_nap_departments_11 focus = FRA_nap_departments_12 }
@@ -575,7 +575,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_departments_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DEPARTMENTS_14
  x = 56 y = 27
  cost = 7
  prerequisite = { focus = FRA_nap_departments_13 }
@@ -588,7 +588,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_00
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_00
  x = 80 y = 18
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -601,7 +601,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_01
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_01
  x = 76 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_learning_00 }
@@ -614,7 +614,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_02
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_02
  x = 84 y = 19
  cost = 3
  prerequisite = { focus = FRA_nap_learning_00 }
@@ -627,7 +627,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_03
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_03
  x = 76 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_learning_01 }
@@ -640,7 +640,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_04
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_04
  x = 84 y = 20
  cost = 4
  prerequisite = { focus = FRA_nap_learning_02 }
@@ -653,7 +653,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_05
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_05
  x = 80 y = 21
  cost = 2
  prerequisite = { focus = FRA_nap_learning_03 focus = FRA_nap_learning_04 }
@@ -666,7 +666,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_06
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_06
  x = 76 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_learning_05 }
@@ -679,7 +679,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_07
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_07
  x = 84 y = 22
  cost = 3
  prerequisite = { focus = FRA_nap_learning_05 }
@@ -692,7 +692,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_08
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_08
  x = 76 y = 23
  cost = 5
  prerequisite = { focus = FRA_nap_learning_06 }
@@ -705,7 +705,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_09
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_09
  x = 84 y = 23
  cost = 4
  prerequisite = { focus = FRA_nap_learning_07 }
@@ -718,7 +718,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_10
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_10
  x = 80 y = 24
  cost = 2
  prerequisite = { focus = FRA_nap_learning_08 }
@@ -732,7 +732,7 @@ prerequisite = { focus = FRA_nap_learning_09 }
 
 shared_focus = {
  id = FRA_nap_learning_11
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_11
  x = 76 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_learning_10 }
@@ -745,7 +745,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_12
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_12
  x = 84 y = 25
  cost = 5
  prerequisite = { focus = FRA_nap_learning_10 }
@@ -758,7 +758,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_13
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_13
  x = 80 y = 26
  cost = 3
  prerequisite = { focus = FRA_nap_learning_11 focus = FRA_nap_learning_12 }
@@ -771,7 +771,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_learning_14
- icon = GFX_goal_generic_scientific_exchange
+ icon = GFX_NAP_FOCUS_FRA_NAP_LEARNING_14
  x = 80 y = 27
  cost = 7
  prerequisite = { focus = FRA_nap_learning_13 }
@@ -784,7 +784,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_00
  x = 8 y = 30
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -797,7 +797,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_01
  x = 4 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_infantry_00 }
@@ -810,7 +810,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_02
  x = 12 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_infantry_00 }
@@ -823,7 +823,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_03
  x = 4 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_infantry_01 }
@@ -836,7 +836,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_04
  x = 12 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_infantry_02 }
@@ -849,7 +849,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_05
  x = 8 y = 33
  cost = 2
  prerequisite = { focus = FRA_nap_infantry_03 focus = FRA_nap_infantry_04 }
@@ -862,7 +862,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_06
  x = 4 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_infantry_05 }
@@ -875,7 +875,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_07
  x = 12 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_infantry_05 }
@@ -888,7 +888,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_08
  x = 4 y = 35
  cost = 5
  prerequisite = { focus = FRA_nap_infantry_06 }
@@ -901,7 +901,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_09
  x = 12 y = 35
  cost = 4
  prerequisite = { focus = FRA_nap_infantry_07 }
@@ -914,7 +914,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_10
  x = 8 y = 36
  cost = 2
  prerequisite = { focus = FRA_nap_infantry_08 }
@@ -928,7 +928,7 @@ prerequisite = { focus = FRA_nap_infantry_09 }
 
 shared_focus = {
  id = FRA_nap_infantry_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_11
  x = 4 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_infantry_10 }
@@ -941,7 +941,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_12
  x = 12 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_infantry_10 }
@@ -954,7 +954,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_13
  x = 8 y = 38
  cost = 3
  prerequisite = { focus = FRA_nap_infantry_11 focus = FRA_nap_infantry_12 }
@@ -967,7 +967,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_infantry_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_INFANTRY_14
  x = 8 y = 39
  cost = 7
  prerequisite = { focus = FRA_nap_infantry_13 }
@@ -980,7 +980,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_00
  x = 32 y = 30
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -993,7 +993,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_01
  x = 28 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_cavalry_00 }
@@ -1006,7 +1006,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_02
  x = 36 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_cavalry_00 }
@@ -1019,7 +1019,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_03
  x = 28 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_cavalry_01 }
@@ -1032,7 +1032,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_04
  x = 36 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_cavalry_02 }
@@ -1045,7 +1045,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_05
  x = 32 y = 33
  cost = 2
  prerequisite = { focus = FRA_nap_cavalry_03 focus = FRA_nap_cavalry_04 }
@@ -1058,7 +1058,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_06
  x = 28 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_cavalry_05 }
@@ -1071,7 +1071,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_07
  x = 36 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_cavalry_05 }
@@ -1084,7 +1084,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_08
  x = 28 y = 35
  cost = 5
  prerequisite = { focus = FRA_nap_cavalry_06 }
@@ -1097,7 +1097,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_09
  x = 36 y = 35
  cost = 4
  prerequisite = { focus = FRA_nap_cavalry_07 }
@@ -1110,7 +1110,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_10
  x = 32 y = 36
  cost = 2
  prerequisite = { focus = FRA_nap_cavalry_08 }
@@ -1124,7 +1124,7 @@ prerequisite = { focus = FRA_nap_cavalry_09 }
 
 shared_focus = {
  id = FRA_nap_cavalry_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_11
  x = 28 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_cavalry_10 }
@@ -1137,7 +1137,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_12
  x = 36 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_cavalry_10 }
@@ -1150,7 +1150,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_13
  x = 32 y = 38
  cost = 3
  prerequisite = { focus = FRA_nap_cavalry_11 focus = FRA_nap_cavalry_12 }
@@ -1163,7 +1163,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_cavalry_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_CAVALRY_14
  x = 32 y = 39
  cost = 7
  prerequisite = { focus = FRA_nap_cavalry_13 }
@@ -1176,7 +1176,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_00
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_00
  x = 56 y = 30
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -1189,7 +1189,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_01
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_01
  x = 52 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_guns_00 }
@@ -1202,7 +1202,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_02
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_02
  x = 60 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_guns_00 }
@@ -1215,7 +1215,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_03
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_03
  x = 52 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_guns_01 }
@@ -1228,7 +1228,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_04
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_04
  x = 60 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_guns_02 }
@@ -1241,7 +1241,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_05
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_05
  x = 56 y = 33
  cost = 2
  prerequisite = { focus = FRA_nap_guns_03 focus = FRA_nap_guns_04 }
@@ -1254,7 +1254,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_06
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_06
  x = 52 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_guns_05 }
@@ -1267,7 +1267,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_07
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_07
  x = 60 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_guns_05 }
@@ -1280,7 +1280,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_08
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_08
  x = 52 y = 35
  cost = 5
  prerequisite = { focus = FRA_nap_guns_06 }
@@ -1293,7 +1293,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_09
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_09
  x = 60 y = 35
  cost = 4
  prerequisite = { focus = FRA_nap_guns_07 }
@@ -1306,7 +1306,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_10
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_10
  x = 56 y = 36
  cost = 2
  prerequisite = { focus = FRA_nap_guns_08 }
@@ -1320,7 +1320,7 @@ prerequisite = { focus = FRA_nap_guns_09 }
 
 shared_focus = {
  id = FRA_nap_guns_11
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_11
  x = 52 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_guns_10 }
@@ -1333,7 +1333,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_12
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_12
  x = 60 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_guns_10 }
@@ -1346,7 +1346,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_13
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_13
  x = 56 y = 38
  cost = 3
  prerequisite = { focus = FRA_nap_guns_11 focus = FRA_nap_guns_12 }
@@ -1359,7 +1359,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_guns_14
- icon = GFX_goal_generic_army_artillery
+ icon = GFX_NAP_FOCUS_FRA_NAP_GUNS_14
  x = 56 y = 39
  cost = 7
  prerequisite = { focus = FRA_nap_guns_13 }
@@ -1372,7 +1372,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_00
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_00
  x = 80 y = 30
  cost = 2
  prerequisite = { focus = FRA_convene_estates_general }
@@ -1385,7 +1385,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_01
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_01
  x = 76 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_fleet_00 }
@@ -1398,7 +1398,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_02
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_02
  x = 84 y = 31
  cost = 3
  prerequisite = { focus = FRA_nap_fleet_00 }
@@ -1411,7 +1411,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_03
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_03
  x = 76 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_fleet_01 }
@@ -1424,7 +1424,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_04
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_04
  x = 84 y = 32
  cost = 4
  prerequisite = { focus = FRA_nap_fleet_02 }
@@ -1437,7 +1437,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_05
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_05
  x = 80 y = 33
  cost = 2
  prerequisite = { focus = FRA_nap_fleet_03 focus = FRA_nap_fleet_04 }
@@ -1450,7 +1450,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_06
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_06
  x = 76 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_fleet_05 }
@@ -1463,7 +1463,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_07
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_07
  x = 84 y = 34
  cost = 3
  prerequisite = { focus = FRA_nap_fleet_05 }
@@ -1476,7 +1476,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_08
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_08
  x = 76 y = 35
  cost = 5
  prerequisite = { focus = FRA_nap_fleet_06 }
@@ -1489,7 +1489,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_09
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_09
  x = 84 y = 35
  cost = 4
  prerequisite = { focus = FRA_nap_fleet_07 }
@@ -1502,7 +1502,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_10
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_10
  x = 80 y = 36
  cost = 2
  prerequisite = { focus = FRA_nap_fleet_08 }
@@ -1516,7 +1516,7 @@ prerequisite = { focus = FRA_nap_fleet_09 }
 
 shared_focus = {
  id = FRA_nap_fleet_11
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_11
  x = 76 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_fleet_10 }
@@ -1529,7 +1529,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_12
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_12
  x = 84 y = 37
  cost = 5
  prerequisite = { focus = FRA_nap_fleet_10 }
@@ -1542,7 +1542,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_13
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_13
  x = 80 y = 38
  cost = 3
  prerequisite = { focus = FRA_nap_fleet_11 focus = FRA_nap_fleet_12 }
@@ -1555,7 +1555,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_fleet_14
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_FLEET_14
  x = 80 y = 39
  cost = 7
  prerequisite = { focus = FRA_nap_fleet_13 }
@@ -1568,7 +1568,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_00
  x = 8 y = 42
  cost = 2
  prerequisite = { focus = FRA_constitutional_monarchy }
@@ -1581,7 +1581,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_01
  x = 4 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_charter_00 }
@@ -1594,7 +1594,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_02
  x = 12 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_charter_00 }
@@ -1607,7 +1607,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_03
  x = 4 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_charter_01 }
@@ -1620,7 +1620,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_04
  x = 12 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_charter_02 }
@@ -1633,7 +1633,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_05
  x = 8 y = 45
  cost = 2
  prerequisite = { focus = FRA_nap_charter_03 focus = FRA_nap_charter_04 }
@@ -1646,7 +1646,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_06
  x = 4 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_charter_05 }
@@ -1659,7 +1659,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_07
  x = 12 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_charter_05 }
@@ -1672,7 +1672,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_08
  x = 4 y = 47
  cost = 5
  prerequisite = { focus = FRA_nap_charter_06 }
@@ -1685,7 +1685,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_09
  x = 12 y = 47
  cost = 4
  prerequisite = { focus = FRA_nap_charter_07 }
@@ -1698,7 +1698,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_10
  x = 8 y = 48
  cost = 2
  prerequisite = { focus = FRA_nap_charter_08 }
@@ -1712,7 +1712,7 @@ prerequisite = { focus = FRA_nap_charter_09 }
 
 shared_focus = {
  id = FRA_nap_charter_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_11
  x = 4 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_charter_10 }
@@ -1725,7 +1725,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_12
  x = 12 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_charter_10 }
@@ -1738,7 +1738,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_13
  x = 8 y = 50
  cost = 3
  prerequisite = { focus = FRA_nap_charter_11 focus = FRA_nap_charter_12 }
@@ -1751,7 +1751,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_charter_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CHARTER_14
  x = 8 y = 51
  cost = 10
  prerequisite = { focus = FRA_nap_charter_13 }
@@ -1764,7 +1764,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_00
  x = 32 y = 42
  cost = 2
  prerequisite = { focus = FRA_constitutional_monarchy }
@@ -1777,7 +1777,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_01
  x = 28 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_representation_00 }
@@ -1790,7 +1790,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_02
  x = 36 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_representation_00 }
@@ -1803,7 +1803,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_03
  x = 28 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_representation_01 }
@@ -1816,7 +1816,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_04
  x = 36 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_representation_02 }
@@ -1829,7 +1829,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_05
  x = 32 y = 45
  cost = 2
  prerequisite = { focus = FRA_nap_representation_03 focus = FRA_nap_representation_04 }
@@ -1842,7 +1842,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_06
  x = 28 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_representation_05 }
@@ -1855,7 +1855,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_07
  x = 36 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_representation_05 }
@@ -1868,7 +1868,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_08
  x = 28 y = 47
  cost = 5
  prerequisite = { focus = FRA_nap_representation_06 }
@@ -1881,7 +1881,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_09
  x = 36 y = 47
  cost = 4
  prerequisite = { focus = FRA_nap_representation_07 }
@@ -1894,7 +1894,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_10
  x = 32 y = 48
  cost = 2
  prerequisite = { focus = FRA_nap_representation_08 }
@@ -1908,7 +1908,7 @@ prerequisite = { focus = FRA_nap_representation_09 }
 
 shared_focus = {
  id = FRA_nap_representation_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_11
  x = 28 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_representation_10 }
@@ -1921,7 +1921,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_12
  x = 36 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_representation_10 }
@@ -1934,7 +1934,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_13
  x = 32 y = 50
  cost = 3
  prerequisite = { focus = FRA_nap_representation_11 focus = FRA_nap_representation_12 }
@@ -1947,7 +1947,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_representation_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_REPRESENTATION_14
  x = 32 y = 51
  cost = 10
  prerequisite = { focus = FRA_nap_representation_13 }
@@ -1960,7 +1960,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_00
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_00
  x = 56 y = 42
  cost = 2
  prerequisite = { focus = FRA_constitutional_europe }
@@ -1973,7 +1973,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_01
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_01
  x = 52 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_00 }
@@ -1986,7 +1986,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_02
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_02
  x = 60 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_00 }
@@ -1999,7 +1999,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_03
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_03
  x = 52 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_01 }
@@ -2012,7 +2012,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_04
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_04
  x = 60 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_02 }
@@ -2025,7 +2025,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_05
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_05
  x = 56 y = 45
  cost = 2
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_03 focus = FRA_nap_constitutional_diplomacy_04 }
@@ -2038,7 +2038,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_06
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_06
  x = 52 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_05 }
@@ -2051,7 +2051,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_07
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_07
  x = 60 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_05 }
@@ -2064,7 +2064,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_08
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_08
  x = 52 y = 47
  cost = 5
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_06 }
@@ -2077,7 +2077,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_09
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_09
  x = 60 y = 47
  cost = 4
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_07 }
@@ -2090,7 +2090,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_10
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_10
  x = 56 y = 48
  cost = 2
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_08 }
@@ -2104,7 +2104,7 @@ prerequisite = { focus = FRA_nap_constitutional_diplomacy_09 }
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_11
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_11
  x = 52 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_10 }
@@ -2117,7 +2117,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_12
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_12
  x = 60 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_10 }
@@ -2130,7 +2130,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_13
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_13
  x = 56 y = 50
  cost = 3
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_11 focus = FRA_nap_constitutional_diplomacy_12 }
@@ -2143,7 +2143,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_constitutional_diplomacy_14
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSTITUTIONAL_DIPLOMACY_14
  x = 56 y = 51
  cost = 10
  prerequisite = { focus = FRA_nap_constitutional_diplomacy_13 }
@@ -2156,7 +2156,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_00
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_00
  x = 80 y = 42
  cost = 2
  prerequisite = { focus = FRA_restore_ancien_regime }
@@ -2169,7 +2169,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_01
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_01
  x = 76 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_court_00 }
@@ -2182,7 +2182,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_02
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_02
  x = 84 y = 43
  cost = 3
  prerequisite = { focus = FRA_nap_court_00 }
@@ -2195,7 +2195,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_03
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_03
  x = 76 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_court_01 }
@@ -2208,7 +2208,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_04
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_04
  x = 84 y = 44
  cost = 4
  prerequisite = { focus = FRA_nap_court_02 }
@@ -2221,7 +2221,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_05
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_05
  x = 80 y = 45
  cost = 2
  prerequisite = { focus = FRA_nap_court_03 focus = FRA_nap_court_04 }
@@ -2234,7 +2234,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_06
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_06
  x = 76 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_court_05 }
@@ -2247,7 +2247,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_07
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_07
  x = 84 y = 46
  cost = 3
  prerequisite = { focus = FRA_nap_court_05 }
@@ -2260,7 +2260,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_08
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_08
  x = 76 y = 47
  cost = 5
  prerequisite = { focus = FRA_nap_court_06 }
@@ -2273,7 +2273,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_09
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_09
  x = 84 y = 47
  cost = 4
  prerequisite = { focus = FRA_nap_court_07 }
@@ -2286,7 +2286,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_10
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_10
  x = 80 y = 48
  cost = 2
  prerequisite = { focus = FRA_nap_court_08 }
@@ -2300,7 +2300,7 @@ prerequisite = { focus = FRA_nap_court_09 }
 
 shared_focus = {
  id = FRA_nap_court_11
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_11
  x = 76 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_court_10 }
@@ -2313,7 +2313,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_12
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_12
  x = 84 y = 49
  cost = 5
  prerequisite = { focus = FRA_nap_court_10 }
@@ -2326,7 +2326,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_13
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_13
  x = 80 y = 50
  cost = 3
  prerequisite = { focus = FRA_nap_court_11 focus = FRA_nap_court_12 }
@@ -2339,7 +2339,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_court_14
- icon = GFX_goal_generic_neutrality_focus
+ icon = GFX_NAP_FOCUS_FRA_NAP_COURT_14
  x = 80 y = 51
  cost = 7
  prerequisite = { focus = FRA_nap_court_13 }
@@ -2352,7 +2352,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_00
  x = 8 y = 54
  cost = 2
  prerequisite = { focus = FRA_emigre_army }
@@ -2365,7 +2365,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_01
  x = 4 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_emigres_00 }
@@ -2378,7 +2378,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_02
  x = 12 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_emigres_00 }
@@ -2391,7 +2391,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_03
  x = 4 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_emigres_01 }
@@ -2404,7 +2404,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_04
  x = 12 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_emigres_02 }
@@ -2417,7 +2417,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_05
  x = 8 y = 57
  cost = 2
  prerequisite = { focus = FRA_nap_emigres_03 focus = FRA_nap_emigres_04 }
@@ -2430,7 +2430,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_06
  x = 4 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_emigres_05 }
@@ -2443,7 +2443,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_07
  x = 12 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_emigres_05 }
@@ -2456,7 +2456,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_08
  x = 4 y = 59
  cost = 5
  prerequisite = { focus = FRA_nap_emigres_06 }
@@ -2469,7 +2469,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_09
  x = 12 y = 59
  cost = 4
  prerequisite = { focus = FRA_nap_emigres_07 }
@@ -2482,7 +2482,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_10
  x = 8 y = 60
  cost = 2
  prerequisite = { focus = FRA_nap_emigres_08 }
@@ -2496,7 +2496,7 @@ prerequisite = { focus = FRA_nap_emigres_09 }
 
 shared_focus = {
  id = FRA_nap_emigres_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_11
  x = 4 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_emigres_10 }
@@ -2509,7 +2509,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_12
  x = 12 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_emigres_10 }
@@ -2522,7 +2522,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_13
  x = 8 y = 62
  cost = 3
  prerequisite = { focus = FRA_nap_emigres_11 focus = FRA_nap_emigres_12 }
@@ -2535,7 +2535,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emigres_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMIGRES_14
  x = 8 y = 63
  cost = 7
  prerequisite = { focus = FRA_nap_emigres_13 }
@@ -2548,7 +2548,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_00
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_00
  x = 32 y = 54
  cost = 2
  prerequisite = { focus = FRA_european_concert }
@@ -2561,7 +2561,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_01
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_01
  x = 28 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_royal_order_00 }
@@ -2574,7 +2574,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_02
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_02
  x = 36 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_royal_order_00 }
@@ -2587,7 +2587,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_03
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_03
  x = 28 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_royal_order_01 }
@@ -2600,7 +2600,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_04
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_04
  x = 36 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_royal_order_02 }
@@ -2613,7 +2613,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_05
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_05
  x = 32 y = 57
  cost = 2
  prerequisite = { focus = FRA_nap_royal_order_03 focus = FRA_nap_royal_order_04 }
@@ -2626,7 +2626,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_06
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_06
  x = 28 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_royal_order_05 }
@@ -2639,7 +2639,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_07
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_07
  x = 36 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_royal_order_05 }
@@ -2652,7 +2652,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_08
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_08
  x = 28 y = 59
  cost = 5
  prerequisite = { focus = FRA_nap_royal_order_06 }
@@ -2665,7 +2665,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_09
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_09
  x = 36 y = 59
  cost = 4
  prerequisite = { focus = FRA_nap_royal_order_07 }
@@ -2678,7 +2678,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_10
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_10
  x = 32 y = 60
  cost = 2
  prerequisite = { focus = FRA_nap_royal_order_08 }
@@ -2692,7 +2692,7 @@ prerequisite = { focus = FRA_nap_royal_order_09 }
 
 shared_focus = {
  id = FRA_nap_royal_order_11
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_11
  x = 28 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_royal_order_10 }
@@ -2705,7 +2705,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_12
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_12
  x = 36 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_royal_order_10 }
@@ -2718,7 +2718,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_13
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_13
  x = 32 y = 62
  cost = 3
  prerequisite = { focus = FRA_nap_royal_order_11 focus = FRA_nap_royal_order_12 }
@@ -2731,7 +2731,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_royal_order_14
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_ROYAL_ORDER_14
  x = 32 y = 63
  cost = 7
  prerequisite = { focus = FRA_nap_royal_order_13 }
@@ -2744,7 +2744,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_00
  x = 56 y = 54
  cost = 2
  prerequisite = { focus = FRA_vive_la_republique }
@@ -2757,7 +2757,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_01
  x = 52 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_convention_00 }
@@ -2770,7 +2770,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_02
  x = 60 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_convention_00 }
@@ -2783,7 +2783,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_03
  x = 52 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_convention_01 }
@@ -2796,7 +2796,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_04
  x = 60 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_convention_02 }
@@ -2809,7 +2809,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_05
  x = 56 y = 57
  cost = 2
  prerequisite = { focus = FRA_nap_convention_03 focus = FRA_nap_convention_04 }
@@ -2822,7 +2822,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_06
  x = 52 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_convention_05 }
@@ -2835,7 +2835,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_07
  x = 60 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_convention_05 }
@@ -2848,7 +2848,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_08
  x = 52 y = 59
  cost = 5
  prerequisite = { focus = FRA_nap_convention_06 }
@@ -2861,7 +2861,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_09
  x = 60 y = 59
  cost = 4
  prerequisite = { focus = FRA_nap_convention_07 }
@@ -2874,7 +2874,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_10
  x = 56 y = 60
  cost = 2
  prerequisite = { focus = FRA_nap_convention_08 }
@@ -2888,7 +2888,7 @@ prerequisite = { focus = FRA_nap_convention_09 }
 
 shared_focus = {
  id = FRA_nap_convention_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_11
  x = 52 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_convention_10 }
@@ -2901,7 +2901,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_12
  x = 60 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_convention_10 }
@@ -2914,7 +2914,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_13
  x = 56 y = 62
  cost = 3
  prerequisite = { focus = FRA_nap_convention_11 focus = FRA_nap_convention_12 }
@@ -2927,7 +2927,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_convention_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONVENTION_14
  x = 56 y = 63
  cost = 7
  prerequisite = { focus = FRA_nap_convention_13 }
@@ -2940,7 +2940,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_00
  x = 80 y = 54
  cost = 2
  prerequisite = { focus = FRA_vive_la_republique }
@@ -2953,7 +2953,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_01
  x = 76 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_girondins_00 }
@@ -2966,7 +2966,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_02
  x = 84 y = 55
  cost = 3
  prerequisite = { focus = FRA_nap_girondins_00 }
@@ -2979,7 +2979,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_03
  x = 76 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_girondins_01 }
@@ -2992,7 +2992,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_04
  x = 84 y = 56
  cost = 4
  prerequisite = { focus = FRA_nap_girondins_02 }
@@ -3005,7 +3005,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_05
  x = 80 y = 57
  cost = 2
  prerequisite = { focus = FRA_nap_girondins_03 focus = FRA_nap_girondins_04 }
@@ -3018,7 +3018,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_06
  x = 76 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_girondins_05 }
@@ -3031,7 +3031,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_07
  x = 84 y = 58
  cost = 3
  prerequisite = { focus = FRA_nap_girondins_05 }
@@ -3044,7 +3044,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_08
  x = 76 y = 59
  cost = 5
  prerequisite = { focus = FRA_nap_girondins_06 }
@@ -3057,7 +3057,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_09
  x = 84 y = 59
  cost = 4
  prerequisite = { focus = FRA_nap_girondins_07 }
@@ -3070,7 +3070,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_10
  x = 80 y = 60
  cost = 2
  prerequisite = { focus = FRA_nap_girondins_08 }
@@ -3084,7 +3084,7 @@ prerequisite = { focus = FRA_nap_girondins_09 }
 
 shared_focus = {
  id = FRA_nap_girondins_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_11
  x = 76 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_girondins_10 }
@@ -3097,7 +3097,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_12
  x = 84 y = 61
  cost = 5
  prerequisite = { focus = FRA_nap_girondins_10 }
@@ -3110,7 +3110,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_13
  x = 80 y = 62
  cost = 3
  prerequisite = { focus = FRA_nap_girondins_11 focus = FRA_nap_girondins_12 }
@@ -3123,7 +3123,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_girondins_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_GIRONDINS_14
  x = 80 y = 63
  cost = 7
  prerequisite = { focus = FRA_nap_girondins_13 }
@@ -3136,7 +3136,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_00
  x = 8 y = 66
  cost = 2
  prerequisite = { focus = FRA_vive_la_republique }
@@ -3149,7 +3149,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_01
  x = 4 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_jacobins_00 }
@@ -3162,7 +3162,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_02
  x = 12 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_jacobins_00 }
@@ -3175,7 +3175,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_03
  x = 4 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_jacobins_01 }
@@ -3188,7 +3188,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_04
  x = 12 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_jacobins_02 }
@@ -3201,7 +3201,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_05
  x = 8 y = 69
  cost = 2
  prerequisite = { focus = FRA_nap_jacobins_03 focus = FRA_nap_jacobins_04 }
@@ -3214,7 +3214,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_06
  x = 4 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_jacobins_05 }
@@ -3227,7 +3227,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_07
  x = 12 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_jacobins_05 }
@@ -3240,7 +3240,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_08
  x = 4 y = 71
  cost = 5
  prerequisite = { focus = FRA_nap_jacobins_06 }
@@ -3253,7 +3253,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_09
  x = 12 y = 71
  cost = 4
  prerequisite = { focus = FRA_nap_jacobins_07 }
@@ -3266,7 +3266,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_10
  x = 8 y = 72
  cost = 2
  prerequisite = { focus = FRA_nap_jacobins_08 }
@@ -3280,7 +3280,7 @@ prerequisite = { focus = FRA_nap_jacobins_09 }
 
 shared_focus = {
  id = FRA_nap_jacobins_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_11
  x = 4 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_jacobins_10 }
@@ -3293,7 +3293,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_12
  x = 12 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_jacobins_10 }
@@ -3306,7 +3306,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_13
  x = 8 y = 74
  cost = 3
  prerequisite = { focus = FRA_nap_jacobins_11 focus = FRA_nap_jacobins_12 }
@@ -3319,7 +3319,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_jacobins_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_JACOBINS_14
  x = 8 y = 75
  cost = 7
  prerequisite = { focus = FRA_nap_jacobins_13 }
@@ -3332,7 +3332,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_00
  x = 32 y = 66
  cost = 2
  prerequisite = { focus = FRA_levee_en_masse_focus }
@@ -3345,7 +3345,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_01
  x = 28 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_emergency_00 }
@@ -3358,7 +3358,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_02
  x = 36 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_emergency_00 }
@@ -3371,7 +3371,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_03
  x = 28 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_emergency_01 }
@@ -3384,7 +3384,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_04
  x = 36 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_emergency_02 }
@@ -3397,7 +3397,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_05
  x = 32 y = 69
  cost = 2
  prerequisite = { focus = FRA_nap_emergency_03 focus = FRA_nap_emergency_04 }
@@ -3410,7 +3410,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_06
  x = 28 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_emergency_05 }
@@ -3423,7 +3423,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_07
  x = 36 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_emergency_05 }
@@ -3436,7 +3436,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_08
  x = 28 y = 71
  cost = 5
  prerequisite = { focus = FRA_nap_emergency_06 }
@@ -3449,7 +3449,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_09
  x = 36 y = 71
  cost = 4
  prerequisite = { focus = FRA_nap_emergency_07 }
@@ -3462,7 +3462,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_10
  x = 32 y = 72
  cost = 2
  prerequisite = { focus = FRA_nap_emergency_08 }
@@ -3476,7 +3476,7 @@ prerequisite = { focus = FRA_nap_emergency_09 }
 
 shared_focus = {
  id = FRA_nap_emergency_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_11
  x = 28 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_emergency_10 }
@@ -3489,7 +3489,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_12
  x = 36 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_emergency_10 }
@@ -3502,7 +3502,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_13
  x = 32 y = 74
  cost = 3
  prerequisite = { focus = FRA_nap_emergency_11 focus = FRA_nap_emergency_12 }
@@ -3515,7 +3515,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_emergency_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMERGENCY_14
  x = 32 y = 75
  cost = 7
  prerequisite = { focus = FRA_nap_emergency_13 }
@@ -3528,7 +3528,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_00
  x = 56 y = 66
  cost = 2
  prerequisite = { focus = FRA_vive_la_republique }
@@ -3541,7 +3541,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_01
  x = 52 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_directory_00 }
@@ -3554,7 +3554,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_02
  x = 60 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_directory_00 }
@@ -3567,7 +3567,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_03
  x = 52 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_directory_01 }
@@ -3580,7 +3580,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_04
  x = 60 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_directory_02 }
@@ -3593,7 +3593,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_05
  x = 56 y = 69
  cost = 2
  prerequisite = { focus = FRA_nap_directory_03 focus = FRA_nap_directory_04 }
@@ -3606,7 +3606,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_06
  x = 52 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_directory_05 }
@@ -3619,7 +3619,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_07
  x = 60 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_directory_05 }
@@ -3632,7 +3632,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_08
  x = 52 y = 71
  cost = 5
  prerequisite = { focus = FRA_nap_directory_06 }
@@ -3645,7 +3645,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_09
  x = 60 y = 71
  cost = 4
  prerequisite = { focus = FRA_nap_directory_07 }
@@ -3658,7 +3658,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_10
  x = 56 y = 72
  cost = 2
  prerequisite = { focus = FRA_nap_directory_08 }
@@ -3672,7 +3672,7 @@ prerequisite = { focus = FRA_nap_directory_09 }
 
 shared_focus = {
  id = FRA_nap_directory_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_11
  x = 52 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_directory_10 }
@@ -3685,7 +3685,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_12
  x = 60 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_directory_10 }
@@ -3698,7 +3698,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_13
  x = 56 y = 74
  cost = 3
  prerequisite = { focus = FRA_nap_directory_11 focus = FRA_nap_directory_12 }
@@ -3711,7 +3711,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_directory_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_DIRECTORY_14
  x = 56 y = 75
  cost = 7
  prerequisite = { focus = FRA_nap_directory_13 }
@@ -3724,7 +3724,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_00
  x = 80 y = 66
  cost = 2
  prerequisite = { focus = FRA_italian_campaign }
@@ -3737,7 +3737,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_01
  x = 76 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_italy_00 }
@@ -3750,7 +3750,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_02
  x = 84 y = 67
  cost = 3
  prerequisite = { focus = FRA_nap_italy_00 }
@@ -3763,7 +3763,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_03
  x = 76 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_italy_01 }
@@ -3776,7 +3776,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_04
  x = 84 y = 68
  cost = 4
  prerequisite = { focus = FRA_nap_italy_02 }
@@ -3789,7 +3789,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_05
  x = 80 y = 69
  cost = 2
  prerequisite = { focus = FRA_nap_italy_03 focus = FRA_nap_italy_04 }
@@ -3802,7 +3802,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_06
  x = 76 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_italy_05 }
@@ -3815,7 +3815,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_07
  x = 84 y = 70
  cost = 3
  prerequisite = { focus = FRA_nap_italy_05 }
@@ -3828,7 +3828,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_08
  x = 76 y = 71
  cost = 5
  prerequisite = { focus = FRA_nap_italy_06 }
@@ -3841,7 +3841,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_09
  x = 84 y = 71
  cost = 4
  prerequisite = { focus = FRA_nap_italy_07 }
@@ -3854,7 +3854,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_10
  x = 80 y = 72
  cost = 2
  prerequisite = { focus = FRA_nap_italy_08 }
@@ -3868,7 +3868,7 @@ prerequisite = { focus = FRA_nap_italy_09 }
 
 shared_focus = {
  id = FRA_nap_italy_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_11
  x = 76 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_italy_10 }
@@ -3881,7 +3881,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_12
  x = 84 y = 73
  cost = 5
  prerequisite = { focus = FRA_nap_italy_10 }
@@ -3894,7 +3894,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_13
  x = 80 y = 74
  cost = 3
  prerequisite = { focus = FRA_nap_italy_11 focus = FRA_nap_italy_12 }
@@ -3907,7 +3907,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_italy_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_ITALY_14
  x = 80 y = 75
  cost = 7
  prerequisite = { focus = FRA_nap_italy_13 }
@@ -3920,7 +3920,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_00
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_00
  x = 8 y = 78
  cost = 2
  prerequisite = { focus = FRA_egyptian_expedition }
@@ -3933,7 +3933,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_01
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_01
  x = 4 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_egypt_00 }
@@ -3946,7 +3946,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_02
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_02
  x = 12 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_egypt_00 }
@@ -3959,7 +3959,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_03
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_03
  x = 4 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_egypt_01 }
@@ -3972,7 +3972,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_04
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_04
  x = 12 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_egypt_02 }
@@ -3985,7 +3985,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_05
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_05
  x = 8 y = 81
  cost = 2
  prerequisite = { focus = FRA_nap_egypt_03 focus = FRA_nap_egypt_04 }
@@ -3998,7 +3998,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_06
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_06
  x = 4 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_egypt_05 }
@@ -4011,7 +4011,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_07
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_07
  x = 12 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_egypt_05 }
@@ -4024,7 +4024,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_08
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_08
  x = 4 y = 83
  cost = 5
  prerequisite = { focus = FRA_nap_egypt_06 }
@@ -4037,7 +4037,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_09
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_09
  x = 12 y = 83
  cost = 4
  prerequisite = { focus = FRA_nap_egypt_07 }
@@ -4050,7 +4050,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_10
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_10
  x = 8 y = 84
  cost = 2
  prerequisite = { focus = FRA_nap_egypt_08 }
@@ -4064,7 +4064,7 @@ prerequisite = { focus = FRA_nap_egypt_09 }
 
 shared_focus = {
  id = FRA_nap_egypt_11
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_11
  x = 4 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_egypt_10 }
@@ -4077,7 +4077,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_12
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_12
  x = 12 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_egypt_10 }
@@ -4090,7 +4090,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_13
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_13
  x = 8 y = 86
  cost = 3
  prerequisite = { focus = FRA_nap_egypt_11 focus = FRA_nap_egypt_12 }
@@ -4103,7 +4103,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_egypt_14
- icon = GFX_goal_generic_navy_battleship
+ icon = GFX_NAP_FOCUS_FRA_NAP_EGYPT_14
  x = 8 y = 87
  cost = 7
  prerequisite = { focus = FRA_nap_egypt_13 }
@@ -4116,7 +4116,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_00
  x = 32 y = 78
  cost = 2
  prerequisite = { focus = FRA_brumaire_coup }
@@ -4129,7 +4129,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_01
  x = 28 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_consulate_00 }
@@ -4142,7 +4142,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_02
  x = 36 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_consulate_00 }
@@ -4155,7 +4155,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_03
  x = 28 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_consulate_01 }
@@ -4168,7 +4168,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_04
  x = 36 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_consulate_02 }
@@ -4181,7 +4181,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_05
  x = 32 y = 81
  cost = 2
  prerequisite = { focus = FRA_nap_consulate_03 focus = FRA_nap_consulate_04 }
@@ -4194,7 +4194,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_06
  x = 28 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_consulate_05 }
@@ -4207,7 +4207,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_07
  x = 36 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_consulate_05 }
@@ -4220,7 +4220,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_08
  x = 28 y = 83
  cost = 5
  prerequisite = { focus = FRA_nap_consulate_06 }
@@ -4233,7 +4233,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_09
  x = 36 y = 83
  cost = 4
  prerequisite = { focus = FRA_nap_consulate_07 }
@@ -4246,7 +4246,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_10
  x = 32 y = 84
  cost = 2
  prerequisite = { focus = FRA_nap_consulate_08 }
@@ -4260,7 +4260,7 @@ prerequisite = { focus = FRA_nap_consulate_09 }
 
 shared_focus = {
  id = FRA_nap_consulate_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_11
  x = 28 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_consulate_10 }
@@ -4273,7 +4273,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_12
  x = 36 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_consulate_10 }
@@ -4286,7 +4286,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_13
  x = 32 y = 86
  cost = 3
  prerequisite = { focus = FRA_nap_consulate_11 focus = FRA_nap_consulate_12 }
@@ -4299,7 +4299,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_consulate_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONSULATE_14
  x = 32 y = 87
  cost = 7
  prerequisite = { focus = FRA_nap_consulate_13 }
@@ -4312,7 +4312,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_00
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_00
  x = 56 y = 78
  cost = 2
  prerequisite = { focus = FRA_proclaim_empire }
@@ -4325,7 +4325,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_01
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_01
  x = 52 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_empire_00 }
@@ -4338,7 +4338,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_02
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_02
  x = 60 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_empire_00 }
@@ -4351,7 +4351,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_03
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_03
  x = 52 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_empire_01 }
@@ -4364,7 +4364,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_04
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_04
  x = 60 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_empire_02 }
@@ -4377,7 +4377,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_05
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_05
  x = 56 y = 81
  cost = 2
  prerequisite = { focus = FRA_nap_empire_03 focus = FRA_nap_empire_04 }
@@ -4390,7 +4390,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_06
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_06
  x = 52 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_empire_05 }
@@ -4403,7 +4403,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_07
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_07
  x = 60 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_empire_05 }
@@ -4416,7 +4416,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_08
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_08
  x = 52 y = 83
  cost = 5
  prerequisite = { focus = FRA_nap_empire_06 }
@@ -4429,7 +4429,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_09
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_09
  x = 60 y = 83
  cost = 4
  prerequisite = { focus = FRA_nap_empire_07 }
@@ -4442,7 +4442,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_10
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_10
  x = 56 y = 84
  cost = 2
  prerequisite = { focus = FRA_nap_empire_08 }
@@ -4456,7 +4456,7 @@ prerequisite = { focus = FRA_nap_empire_09 }
 
 shared_focus = {
  id = FRA_nap_empire_11
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_11
  x = 52 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_empire_10 }
@@ -4469,7 +4469,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_12
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_12
  x = 60 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_empire_10 }
@@ -4482,7 +4482,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_13
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_13
  x = 56 y = 86
  cost = 3
  prerequisite = { focus = FRA_nap_empire_11 focus = FRA_nap_empire_12 }
@@ -4495,7 +4495,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_empire_14
- icon = GFX_goal_generic_political_pressure
+ icon = GFX_NAP_FOCUS_FRA_NAP_EMPIRE_14
  x = 56 y = 87
  cost = 10
  prerequisite = { focus = FRA_nap_empire_13 }
@@ -4508,7 +4508,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_00
  x = 80 y = 78
  cost = 2
  prerequisite = { focus = FRA_grande_armee_focus }
@@ -4521,7 +4521,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_01
  x = 76 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_marshals_00 }
@@ -4534,7 +4534,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_02
  x = 84 y = 79
  cost = 3
  prerequisite = { focus = FRA_nap_marshals_00 }
@@ -4547,7 +4547,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_03
  x = 76 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_marshals_01 }
@@ -4560,7 +4560,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_04
  x = 84 y = 80
  cost = 4
  prerequisite = { focus = FRA_nap_marshals_02 }
@@ -4573,7 +4573,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_05
  x = 80 y = 81
  cost = 2
  prerequisite = { focus = FRA_nap_marshals_03 focus = FRA_nap_marshals_04 }
@@ -4586,7 +4586,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_06
  x = 76 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_marshals_05 }
@@ -4599,7 +4599,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_07
  x = 84 y = 82
  cost = 3
  prerequisite = { focus = FRA_nap_marshals_05 }
@@ -4612,7 +4612,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_08
  x = 76 y = 83
  cost = 5
  prerequisite = { focus = FRA_nap_marshals_06 }
@@ -4625,7 +4625,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_09
  x = 84 y = 83
  cost = 4
  prerequisite = { focus = FRA_nap_marshals_07 }
@@ -4638,7 +4638,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_10
  x = 80 y = 84
  cost = 2
  prerequisite = { focus = FRA_nap_marshals_08 }
@@ -4652,7 +4652,7 @@ prerequisite = { focus = FRA_nap_marshals_09 }
 
 shared_focus = {
  id = FRA_nap_marshals_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_11
  x = 76 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_marshals_10 }
@@ -4665,7 +4665,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_12
  x = 84 y = 85
  cost = 5
  prerequisite = { focus = FRA_nap_marshals_10 }
@@ -4678,7 +4678,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_13
  x = 80 y = 86
  cost = 3
  prerequisite = { focus = FRA_nap_marshals_11 focus = FRA_nap_marshals_12 }
@@ -4691,7 +4691,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_marshals_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_MARSHALS_14
  x = 80 y = 87
  cost = 10
  prerequisite = { focus = FRA_nap_marshals_13 }
@@ -4704,7 +4704,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_00
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_00
  x = 8 y = 90
  cost = 2
  prerequisite = { focus = FRA_confederation_rhine }
@@ -4717,7 +4717,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_01
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_01
  x = 4 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_clients_00 }
@@ -4730,7 +4730,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_02
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_02
  x = 12 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_clients_00 }
@@ -4743,7 +4743,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_03
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_03
  x = 4 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_clients_01 }
@@ -4756,7 +4756,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_04
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_04
  x = 12 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_clients_02 }
@@ -4769,7 +4769,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_05
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_05
  x = 8 y = 93
  cost = 2
  prerequisite = { focus = FRA_nap_clients_03 focus = FRA_nap_clients_04 }
@@ -4782,7 +4782,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_06
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_06
  x = 4 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_clients_05 }
@@ -4795,7 +4795,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_07
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_07
  x = 12 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_clients_05 }
@@ -4808,7 +4808,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_08
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_08
  x = 4 y = 95
  cost = 5
  prerequisite = { focus = FRA_nap_clients_06 }
@@ -4821,7 +4821,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_09
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_09
  x = 12 y = 95
  cost = 4
  prerequisite = { focus = FRA_nap_clients_07 }
@@ -4834,7 +4834,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_10
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_10
  x = 8 y = 96
  cost = 2
  prerequisite = { focus = FRA_nap_clients_08 }
@@ -4848,7 +4848,7 @@ prerequisite = { focus = FRA_nap_clients_09 }
 
 shared_focus = {
  id = FRA_nap_clients_11
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_11
  x = 4 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_clients_10 }
@@ -4861,7 +4861,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_12
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_12
  x = 12 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_clients_10 }
@@ -4874,7 +4874,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_13
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_13
  x = 8 y = 98
  cost = 3
  prerequisite = { focus = FRA_nap_clients_11 focus = FRA_nap_clients_12 }
@@ -4887,7 +4887,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_clients_14
- icon = GFX_goal_generic_improve_relations
+ icon = GFX_NAP_FOCUS_FRA_NAP_CLIENTS_14
  x = 8 y = 99
  cost = 10
  prerequisite = { focus = FRA_nap_clients_13 }
@@ -4900,7 +4900,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_00
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_00
  x = 32 y = 90
  cost = 2
  prerequisite = { focus = FRA_continental_system_focus }
@@ -4913,7 +4913,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_01
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_01
  x = 28 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_continental_00 }
@@ -4926,7 +4926,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_02
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_02
  x = 36 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_continental_00 }
@@ -4939,7 +4939,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_03
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_03
  x = 28 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_continental_01 }
@@ -4952,7 +4952,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_04
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_04
  x = 36 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_continental_02 }
@@ -4965,7 +4965,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_05
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_05
  x = 32 y = 93
  cost = 2
  prerequisite = { focus = FRA_nap_continental_03 focus = FRA_nap_continental_04 }
@@ -4978,7 +4978,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_06
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_06
  x = 28 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_continental_05 }
@@ -4991,7 +4991,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_07
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_07
  x = 36 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_continental_05 }
@@ -5004,7 +5004,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_08
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_08
  x = 28 y = 95
  cost = 5
  prerequisite = { focus = FRA_nap_continental_06 }
@@ -5017,7 +5017,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_09
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_09
  x = 36 y = 95
  cost = 4
  prerequisite = { focus = FRA_nap_continental_07 }
@@ -5030,7 +5030,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_10
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_10
  x = 32 y = 96
  cost = 2
  prerequisite = { focus = FRA_nap_continental_08 }
@@ -5044,7 +5044,7 @@ prerequisite = { focus = FRA_nap_continental_09 }
 
 shared_focus = {
  id = FRA_nap_continental_11
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_11
  x = 28 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_continental_10 }
@@ -5057,7 +5057,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_12
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_12
  x = 36 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_continental_10 }
@@ -5070,7 +5070,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_13
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_13
  x = 32 y = 98
  cost = 3
  prerequisite = { focus = FRA_nap_continental_11 focus = FRA_nap_continental_12 }
@@ -5083,7 +5083,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_continental_14
- icon = GFX_goal_generic_construct_civ_factory
+ icon = GFX_NAP_FOCUS_FRA_NAP_CONTINENTAL_14
  x = 32 y = 99
  cost = 10
  prerequisite = { focus = FRA_nap_continental_13 }
@@ -5096,7 +5096,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_00
  x = 56 y = 90
  cost = 2
  prerequisite = { focus = FRA_invade_iberia }
@@ -5109,7 +5109,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_01
  x = 52 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_peninsula_00 }
@@ -5122,7 +5122,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_02
  x = 60 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_peninsula_00 }
@@ -5135,7 +5135,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_03
  x = 52 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_peninsula_01 }
@@ -5148,7 +5148,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_04
  x = 60 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_peninsula_02 }
@@ -5161,7 +5161,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_05
  x = 56 y = 93
  cost = 2
  prerequisite = { focus = FRA_nap_peninsula_03 focus = FRA_nap_peninsula_04 }
@@ -5174,7 +5174,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_06
  x = 52 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_peninsula_05 }
@@ -5187,7 +5187,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_07
  x = 60 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_peninsula_05 }
@@ -5200,7 +5200,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_08
  x = 52 y = 95
  cost = 5
  prerequisite = { focus = FRA_nap_peninsula_06 }
@@ -5213,7 +5213,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_09
  x = 60 y = 95
  cost = 4
  prerequisite = { focus = FRA_nap_peninsula_07 }
@@ -5226,7 +5226,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_10
  x = 56 y = 96
  cost = 2
  prerequisite = { focus = FRA_nap_peninsula_08 }
@@ -5240,7 +5240,7 @@ prerequisite = { focus = FRA_nap_peninsula_09 }
 
 shared_focus = {
  id = FRA_nap_peninsula_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_11
  x = 52 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_peninsula_10 }
@@ -5253,7 +5253,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_12
  x = 60 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_peninsula_10 }
@@ -5266,7 +5266,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_13
  x = 56 y = 98
  cost = 3
  prerequisite = { focus = FRA_nap_peninsula_11 focus = FRA_nap_peninsula_12 }
@@ -5279,7 +5279,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_peninsula_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_PENINSULA_14
  x = 56 y = 99
  cost = 10
  prerequisite = { focus = FRA_nap_peninsula_13 }
@@ -5292,7 +5292,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_00
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_00
  x = 80 y = 90
  cost = 2
  prerequisite = { focus = FRA_invade_russia }
@@ -5305,7 +5305,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_01
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_01
  x = 76 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_russia_00 }
@@ -5318,7 +5318,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_02
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_02
  x = 84 y = 91
  cost = 3
  prerequisite = { focus = FRA_nap_russia_00 }
@@ -5331,7 +5331,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_03
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_03
  x = 76 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_russia_01 }
@@ -5344,7 +5344,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_04
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_04
  x = 84 y = 92
  cost = 4
  prerequisite = { focus = FRA_nap_russia_02 }
@@ -5357,7 +5357,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_05
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_05
  x = 80 y = 93
  cost = 2
  prerequisite = { focus = FRA_nap_russia_03 focus = FRA_nap_russia_04 }
@@ -5370,7 +5370,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_06
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_06
  x = 76 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_russia_05 }
@@ -5383,7 +5383,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_07
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_07
  x = 84 y = 94
  cost = 3
  prerequisite = { focus = FRA_nap_russia_05 }
@@ -5396,7 +5396,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_08
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_08
  x = 76 y = 95
  cost = 5
  prerequisite = { focus = FRA_nap_russia_06 }
@@ -5409,7 +5409,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_09
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_09
  x = 84 y = 95
  cost = 4
  prerequisite = { focus = FRA_nap_russia_07 }
@@ -5422,7 +5422,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_10
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_10
  x = 80 y = 96
  cost = 2
  prerequisite = { focus = FRA_nap_russia_08 }
@@ -5436,7 +5436,7 @@ prerequisite = { focus = FRA_nap_russia_09 }
 
 shared_focus = {
  id = FRA_nap_russia_11
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_11
  x = 76 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_russia_10 }
@@ -5449,7 +5449,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_12
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_12
  x = 84 y = 97
  cost = 5
  prerequisite = { focus = FRA_nap_russia_10 }
@@ -5462,7 +5462,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_13
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_13
  x = 80 y = 98
  cost = 3
  prerequisite = { focus = FRA_nap_russia_11 focus = FRA_nap_russia_12 }
@@ -5475,7 +5475,7 @@ shared_focus = {
 
 shared_focus = {
  id = FRA_nap_russia_14
- icon = GFX_goal_generic_army_doctrines
+ icon = GFX_NAP_FOCUS_FRA_NAP_RUSSIA_14
  x = 80 y = 99
  cost = 10
  prerequisite = { focus = FRA_nap_russia_13 }
@@ -5486,4 +5486,4 @@ shared_focus = {
  completion_reward = { nap_reward_FRA_nap_russia_14 = yes }
 }
 
-shared_focus = { id = FRA_nap_national_settlement icon = GFX_goal_generic_political_pressure x = 96 y = 20 cost = 2 prerequisite = { focus = FRA_nap_assembly_14 focus = FRA_nap_credit_14 focus = FRA_nap_departments_14 focus = FRA_nap_learning_14 focus = FRA_nap_infantry_14 focus = FRA_nap_cavalry_14 focus = FRA_nap_guns_14 focus = FRA_nap_fleet_14 focus = FRA_nap_charter_14 focus = FRA_nap_representation_14 focus = FRA_nap_constitutional_diplomacy_14 focus = FRA_nap_court_14 focus = FRA_nap_emigres_14 focus = FRA_nap_royal_order_14 focus = FRA_nap_convention_14 focus = FRA_nap_girondins_14 focus = FRA_nap_jacobins_14 focus = FRA_nap_emergency_14 focus = FRA_nap_directory_14 focus = FRA_nap_italy_14 focus = FRA_nap_egypt_14 focus = FRA_nap_consulate_14 focus = FRA_nap_empire_14 focus = FRA_nap_marshals_14 focus = FRA_nap_clients_14 focus = FRA_nap_continental_14 focus = FRA_nap_peninsula_14 focus = FRA_nap_russia_14 } available = { tag = FRA } completion_reward = { if = { limit = { tag = FRA NOT = { has_country_flag = nap_fra_national_settlement_paid } } set_country_flag = nap_fra_national_settlement_paid nap_era_initialize = yes add_to_variable = { nap_legitimacy = 5 } add_political_power = 25 nap_era_clamp = yes nap_era_refresh = yes } } }
+shared_focus = { id = FRA_nap_national_settlement icon = GFX_NAP_FOCUS_FRA_NAP_NATIONAL_SETTLEMENT x = 96 y = 20 cost = 2 prerequisite = { focus = FRA_nap_assembly_14 focus = FRA_nap_credit_14 focus = FRA_nap_departments_14 focus = FRA_nap_learning_14 focus = FRA_nap_infantry_14 focus = FRA_nap_cavalry_14 focus = FRA_nap_guns_14 focus = FRA_nap_fleet_14 focus = FRA_nap_charter_14 focus = FRA_nap_representation_14 focus = FRA_nap_constitutional_diplomacy_14 focus = FRA_nap_court_14 focus = FRA_nap_emigres_14 focus = FRA_nap_royal_order_14 focus = FRA_nap_convention_14 focus = FRA_nap_girondins_14 focus = FRA_nap_jacobins_14 focus = FRA_nap_emergency_14 focus = FRA_nap_directory_14 focus = FRA_nap_italy_14 focus = FRA_nap_egypt_14 focus = FRA_nap_consulate_14 focus = FRA_nap_empire_14 focus = FRA_nap_marshals_14 focus = FRA_nap_clients_14 focus = FRA_nap_continental_14 focus = FRA_nap_peninsula_14 focus = FRA_nap_russia_14 } available = { tag = FRA } completion_reward = { if = { limit = { tag = FRA NOT = { has_country_flag = nap_fra_national_settlement_paid } } set_country_flag = nap_fra_national_settlement_paid nap_era_initialize = yes add_to_variable = { nap_legitimacy = 5 } add_political_power = 25 nap_era_clamp = yes nap_era_refresh = yes } } }

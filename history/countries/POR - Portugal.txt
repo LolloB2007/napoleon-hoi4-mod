@@ -50,11 +50,13 @@ reverse_add_opinion_modifier = { target = ENG modifier = nap_1789_long_alliance 
 
 create_country_leader = {
 	name = "Maria I"
+	picture = GFX_NAP_PORTRAIT_MARIA_I
 	ideology = despotism
 }
 
 create_corps_commander = {
 	name = "Duke of Lafões"
+	picture = GFX_NAP_PORTRAIT_DUKE_OF_LAFES
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

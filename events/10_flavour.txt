@@ -1,0 +1,121 @@
+add_namespace = nap_flavour
+country_event = {
+ id = nap_flavour.1
+ title = nap_flavour.1.t
+ desc = nap_flavour.1.d
+ picture = GFX_NAP_EVENT_05
+ fire_only_once = yes
+ trigger = { tag = FRA date > 1790.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.1.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.2
+ title = nap_flavour.2.t
+ desc = nap_flavour.2.d
+ picture = GFX_NAP_EVENT_09
+ fire_only_once = yes
+ trigger = { tag = ENG date > 1791.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.2.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.3
+ title = nap_flavour.3.t
+ desc = nap_flavour.3.d
+ picture = GFX_NAP_EVENT_07
+ fire_only_once = yes
+ trigger = { tag = HAB date > 1792.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.3.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.4
+ title = nap_flavour.4.t
+ desc = nap_flavour.4.d
+ picture = GFX_NAP_EVENT_08
+ fire_only_once = yes
+ trigger = { tag = PRU date > 1789.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.4.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.5
+ title = nap_flavour.5.t
+ desc = nap_flavour.5.d
+ picture = GFX_NAP_EVENT_05
+ fire_only_once = yes
+ trigger = { tag = RUS date > 1790.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.5.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.6
+ title = nap_flavour.6.t
+ desc = nap_flavour.6.d
+ picture = GFX_NAP_EVENT_07
+ fire_only_once = yes
+ trigger = { tag = SPR date > 1791.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.6.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.7
+ title = nap_flavour.7.t
+ desc = nap_flavour.7.d
+ picture = GFX_NAP_EVENT_03
+ fire_only_once = yes
+ trigger = { tag = POL date > 1792.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.7.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.8
+ title = nap_flavour.8.t
+ desc = nap_flavour.8.d
+ picture = GFX_NAP_EVENT_08
+ fire_only_once = yes
+ trigger = { tag = SWE date > 1789.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.8.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.9
+ title = nap_flavour.9.t
+ desc = nap_flavour.9.d
+ picture = GFX_NAP_EVENT_12
+ fire_only_once = yes
+ trigger = { tag = TUR date > 1790.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.9.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.10
+ title = nap_flavour.10.t
+ desc = nap_flavour.10.d
+ picture = GFX_NAP_EVENT_07
+ fire_only_once = yes
+ trigger = { tag = VEN date > 1791.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.10.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.11
+ title = nap_flavour.11.t
+ desc = nap_flavour.11.d
+ picture = GFX_NAP_EVENT_01
+ fire_only_once = yes
+ trigger = { tag = POR date > 1792.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.11.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}
+country_event = {
+ id = nap_flavour.12
+ title = nap_flavour.12.t
+ desc = nap_flavour.12.d
+ picture = GFX_NAP_EVENT_08
+ fire_only_once = yes
+ trigger = { tag = USA date > 1789.1.1 }
+ mean_time_to_happen = { months = 8 }
+ option = { name = nap_flavour.12.a add_political_power = 15 scoped_sound_effect = "nap_dispatch_effect" }
+}

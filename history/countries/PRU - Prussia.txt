@@ -43,6 +43,7 @@ add_ideas = {
 }
 create_country_leader = {
 	name = "Friedrich Wilhelm II"
+	picture = GFX_NAP_PORTRAIT_FRIEDRICH_WILHELM_II
 	desc = "Frederick the Great's nephew. Sensual, indecisive, content to live off his uncle's legacy."
 	ideology = despotism
 	traits = {
@@ -51,6 +52,7 @@ create_country_leader = {
 }
 create_field_marshal = {
 	name = "Karl Wilhelm Ferdinand, Herzog von Braunschweig"
+	picture = GFX_NAP_PORTRAIT_KARL_WILHELM_FERDINAND_HERZOG_VON_BRAUNSCHWEIG
 	desc = "Commander-in-chief. Issued the infamous Brunswick Manifesto in 1792. Mortally wounded at Auerstedt."
 	traits = {
 		old_guard
@@ -64,6 +66,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Wichard von Möllendorff"
+	picture = GFX_NAP_PORTRAIT_WICHARD_VON_MLLENDORFF
 	desc = "Veteran of the Silesian Wars. The grand old man of the Frederician army."
 	traits = {
 		old_guard
@@ -77,6 +80,7 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Gebhard Leberecht von Blücher"
+	picture = GFX_NAP_PORTRAIT_GEBHARD_LEBERECHT_VON_BLCHER
 	desc = "Hussar veteran. 47 years old. Will be hailed as Marschall Vorwärts at Waterloo a quarter century from now."
 	traits = {
 		trait_reckless
@@ -92,6 +96,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Friedrich Ludwig zu Hohenlohe-Ingelfingen"
+	picture = GFX_NAP_PORTRAIT_FRIEDRICH_LUDWIG_ZU_HOHENLOHE_INGELFINGEN
 	desc = "Will surrender his army at Prenzlau after Jena."
 	traits = {
 		politically_connected
@@ -105,6 +110,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Gerhard von Scharnhorst"
+	picture = GFX_NAP_PORTRAIT_GERHARD_VON_SCHARNHORST
 	desc = "Major. The thinker who will rebuild the Prussian army after Jena."
 	traits = {
 		trait_engineer
@@ -119,6 +125,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "August Neidhardt von Gneisenau"
+	picture = GFX_NAP_PORTRAIT_AUGUST_NEIDHARDT_VON_GNEISENAU
 	desc = "Young engineer captain. Will be Blücher's chief of staff and the brain of the army."
 	traits = {
 		trait_engineer
@@ -132,6 +139,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Ludwig Yorck von Wartenburg"
+	picture = GFX_NAP_PORTRAIT_LUDWIG_YORCK_VON_WARTENBURG
 	desc = "Hard, stubborn, independent. Will defect from Napoleon's Russian disaster with the Convention of Tauroggen."
 	traits = {
 		harsh_leader
