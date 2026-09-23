@@ -11,6 +11,7 @@
     "ideas": 5,
     "historical_route": "Reform from the Crown",
     "alternate_route": "Summon a National Cortes",
+    "alternate_basis": "Late Bourbon reform currents and representative institutions provided a credible constitutional alternative before the 1812 C\u00e1diz settlement.",
     "major_links": [
       "FRA",
       "ENG"
@@ -29,6 +30,7 @@
     "ideas": 5,
     "historical_route": "The Reforming Commonwealth",
     "alternate_route": "The Magnate Compromise",
+    "alternate_basis": "The Commonwealth's reform crisis included a persistent conservative-magnate alternative to stronger central reform.",
     "major_links": [
       "RUS",
       "PRU"
@@ -46,6 +48,7 @@
     "ideas": 5,
     "historical_route": "Selim\u2019s New Order",
     "alternate_route": "Preserve the Old Establishment",
+    "alternate_basis": "Selim III's reform programme faced organised institutional resistance from established military and political interests.",
     "major_links": [
       "FRA",
       "ENG"
@@ -63,6 +66,7 @@
     "ideas": 5,
     "historical_route": "Preserve Gustavian Royalism",
     "alternate_route": "Restore the Power of the Estates",
+    "alternate_basis": "Gustavian royal authority remained contested by aristocratic and representative traditions.",
     "major_links": [
       "ENG",
       "RUS"
@@ -80,6 +84,7 @@
     "ideas": 5,
     "historical_route": "The Savoyard Military State",
     "alternate_route": "Piedmontese Constitutional Reform",
+    "alternate_basis": "Savoyard administrative reform and later constitutional currents make a limited chartered route plausible.",
     "major_links": [
       "HAB",
       "FRA"
@@ -97,6 +102,7 @@
     "ideas": 5,
     "historical_route": "Strengthen the Bourbon Court",
     "alternate_route": "A Neapolitan Constitutional Settlement",
+    "alternate_basis": "Southern Italian reformism and constitutional currents offer a credible bounded alternative to Bourbon reaction.",
     "major_links": [
       "HAB",
       "ENG"
@@ -114,6 +120,7 @@
     "ideas": 5,
     "historical_route": "Defend the Temporal State",
     "alternate_route": "Reform the Papal Administration",
+    "alternate_basis": "Administrative reform within temporal papal rule is plausible without requiring secular fantasy outcomes.",
     "major_links": [
       "HAB",
       "FRA"
@@ -131,6 +138,7 @@
     "ideas": 5,
     "historical_route": "Preserve the Patrician Republic",
     "alternate_route": "Broaden the Venetian Constitution",
+    "alternate_basis": "Venetian institutional reform debates make a limited broadening of civic participation plausible.",
     "major_links": [
       "HAB",
       "FRA"
@@ -148,6 +156,7 @@
     "ideas": 5,
     "historical_route": "Continue Enlightened Reform",
     "alternate_route": "Reconcile Crown, Church and Estates",
+    "alternate_basis": "Leopoldine reform could plausibly have been slowed or bargained into a more conservative institutional compact.",
     "major_links": [
       "HAB",
       "FRA"
@@ -171,6 +180,7 @@
     "ideas": 5,
     "historical_route": "Defend Imperial Liberties",
     "alternate_route": "A League of Reforming Princes",
+    "alternate_basis": "Coordination among reforming German territorial states is plausible within late-imperial politics.",
     "major_links": [
       "HAB",
       "PRU"
@@ -188,6 +198,7 @@
     "ideas": 5,
     "historical_route": "Preserve the British Connection",
     "alternate_route": "An Independent Reform Course",
+    "alternate_basis": "Portugal could plausibly seek greater diplomatic autonomy while retaining Atlantic commercial priorities.",
     "major_links": [
       "ENG",
       "FRA"
@@ -207,6 +218,7 @@
     "ideas": 5,
     "historical_route": "Stabilize the Orangist Order",
     "alternate_route": "Revive the Patriot Programme",
+    "alternate_basis": "The Patriot movement and Orangist reaction were immediate pre-1789 political realities.",
     "major_links": [
       "PRU",
       "FRA"
@@ -224,6 +236,7 @@
     "ideas": 5,
     "historical_route": "Consolidate the Federal Constitution",
     "alternate_route": "Guard Republican Decentralization",
+    "alternate_basis": "Federalist versus decentralist disputes were central to the new republic from its founding.",
     "major_links": [
       "ENG",
       "FRA"

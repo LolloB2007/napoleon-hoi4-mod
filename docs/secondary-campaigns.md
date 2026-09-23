@@ -4,7 +4,7 @@ This pack completes the implementation checklist for Spain, Poland / the Duchy o
 
 Each campaign has a dedicated or regional focus tree, four events, three recurring decisions, five spirits, a military-development branch, a historical route, a bounded alternate route, great-power diplomacy and English localisation. Existing 1789 histories and OOBs remain the starting military layer for the European countries. Dynamic tags (WAR, BAT and HOL) inherit the relevant Polish or Dutch campaign tree when they exist.
 
-No focus, event or decision in this pack transfers a state, adds a core, annexes a country, creates a formable or forces faction membership. Those choices remain behind the territorial/approval registries. Coalition-eligible tags continue to interact with the existing seven-round coalition framework.
+A09 now requires every alternate route in this pack to appear in content/alternate_routes.json with an explicit period basis. No focus, event or decision in this pack transfers a state, adds a core, annexes a country, creates a formable or forces faction membership. Those choices remain behind the territorial/approval registries. Coalition-eligible tags continue to interact with the existing seven-round coalition framework.
 
 The United States receives campaign content without changing the Europe-first geographic policy. Its detailed 1789 territorial reconstruction and overseas balance remain part of approval A07 rather than being silently inferred here.
 
