@@ -88,12 +88,14 @@ def generated(profile):
             label=template.format(s=subject)
             cost=(2,3,4,5,3,4,5)[i%7]
             final=' add_stability = 0.01' if i==18 else ''
+            visibility=f' allow_branch = {{ tag = {personal_tag} }}' if personal_tag and i==0 else ''
             text=f'''focus = {{
  id = {identifier}
  icon = GFX_focus_generic_treaty
  x = {bx} y = {by+i}
  cost = {cost}
  prerequisite = {{ focus = {previous} }}
+{visibility}
  available = {{ {available} }}
  completion_reward = {{ {reward(kind,i)}{final} }}
  ai_will_do = {{ factor = 1 }}

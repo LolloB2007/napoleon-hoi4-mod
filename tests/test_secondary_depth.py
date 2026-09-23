@@ -38,6 +38,15 @@ class SecondaryDepthTests(unittest.TestCase):
                 self.assertEqual(len(meta),152)
                 self.assertEqual(sum(1 for row in meta if row['personalised']),38)
 
+    def test_german_personalised_branches_are_hidden_for_other_tags(self):
+        text=self.outputs['common/national_focus/secondary_german_princes.txt']
+        for tag,branches in GERMAN_PERSONALISED.items():
+            root=generated(next(p for p in PROFILES if p['slug']=='german_princes'))[1]
+            first_id=next(row['id'] for row in root if row['personalised_tag']==tag)
+            from pdx import dumps
+            node=next(n for n in walk(parse(text)) if n.key=='focus' and n.scalar('id')==first_id)
+            self.assertIn(f'allow_branch = {{\n\t\ttag = {tag}',dumps([node]))
+
     def test_new_focus_ids_unique(self):
         ids=[]
         for profile in PROFILES:
