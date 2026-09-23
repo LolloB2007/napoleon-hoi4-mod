@@ -1,20 +1,20 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: Repository source-contract and build pass**
+**Current branch: Milestone 8 complete: secondary-power campaigns and territorial/client framework**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
 | Milestone | Current status |
 |---|---|
-| 1 | Country setup exists; engine verification pending |
-| 2 | Opening wars and bounded treaties exist; engine verification pending |
-| 3 | 29 existing French focuses; expansion target at least 450 |
-| 4 | Not implemented beyond opening-war diplomacy |
-| 5 | Existing major-power trees; deep-content pass pending |
-| 6 | Design recorded; reusable systems pending |
-| 7 | Blocked on representative in-game campaign measurements |
-| 8 | Country setup only; deep campaigns and formables pending |
-| 9 | Placeholder assets only; presentation and rights review pending |
+| 1 | Country setup exists; four great-power rulers corrected; engine verification pending |
+| 2 | Opening diplomacy and bounded treaties implemented; engine verification pending |
+| 3 | Partial: 450 French focuses, 84 policy events and 56 chapter spirits; deeper bespoke campaigns remain |
+| 4 | Partial: seven coalition rounds, consent, funding and separate peace; bespoke treaties and fallback leadership remain |
+| 5 | Partial: 108 new great-power focuses, 24 policy reviews, 12 spirits and starting-leader/succession repairs |
+| 6 | Partial: eight bounded state/army meters, twelve paid decisions, eleven spirits and campaign pulses |
+| 7 | Campaign measurement infrastructure pending; actual balance requires in-game evidence |
+| 8 | Implementation complete: territorial/client foundation plus 13 secondary campaign packs covering every roadmap geography; runtime validation pending |
+| 9 | Placeholder assets only; legacy localisation and presentation review pending |
 
 All original detailed milestone checklists and chronological phases are retained in [the milestone catalogue](docs/roadmap-milestones.md). This file is the current status authority; historic checkmarks in the catalogue are not runtime certification.
 
@@ -29,14 +29,18 @@ All original detailed milestone checklists and chronological phases are retained
 
 ## Delivered on this branch
 
-- 68-country source namespace and placeholder flags
-- Explicit ideology subtypes and referenced custom leader traits
-- Deterministic source-to-engine build with drift checking
-- Comment-aware parser and focus dependency cycle checks
+- 450 French focus definitions, 108 additional great-power focuses and their policy events
+- Reusable era mechanics and seven temporary coalition rounds
+- Sixteen peaceful independent-release decisions and twelve client-aid decisions
+- Approval-gated integration/formable registry and consent-based Rhine client charters
+- Thirteen secondary campaign packs covering Spain, Poland/Warsaw, the Ottoman Empire, Sweden, five Italian states, German principalities, Portugal, the Netherlands and the United States
+- 299 secondary focuses, 52 secondary events, 39 recurring decisions and 65 campaign spirits
+- Historical and bounded alternate routes, military-development branches, major-power diplomatic links and localisation for every Milestone 8 campaign family
+- Dynamic WAR, BAT and HOL tags inherit the Polish or Dutch campaign; USA, Baden, Hesse and Mecklenburg receive missing political-character baselines
 
 ## Test evidence and remaining acceptance
 
-12 unit tests passed locally; no HOI4 process was executed. CI verifies the committed source separately.
+The suite adds 14 dedicated Milestone 8 tests on top of the existing 104-test baseline. It checks campaign coverage, 299 unique focus IDs, route exclusivity, 52 unique events, 39 decisions, 65 spirits, localisation, dynamic-tag inheritance, bounded great-power links, USA baseline data and absence of unapproved territorial effects. GitHub Actions must still pass, and no HOI4 executable was run.
 
 - [ ] Fresh game on the approved engine/DLC baseline.
 - [ ] Save/reload and AI-only campaign.

@@ -1,0 +1,14 @@
+ideas = { country = {
+nap_major_ENG_parliament = { picture = generic_morale_bonus allowed = { original_tag = ENG } removal_cost = -1 modifier = { political_power_factor = 0.035 } }
+nap_major_ENG_admiralty = { picture = generic_morale_bonus allowed = { original_tag = ENG } removal_cost = -1 modifier = { navy_org_factor = 0.04 } }
+nap_major_ENG_finance_allies = { picture = generic_morale_bonus allowed = { original_tag = ENG } removal_cost = -1 modifier = { political_power_factor = 0.025 } }
+nap_major_HAB_provinces = { picture = generic_morale_bonus allowed = { original_tag = HAB } removal_cost = -1 modifier = { stability_factor = 0.035 } }
+nap_major_HAB_charles = { picture = generic_morale_bonus allowed = { original_tag = HAB } removal_cost = -1 modifier = { max_planning_factor = 0.04 } }
+nap_major_HAB_dynastic = { picture = generic_morale_bonus allowed = { original_tag = HAB } removal_cost = -1 modifier = { political_power_factor = 0.03 } }
+nap_major_PRU_institutions = { picture = generic_morale_bonus allowed = { original_tag = PRU } removal_cost = -1 modifier = { political_power_factor = 0.03 } }
+nap_major_PRU_reform = { picture = generic_morale_bonus allowed = { original_tag = PRU } removal_cost = -1 modifier = { army_org_factor = 0.035 } }
+nap_major_PRU_liberation = { picture = generic_morale_bonus allowed = { original_tag = PRU } removal_cost = -1 modifier = { army_morale_factor = 0.035 } }
+nap_major_RUS_court = { picture = generic_morale_bonus allowed = { original_tag = RUS } removal_cost = -1 modifier = { political_power_factor = 0.03 } }
+nap_major_RUS_distance = { picture = generic_morale_bonus allowed = { original_tag = RUS } removal_cost = -1 modifier = { supply_consumption_factor = -0.035 } }
+nap_major_RUS_reformers = { picture = generic_morale_bonus allowed = { original_tag = RUS } removal_cost = -1 modifier = { research_speed_factor = 0.025 } }
+} }

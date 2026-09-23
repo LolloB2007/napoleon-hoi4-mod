@@ -1,0 +1,758 @@
+[
+  {
+    "id": "ENG_nap_parliament_00",
+    "tag": "ENG",
+    "title": "Examine the Parliamentary Accounts",
+    "days": 14,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_01",
+    "tag": "ENG",
+    "title": "Strengthen Treasury Supervision",
+    "days": 21,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_02",
+    "tag": "ENG",
+    "title": "Broaden Committee Scrutiny",
+    "days": 21,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_03",
+    "tag": "ENG",
+    "title": "Regularize the Sinking Fund",
+    "days": 28,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_04",
+    "tag": "ENG",
+    "title": "Publish the Revenue Estimates",
+    "days": 28,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_05",
+    "tag": "ENG",
+    "title": "Debate the War Budget",
+    "days": 14,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_06",
+    "tag": "ENG",
+    "title": "Inspect Government Contracts",
+    "days": 35,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_07",
+    "tag": "ENG",
+    "title": "Protect Parliamentary Petitions",
+    "days": 35,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_parliament_08",
+    "tag": "ENG",
+    "title": "A Parliamentary Financial Settlement",
+    "days": 49,
+    "anchor": "ENG_pitt_ministry"
+  },
+  {
+    "id": "ENG_nap_admiralty_00",
+    "tag": "ENG",
+    "title": "Survey the Admiralty Stores",
+    "days": 14,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_01",
+    "tag": "ENG",
+    "title": "Concentrate the Battle Fleet",
+    "days": 21,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_02",
+    "tag": "ENG",
+    "title": "Protect the Convoy Routes",
+    "days": 21,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_03",
+    "tag": "ENG",
+    "title": "Prepare the Fleet Anchorage",
+    "days": 28,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_04",
+    "tag": "ENG",
+    "title": "Expand the Escort Stations",
+    "days": 28,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_05",
+    "tag": "ENG",
+    "title": "Set the Maritime Priority",
+    "days": 14,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_06",
+    "tag": "ENG",
+    "title": "Inspect Naval Victualling",
+    "days": 35,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_07",
+    "tag": "ENG",
+    "title": "Train the Petty Officers",
+    "days": 35,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_admiralty_08",
+    "tag": "ENG",
+    "title": "An Admiralty That Sustains Its Fleet",
+    "days": 49,
+    "anchor": "ENG_expand_royal_navy"
+  },
+  {
+    "id": "ENG_nap_finance_allies_00",
+    "tag": "ENG",
+    "title": "Audit the Subsidy Commitments",
+    "days": 14,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_01",
+    "tag": "ENG",
+    "title": "Tie Payments to Field Armies",
+    "days": 21,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_02",
+    "tag": "ENG",
+    "title": "Support Allied Recovery",
+    "days": 21,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_03",
+    "tag": "ENG",
+    "title": "Standardize Military Accounts",
+    "days": 28,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_04",
+    "tag": "ENG",
+    "title": "Inspect the Allied Treasury Offices",
+    "days": 28,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_05",
+    "tag": "ENG",
+    "title": "The Subsidy Negotiation",
+    "days": 14,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_06",
+    "tag": "ENG",
+    "title": "Coordinate the Coalition Couriers",
+    "days": 35,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_07",
+    "tag": "ENG",
+    "title": "Maintain a Reserve of Public Credit",
+    "days": 35,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "ENG_nap_finance_allies_08",
+    "tag": "ENG",
+    "title": "A Sustainable Subsidy Policy",
+    "days": 49,
+    "anchor": "ENG_subsidies_to_coalitions"
+  },
+  {
+    "id": "HAB_nap_provinces_00",
+    "tag": "HAB",
+    "title": "Hear the Provincial Estates",
+    "days": 14,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_01",
+    "tag": "HAB",
+    "title": "Pursue Uniform Administration",
+    "days": 21,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_02",
+    "tag": "HAB",
+    "title": "Negotiate Provincial Compacts",
+    "days": 21,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_03",
+    "tag": "HAB",
+    "title": "Inspect the Crown Offices",
+    "days": 28,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_04",
+    "tag": "HAB",
+    "title": "Guarantee Local Consultation",
+    "days": 28,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_05",
+    "tag": "HAB",
+    "title": "The Estates and the Ministries",
+    "days": 14,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_06",
+    "tag": "HAB",
+    "title": "Reconcile Provincial Tax Returns",
+    "days": 35,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_07",
+    "tag": "HAB",
+    "title": "Protect Administrative Continuity",
+    "days": 35,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_provinces_08",
+    "tag": "HAB",
+    "title": "A Workable Composite Monarchy",
+    "days": 49,
+    "anchor": "HAB_emperor_dying"
+  },
+  {
+    "id": "HAB_nap_charles_00",
+    "tag": "HAB",
+    "title": "Inspect the Imperial Field Commands",
+    "days": 14,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_01",
+    "tag": "HAB",
+    "title": "Concentrate the General Staff",
+    "days": 21,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_02",
+    "tag": "HAB",
+    "title": "Develop Army-Level Initiative",
+    "days": 21,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_03",
+    "tag": "HAB",
+    "title": "Establish Staff Examinations",
+    "days": 28,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_04",
+    "tag": "HAB",
+    "title": "Strengthen Liaison Officers",
+    "days": 28,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_05",
+    "tag": "HAB",
+    "title": "Command in a Composite Army",
+    "days": 14,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_06",
+    "tag": "HAB",
+    "title": "Standardize Artillery Reporting",
+    "days": 35,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_07",
+    "tag": "HAB",
+    "title": "Rehearse the Reserve Deployment",
+    "days": 35,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_charles_08",
+    "tag": "HAB",
+    "title": "A Reformed Imperial Field Army",
+    "days": 49,
+    "anchor": "HAB_charles_takes_command"
+  },
+  {
+    "id": "HAB_nap_dynastic_00",
+    "tag": "HAB",
+    "title": "Review the Dynastic Commitments",
+    "days": 14,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_01",
+    "tag": "HAB",
+    "title": "Emphasize Imperial Guarantees",
+    "days": 21,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_02",
+    "tag": "HAB",
+    "title": "Prioritize Bilateral Diplomacy",
+    "days": 21,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_03",
+    "tag": "HAB",
+    "title": "Improve the Imperial Courier Service",
+    "days": 28,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_04",
+    "tag": "HAB",
+    "title": "Consult the Border Courts",
+    "days": 28,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_05",
+    "tag": "HAB",
+    "title": "The Cost of the Dynastic Network",
+    "days": 14,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_06",
+    "tag": "HAB",
+    "title": "Audit Diplomatic Subsidies",
+    "days": 35,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_07",
+    "tag": "HAB",
+    "title": "Keep Channels Open to Rivals",
+    "days": 35,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "HAB_nap_dynastic_08",
+    "tag": "HAB",
+    "title": "A Defined Habsburg Security Policy",
+    "days": 49,
+    "anchor": "HAB_suppress_belgian_revolt"
+  },
+  {
+    "id": "PRU_nap_institutions_00",
+    "tag": "PRU",
+    "title": "Audit the General Directory",
+    "days": 14,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_01",
+    "tag": "PRU",
+    "title": "Protect Central Discipline",
+    "days": 21,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_02",
+    "tag": "PRU",
+    "title": "Consult the Provincial Estates",
+    "days": 21,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_03",
+    "tag": "PRU",
+    "title": "Examine Crown Revenue",
+    "days": 28,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_04",
+    "tag": "PRU",
+    "title": "Publish Provincial Obligations",
+    "days": 28,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_05",
+    "tag": "PRU",
+    "title": "The Cost of Administrative Reform",
+    "days": 14,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_06",
+    "tag": "PRU",
+    "title": "Inspect State Domains",
+    "days": 35,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_07",
+    "tag": "PRU",
+    "title": "Train Professional Administrators",
+    "days": 35,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_institutions_08",
+    "tag": "PRU",
+    "title": "A State Beyond the Parade Ground",
+    "days": 49,
+    "anchor": "PRU_kingdom_of_drill"
+  },
+  {
+    "id": "PRU_nap_reform_00",
+    "tag": "PRU",
+    "title": "Review the Lessons of Defeat",
+    "days": 14,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_01",
+    "tag": "PRU",
+    "title": "Expand the Training Reserve",
+    "days": 21,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_02",
+    "tag": "PRU",
+    "title": "Prioritize the Standing Cadres",
+    "days": 21,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_03",
+    "tag": "PRU",
+    "title": "Organize Rotating Training Cohorts",
+    "days": 28,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_04",
+    "tag": "PRU",
+    "title": "Inspect the Regimental Schools",
+    "days": 28,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_05",
+    "tag": "PRU",
+    "title": "The Army Reform Programme",
+    "days": 14,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_06",
+    "tag": "PRU",
+    "title": "Open Advancement to Demonstrated Merit",
+    "days": 35,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_07",
+    "tag": "PRU",
+    "title": "Coordinate the Staff Colleges",
+    "days": 35,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_reform_08",
+    "tag": "PRU",
+    "title": "An Army Capable of Learning",
+    "days": 49,
+    "anchor": "PRU_consider_reform"
+  },
+  {
+    "id": "PRU_nap_liberation_00",
+    "tag": "PRU",
+    "title": "Assess the National Mobilization",
+    "days": 14,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_01",
+    "tag": "PRU",
+    "title": "Concentrate the Field Establishment",
+    "days": 21,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_02",
+    "tag": "PRU",
+    "title": "Preserve the Local Reserve",
+    "days": 21,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_03",
+    "tag": "PRU",
+    "title": "Coordinate the Army Columns",
+    "days": 28,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_04",
+    "tag": "PRU",
+    "title": "Improve the Provincial Depots",
+    "days": 28,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_05",
+    "tag": "PRU",
+    "title": "The Burden of Liberation",
+    "days": 14,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_06",
+    "tag": "PRU",
+    "title": "Protect Civil Supply Contracts",
+    "days": 35,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_07",
+    "tag": "PRU",
+    "title": "Prepare Postwar Demobilization",
+    "days": 35,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "PRU_nap_liberation_08",
+    "tag": "PRU",
+    "title": "A Mobilized State That Can Recover",
+    "days": 49,
+    "anchor": "PRU_war_of_liberation"
+  },
+  {
+    "id": "RUS_nap_court_00",
+    "tag": "RUS",
+    "title": "Survey the Imperial Provinces",
+    "days": 14,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_01",
+    "tag": "RUS",
+    "title": "Rely on the Service Nobility",
+    "days": 21,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_02",
+    "tag": "RUS",
+    "title": "Expand Professional Administration",
+    "days": 21,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_03",
+    "tag": "RUS",
+    "title": "Audit Provincial Service Records",
+    "days": 28,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_04",
+    "tag": "RUS",
+    "title": "Train the Civil Chancelleries",
+    "days": 28,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_05",
+    "tag": "RUS",
+    "title": "The Provinces and the Imperial Court",
+    "days": 14,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_06",
+    "tag": "RUS",
+    "title": "Inspect State Supply Contracts",
+    "days": 35,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_07",
+    "tag": "RUS",
+    "title": "Improve Long-Distance Correspondence",
+    "days": 35,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_court_08",
+    "tag": "RUS",
+    "title": "An Administration for a Continental Empire",
+    "days": 49,
+    "anchor": "RUS_empress_in_majesty"
+  },
+  {
+    "id": "RUS_nap_distance_00",
+    "tag": "RUS",
+    "title": "Survey the Army Magazines",
+    "days": 14,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_01",
+    "tag": "RUS",
+    "title": "Plan a Concentrated Advance",
+    "days": 21,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_02",
+    "tag": "RUS",
+    "title": "Prepare for a Long Campaign",
+    "days": 21,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_03",
+    "tag": "RUS",
+    "title": "Improve the March Tables",
+    "days": 28,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_04",
+    "tag": "RUS",
+    "title": "Construct Redundant Supply Plans",
+    "days": 28,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_05",
+    "tag": "RUS",
+    "title": "The Distance Problem",
+    "days": 14,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_06",
+    "tag": "RUS",
+    "title": "Inspect Horse and Wagon Reserves",
+    "days": 35,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_07",
+    "tag": "RUS",
+    "title": "Coordinate the Field Hospitals",
+    "days": 35,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_distance_08",
+    "tag": "RUS",
+    "title": "An Army Supported Across the Distances",
+    "days": 49,
+    "anchor": "RUS_finish_ottoman_war"
+  },
+  {
+    "id": "RUS_nap_reformers_00",
+    "tag": "RUS",
+    "title": "Examine the Ministerial System",
+    "days": 14,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_01",
+    "tag": "RUS",
+    "title": "Pursue a Coherent Reform Plan",
+    "days": 21,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_02",
+    "tag": "RUS",
+    "title": "Negotiate a Gradual Settlement",
+    "days": 21,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_03",
+    "tag": "RUS",
+    "title": "Codify Ministerial Responsibilities",
+    "days": 28,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_04",
+    "tag": "RUS",
+    "title": "Consult the Service Institutions",
+    "days": 28,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_05",
+    "tag": "RUS",
+    "title": "The Pace of Imperial Reform",
+    "days": 14,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_06",
+    "tag": "RUS",
+    "title": "Protect the Civil Service Examinations",
+    "days": 35,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_07",
+    "tag": "RUS",
+    "title": "Review the Costs of Administration",
+    "days": 35,
+    "anchor": "RUS_speransky_reforms"
+  },
+  {
+    "id": "RUS_nap_reformers_08",
+    "tag": "RUS",
+    "title": "An Imperial Programme with Institutions",
+    "days": 49,
+    "anchor": "RUS_speransky_reforms"
+  }
+]

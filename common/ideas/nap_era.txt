@@ -1,0 +1,13 @@
+ideas = { country = {
+ nap_war_weariness = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_org_factor = -0.04 political_power_factor = -0.05 } }
+ nap_acute_exhaustion = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_org_factor = -0.08 political_power_factor = -0.12 } }
+ nap_legitimacy_crisis = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { stability_factor = -0.05 political_power_factor = -0.08 } }
+ nap_secure_authority = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { political_power_factor = 0.04 } }
+ nap_debt_crisis = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { political_power_factor = -0.08 } }
+ nap_extended_supply_lines = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { supply_consumption_factor = 0.08 army_morale_factor = -0.04 } }
+ nap_battle_confidence = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_morale_factor = 0.04 } }
+ nap_shaken_army = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_morale_factor = -0.04 } }
+ nap_staff_institutions = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { planning_speed = 0.04 } }
+ nap_funded_magazines = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { supply_consumption_factor = -0.06 } }
+ nap_army_rotation = { picture = generic_morale_bonus allowed = { always = yes } removal_cost = -1 modifier = { army_attack_factor = -0.04 army_morale_factor = 0.04 } }
+} }

@@ -1,0 +1,1 @@
+nap_coalition_manifest = { name = nap_coalition_manifest_name description = nap_coalition_manifest_desc is_manifest = yes ratio_progress = { total_amount = 1 completed_amount = 0 } }

@@ -1,0 +1,6670 @@
+[
+  {
+    "id": "FRA_nap_assembly_00",
+    "title": "Hear the Cahiers",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 14,
+    "x": 8,
+    "y": 18,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_01",
+    "title": "A National Mandate",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 21,
+    "x": 4,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_assembly_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_assembly_02",
+    "title": "Respect the Local Delegations",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 21,
+    "x": 12,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_assembly_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_assembly_03",
+    "title": "Verify the Common Mandate",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 28,
+    "x": 4,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_04",
+    "title": "Preserve Provincial Channels",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 28,
+    "x": 12,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_05",
+    "title": "The Question of Representation",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 14,
+    "x": 8,
+    "y": 21,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_03",
+        "FRA_nap_assembly_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_06",
+    "title": "Open the Public Galleries",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 21,
+    "x": 4,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_07",
+    "title": "Protect the Petitioners",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 21,
+    "x": 12,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_08",
+    "title": "Publish the Proceedings",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 35,
+    "x": 4,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_09",
+    "title": "Establish Rules of Debate",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 28,
+    "x": 12,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_10",
+    "title": "The Delegates Seek an Answer",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 14,
+    "x": 8,
+    "y": 24,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_08"
+      ],
+      [
+        "FRA_nap_assembly_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_11",
+    "title": "Finance a Permanent Secretariat",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 35,
+    "x": 4,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_assembly_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_assembly_12",
+    "title": "Keep a Rotating Secretariat",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 35,
+    "x": 12,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_assembly_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_assembly_13",
+    "title": "Record the Settlement",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 21,
+    "x": 8,
+    "y": 26,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_11",
+        "FRA_nap_assembly_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_assembly_14",
+    "title": "An Administration Answerable to France",
+    "chapter": "The Nation Assembles",
+    "route": "common",
+    "days": 49,
+    "x": 8,
+    "y": 27,
+    "prerequisites": [
+      [
+        "FRA_nap_assembly_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_00",
+    "title": "Open the Treasury Books",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 14,
+    "x": 32,
+    "y": 18,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_01",
+    "title": "Guarantee the Public Debt",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 21,
+    "x": 28,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_credit_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_credit_02",
+    "title": "Renegotiate the Old Obligations",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 21,
+    "x": 36,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_credit_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_credit_03",
+    "title": "Consolidate the Loan Register",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 28,
+    "x": 28,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_04",
+    "title": "Agree a Voluntary Rescheduling",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 28,
+    "x": 36,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_05",
+    "title": "Creditors Seek Security",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 14,
+    "x": 32,
+    "y": 21,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_03",
+        "FRA_nap_credit_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_06",
+    "title": "Audit the Tax Farms",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 21,
+    "x": 28,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_07",
+    "title": "Survey National Assets",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 21,
+    "x": 36,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_08",
+    "title": "Recover Missing Receipts",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 35,
+    "x": 28,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_09",
+    "title": "Publish the Budget",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 28,
+    "x": 36,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_10",
+    "title": "Paper Promises and Real Revenue",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 14,
+    "x": 32,
+    "y": 24,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_08"
+      ],
+      [
+        "FRA_nap_credit_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_11",
+    "title": "Create a Permanent Debt Office",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 35,
+    "x": 28,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_credit_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_credit_12",
+    "title": "Retain Provincial Collection",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 35,
+    "x": 36,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_credit_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_credit_13",
+    "title": "Protect the Revenue Base",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 21,
+    "x": 32,
+    "y": 26,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_11",
+        "FRA_nap_credit_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_credit_14",
+    "title": "A Credible State Ledger",
+    "chapter": "The State Ledger",
+    "route": "common",
+    "days": 49,
+    "x": 32,
+    "y": 27,
+    "prerequisites": [
+      [
+        "FRA_nap_credit_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_00",
+    "title": "Survey the Provinces",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 14,
+    "x": 56,
+    "y": 18,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_01",
+    "title": "Appoint National Commissioners",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 21,
+    "x": 52,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_departments_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_departments_02",
+    "title": "Work Through Municipal Councils",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 21,
+    "x": 60,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_departments_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_departments_03",
+    "title": "Standardize Administrative Returns",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 28,
+    "x": 52,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_04",
+    "title": "Protect Local Expertise",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 28,
+    "x": 60,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_05",
+    "title": "Privileges Meet Administration",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 14,
+    "x": 56,
+    "y": 21,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_03",
+        "FRA_nap_departments_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_06",
+    "title": "Register Public Land",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 21,
+    "x": 52,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_07",
+    "title": "Inspect Roads and Bridges",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 21,
+    "x": 60,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_08",
+    "title": "Train the Clerks",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 35,
+    "x": 52,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_09",
+    "title": "Improve the Postal Routes",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 28,
+    "x": 60,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_10",
+    "title": "Who Selects the Officials?",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 14,
+    "x": 56,
+    "y": 24,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_08"
+      ],
+      [
+        "FRA_nap_departments_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_11",
+    "title": "Professionalize the Prefectures",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 35,
+    "x": 52,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_departments_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_departments_12",
+    "title": "Guarantee Municipal Deliberation",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 35,
+    "x": 60,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_departments_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_departments_13",
+    "title": "Reconcile the Civil Registers",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 21,
+    "x": 56,
+    "y": 26,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_11",
+        "FRA_nap_departments_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_departments_14",
+    "title": "A State Beyond the Capital",
+    "chapter": "Governing the Provinces",
+    "route": "common",
+    "days": 49,
+    "x": 56,
+    "y": 27,
+    "prerequisites": [
+      [
+        "FRA_nap_departments_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_00",
+    "title": "Inventory the Schools",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 18,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_01",
+    "title": "Sponsor National Academies",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 21,
+    "x": 76,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_learning_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_learning_02",
+    "title": "Support Municipal Schools",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 21,
+    "x": 84,
+    "y": 19,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_learning_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_learning_03",
+    "title": "Train Scientific Administrators",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 28,
+    "x": 76,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_04",
+    "title": "Preserve Local Teaching Networks",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 28,
+    "x": 84,
+    "y": 20,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_05",
+    "title": "Who Controls Education?",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 21,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_03",
+        "FRA_nap_learning_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_06",
+    "title": "Survey Weights and Measures",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 21,
+    "x": 76,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_07",
+    "title": "Publish Practical Manuals",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 21,
+    "x": 84,
+    "y": 22,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_08",
+    "title": "Educate Military Engineers",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 35,
+    "x": 76,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_09",
+    "title": "Open the Public Archives",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 28,
+    "x": 84,
+    "y": 23,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_10",
+    "title": "The Metric Proposal",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 24,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_08"
+      ],
+      [
+        "FRA_nap_learning_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_11",
+    "title": "Endow a National Institute",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 35,
+    "x": 76,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_learning_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_learning_12",
+    "title": "Prioritize Technical Workshops",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 35,
+    "x": 84,
+    "y": 25,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_learning_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_learning_13",
+    "title": "Examine the New Civil Servants",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 21,
+    "x": 80,
+    "y": 26,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_11",
+        "FRA_nap_learning_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_learning_14",
+    "title": "Knowledge in the Service of the State",
+    "chapter": "Knowledge and Public Service",
+    "route": "common",
+    "days": 49,
+    "x": 80,
+    "y": 27,
+    "prerequisites": [
+      [
+        "FRA_nap_learning_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_00",
+    "title": "Inspect the Infantry Regiments",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 14,
+    "x": 8,
+    "y": 30,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_01",
+    "title": "Emphasize Disciplined Volleys",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 21,
+    "x": 4,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_infantry_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_infantry_02",
+    "title": "Encourage Aimed Skirmishing",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 21,
+    "x": 12,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_infantry_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_infantry_03",
+    "title": "Standardize Volley Commands",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 28,
+    "x": 4,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_04",
+    "title": "Train the Light Companies",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 28,
+    "x": 12,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_05",
+    "title": "Veterans and New Recruits",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 14,
+    "x": 8,
+    "y": 33,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_03",
+        "FRA_nap_infantry_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_06",
+    "title": "Improve the Battalion Schools",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 21,
+    "x": 4,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_07",
+    "title": "Record Regimental Experience",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 21,
+    "x": 12,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_08",
+    "title": "Build a Reliable NCO Corps",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 35,
+    "x": 4,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_09",
+    "title": "Inspect Small-Arms Maintenance",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 28,
+    "x": 12,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_10",
+    "title": "Integrating the Volunteers",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 14,
+    "x": 8,
+    "y": 36,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_08"
+      ],
+      [
+        "FRA_nap_infantry_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_11",
+    "title": "Favor Large Training Camps",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 35,
+    "x": 4,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_infantry_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_infantry_12",
+    "title": "Disperse the Training Cadres",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 35,
+    "x": 12,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_infantry_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_infantry_13",
+    "title": "Evaluate the Regimental System",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 21,
+    "x": 8,
+    "y": 38,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_11",
+        "FRA_nap_infantry_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_infantry_14",
+    "title": "A Cohesive Infantry Arm",
+    "chapter": "Infantry Institutions",
+    "route": "common",
+    "days": 49,
+    "x": 8,
+    "y": 39,
+    "prerequisites": [
+      [
+        "FRA_nap_infantry_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_00",
+    "title": "Survey the Remount Depots",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 14,
+    "x": 32,
+    "y": 30,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_01",
+    "title": "Prioritize the Heavy Horse",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 21,
+    "x": 28,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_cavalry_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_cavalry_02",
+    "title": "Prioritize the Light Horse",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 21,
+    "x": 36,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_cavalry_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_cavalry_03",
+    "title": "Strengthen the Shock Squadrons",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 28,
+    "x": 28,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_04",
+    "title": "Expand the Reconnaissance Patrols",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 28,
+    "x": 36,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_05",
+    "title": "A Shortage of Remounts",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 14,
+    "x": 32,
+    "y": 33,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_03",
+        "FRA_nap_cavalry_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_06",
+    "title": "Improve Veterinary Care",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 21,
+    "x": 28,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_07",
+    "title": "Standardize Cavalry Saddles",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 21,
+    "x": 36,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_08",
+    "title": "Drill Dismounted Action",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 35,
+    "x": 28,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_09",
+    "title": "Coordinate the Screening Force",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 28,
+    "x": 36,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_10",
+    "title": "Choosing the Cavalry Balance",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 14,
+    "x": 32,
+    "y": 36,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_08"
+      ],
+      [
+        "FRA_nap_cavalry_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_11",
+    "title": "Concentrate the Cavalry Reserve",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 35,
+    "x": 28,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_cavalry_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_cavalry_12",
+    "title": "Distribute Mounted Scouts",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 35,
+    "x": 36,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_cavalry_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_cavalry_13",
+    "title": "Rehearse the Pursuit",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 21,
+    "x": 32,
+    "y": 38,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_11",
+        "FRA_nap_cavalry_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_cavalry_14",
+    "title": "A Sustainable Mounted Arm",
+    "chapter": "The Mounted Arm",
+    "route": "common",
+    "days": 49,
+    "x": 32,
+    "y": 39,
+    "prerequisites": [
+      [
+        "FRA_nap_cavalry_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_00",
+    "title": "Inspect the Artillery Parks",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 14,
+    "x": 56,
+    "y": 30,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_01",
+    "title": "Concentrate the Heavy Batteries",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 21,
+    "x": 52,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_guns_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_guns_02",
+    "title": "Favor Mobile Field Batteries",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 21,
+    "x": 60,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_guns_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_guns_03",
+    "title": "Organize the Siege Trains",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 28,
+    "x": 52,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_04",
+    "title": "Improve Horse-Artillery Drill",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 28,
+    "x": 60,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_05",
+    "title": "The Guns or the Roads?",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 14,
+    "x": 56,
+    "y": 33,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_03",
+        "FRA_nap_guns_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_06",
+    "title": "Standardize Ammunition Returns",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 21,
+    "x": 52,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_07",
+    "title": "Inspect the Powder Mills",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 21,
+    "x": 60,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_08",
+    "title": "Train the Battery Officers",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 35,
+    "x": 52,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_09",
+    "title": "Fund the Wagon Depots",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 28,
+    "x": 60,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_10",
+    "title": "The Ammunition Contracts",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 14,
+    "x": 56,
+    "y": 36,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_08"
+      ],
+      [
+        "FRA_nap_guns_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_11",
+    "title": "Create a Central Artillery Reserve",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 35,
+    "x": 52,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_guns_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_guns_12",
+    "title": "Attach Guns to the Formations",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 35,
+    "x": 60,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_guns_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_guns_13",
+    "title": "Rehearse Combined Fire Plans",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 21,
+    "x": 56,
+    "y": 38,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_11",
+        "FRA_nap_guns_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_guns_14",
+    "title": "An Artillery System That Can Move",
+    "chapter": "Guns and Magazines",
+    "route": "common",
+    "days": 49,
+    "x": 56,
+    "y": 39,
+    "prerequisites": [
+      [
+        "FRA_nap_guns_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_00",
+    "title": "Review the Naval Establishment",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 30,
+    "prerequisites": [
+      [
+        "FRA_convene_estates_general"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_01",
+    "title": "Concentrate the Battle Fleet",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 21,
+    "x": 76,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_fleet_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_fleet_02",
+    "title": "Protect the Merchant Convoys",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 21,
+    "x": 84,
+    "y": 31,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_fleet_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_fleet_03",
+    "title": "Rehearse Line-of-Battle Signals",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 28,
+    "x": 76,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_04",
+    "title": "Organize Coastal Escort Stations",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 28,
+    "x": 84,
+    "y": 32,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_05",
+    "title": "Officers and Political Trust",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 33,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_03",
+        "FRA_nap_fleet_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_06",
+    "title": "Inspect the Dockyards",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 21,
+    "x": 76,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_07",
+    "title": "Survey the Naval Stores",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 21,
+    "x": 84,
+    "y": 34,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_08",
+    "title": "Train the Petty Officers",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 35,
+    "x": 76,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_09",
+    "title": "Maintain the Channel Ports",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 28,
+    "x": 84,
+    "y": 35,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_10",
+    "title": "Convoys or the Battle Line?",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 14,
+    "x": 80,
+    "y": 36,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_08"
+      ],
+      [
+        "FRA_nap_fleet_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_11",
+    "title": "Build a Strategic Naval Reserve",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 35,
+    "x": 76,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_fleet_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_fleet_12",
+    "title": "Disperse the Cruising Squadrons",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 35,
+    "x": 84,
+    "y": 37,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_fleet_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_fleet_13",
+    "title": "Reconcile the Naval Accounts",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 21,
+    "x": 80,
+    "y": 38,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_11",
+        "FRA_nap_fleet_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_fleet_14",
+    "title": "A Fleet with a Sustainable Purpose",
+    "chapter": "Rebuilding the Fleet",
+    "route": "common",
+    "days": 49,
+    "x": 80,
+    "y": 39,
+    "prerequisites": [
+      [
+        "FRA_nap_fleet_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_00",
+    "title": "Define the Crown in Law",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 14,
+    "x": 8,
+    "y": 42,
+    "prerequisites": [
+      [
+        "FRA_constitutional_monarchy"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_01",
+    "title": "A Suspensive Royal Veto",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 21,
+    "x": 4,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_charter_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_charter_02",
+    "title": "A Narrower Executive Veto",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 21,
+    "x": 12,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_charter_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_charter_03",
+    "title": "Specify the Ministers Powers",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 28,
+    "x": 4,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_04",
+    "title": "Protect Legislative Independence",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 28,
+    "x": 12,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_05",
+    "title": "The Royal Veto Debate",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 14,
+    "x": 8,
+    "y": 45,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_03",
+        "FRA_nap_charter_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_06",
+    "title": "Publish the Civil List",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 21,
+    "x": 4,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_07",
+    "title": "Guarantee Personal Security",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 21,
+    "x": 12,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_08",
+    "title": "An Oath to the Constitution",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 35,
+    "x": 4,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_09",
+    "title": "Limit Emergency Ordinances",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 28,
+    "x": 12,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_10",
+    "title": "The Crown Faces the Charter",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 14,
+    "x": 8,
+    "y": 48,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_08"
+      ],
+      [
+        "FRA_nap_charter_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_11",
+    "title": "Seek a Broad Constitutional Compact",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 35,
+    "x": 4,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_charter_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_charter_12",
+    "title": "Entrench Detailed Legal Safeguards",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 35,
+    "x": 12,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_charter_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_charter_13",
+    "title": "Create a Constitutional Review Procedure",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 21,
+    "x": 8,
+    "y": 50,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_11",
+        "FRA_nap_charter_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_charter_14",
+    "title": "A Crown Bound by Law",
+    "chapter": "A Constitutional Crown",
+    "route": "constitutional",
+    "days": 70,
+    "x": 8,
+    "y": 51,
+    "prerequisites": [
+      [
+        "FRA_nap_charter_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_00",
+    "title": "Establish Electoral Registers",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 14,
+    "x": 32,
+    "y": 42,
+    "prerequisites": [
+      [
+        "FRA_constitutional_monarchy"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_01",
+    "title": "A Property-Based Franchise",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 21,
+    "x": 28,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_representation_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_representation_02",
+    "title": "Broaden Civic Participation",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 21,
+    "x": 36,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_representation_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_representation_03",
+    "title": "Protect Independent Electors",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 28,
+    "x": 28,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_04",
+    "title": "Extend Municipal Representation",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 28,
+    "x": 36,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_05",
+    "title": "Who Elects the Deputies?",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 14,
+    "x": 32,
+    "y": 45,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_03",
+        "FRA_nap_representation_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_06",
+    "title": "Publish Ministerial Accounts",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 21,
+    "x": 28,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_07",
+    "title": "Allow Organized Parliamentary Debate",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 21,
+    "x": 36,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_08",
+    "title": "Establish Budget Committees",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 35,
+    "x": 28,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_09",
+    "title": "Protect Opposition Petitions",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 28,
+    "x": 36,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_10",
+    "title": "Responsibility for the Cabinet",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 14,
+    "x": 32,
+    "y": 48,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_08"
+      ],
+      [
+        "FRA_nap_representation_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_11",
+    "title": "A Stable Ministerial Programme",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 35,
+    "x": 28,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_representation_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_representation_12",
+    "title": "Frequent Legislative Scrutiny",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 35,
+    "x": 36,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_representation_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_representation_13",
+    "title": "Define Confidence and Resignation",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 21,
+    "x": 32,
+    "y": 50,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_11",
+        "FRA_nap_representation_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_representation_14",
+    "title": "An Accountable Constitutional Government",
+    "chapter": "Representative Government",
+    "route": "constitutional",
+    "days": 70,
+    "x": 32,
+    "y": 51,
+    "prerequisites": [
+      [
+        "FRA_nap_representation_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_00",
+    "title": "A Foreign Policy for the Charter",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 14,
+    "x": 56,
+    "y": 42,
+    "prerequisites": [
+      [
+        "FRA_constitutional_europe"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_01",
+    "title": "Reassure the Established Courts",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 21,
+    "x": 52,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_constitutional_diplomacy_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_02",
+    "title": "Reach Out to Reforming States",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 21,
+    "x": 60,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_constitutional_diplomacy_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_03",
+    "title": "Guarantee Existing Treaties",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 28,
+    "x": 52,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_04",
+    "title": "Exchange Constitutional Delegations",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 28,
+    "x": 60,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_05",
+    "title": "Reform Without Exporting War",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 14,
+    "x": 56,
+    "y": 45,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_03",
+        "FRA_nap_constitutional_diplomacy_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_06",
+    "title": "Protect Neutral Commerce",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 21,
+    "x": 52,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_07",
+    "title": "Regularize Diplomatic Instructions",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 21,
+    "x": 60,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_08",
+    "title": "Professionalize the Consular Service",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 35,
+    "x": 52,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_09",
+    "title": "Publish Limited War Aims",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 28,
+    "x": 60,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_10",
+    "title": "Neutral Trading Partners",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 14,
+    "x": 56,
+    "y": 48,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_08"
+      ],
+      [
+        "FRA_nap_constitutional_diplomacy_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_11",
+    "title": "Favor Defensive Understandings",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 35,
+    "x": 52,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_constitutional_diplomacy_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_12",
+    "title": "Favor Bilateral Settlements",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 35,
+    "x": 60,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_constitutional_diplomacy_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_13",
+    "title": "Review the Security Commitments",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 21,
+    "x": 56,
+    "y": 50,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_11",
+        "FRA_nap_constitutional_diplomacy_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_constitutional_diplomacy_14",
+    "title": "A Constitutional Place in Europe",
+    "chapter": "Constitutional Diplomacy",
+    "route": "constitutional",
+    "days": 70,
+    "x": 56,
+    "y": 51,
+    "prerequisites": [
+      [
+        "FRA_nap_constitutional_diplomacy_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_00",
+    "title": "Reconstitute the Royal Council",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 14,
+    "x": 80,
+    "y": 42,
+    "prerequisites": [
+      [
+        "FRA_restore_ancien_regime"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_01",
+    "title": "Reward Proven Service",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 21,
+    "x": 76,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_court_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_court_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_court_02",
+    "title": "Reconcile Former Opponents",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 21,
+    "x": 84,
+    "y": 43,
+    "prerequisites": [
+      [
+        "FRA_nap_court_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_court_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_court_03",
+    "title": "Audit Court Appointments",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 28,
+    "x": 76,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_court_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_04",
+    "title": "Offer Conditional Pardons",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 28,
+    "x": 84,
+    "y": 44,
+    "prerequisites": [
+      [
+        "FRA_nap_court_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_05",
+    "title": "The Price of Loyalty",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 14,
+    "x": 80,
+    "y": 45,
+    "prerequisites": [
+      [
+        "FRA_nap_court_03",
+        "FRA_nap_court_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_06",
+    "title": "Restore Provincial Correspondence",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 21,
+    "x": 76,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_court_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_07",
+    "title": "Publish the Royal Budget",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 21,
+    "x": 84,
+    "y": 46,
+    "prerequisites": [
+      [
+        "FRA_nap_court_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_08",
+    "title": "Secure the Civil Courts",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 35,
+    "x": 76,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_court_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_09",
+    "title": "Clarify the Officers Oaths",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 28,
+    "x": 84,
+    "y": 47,
+    "prerequisites": [
+      [
+        "FRA_nap_court_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_10",
+    "title": "Reconcile the Provinces",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 14,
+    "x": 80,
+    "y": 48,
+    "prerequisites": [
+      [
+        "FRA_nap_court_08"
+      ],
+      [
+        "FRA_nap_court_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_11",
+    "title": "Rule Through a Compact Council",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 35,
+    "x": 76,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_court_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_court_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_court_12",
+    "title": "Restore Consultation with the Estates",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 35,
+    "x": 84,
+    "y": 49,
+    "prerequisites": [
+      [
+        "FRA_nap_court_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_court_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_court_13",
+    "title": "Inspect the Royal Administration",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 21,
+    "x": 80,
+    "y": 50,
+    "prerequisites": [
+      [
+        "FRA_nap_court_11",
+        "FRA_nap_court_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_court_14",
+    "title": "A Crown Capable of Governing",
+    "chapter": "Rebuilding Royal Authority",
+    "route": "royalist",
+    "days": 49,
+    "x": 80,
+    "y": 51,
+    "prerequisites": [
+      [
+        "FRA_nap_court_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_00",
+    "title": "Register the Returning Officers",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 14,
+    "x": 8,
+    "y": 54,
+    "prerequisites": [
+      [
+        "FRA_emigre_army"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_01",
+    "title": "Restore Experienced Commissions",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 21,
+    "x": 4,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emigres_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_emigres_02",
+    "title": "Examine Every Commission",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 21,
+    "x": 12,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emigres_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_emigres_03",
+    "title": "Rebuild the Veteran Cadres",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 28,
+    "x": 4,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_04",
+    "title": "Require Professional Examinations",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 28,
+    "x": 12,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_05",
+    "title": "Returning Officers Meet the Army",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 14,
+    "x": 8,
+    "y": 57,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_03",
+        "FRA_nap_emigres_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_06",
+    "title": "Regularize Emigre Pensions",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 21,
+    "x": 4,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_07",
+    "title": "Inspect Overseas Service Records",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 21,
+    "x": 12,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_08",
+    "title": "Settle Disputed Property Claims",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 35,
+    "x": 4,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_09",
+    "title": "Unify Regimental Pay",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 28,
+    "x": 12,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_10",
+    "title": "Property and Amnesty",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 14,
+    "x": 8,
+    "y": 60,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_08"
+      ],
+      [
+        "FRA_nap_emigres_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_11",
+    "title": "Keep the Old Regimental Traditions",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 35,
+    "x": 4,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emigres_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_emigres_12",
+    "title": "Create a Common Service Code",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 35,
+    "x": 12,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emigres_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_emigres_13",
+    "title": "Enforce One Chain of Command",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 21,
+    "x": 8,
+    "y": 62,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_11",
+        "FRA_nap_emigres_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emigres_14",
+    "title": "An Army Reconciled to the Crown",
+    "chapter": "The Emigre Return",
+    "route": "royalist",
+    "days": 49,
+    "x": 8,
+    "y": 63,
+    "prerequisites": [
+      [
+        "FRA_nap_emigres_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_00",
+    "title": "State the Royal Peace Programme",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 14,
+    "x": 32,
+    "y": 54,
+    "prerequisites": [
+      [
+        "FRA_european_concert"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_01",
+    "title": "Seek Dynastic Guarantees",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 21,
+    "x": 28,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_royal_order_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_royal_order_02",
+    "title": "Seek Limited Defensive Treaties",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 21,
+    "x": 36,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_royal_order_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_royal_order_03",
+    "title": "Renew the Courtly Channels",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 28,
+    "x": 28,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_04",
+    "title": "Clarify the Limits of Assistance",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 28,
+    "x": 36,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_05",
+    "title": "The Courts Consider France",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 14,
+    "x": 32,
+    "y": 57,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_03",
+        "FRA_nap_royal_order_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_06",
+    "title": "Reconcile Ecclesiastical Administration",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 21,
+    "x": 28,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_07",
+    "title": "Review Seized Endowments",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 21,
+    "x": 36,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_08",
+    "title": "Protect Civil Contracts",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 35,
+    "x": 28,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_09",
+    "title": "Codify Provincial Obligations",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 28,
+    "x": 36,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_10",
+    "title": "The Religious Settlement",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 14,
+    "x": 32,
+    "y": 60,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_08"
+      ],
+      [
+        "FRA_nap_royal_order_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_11",
+    "title": "Preserve Traditional Councils",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 35,
+    "x": 28,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_royal_order_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_royal_order_12",
+    "title": "Professionalize the Royal Ministries",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 35,
+    "x": 36,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_royal_order_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_royal_order_13",
+    "title": "Publish a Durable Legal Settlement",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 21,
+    "x": 32,
+    "y": 62,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_11",
+        "FRA_nap_royal_order_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_royal_order_14",
+    "title": "A Monarchy within the European Order",
+    "chapter": "The Monarchical Settlement",
+    "route": "royalist",
+    "days": 49,
+    "x": 32,
+    "y": 63,
+    "prerequisites": [
+      [
+        "FRA_nap_royal_order_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_00",
+    "title": "Organize the Convention Committees",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 14,
+    "x": 56,
+    "y": 54,
+    "prerequisites": [
+      [
+        "FRA_vive_la_republique"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_01",
+    "title": "Concentrate Executive Supervision",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 21,
+    "x": 52,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_convention_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_convention_02",
+    "title": "Strengthen Departmental Oversight",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 21,
+    "x": 60,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_convention_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_convention_03",
+    "title": "Define Emergency Mandates",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 28,
+    "x": 52,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_04",
+    "title": "Protect Local Reporting Rights",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 28,
+    "x": 60,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_05",
+    "title": "Mandates from the Departments",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 14,
+    "x": 56,
+    "y": 57,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_03",
+        "FRA_nap_convention_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_06",
+    "title": "Regularize Army Requisitions",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 21,
+    "x": 52,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_07",
+    "title": "Publish the Republican Budget",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 21,
+    "x": 60,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_08",
+    "title": "Audit the War Ministries",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 35,
+    "x": 52,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_09",
+    "title": "Safeguard Civil Administration",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 28,
+    "x": 60,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_10",
+    "title": "War and Representation",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 14,
+    "x": 56,
+    "y": 60,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_08"
+      ],
+      [
+        "FRA_nap_convention_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_11",
+    "title": "A Unified Executive Committee",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 35,
+    "x": 52,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_convention_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_convention_12",
+    "title": "A Balance of Representative Committees",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 35,
+    "x": 60,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_convention_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_convention_13",
+    "title": "Review Emergency Authority",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 21,
+    "x": 56,
+    "y": 62,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_11",
+        "FRA_nap_convention_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_convention_14",
+    "title": "The Institutions of the Citizen State",
+    "chapter": "The National Convention",
+    "route": "republican",
+    "days": 49,
+    "x": 56,
+    "y": 63,
+    "prerequisites": [
+      [
+        "FRA_nap_convention_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_00",
+    "title": "A Girondin Programme",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 14,
+    "x": 80,
+    "y": 54,
+    "prerequisites": [
+      [
+        "FRA_vive_la_republique"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_jacobins_00"
+    ]
+  },
+  {
+    "id": "FRA_nap_girondins_01",
+    "title": "Defend Departmental Autonomy",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 21,
+    "x": 76,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_girondins_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_girondins_02",
+    "title": "Build a National Parliamentary Majority",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 21,
+    "x": 84,
+    "y": 55,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_girondins_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_girondins_03",
+    "title": "Strengthen Municipal Accountability",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 28,
+    "x": 76,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_04",
+    "title": "Negotiate a Legislative Compact",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 28,
+    "x": 84,
+    "y": 56,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_05",
+    "title": "Paris and the Provinces",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 14,
+    "x": 80,
+    "y": 57,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_03",
+        "FRA_nap_girondins_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_06",
+    "title": "Protect Petition and Association",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 21,
+    "x": 76,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_07",
+    "title": "Limit Extraordinary Tribunals",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 21,
+    "x": 84,
+    "y": 58,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_08",
+    "title": "Publish the Detention Registers",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 35,
+    "x": 76,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_09",
+    "title": "Separate Civil and Military Authority",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 28,
+    "x": 84,
+    "y": 59,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_10",
+    "title": "Liberty Under Pressure",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 14,
+    "x": 80,
+    "y": 60,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_08"
+      ],
+      [
+        "FRA_nap_girondins_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_11",
+    "title": "Seek a Broad Republican Coalition",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 35,
+    "x": 76,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_girondins_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_girondins_12",
+    "title": "Entrench a Legal Opposition",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 35,
+    "x": 84,
+    "y": 61,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_girondins_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_girondins_13",
+    "title": "Prepare a Post-Emergency Constitution",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 21,
+    "x": 80,
+    "y": 62,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_11",
+        "FRA_nap_girondins_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_girondins_14",
+    "title": "A Republic without Permanent Terror",
+    "chapter": "A Provincial Republic",
+    "route": "republican",
+    "days": 49,
+    "x": 80,
+    "y": 63,
+    "prerequisites": [
+      [
+        "FRA_nap_girondins_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_00",
+    "title": "A Jacobin Programme",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 14,
+    "x": 8,
+    "y": 66,
+    "prerequisites": [
+      [
+        "FRA_vive_la_republique"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_girondins_00"
+    ]
+  },
+  {
+    "id": "FRA_nap_jacobins_01",
+    "title": "Centralize the Emergency Mandate",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 21,
+    "x": 4,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_jacobins_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_jacobins_02",
+    "title": "Anchor Policy in the Sections",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 21,
+    "x": 12,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_jacobins_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_jacobins_03",
+    "title": "Coordinate the Committees",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 28,
+    "x": 4,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_04",
+    "title": "Organize Local Supply Reports",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 28,
+    "x": 12,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_05",
+    "title": "Mandates for Emergency Powers",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 14,
+    "x": 8,
+    "y": 69,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_03",
+        "FRA_nap_jacobins_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_06",
+    "title": "Inspect the Army Contractors",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 21,
+    "x": 4,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_07",
+    "title": "Expand Relief to Soldiers Families",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 21,
+    "x": 12,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_08",
+    "title": "Supervise Grain Deliveries",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 35,
+    "x": 4,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_09",
+    "title": "Define the Representatives Powers",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 28,
+    "x": 12,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_10",
+    "title": "Relief and Revolutionary Authority",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 14,
+    "x": 8,
+    "y": 72,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_08"
+      ],
+      [
+        "FRA_nap_jacobins_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_11",
+    "title": "Prioritize a Unified War Executive",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 35,
+    "x": 4,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_jacobins_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_jacobins_12",
+    "title": "Prioritize Civilian Relief",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 35,
+    "x": 12,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_jacobins_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_jacobins_13",
+    "title": "Review Exceptional Powers",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 21,
+    "x": 8,
+    "y": 74,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_11",
+        "FRA_nap_jacobins_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_jacobins_14",
+    "title": "The Republic under a Central Mandate",
+    "chapter": "The Jacobin Programme",
+    "route": "republican",
+    "days": 49,
+    "x": 8,
+    "y": 75,
+    "prerequisites": [
+      [
+        "FRA_nap_jacobins_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_00",
+    "title": "Coordinate the War Effort",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 14,
+    "x": 32,
+    "y": 66,
+    "prerequisites": [
+      [
+        "FRA_levee_en_masse_focus"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_01",
+    "title": "Prioritize the Front-Line Armies",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 21,
+    "x": 28,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emergency_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_emergency_02",
+    "title": "Prioritize the Home Departments",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 21,
+    "x": 36,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emergency_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_emergency_03",
+    "title": "Standardize Field Supply Returns",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 28,
+    "x": 28,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_04",
+    "title": "Improve Internal Communications",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 28,
+    "x": 36,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_05",
+    "title": "The Committee and the Army",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 14,
+    "x": 32,
+    "y": 69,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_03",
+        "FRA_nap_emergency_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_06",
+    "title": "Survey Internal Unrest",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 21,
+    "x": 28,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_07",
+    "title": "Protect the Grain Routes",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 21,
+    "x": 36,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_08",
+    "title": "Establish Local Mediation Channels",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 35,
+    "x": 28,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_09",
+    "title": "Regularize Emergency Levies",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 28,
+    "x": 36,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_10",
+    "title": "The Vendee Crisis",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 14,
+    "x": 32,
+    "y": 72,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_08"
+      ],
+      [
+        "FRA_nap_emergency_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_11",
+    "title": "Fund Sustained Military Administration",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 35,
+    "x": 28,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emergency_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_emergency_12",
+    "title": "Fund Civil Relief and Reconstruction",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 35,
+    "x": 36,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_emergency_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_emergency_13",
+    "title": "Prepare the Return to Ordinary Law",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 21,
+    "x": 32,
+    "y": 74,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_11",
+        "FRA_nap_emergency_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_emergency_14",
+    "title": "A Republic Able to Demobilize",
+    "chapter": "The Republic at War",
+    "route": "republican",
+    "days": 49,
+    "x": 32,
+    "y": 75,
+    "prerequisites": [
+      [
+        "FRA_nap_emergency_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_00",
+    "title": "Review the Executive Directory",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 14,
+    "x": 56,
+    "y": 66,
+    "prerequisites": [
+      [
+        "FRA_vive_la_republique"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_01",
+    "title": "Stabilize the Executive Councils",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 21,
+    "x": 52,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_directory_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_directory_02",
+    "title": "Broaden the Parliamentary Settlement",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 21,
+    "x": 60,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_directory_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_directory_03",
+    "title": "Regularize Ministerial Appointments",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 28,
+    "x": 52,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_04",
+    "title": "Secure Departmental Cooperation",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 28,
+    "x": 60,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_05",
+    "title": "A Constitution for Recovery",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 14,
+    "x": 56,
+    "y": 69,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_03",
+        "FRA_nap_directory_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_06",
+    "title": "Audit the Army Contracts",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 21,
+    "x": 52,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_07",
+    "title": "Investigate Fiscal Patronage",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 21,
+    "x": 60,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_08",
+    "title": "Restore Municipal Credit",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 35,
+    "x": 52,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_09",
+    "title": "Publish Electoral Procedures",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 28,
+    "x": 60,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_10",
+    "title": "Pressure on the Elections",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 14,
+    "x": 56,
+    "y": 72,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_08"
+      ],
+      [
+        "FRA_nap_directory_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_11",
+    "title": "Strengthen Civilian Supervision",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 35,
+    "x": 52,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_directory_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_directory_12",
+    "title": "Negotiate with the Military Leadership",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 35,
+    "x": 60,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_directory_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_directory_13",
+    "title": "Set Limits on Emergency Intervention",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 21,
+    "x": 56,
+    "y": 74,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_11",
+        "FRA_nap_directory_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_directory_14",
+    "title": "An Executive That Can Survive Peace",
+    "chapter": "The Directory Settlement",
+    "route": "directory",
+    "days": 49,
+    "x": 56,
+    "y": 75,
+    "prerequisites": [
+      [
+        "FRA_nap_directory_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_00",
+    "title": "Assess the Army of Italy",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 14,
+    "x": 80,
+    "y": 66,
+    "prerequisites": [
+      [
+        "FRA_italian_campaign"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_01",
+    "title": "Prioritize a Concentrated Advance",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 21,
+    "x": 76,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_italy_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_italy_02",
+    "title": "Prepare a Cautious Supply Programme",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 21,
+    "x": 84,
+    "y": 67,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_italy_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_italy_03",
+    "title": "Coordinate the Mountain Columns",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 28,
+    "x": 76,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_04",
+    "title": "Repair the Forward Magazines",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 28,
+    "x": 84,
+    "y": 68,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_05",
+    "title": "The Unpaid Army of Italy",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 14,
+    "x": 80,
+    "y": 69,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_03",
+        "FRA_nap_italy_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_06",
+    "title": "Train Mountain Reconnaissance",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 21,
+    "x": 76,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_07",
+    "title": "Coordinate Artillery on Narrow Roads",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 21,
+    "x": 84,
+    "y": 70,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_08",
+    "title": "Pay the Local Suppliers",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 35,
+    "x": 76,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_09",
+    "title": "Clarify the Commanders Authority",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 28,
+    "x": 84,
+    "y": 71,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_10",
+    "title": "Separate Peace or Continued Pursuit",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 14,
+    "x": 80,
+    "y": 72,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_08"
+      ],
+      [
+        "FRA_nap_italy_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_11",
+    "title": "Seek a Limited Diplomatic Settlement",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 35,
+    "x": 76,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_italy_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_italy_12",
+    "title": "Prepare a Sustained Italian Presence",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 35,
+    "x": 84,
+    "y": 73,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_italy_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_italy_13",
+    "title": "Inspect the Occupation Accounts",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 21,
+    "x": 80,
+    "y": 74,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_11",
+        "FRA_nap_italy_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_italy_14",
+    "title": "A Campaign with Political Objectives",
+    "chapter": "The Army of Italy",
+    "route": "campaign",
+    "days": 49,
+    "x": 80,
+    "y": 75,
+    "prerequisites": [
+      [
+        "FRA_nap_italy_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_00",
+    "title": "Review the Eastern Expedition",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 78,
+    "prerequisites": [
+      [
+        "FRA_egyptian_expedition"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_01",
+    "title": "Prioritize Naval Protection",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 21,
+    "x": 4,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_egypt_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_egypt_02",
+    "title": "Prioritize the Land Establishment",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 21,
+    "x": 12,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_egypt_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_egypt_03",
+    "title": "Prepare the Escort Squadrons",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 28,
+    "x": 4,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_04",
+    "title": "Stock the Expeditionary Depots",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 28,
+    "x": 12,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_05",
+    "title": "The Fleet and the Expedition",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 81,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_03",
+        "FRA_nap_egypt_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_06",
+    "title": "Train Interpreters and Surveyors",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 21,
+    "x": 4,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_07",
+    "title": "Organize Medical Stores",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 21,
+    "x": 12,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_08",
+    "title": "Establish Reliable Courier Routes",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 35,
+    "x": 4,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_09",
+    "title": "Inspect the Expedition Accounts",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 28,
+    "x": 12,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_10",
+    "title": "Scholars and Soldiers",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 14,
+    "x": 8,
+    "y": 84,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_08"
+      ],
+      [
+        "FRA_nap_egypt_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_11",
+    "title": "Preserve the Expeditionary Establishment",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 35,
+    "x": 4,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_egypt_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_egypt_12",
+    "title": "Prepare an Orderly Withdrawal",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 35,
+    "x": 12,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_egypt_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_egypt_13",
+    "title": "Protect the Returning Cadres",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 21,
+    "x": 8,
+    "y": 86,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_11",
+        "FRA_nap_egypt_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_egypt_14",
+    "title": "Lessons from the Eastern Expedition",
+    "chapter": "The Eastern Expedition",
+    "route": "campaign",
+    "days": 49,
+    "x": 8,
+    "y": 87,
+    "prerequisites": [
+      [
+        "FRA_nap_egypt_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_00",
+    "title": "Organize the Consular Administration",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 14,
+    "x": 32,
+    "y": 78,
+    "prerequisites": [
+      [
+        "FRA_brumaire_coup"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_01",
+    "title": "A Concentrated Executive",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 21,
+    "x": 28,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_consulate_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_consulate_02",
+    "title": "A Wider Consultative Settlement",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 21,
+    "x": 36,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_consulate_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_consulate_03",
+    "title": "Coordinate the Ministries",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 28,
+    "x": 28,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_04",
+    "title": "Regularize Legislative Consultation",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 28,
+    "x": 36,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_05",
+    "title": "Power and Ratification",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 14,
+    "x": 32,
+    "y": 81,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_03",
+        "FRA_nap_consulate_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_06",
+    "title": "Consolidate State Credit",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 21,
+    "x": 28,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_07",
+    "title": "Review the Civil Law Drafts",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 21,
+    "x": 36,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_08",
+    "title": "Reorganize the Tax Offices",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 35,
+    "x": 28,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_09",
+    "title": "Protect Administrative Continuity",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 28,
+    "x": 36,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_10",
+    "title": "Banking and the Civil Code",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 14,
+    "x": 32,
+    "y": 84,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_08"
+      ],
+      [
+        "FRA_nap_consulate_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_11",
+    "title": "A Uniform Administrative Hierarchy",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 35,
+    "x": 28,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_consulate_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_consulate_12",
+    "title": "A Negotiated Provincial Settlement",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 35,
+    "x": 36,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_consulate_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_consulate_13",
+    "title": "Review the Consular Institutions",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 21,
+    "x": 32,
+    "y": 86,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_11",
+        "FRA_nap_consulate_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_consulate_14",
+    "title": "A State beyond the Coup",
+    "chapter": "The Consular State",
+    "route": "consular",
+    "days": 49,
+    "x": 32,
+    "y": 87,
+    "prerequisites": [
+      [
+        "FRA_nap_consulate_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_00",
+    "title": "Survey the Imperial Administration",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 78,
+    "prerequisites": [
+      [
+        "FRA_proclaim_empire"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_01",
+    "title": "Strengthen the Prefects",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_empire_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_empire_02",
+    "title": "Rely on Established Local Elites",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_empire_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_empire_03",
+    "title": "Inspect Departmental Performance",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 28,
+    "x": 52,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_04",
+    "title": "Negotiate Local Cooperation",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_05",
+    "title": "Prefects and Notables",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 81,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_03",
+        "FRA_nap_empire_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_06",
+    "title": "Publish Imperial Revenue Estimates",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_07",
+    "title": "Coordinate Conscription Registers",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_08",
+    "title": "Inspect the Main Post Roads",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_09",
+    "title": "Professionalize Ministerial Reporting",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_10",
+    "title": "The Taxpayer and the Conscript",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 84,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_08"
+      ],
+      [
+        "FRA_nap_empire_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_11",
+    "title": "Centralize the Imperial Accounts",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_empire_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_empire_12",
+    "title": "Permit Provincial Adaptation",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 35,
+    "x": 60,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_empire_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_empire_13",
+    "title": "Audit the Costs of Expansion",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 21,
+    "x": 56,
+    "y": 86,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_11",
+        "FRA_nap_empire_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_empire_14",
+    "title": "An Empire That Can Administer Itself",
+    "chapter": "Administering the Empire",
+    "route": "imperial",
+    "days": 70,
+    "x": 56,
+    "y": 87,
+    "prerequisites": [
+      [
+        "FRA_nap_empire_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_00",
+    "title": "Review the Marshalate",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 14,
+    "x": 80,
+    "y": 78,
+    "prerequisites": [
+      [
+        "FRA_grande_armee_focus"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_01",
+    "title": "Promote Demonstrated Merit",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 21,
+    "x": 76,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_marshals_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_marshals_02",
+    "title": "Balance Seniority and Loyalty",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 21,
+    "x": 84,
+    "y": 79,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_marshals_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_marshals_03",
+    "title": "Inspect Independent Commands",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 28,
+    "x": 76,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_04",
+    "title": "Regularize the Service Records",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 28,
+    "x": 84,
+    "y": 80,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_05",
+    "title": "Merit and Seniority",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 14,
+    "x": 80,
+    "y": 81,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_03",
+        "FRA_nap_marshals_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_06",
+    "title": "Establish Corps Staff Standards",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 21,
+    "x": 76,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_07",
+    "title": "Coordinate March Tables",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 21,
+    "x": 84,
+    "y": 82,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_08",
+    "title": "Improve Liaison between Corps",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 35,
+    "x": 76,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_09",
+    "title": "Train Reserve Staff Officers",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 28,
+    "x": 84,
+    "y": 83,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_10",
+    "title": "Independent Corps in One Campaign",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 14,
+    "x": 80,
+    "y": 84,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_08"
+      ],
+      [
+        "FRA_nap_marshals_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_11",
+    "title": "Grant Operational Initiative",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 35,
+    "x": 76,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_marshals_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_marshals_12",
+    "title": "Emphasize Detailed Central Orders",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 35,
+    "x": 84,
+    "y": 85,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_marshals_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_marshals_13",
+    "title": "Rehearse the Concentration Plan",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 21,
+    "x": 80,
+    "y": 86,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_11",
+        "FRA_nap_marshals_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_marshals_14",
+    "title": "A Grande Armee of Coordinated Corps",
+    "chapter": "Marshals and Corps",
+    "route": "imperial",
+    "days": 70,
+    "x": 80,
+    "y": 87,
+    "prerequisites": [
+      [
+        "FRA_nap_marshals_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_00",
+    "title": "Survey the Allied Administrations",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 14,
+    "x": 8,
+    "y": 90,
+    "prerequisites": [
+      [
+        "FRA_confederation_rhine"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_01",
+    "title": "Favor Local Constitutional Partners",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 21,
+    "x": 4,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_clients_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_clients_02",
+    "title": "Favor Close Administrative Direction",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 21,
+    "x": 12,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_clients_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_clients_03",
+    "title": "Negotiate Local Contributions",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 28,
+    "x": 4,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_04",
+    "title": "Inspect the Dependent Ministries",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 28,
+    "x": 12,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_05",
+    "title": "Republics or Dependencies?",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 14,
+    "x": 8,
+    "y": 93,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_03",
+        "FRA_nap_clients_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_06",
+    "title": "Regularize Military Access",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 21,
+    "x": 4,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_07",
+    "title": "Coordinate Allied Supply Accounts",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 21,
+    "x": 12,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_08",
+    "title": "Review Local Officer Commissions",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 35,
+    "x": 4,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_09",
+    "title": "Publish Treaty Obligations",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 28,
+    "x": 12,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_10",
+    "title": "The Local Elites Seek Guarantees",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 14,
+    "x": 8,
+    "y": 96,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_08"
+      ],
+      [
+        "FRA_nap_clients_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_11",
+    "title": "Fund Durable Client Institutions",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 35,
+    "x": 4,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_clients_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_clients_12",
+    "title": "Limit the Burden of Military Contributions",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 35,
+    "x": 12,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_clients_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_clients_13",
+    "title": "Audit the Cost of the Network",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 21,
+    "x": 8,
+    "y": 98,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_11",
+        "FRA_nap_clients_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_clients_14",
+    "title": "Clients with Defined Rights and Duties",
+    "chapter": "The Client-State Network",
+    "route": "imperial",
+    "days": 70,
+    "x": 8,
+    "y": 99,
+    "prerequisites": [
+      [
+        "FRA_nap_clients_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_00",
+    "title": "Survey the Continental Ports",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 14,
+    "x": 32,
+    "y": 90,
+    "prerequisites": [
+      [
+        "FRA_continental_system_focus"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_01",
+    "title": "Enforce Uniform Commercial Rules",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 21,
+    "x": 28,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_continental_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_continental_02",
+    "title": "Permit Negotiated Exceptions",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 21,
+    "x": 36,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_continental_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_continental_03",
+    "title": "Coordinate Customs Reporting",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 28,
+    "x": 28,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_04",
+    "title": "Protect Essential Imports",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 28,
+    "x": 36,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_05",
+    "title": "Ports under Pressure",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 14,
+    "x": 32,
+    "y": 93,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_03",
+        "FRA_nap_continental_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_06",
+    "title": "Inspect the Customs Services",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 21,
+    "x": 28,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_07",
+    "title": "Protect Domestic Credit",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 21,
+    "x": 36,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_08",
+    "title": "Review Industrial Bottlenecks",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 35,
+    "x": 28,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_09",
+    "title": "Audit the Port Administrations",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 28,
+    "x": 36,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_10",
+    "title": "Smuggling and Exceptions",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 14,
+    "x": 32,
+    "y": 96,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_08"
+      ],
+      [
+        "FRA_nap_continental_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_11",
+    "title": "Fund a Sustained Customs Establishment",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 35,
+    "x": 28,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_continental_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_continental_12",
+    "title": "Relax Rules That Cannot Be Enforced",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 35,
+    "x": 36,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_continental_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_continental_13",
+    "title": "Review the Costs of the Blockade",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 21,
+    "x": 32,
+    "y": 98,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_11",
+        "FRA_nap_continental_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_continental_14",
+    "title": "An Economic Strategy with Limits",
+    "chapter": "The Continental System",
+    "route": "imperial",
+    "days": 70,
+    "x": 32,
+    "y": 99,
+    "prerequisites": [
+      [
+        "FRA_nap_continental_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_00",
+    "title": "Assess the Iberian Commitment",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 90,
+    "prerequisites": [
+      [
+        "FRA_invade_iberia"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_01",
+    "title": "Concentrate the Main Field Army",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_peninsula_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_peninsula_02",
+    "title": "Protect Communications First",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_peninsula_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_peninsula_03",
+    "title": "Coordinate the Operational Columns",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 28,
+    "x": 52,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_04",
+    "title": "Strengthen the Supply Garrisons",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_05",
+    "title": "Roads without Security",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 93,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_03",
+        "FRA_nap_peninsula_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_06",
+    "title": "Inspect Local Supply Agreements",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 21,
+    "x": 52,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_07",
+    "title": "Regularize Civilian Compensation",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 21,
+    "x": 60,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_08",
+    "title": "Review the Intelligence Reports",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_09",
+    "title": "Secure the Courier Network",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 28,
+    "x": 60,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_10",
+    "title": "The Question of Local Authority",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 14,
+    "x": 56,
+    "y": 96,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_08"
+      ],
+      [
+        "FRA_nap_peninsula_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_11",
+    "title": "Fund a Sustained Military Presence",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 35,
+    "x": 52,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_peninsula_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_peninsula_12",
+    "title": "Prepare a Limited Political Settlement",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 35,
+    "x": 60,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_peninsula_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_peninsula_13",
+    "title": "Measure the True Cost of the Campaign",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 21,
+    "x": 56,
+    "y": 98,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_11",
+        "FRA_nap_peninsula_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_peninsula_14",
+    "title": "A Strategy for the Peninsula",
+    "chapter": "The Peninsular Commitment",
+    "route": "imperial",
+    "days": 70,
+    "x": 56,
+    "y": 99,
+    "prerequisites": [
+      [
+        "FRA_nap_peninsula_13"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_00",
+    "title": "Estimate the Eastern Distances",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 80,
+    "y": 90,
+    "prerequisites": [
+      [
+        "FRA_invade_russia"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_01",
+    "title": "Prioritize a Rapid Concentration",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 76,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_russia_02"
+    ]
+  },
+  {
+    "id": "FRA_nap_russia_02",
+    "title": "Prepare for a Prolonged Campaign",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 84,
+    "y": 91,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_00"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_russia_01"
+    ]
+  },
+  {
+    "id": "FRA_nap_russia_03",
+    "title": "Coordinate the Forward Echelons",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 76,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_01"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_04",
+    "title": "Build Redundant Supply Plans",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 84,
+    "y": 92,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_02"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_05",
+    "title": "Preparing for Distance",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 80,
+    "y": 93,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_03",
+        "FRA_nap_russia_04"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_06",
+    "title": "Record the Condition of the Army",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 76,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_07",
+    "title": "Preserve the Experienced Cadres",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 84,
+    "y": 94,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_05"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_08",
+    "title": "Survey the Remaining Magazines",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 76,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_06"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_09",
+    "title": "Plan an Orderly Withdrawal",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 28,
+    "x": 84,
+    "y": 95,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_07"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_10",
+    "title": "The Costs of Retreat",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 14,
+    "x": 80,
+    "y": 96,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_08"
+      ],
+      [
+        "FRA_nap_russia_09"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_11",
+    "title": "Rebuild around Veteran Formations",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 76,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_russia_12"
+    ]
+  },
+  {
+    "id": "FRA_nap_russia_12",
+    "title": "Prioritize Civil and Military Recovery",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 35,
+    "x": 84,
+    "y": 97,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_10"
+      ]
+    ],
+    "exclusive": [
+      "FRA_nap_russia_11"
+    ]
+  },
+  {
+    "id": "FRA_nap_russia_13",
+    "title": "Review the Political Settlement",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 21,
+    "x": 80,
+    "y": 98,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_11",
+        "FRA_nap_russia_12"
+      ]
+    ],
+    "exclusive": []
+  },
+  {
+    "id": "FRA_nap_russia_14",
+    "title": "A State Capable of Surviving Defeat",
+    "chapter": "Distance and Recovery",
+    "route": "late_imperial",
+    "days": 70,
+    "x": 80,
+    "y": 99,
+    "prerequisites": [
+      [
+        "FRA_nap_russia_13"
+      ]
+    ],
+    "exclusive": []
+  }
+]

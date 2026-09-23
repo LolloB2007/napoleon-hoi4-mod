@@ -1,59 +1,39 @@
-# Kingdom of Prussia — 1789.5.5 start
-# Frederick William II reigns three years after Frederick the Great's death.
-# The army still wears the great man's reputation — but the substance is decaying.
-# The catastrophe of Jena-Auerstedt is seventeen years away.
-
-capital = 64                               # Brandenburg state — verify ID
-
-oob = "PRU_1789"
-
+capital = 64
+oob = PRU_1789
 set_research_slots = 3
 set_stability = 0.60
 set_war_support = 0.45
 set_convoys = 30
-
 set_technology = {
 	musket_research_1 = 1
 	bayonet_drill = 1
 	grenadier_company = 1
-	guard_organization = 1                  # Foot Guards regiments
-
+	guard_organization = 1
 	cavalry_research_1 = 1
 	horse_breeding = 1
-
-	artillery_research_1 = 1                # Frederician artillery, technically good
+	artillery_research_1 = 1
 	siege_engineering = 1
-
 	support_research_1 = 1
 	square_drill_training = 1
-
 	scout_squadrons_1 = 1
 	courier_corps_1 = 1
 	intelligence_networks_1 = 1
-
-	sloop_1 = 1                             # token coastal vessels
+	sloop_1 = 1
 }
-
-# === Politics ===
-# neutrality = "Crown / Frederician absolutism"; democratic = "Reform party (Stein, Hardenberg)";
-# fascism = "Reactionary Junker faction"; communism = "Jacobin sympathisers (small)"
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1786.8.17"             # Frederick William II's accession
+	last_election = 1786.8.17
 	election_frequency = 0
 	elections_allowed = no
 }
-
 set_popularities = {
-	neutrality = 65                         # Crown party
-	democratic = 20                         # Reform-minded officials & officers
-	fascism = 13                            # Hardline Junker conservatism
-	communism = 2                           # Tiny radical fringe
+	neutrality = 65
+	democratic = 20
+	fascism = 13
+	communism = 2
 }
-
 set_country_flag = frederician_state
 set_country_flag = army_with_a_state
-
 add_ideas = {
 	frederician_inheritance
 	prussian_army_drill
@@ -61,113 +41,102 @@ add_ideas = {
 	cabinet_politics
 	magazine_system
 }
-
-# === Leadership ===
-
 create_country_leader = {
 	name = "Friedrich Wilhelm II"
 	desc = "Frederick the Great's nephew. Sensual, indecisive, content to live off his uncle's legacy."
-	# 	picture = "Portrait_PRU_FW2.dds"
-	# expire = "1797.11.16"
 	ideology = despotism
-	traits = { weak_willed }
+	traits = {
+		weak_willed
+	}
 }
-
-create_country_leader = {
-	name = "Friedrich Wilhelm III"
-	desc = "Inherits the throne and the catastrophe of Jena. Will survive long enough to see the army of liberation."
-	# 	picture = "Portrait_PRU_FW3.dds"
-	# expire = "1840.6.7"
-	ideology = despotism
-	traits = { stout_defender }
-}
-
-create_country_leader = {
-	name = "Karl August von Hardenberg"
-	desc = "Architect of post-Jena reform. Chancellor 1810-1822."
-	# 	picture = "Portrait_PRU_Hardenberg.dds"
-	# expire = "1822.11.26"
-	ideology = conservatism
-	traits = { reformer }
-}
-
-# === Field marshals & generals ===
-
 create_field_marshal = {
 	name = "Karl Wilhelm Ferdinand, Herzog von Braunschweig"
 	desc = "Commander-in-chief. Issued the infamous Brunswick Manifesto in 1792. Mortally wounded at Auerstedt."
-	# 	picture = "Portrait_PRU_Brunswick.dds"
-	# expire = "1806.11.10"
-	traits = { old_guard defensive_doctrine }
+	traits = {
+		old_guard
+		defensive_doctrine
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 3
 }
-
 create_field_marshal = {
 	name = "Wichard von Möllendorff"
 	desc = "Veteran of the Silesian Wars. The grand old man of the Frederician army."
-	traits = { old_guard defensive_doctrine }
+	traits = {
+		old_guard
+		defensive_doctrine
+	}
 	skill = 3
 	attack_skill = 2
 	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 3
 }
-
 create_corps_commander = {
 	name = "Gebhard Leberecht von Blücher"
 	desc = "Hussar veteran. 47 years old. Will be hailed as Marschall Vorwärts at Waterloo a quarter century from now."
-	# 	picture = "Portrait_PRU_Blucher.dds"
-	traits = { trait_reckless cavalry_officer infantry_officer war_hero }
+	traits = {
+		trait_reckless
+		cavalry_officer
+		infantry_officer
+		war_hero
+	}
 	skill = 4
 	attack_skill = 5
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 3
 }
-
 create_corps_commander = {
 	name = "Friedrich Ludwig zu Hohenlohe-Ingelfingen"
 	desc = "Will surrender his army at Prenzlau after Jena."
-	traits = { politically_connected harsh_leader }
+	traits = {
+		politically_connected
+		harsh_leader
+	}
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
 }
-
 create_corps_commander = {
 	name = "Gerhard von Scharnhorst"
 	desc = "Major. The thinker who will rebuild the Prussian army after Jena."
-	# 	picture = "Portrait_PRU_Scharnhorst.dds"
-	traits = { trait_engineer organizer brilliant_strategist }
+	traits = {
+		trait_engineer
+		organizer
+		brilliant_strategist
+	}
 	skill = 5
 	attack_skill = 4
 	defense_skill = 5
 	planning_skill = 5
 	logistics_skill = 5
 }
-
 create_corps_commander = {
 	name = "August Neidhardt von Gneisenau"
 	desc = "Young engineer captain. Will be Blücher's chief of staff and the brain of the army."
-	# 	picture = "Portrait_PRU_Gneisenau.dds"
-	traits = { trait_engineer organizer }
+	traits = {
+		trait_engineer
+		organizer
+	}
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 5
 	logistics_skill = 5
 }
-
 create_corps_commander = {
 	name = "Ludwig Yorck von Wartenburg"
 	desc = "Hard, stubborn, independent. Will defect from Napoleon's Russian disaster with the Convention of Tauroggen."
-	traits = { harsh_leader brilliant_strategist }
+	traits = {
+		harsh_leader
+		brilliant_strategist
+	}
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4

@@ -1,0 +1,90 @@
+[
+  {
+    "round": 1,
+    "name": "First Coalition",
+    "earliest": "1792.4.19",
+    "context": "FRA = { has_country_flag = french_revolutionary_path has_war = yes }",
+    "invitees": [
+      "HAB",
+      "PRU",
+      "SPR",
+      "POR",
+      "SAR",
+      "NAP",
+      "NET"
+    ]
+  },
+  {
+    "round": 2,
+    "name": "Second Coalition",
+    "earliest": "1798.1.1",
+    "context": "FRA = { OR = { has_country_flag = directory_active has_country_flag = consulate_established } }",
+    "invitees": [
+      "HAB",
+      "RUS",
+      "POR",
+      "NAP"
+    ]
+  },
+  {
+    "round": 3,
+    "name": "Third Coalition",
+    "earliest": "1805.1.1",
+    "context": "FRA = { has_country_flag = empire_of_the_french }",
+    "invitees": [
+      "HAB",
+      "RUS",
+      "SWE",
+      "NAP"
+    ]
+  },
+  {
+    "round": 4,
+    "name": "Fourth Coalition",
+    "earliest": "1806.1.1",
+    "context": "FRA = { has_country_flag = empire_of_the_french }",
+    "invitees": [
+      "PRU",
+      "RUS",
+      "SWE",
+      "SAX"
+    ]
+  },
+  {
+    "round": 5,
+    "name": "Fifth Coalition",
+    "earliest": "1809.1.1",
+    "context": "FRA = { has_country_flag = empire_of_the_french }",
+    "invitees": [
+      "HAB",
+      "POR",
+      "SPR"
+    ]
+  },
+  {
+    "round": 6,
+    "name": "Sixth Coalition",
+    "earliest": "1813.1.1",
+    "context": "FRA = { has_country_flag = grande_armee_destroyed }",
+    "invitees": [
+      "PRU",
+      "RUS",
+      "HAB",
+      "SWE",
+      "POR",
+      "SPR"
+    ]
+  },
+  {
+    "round": 7,
+    "name": "Seventh Coalition",
+    "earliest": "1815.1.1",
+    "context": "FRA = { has_country_flag = hundred_days }",
+    "invitees": [
+      "PRU",
+      "RUS",
+      "HAB",
+      "POR"
+    ]
+  }
+]

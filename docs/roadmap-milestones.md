@@ -377,32 +377,34 @@ After the five-power core is mature, expand the playable world.
 
 Recommended order:
 
-- [ ] Spain
-- [ ] Poland / Duchy of Warsaw
-- [ ] Ottoman Empire
-- [ ] Sweden
-- [ ] Italian states
-- [ ] German minors
-- [ ] Portugal
-- [ ] Netherlands
-- [ ] United States
+- [x] Spain
+- [x] Poland / Duchy of Warsaw
+- [x] Ottoman Empire
+- [x] Sweden
+- [x] Italian states
+- [x] German minors
+- [x] Portugal
+- [x] Netherlands
+- [x] United States
 
 ### For each expansion country
 
-- [ ] Focus tree
-- [ ] Events
-- [ ] Decisions
-- [ ] Leaders / characters
-- [ ] National spirits
-- [ ] Military setup
-- [ ] Historical route
-- [ ] Credible alternate-history route
-- [ ] Interaction with major-power systems
-- [ ] Localisation
+- [x] Focus tree
+- [x] Events
+- [x] Decisions
+- [x] Leaders / characters
+- [x] National spirits
+- [x] Military setup
+- [x] Historical route
+- [x] Credible alternate-history route
+- [x] Interaction with major-power systems
+- [x] Localisation
 
 ### Done when
 
 Secondary powers offer distinct campaigns and participate naturally in the European systems rather than existing only as targets for the five great powers.
+
+**Implementation status:** complete. Thirteen campaign packs provide 299 focuses, 52 events, 39 recurring decisions and 65 national spirits. Existing European 1789 histories/OOBs remain the military baseline; the shared German campaign also fills missing political histories for Baden, Hesse and Mecklenburg, while the United States receives a Washington-era political/character baseline. WAR, BAT and HOL inherit the relevant Polish or Dutch campaign when they exist. Territorial integration, formable borders and a detailed North American map remain approval-gated rather than being silently inferred. Runtime acceptance in HOI4 is still pending.
 
 ---
 

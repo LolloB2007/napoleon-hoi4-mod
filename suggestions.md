@@ -17,3 +17,11 @@ These are proposals, not approvals. Evaluate them against a playable campaign an
 | Asset provenance ledger | Avoid unlicensed redistribution | A10 |
 
 The end date, chronology policy, speculative political routes and expanded core eligibility are unchanged until approved.
+
+
+## Secondary-campaign follow-up ideas
+
+- Replace the reusable four-event policy skeleton with bespoke multi-event crisis chains once in-game pacing is measured.
+- Add dynamic transition events for WAR, BAT and HOL so their inherited Polish/Dutch campaigns acknowledge the regime change explicitly.
+- Give the represented German principalities differentiated diplomacy panels after the shared regional campaign proves stable in play.
+- Reconstruct the United States' 1789 territorial and military map only after geographic-scope decision A07 is answered.

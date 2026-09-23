@@ -1,0 +1,169 @@
+nap_coalition_start_1 = { if = { limit = { nap_coalition_1_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_1_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 1 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+PRU = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+SPR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+POR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+SAR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+NAP = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+NET = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_1 days = 60 } country_event = { id = nap_coalition.101 days = 3 } } }
+ }
+} }
+nap_coalition_start_2 = { if = { limit = { nap_coalition_2_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_2_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 2 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_2 days = 60 } country_event = { id = nap_coalition.102 days = 3 } } }
+RUS = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_2 days = 60 } country_event = { id = nap_coalition.102 days = 3 } } }
+POR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_2 days = 60 } country_event = { id = nap_coalition.102 days = 3 } } }
+NAP = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_2 days = 60 } country_event = { id = nap_coalition.102 days = 3 } } }
+ }
+} }
+nap_coalition_start_3 = { if = { limit = { nap_coalition_3_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_3_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 3 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_3 days = 60 } country_event = { id = nap_coalition.103 days = 3 } } }
+RUS = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_3 days = 60 } country_event = { id = nap_coalition.103 days = 3 } } }
+SWE = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_3 days = 60 } country_event = { id = nap_coalition.103 days = 3 } } }
+NAP = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_3 days = 60 } country_event = { id = nap_coalition.103 days = 3 } } }
+ }
+} }
+nap_coalition_start_4 = { if = { limit = { nap_coalition_4_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_4_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 4 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ PRU = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_4 days = 60 } country_event = { id = nap_coalition.104 days = 3 } } }
+RUS = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_4 days = 60 } country_event = { id = nap_coalition.104 days = 3 } } }
+SWE = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_4 days = 60 } country_event = { id = nap_coalition.104 days = 3 } } }
+SAX = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_4 days = 60 } country_event = { id = nap_coalition.104 days = 3 } } }
+ }
+} }
+nap_coalition_start_5 = { if = { limit = { nap_coalition_5_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_5_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 5 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_5 days = 60 } country_event = { id = nap_coalition.105 days = 3 } } }
+POR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_5 days = 60 } country_event = { id = nap_coalition.105 days = 3 } } }
+SPR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_5 days = 60 } country_event = { id = nap_coalition.105 days = 3 } } }
+ }
+} }
+nap_coalition_start_6 = { if = { limit = { nap_coalition_6_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_6_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 6 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ PRU = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_6 days = 60 } country_event = { id = nap_coalition.106 days = 3 } } }
+RUS = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_6 days = 60 } country_event = { id = nap_coalition.106 days = 3 } } }
+HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_6 days = 60 } country_event = { id = nap_coalition.106 days = 3 } } }
+SWE = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_6 days = 60 } country_event = { id = nap_coalition.106 days = 3 } } }
+POR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_6 days = 60 } country_event = { id = nap_coalition.106 days = 3 } } }
+SPR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_6 days = 60 } country_event = { id = nap_coalition.106 days = 3 } } }
+ }
+} }
+nap_coalition_start_7 = { if = { limit = { nap_coalition_7_eligible = yes }
+ nap_era_initialize = yes
+ create_faction_from_template = { template = nap_coalition_template name = nap_coalition_7_name }
+ if = { limit = { has_faction_template = nap_coalition_template is_faction_leader = yes }
+ set_global_flag = nap_coalition_active
+ set_country_flag = nap_coalition_host
+ set_country_flag = nap_coalition_member
+ set_variable = { nap_coalition_round = 7 }
+ add_ideas = nap_coalition_coordination
+ if = { limit = { NOT = { has_war_with = FRA } } declare_war_on = { target = FRA type = annex_everything } }
+ PRU = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_7 days = 60 } country_event = { id = nap_coalition.107 days = 3 } } }
+RUS = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_7 days = 60 } country_event = { id = nap_coalition.107 days = 3 } } }
+HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_7 days = 60 } country_event = { id = nap_coalition.107 days = 3 } } }
+POR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_7 days = 60 } country_event = { id = nap_coalition.107 days = 3 } } }
+ }
+} }
+nap_coalition_end_round = {
+ if = { limit = { has_global_flag = nap_coalition_active NOT = { has_global_flag = nap_coalition_peace_busy } }
+  set_global_flag = nap_coalition_peace_busy clr_global_flag = nap_coalition_active
+  if = { limit = { ENG = { check_variable = { nap_coalition_round = 1 } } } set_global_flag = nap_coalition_1_finished }
+if = { limit = { ENG = { check_variable = { nap_coalition_round = 2 } } } set_global_flag = nap_coalition_2_finished }
+if = { limit = { ENG = { check_variable = { nap_coalition_round = 3 } } } set_global_flag = nap_coalition_3_finished }
+if = { limit = { ENG = { check_variable = { nap_coalition_round = 4 } } } set_global_flag = nap_coalition_4_finished }
+if = { limit = { ENG = { check_variable = { nap_coalition_round = 5 } } } set_global_flag = nap_coalition_5_finished }
+if = { limit = { ENG = { check_variable = { nap_coalition_round = 6 } } } set_global_flag = nap_coalition_6_finished }
+if = { limit = { ENG = { check_variable = { nap_coalition_round = 7 } } } set_global_flag = nap_coalition_7_finished }
+  every_country = { limit = { is_in_faction_with = ENG has_faction_template = nap_coalition_template ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template } } set_country_flag = nap_coalition_member }
+  every_country = { limit = { has_country_flag = nap_coalition_member }
+   clr_country_flag = nap_coalition_member set_country_flag = nap_coalition_settlement_pending
+   set_country_flag = { flag = nap_coalition_cooldown days = 365 }
+   remove_ideas = nap_coalition_coordination
+   if = { limit = { NOT = { tag = ENG } is_in_faction_with = ENG ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template } } ENG = { remove_from_faction = PREV } }
+  }
+  ENG = { if = { limit = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template is_faction_leader = yes } dismantle_faction = yes } clr_country_flag = nap_coalition_host }
+  every_country = { limit = { has_country_flag = nap_coalition_settlement_pending }
+   clr_country_flag = nap_coalition_settlement_pending
+   if = { limit = { has_war_with = FRA } white_peace = FRA }
+   nap_era_initialize = yes add_to_variable = { nap_war_exhaustion = -8 } nap_era_clamp = yes
+  }
+  clr_global_flag = nap_coalition_peace_busy
+ }
+}
+nap_coalition_separate_peace = {
+ if = { limit = { has_country_flag = nap_coalition_member NOT = { has_global_flag = nap_coalition_peace_busy } }
+  if = { limit = { tag = ENG } nap_coalition_end_round = yes }
+  else = {
+   set_global_flag = nap_coalition_peace_busy
+   clr_country_flag = nap_coalition_member clr_country_flag = nap_coalition_peace_requested
+   set_country_flag = { flag = nap_coalition_cooldown days = 365 } remove_ideas = nap_coalition_coordination
+   if = { limit = { is_in_faction_with = ENG ENG = { has_country_flag = nap_coalition_host has_faction_template = nap_coalition_template } } ENG = { remove_from_faction = PREV } }
+   if = { limit = { has_war_with = FRA } white_peace = FRA }
+   nap_era_initialize = yes add_to_variable = { nap_war_exhaustion = -8 } nap_era_clamp = yes
+   clr_global_flag = nap_coalition_peace_busy
+  }
+ }
+}
+
+nap_coalition_subsidize_HAB = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } HAB = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } HAB = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_PRU = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } PRU = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } PRU = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_RUS = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } RUS = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } RUS = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_SPR = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } SPR = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } SPR = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_POR = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } POR = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } POR = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_SWE = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } SWE = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } SWE = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_DEN = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } DEN = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } DEN = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_NET = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } NET = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } NET = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_SAR = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } SAR = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } SAR = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_NAP = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } NAP = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } NAP = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_BAV = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } BAV = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } BAV = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }
+nap_coalition_subsidize_SAX = { if = { limit = { tag = ENG has_country_flag = nap_coalition_host has_global_flag = nap_coalition_active NOT = { check_variable = { nap_treasury < 15 } } SAX = { has_country_flag = nap_coalition_member has_war_with = FRA NOT = { check_variable = { nap_treasury > 85 } } } } add_to_variable = { nap_treasury = -15 } SAX = { add_to_variable = { nap_treasury = 15 } add_to_variable = { nap_war_exhaustion = -3 } nap_era_clamp = yes } nap_era_clamp = yes } }

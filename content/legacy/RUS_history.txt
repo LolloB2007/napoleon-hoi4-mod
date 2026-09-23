@@ -1,0 +1,215 @@
+# Russian Empire — 1789.5.5 start
+# Catherine II reigns in her 27th year. Russia is at war with the Ottomans (Potemkin in the south,
+# Suvorov in the field) and with Sweden in the north (Gustav III's gamble).
+# Two partitions of Poland are still to come (1793, 1795).
+
+capital = 195                              # Leningrad / St Petersburg state — verify ID
+
+oob = "RUS_1789"
+
+set_research_slots = 3
+set_stability = 0.55
+set_war_support = 0.50
+set_convoys = 100
+
+set_technology = {
+	musket_research_1 = 1
+	bayonet_drill = 1                       # Suvorov: "the bullet is a fool, the bayonet a fine fellow"
+	grenadier_company = 1
+
+	cavalry_research_1 = 1
+	horse_breeding = 1
+	irregular_levy = 1                      # Cossack hosts
+
+	artillery_research_1 = 1
+	siege_engineering = 1
+
+	support_research_1 = 1
+
+	scout_squadrons_1 = 1
+	courier_corps_1 = 1
+	intelligence_networks_1 = 1
+
+	sloop_1 = 1
+	frigate_1 = 1
+	ship_of_the_line_1 = 1                  # Baltic + new Black Sea fleet
+	naval_doctrine_line_ahead = 1
+}
+
+# === Politics ===
+# neutrality = "Autocracy" (Catherine's court); democratic = "Constitutionalist nobles";
+# fascism = "Old Believers / reactionary"; communism = "Peasant rising / radical"
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1762.7.9"             # Catherine's coup
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 70                        # Imperial court
+	democratic = 15                        # Reform-minded nobility (Novikov, future Decembrists)
+	fascism = 10                           # Reactionary Orthodox & Old Believers
+	communism = 5                          # Peasant rebellion sympathies (Pugachev's ghost)
+}
+
+set_country_flag = russian_autocracy
+set_country_flag = russo_turkish_war_active
+set_country_flag = russo_swedish_war_active
+
+add_ideas = {
+	catherinian_glory
+	russian_imperial_army
+	cossack_hosts
+	vast_distances
+	mixed_logistics
+	serfdom_economy
+}
+
+# === Leadership ===
+
+create_country_leader = {
+	name = "Catherine II"
+	desc = "Catherine the Great. German-born usurper turned Russian empress, friend of philosophes and conqueror of the Crimea."
+	# 	picture = "Portrait_RUS_Catherine.dds"
+	# expire = "1796.11.17"
+	ideology = despotism
+	traits = { silver_tongued reformer }
+}
+
+create_country_leader = {
+	name = "Paul I"
+	desc = "Catherine's neglected son. Anglophobe, militarist, mercurial. Will reign briefly and be murdered."
+	# 	picture = "Portrait_RUS_Paul.dds"
+	# expire = "1801.3.23"
+	ideology = despotism
+	traits = { paranoia }
+}
+
+create_country_leader = {
+	name = "Alexander I"
+	desc = "The Northern Sphinx. Began as a liberal reformer, became the architect of the Holy Alliance."
+	# 	picture = "Portrait_RUS_Alexander.dds"
+	# expire = "1825.12.1"
+	ideology = despotism
+	traits = { silver_tongued the_cloak_n_dagger_schemer }
+}
+
+# === Field marshals & generals ===
+
+create_field_marshal = {
+	name = "Aleksandr Vasilyevich Suvorov"
+	desc = "Never lost a battle. Master of speed, attack, and the bayonet. Currently fighting in the south."
+	# 	picture = "Portrait_RUS_Suvorov.dds"
+	traits = { old_guard war_hero offensive_doctrine inspirational_leader }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 4
+	legacy_id = -1
+}
+
+create_field_marshal = {
+	name = "Grigory Potemkin"
+	desc = "Catherine's favourite. Builder of the Black Sea Fleet, conqueror of the Crimea. Dies 1791."
+	# 	picture = "Portrait_RUS_Potemkin.dds"
+	# expire = "1791.10.16"
+	traits = { politically_connected organizer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 5
+}
+
+create_field_marshal = {
+	name = "Pyotr Rumyantsev"
+	desc = "Victor at Kagul and Larga. The grand old man of Russian arms."
+	traits = { old_guard war_hero }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Mikhail Kutuzov"
+	desc = "Recovering from a head wound that took out his right eye at Ochakov. Will trade Moscow for the destruction of the Grande Armée in 1812."
+	# 	picture = "Portrait_RUS_Kutuzov.dds"
+	traits = { defensive_doctrine old_guard }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Pyotr Bagration"
+	desc = "Georgian prince, Suvorov's protégé. Lion of the army."
+	# 	picture = "Portrait_RUS_Bagration.dds"
+	traits = { trait_reckless cavalry_officer infantry_officer }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Mikhail Barclay de Tolly"
+	desc = "Scottish-Baltic-German Russian. Architect of the scorched-earth strategy of 1812 — and hated for it."
+	# 	picture = "Portrait_RUS_Barclay.dds"
+	traits = { defensive_doctrine organizer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Matvei Platov"
+	desc = "Ataman of the Don Cossacks."
+	traits = { cavalry_officer trait_reckless }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Nikolai Repnin"
+	traits = { politically_connected }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "Fyodor Ushakov"
+	desc = "Father of the Black Sea Fleet. Will revolutionise Russian naval tactics."
+	# 	picture = "Portrait_RUS_Ushakov.dds"
+	traits = { spotter bold seawolf }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	maneuvering_skill = 5
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Vasily Chichagov"
+	desc = "Baltic Fleet commander against the Swedes."
+	traits = { old_guard_navy }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}

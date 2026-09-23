@@ -1,0 +1,12 @@
+# United States — 1789 political baseline. Territorial reconstruction is A07.
+capital = 358
+set_research_slots = 3
+set_stability = 0.75
+set_war_support = 0.20
+set_convoys = 80
+set_technology = { musket_research_1 = 1 bayonet_drill = 1 cavalry_research_1 = 1 artillery_research_1 = 1 support_research_1 = 1 courier_corps_1 = 1 frigate_1 = 1 sloop_1 = 1 }
+set_politics = { ruling_party = democratic last_election = "1789.1.7" election_frequency = 48 elections_allowed = yes }
+set_popularities = { democratic = 80 neutrality = 15 communism = 3 fascism = 2 }
+set_country_flag = american_federal_republic
+create_country_leader = { name = "George Washington" ideology = conservatism traits = { popular_figurehead } }
+create_corps_commander = { name = "Anthony Wayne" skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
