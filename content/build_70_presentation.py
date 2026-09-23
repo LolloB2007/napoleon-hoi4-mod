@@ -69,6 +69,15 @@ def _slug(value):
     value=re.sub(r"[^A-Z0-9]+","_",value).strip("_")
     return value[:72] or "UNKNOWN"
 
+def _focus_slug(value):
+    """Keep GFX identifiers bounded without collapsing long focus IDs."""
+    clean=value.encode("ascii","ignore").decode().upper()
+    clean=re.sub(r"[^A-Z0-9]+","_",clean).strip("_") or "UNKNOWN"
+    if len(clean)<=72:
+        return clean
+    digest=hashlib.sha256(value.encode("utf-8")).hexdigest()[:11].upper()
+    return clean[:60]+"_"+digest
+
 def _shade(rgb, delta):
     return tuple(max(0,min(255,c+delta)) for c in rgb)
 
@@ -365,7 +374,7 @@ def _patch_focuses(text,updates,interface):
         block=text[start:end]
         m=re.search(r"\bid\s*=\s*([A-Za-z0-9_]+)",block)
         if not m: continue
-        fid=m.group(1); gfx="GFX_NAP_FOCUS_"+_slug(fid)
+        fid=m.group(1); focus_slug=_focus_slug(fid); gfx="GFX_NAP_FOCUS_"+focus_slug
         if re.search(r"\bicon\s*=",block):
             block=re.sub(r"\bicon\s*=\s*[^\s}]+",f"icon = {gfx}",block,count=1)
         else:
@@ -377,7 +386,7 @@ def _patch_focuses(text,updates,interface):
             path=f"gfx/interface/goals/nap_deep_variant_{variant:02d}.tga"
             seed=f"nap-deep-focus-{variant:02d}"
         else:
-            path=f"gfx/interface/goals/{_slug(fid).lower()}.tga"
+            path=f"gfx/interface/goals/{focus_slug.lower()}.tga"
             seed=fid
         if path not in updates:
             updates[path]=tga(FOCUS_W,FOCUS_H,art_pixel(seed,"focus",FOCUS_W,FOCUS_H))
