@@ -1,9 +1,15 @@
 """Deep secondary-country focus expansion.
 
-Every existing secondary campaign grows from 23 to 175 focuses.  Two 19-focus
-branches per campaign are explicitly country-specific (38 personalised focuses);
+Every secondary country with existing content receives an effective 175-focus
+campaign.  Two 19-focus branches are country-specific (38 personalised focuses);
 six additional 19-focus branches provide administrative, fiscal, military,
 infrastructure, diplomatic and social depth.
+
+The German-principality regional tree is special: its six generic branches are
+shared, while Bavaria, Saxony, Hanover, Wurttemberg, Baden, Hesse and
+Mecklenburg each receive their own two 19-focus branches.  The file therefore
+contains more than 175 definitions, but each playable principality has exactly
+175 applicable focuses: 23 baseline + 114 shared depth + 38 tag-specific.
 """
 from __future__ import annotations
 import json
@@ -21,10 +27,19 @@ PERSONALISED={
  'papal':[('Temporal Government of the Papal States','the temporal administration, legations and provincial government'),('Curia, Reform and Public Order','the Roman Curia, reforming officials and public order')],
  'venice':[('The Patrician Republic','the Great Council, patrician government and mainland administration'),('The Arsenal and Adriatic Commerce','the Venetian Arsenal, Adriatic fleet and maritime commerce')],
  'tuscany':[('The Leopoldine State','Leopoldine legal reform, administration and civic government'),('Agriculture and Public Works','Tuscan agriculture, drainage, roads and public works')],
- 'german_princes':[('Imperial Circles and Territorial Estates','the Imperial Circles, territorial estates and princely administrations'),('A Confederal Defence System','German contingent armies, magazines and coordinated defence')],
  'portugal':[('The Pombaline State','Pombaline institutions, royal administration and Lisbon finance'),('Atlantic Empire and the Tagus','the Tagus defences, Atlantic trade and imperial communications')],
  'netherlands':[('States General and Provincial Estates','the States General, provincial estates and federal government'),('Amsterdam Credit and Maritime Trade','Amsterdam credit, merchant shipping and Dutch maritime commerce')],
  'usa':[('The Federal Institutions','the presidency, Congress, Treasury and the new federal departments'),('Frontier Republic and Neutral Commerce','the western frontier, militia system and neutral Atlantic commerce')],
+}
+
+GERMAN_PERSONALISED={
+ 'BAV':[('The Bavarian Electorate','Bavarian central administration and the Munich court'),('Bavarian Army and Isar Defence','the Bavarian army, arsenals and Isar approaches')],
+ 'SAX':[('The Saxon Electorate','Saxon estates, Dresden administration and crown finances'),('Saxon Army and Manufactures','Saxon military reform, artillery and manufacturing towns')],
+ 'HAN':[('Hanover and the British Connection','Hanoverian administration and the personal union with Britain'),('Hanoverian Army and North German Defence','the Hanoverian army, cavalry and North German defence')],
+ 'WUR':[('Wurttemberg State Reform','Wurttemberg estates, Stuttgart administration and ducal reform'),('Wurttemberg Army and Swabian Defence','the Wurttemberg army and Swabian military organization')],
+ 'BAD':[('Badenese State Reform','Baden administration, Karlsruhe reform and territorial consolidation'),('Baden Army and Upper Rhine Defence','Baden contingents and Upper Rhine defence')],
+ 'HES':[('The Hessian Fiscal State','Hessian estates, Kassel administration and subsidy finance'),('Hessian Army and Subsidy Tradition','the Hessian army, officer corps and subsidy tradition')],
+ 'MEC':[('Mecklenburg Estates and Ducal Government','Mecklenburg estates and ducal administration'),('Mecklenburg Army and Baltic Defence','Mecklenburg contingents and Baltic coastal defence')],
 }
 
 GENERIC=[
@@ -49,14 +64,9 @@ STAGES=[
 def slug(text):
     return re.sub('[^a-z0-9]+','_',text.lower()).strip('_')
 
-def branch_specs(profile):
-    slugname=profile['slug']
-    personal=[('personalised',title,subject) for title,subject in PERSONALISED[slugname]]
-    generic=[(kind,f'{profile["name"]}: {title}',f'{profile["name"]} {title.lower()}') for kind,title in GENERIC]
-    return personal+generic
-
-def focus_id(profile,branch_title,index):
-    return f'NAP_{profile["slug"].upper()}_DEPTH_{slug(branch_title)}_{index+1:02d}'
+def focus_id(profile,branch_title,index,personal_tag=None):
+    extra=f'_{personal_tag}' if personal_tag else ''
+    return f'NAP_{profile["slug"].upper()}{extra}_DEPTH_{slug(branch_title)}_{index+1:02d}'
 
 def reward(kind,index):
     if kind=='military': return 'army_experience = 4 add_war_support = 0.002'
@@ -69,16 +79,12 @@ def reward(kind,index):
 
 def generated(profile):
     items=[];meta=[]
-    specs=branch_specs(profile)
-    previous_by_chain=[None,None,None,None]
     settlement=f'NAP_{profile["slug"].upper()}_SETTLEMENT'
-    for bi,(kind,title,subject) in enumerate(specs):
-        chain=bi%4;tier=bi//4
-        anchor=previous_by_chain[chain] or settlement
-        bx=26+chain*12;by=10+tier*24
+
+    def emit_branch(kind,title,subject,bx,by,available,anchor,personal_tag=None):
         previous=anchor
         for i,template in enumerate(STAGES):
-            identifier=focus_id(profile,title,i)
+            identifier=focus_id(profile,title,i,personal_tag)
             label=template.format(s=subject)
             cost=(2,3,4,5,3,4,5)[i%7]
             final=' add_stability = 0.01' if i==18 else ''
@@ -88,14 +94,36 @@ def generated(profile):
  x = {bx} y = {by+i}
  cost = {cost}
  prerequisite = {{ focus = {previous} }}
- available = {{ {tag_trigger(profile['tags'])} }}
+ available = {{ {available} }}
  completion_reward = {{ {reward(kind,i)}{final} }}
  ai_will_do = {{ factor = 1 }}
 }}'''
             items.append((text,identifier,label,kind,title))
-            meta.append({'id':identifier,'slug':profile['slug'],'branch':title,'kind':kind,'personalised':kind=='personalised','days':cost*7})
+            meta.append({'id':identifier,'slug':profile['slug'],'branch':title,'kind':kind,'personalised':kind=='personalised','personalised_tag':personal_tag,'days':cost*7})
             previous=identifier
-        previous_by_chain[chain]=previous
+        return previous
+
+    # Six common depth branches = 114 focuses.
+    previous_by_chain=[None,None,None,None]
+    for bi,(kind,title) in enumerate(GENERIC):
+        branch_title=f'{profile["name"]}: {title}'
+        subject=f'{profile["name"]} {title.lower()}'
+        chain=bi%4;tier=bi//4
+        anchor=previous_by_chain[chain] or settlement
+        previous_by_chain[chain]=emit_branch(kind,branch_title,subject,26+chain*12,10+tier*24,tag_trigger(profile['tags']),anchor)
+
+    if profile['slug']=='german_princes':
+        # Seven distinct principalities each get two 19-focus branches.
+        for ti,tag in enumerate(profile['tags']):
+            first_end=None
+            for bi,(title,subject) in enumerate(GERMAN_PERSONALISED[tag]):
+                anchor=first_end or settlement
+                first_end=emit_branch('personalised',title,subject,110+ti*14,10+bi*24,f'tag = {tag}',anchor,tag)
+    else:
+        first_end=None
+        for bi,(title,subject) in enumerate(PERSONALISED[profile['slug']]):
+            anchor=first_end or settlement
+            first_end=emit_branch('personalised',title,subject,110,10+bi*24,tag_trigger(profile['tags']),anchor)
     return items,meta
 
 def build(root):
@@ -107,18 +135,29 @@ def build(root):
     summary=[]
     for profile in PROFILES:
         rows=[x for x in index if x['slug']==profile['slug']]
-        summary.append({'slug':profile['slug'],'name':profile['name'],'existing_focuses':23,'new_focuses':len(rows),'personalised_focuses':sum(1 for x in rows if x['personalised']),'total_focuses':23+len(rows)})
+        if profile['slug']=='german_princes':
+            summary.append({
+              'slug':profile['slug'],'name':profile['name'],'existing_focuses':23,
+              'shared_new_focuses':sum(1 for x in rows if not x['personalised']),
+              'personalised_focuses_per_tag':38,
+              'effective_total_focuses_per_tag':{tag:175 for tag in profile['tags']},
+              'raw_tree_definitions':23+len(rows),
+            })
+        else:
+            summary.append({'slug':profile['slug'],'name':profile['name'],'existing_focuses':23,'new_focuses':len(rows),'personalised_focuses':sum(1 for x in rows if x['personalised']),'total_focuses':23+len(rows)})
     return {
       'localisation/english/nap_secondary_depth_l_english.yml':'\n'.join(loc)+'\n',
       'docs/secondary-depth-index.json':json.dumps(index,indent=2)+'\n',
       'docs/secondary-depth-summary.json':json.dumps(summary,indent=2)+'\n',
       'docs/secondary-depth-expansion.md':'''# Deep secondary-country expansion
 
-Every secondary campaign with existing content now contains **175 focuses**: the original 23 plus 152 additional focuses.
+Every secondary country with existing content now has an effective **175-focus campaign**: 23 baseline focuses, 114 shared depth focuses and 38 country-specific focuses.
 
-For every campaign, **38 focuses are explicitly personalised** across two country-specific 19-focus branches. The remaining six 19-focus branches add administration, revenue, army reform, infrastructure, diplomacy and social/institutional depth. New rewards are deliberately modest and no branch transfers states, creates cores, annexes countries, forces factions or bypasses the territorial registries.
+Spain, Poland/Warsaw, the Ottoman Empire, Sweden, Sardinia-Piedmont, Naples, the Papal States, Venice, Tuscany, Portugal, the Netherlands/Batavian/Holland tags and the United States each receive two dedicated 19-focus branches.
 
-The expanded campaigns cover Spain; Poland/Warsaw; the Ottoman Empire; Sweden; Sardinia-Piedmont; Naples; the Papal States; Venice; Tuscany; the represented German principalities; Portugal; the Netherlands/Batavian/Holland tags; and the United States.
+The German-principality regional tree keeps 114 common regional focuses but contains separate 38-focus subsets for Bavaria, Saxony, Hanover, Wurttemberg, Baden, Hesse and Mecklenburg. Each principality therefore sees an effective 175-focus campaign rather than receiving merely regional personalization.
+
+New rewards are deliberately modest and no branch transfers states, creates cores, annexes countries, forces factions or bypasses the territorial registries.
 ''',
     }
 

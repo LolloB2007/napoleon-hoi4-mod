@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'tools'),str(ROOT/'content')]
 from pdx import parse,walk
 from build_60_secondary import build as base_build,PROFILES
-from build_61_secondary_depth import build,postprocess,generated
+from build_61_secondary_depth import build,postprocess,generated,GERMAN_PERSONALISED
 
 class SecondaryDepthTests(unittest.TestCase):
     @classmethod
@@ -14,23 +14,34 @@ class SecondaryDepthTests(unittest.TestCase):
         cls.depth=build(ROOT)
         cls.outputs=base|cls.depth|postprocess(base|cls.depth,ROOT)
 
-    def test_every_campaign_has_175_focuses(self):
+    def test_effective_campaign_size(self):
         for profile in PROFILES:
             path=f'common/national_focus/secondary_{profile["slug"]}.txt'
             nodes=[n for n in walk(parse(self.outputs[path])) if n.key=='focus' and isinstance(n.value,list) and n.scalar('id')]
-            self.assertEqual(len(nodes),175,profile['slug'])
+            if profile['slug']=='german_princes':
+                self.assertEqual(len(nodes),403)
+                _,meta=generated(profile)
+                generic=sum(1 for row in meta if not row['personalised'])
+                self.assertEqual(generic,114)
+                for tag in profile['tags']:
+                    self.assertEqual(23+generic+sum(1 for row in meta if row['personalised_tag']==tag),175)
+            else:
+                self.assertEqual(len(nodes),175,profile['slug'])
 
-    def test_152_new_and_38_personalised_each(self):
+    def test_38_personalised_focuses_per_country(self):
         for profile in PROFILES:
             _,meta=generated(profile)
-            self.assertEqual(len(meta),152)
-            self.assertEqual(sum(1 for row in meta if row['personalised']),38)
+            if profile['slug']=='german_princes':
+                for tag in profile['tags']:
+                    self.assertEqual(sum(1 for row in meta if row['personalised_tag']==tag),38)
+            else:
+                self.assertEqual(len(meta),152)
+                self.assertEqual(sum(1 for row in meta if row['personalised']),38)
 
     def test_new_focus_ids_unique(self):
         ids=[]
         for profile in PROFILES:
             ids += [row['id'] for row in generated(profile)[1]]
-        self.assertEqual(len(ids),13*152)
         self.assertEqual(len(ids),len(set(ids)))
 
     def test_localisation_covers_new_focuses(self):
