@@ -48,7 +48,7 @@ class FranceDecisionMechanicsTests(unittest.TestCase):
     def test_decision_counts_by_system(self):
         counts={cat.key:len([e for e in cat.value if isinstance(e.value,list)]) for cat in self.decisions}
         self.assertEqual(counts,{
-            'nap_fra_revolutionary_crisis':13,
+            'nap_fra_revolutionary_crisis':15,
             'nap_fra_napoleon_rise':13,
             'nap_fra_continental_system':11,
             'nap_continental_foreign':2,
@@ -56,7 +56,7 @@ class FranceDecisionMechanicsTests(unittest.TestCase):
             'nap_fra_russian_campaign':9,
             'nap_fra_restoration_cycle':10,
         })
-        self.assertEqual(sum(counts.values()),65)
+        self.assertEqual(sum(counts.values()),67)
 
     def test_every_decision_rechecks_through_scripted_effect(self):
         for category in self.decisions:
@@ -93,6 +93,17 @@ class FranceDecisionMechanicsTests(unittest.TestCase):
         self.assertIn('set_country_flag = italian_campaign_won',effects)
         self.assertIn('set_country_flag = egyptian_expedition_complete',effects)
         self.assertIn('nap_fra_napoleon_prestige',effects)
+
+    def test_jacobin_girondin_struggle_has_threshold_outcomes(self):
+        decisions=self.files['common/decisions/nap_france_campaigns.txt']
+        effects=self.files['common/scripted_effects/nap_france_campaigns.txt']
+        ideas=self.files['common/ideas/nap_france_campaigns.txt']
+        for side in ('girondin','jacobin'):
+            self.assertIn('nap_fra_'+side+'_ascendancy',decisions)
+            self.assertIn('nap_fra_'+side+'_influence',effects)
+            self.assertIn('nap_fra_'+side+'_ascendancy',ideas)
+        self.assertIn('nap_fra_girondin_influence < 60',decisions)
+        self.assertIn('nap_fra_jacobin_influence < 60',decisions)
 
     def test_revolution_transitions_are_decision_driven(self):
         terror=self.events['french_revolution.10']

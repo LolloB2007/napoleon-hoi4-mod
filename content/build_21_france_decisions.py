@@ -40,6 +40,8 @@ CATEGORIES = {
 IDEAS = {
  'nap_fra_vendee_revolt':('The Vendée in Revolt','stability_factor = -0.06 political_power_factor = -0.05 supply_consumption_factor = 0.04','Armed and political resistance in western France consumes troops, supplies and administrative attention.'),
  'nap_fra_assignat_crisis':('Assignat Inflation','stability_factor = -0.04 political_power_factor = -0.06','Emergency paper finance is undermining confidence and complicating government finance.'),
+ 'nap_fra_girondin_ascendancy':('Girondin Ascendancy','stability_factor = 0.03 war_support_factor = -0.02','The Girondins dominate the republican legislature, favouring political restraint and provincial legitimacy.'),
+ 'nap_fra_jacobin_ascendancy':('Jacobin Ascendancy','war_support_factor = 0.04 stability_factor = -0.02','The Mountain and the clubs dominate the republican legislature, accepting greater internal tension for mobilisation.'),
  'nap_fra_committee_public_safety':('Committee of Public Safety','war_support_factor = 0.05 political_power_factor = 0.03 stability_factor = -0.03','Emergency government concentrates authority at the cost of institutional restraint.'),
  'nap_fra_consular_machine':('The Consular Machine','political_power_factor = 0.04 stability_factor = 0.03','The Consulate has concentrated administration, finance and political decision-making.'),
  'nap_fra_marshals_empire':('Marshals of the Empire','army_morale_factor = 0.04 planning_speed = 0.04','A prestigious senior command cadre binds military advancement to the imperial state.'),
@@ -186,6 +188,21 @@ def build(root):
       'Strengthen the radical clubs. Jacobin influence +10, fervor +3, legitimacy -1, faction tension +5.',
       'tag = FRA nap_fra_route_republican = yes NOT = { has_country_flag = directory_active }',
       'nap_fra_support_jacobins_effect',25,60)
+
+    faction_open='nap_fra_route_republican = yes NOT = { has_country_flag = directory_active } NOT = { has_country_flag = nap_fra_girondin_ascendant } NOT = { has_country_flag = nap_fra_jacobin_ascendant }'
+    add_effect(effects,'nap_fra_girondin_ascendancy_effect',faction_open+' '+at_least('girondin_influence',60),
+      f'set_country_flag = nap_fra_girondin_ascendant add_ideas = nap_fra_girondin_ascendancy {vadd("faction_tension",-10)} {change("legitimacy",4)} {change("fervor",-3)}')
+    add_decision(sections,loc,'nap_fra_revolutionary_crisis','nap_fra_girondin_ascendancy','Secure a Girondin Majority',
+      'At 60 Girondin influence, convert parliamentary strength into an enduring moderate-republican ascendancy. Faction tension -10 and legitimacy +4.',
+      'tag = FRA '+faction_open+' '+at_least('girondin_influence',60),
+      'nap_fra_girondin_ascendancy_effect',35,once=True)
+
+    add_effect(effects,'nap_fra_jacobin_ascendancy_effect',faction_open+' '+at_least('jacobin_influence',60),
+      f'set_country_flag = nap_fra_jacobin_ascendant add_ideas = nap_fra_jacobin_ascendancy {vadd("faction_tension",-6)} {change("fervor",5)} {change("legitimacy",-2)}')
+    add_decision(sections,loc,'nap_fra_revolutionary_crisis','nap_fra_jacobin_ascendancy','Secure the Mountain',
+      'At 60 Jacobin influence, convert club mobilisation into a durable radical ascendancy. Fervor +5; legitimacy falls as the political struggle sharpens.',
+      'tag = FRA '+faction_open+' '+at_least('jacobin_influence',60),
+      'nap_fra_jacobin_ascendancy_effect',35,once=True)
 
     add_effect(effects,'nap_fra_issue_assignats_effect','has_country_flag = french_revolutionary_path NOT = { check_variable = { nap_treasury > 84 } }',
       f'set_country_flag = nap_fra_assignats_active {change("treasury",18)} {change("debt",8)} {change("legitimacy",-2)} {vadd("assignat_inflation",12)}')
