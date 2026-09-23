@@ -32,9 +32,19 @@ class PresentationTests(unittest.TestCase):
                 self.assertIsNotNone(icon,path+': '+fid)
                 self.assertTrue(icon.startswith('GFX_NAP_FOCUS_'),path+': '+fid+' -> '+icon)
                 icons.append(icon)
-        self.assertGreaterEqual(len(ids),800)
+        # The parser deliberately skips some compact/generated focus forms, so
+        # validate complete file-level coverage independently of a hardcoded
+        # repository-wide count.
+        raw_focus_count=0
+        raw_custom_icon_count=0
+        for path in focus_paths:
+            raw=self.text(path)
+            raw_focus_count += len(re.findall(r'(?m)^\\s*focus\\s*=\\s*\\{',raw))
+            raw_custom_icon_count += len(re.findall(r'\\bicon\\s*=\\s*GFX_NAP_FOCUS_[A-Z0-9_]+',raw))
+        self.assertGreaterEqual(raw_focus_count,800)
+        self.assertEqual(raw_custom_icon_count,raw_focus_count)
         self.assertEqual(len(icons),len(ids))
-        self.assertGreaterEqual(len(set(icons)),800)
+        self.assertEqual(len(set(icons)),len(icons))
 
     def test_event_blocks_have_period_art(self):
         for path in [p for p in self.outputs if p.startswith('events/') and p.endswith('.txt')]:

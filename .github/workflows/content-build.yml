@@ -23,14 +23,7 @@ jobs:
           if [ -f tools/build_content.py ]; then python3 tools/build_content.py; fi
       - name: Unit tests
         run: |
-          if [ -d tests ]; then
-            set +e
-            python3 -m unittest discover -s tests -v > docs/ci-test-output.txt 2>&1
-            status=$?
-            cat docs/ci-test-output.txt
-            echo "TEST_STATUS=$status" >> "$GITHUB_ENV"
-            exit 0
-          fi
+          if [ -d tests ]; then python3 -m unittest discover -s tests -v; fi
       - name: Commit generated game files to this development branch only
         env:
           TARGET_BRANCH: ${{ github.ref_name }}
