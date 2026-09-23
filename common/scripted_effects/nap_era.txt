@@ -1,0 +1,63 @@
+# Country scope throughout. Values represent abstract capacity, not historical currency.
+nap_era_initialize = {
+ if = {
+  limit = { nap_era_country = yes NOT = { has_country_flag = nap_era_initialized } }
+  set_country_flag = nap_era_initialized
+  set_variable = { nap_treasury = 50 }
+set_variable = { nap_debt = 0 }
+set_variable = { nap_legitimacy = 55 }
+set_variable = { nap_fervor = 0 }
+set_variable = { nap_war_exhaustion = 0 }
+set_variable = { nap_army_prestige = 50 }
+set_variable = { nap_reform = 0 }
+set_variable = { nap_supply_pressure = 0 }
+  if = { limit = { tag = FRA } set_variable = { nap_treasury = 20 } set_variable = { nap_debt = 65 } set_variable = { nap_legitimacy = 35 } set_variable = { nap_fervor = 20 } }
+ }
+}
+nap_era_clamp = { clamp_variable = { var = nap_treasury min = 0 max = 100 }
+clamp_variable = { var = nap_debt min = 0 max = 100 }
+clamp_variable = { var = nap_legitimacy min = 0 max = 100 }
+clamp_variable = { var = nap_fervor min = 0 max = 100 }
+clamp_variable = { var = nap_war_exhaustion min = 0 max = 100 }
+clamp_variable = { var = nap_army_prestige min = 0 max = 100 }
+clamp_variable = { var = nap_reform min = 0 max = 100 }
+clamp_variable = { var = nap_supply_pressure min = 0 max = 100 } }
+nap_era_monthly = {
+ nap_era_initialize = yes
+ if = { limit = { has_country_flag = nap_era_initialized }
+  if = { limit = { has_war = yes } add_to_variable = { nap_treasury = 1 } add_to_variable = { nap_war_exhaustion = 3 } }
+  else = { add_to_variable = { nap_treasury = 3 } add_to_variable = { nap_war_exhaustion = -4 } }
+  if = { limit = { has_war = yes any_controlled_state = { NOT = { is_owned_by = ROOT } NOT = { is_core_of = ROOT } } }
+   add_to_variable = { nap_supply_pressure = 2 } add_to_variable = { nap_war_exhaustion = 1 }
+  } else = { add_to_variable = { nap_supply_pressure = -4 } }
+  if = { limit = { check_variable = { nap_debt > 59 } } add_to_variable = { nap_treasury = -2 } }
+  if = { limit = { check_variable = { nap_war_exhaustion > 79 } } add_to_variable = { nap_legitimacy = -1 } }
+  if = { limit = { has_war = no check_variable = { nap_war_exhaustion < 40 } check_variable = { nap_legitimacy < 55 } } add_to_variable = { nap_legitimacy = 1 } }
+  nap_era_clamp = yes
+  nap_era_refresh = yes
+ }
+}
+nap_era_refresh = {
+ if = { limit = { check_variable = { nap_war_exhaustion > 79 } } remove_ideas = nap_war_weariness add_ideas = nap_acute_exhaustion }
+ else_if = { limit = { check_variable = { nap_war_exhaustion > 49 } } remove_ideas = nap_acute_exhaustion add_ideas = nap_war_weariness }
+ else = { remove_ideas = nap_war_weariness remove_ideas = nap_acute_exhaustion }
+ if = { limit = { check_variable = { nap_legitimacy < 30 } } add_ideas = nap_legitimacy_crisis } else = { remove_ideas = nap_legitimacy_crisis }
+ if = { limit = { check_variable = { nap_legitimacy > 69 } } add_ideas = nap_secure_authority } else = { remove_ideas = nap_secure_authority }
+ if = { limit = { check_variable = { nap_debt > 59 } } add_ideas = nap_debt_crisis } else = { remove_ideas = nap_debt_crisis }
+ if = { limit = { check_variable = { nap_supply_pressure > 39 } } add_ideas = nap_extended_supply_lines } else = { remove_ideas = nap_extended_supply_lines }
+ if = { limit = { check_variable = { nap_army_prestige > 69 } } add_ideas = nap_battle_confidence } else = { remove_ideas = nap_battle_confidence }
+ if = { limit = { check_variable = { nap_army_prestige < 30 } } add_ideas = nap_shaken_army } else = { remove_ideas = nap_shaken_army }
+ if = { limit = { check_variable = { nap_reform > 59 } } add_ideas = nap_staff_institutions } else = { remove_ideas = nap_staff_institutions }
+}
+nap_era_action_bonds = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_debt > 70 } } } add_to_variable = { nap_treasury = 25 } add_to_variable = { nap_debt = 25 } add_to_variable = { nap_legitimacy = -3 }  nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_repay = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 20 } } NOT = { check_variable = { nap_debt < 20 } } } add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_debt = -20 } add_to_variable = { nap_legitimacy = 2 }  nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_audit = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 10 } } NOT = { check_variable = { nap_reform > 95 } } } add_to_variable = { nap_treasury = -10 } add_to_variable = { nap_reform = 5 } add_to_variable = { nap_legitimacy = 3 }  nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_recruit = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 12 } } NOT = { check_variable = { nap_war_exhaustion > 70 } } } add_to_variable = { nap_treasury = -12 } add_to_variable = { nap_war_exhaustion = 4 } add_manpower = 5000 nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_levee = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 20 } } NOT = { check_variable = { nap_fervor < 35 } } NOT = { check_variable = { nap_war_exhaustion > 60 } } tag = FRA has_war = yes has_country_flag = french_revolutionary_path } add_to_variable = { nap_treasury = -20 } add_to_variable = { nap_war_exhaustion = 12 } add_to_variable = { nap_fervor = -10 } add_to_variable = { nap_legitimacy = -4 } add_manpower = 12000 nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_magazines = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 15 } } has_war = yes } add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_supply_pressure = -12 } add_timed_idea = { idea = nap_funded_magazines days = 90 } nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_rest = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 10 } } NOT = { check_variable = { nap_war_exhaustion < 8 } } has_war = yes } add_to_variable = { nap_treasury = -10 } add_to_variable = { nap_war_exhaustion = -8 } add_to_variable = { nap_army_prestige = -2 } add_timed_idea = { idea = nap_army_rotation days = 45 } nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_requisition = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_war_exhaustion > 80 } } has_war = yes } add_to_variable = { nap_treasury = 10 } add_to_variable = { nap_supply_pressure = -6 } add_to_variable = { nap_war_exhaustion = 8 } add_to_variable = { nap_legitimacy = -5 }  nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_staff = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 15 } } NOT = { check_variable = { nap_reform > 94 } } } add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_reform = 6 } army_experience = 10 nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_relief = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 15 } } NOT = { check_variable = { nap_legitimacy > 94 } } } add_to_variable = { nap_treasury = -15 } add_to_variable = { nap_legitimacy = 6 } add_to_variable = { nap_war_exhaustion = -3 }  nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_demobilize = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_war_exhaustion < 10 } } has_war = no } add_to_variable = { nap_war_exhaustion = -10 } add_to_variable = { nap_legitimacy = 3 }  nap_era_clamp = yes nap_era_refresh = yes } }
+nap_era_action_commissions = { if = { limit = { has_country_flag = nap_era_initialized nap_era_country = yes NOT = { check_variable = { nap_treasury < 10 } } NOT = { check_variable = { nap_army_prestige > 94 } } } add_to_variable = { nap_treasury = -10 } add_to_variable = { nap_army_prestige = 6 } add_to_variable = { nap_reform = 2 }  nap_era_clamp = yes nap_era_refresh = yes } }

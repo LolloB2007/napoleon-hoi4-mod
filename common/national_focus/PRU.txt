@@ -1,122 +1,138 @@
-###############################################################
-# Prussia — National Focus Tree
-# Four branches:
-#   1. FREDERICIAN — preserve Old Fritz's system, neutrality
-#   2. JENA — collapse path (faces French invasion if unprepared)
-#   3. REFORM — Scharnhorst/Gneisenau/Stein post-Jena rebuild
-#   4. LIBERATION — 1813 rising, march to Paris, German confederation
-###############################################################
-
 focus_tree = {
 	id = PRU_focus_tree
 	country = {
 		factor = 0
-		modifier = { add = 10 tag = PRU }
+		modifier = {
+			add = 10
+			tag = PRU
+		}
 	}
 	default = no
-	continuous_focus_position = { x = 50 y = 1500 }
-
-	# === ROOT ===
+	continuous_focus_position = {
+		x = 50
+		y = 1500
+	}
 	focus = {
 		id = PRU_kingdom_of_drill
 		icon = GFX_focus_generic_army_doctrines_2
-		x = 10 y = 0
+		x = 10
+		y = 0
 		cost = 5
-		ai_will_do = { factor = 100 }
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			add_political_power = 25
 			army_experience = 25
 		}
 	}
-
-	# ============================================================
-	# BRANCH 1 — FREDERICIAN ORTHODOXY
-	# ============================================================
-
 	focus = {
 		id = PRU_preserve_old_fritz_army
 		icon = GFX_focus_generic_army_doctrines_2
-		prerequisite = { focus = PRU_kingdom_of_drill }
-		mutually_exclusive = { focus = PRU_consider_reform }
-		x = 3 y = 1
+		prerequisite = {
+			focus = PRU_kingdom_of_drill
+		}
+		mutually_exclusive = {
+			focus = PRU_consider_reform
+		}
+		x = 3
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_ideas = frederician_inheritance
 			army_experience = 25
 		}
 	}
-
 	focus = {
 		id = PRU_neutral_in_revolutionary_wars
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = PRU_preserve_old_fritz_army }
-		x = 2 y = 2
+		prerequisite = {
+			focus = PRU_preserve_old_fritz_army
+		}
+		x = 2
+		y = 2
 		cost = 10
-		available = { FRA = { has_country_flag = french_republic } }
+		available = {
+			FRA = {
+				has_country_flag = french_republic
+			}
+		}
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 25
-			# TODO: add_ai_strategy with a valid vanilla type (alliance / topple_government /
-			# avoid_starting_wars). 'neutrality' isn't a vanilla type — would warn at load.
 		}
 	}
-
 	focus = {
 		id = PRU_partition_of_poland
 		icon = GFX_focus_generic_attack_poland
-		prerequisite = { focus = PRU_preserve_old_fritz_army }
-		x = 4 y = 2
+		prerequisite = {
+			focus = PRU_preserve_old_fritz_army
+		}
+		x = 4
+		y = 2
 		cost = 10
-		available = { date > 1792.1.1 }
+		available = {
+			date > 1792.1.1
+		}
 		completion_reward = {
-			add_state_claim = 86   # Poznan
-			add_state_claim = 85   # Danzig
-			declare_war_on = { target = POL type = annex_everything }
+			add_state_claim = 86
+			add_state_claim = 85
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
 		}
 	}
-
-	# ============================================================
-	# BRANCH 2 — JENA PATH
-	# ============================================================
-
 	focus = {
 		id = PRU_face_napoleon
 		icon = GFX_focus_generic_attack_czechoslovakia
-		prerequisite = { focus = PRU_preserve_old_fritz_army }
-		x = 6 y = 3
+		prerequisite = {
+			focus = PRU_preserve_old_fritz_army
+		}
+		x = 6
+		y = 3
 		cost = 10
 		available = {
-			FRA = { has_country_flag = empire_of_the_french }
+			FRA = {
+				has_country_flag = empire_of_the_french
+			}
 			date > 1806.1.1
 		}
 		completion_reward = {
-			declare_war_on = { target = FRA type = annex_everything }
-			# Will likely trigger napoleonic_wars.9 (Jena defeat)
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
 		}
 	}
-
-	# ============================================================
-	# BRANCH 3 — POST-JENA REFORM
-	# ============================================================
-
 	focus = {
 		id = PRU_consider_reform
 		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = PRU_kingdom_of_drill }
-		mutually_exclusive = { focus = PRU_preserve_old_fritz_army }
-		x = 12 y = 1
+		prerequisite = {
+			focus = PRU_kingdom_of_drill
+		}
+		mutually_exclusive = {
+			focus = PRU_preserve_old_fritz_army
+		}
+		x = 12
+		y = 1
 		cost = 10
 		completion_reward = {
 			add_political_power = 25
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
 		}
 	}
-
 	focus = {
 		id = PRU_scharnhorst_reforms_focus
 		icon = GFX_focus_generic_army_doctrines_2
-		prerequisite = { focus = PRU_consider_reform }
-		x = 11 y = 2
+		prerequisite = {
+			focus = PRU_consider_reform
+		}
+		x = 11
+		y = 2
 		cost = 10
 		completion_reward = {
 			remove_ideas = frederician_inheritance
@@ -125,27 +141,36 @@ focus_tree = {
 			army_experience = 50
 		}
 	}
-
 	focus = {
 		id = PRU_stein_reforms
 		icon = GFX_focus_generic_court
-		prerequisite = { focus = PRU_consider_reform }
-		x = 13 y = 2
+		prerequisite = {
+			focus = PRU_consider_reform
+		}
+		x = 13
+		y = 2
 		cost = 10
 		completion_reward = {
 			remove_ideas = junker_officer_corps
 			add_research_slot = 1
 			add_manpower = 50000
-			add_popularity = { ideology = democratic popularity = 0.10 }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
 		}
 	}
-
 	focus = {
 		id = PRU_universal_conscription
 		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = PRU_scharnhorst_reforms_focus }
-		prerequisite = { focus = PRU_stein_reforms }
-		x = 12 y = 3
+		prerequisite = {
+			focus = PRU_scharnhorst_reforms_focus
+		}
+		prerequisite = {
+			focus = PRU_stein_reforms
+		}
+		x = 12
+		y = 3
 		cost = 15
 		completion_reward = {
 			add_ideas = landwehr_call_to_arms
@@ -153,26 +178,34 @@ focus_tree = {
 			army_experience = 50
 		}
 	}
-
-	# ============================================================
-	# BRANCH 4 — WAR OF LIBERATION
-	# ============================================================
-
 	focus = {
 		id = PRU_war_of_liberation
 		icon = GFX_focus_generic_attack_czechoslovakia
-		prerequisite = { focus = PRU_universal_conscription }
-		x = 12 y = 4
+		prerequisite = {
+			focus = PRU_universal_conscription
+		}
+		x = 12
+		y = 4
 		cost = 10
 		available = {
-			FRA = { has_country_flag = grande_armee_destroyed }
+			FRA = {
+				has_country_flag = grande_armee_destroyed
+			}
 		}
 		completion_reward = {
-			country_event = { id = napoleonic_collapse.2 days = 1 }
+			country_event = {
+				id = napoleonic_collapse.2
+				days = 1
+			}
 			add_war_support = 0.30
 			create_field_marshal = {
 				name = "Gebhard Leberecht von Blücher"
-				traits = { trait_reckless cavalry_officer infantry_officer war_hero }
+				traits = {
+					trait_reckless
+					cavalry_officer
+					infantry_officer
+					war_hero
+				}
 				skill = 4
 				attack_skill = 5
 				defense_skill = 3
@@ -181,12 +214,14 @@ focus_tree = {
 			}
 		}
 	}
-
 	focus = {
 		id = PRU_march_on_paris_pru
 		icon = GFX_focus_generic_attack_czechoslovakia
-		prerequisite = { focus = PRU_war_of_liberation }
-		x = 12 y = 5
+		prerequisite = {
+			focus = PRU_war_of_liberation
+		}
+		x = 12
+		y = 5
 		cost = 10
 		available = {
 			has_global_flag = leipzig_fought
@@ -196,36 +231,43 @@ focus_tree = {
 			add_command_power = 50
 		}
 	}
-
 	focus = {
 		id = PRU_acquire_rhineland
 		icon = GFX_focus_generic_attack_czechoslovakia
-		prerequisite = { focus = PRU_march_on_paris_pru }
-		x = 11 y = 6
+		prerequisite = {
+			focus = PRU_march_on_paris_pru
+		}
+		x = 11
+		y = 6
 		cost = 10
 		available = {
 			has_global_flag = waterloo_fought
 		}
 		completion_reward = {
-			add_state_claim = 42   # Rhineland
-			add_state_claim = 51   # Moselland
+			add_state_claim = 42
+			add_state_claim = 51
 			add_political_power = 50
 		}
 	}
-
 	focus = {
 		id = PRU_german_confederation
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = PRU_march_on_paris_pru }
-		x = 13 y = 6
+		prerequisite = {
+			focus = PRU_march_on_paris_pru
+		}
+		x = 13
+		y = 6
 		cost = 15
 		available = {
 			has_global_flag = concert_of_europe_established
 		}
 		completion_reward = {
-			create_faction = "german_confederation"
+			create_faction = german_confederation
 			add_political_power = 100
 			add_stability = 0.10
 		}
 	}
+	shared_focus = PRU_nap_institutions_00
+	shared_focus = PRU_nap_reform_00
+	shared_focus = PRU_nap_liberation_00
 }

@@ -1,0 +1,232 @@
+[
+  {
+    "slug": "spain",
+    "tags": [
+      "SPR"
+    ],
+    "name": "Spain",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Reform from the Crown",
+    "alternate_route": "Summon a National Cortes",
+    "major_links": [
+      "FRA",
+      "ENG"
+    ]
+  },
+  {
+    "slug": "poland",
+    "tags": [
+      "POL",
+      "WAR"
+    ],
+    "name": "Polish State",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "The Reforming Commonwealth",
+    "alternate_route": "The Magnate Compromise",
+    "major_links": [
+      "RUS",
+      "PRU"
+    ]
+  },
+  {
+    "slug": "ottoman",
+    "tags": [
+      "TUR"
+    ],
+    "name": "Ottoman Empire",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Selim\u2019s New Order",
+    "alternate_route": "Preserve the Old Establishment",
+    "major_links": [
+      "FRA",
+      "ENG"
+    ]
+  },
+  {
+    "slug": "sweden",
+    "tags": [
+      "SWE"
+    ],
+    "name": "Sweden",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Preserve Gustavian Royalism",
+    "alternate_route": "Restore the Power of the Estates",
+    "major_links": [
+      "ENG",
+      "RUS"
+    ]
+  },
+  {
+    "slug": "sardinia",
+    "tags": [
+      "SAR"
+    ],
+    "name": "Sardinia-Piedmont",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "The Savoyard Military State",
+    "alternate_route": "Piedmontese Constitutional Reform",
+    "major_links": [
+      "HAB",
+      "FRA"
+    ]
+  },
+  {
+    "slug": "naples",
+    "tags": [
+      "NAP"
+    ],
+    "name": "Kingdom of Naples",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Strengthen the Bourbon Court",
+    "alternate_route": "A Neapolitan Constitutional Settlement",
+    "major_links": [
+      "HAB",
+      "ENG"
+    ]
+  },
+  {
+    "slug": "papal",
+    "tags": [
+      "PAP"
+    ],
+    "name": "Papal States",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Defend the Temporal State",
+    "alternate_route": "Reform the Papal Administration",
+    "major_links": [
+      "HAB",
+      "FRA"
+    ]
+  },
+  {
+    "slug": "venice",
+    "tags": [
+      "VEN"
+    ],
+    "name": "Republic of Venice",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Preserve the Patrician Republic",
+    "alternate_route": "Broaden the Venetian Constitution",
+    "major_links": [
+      "HAB",
+      "FRA"
+    ]
+  },
+  {
+    "slug": "tuscany",
+    "tags": [
+      "TUS"
+    ],
+    "name": "Grand Duchy of Tuscany",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Continue Enlightened Reform",
+    "alternate_route": "Reconcile Crown, Church and Estates",
+    "major_links": [
+      "HAB",
+      "FRA"
+    ]
+  },
+  {
+    "slug": "german_princes",
+    "tags": [
+      "BAV",
+      "SAX",
+      "HAN",
+      "WUR",
+      "BAD",
+      "HES",
+      "MEC"
+    ],
+    "name": "German Principalities",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Defend Imperial Liberties",
+    "alternate_route": "A League of Reforming Princes",
+    "major_links": [
+      "HAB",
+      "PRU"
+    ]
+  },
+  {
+    "slug": "portugal",
+    "tags": [
+      "POR"
+    ],
+    "name": "Portugal",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Preserve the British Connection",
+    "alternate_route": "An Independent Reform Course",
+    "major_links": [
+      "ENG",
+      "FRA"
+    ]
+  },
+  {
+    "slug": "netherlands",
+    "tags": [
+      "NET",
+      "BAT",
+      "HOL"
+    ],
+    "name": "The Netherlands",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Stabilize the Orangist Order",
+    "alternate_route": "Revive the Patriot Programme",
+    "major_links": [
+      "PRU",
+      "FRA"
+    ]
+  },
+  {
+    "slug": "usa",
+    "tags": [
+      "USA"
+    ],
+    "name": "United States",
+    "focuses": 23,
+    "events": 4,
+    "decisions": 3,
+    "ideas": 5,
+    "historical_route": "Consolidate the Federal Constitution",
+    "alternate_route": "Guard Republican Decentralization",
+    "major_links": [
+      "ENG",
+      "FRA"
+    ]
+  }
+]

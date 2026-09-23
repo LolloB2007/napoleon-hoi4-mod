@@ -1,0 +1,9 @@
+nap_fra_route_common = { tag = FRA }
+nap_fra_route_constitutional = { tag = FRA has_country_flag = french_constitutional_path NOT = { has_country_flag = french_royalist_path } NOT = { has_country_flag = french_bonapartist_path } }
+nap_fra_route_royalist = { tag = FRA has_country_flag = french_royalist_path NOT = { has_country_flag = french_constitutional_path } NOT = { has_country_flag = french_bonapartist_path } }
+nap_fra_route_republican = { tag = FRA has_country_flag = french_revolutionary_path NOT = { has_country_flag = french_constitutional_path } NOT = { has_country_flag = french_royalist_path } NOT = { has_country_flag = french_bonapartist_path } }
+nap_fra_route_directory = { nap_fra_route_republican = yes has_country_flag = directory_active }
+nap_fra_route_consular = { tag = FRA has_country_flag = french_bonapartist_path OR = { has_country_flag = consulate_established has_country_flag = empire_of_the_french has_country_flag = hundred_days } NOT = { has_country_flag = bourbon_restoration } }
+nap_fra_route_imperial = { tag = FRA has_country_flag = french_bonapartist_path OR = { has_country_flag = empire_of_the_french has_country_flag = hundred_days } NOT = { has_country_flag = bourbon_restoration } }
+nap_fra_route_campaign = { tag = FRA OR = { nap_fra_route_republican = yes nap_fra_route_consular = yes } }
+nap_fra_route_late_imperial = { tag = FRA OR = { nap_fra_route_imperial = yes has_country_flag = napoleon_on_elba has_country_flag = bourbon_restoration } }

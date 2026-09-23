@@ -1,0 +1,7 @@
+add_namespace = nap_clients
+country_event = { id = nap_clients.10 title = nap_client_offer.t desc = nap_client_offer.d picture = GFX_report_event_generic_assembly is_triggered_only = yes
+ option = { name = nap_client_offer.a trigger = { nap_rhine_client_candidate = yes has_country_flag = nap_rhine_offer } ai_chance = { factor = 65 }
+  if = { limit = { nap_rhine_client_candidate = yes has_country_flag = nap_rhine_offer } clr_country_flag = nap_rhine_offer FRA = { puppet = ROOT } if = { limit = { is_subject_of = FRA } set_country_flag = nap_rhine_charter_accepted } }
+ }
+ option = { name = nap_client_offer.b ai_chance = { factor = 35 } clr_country_flag = nap_rhine_offer set_country_flag = { flag = nap_rhine_declined days = 365 } }
+}

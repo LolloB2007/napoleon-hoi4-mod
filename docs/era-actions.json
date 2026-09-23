@@ -1,0 +1,183 @@
+[
+  {
+    "id": "bonds",
+    "pp_cost": 35,
+    "cooldown_days": 180,
+    "minimum": {},
+    "maximum": {
+      "debt": 70
+    },
+    "deltas": {
+      "treasury": 25,
+      "debt": 25,
+      "legitimacy": -3
+    }
+  },
+  {
+    "id": "repay",
+    "pp_cost": 25,
+    "cooldown_days": 90,
+    "minimum": {
+      "treasury": 20,
+      "debt": 20
+    },
+    "maximum": {},
+    "deltas": {
+      "treasury": -20,
+      "debt": -20,
+      "legitimacy": 2
+    }
+  },
+  {
+    "id": "audit",
+    "pp_cost": 35,
+    "cooldown_days": 180,
+    "minimum": {
+      "treasury": 10
+    },
+    "maximum": {
+      "reform": 95
+    },
+    "deltas": {
+      "treasury": -10,
+      "reform": 5,
+      "legitimacy": 3
+    }
+  },
+  {
+    "id": "recruit",
+    "pp_cost": 50,
+    "cooldown_days": 365,
+    "minimum": {
+      "treasury": 12
+    },
+    "maximum": {
+      "war_exhaustion": 70
+    },
+    "deltas": {
+      "treasury": -12,
+      "war_exhaustion": 4
+    }
+  },
+  {
+    "id": "levee",
+    "pp_cost": 65,
+    "cooldown_days": 365,
+    "minimum": {
+      "treasury": 20,
+      "fervor": 35
+    },
+    "maximum": {
+      "war_exhaustion": 60
+    },
+    "deltas": {
+      "treasury": -20,
+      "war_exhaustion": 12,
+      "fervor": -10,
+      "legitimacy": -4
+    }
+  },
+  {
+    "id": "magazines",
+    "pp_cost": 35,
+    "cooldown_days": 120,
+    "minimum": {
+      "treasury": 15
+    },
+    "maximum": {},
+    "deltas": {
+      "treasury": -15,
+      "supply_pressure": -12
+    }
+  },
+  {
+    "id": "rest",
+    "pp_cost": 30,
+    "cooldown_days": 90,
+    "minimum": {
+      "treasury": 10,
+      "war_exhaustion": 8
+    },
+    "maximum": {},
+    "deltas": {
+      "treasury": -10,
+      "war_exhaustion": -8,
+      "army_prestige": -2
+    }
+  },
+  {
+    "id": "requisition",
+    "pp_cost": 20,
+    "cooldown_days": 120,
+    "minimum": {},
+    "maximum": {
+      "war_exhaustion": 80
+    },
+    "deltas": {
+      "treasury": 10,
+      "supply_pressure": -6,
+      "war_exhaustion": 8,
+      "legitimacy": -5
+    }
+  },
+  {
+    "id": "staff",
+    "pp_cost": 45,
+    "cooldown_days": 180,
+    "minimum": {
+      "treasury": 15
+    },
+    "maximum": {
+      "reform": 94
+    },
+    "deltas": {
+      "treasury": -15,
+      "reform": 6
+    }
+  },
+  {
+    "id": "relief",
+    "pp_cost": 40,
+    "cooldown_days": 120,
+    "minimum": {
+      "treasury": 15
+    },
+    "maximum": {
+      "legitimacy": 94
+    },
+    "deltas": {
+      "treasury": -15,
+      "legitimacy": 6,
+      "war_exhaustion": -3
+    }
+  },
+  {
+    "id": "demobilize",
+    "pp_cost": 35,
+    "cooldown_days": 180,
+    "minimum": {
+      "war_exhaustion": 10
+    },
+    "maximum": {},
+    "deltas": {
+      "war_exhaustion": -10,
+      "legitimacy": 3
+    }
+  },
+  {
+    "id": "commissions",
+    "pp_cost": 35,
+    "cooldown_days": 180,
+    "minimum": {
+      "treasury": 10
+    },
+    "maximum": {
+      "army_prestige": 94
+    },
+    "deltas": {
+      "treasury": -10,
+      "army_prestige": 6,
+      "reform": 2
+    }
+  }
+]

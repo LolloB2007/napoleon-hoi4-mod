@@ -2,7 +2,7 @@
 
 A Europe-first campaign beginning on **5 May 1789**, centred on the French Revolution and the Napoleonic Wars. France is the narrative centre; Britain, Habsburg Austria, Prussia and Russia are the other great-power campaigns.
 
-**Current branch: Repository source-contract and build pass**
+**Current branch: Milestone 8 complete: secondary-power campaigns and territorial/client framework**
 
 > Development build, not a verified release. Static tests do not demonstrate a successful HOI4 launch or balanced campaign.
 
@@ -28,10 +28,14 @@ The project includes five major trees, sixteen secondary-country setups, nationa
 
 The four opening northern and Ottoman conflicts use bounded scripted peace. The purpose is to avoid full annexations through vanilla total-war peace conferences. Alternate-winner terms require approval; current hooks need real engine testing, especially simultaneous wars and third-party intervention.
 
-- 68-country source namespace and placeholder flags
-- Explicit ideology subtypes and referenced custom leader traits
-- Deterministic source-to-engine build with drift checking
-- Comment-aware parser and focus dependency cycle checks
+- 450 French focus definitions, 108 additional great-power focuses and their policy events
+- Reusable era mechanics and seven temporary coalition rounds
+- Sixteen peaceful independent-release decisions and twelve client-aid decisions
+- Approval-gated integration/formable registry and consent-based Rhine client charters
+- Thirteen secondary campaign packs covering Spain, Poland/Warsaw, the Ottoman Empire, Sweden, five Italian states, German principalities, Portugal, the Netherlands and the United States
+- 299 secondary focuses, 52 secondary events, 39 recurring decisions and 65 campaign spirits
+- Historical and bounded alternate routes, military-development branches, major-power diplomatic links and localisation for every Milestone 8 campaign family
+- Dynamic WAR, BAT and HOL tags inherit the Polish or Dutch campaign; USA, Baden, Hesse and Mecklenburg receive missing political-character baselines
 
 ## Installation for testing
 
@@ -82,7 +86,7 @@ docs/                   Scope, manifests and test evidence
 
 ## Testing limits
 
-12 unit tests passed locally; no HOI4 process was executed. CI verifies the committed source separately.
+The suite adds 14 dedicated Milestone 8 tests on top of the existing 104-test baseline. It checks campaign coverage, 299 unique focus IDs, route exclusivity, 52 unique events, 39 decisions, 65 spirits, localisation, dynamic-tag inheritance, bounded great-power links, USA baseline data and absence of unapproved territorial effects. GitHub Actions must still pass, and no HOI4 executable was run.
 
 The structural parser understands comments, quoted strings, lists and nested blocks; graph tests detect missing prerequisites and cycles. It is not the Paradox engine. Braces and references do not establish modifier validity, correct scope, OOB deployment timing or peace-conference interception.
 

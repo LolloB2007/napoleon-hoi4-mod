@@ -1,0 +1,1 @@
+nap_secondary_policy = { icon = generic_political_discourse allowed = { always = yes } visible = { OR = { tag = SPR tag = POL tag = WAR tag = TUR tag = SWE tag = SAR tag = NAP tag = PAP tag = VEN tag = TUS tag = BAV tag = SAX tag = HAN tag = WUR tag = BAD tag = HES tag = MEC tag = POR tag = NET tag = BAT tag = HOL tag = USA } } }
