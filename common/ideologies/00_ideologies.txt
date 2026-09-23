@@ -1,0 +1,54 @@
+ideologies = {
+ neutrality = {
+  types = {
+   despotism = { can_be_randomly_selected = yes }
+   oligarchism = { can_be_randomly_selected = yes }
+   moderatism = { can_be_randomly_selected = yes }
+   centrism = { can_be_randomly_selected = yes }
+  }
+  color = { 100 30 30 }
+  rules = { can_puppet = yes can_send_volunteers = yes can_lower_tension = yes }
+  can_be_boosted = yes
+  war_impact_on_world_tension = 1.0
+  faction_impact_on_world_tension = 1.0
+ }
+ democratic = {
+  types = {
+   conservatism = { can_be_randomly_selected = yes }
+   liberalism = { can_be_randomly_selected = yes }
+   socialism = { can_be_randomly_selected = yes }
+   social_democracy = { can_be_randomly_selected = yes }
+  }
+  color = { 40 90 170 }
+  rules = { can_puppet = yes can_send_volunteers = yes can_lower_tension = yes }
+  can_be_boosted = yes
+  war_impact_on_world_tension = 1.0
+  faction_impact_on_world_tension = 1.0
+ }
+ communism = {
+  types = {
+   marxism = { can_be_randomly_selected = yes }
+   leninism = { can_be_randomly_selected = yes }
+   stalinism = { can_be_randomly_selected = yes }
+   anti_revisionism = { can_be_randomly_selected = yes }
+  }
+  color = { 140 30 30 }
+  rules = { can_puppet = yes can_send_volunteers = yes can_lower_tension = yes }
+  can_be_boosted = yes
+  war_impact_on_world_tension = 1.0
+  faction_impact_on_world_tension = 1.0
+ }
+ fascism = {
+  types = {
+   fascism_ideology = { can_be_randomly_selected = yes }
+   nazism = { can_be_randomly_selected = yes }
+   falangism = { can_be_randomly_selected = yes }
+   rexism = { can_be_randomly_selected = yes }
+  }
+  color = { 100 100 100 }
+  rules = { can_puppet = yes can_send_volunteers = yes can_lower_tension = yes }
+  can_be_boosted = yes
+  war_impact_on_world_tension = 1.0
+  faction_impact_on_world_tension = 1.0
+ }
+}
