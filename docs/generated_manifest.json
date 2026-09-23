@@ -1,6 +1,6 @@
 {
-  "README.md": "70d7d73692eb9d57d2a1cfb24b35d3444d067abe4b0d395d149a2cbda7783dcf",
-  "ROADMAP.md": "27d7a1d97806da8d60ffc7ca92ff9cad68dcf8bf0eec4c3cde07bdee0e5f609a",
+  "README.md": "b7602209bae657ac194493f43cb383b1925880024851cbbbc9d4dc75a68a24a2",
+  "ROADMAP.md": "217df91d7977a695112b0dd981d61385cf5f221027c88d3123d3aac7a254426f",
   "common/countries/Algiers.txt": "6f14369bb7d99f76842f3e93accf00512926c5a6c9840146ed086023f606d172",
   "common/countries/Baden.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
   "common/countries/Batavian_Republic.txt": "bbc831de3dc974f05c70dc9995f0388ecb1a355ebc510db6bc2d1ed1cdb49c3a",
@@ -111,6 +111,7 @@
   "common/national_focus/secondary_usa.txt": "e7523687d2f077ae0a8ec662a58f46aaf0a75e704a50feb01079ae2165492fc0",
   "common/national_focus/secondary_venice.txt": "e2aa2c5df68d3f6402464738ad896c55c25f8ca94ca0e3abc22eb43d790dae33",
   "common/on_actions/nap_coalitions.txt": "c2a3d9456005d32386a1bea2a3ef64df9638cf0f087f90880093face9ed349f9",
+  "common/on_actions/nap_compatibility.txt": "e53e3d461f2fdd4a8fc5255f8b4165add8d8142c791064e19d4f0df6b9fd1504",
   "common/on_actions/nap_era.txt": "4f5b42f9d42aaea33ac055be5a42e9371caa146e278697c8efa9e28d1b6808a0",
   "common/on_actions/nap_geography.txt": "2995db0c3d567a0e5591a7788d4979c8b04504d28093314666a835212e0a2eae",
   "common/on_actions/napoleonic_on_actions.txt": "de7cd5dd50d8921f3cf977cb031c1724a9194e1f3dc36d6cfb97e8106e7a9d6e",
@@ -122,6 +123,7 @@
   "common/scripted_effects/napoleonic_diplomacy_setup.txt": "a6e95490cd85b2ec706dad73366622c34324f1e46cf02cde6b0866cc4244b899",
   "common/scripted_triggers/nap_clients.txt": "9313df383ace69abdc12ae6db6083c5b61ee3392e73595e51f54ca51d34f21dc",
   "common/scripted_triggers/nap_coalitions.txt": "0a8ea1261ba4dd8efd0124f0722bef6ff1d14dc8066b1e1bbcca96ac92c467cd",
+  "common/scripted_triggers/nap_compatibility.txt": "0f589b8a84924335cc4b096597624061ab803e7b79253a0eba599ad7c1919613",
   "common/scripted_triggers/nap_era.txt": "03f8fa16d9f2a510ae048bfde6a6d0d3586c54cb3c88b1b76e349dd5cb7838cb",
   "common/scripted_triggers/nap_france_routes.txt": "a20d62b9c640ea83aa70e56c5854d6b05d4ebb488915ff64a33ca0824427c7a0",
   "common/scripted_triggers/nap_geography.txt": "7a584b3e6c8624db094d4a1f81266adb4bbbe18c803863c11a3d3fa23c2d6450",
@@ -130,6 +132,7 @@
   "docs/asset-provenance.md": "a38c97cfd488264ae8bf87850df37df1544eec5b81bf4b08747ff253654660d1",
   "docs/coalition-framework.md": "cb327169e6ab793a5a829a48d608786b1b072415c6040e1bf52b6534f5222eb6",
   "docs/coalition-rounds.json": "cd31cc63899464a4c5f6c1af242367646a3a43bb7a135c52741a31bca8c6a789",
+  "docs/compatibility.md": "7db20f1e449bf062ae74356b1e007839075f351de79bd6886796f06942e97143",
   "docs/era-actions.json": "a8c7b673d6bc4bdc35a6de8a9c970dd02fe93ce26041d55d4c1c8af7a5c860dc",
   "docs/era-mechanics.md": "e7dd52e3b9f6a908579f20e8f9a92d3c98802b044e893fad3fff79c7c69cdeb0",
   "docs/france-expansion.md": "6d06c76bdb35f984221d2ed5ca57b3ea8e75ccc32cadbddfd93da6d80f65ffb6",
@@ -144,6 +147,7 @@
   "docs/source-contracts.md": "1e710c9f9ffd33c6d65dc98159bfa202dc354815b9f0216174ae8590e27e71f2",
   "docs/territorial-registry.json": "9b574a1d618066bb0b9d2154866744539f7417d055eb0398f6b24b907112fcd1",
   "docs/territorial-systems.md": "98d0d0d53042f46d03a8c0d6d924515f8dccc6bffc0b7e39d7415991e4c5d0ff",
+  "events/00_compatibility.txt": "cb9d6046ff91b96b4776b608598a58a2037701d2c345a6cd9b33ebbe96af6e2f",
   "events/01_french_revolution.txt": "55f610d01e6fc3911b9d455828f9be422691a8f92370964f3f679fa006f5b68e",
   "events/02_napoleonic_wars.txt": "a861adba5f27fe9a7be83145ab84f4c214aa3b8825d64f62939a0531962e2fd7",
   "events/03_collapse.txt": "fc3303d54c7c6aa1ac123e79e3e3ce75a793e6f57e708e58c2a5cd260cefa6ce",
@@ -2248,6 +2252,7 @@
   "interface/nap_presentation.gfx": "e75cbed0b69b63d5a0ae5eb009c44b6066593be5d6d3b7cf20abb191113ce622",
   "interface/napoleonic_bookmark.gfx": "41ba2d55c90aa7e644ed6c655ab2381e021d4bc2e0fc5279f4330a89d86fa1c6",
   "localisation/english/nap_coalitions_l_english.yml": "0f40461d082758970f5b69aaaf8c1c74a0484675c874bd320097d9e0c2731a04",
+  "localisation/english/nap_compatibility_l_english.yml": "fdc5667e789d5fdf48a6a31ad15192d8b0298ee778b2f4a3ab536ec341656b90",
   "localisation/english/nap_era_l_english.yml": "ffc155225c96f6b6a46fa331f79f1617a7fc3df891c450399cdf392ec94b590c",
   "localisation/english/nap_flavour_l_english.yml": "04b009b85ed4a29903baac9d9a7fed7e592f3ae7bc0fef6f35da01b4ad0cbfc4",
   "localisation/english/nap_french_development_l_english.yml": "c1683864127d89fb2372f62ccdd1c906a91239038fa869f9bef3b603af6fc315",
@@ -2265,5 +2270,5 @@
   "sound/nap_dispatch.wav": "7931b65854a253ed2729a7b5b5f5fb08758453babd4f9606d811ea9790d749c3",
   "sound/napoleonic.asset": "c654f89707d6cf8e9ed102288eb0f6a0dc75ebd4b85a1ac0b00b3abf2079aba9",
   "suggestions.md": "f068970a2c1217a1b724fdea3f171c230d8b38561842071ebc9bc2f63cba8cb7",
-  "to ask lollo.md": "cf0c2ab252399da91a53ddfda3c74c460f9d2d194e35021b6a78fe14fbc4366a"
+  "to ask lollo.md": "a5a53c986e955053131e43b6d7778ccac92b501cdabecd8e078b84e25545a2d8"
 }

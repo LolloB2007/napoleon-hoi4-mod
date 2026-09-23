@@ -1,6 +1,6 @@
 # Napoleonic Era: development roadmap
 
-**Current branch: A01-A07 implemented; A08-A12 approved and queued in the stacked implementation series**
+**Current branch: A01-A08 implemented; A09-A12 approved and queued in the stacked implementation series**
 
 Implementation, static verification and successful in-game testing are separate statuses. A PR does not complete an engine acceptance test merely by adding files.
 
