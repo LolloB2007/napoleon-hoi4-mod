@@ -114,6 +114,20 @@ HAB = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { fl
 POR = { if = { limit = { nap_coalition_candidate = yes } set_country_flag = { flag = nap_invited_round_7 days = 60 } country_event = { id = nap_coalition.107 days = 3 } } }
  }
 } }
+nap_coalition_french_victory_settlement = {
+ if = { limit = { has_global_flag = nap_coalition_active }
+  FRA = { add_stability = 0.05 add_war_support = 0.04 add_political_power = 100 }
+  ENG = { if = { limit = { exists = yes } add_stability = -0.03 add_political_power = -50 } }
+  nap_coalition_end_round = yes
+ }
+}
+nap_coalition_coalition_victory_settlement = {
+ if = { limit = { has_global_flag = nap_coalition_active }
+  FRA = { add_stability = -0.06 add_war_support = -0.05 add_political_power = -100 }
+  ENG = { if = { limit = { exists = yes } add_stability = 0.04 add_political_power = 75 } }
+  nap_coalition_end_round = yes
+ }
+}
 nap_coalition_end_round = {
  if = { limit = { has_global_flag = nap_coalition_active NOT = { has_global_flag = nap_coalition_peace_busy } }
   set_global_flag = nap_coalition_peace_busy clr_global_flag = nap_coalition_active

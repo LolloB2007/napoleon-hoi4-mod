@@ -1,0 +1,9 @@
+add_namespace = nap_compatibility
+country_event = {
+ id = nap_compatibility.1
+ title = nap_compatibility.1.t
+ desc = nap_compatibility.1.d
+ picture = GFX_NAP_EVENT_09
+ is_triggered_only = yes
+ option = { name = nap_compatibility.1.a set_global_flag = nap_missing_required_dlc }
+}

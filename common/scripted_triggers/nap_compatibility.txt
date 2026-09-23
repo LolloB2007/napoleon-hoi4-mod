@@ -1,0 +1,1 @@
+nap_required_dlc_available = { has_dlc = "La Resistance" }
