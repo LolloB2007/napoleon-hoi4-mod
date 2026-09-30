@@ -1,0 +1,73 @@
+# Russian Empire - compressed 1789 starting OOB.
+# Province 3151 is Saint Petersburg/Leningrad in the vanilla map. Active
+# Ottoman and Swedish fronts are deliberately not guessed before map validation.
+
+division_template = {
+    name = "1789 Russian Line"
+    division_names_group = RUS_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        line_infantry = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+division_template = {
+    name = "1789 Russian Grenadiers"
+    division_names_group = RUS_NAP_INF
+    regiments = {
+        grenadier = { x = 0 y = 0 }
+        grenadier = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        line_infantry = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 3
+}
+
+division_template = {
+    name = "1789 Russian Cavalry"
+    division_names_group = RUS_NAP_CAV
+    regiments = {
+        light_cavalry = { x = 0 y = 0 }
+        dragoon = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+        horse_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+division_template = {
+    name = "1789 Cossack Host"
+    division_names_group = RUS_NAP_CAV
+    regiments = {
+        irregular_cavalry = { x = 0 y = 0 }
+        irregular_cavalry = { x = 0 y = 1 }
+        irregular_cavalry = { x = 1 y = 0 }
+    }
+    priority = 1
+}
+
+units = {
+    division = { name = "St Petersburg Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.45 start_equipment_factor = 0.88 }
+    division = { name = "Moscow Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.45 start_equipment_factor = 0.88 }
+    division = { name = "Novgorod Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.42 start_equipment_factor = 0.86 }
+    division = { name = "Baltic Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.42 start_equipment_factor = 0.86 }
+    division = { name = "Belarus Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.40 start_equipment_factor = 0.85 }
+    division = { name = "Smolensk Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.40 start_equipment_factor = 0.85 }
+    division = { name = "Kiev Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.42 start_equipment_factor = 0.86 }
+    division = { name = "Ukraine Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.42 start_equipment_factor = 0.86 }
+    division = { name = "Crimean Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.45 start_equipment_factor = 0.88 }
+    division = { name = "Caucasus Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.40 start_equipment_factor = 0.84 }
+    division = { name = "Finnish Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.42 start_equipment_factor = 0.86 }
+    division = { name = "Imperial Reserve Corps" location = 3151 division_template = "1789 Russian Line" start_experience_factor = 0.40 start_equipment_factor = 0.85 }
+    division = { name = "Preobrazhensky Grenadier Group" location = 3151 division_template = "1789 Russian Grenadiers" start_experience_factor = 0.62 start_equipment_factor = 0.94 }
+    division = { name = "Semyonovsky Grenadier Group" location = 3151 division_template = "1789 Russian Grenadiers" start_experience_factor = 0.60 start_equipment_factor = 0.94 }
+    division = { name = "Imperial Cavalry Reserve" location = 3151 division_template = "1789 Russian Cavalry" start_experience_factor = 0.55 start_equipment_factor = 0.90 }
+    division = { name = "Dragoon Reserve" location = 3151 division_template = "1789 Russian Cavalry" start_experience_factor = 0.52 start_equipment_factor = 0.90 }
+    division = { name = "Don Cossack Host" location = 3151 division_template = "1789 Cossack Host" start_experience_factor = 0.55 start_equipment_factor = 0.88 }
+    division = { name = "Black Sea Cossack Host" location = 3151 division_template = "1789 Cossack Host" start_experience_factor = 0.50 start_equipment_factor = 0.86 }
+}

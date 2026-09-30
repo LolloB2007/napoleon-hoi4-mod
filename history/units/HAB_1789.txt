@@ -1,0 +1,57 @@
+# Habsburg Monarchy - compressed 1789 starting OOB.
+# Province 11666 is Vienna. The active Ottoman-war deployment is abstracted
+# until the opening-war runtime/map pass.
+
+division_template = {
+    name = "1789 Imperial Infantry"
+    division_names_group = HAB_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        line_infantry = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+division_template = {
+    name = "1789 Imperial Grenadiers"
+    division_names_group = HAB_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        grenadier = { x = 1 y = 0 }
+        grenadier = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 3
+}
+
+division_template = {
+    name = "1789 Imperial Cavalry"
+    division_names_group = HAB_NAP_CAV
+    regiments = {
+        light_cavalry = { x = 0 y = 0 }
+        dragoon = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+        horse_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+units = {
+    division = { name = "I. Hauptarmee" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.50 start_equipment_factor = 0.90 }
+    division = { name = "II. Hauptarmee" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.48 start_equipment_factor = 0.90 }
+    division = { name = "III. Hauptarmee" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.45 start_equipment_factor = 0.88 }
+    division = { name = "Böhmisches Korps" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.45 start_equipment_factor = 0.88 }
+    division = { name = "Mährisches Korps" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.42 start_equipment_factor = 0.88 }
+    division = { name = "Ungarisches Korps" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.42 start_equipment_factor = 0.86 }
+    division = { name = "Kroatisches Korps" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.40 start_equipment_factor = 0.85 }
+    division = { name = "Galizisches Korps" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.40 start_equipment_factor = 0.85 }
+    division = { name = "Österreichische Reserve" location = 11666 division_template = "1789 Imperial Infantry" start_experience_factor = 0.38 start_equipment_factor = 0.85 }
+    division = { name = "Grenadierreserve Wien" location = 11666 division_template = "1789 Imperial Grenadiers" start_experience_factor = 0.60 start_equipment_factor = 0.94 }
+    division = { name = "Grenadierreserve Böhmen" location = 11666 division_template = "1789 Imperial Grenadiers" start_experience_factor = 0.58 start_equipment_factor = 0.94 }
+    division = { name = "Kaiserliche Kavalleriereserve" location = 11666 division_template = "1789 Imperial Cavalry" start_experience_factor = 0.58 start_equipment_factor = 0.92 }
+    division = { name = "Ungarische Reiterei" location = 11666 division_template = "1789 Imperial Cavalry" start_experience_factor = 0.55 start_equipment_factor = 0.92 }
+}

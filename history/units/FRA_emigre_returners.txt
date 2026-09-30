@@ -1,0 +1,31 @@
+# Loaded by the royalist FRA_emigre_army focus.
+
+division_template = {
+    name = "Émigré Infantry"
+    division_names_group = FRA_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        grenadier = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+division_template = {
+    name = "Émigré Cavalry"
+    division_names_group = FRA_NAP_CAV
+    regiments = {
+        light_cavalry = { x = 0 y = 0 }
+        dragoon = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+    }
+    priority = 2
+}
+
+units = {
+    division = { name = "Armée des Princes" location = 11506 division_template = "Émigré Infantry" start_experience_factor = 0.48 start_equipment_factor = 0.85 }
+    division = { name = "Légion de Condé" location = 11506 division_template = "Émigré Infantry" start_experience_factor = 0.52 start_equipment_factor = 0.88 }
+    division = { name = "Cavalerie des Émigrés" location = 11506 division_template = "Émigré Cavalry" start_experience_factor = 0.50 start_equipment_factor = 0.86 }
+}
