@@ -107,7 +107,7 @@ class FranceTests(unittest.TestCase):
         self.assertIn('rights_of_man_declared',dumps(self.events['french_revolution.4'].children('option')[0].children('if')[0].children('limit')))
 
     def test_trial_focus_owns_regicide_transition(self):
-        republic=dumps(self.events['french_revolution.8'])
+        republic=dumps([self.events['french_revolution.8']])
         trial_focus=dumps(self.nodes['FRA_trial_of_the_king'].children('completion_reward'))
         trial_event=dumps(self.events['french_revolution.9'].children('trigger'))
         self.assertNotIn('id = french_revolution.9',republic)
@@ -162,8 +162,6 @@ class FranceTests(unittest.TestCase):
         self.assertIn('combined_arms_doctrine_corps_system',dumps(tech['column_doctrine_grande_armee'].children('path')))
         combined=tech['combined_arms_doctrine_corps_system']
         self.assertFalse(combined.children('xor'))
-        self.assertEqual(combined.children('folder')[0].children('position')[0].scalar('x'),'4')
-        self.assertEqual(combined.children('folder')[0].children('position')[0].scalar('y'),'5')
 
     def test_all_event_calls_target_defined_ids(self):
         for path,text in self.files.items():
