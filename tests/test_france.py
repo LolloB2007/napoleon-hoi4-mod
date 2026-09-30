@@ -104,6 +104,7 @@ class FranceTests(unittest.TestCase):
         self.assertIn('FRA_constitutional_monarchy',dumps(revolution.children('mutually_exclusive')))
         self.assertIn('FRA_vive_la_revolution',dumps(monarchy.children('mutually_exclusive')))
         self.assertIn('rights_of_man_declared',dumps(self.events['french_revolution.4'].children('trigger')))
+        self.assertIn('rights_of_man_declared',dumps(self.events['french_revolution.4'].children('option')[0].children('if')[0].children('limit')))
 
     def test_trial_focus_owns_regicide_transition(self):
         republic=dumps(self.events['french_revolution.8'])
@@ -114,6 +115,7 @@ class FranceTests(unittest.TestCase):
         self.assertIn('id = french_revolution.9',trial_focus)
         self.assertIn('trial_of_the_king_focus',trial_event)
         self.assertNotIn('vive_la_revolution_focus',trial_event)
+        self.assertIn('trial_of_the_king_focus',dumps(self.events['french_revolution.9'].children('option')[0].children('if')[0].children('limit')))
 
     def test_trial_does_not_retire_current_republican_leader(self):
         self.assertNotIn('retire_country_leader',[e.key for e in walk(self.events['french_revolution.9'].value)])
