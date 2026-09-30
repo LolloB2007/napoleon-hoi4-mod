@@ -41,7 +41,6 @@ focus_tree = {
 			focus = FRA_convene_estates_general
 		}
 		mutually_exclusive = {
-			focus = FRA_vive_la_revolution
 			focus = FRA_emigre_response
 		}
 		x = 3
@@ -98,6 +97,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = FRA_civil_constitution_clergy
+		}
+		mutually_exclusive = {
+			focus = FRA_vive_la_revolution
 		}
 		x = 3
 		y = 3
@@ -187,10 +189,10 @@ focus_tree = {
 		id = FRA_vive_la_revolution
 		icon = GFX_NAP_FOCUS_FRA_VIVE_LA_REVOLUTION
 		prerequisite = {
-			focus = FRA_convene_estates_general
+			focus = FRA_adopt_declaration
 		}
 		mutually_exclusive = {
-			focus = FRA_adopt_declaration
+			focus = FRA_constitutional_monarchy
 			focus = FRA_emigre_response
 		}
 		x = 9
@@ -281,7 +283,7 @@ focus_tree = {
 			factor = 80
 		}
 		completion_reward = {
-			set_country_flag = vive_la_revolution_focus
+			set_country_flag = trial_of_the_king_focus
 			country_event = {
 				id = french_revolution.9
 				days = 5

@@ -1,6 +1,9 @@
 # France decision mechanics
 
-The six large French historical arcs now use decisions and bounded variables rather than relying mainly on focus-completion effects or calendar timers.
+The six large French historical arcs now use decisions and bounded variables rather than relying mainly on focus-completion effects or calendar timers. A read-only Historical Campaign Guide surfaces the current historical spine and the development chapters most relevant to each regime phase, so the 630-focus tree functions as optional state-building depth rather than a checklist.
+
+## Historical campaign guide
+Eight mutually staged informational decisions cover the revolutionary settlement, republic at war, Directory, Consulate, early Empire, Continental Empire, Russian crisis and Restoration/Hundred Days. They cannot be clicked and confer no effects; their only purpose is to orient a player inside the large French tree.
 
 ## Revolutionary crisis
 The Estates-General unlocks a government-management sequence for the National Assembly, Legislative Assembly and Convention. Girondin and Jacobin influence are repeatable political choices. Assignat issuance creates immediate treasury at the cost of inflation. Vendée unrest rises during revolutionary war and can be reduced through conciliation or coercion. The Committee of Public Safety, Terror, Thermidor and Directory are deliberate decisions that invoke the existing guarded narrative events.

@@ -248,6 +248,7 @@ country_event = {
 		name = french_revolution.4.a
 		trigger = {
 			nap_fra_route_republican = yes
+			has_country_flag = rights_of_man_declared
 			NOT = {
 				has_country_flag = french_republic
 			}
@@ -258,6 +259,7 @@ country_event = {
 		if = {
 			limit = {
 				nap_fra_route_republican = yes
+				has_country_flag = rights_of_man_declared
 				NOT = {
 					has_country_flag = french_republic
 				}
@@ -285,6 +287,7 @@ country_event = {
 		trigger = {
 			NOT = {
 				nap_fra_route_republican = yes
+				has_country_flag = rights_of_man_declared
 				NOT = {
 					has_country_flag = french_republic
 				}
@@ -454,11 +457,6 @@ country_event = {
  picture = GFX_NAP_EVENT_07
 				hours = 6
 			}
-			country_event = {
-				id = french_revolution.9
- picture = GFX_NAP_EVENT_08
-				days = 90
-			}
 			create_country_leader = {
 				name = "National Convention"
 	picture = GFX_NAP_PORTRAIT_NATIONAL_CONVENTION
@@ -515,15 +513,14 @@ country_event = {
 		NOT = {
 			has_country_flag = french_royalist_path
 		}
-		OR = {
-			has_country_flag = vive_la_revolution_focus
-		}
+		has_country_flag = trial_of_the_king_focus
 	}
 	option = {
 		name = french_revolution.9.a
 		trigger = {
 			nap_fra_route_republican = yes
 			has_country_flag = french_republic
+			has_country_flag = trial_of_the_king_focus
 			NOT = {
 				has_country_flag = nap_legacy_french_revolution_9_settled
 			}
@@ -532,6 +529,7 @@ country_event = {
 			limit = {
 				nap_fra_route_republican = yes
 				has_country_flag = french_republic
+				has_country_flag = trial_of_the_king_focus
 				NOT = {
 					has_country_flag = nap_legacy_french_revolution_9_settled
 				}
@@ -584,6 +582,7 @@ country_event = {
 			NOT = {
 				nap_fra_route_republican = yes
 				has_country_flag = french_republic
+				has_country_flag = trial_of_the_king_focus
 				NOT = {
 					has_country_flag = nap_legacy_french_revolution_9_settled
 				}
