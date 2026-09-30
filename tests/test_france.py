@@ -93,6 +93,28 @@ class FranceTests(unittest.TestCase):
             for option in event.children('option')[:-1]:
                 self.assertTrue(option.children('if'),key)
                 self.assertTrue(option.children('trigger'),key)
+    def test_historical_revolution_flows_through_declaration(self):
+        declaration=self.nodes['FRA_adopt_declaration']
+        revolution=self.nodes['FRA_vive_la_revolution']
+        monarchy=self.nodes['FRA_constitutional_monarchy']
+        declaration_exclusive=dumps(declaration.children('mutually_exclusive'))
+        self.assertNotIn('FRA_vive_la_revolution',declaration_exclusive)
+        self.assertIn('FRA_emigre_response',declaration_exclusive)
+        self.assertIn('FRA_adopt_declaration',dumps(revolution.children('prerequisite')))
+        self.assertIn('FRA_constitutional_monarchy',dumps(revolution.children('mutually_exclusive')))
+        self.assertIn('FRA_vive_la_revolution',dumps(monarchy.children('mutually_exclusive')))
+        self.assertIn('rights_of_man_declared',dumps(self.events['french_revolution.4'].children('trigger')))
+
+    def test_trial_focus_owns_regicide_transition(self):
+        republic=dumps(self.events['french_revolution.8'])
+        trial_focus=dumps(self.nodes['FRA_trial_of_the_king'].children('completion_reward'))
+        trial_event=dumps(self.events['french_revolution.9'].children('trigger'))
+        self.assertNotIn('id = french_revolution.9',republic)
+        self.assertIn('trial_of_the_king_focus',trial_focus)
+        self.assertIn('id = french_revolution.9',trial_focus)
+        self.assertIn('trial_of_the_king_focus',trial_event)
+        self.assertNotIn('vive_la_revolution_focus',trial_event)
+
     def test_trial_does_not_retire_current_republican_leader(self):
         self.assertNotIn('retire_country_leader',[e.key for e in walk(self.events['french_revolution.9'].value)])
     def test_brumaire_clears_old_route(self):
@@ -132,6 +154,15 @@ class FranceTests(unittest.TestCase):
         for p in (ROOT/'content/legacy').glob('*.txt'):
             parsed=parse(p.read_text(encoding='utf-8-sig'))
             self.assertEqual(parsed,parse(dumps(parsed)))
+    def test_french_column_doctrine_continues_into_combined_arms(self):
+        doctrine=parse((ROOT/'common/technologies/land_doctrine.txt').read_text(encoding='utf-8-sig'))[0]
+        tech={e.key:e for e in doctrine.value if isinstance(e.value,list)}
+        self.assertIn('combined_arms_doctrine_corps_system',dumps(tech['column_doctrine_grande_armee'].children('path')))
+        combined=tech['combined_arms_doctrine_corps_system']
+        self.assertFalse(combined.children('xor'))
+        self.assertEqual(combined.children('folder')[0].children('position')[0].scalar('x'),'4')
+        self.assertEqual(combined.children('folder')[0].children('position')[0].scalar('y'),'5')
+
     def test_all_event_calls_target_defined_ids(self):
         for path,text in self.files.items():
             if not path.endswith('.txt'): continue

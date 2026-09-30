@@ -229,8 +229,6 @@ country_event = {
 
 		news_event = { id = napoleonic_timeline.8 hours = 6 }
 
-		# Triggers the king's trial sequence
-		country_event = { id = french_revolution.9 days = 90 }
 	}
 }
 
@@ -248,8 +246,8 @@ news_event = {
 # ============================================================
 # 7. EXECUTION OF LOUIS XVI — 1793.1.21
 # ============================================================
-# Fires automatically 90 days after the Republic is proclaimed (or by focus).
-# This is the event the user specifically requested: "Vive la révolution" focus → king's death.
+# Fired only by the date-gated "Trial of the King" focus.
+# The Republic proclamation no longer queues regicide on a fixed timer.
 country_event = {
 	id = french_revolution.9
 	title = french_revolution.9.t
@@ -264,10 +262,7 @@ country_event = {
 		has_country_flag = french_revolutionary_path
 		NOT = { has_country_flag = french_constitutional_path }
 		NOT = { has_country_flag = french_royalist_path }
-		OR = {
-			has_country_flag = vive_la_revolution_focus
-			date > 1793.1.20
-		}
+		has_country_flag = trial_of_the_king_focus
 	}
 
 	mean_time_to_happen = { days = 1 }

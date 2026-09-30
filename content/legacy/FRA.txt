@@ -17,7 +17,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 1500 }
 
 	# ============================================================
-	# ROOT — Estates-General convened. The fork in history.
+	# ROOT — Estates-General convened. The revolutionary settlement begins.
 	# ============================================================
 
 	focus = {
@@ -45,7 +45,7 @@ focus_tree = {
 		id = FRA_adopt_declaration
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = FRA_convene_estates_general }
-		mutually_exclusive = { focus = FRA_vive_la_revolution focus = FRA_emigre_response }
+		mutually_exclusive = { focus = FRA_emigre_response }
 		x = 3 y = 1
 		cost = 10
 
@@ -82,6 +82,7 @@ focus_tree = {
 		icon = GFX_focus_generic_monarchy_1
 		prerequisite = { focus = FRA_adopt_declaration }
 		prerequisite = { focus = FRA_civil_constitution_clergy }
+		mutually_exclusive = { focus = FRA_vive_la_revolution }
 		x = 3 y = 3
 		cost = 10
 
@@ -146,8 +147,8 @@ focus_tree = {
 	focus = {
 		id = FRA_vive_la_revolution
 		icon = GFX_focus_generic_workers_and_farmers_rise
-		prerequisite = { focus = FRA_convene_estates_general }
-		mutually_exclusive = { focus = FRA_adopt_declaration focus = FRA_emigre_response }
+		prerequisite = { focus = FRA_adopt_declaration }
+		mutually_exclusive = { focus = FRA_constitutional_monarchy focus = FRA_emigre_response }
 		x = 9 y = 1
 		cost = 10
 
@@ -209,7 +210,7 @@ focus_tree = {
 		ai_will_do = { factor = 80 }
 
 		completion_reward = {
-			set_country_flag = vive_la_revolution_focus      # Triggers king-death event
+			set_country_flag = trial_of_the_king_focus
 			country_event = { id = french_revolution.9 days = 5 }
 		}
 	}

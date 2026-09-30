@@ -28,6 +28,7 @@ CONTINENTAL_TARGETS = [
 ]
 
 CATEGORIES = {
+ 'nap_fra_historical_guide':('Historical Campaign Guide','Shows the current historical spine and the development chapters most relevant to it. These entries are informational and cannot be clicked.'),
  'nap_fra_revolutionary_crisis':('Revolutionary Government','Manage institutions, factional pressure, the Vendée, emergency finance and the Terror.'),
  'nap_fra_napoleon_rise':("Bonaparte's Ascent",'Turn military prestige into political authority through Italy, Egypt, Brumaire, the Consulate and Empire.'),
  'nap_fra_continental_system':('The Continental System','Enforce or relax the blockade and pressure European states while Britain adapts.'),
@@ -78,6 +79,13 @@ def add_decision(sections,loc,category,key,title,desc,guard,effect,cost=35,coold
     sections[category].append(f'{key} = {{ '+' '.join(bits)+' }')
     loc += [f' {key}:0 "{title}"',f' {key}_desc:0 "{desc}"']
     DECISION_META.append(dict(id=key,category=category,title=title,repeatable=not once))
+
+
+def add_guide(sections,loc,key,title,desc,visible):
+    sections['nap_fra_historical_guide'].append(
+      f'{key} = {{ icon = generic_political_discourse cost = 0 visible = {{ tag = FRA {visible} }} available = {{ always = no }} complete_effect = {{ add_political_power = 0 }} ai_will_do = {{ factor = 0 }} }}')
+    loc += [f' {key}:0 "{title}"',f' {key}_desc:0 "{desc}"']
+    DECISION_META.append(dict(id=key,category='nap_fra_historical_guide',title=title,repeatable=False,informational=True))
 
 
 def add_effect(effects,key,guard,body,france=True):
@@ -147,6 +155,36 @@ def build(root):
   nap_fra_decision_refresh = yes
  }}
 }}''')
+
+    # Historical route guide. Exactly one stage should normally be visible on the historical route.
+    guide_rows = [
+      ('nap_fra_guide_revolution','Historical Priority: Revolutionary Settlement',
+       '1789–1791: complete Convene the Estates-General, Adopt the Declaration and the Civil Constitution of the Clergy, then choose Vive la Révolution after Varennes. Prioritize The Nation Assembles, The State Ledger, Governing the Provinces and Knowledge and Public Service while date gates mature.',
+       'NOT = { has_country_flag = french_republic } NOT = { has_country_flag = french_royalist_path } NOT = { has_country_flag = french_bonapartist_path } NOT = { has_country_flag = constitutional_monarchy_established }'),
+      ('nap_fra_guide_republic','Historical Priority: Republic at War',
+       '1792–1795: move through War on the Tyrants, Vive la République, Trial of the King, the Committee of Public Safety, Terror, Thermidor and the Directory. Prioritize The National Convention, The Jacobin Programme, The Republic at War, Infantry Institutions, Guns and Magazines, and Conscription and the Nation in Arms.',
+       'has_country_flag = french_republic NOT = { has_country_flag = directory_active } NOT = { has_country_flag = consulate_established } NOT = { has_country_flag = empire_of_the_french }'),
+      ('nap_fra_guide_directory','Historical Priority: Directory and Bonaparte',
+       '1795–1799: stabilize the Directory, complete the Italian and Egyptian campaign systems, then build enough Napoleon prestige for Brumaire. Prioritize The Directory Settlement, The Army of Italy, The Eastern Expedition and military modernization chapters.',
+       'has_country_flag = directory_active'),
+      ('nap_fra_guide_consulate','Historical Priority: The Consular State',
+       '1799–1804: consolidate Year VIII and prepare the Empire. Prioritize The Consular State, The Civil Code, Prefects and Departments, Church and Concordat, and Gendarmerie and Internal Security.',
+       'has_country_flag = consulate_established'),
+      ('nap_fra_guide_early_empire','Historical Priority: Imperial Consolidation',
+       '1804–1806: proclaim and crown the Empire, build the Grande Armée, create the Marshals and organize client states. Prioritize Administering the Empire, Marshals and Corps, The Client-State Network, Ports and Arsenals, and Notables and Imperial Society.',
+       'has_country_flag = empire_of_the_french NOT = { has_global_flag = continental_system_active } NOT = { has_country_flag = russian_campaign_active } NOT = { has_country_flag = grande_armee_destroyed }'),
+      ('nap_fra_guide_continental','Historical Priority: The Continental Empire',
+       '1806–1811: manage the Continental System, Confederation of the Rhine and Peninsular commitment while preserving treasury, legitimacy and supply. Prioritize The Continental System, The Peninsular Commitment, The Client-State Network and Commerce and Continental Markets.',
+       'has_country_flag = empire_of_the_french has_global_flag = continental_system_active NOT = { has_country_flag = russian_campaign_active } NOT = { has_country_flag = grande_armee_destroyed }'),
+      ('nap_fra_guide_russia','Historical Priority: Russia and Imperial Crisis',
+       '1812–1814: prepare magazines and remounts before crossing the Niemen. For the historical disaster, pressing deeper will trade supply and cohesion for prestige until the Grande Armée collapses. Prioritize Distance and Recovery, Veterans and Military Society, and Conscription and the Nation in Arms.',
+       'has_country_flag = empire_of_the_french OR = { has_country_flag = russian_campaign_active has_country_flag = grande_armee_destroyed } NOT = { has_country_flag = napoleon_on_elba } NOT = { has_country_flag = bourbon_restoration }'),
+      ('nap_fra_guide_restoration','Historical Priority: Restoration and Hundred Days',
+       '1814–1815: abdicate at Fontainebleau, restore Louis XVIII, grant the Charter, return from Elba, rally the veterans, issue the Additional Act, seek battle in Belgium, then resolve the second abdication and postwar settlement. Prioritize Postwar Settlement and National Recovery between transitions.',
+       'OR = { has_country_flag = napoleon_on_elba has_country_flag = bourbon_restoration has_country_flag = hundred_days has_country_flag = napoleon_on_st_helena }'),
+    ]
+    for row in guide_rows:
+        add_guide(sections,loc,*row)
 
     # Revolutionary government.
     add_effect(effects,'nap_fra_establish_national_assembly_effect',
@@ -598,7 +636,7 @@ def build(root):
     for category,rows in sections.items():
         decisions.append(category+' = {\n '+' \n '.join(rows)+'\n}')
     category_script=[]
-    for key in ('nap_fra_revolutionary_crisis','nap_fra_napoleon_rise','nap_fra_continental_system','nap_fra_peninsular_war','nap_fra_russian_campaign','nap_fra_restoration_cycle'):
+    for key in ('nap_fra_historical_guide','nap_fra_revolutionary_crisis','nap_fra_napoleon_rise','nap_fra_continental_system','nap_fra_peninsular_war','nap_fra_russian_campaign','nap_fra_restoration_cycle'):
         category_script.append(f'{key} = {{ icon = generic_political_discourse allowed = {{ tag = FRA }} visible = {{ tag = FRA }} }}')
     category_script.append('nap_continental_foreign = { icon = generic_political_discourse allowed = { always = yes } visible = { has_global_flag = continental_system_active has_idea = nap_continental_compliance NOT = { tag = FRA } NOT = { tag = ENG } } }')
 
@@ -622,7 +660,10 @@ def build(root):
 
     docs='''# France decision mechanics
 
-The six large French historical arcs now use decisions and bounded variables rather than relying mainly on focus-completion effects or calendar timers.
+The six large French historical arcs now use decisions and bounded variables rather than relying mainly on focus-completion effects or calendar timers. A read-only Historical Campaign Guide surfaces the current historical spine and the development chapters most relevant to each regime phase, so the 630-focus tree functions as optional state-building depth rather than a checklist.
+
+## Historical campaign guide
+Eight mutually staged informational decisions cover the revolutionary settlement, republic at war, Directory, Consulate, early Empire, Continental Empire, Russian crisis and Restoration/Hundred Days. They cannot be clicked and confer no effects; their only purpose is to orient a player inside the large French tree.
 
 ## Revolutionary crisis
 The Estates-General unlocks a government-management sequence for the National Assembly, Legislative Assembly and Convention. Girondin and Jacobin influence are repeatable political choices. Assignat issuance creates immediate treasury at the cost of inflation. Vendée unrest rises during revolutionary war and can be reduced through conciliation or coercion. The Committee of Public Safety, Terror, Thermidor and Directory are deliberate decisions that invoke the existing guarded narrative events.
