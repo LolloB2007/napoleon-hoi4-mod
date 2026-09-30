@@ -1,0 +1,92 @@
+nap_fra_personal_rule_decisions = {
+ nap_fra_bop_govern_by_decree = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 120
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies } }
+  complete_effect = { nap_fra_bop_govern_by_decree_effect = yes }
+  ai_will_do = { factor = 1.2 }
+ }
+ nap_fra_bop_consult_assemblies = {
+  icon = generic_political_discourse
+  cost = 30
+  days_re_enable = 120
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies } }
+  complete_effect = { nap_fra_bop_consult_assemblies_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ nap_fra_bop_appeal_plebiscite = {
+  icon = generic_political_discourse
+  cost = 60
+  days_re_enable = 365
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies } power_balance_value = { id = nap_fra_personal_rule value > 0.59 } check_variable = { nap_fra_napoleon_prestige > 49 } }
+  complete_effect = { nap_fra_bop_plebiscite_effect = yes }
+  ai_will_do = { factor = 1.4 }
+ }
+ nap_fra_bop_centralize_command = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 120
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  complete_effect = { nap_fra_bop_centralize_command_effect = yes }
+  ai_will_do = { factor = 1.2 }
+ }
+ nap_fra_bop_reward_marshalate = {
+  icon = generic_political_discourse
+  cost = 30
+  days_re_enable = 120
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } NOT = { check_variable = { nap_treasury < 8 } } }
+  complete_effect = { nap_fra_bop_reward_marshalate_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ nap_fra_bop_delegate_theatres = {
+  icon = generic_political_discourse
+  cost = 35
+  days_re_enable = 150
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  complete_effect = { nap_fra_bop_delegate_theatres_effect = yes }
+  ai_will_do = { factor = 1 }
+ }
+ nap_fra_bop_override_marshal_veto = {
+  icon = generic_political_discourse
+  cost = 55
+  days_re_enable = 180
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  available = { tag = FRA nap_fra_bop_marshals_dominant = yes check_variable = { nap_fra_napoleon_prestige > 69 } NOT = { has_country_flag = nap_fra_bop_override_marshals } }
+  complete_effect = { nap_fra_bop_override_marshals_effect = yes }
+  ai_will_do = { factor = 1.5 modifier = { factor = 2 has_completed_focus = FRA_invade_russia } }
+ }
+ nap_fra_bop_convene_marshal_council = {
+  icon = generic_political_discourse
+  cost = 30
+  days_re_enable = 120
+  visible = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+  available = { tag = FRA is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } check_variable = { nap_war_exhaustion > 39 } }
+  complete_effect = { nap_fra_bop_marshal_council_effect = yes }
+  ai_will_do = { factor = 1.3 }
+ }
+ nap_fra_bop_marshals_demand_abdication = {
+  icon = generic_political_discourse
+  cost = 15
+  visible = { tag = FRA nap_fra_bop_marshals_dominant = yes }
+  available = { tag = FRA nap_fra_bop_marshals_can_force_abdication = yes }
+  complete_effect = { nap_fra_bop_marshals_demand_abdication_effect = yes }
+  ai_will_do = { factor = 1 }
+  fire_only_once = yes
+ }
+ nap_fra_bop_fight_on = {
+  icon = generic_political_discourse
+  cost = 50
+  visible = { tag = FRA nap_fra_bop_marshals_dominant = yes }
+  available = { tag = FRA nap_fra_bop_marshals_can_force_abdication = yes check_variable = { nap_fra_napoleon_prestige > 59 } }
+  complete_effect = { nap_fra_bop_fight_on_effect = yes }
+  ai_will_do = { factor = 0.4 }
+  fire_only_once = yes
+ }
+}

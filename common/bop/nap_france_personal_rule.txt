@@ -1,0 +1,103 @@
+nap_fra_personal_rule = {
+ initial_value = -0.05
+ left_side = nap_fra_bop_napoleon
+ right_side = nap_fra_bop_assemblies
+ decision_category = nap_fra_personal_rule_decisions
+
+ range = {
+  id = nap_fra_bop_equilibrium
+  min = -0.2
+  max = 0.2
+  modifier = {
+   stability_factor = 0.05
+   political_power_factor = 0.03
+   supply_consumption_factor = -0.03
+  }
+ }
+
+ side = {
+  id = nap_fra_bop_napoleon
+  icon = GFX_goal_generic_political_pressure
+  range = {
+   id = nap_fra_bop_napoleon_supremacy
+   min = -1
+   max = -0.6
+   modifier = {
+    political_power_factor = 0.15
+    army_attack_factor = 0.05
+    planning_speed = 0.10
+    war_support_factor = 0.05
+    supply_consumption_factor = 0.08
+    stability_factor = -0.03
+   }
+  }
+  range = {
+   id = nap_fra_bop_napoleon_ascendant
+   min = -0.6
+   max = -0.2
+   modifier = {
+    political_power_factor = 0.08
+    army_attack_factor = 0.03
+    planning_speed = 0.05
+    supply_consumption_factor = 0.03
+   }
+  }
+ }
+
+ side = {
+  id = nap_fra_bop_assemblies
+  icon = GFX_goal_generic_self_management
+  range = {
+   id = nap_fra_bop_assemblies_influential
+   min = 0.2
+   max = 0.6
+   modifier = {
+    stability_factor = 0.06
+    political_power_factor = -0.05
+    research_speed_factor = 0.03
+    war_support_factor = -0.02
+   }
+  }
+  range = {
+   id = nap_fra_bop_assemblies_constrain_napoleon
+   min = 0.6
+   max = 1
+   modifier = {
+    stability_factor = 0.10
+    political_power_factor = -0.12
+    research_speed_factor = 0.05
+    war_support_factor = -0.05
+   }
+  }
+ }
+
+ side = {
+  id = nap_fra_bop_marshals
+  icon = GFX_goal_generic_army_doctrines
+  range = {
+   id = nap_fra_bop_marshals_influential
+   min = 0.2
+   max = 0.6
+   modifier = {
+    army_org_factor = 0.05
+    army_morale_factor = 0.03
+    planning_speed = 0.05
+    supply_consumption_factor = -0.05
+    political_power_factor = -0.04
+   }
+  }
+  range = {
+   id = nap_fra_bop_marshals_constrain_napoleon
+   min = 0.6
+   max = 1
+   modifier = {
+    army_org_factor = 0.08
+    army_morale_factor = 0.05
+    planning_speed = 0.05
+    supply_consumption_factor = -0.08
+    army_attack_factor = -0.05
+    political_power_factor = -0.10
+   }
+  }
+ }
+}

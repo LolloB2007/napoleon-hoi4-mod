@@ -1,0 +1,5 @@
+nap_fra_personal_rule_decisions = {
+ icon = generic_political_discourse
+ allowed = { tag = FRA }
+ visible = { tag = FRA has_power_balance = { id = nap_fra_personal_rule } }
+}
