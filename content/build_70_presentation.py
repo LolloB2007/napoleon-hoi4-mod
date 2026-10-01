@@ -252,7 +252,7 @@ def _division_names():
     for tag,(fallback,names,ships) in UNIT_DATA.items():
         safe=[n.replace('"',"'") for n in names]
         ordered=" ".join(f'{i+1} = {{ "{name}" }}' for i,name in enumerate(safe))
-        parts.append(f'{tag}_NAP_INF = {{ name = "{fallback}s" for_countries = {{ {tag} }} can_use = {{ always = yes }} division_types = {{ "line_infantry" "light_infantry" "grenadier" "guard_infantry" "militia" }} fallback_name = "%d {fallback}" ordered = {{ {ordered} }} }}')
+        parts.append(f'{tag}_NAP_INF = {{ name = "{fallback}s" for_countries = {{ {tag} }} can_use = {{ always = yes }} division_types = {{ "line_infantry" "light_infantry" "grenadier" "guard_infantry" "nap_militia" }} fallback_name = "%d {fallback}" ordered = {{ {ordered} }} }}')
         parts.append(f'{tag}_NAP_CAV = {{ name = "Mounted Formations" for_countries = {{ {tag} }} can_use = {{ always = yes }} division_types = {{ "light_cavalry" "dragoon" "heavy_cavalry" "lancer" "irregular_cavalry" }} fallback_name = "%d Cavalry Brigade" }}')
     return "\n".join(parts)+"\n"
 
@@ -412,7 +412,7 @@ def _patch_events(text):
         text=text[:start]+block+text[end:]
     return text
 
-def _patch_people(text,tag,updates,interface,people):
+def _patch_people(text,tag,updates,interface,people,history_file=False):
     spans=_blocks(text,r"\bcreate_(?:country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{")
     for start,end in reversed(spans):
         block=text[start:end]
@@ -420,20 +420,29 @@ def _patch_people(text,tag,updates,interface,people):
         if not m: continue
         name=m.group(1); key=_slug(name)
         gfx="GFX_NAP_PORTRAIT_"+key
-        if key not in people:
-            people.add(key)
+        identity=(tag,key,"history" if history_file else "gfx")
+        if history_file:
+            filename=f"nap_{key.lower()}.tga"
+            path=f"gfx/leaders/{tag}/{filename}"
+            picture=f'"{filename}"'
+        else:
             path=f"gfx/leaders/NAP/{key.lower()}.tga"
+            picture=gfx
+        if identity not in people:
+            people.add(identity)
             updates[path]=tga(PORTRAIT_W,PORTRAIT_H,art_pixel(name,"portrait",PORTRAIT_W,PORTRAIT_H))
-            interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
+            if not history_file:
+                interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
         active=re.search(r"(?m)^\s*picture\s*=",block)
         if active:
-            block=re.sub(r'(?m)^\s*picture\s*=\s*[^\n]+',f'\tpicture = {gfx}',block,count=1)
+            block=re.sub(r'(?m)^\s*picture\s*=\s*[^\n]+',f'\tpicture = {picture}',block,count=1)
         else:
-            block=block[:m.end()]+f"\n\tpicture = {gfx}"+block[m.end():]
+            block=block[:m.end()]+f"\n\tpicture = {picture}"+block[m.end():]
         text=text[:start]+block+text[end:]
     return text
 
 def _patch_oob(text,tag):
+    text=re.sub(r'(?m)^(\s*)militia(\s*=\s*\{)',r'\1nap_militia\2',text)
     spans=_blocks(text,r"^\s*division_template\s*=\s*\{")
     for start,end in reversed(spans):
         block=text[start:end]
@@ -487,7 +496,7 @@ def postprocess(outputs,root):
     # Starting political and military portraits.
     for path in _paths(outputs,root,"history/countries",".txt"):
         tag=Path(path).name[:3]
-        updates[path]=_patch_people(_text(outputs,root,path),tag,updates,interface,people)
+        updates[path]=_patch_people(_text(outputs,root,path),tag,updates,interface,people,history_file=True)
     # Commanders sometimes get created by focus rewards.
     for path in _paths(outputs,root,"common/national_focus",".txt"):
         updates[path]=_patch_people(updates.get(path,_text(outputs,root,path)),"NAP",updates,interface,people)

@@ -28,7 +28,7 @@ technologies = {
 			max_organisation = 5
 			defense = 0.05
 		}
-		militia = {
+		nap_militia = {
 			max_organisation = 3
 		}
 
@@ -452,7 +452,7 @@ technologies = {
 		start_year = 1808
 
 
-		militia = {
+		nap_militia = {
 			max_organisation = 10
 			defense = 0.20
 			soft_attack = 0.10

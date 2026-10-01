@@ -72,7 +72,7 @@ sub_units = {
 
 	# === FIELD HOSPITAL ===
 	# Reduces manpower loss + speeds recovery. Surgeons (Larrey-style flying ambulances).
-	field_hospital = {
+	nap_field_hospital = {
 		abbreviation = "HSP"
 		sprite = engineer
 		map_icon_category = infantry

@@ -117,7 +117,7 @@ sub_units = {
 
 	# === MILITIA / NATIONAL GUARD ===
 	# Cheap, low quality. Revolutionary levée en masse, Landwehr, opolchenie.
-	militia = {
+	nap_militia = {
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 400
