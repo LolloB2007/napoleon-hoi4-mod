@@ -394,21 +394,35 @@ def _patch_focuses(text,updates,interface):
     return text
 
 def _patch_events(text):
-    spans=_blocks(text,r"^\s*(?:country_event|news_event)\s*=\s*\{")
-    for start,end in reversed(spans):
+    pattern=r"^\s*(?:country_event|news_event)\s*=\s*\{"
+
+    # First clean definition-only fields accidentally injected into nested
+    # event effect calls by older generator revisions. Recompute all spans
+    # afterwards because removing lines changes enclosing block offsets.
+    calls=[]
+    for start,end in _blocks(text,pattern):
         block=text[start:end]
-        m=re.search(r"\bid\s*=\s*([A-Za-z0-9_.]+)",block)
-        if not m: continue
-        # Only decorate event definitions. Effect calls contain an id and delay
-        # but must not receive definition-only fields such as picture. Also
-        # remove stale picture lines produced by older generator revisions.
         if not re.search(r"(?m)^\s*(?:title|desc)\s*=",block):
-            block=re.sub(r"(?m)^\s*picture\s*=\s*[^\n]+\n?","",block)
-            text=text[:start]+block+text[end:]
+            calls.append((start,end))
+    for start,end in reversed(calls):
+        block=text[start:end]
+        block=re.sub(r"(?m)^\s*picture\s*=\s*[^\n]+\n?","",block)
+        text=text[:start]+block+text[end:]
+
+    # Now decorate only actual event definitions using offsets computed from
+    # the cleaned text. This avoids stale offsets when definitions contain
+    # nested country_event/news_event effect calls.
+    for start,end in reversed(_blocks(text,pattern)):
+        block=text[start:end]
+        if not re.search(r"(?m)^\s*(?:title|desc)\s*=",block):
             continue
-        index=(_seed(m.group(1))%12)+1; gfx=f"GFX_NAP_EVENT_{index:02d}"
-        if re.search(r"\bpicture\s*=",block):
-            block=re.sub(r"\bpicture\s*=\s*[^\s}]+",f"picture = {gfx}",block,count=1)
+        m=re.search(r"\bid\s*=\s*([A-Za-z0-9_.]+)",block)
+        if not m:
+            continue
+        index=(_seed(m.group(1))%12)+1
+        gfx=f"GFX_NAP_EVENT_{index:02d}"
+        if re.search(r"(?m)^\s*picture\s*=",block):
+            block=re.sub(r"(?m)^(\s*)picture\s*=\s*[^\s}]+",rf"\1picture = {gfx}",block,count=1)
         else:
             d=re.search(r"\bdesc\s*=\s*[^\n}]+",block)
             pos=d.end() if d else m.end()
