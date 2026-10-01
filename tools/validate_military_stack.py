@@ -4,7 +4,8 @@
 This does not replace an in-game HOI4 launch test. It catches the cross-file
 mistakes that otherwise turn into opaque parser/database errors: missing techs,
 missing subunits/equipment, missing technology categories, unresolved OOB
-battalions, and accidental reintroduction of known vanilla equipment IDs.
+battalions or OOB file references, and accidental reintroduction of known
+vanilla equipment IDs.
 """
 from pathlib import Path
 import re, sys
@@ -90,6 +91,15 @@ for p,s in oob_files:
     for uid in re.findall(r'^\s*([a-z][a-z0-9_]+)\s*=\s*\{\s*x\s*=\s*\d+\s+y\s*=\s*\d+\s*\}', s, re.M):
         if uid not in unit_ids:
             err(f'{p.relative_to(ROOT)}: OOB subunit not defined: {uid}')
+
+# Every land OOB reference in country history, events, focuses, decisions or
+# scripted effects must resolve. This catches delayed load_oob failures too.
+oob_reference_files = country_files + texts('events/*.txt') + texts('common/national_focus/*.txt') + texts('common/decisions/*.txt') + texts('common/scripted_effects/*.txt')
+oob_names = {p.stem for p,_ in oob_files}
+for p,s in oob_reference_files:
+    for name in re.findall(r'\b(?:oob|set_oob|load_oob)\s*=\s*"?([A-Za-z0-9_.-]+)"?', s):
+        if name not in oob_names:
+            err(f'{p.relative_to(ROOT)}: OOB reference not found: {name}')
 
 # Explicit starting OOBs should exist for all implemented 1789 powers.
 starting_oob_tags = ('FRA','ENG','HAB','PRU','RUS','SPR','POR','TUR','SWE','DEN','POL','NET','NAP','SAR','PAP','VEN','TUS','BAV','SAX','HAN','WUR')

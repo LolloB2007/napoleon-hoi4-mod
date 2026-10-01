@@ -1,0 +1,53 @@
+# Great Britain - compressed 1789 starting OOB.
+# Province 6103 is London. Colonial and fleet deployment remain for the later
+# geographic/naval runtime pass.
+
+division_template = {
+    name = "1789 Line Brigade"
+    division_names_group = ENG_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        line_infantry = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+division_template = {
+    name = "1789 Guards Brigade"
+    division_names_group = ENG_NAP_INF
+    regiments = {
+        guard_infantry = { x = 0 y = 0 }
+        guard_infantry = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        line_infantry = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 3
+}
+
+division_template = {
+    name = "1789 Cavalry Brigade"
+    division_names_group = ENG_NAP_CAV
+    regiments = {
+        light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        dragoon = { x = 1 y = 0 }
+        horse_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+units = {
+    division = { name = "London District" location = 6103 division_template = "1789 Line Brigade" start_experience_factor = 0.45 start_equipment_factor = 0.90 }
+    division = { name = "Southern District" location = 6103 division_template = "1789 Line Brigade" start_experience_factor = 0.40 start_equipment_factor = 0.88 }
+    division = { name = "Northern District" location = 6103 division_template = "1789 Line Brigade" start_experience_factor = 0.40 start_equipment_factor = 0.88 }
+    division = { name = "Scottish District" location = 6103 division_template = "1789 Line Brigade" start_experience_factor = 0.45 start_equipment_factor = 0.90 }
+    division = { name = "Irish Establishment" location = 6103 division_template = "1789 Line Brigade" start_experience_factor = 0.35 start_equipment_factor = 0.85 }
+    division = { name = "Colonial Reserve" location = 6103 division_template = "1789 Line Brigade" start_experience_factor = 0.35 start_equipment_factor = 0.85 }
+    division = { name = "Brigade of Guards" location = 6103 division_template = "1789 Guards Brigade" start_experience_factor = 0.65 start_equipment_factor = 0.95 }
+    division = { name = "Household Cavalry" location = 6103 division_template = "1789 Cavalry Brigade" start_experience_factor = 0.60 start_equipment_factor = 0.95 }
+    division = { name = "Light Dragoons" location = 6103 division_template = "1789 Cavalry Brigade" start_experience_factor = 0.55 start_equipment_factor = 0.92 }
+}

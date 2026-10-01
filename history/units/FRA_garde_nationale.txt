@@ -1,0 +1,19 @@
+# Loaded by french_revolution.1 after the Bastille settlement.
+
+division_template = {
+    name = "Revolutionary National Guard"
+    division_names_group = FRA_NAP_INF
+    regiments = {
+        militia = { x = 0 y = 0 }
+        militia = { x = 0 y = 1 }
+        militia = { x = 1 y = 0 }
+        militia = { x = 1 y = 1 }
+    }
+    priority = 1
+}
+
+units = {
+    division = { name = "Garde Nationale de Paris" location = 11506 division_template = "Revolutionary National Guard" start_experience_factor = 0.20 start_equipment_factor = 0.75 }
+    division = { name = "Garde Nationale de Versailles" location = 11506 division_template = "Revolutionary National Guard" start_experience_factor = 0.18 start_equipment_factor = 0.72 }
+    division = { name = "Garde Nationale de l'Île-de-France" location = 11506 division_template = "Revolutionary National Guard" start_experience_factor = 0.18 start_equipment_factor = 0.72 }
+}

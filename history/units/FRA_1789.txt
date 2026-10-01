@@ -1,0 +1,56 @@
+# France - compressed 1789 starting OOB.
+# Province 11506 is Paris. Deployment is intentionally concentrated until the
+# full 1.19.x map/ownership audit can spread formations safely.
+
+division_template = {
+    name = "1789 Line Infantry"
+    division_names_group = FRA_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        line_infantry = { x = 1 y = 0 }
+        line_infantry = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+division_template = {
+    name = "1789 Grenadier Reserve"
+    division_names_group = FRA_NAP_INF
+    regiments = {
+        line_infantry = { x = 0 y = 0 }
+        line_infantry = { x = 0 y = 1 }
+        grenadier = { x = 1 y = 0 }
+        grenadier = { x = 1 y = 1 }
+        foot_artillery = { x = 2 y = 0 }
+    }
+    priority = 3
+}
+
+division_template = {
+    name = "1789 Cavalry Brigade"
+    division_names_group = FRA_NAP_CAV
+    regiments = {
+        light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        dragoon = { x = 1 y = 0 }
+        horse_artillery = { x = 2 y = 0 }
+    }
+    priority = 2
+}
+
+units = {
+    division = { name = "Armée de Paris" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.45 start_equipment_factor = 0.90 }
+    division = { name = "Armée du Nord" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.45 start_equipment_factor = 0.90 }
+    division = { name = "Armée du Centre" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.40 start_equipment_factor = 0.88 }
+    division = { name = "Armée du Rhin" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.45 start_equipment_factor = 0.90 }
+    division = { name = "Armée des Alpes" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.40 start_equipment_factor = 0.88 }
+    division = { name = "Armée des Pyrénées" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.40 start_equipment_factor = 0.88 }
+    division = { name = "Réserve de Normandie" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.35 start_equipment_factor = 0.85 }
+    division = { name = "Réserve de Bretagne" location = 11506 division_template = "1789 Line Infantry" start_experience_factor = 0.35 start_equipment_factor = 0.85 }
+    division = { name = "Grenadiers de la Maison du Roi" location = 11506 division_template = "1789 Grenadier Reserve" start_experience_factor = 0.60 start_equipment_factor = 0.95 }
+    division = { name = "Grenadiers de France" location = 11506 division_template = "1789 Grenadier Reserve" start_experience_factor = 0.55 start_equipment_factor = 0.95 }
+    division = { name = "Cavalerie Royale" location = 11506 division_template = "1789 Cavalry Brigade" start_experience_factor = 0.55 start_equipment_factor = 0.92 }
+    division = { name = "Hussards de France" location = 11506 division_template = "1789 Cavalry Brigade" start_experience_factor = 0.55 start_equipment_factor = 0.92 }
+}
