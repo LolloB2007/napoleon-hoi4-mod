@@ -108,16 +108,10 @@ def build(root):
             outputs[f'gfx/flags/{directory}{tag}.tga'] = tga(width,height,tuple(map(int,colour.split())))
     outputs['common/country_tags/00_napoleonic_countries.txt'] = '# Restored namespace. See docs/source-contracts.md for vanilla-tag collision risks.\n' + '\n'.join(tags) + '\n'
     outputs['localisation/english/replace/nap_countries_l_english.yml'] = '\n'.join(names) + '\n'
-    ideology = ['ideologies = {']
     loc = ['\ufeffl_english:']
     for slot, (name, subtypes, colour) in IDEOLOGIES.items():
-        ideology += [f' {slot} = {{', '  types = {']
-        ideology += [f'   {subtype} = {{ can_be_randomly_selected = yes }}' for subtype in subtypes]
-        ideology += ['  }', f'  color = {{ {colour} }}', '  rules = { can_puppet = yes can_send_volunteers = yes can_lower_tension = yes }', '  can_be_boosted = yes', '  war_impact_on_world_tension = 1.0', '  faction_impact_on_world_tension = 1.0', ' }']
         loc.append(f' {slot}:0 "{name}"')
         loc.append(f' {slot}_desc:0 "Political alignment used by the Napoleonic campaign."')
-    ideology.append('}')
-    outputs['common/ideologies/00_ideologies.txt'] = '\n'.join(ideology) + '\n'
     outputs['localisation/english/replace/nap_ideology_slots_l_english.yml'] = '\n'.join(loc) + '\n'
     outputs['common/country_leader/napoleonic_leader_traits.txt'] = 'leader_traits = {\n' + '\n'.join(f' {key} = {{ {value} }}' for key,value in TRAITS.items()) + '\n}\n'
     outputs['gfx/interface/select_date_napoleonic.tga'] = tga(384,152,(49,99,180))
