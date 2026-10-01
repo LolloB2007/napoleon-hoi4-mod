@@ -114,6 +114,16 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         self.assertEqual(targets.count('NET'), 2)
         self.assertEqual(targets.count('ENG'), 0)
 
+    def test_custom_technology_folders_use_vanilla_ui_roots(self):
+        tags = (ROOT/'common/technology_tags/00_napoleonic_tags.txt').read_text()
+        cavalry = (ROOT/'common/technologies/cavalry.txt').read_text()
+        recon = (ROOT/'common/technologies/recon_corps.txt').read_text()
+        self.assertNotIn('technology_folders = {', tags)
+        self.assertNotIn('cavalry_folder', cavalry)
+        self.assertNotIn('recon_corps_folder', recon)
+        self.assertIn('name = infantry_folder', cavalry)
+        self.assertIn('name = support_folder', recon)
+
     def test_credits_are_not_in_engine_parsed_music_txt(self):
         self.assertFalse((ROOT/'music/Credits.txt').exists())
         self.assertTrue((ROOT/'docs/music-credits.md').exists())

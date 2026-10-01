@@ -19,11 +19,3 @@ technology_categories = {
 	category_napoleonic_industry_tech
 }
 
-technology_folders = {
-	cavalry_folder = {
-		ledger = army
-	}
-	recon_corps_folder = {
-		ledger = air
-	}
-}

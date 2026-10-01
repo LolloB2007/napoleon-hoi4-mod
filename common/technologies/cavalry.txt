@@ -15,7 +15,7 @@ technologies = {
 		path = { leads_to_tech = irregular_levy research_cost_coeff = 1 }
 		path = { leads_to_tech = horse_breeding research_cost_coeff = 1 }
 
-		folder = { name = cavalry_folder position = { x = 4 y = 0 } }
+		folder = { name = infantry_folder position = { x = 4 y = 0 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -27,7 +27,7 @@ technologies = {
 
 		path = { leads_to_tech = cavalry_research_3 research_cost_coeff = 1 }
 
-		folder = { name = cavalry_folder position = { x = 4 y = 2 } }
+		folder = { name = infantry_folder position = { x = 4 y = 2 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -37,7 +37,7 @@ technologies = {
 		research_cost = 1.4
 		enable_equipments = { cavalry_equipment_2 }
 
-		folder = { name = cavalry_folder position = { x = 4 y = 4 } }
+		folder = { name = infantry_folder position = { x = 4 y = 4 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -47,7 +47,7 @@ technologies = {
 		research_cost = 1.0
 		enable_subunits = { lancer }
 
-		folder = { name = cavalry_folder position = { x = 7 y = 2 } }
+		folder = { name = infantry_folder position = { x = 7 y = 2 } }
 		ai_will_do = {
 			factor = 1
 			modifier = { factor = 5 OR = { tag = POL tag = RUS tag = FRA tag = PRU } }
@@ -60,7 +60,7 @@ technologies = {
 		research_cost = 0.4
 		enable_subunits = { irregular_cavalry }
 
-		folder = { name = cavalry_folder position = { x = 10 y = 2 } }
+		folder = { name = infantry_folder position = { x = 10 y = 2 } }
 		ai_will_do = {
 			factor = 1
 			modifier = { factor = 10 OR = { tag = RUS tag = TUR tag = SPR tag = MEX tag = MOR } }
@@ -78,7 +78,7 @@ technologies = {
 		heavy_cavalry = { max_organisation = 3 }
 		lancer = { max_organisation = 3 }
 
-		folder = { name = cavalry_folder position = { x = 1 y = 2 } }
+		folder = { name = infantry_folder position = { x = 1 y = 2 } }
 		ai_will_do = { factor = 1 }
 	}
 }

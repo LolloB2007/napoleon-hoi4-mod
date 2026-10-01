@@ -1,5 +1,5 @@
 # Napoleonic Era — Reconnaissance Corps tech tree
-# Lives in the (renamed) Air tab. Five families: scouts, couriers, balloons, intelligence, privateers.
+# Shares the vanilla Support technology tab to avoid a version-sensitive custom research GUI override.
 
 technologies = {
 
@@ -12,7 +12,7 @@ technologies = {
 
 		path = { leads_to_tech = scout_squadrons_2 research_cost_coeff = 1 }
 
-		folder = { name = recon_corps_folder position = { x = 0 y = 0 } }
+		folder = { name = support_folder position = { x = 0 y = 0 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -24,7 +24,7 @@ technologies = {
 
 		path = { leads_to_tech = scout_squadrons_3 research_cost_coeff = 1 }
 
-		folder = { name = recon_corps_folder position = { x = 0 y = 2 } }
+		folder = { name = support_folder position = { x = 0 y = 2 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -34,7 +34,7 @@ technologies = {
 		research_cost = 1.3
 		enable_equipments = { scout_equipment_2 }
 
-		folder = { name = recon_corps_folder position = { x = 0 y = 4 } }
+		folder = { name = support_folder position = { x = 0 y = 4 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -47,7 +47,7 @@ technologies = {
 
 		path = { leads_to_tech = courier_corps_2 research_cost_coeff = 1 }
 
-		folder = { name = recon_corps_folder position = { x = 3 y = 0 } }
+		folder = { name = support_folder position = { x = 3 y = 0 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -57,7 +57,7 @@ technologies = {
 		research_cost = 1.0
 		enable_equipments = { courier_equipment_1 }
 
-		folder = { name = recon_corps_folder position = { x = 3 y = 2 } }
+		folder = { name = support_folder position = { x = 3 y = 2 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -71,7 +71,7 @@ technologies = {
 
 		path = { leads_to_tech = observation_balloons_2 research_cost_coeff = 1 }
 
-		folder = { name = recon_corps_folder position = { x = 6 y = 0 } }
+		folder = { name = support_folder position = { x = 6 y = 0 } }
 		ai_will_do = {
 			factor = 1
 			modifier = { factor = 5 tag = FRA }
@@ -85,7 +85,7 @@ technologies = {
 		research_cost = 1.5
 		enable_equipments = { balloon_equipment_1 }
 
-		folder = { name = recon_corps_folder position = { x = 6 y = 2 } }
+		folder = { name = support_folder position = { x = 6 y = 2 } }
 		ai_will_do = { factor = 0.5 }
 	}
 
@@ -98,7 +98,7 @@ technologies = {
 
 		path = { leads_to_tech = intelligence_networks_2 research_cost_coeff = 1 }
 
-		folder = { name = recon_corps_folder position = { x = 9 y = 0 } }
+		folder = { name = support_folder position = { x = 9 y = 0 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -108,7 +108,7 @@ technologies = {
 		research_cost = 1.2
 		enable_equipments = { intelligence_equipment_1 }
 
-		folder = { name = recon_corps_folder position = { x = 9 y = 2 } }
+		folder = { name = support_folder position = { x = 9 y = 2 } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -122,7 +122,7 @@ technologies = {
 
 		path = { leads_to_tech = privateer_command_2 research_cost_coeff = 1 }
 
-		folder = { name = recon_corps_folder position = { x = 12 y = 0 } }
+		folder = { name = support_folder position = { x = 12 y = 0 } }
 		ai_will_do = {
 			factor = 1
 			modifier = { factor = 5 OR = { tag = ENG tag = FRA tag = USA tag = SPR tag = NET tag = DEN } }
@@ -136,7 +136,7 @@ technologies = {
 		research_cost = 1.0
 		enable_equipments = { privateer_equipment_1 }
 
-		folder = { name = recon_corps_folder position = { x = 12 y = 2 } }
+		folder = { name = support_folder position = { x = 12 y = 2 } }
 		ai_will_do = { factor = 1 }
 	}
 }
