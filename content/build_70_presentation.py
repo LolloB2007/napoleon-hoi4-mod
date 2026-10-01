@@ -462,7 +462,7 @@ def _patch_people(text,tag,updates,interface,people,history_file=False):
                 if sprite_identity not in people:
                     people.add(sprite_identity)
                     interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
-                field=f"\n\tpicture = {gfx}"
+                field=f'\n\tpicture = "{gfx}"'
             else:
                 field=f'\n\tportrait_path = "{path}"'
             block=block[:m.end()]+field+block[m.end():]

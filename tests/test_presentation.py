@@ -77,7 +77,7 @@ class PresentationTests(unittest.TestCase):
                 if path.startswith('history/countries/'):
                     tag=Path(path).name[:3]
                     if kind=='country_leader':
-                        pic=re.search(r'picture\s*=\s*(GFX_NAP_PORTRAIT_[A-Z0-9_]+)',block)
+                        pic=re.search(r'picture\s*=\s*"(GFX_NAP_PORTRAIT_[A-Z0-9_]+)"',block)
                         self.assertIsNotNone(pic,path)
                         self.assertIn(f'name = "{pic.group(1)}"',presentation,path)
                         sprite=re.search(
