@@ -100,7 +100,7 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
 
     def test_history_portrait_fields_match_leader_type(self):
         country = (ROOT/'history/countries/ENG - Great Britain.txt').read_text(encoding='utf-8-sig')
-        self.assertRegex(country, r'(?s)create_country_leader\s*=\s*\{.*?picture\s*=\s*GFX_NAP_PORTRAIT_')
+        self.assertRegex(country, r'(?s)create_country_leader\s*=\s*\{.*?picture\s*=\s*"GFX_NAP_PORTRAIT_')
         self.assertRegex(country, r'(?s)create_(?:field_marshal|corps_commander|navy_leader)\s*=\s*\{.*?portrait_path\s*=\s*"gfx/leaders/ENG/')
 
     def test_opening_non_aggression_pacts_are_not_created_twice(self):
