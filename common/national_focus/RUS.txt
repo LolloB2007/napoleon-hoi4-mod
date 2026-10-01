@@ -144,7 +144,7 @@ focus_tree = {
 			ENG = {
 				add_opinion_modifier = {
 					target = RUS
-					modifier = huge_decrease
+					modifier = nap_rus_anglophobe_opinion
 				}
 			}
 			add_political_power = -25

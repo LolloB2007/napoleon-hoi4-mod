@@ -4,24 +4,6 @@ ideas = {
 
 	country = {
 
-		# Applied by french_revolution.10 (Reign of Terror)
-		reign_of_terror = {
-			picture = generic_disjointed_gov
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			removal_cost = -1
-
-			modifier = {
-				war_support_factor = 0.15
-				conscription = 0.02
-				army_morale_factor = 0.10
-				stability_factor = -0.25
-				political_power_factor = -0.20
-				industrial_capacity_factory = -0.05
-				monthly_population = -0.10
-			}
-		}
-
 		# Applied by french_revolution.12 (Directory)
 		directory_corruption = {
 			picture = generic_disjointed_gov
