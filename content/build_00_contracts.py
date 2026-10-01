@@ -77,6 +77,11 @@ IDEOLOGIES = {
     'communism': ('Republicanism', ['marxism','leninism','stalinism','anti_revisionism'], '140 30 30'),
     'fascism': ('Bonapartism', ['fascism_ideology','nazism','falangism','rexism'], '100 100 100'),
 }
+VANILLA_SHARED_TAGS = set("""
+FRA ENG RUS PRU SPR POR TUR SWE DEN POL SAR PAP VEN GEN PAR MAL SAX HAN WUR HES
+SWI MOR TUN ALG EGY ETH JAP KOR SIA MYS HYD SIK USA MEX BRA HAI ITA HOL WES NOR GER
+""".split())
+
 TRAITS = {
     'silver_tongued': 'political_power_factor = 0.10',
     'the_cloak_n_dagger_schemer': 'political_power_factor = 0.05 stability_factor = 0.05',
@@ -100,7 +105,8 @@ def build(root):
     names = ['\ufeffl_english:']
     for row in COUNTRIES.splitlines():
         tag, filename, name, colour = row.split('|')
-        tags.append(f'{tag} = "countries/{filename}.txt"')
+        if tag not in VANILLA_SHARED_TAGS:
+            tags.append(f'{tag} = "countries/{filename}.txt"')
         outputs[f'common/countries/{filename}.txt'] = f'graphical_culture = western_european_gfx\ngraphical_culture_2d = western_european_2d\ncolor = {{ {colour} }}\n'
         for suffix in ('','_DEF','_ADJ','_neutrality','_democratic','_communism','_fascism'):
             names.append(f' {tag}{suffix}:0 "{name}"')

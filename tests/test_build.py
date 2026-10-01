@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 sys.path.insert(0, str(ROOT / 'content'))
-from build_00_contracts import build, COUNTRIES
+from build_00_contracts import build, COUNTRIES, VANILLA_SHARED_TAGS
 from pdx import parse
 
 class BuildTests(unittest.TestCase):
@@ -12,6 +12,12 @@ class BuildTests(unittest.TestCase):
         tags = [r.split('|')[0] for r in COUNTRIES.splitlines()]
         self.assertEqual(len(tags), 68)
         self.assertEqual(len(tags), len(set(tags)))
+    def test_vanilla_shared_tags_are_not_redeclared(self):
+        text = build(ROOT)['common/country_tags/00_napoleonic_countries.txt']
+        declared = {line.split('=',1)[0].strip() for line in text.splitlines() if '=' in line}
+        self.assertTrue(declared)
+        self.assertTrue(declared.isdisjoint(VANILLA_SHARED_TAGS))
+
     def test_contracts_parse(self):
         for path, text in build(ROOT).items():
             if path.endswith(('.txt','.gfx')):
