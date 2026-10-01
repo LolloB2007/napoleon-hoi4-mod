@@ -449,22 +449,32 @@ def _patch_people(text,tag,updates,interface,people,history_file=False):
         name=m.group(1); key=_slug(name)
         if history_file:
             filename=f"nap_{key.lower()}.tga"
+            small_filename=f"nap_{key.lower()}_small.tga"
             path=f"gfx/leaders/{tag}/{filename}"
+            small_path=f"gfx/leaders/{tag}/small/{small_filename}"
+            gfx=f"GFX_NAP_PORTRAIT_{tag}_{key}"
+
             asset_identity=(tag,key,"asset")
             if asset_identity not in people:
                 people.add(asset_identity)
                 updates[path]=tga(PORTRAIT_W,PORTRAIT_H,art_pixel(name,"portrait",PORTRAIT_W,PORTRAIT_H))
+                updates[small_path]=tga(65,67,art_pixel(name+"|small","portrait",65,67))
+
+            sprite_identity=(tag,key,"sprite")
+            if sprite_identity not in people:
+                people.add(sprite_identity)
+                interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
+                interface.append(f'spriteType = {{ name = "{gfx}_small" texturefile = "{small_path}" }}')
+
             block=re.sub(r'(?m)^\s*(?:picture|portrait_path|gfx)\s*=\s*[^\n]+\n?',"",block)
             m=re.search(r'\bname\s*=\s*"([^"]+)"',block)
             if kind=="country_leader":
-                gfx=f"GFX_NAP_PORTRAIT_{tag}_{key}"
-                sprite_identity=(tag,key,"sprite")
-                if sprite_identity not in people:
-                    people.add(sprite_identity)
-                    interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
                 field=f'\n\tpicture = "{gfx}"'
             else:
-                field=f'\n\tportrait_path = "{path}"'
+                # Legacy commanders accept a spriteType via gfx=. HOI4 then
+                # resolves the matching <gfx>_small sprite for officer-corps UI
+                # instead of attempting a runtime conversion of the large file.
+                field=f'\n\tgfx = {gfx}'
             block=block[:m.end()]+field+block[m.end():]
         else:
             block=re.sub(r'(?m)^\s*(?:picture|portrait_path|gfx)\s*=\s*(?:GFX_NAP_PORTRAIT_|"?gfx/leaders/NAP/nap_)[^\n]+\n?',"",block)

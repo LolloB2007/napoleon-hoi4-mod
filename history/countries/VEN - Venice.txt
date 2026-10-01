@@ -53,7 +53,7 @@ create_country_leader = {
 
 create_navy_leader = {
 	name = "Angelo Emo"
-	portrait_path = "gfx/leaders/VEN/nap_angelo_emo.tga"
+	gfx = GFX_NAP_PORTRAIT_VEN_ANGELO_EMO
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4

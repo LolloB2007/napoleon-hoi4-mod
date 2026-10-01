@@ -55,7 +55,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Prince Charles of Hesse-Kassel"
-	portrait_path = "gfx/leaders/DEN/nap_prince_charles_of_hesse_kassel.tga"
+	gfx = GFX_NAP_PORTRAIT_DEN_PRINCE_CHARLES_OF_HESSE_KASSEL
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

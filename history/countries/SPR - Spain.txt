@@ -59,7 +59,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Antonio Ricardos"
-	portrait_path = "gfx/leaders/SPR/nap_antonio_ricardos.tga"
+	gfx = GFX_NAP_PORTRAIT_SPR_ANTONIO_RICARDOS
 	skill = 3
 	attack_skill = 4
 	defense_skill = 3

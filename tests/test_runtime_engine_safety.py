@@ -101,7 +101,29 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
     def test_history_portrait_fields_match_leader_type(self):
         country = (ROOT/'history/countries/ENG - Great Britain.txt').read_text(encoding='utf-8-sig')
         self.assertRegex(country, r'(?s)create_country_leader\s*=\s*\{.*?picture\s*=\s*"GFX_NAP_PORTRAIT_')
-        self.assertRegex(country, r'(?s)create_(?:field_marshal|corps_commander|navy_leader)\s*=\s*\{.*?portrait_path\s*=\s*"gfx/leaders/ENG/')
+        self.assertRegex(country, r'(?s)create_(?:field_marshal|corps_commander|navy_leader)\s*=\s*\{.*?gfx\s*=\s*GFX_NAP_PORTRAIT_')
+        presentation = (ROOT/'interface/nap_presentation.gfx').read_text()
+        self.assertIn('GFX_NAP_PORTRAIT_ENG_', presentation)
+        self.assertIn('_small" texturefile = "gfx/leaders/ENG/small/', presentation)
+
+    def test_airlike_custom_equipment_has_map_icons(self):
+        text = (ROOT/'common/units/equipment/recon_corps_equipment.txt').read_text()
+        expected = {
+            'scout_equipment': ('light_plane', '1'),
+            'courier_equipment': ('light_plane', '2'),
+            'balloon_equipment': ('medium_plane', '6'),
+            'intelligence_equipment': ('heavy_plane', '11'),
+            'privateer_equipment': ('light_plane', '3'),
+        }
+        for equipment, (sprite, frame) in expected.items():
+            match = re.search(
+                rf'(?s)^\s*{equipment}\s*=\s*\{{(.*?)^\s*\}}',
+                text,
+                re.M
+            )
+            self.assertIsNotNone(match, equipment)
+            self.assertIn(f'sprite = {sprite}', match.group(1), equipment)
+            self.assertIn(f'air_map_icon_frame = {frame}', match.group(1), equipment)
 
     def test_opening_non_aggression_pacts_are_not_created_twice(self):
         text = (ROOT/'common/scripted_effects/napoleonic_diplomacy_setup.txt').read_text()
@@ -118,11 +140,41 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         tags = (ROOT/'common/technology_tags/00_napoleonic_tags.txt').read_text()
         cavalry = (ROOT/'common/technologies/cavalry.txt').read_text()
         recon = (ROOT/'common/technologies/recon_corps.txt').read_text()
+        doctrine = (ROOT/'common/technologies/land_doctrine.txt').read_text()
         self.assertNotIn('technology_folders = {', tags)
         self.assertNotIn('cavalry_folder', cavalry)
         self.assertNotIn('recon_corps_folder', recon)
+        self.assertNotIn('name = land_doctrine_folder', doctrine)
         self.assertIn('name = infantry_folder', cavalry)
         self.assertIn('name = support_folder', recon)
+        self.assertIn('name = infantry_folder', doctrine)
+
+    def test_custom_root_technologies_have_gridboxes(self):
+        gui = (ROOT/'interface/countrytechtreeview.gui').read_text()
+        self.assertIn('special_project_tech_icon_offset', gui)
+        self.assertIn('support_category_multipliers_header', gui)
+        roots = (
+            'cavalry_research_1',
+            'line_doctrine_drill_and_discipline',
+            'column_doctrine_march_cadence',
+            'skirmisher_doctrine_light_tradition',
+            'artillery_research_1',
+            'musket_research_1',
+            'ship_of_the_line_1',
+            'frigate_1',
+            'sloop_1',
+            'bomb_ketch_1',
+            'fireship_1',
+            'naval_doctrine_line_ahead',
+            'support_research_1',
+            'scout_squadrons_1',
+            'courier_corps_1',
+            'observation_balloons_1',
+            'intelligence_networks_1',
+            'privateer_command_1',
+        )
+        for root in roots:
+            self.assertIn(f'name = "{root}_tree"', gui, root)
 
     def test_credits_are_not_in_engine_parsed_music_txt(self):
         self.assertFalse((ROOT/'music/Credits.txt').exists())

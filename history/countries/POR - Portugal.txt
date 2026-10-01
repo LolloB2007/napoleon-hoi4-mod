@@ -56,7 +56,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Duke of Lafões"
-	portrait_path = "gfx/leaders/POR/nap_duke_of_lafes.tga"
+	gfx = GFX_NAP_PORTRAIT_POR_DUKE_OF_LAFES
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

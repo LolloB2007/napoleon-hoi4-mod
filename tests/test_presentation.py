@@ -87,10 +87,23 @@ class PresentationTests(unittest.TestCase):
                         self.assertIsNotNone(sprite,path)
                         self.assertIn(sprite.group(1),self.outputs,path)
                     else:
-                        portrait=re.search(r'portrait_path\s*=\s*"(gfx/leaders/[^"]+\.tga)"',block)
-                        self.assertIsNotNone(portrait,path)
-                        self.assertTrue(portrait.group(1).startswith(f'gfx/leaders/{tag}/'),path)
-                        self.assertIn(portrait.group(1),self.outputs,path)
+                        gfx_ref=re.search(r'gfx\s*=\s*(GFX_NAP_PORTRAIT_[A-Z0-9_]+)',block)
+                        self.assertIsNotNone(gfx_ref,path)
+                        gfx=gfx_ref.group(1)
+                        self.assertIn(f'name = "{gfx}"',presentation,path)
+                        self.assertIn(f'name = "{gfx}_small"',presentation,path)
+                        large=re.search(
+                            rf'name\s*=\s*"{re.escape(gfx)}"\s+texturefile\s*=\s*"(gfx/leaders/{tag}/[^"]+\.tga)"',
+                            presentation
+                        )
+                        small=re.search(
+                            rf'name\s*=\s*"{re.escape(gfx)}_small"\s+texturefile\s*=\s*"(gfx/leaders/{tag}/small/[^"]+\.tga)"',
+                            presentation
+                        )
+                        self.assertIsNotNone(large,path)
+                        self.assertIsNotNone(small,path)
+                        self.assertIn(large.group(1),self.outputs,path)
+                        self.assertIn(small.group(1),self.outputs,path)
                 else:
                     self.assertNotIn('GFX_NAP_PORTRAIT_',block,path)
                     self.assertNotIn('gfx/leaders/NAP/nap_',block,path)

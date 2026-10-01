@@ -1,6 +1,7 @@
 # Napoleonic Era — Land Doctrines
-# Four mutually-exclusive trees. Pick one per nation; AI picks historically.
-# Doctrine costs are time-only (no equipment).
+# Three mutually-exclusive opening trees plus a Combined Arms continuation.
+# HOI4 1.19 no longer renders legacy technology doctrines in land_doctrine_folder,
+# so these doctrine=yes technologies use the normal infantry research interface.
 
 technologies = {
 
@@ -40,7 +41,7 @@ technologies = {
 		xor = { column_doctrine_march_cadence skirmisher_doctrine_light_tradition combined_arms_doctrine_corps_system }
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 0 y = 0 }
 		}
 
@@ -69,7 +70,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 0 y = 1 }
 		}
 		ai_will_do = { factor = 1 }
@@ -102,7 +103,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 0 y = 2 }
 		}
 		ai_will_do = { factor = 1 }
@@ -134,7 +135,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 0 y = 3 }
 		}
 		ai_will_do = { factor = 1 }
@@ -165,7 +166,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 0 y = 4 }
 		}
 		ai_will_do = { factor = 1 }
@@ -198,7 +199,7 @@ technologies = {
 		xor = { line_doctrine_drill_and_discipline skirmisher_doctrine_light_tradition combined_arms_doctrine_corps_system }
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 0 }
 		}
 
@@ -227,7 +228,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 1 }
 		}
 		ai_will_do = { factor = 1 }
@@ -253,7 +254,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 2 }
 		}
 		ai_will_do = { factor = 1 }
@@ -285,7 +286,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 3 }
 		}
 		ai_will_do = { factor = 1 }
@@ -312,7 +313,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 4 }
 		}
 		ai_will_do = { factor = 1 }
@@ -347,7 +348,7 @@ technologies = {
 		xor = { line_doctrine_drill_and_discipline column_doctrine_march_cadence combined_arms_doctrine_corps_system }
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 8 y = 0 }
 		}
 
@@ -380,7 +381,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 8 y = 1 }
 		}
 		ai_will_do = { factor = 1 }
@@ -407,7 +408,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 8 y = 2 }
 		}
 		ai_will_do = { factor = 1 }
@@ -436,7 +437,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 8 y = 3 }
 		}
 		ai_will_do = { factor = 1 }
@@ -462,7 +463,7 @@ technologies = {
 		# Bonus when fighting on home soil (delivered via mission system later)
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 8 y = 4 }
 		}
 		ai_will_do = { factor = 1 }
@@ -494,7 +495,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 5 }
 		}
 
@@ -527,7 +528,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 6 }
 		}
 		ai_will_do = { factor = 1 }
@@ -559,7 +560,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 7 }
 		}
 		ai_will_do = { factor = 1 }
@@ -591,7 +592,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 8 }
 		}
 		ai_will_do = { factor = 1 }
@@ -615,7 +616,7 @@ technologies = {
 		max_planning = 0.05
 
 		folder = {
-			name = land_doctrine_folder
+			name = infantry_folder
 			position = { x = 4 y = 9 }
 		}
 		ai_will_do = { factor = 1 }

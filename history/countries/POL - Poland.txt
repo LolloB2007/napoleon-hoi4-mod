@@ -55,7 +55,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Józef Poniatowski"
-	portrait_path = "gfx/leaders/POL/nap_jzef_poniatowski.tga"
+	gfx = GFX_NAP_PORTRAIT_POL_JZEF_PONIATOWSKI
 	skill = 3
 	attack_skill = 4
 	defense_skill = 3
