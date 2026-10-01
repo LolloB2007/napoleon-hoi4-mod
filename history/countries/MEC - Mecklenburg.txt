@@ -9,4 +9,4 @@ set_politics = { ruling_party = neutrality election_frequency = 0 elections_allo
 set_popularities = { neutrality = 86 democratic = 10 communism = 2 fascism = 2 }
 set_country_flag = hre_member_1789
 create_country_leader = { name = "Frederick Francis I"
-	picture = "nap_frederick_francis_i.tga" ideology = despotism }
+	picture = "GFX_NAP_PORTRAIT_MEC_FREDERICK_FRANCIS_I" ideology = despotism }

@@ -52,13 +52,13 @@ add_opinion_modifier = { target = DEN modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Gustav III"
-	picture = "nap_gustav_iii.tga"
+	picture = "GFX_NAP_PORTRAIT_SWE_GUSTAV_III"
 	ideology = despotism
 }
 
 create_corps_commander = {
 	name = "Johan Christopher Toll"
-	picture = "nap_johan_christopher_toll.tga"
+	portrait_path = "gfx/leaders/SWE/nap_johan_christopher_toll.tga"
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

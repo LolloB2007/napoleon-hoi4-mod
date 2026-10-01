@@ -1,0 +1,16 @@
+# Engine-safe placeholder history for a mod-defined tag without 1789 map ownership.
+set_research_slots = 2
+set_stability = 0.50
+set_war_support = 0.10
+set_politics = {
+ ruling_party = neutrality
+ last_election = "1789.5.5"
+ election_frequency = 0
+ elections_allowed = no
+}
+set_popularities = {
+ neutrality = 70
+ democratic = 20
+ communism = 5
+ fascism = 5
+}

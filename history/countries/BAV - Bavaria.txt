@@ -44,6 +44,6 @@ add_opinion_modifier = { target = HAB modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Charles Theodore"
-	picture = "nap_charles_theodore.tga"
+	picture = "GFX_NAP_PORTRAIT_BAV_CHARLES_THEODORE"
 	ideology = despotism
 }

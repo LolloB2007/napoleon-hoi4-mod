@@ -45,6 +45,6 @@ reverse_add_opinion_modifier = { target = ENG modifier = nap_1789_dynastic_ties 
 
 create_country_leader = {
 	name = "George III"
-	picture = "nap_george_iii.tga"
+	picture = "GFX_NAP_PORTRAIT_HAN_GEORGE_III"
 	ideology = despotism
 }

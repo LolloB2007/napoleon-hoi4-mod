@@ -9,6 +9,6 @@ set_politics = { ruling_party = democratic last_election = "1789.1.7" election_f
 set_popularities = { democratic = 80 neutrality = 15 communism = 3 fascism = 2 }
 set_country_flag = american_federal_republic
 create_country_leader = { name = "George Washington"
-	picture = "nap_george_washington.tga" ideology = conservatism traits = { popular_figurehead } }
+	picture = "GFX_NAP_PORTRAIT_USA_GEORGE_WASHINGTON" ideology = conservatism traits = { popular_figurehead } }
 create_corps_commander = { name = "Anthony Wayne"
-	picture = "nap_anthony_wayne.tga" skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
+	portrait_path = "gfx/leaders/USA/nap_anthony_wayne.tga" skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }

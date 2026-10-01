@@ -73,11 +73,6 @@ napoleonic_setup_1789_diplomacy = {
 		}
 		HAB = {
 			give_military_access = RUS
-			diplomatic_relation = {
-				country = RUS
-				relation = non_aggression_pact
-				active = yes
-			}
 			add_opinion_modifier = {
 				target = RUS
 				modifier = nap_1789_close_ties
@@ -115,11 +110,6 @@ napoleonic_setup_1789_diplomacy = {
 			give_guarantee = ENG
 			give_guarantee = NET
 			diplomatic_relation = {
-				country = ENG
-				relation = non_aggression_pact
-				active = yes
-			}
-			diplomatic_relation = {
 				country = NET
 				relation = non_aggression_pact
 				active = yes
@@ -132,16 +122,6 @@ napoleonic_setup_1789_diplomacy = {
 		NET = {
 			give_guarantee = ENG
 			give_guarantee = PRU
-			diplomatic_relation = {
-				country = ENG
-				relation = non_aggression_pact
-				active = yes
-			}
-			diplomatic_relation = {
-				country = PRU
-				relation = non_aggression_pact
-				active = yes
-			}
 		}
 		RUS = {
 			give_guarantee = POL

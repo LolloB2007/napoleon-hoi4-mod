@@ -1,5 +1,5 @@
 opinion_modifiers = {
-	nap_rus_anglophobe_opinion = {
-		opinion = -50
-	}
+ nap_rus_anglophobe_opinion = {
+  value = -50
+ }
 }

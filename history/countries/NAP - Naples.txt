@@ -49,6 +49,6 @@ reverse_add_opinion_modifier = { target = HAB modifier = nap_1789_close_ties }
 
 create_country_leader = {
 	name = "Ferdinand IV"
-	picture = "nap_ferdinand_iv.tga"
+	picture = "GFX_NAP_PORTRAIT_NAP_FERDINAND_IV"
 	ideology = despotism
 }
