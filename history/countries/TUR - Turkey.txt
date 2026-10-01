@@ -56,7 +56,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Koca Yusuf Pasha"
-	portrait_path = "gfx/leaders/TUR/nap_koca_yusuf_pasha.tga"
+	gfx = GFX_NAP_PORTRAIT_TUR_KOCA_YUSUF_PASHA
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

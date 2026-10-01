@@ -51,7 +51,7 @@ create_country_leader = {
 }
 create_field_marshal = {
 	name = "Karl Wilhelm Ferdinand, Herzog von Braunschweig"
-	portrait_path = "gfx/leaders/PRU/nap_karl_wilhelm_ferdinand_herzog_von_braunschweig.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_KARL_WILHELM_FERDINAND_HERZOG_VON_BRAUNSCHWEIG
 	desc = "Commander-in-chief. Issued the infamous Brunswick Manifesto in 1792. Mortally wounded at Auerstedt."
 	traits = {
 		old_guard
@@ -65,7 +65,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Wichard von Möllendorff"
-	portrait_path = "gfx/leaders/PRU/nap_wichard_von_mllendorff.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_WICHARD_VON_MLLENDORFF
 	desc = "Veteran of the Silesian Wars. The grand old man of the Frederician army."
 	traits = {
 		old_guard
@@ -79,7 +79,7 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Gebhard Leberecht von Blücher"
-	portrait_path = "gfx/leaders/PRU/nap_gebhard_leberecht_von_blcher.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_GEBHARD_LEBERECHT_VON_BLCHER
 	desc = "Hussar veteran. 47 years old. Will be hailed as Marschall Vorwärts at Waterloo a quarter century from now."
 	traits = {
 		trait_reckless
@@ -95,7 +95,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Friedrich Ludwig zu Hohenlohe-Ingelfingen"
-	portrait_path = "gfx/leaders/PRU/nap_friedrich_ludwig_zu_hohenlohe_ingelfingen.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_FRIEDRICH_LUDWIG_ZU_HOHENLOHE_INGELFINGEN
 	desc = "Will surrender his army at Prenzlau after Jena."
 	traits = {
 		politically_connected
@@ -109,7 +109,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Gerhard von Scharnhorst"
-	portrait_path = "gfx/leaders/PRU/nap_gerhard_von_scharnhorst.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_GERHARD_VON_SCHARNHORST
 	desc = "Major. The thinker who will rebuild the Prussian army after Jena."
 	traits = {
 		trait_engineer
@@ -124,7 +124,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "August Neidhardt von Gneisenau"
-	portrait_path = "gfx/leaders/PRU/nap_august_neidhardt_von_gneisenau.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_AUGUST_NEIDHARDT_VON_GNEISENAU
 	desc = "Young engineer captain. Will be Blücher's chief of staff and the brain of the army."
 	traits = {
 		trait_engineer
@@ -138,7 +138,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Ludwig Yorck von Wartenburg"
-	portrait_path = "gfx/leaders/PRU/nap_ludwig_yorck_von_wartenburg.tga"
+	gfx = GFX_NAP_PORTRAIT_PRU_LUDWIG_YORCK_VON_WARTENBURG
 	desc = "Hard, stubborn, independent. Will defect from Napoleon's Russian disaster with the Convention of Tauroggen."
 	traits = {
 		harsh_leader

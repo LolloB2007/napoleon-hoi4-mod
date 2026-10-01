@@ -124,7 +124,7 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Jean-Baptiste Donatien de Vimeur, Comte de Rochambeau"
-	portrait_path = "gfx/leaders/FRA/nap_jean_baptiste_donatien_de_vimeur_comte_de_rochambeau.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_JEAN_BAPTISTE_DONATIEN_DE_VIMEUR_COMTE_DE_ROCHAMBEAU
 	# 	picture = "Portrait_FRA_Rochambeau.dds"
 	traits = { old_guard war_hero }
 	skill = 4
@@ -136,7 +136,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "François Christophe de Kellermann"
-	portrait_path = "gfx/leaders/FRA/nap_franois_christophe_de_kellermann.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_FRANOIS_CHRISTOPHE_DE_KELLERMANN
 	# 	picture = "Portrait_FRA_Kellermann.dds"
 	traits = { defensive_doctrine }
 	skill = 4
@@ -148,7 +148,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Lazare Carnot"
-	portrait_path = "gfx/leaders/FRA/nap_lazare_carnot.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_LAZARE_CARNOT
 	# 	picture = "Portrait_FRA_Carnot.dds"
 	desc = "The Organizer of Victory. Currently an engineer captain — will create the armies of the Republic."
 	traits = { organizer career_officer }
@@ -161,7 +161,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Charles-François Dumouriez"
-	portrait_path = "gfx/leaders/FRA/nap_charles_franois_dumouriez.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_CHARLES_FRANOIS_DUMOURIEZ
 	traits = { politically_connected }
 	skill = 3
 	attack_skill = 4
@@ -173,7 +173,7 @@ create_corps_commander = {
 # Future marshals — still junior officers in 1789, listed here so events can promote them.
 create_corps_commander = {
 	name = "Napoléon Bonaparte"
-	portrait_path = "gfx/leaders/FRA/nap_napolon_bonaparte.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_NAPOLON_BONAPARTE
 	# 	picture = "Portrait_FRA_Napoleon_general.dds"
 	desc = "Artillery lieutenant on garrison duty in Auxonne. The world has not yet heard of him."
 	traits = { trait_engineer brilliant_strategist }
@@ -187,7 +187,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Louis-Nicolas Davout"
-	portrait_path = "gfx/leaders/FRA/nap_louis_nicolas_davout.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_LOUIS_NICOLAS_DAVOUT
 	traits = { trickster harsh_leader }
 	skill = 5
 	attack_skill = 5
@@ -198,7 +198,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "André Masséna"
-	portrait_path = "gfx/leaders/FRA/nap_andr_massna.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_ANDR_MASSNA
 	traits = { war_hero infantry_officer }
 	skill = 4
 	attack_skill = 4
@@ -209,7 +209,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Michel Ney"
-	portrait_path = "gfx/leaders/FRA/nap_michel_ney.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_MICHEL_NEY
 	desc = "The bravest of the brave. A cooper's son. Currently a hussar NCO."
 	traits = { cavalry_officer brave }
 	skill = 4
@@ -221,7 +221,7 @@ create_corps_commander = {
 
 create_navy_leader = {
 	name = "Pierre Charles de Villeneuve"
-	portrait_path = "gfx/leaders/FRA/nap_pierre_charles_de_villeneuve.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_PIERRE_CHARLES_DE_VILLENEUVE
 	traits = { spotter }
 	skill = 2
 	attack_skill = 2
@@ -232,7 +232,7 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Charles Henri Hector d'Estaing"
-	portrait_path = "gfx/leaders/FRA/nap_charles_henri_hector_d_estaing.tga"
+	gfx = GFX_NAP_PORTRAIT_FRA_CHARLES_HENRI_HECTOR_D_ESTAING
 	traits = { old_guard_navy ironside }
 	skill = 3
 	attack_skill = 3

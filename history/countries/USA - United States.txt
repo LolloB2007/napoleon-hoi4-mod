@@ -11,4 +11,4 @@ set_country_flag = american_federal_republic
 create_country_leader = { name = "George Washington"
 	picture = "GFX_NAP_PORTRAIT_USA_GEORGE_WASHINGTON" ideology = conservatism traits = { popular_figurehead } }
 create_corps_commander = { name = "Anthony Wayne"
-	portrait_path = "gfx/leaders/USA/nap_anthony_wayne.tga" skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
+	gfx = GFX_NAP_PORTRAIT_USA_ANTHONY_WAYNE skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }

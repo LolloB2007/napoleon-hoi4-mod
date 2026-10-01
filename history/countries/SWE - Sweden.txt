@@ -58,7 +58,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Johan Christopher Toll"
-	portrait_path = "gfx/leaders/SWE/nap_johan_christopher_toll.tga"
+	gfx = GFX_NAP_PORTRAIT_SWE_JOHAN_CHRISTOPHER_TOLL
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
