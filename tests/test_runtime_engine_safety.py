@@ -101,7 +101,29 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
     def test_history_portrait_fields_match_leader_type(self):
         country = (ROOT/'history/countries/ENG - Great Britain.txt').read_text(encoding='utf-8-sig')
         self.assertRegex(country, r'(?s)create_country_leader\s*=\s*\{.*?picture\s*=\s*"GFX_NAP_PORTRAIT_')
-        self.assertRegex(country, r'(?s)create_(?:field_marshal|corps_commander|navy_leader)\s*=\s*\{.*?portrait_path\s*=\s*"gfx/leaders/ENG/')
+        self.assertRegex(country, r'(?s)create_(?:field_marshal|corps_commander|navy_leader)\s*=\s*\{.*?gfx\s*=\s*GFX_NAP_PORTRAIT_')
+        presentation = (ROOT/'interface/nap_presentation.gfx').read_text()
+        self.assertIn('GFX_NAP_PORTRAIT_ENG_', presentation)
+        self.assertIn('_small" texturefile = "gfx/leaders/ENG/small/', presentation)
+
+    def test_airlike_custom_equipment_has_map_icons(self):
+        text = (ROOT/'common/units/equipment/recon_corps_equipment.txt').read_text()
+        expected = {
+            'scout_equipment': ('light_plane', '1'),
+            'courier_equipment': ('light_plane', '2'),
+            'balloon_equipment': ('medium_plane', '6'),
+            'intelligence_equipment': ('heavy_plane', '11'),
+            'privateer_equipment': ('light_plane', '3'),
+        }
+        for equipment, (sprite, frame) in expected.items():
+            match = re.search(
+                rf'(?s)^\s*{equipment}\s*=\s*\{{(.*?)^\s*\}}',
+                text,
+                re.M
+            )
+            self.assertIsNotNone(match, equipment)
+            self.assertIn(f'sprite = {sprite}', match.group(1), equipment)
+            self.assertIn(f'air_map_icon_frame = {frame}', match.group(1), equipment)
 
     def test_opening_non_aggression_pacts_are_not_created_twice(self):
         text = (ROOT/'common/scripted_effects/napoleonic_diplomacy_setup.txt').read_text()
