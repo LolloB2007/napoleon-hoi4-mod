@@ -105,9 +105,16 @@ for p,s in oob_reference_files:
 starting_oob_tags = ('FRA','ENG','HAB','PRU','RUS','SPR','POR','TUR','SWE','DEN','POL','NET','NAP','SAR','PAP','VEN','TUS','BAV','SAX','HAN','WUR')
 for tag in starting_oob_tags:
     expected = ROOT / 'history' / 'units' / f'{tag}_1789.txt'
-    if not expected.exists(): err(f'missing standing OOB file: history/units/{tag}_1789.txt')
+    if not expected.exists():
+        err(f'missing standing OOB file: history/units/{tag}_1789.txt')
+
     cf = next((p for p,_ in country_files if p.name.startswith(tag+' ')), None)
-    if not cf or f'oob = "{tag}_1789"' not in cf.read_text(encoding='utf-8-sig'):
+    if not cf:
+        err(f'{tag}: country history file not found')
+        continue
+
+    ctext = cf.read_text(encoding='utf-8-sig')
+    if not re.search(rf'\boob\s*=\s*"?{re.escape(tag)}_1789"?\b', ctext):
         err(f'{tag}: country history does not load {tag}_1789')
 
 
@@ -136,6 +143,8 @@ for tag in starting_oob_tags:
     tech_block = re.search(r'set_technology\s*=\s*\{(.*?)\n\}', ctext, re.S)
     starting_techs = set(re.findall(r'^\s*([A-Za-z0-9_]+)\s*=\s*1\b', tech_block.group(1), re.M)) if tech_block else set()
     om = re.search(r'oob\s*=\s*"([A-Za-z0-9_\-]+)"', ctext)
+    if not om:
+        om = re.search(r'oob\s*=\s*([A-Za-z0-9_\-]+)', ctext)
     if not om:
         continue
     op = ROOT / 'history' / 'units' / f'{om.group(1)}.txt'
