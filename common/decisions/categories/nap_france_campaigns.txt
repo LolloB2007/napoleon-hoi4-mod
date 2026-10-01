@@ -1,3 +1,4 @@
+nap_fra_historical_guide = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
 nap_fra_revolutionary_crisis = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
 nap_fra_napoleon_rise = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }
 nap_fra_continental_system = { icon = generic_political_discourse allowed = { tag = FRA } visible = { tag = FRA } }

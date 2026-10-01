@@ -1,5 +1,61 @@
 [
   {
+    "id": "nap_fra_guide_revolution",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: Revolutionary Settlement",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_republic",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: Republic at War",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_directory",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: Directory and Bonaparte",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_consulate",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: The Consular State",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_early_empire",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: Imperial Consolidation",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_continental",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: The Continental Empire",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_russia",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: Russia and Imperial Crisis",
+    "repeatable": false,
+    "informational": true
+  },
+  {
+    "id": "nap_fra_guide_restoration",
+    "category": "nap_fra_historical_guide",
+    "title": "Historical Priority: Restoration and Hundred Days",
+    "repeatable": false,
+    "informational": true
+  },
+  {
     "id": "nap_fra_establish_national_assembly",
     "category": "nap_fra_revolutionary_crisis",
     "title": "Assert the National Assembly",

@@ -9,10 +9,10 @@ from pdx import Entry, parse, dumps, walk
 RULES = {
  'french_revolution.1':'tag = FRA has_country_flag = bourbon_monarchy NOT = { has_country_flag = bastille_stormed } NOT = { has_country_flag = bourbon_crackdown }',
  'french_revolution.2':'tag = FRA has_country_flag = bastille_stormed NOT = { has_country_flag = french_royalist_path } NOT = { has_country_flag = french_bonapartist_path }',
- 'french_revolution.4':'nap_fra_route_republican = yes NOT = { has_country_flag = french_republic }',
+ 'french_revolution.4':'nap_fra_route_republican = yes has_country_flag = rights_of_man_declared NOT = { has_country_flag = french_republic }',
  'french_revolution.6':'nap_fra_route_republican = yes',
  'french_revolution.8':'nap_fra_route_republican = yes NOT = { has_country_flag = republic_proclaimed }',
- 'french_revolution.9':'nap_fra_route_republican = yes has_country_flag = french_republic',
+ 'french_revolution.9':'nap_fra_route_republican = yes has_country_flag = french_republic has_country_flag = trial_of_the_king_focus',
  'french_revolution.91':'NOT = { tag = FRA } FRA = { nap_fra_route_republican = yes has_country_flag = louis_xvi_executed }',
  'french_revolution.10':'nap_fra_route_republican = yes NOT = { has_country_flag = nap_fra_girondins_programme }',
  'french_revolution.11':'nap_fra_route_republican = yes has_country_flag = reign_of_terror_active',

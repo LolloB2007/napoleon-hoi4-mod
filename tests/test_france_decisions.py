@@ -32,9 +32,20 @@ class FranceDecisionMechanicsTests(unittest.TestCase):
 
     def test_generated_decision_count(self):
         index=json.loads(self.own['docs/france-decision-index.json'])
-        self.assertEqual(len(index),65)
+        self.assertEqual(len(index),73)
 
-    def test_six_french_categories_plus_foreign_customs(self):
+    def test_historical_guide_is_read_only_and_staged(self):
+        guide=next(e for e in self.decisions if e.key=='nap_fra_historical_guide')
+        self.assertEqual(len(guide.value),8)
+        for entry in guide.value:
+            self.assertIn('always = no',dumps(entry.children('available')))
+            self.assertIn('factor = 0',dumps(entry.children('ai_will_do')))
+            self.assertIn(' '+entry.key+':0 ',self.own['localisation/english/nap_france_campaigns_l_english.yml'])
+        docs=self.own['docs/france-decision-mechanics.md']
+        self.assertIn('Historical campaign guide',docs)
+        self.assertIn('630-focus tree',docs)
+
+    def test_french_categories_plus_foreign_customs(self):
         cats={e.key for e in self.decisions}
         self.assertEqual(cats,set(CATEGORIES))
         for key in (
