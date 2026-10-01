@@ -70,8 +70,8 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         setup = (ROOT/'common/scripted_effects/napoleonic_state_setup.txt').read_text()
         self.assertNotRegex(prussia, r'(?m)^\s*capital\s*=\s*64\b')
         self.assertNotRegex(venice, r'(?m)^\s*capital\s*=\s*160\b')
-        self.assertIn('PRU = { set_capital = 64 }', setup)
-        self.assertIn('VEN = { set_capital = 160 }', setup)
+        self.assertIn('PRU = { set_capital = { state = 64 } }', setup)
+        self.assertIn('VEN = { set_capital = { state = 160 } }', setup)
 
     def test_all_mod_declared_tags_have_history_files(self):
         tag_file = (ROOT/'common/country_tags/00_napoleonic_countries.txt').read_text()

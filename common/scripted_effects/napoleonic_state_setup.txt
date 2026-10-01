@@ -139,6 +139,6 @@ napoleonic_setup_1789_map = {
 
 	# These tags do not own their 1789 capitals during country-history load.
 	# Set capitals only after the ownership transfers above have completed.
-	PRU = { set_capital = 64 }
-	VEN = { set_capital = 160 }
+	PRU = { set_capital = { state = 64 } }
+	VEN = { set_capital = { state = 160 } }
 }
