@@ -85,12 +85,12 @@ def _mix(a,b,t):
     return tuple(int(a[i]*(1-t)+b[i]*t) for i in range(3))
 
 def tga(width,height,pixel):
-    header=struct.pack("<BBBHHBHHHHBB",0,0,2,0,0,0,0,0,width,height,24,32)
+    header=struct.pack("<BBBHHBHHHHBB",0,0,2,0,0,0,0,0,width,height,32,40)
     data=bytearray()
     for y in range(height):
         for x in range(width):
             r,g,b=pixel(x,y)
-            data.extend((b&255,g&255,r&255))
+            data.extend((b&255,g&255,r&255,255))
     return header+bytes(data)
 
 def dds(width,height,pixel):
@@ -301,6 +301,14 @@ sound = { name = "nap_cannon" file = "nap_cannon.wav" always_load = yes volume =
 soundeffect = { name = "nap_dispatch_effect" sounds = { sound = "nap_dispatch" } loop = no is3d = no max_audible = 1 max_audible_behaviour = fail volume = 0.65 }
 soundeffect = { name = "nap_crowd_effect" sounds = { sound = "nap_crowd" } loop = no is3d = no max_audible = 1 max_audible_behaviour = fail volume = 0.55 }
 soundeffect = { name = "nap_cannon_effect" sounds = { sound = "nap_cannon" } loop = no is3d = no max_audible = 1 max_audible_behaviour = fail volume = 0.60 }
+category = {
+ name = "nap_event_sfx"
+ soundeffects = {
+  nap_dispatch_effect
+  nap_crowd_effect
+  nap_cannon_effect
+ }
+}
 '''
     out["common/units/names_divisions/napoleonic_names_divisions.txt"]=_division_names()
     out["common/units/names_ships/napoleonic_ship_names.txt"]=_ship_names()
@@ -434,29 +442,32 @@ def _patch_people(text,tag,updates,interface,people,history_file=False):
     spans=_blocks(text,r"\bcreate_(?:country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{")
     for start,end in reversed(spans):
         block=text[start:end]
+        km=re.search(r'\bcreate_(country_leader|field_marshal|corps_commander|navy_leader)\s*=',block)
         m=re.search(r'\bname\s*=\s*"([^"]+)"',block)
-        if not m: continue
+        if not km or not m: continue
+        kind=km.group(1)
         name=m.group(1); key=_slug(name)
         if history_file:
-            # History-file portraits are resolved as real files relative to
-            # gfx/leaders/<TAG>/. A GFX sprite ID is treated as a filename.
             filename=f"nap_{key.lower()}.tga"
             path=f"gfx/leaders/{tag}/{filename}"
-            identity=(tag,key,"history")
-            if identity not in people:
-                people.add(identity)
+            asset_identity=(tag,key,"asset")
+            if asset_identity not in people:
+                people.add(asset_identity)
                 updates[path]=tga(PORTRAIT_W,PORTRAIT_H,art_pixel(name,"portrait",PORTRAIT_W,PORTRAIT_H))
-            picture=f'"{filename}"'
-            active=re.search(r"(?m)^\s*picture\s*=",block)
-            if active:
-                block=re.sub(r'(?m)^\s*picture\s*=\s*[^\n]+',f'\tpicture = {picture}',block,count=1)
+            block=re.sub(r'(?m)^\s*(?:picture|portrait_path|gfx)\s*=\s*[^\n]+\n?',"",block)
+            m=re.search(r'\bname\s*=\s*"([^"]+)"',block)
+            if kind=="country_leader":
+                gfx=f"GFX_NAP_PORTRAIT_{tag}_{key}"
+                sprite_identity=(tag,key,"sprite")
+                if sprite_identity not in people:
+                    people.add(sprite_identity)
+                    interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
+                field=f"\n\tpicture = {gfx}"
             else:
-                block=block[:m.end()]+f"\n\tpicture = {picture}"+block[m.end():]
+                field=f'\n\tportrait_path = "{path}"'
+            block=block[:m.end()]+field+block[m.end():]
         else:
-            # Dynamic create_* effects do not have a stable country portrait
-            # directory. Remove legacy GFX sprite injections rather than hand
-            # the engine a sprite ID where it expects a portrait filename.
-            block=re.sub(r'(?m)^\s*picture\s*=\s*GFX_NAP_PORTRAIT_[^\n]+\n?',"",block)
+            block=re.sub(r'(?m)^\s*(?:picture|portrait_path|gfx)\s*=\s*(?:GFX_NAP_PORTRAIT_|"?gfx/leaders/NAP/nap_)[^\n]+\n?',"",block)
         text=text[:start]+block+text[end:]
     return text
 
