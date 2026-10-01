@@ -49,13 +49,13 @@ add_opinion_modifier = { target = SWE modifier = nap_1789_rivalry }
 
 create_country_leader = {
 	name = "Christian VII"
-	picture = "nap_christian_vii.tga"
+	picture = "GFX_NAP_PORTRAIT_DEN_CHRISTIAN_VII"
 	ideology = despotism
 }
 
 create_corps_commander = {
 	name = "Prince Charles of Hesse-Kassel"
-	picture = "nap_prince_charles_of_hesse_kassel.tga"
+	portrait_path = "gfx/leaders/DEN/nap_prince_charles_of_hesse_kassel.tga"
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3

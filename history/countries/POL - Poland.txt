@@ -49,13 +49,13 @@ add_opinion_modifier = { target = HAB modifier = nap_1789_partition_grievance }
 
 create_country_leader = {
 	name = "Stanisław II Augustus"
-	picture = "nap_stanisaw_ii_augustus.tga"
-	ideology = social_democracy
+	picture = "GFX_NAP_PORTRAIT_POL_STANISAW_II_AUGUSTUS"
+	ideology = conservatism
 }
 
 create_corps_commander = {
 	name = "Józef Poniatowski"
-	picture = "nap_jzef_poniatowski.tga"
+	portrait_path = "gfx/leaders/POL/nap_jzef_poniatowski.tga"
 	skill = 3
 	attack_skill = 4
 	defense_skill = 3

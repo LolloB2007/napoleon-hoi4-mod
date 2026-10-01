@@ -3,8 +3,6 @@
 # The army still wears the great man's reputation — but the substance is decaying.
 # The catastrophe of Jena-Auerstedt is seventeen years away.
 
-capital = 64                               # Brandenburg state — verify ID
-
 oob = "PRU_1789"
 
 set_research_slots = 3

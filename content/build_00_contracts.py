@@ -73,13 +73,17 @@ GER|German_Confederation|German Confederation|140 140 160'''
 
 IDEOLOGIES = {
     'neutrality': ('Absolutism', ['despotism','oligarchism','moderatism','centrism'], '100 30 30'),
-    'democratic': ('Constitutionalism', ['conservatism','liberalism','socialism','social_democracy'], '40 90 170'),
+    'democratic': ('Constitutionalism', ['conservatism','liberalism','socialism'], '40 90 170'),
     'communism': ('Republicanism', ['marxism','leninism','stalinism','anti_revisionism'], '140 30 30'),
     'fascism': ('Bonapartism', ['fascism_ideology','nazism','falangism','rexism'], '100 100 100'),
 }
 VANILLA_SHARED_TAGS = set("""
 FRA ENG RUS PRU SPR POR TUR SWE DEN POL SAR PAP VEN GEN PAR MAL SAX HAN WUR HES
 SWI MOR TUN ALG EGY ETH JAP KOR SIA MYS HYD SIK USA MEX BRA HAI ITA HOL WES NOR GER
+""".split())
+
+STUB_HISTORY_TAGS = set("""
+MOD LUC HRE HAM BRE LUB TYR RAG MTN TRP PRS QIN BUR VIE MUG MAR BAT RHC WAR
 """.split())
 
 TRAITS = {
@@ -95,8 +99,9 @@ TRAITS = {
 
 
 def tga(width, height, rgb):
-    header = struct.pack('<BBBHHBHHHHBB', 0,0,2,0,0,0,0,0,width,height,24,0)
-    pixel = bytes(reversed(rgb))
+    header = struct.pack('<BBBHHBHHHHBB', 0,0,2,0,0,0,0,0,width,height,32,40)
+    r,g,b = rgb
+    pixel = bytes((b,g,r,255))
     return header + pixel * width * height
 
 
@@ -108,6 +113,24 @@ def build(root):
         if tag not in VANILLA_SHARED_TAGS:
             tags.append(f'{tag} = "countries/{filename}.txt"')
         outputs[f'common/countries/{filename}.txt'] = f'graphical_culture = western_european_gfx\ngraphical_culture_2d = western_european_2d\ncolor = {{ {colour} }}\n'
+        if tag in STUB_HISTORY_TAGS:
+            outputs[f'history/countries/{tag} - {name}.txt'] = f'''# Engine-safe placeholder history for a mod-defined tag without 1789 map ownership.
+set_research_slots = 2
+set_stability = 0.50
+set_war_support = 0.10
+set_politics = {{
+ ruling_party = neutrality
+ last_election = "1789.5.5"
+ election_frequency = 0
+ elections_allowed = no
+}}
+set_popularities = {{
+ neutrality = 70
+ democratic = 20
+ communism = 5
+ fascism = 5
+}}
+'''
         for suffix in ('','_DEF','_ADJ','_neutrality','_democratic','_communism','_fascism'):
             names.append(f' {tag}{suffix}:0 "{name}"')
         for directory, width, height in (('',82,52),('medium/',41,26),('small/',10,7)):
@@ -120,6 +143,12 @@ def build(root):
         loc.append(f' {slot}_desc:0 "Political alignment used by the Napoleonic campaign."')
     outputs['localisation/english/replace/nap_ideology_slots_l_english.yml'] = '\n'.join(loc) + '\n'
     outputs['common/country_leader/napoleonic_leader_traits.txt'] = 'leader_traits = {\n' + '\n'.join(f' {key} = {{ {value} }}' for key,value in TRAITS.items()) + '\n}\n'
+    outputs['common/opinion_modifiers/nap_runtime_opinions.txt'] = '''opinion_modifiers = {
+ nap_rus_anglophobe_opinion = {
+  value = -50
+ }
+}
+'''
     outputs['gfx/interface/select_date_napoleonic.tga'] = tga(384,152,(49,99,180))
     outputs['interface/napoleonic_bookmark.gfx'] = 'spriteTypes = { spriteType = { name = "GFX_select_date_napoleonic" texturefile = "gfx/interface/select_date_napoleonic.tga" } }\n'
     return outputs
