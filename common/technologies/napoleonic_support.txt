@@ -8,7 +8,7 @@ technologies = {
 		start_year = 1789
 		research_cost = 0.5
 		enable_equipments = { nap_support_equipment_0 }
-		enable_subunits = { sapper_company train_battalion field_hospital staff_company }
+		enable_subunits = { sapper_company train_battalion nap_field_hospital staff_company }
 
 		path = { leads_to_tech = field_logistics research_cost_coeff = 1 }
 		path = { leads_to_tech = semaphore_telegraph research_cost_coeff = 1 }
@@ -67,7 +67,7 @@ technologies = {
 		start_year = 1800
 		research_cost = 0.8
 
-		field_hospital = { max_organisation = 5 defense = 2 }
+		nap_field_hospital = { max_organisation = 5 defense = 2 }
 		experience_loss_factor = -0.10
 		army_morale_factor = 0.05
 

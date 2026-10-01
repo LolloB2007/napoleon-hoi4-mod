@@ -40,7 +40,7 @@ def build(root):
       'common/scripted_triggers/nap_geography.txt':trigger,
       'common/scripted_effects/nap_geography.txt':'\n'.join(setup)+'\n',
       'common/ideas/nap_geography.txt':ideas,
-      'common/on_actions/nap_geography.txt':'on_actions = { on_startup = { effect = { nap_geography_initialize = yes } } }\n',
+      'common/on_actions/nap_geography.txt':'on_actions = { on_startup = { effect = { FRA = { nap_geography_initialize = yes } } } }\n',
       'localisation/english/nap_geography_l_english.yml':loc,
       'docs/geographic-scope.json':json.dumps(docs,indent=2)+'\n',
       'docs/geographic-scope.md':'''# Approved geographic scope (A07)

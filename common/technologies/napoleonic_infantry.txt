@@ -10,7 +10,7 @@ technologies = {
 		start_year = 1789
 		research_cost = 0.5
 		enable_equipments = { musket_equipment_0 }
-		enable_subunits = { line_infantry militia }
+		enable_subunits = { line_infantry nap_militia }
 
 		path = { leads_to_tech = musket_research_2 research_cost_coeff = 1 }
 		path = { leads_to_tech = bayonet_drill research_cost_coeff = 1 }

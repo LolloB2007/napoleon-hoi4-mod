@@ -120,7 +120,6 @@ country_event = {
 			add_command_power = 100
 			news_event = {
 				id = napoleonic_wars.31
- picture = GFX_NAP_EVENT_09
 				hours = 6
 			}
 		}
@@ -223,7 +222,6 @@ country_event = {
 				add_political_power = -100
 				country_event = {
 					id = napoleonic_wars.61
- picture = GFX_NAP_EVENT_11
 					days = 30
 				}
 			}
@@ -382,14 +380,12 @@ country_event = {
 					}
 					country_event = {
 						id = nap_clients.10
- picture = GFX_NAP_EVENT_02
 						days = 1
 					}
 				}
 			}
 			country_event = {
 				id = napoleonic_wars.8
- picture = GFX_NAP_EVENT_07
 				days = 25
 			}
 		}
@@ -443,7 +439,6 @@ country_event = {
 			set_global_flag = hre_dissolved
 			news_event = {
 				id = napoleonic_wars.81
- picture = GFX_NAP_EVENT_02
 				hours = 6
 			}
 		}
@@ -514,7 +509,6 @@ country_event = {
 				add_stability = -0.20
 				country_event = {
 					id = napoleonic_wars.91
- picture = GFX_NAP_EVENT_02
 					days = 60
 				}
 			}
@@ -804,7 +798,6 @@ country_event = {
 			set_country_flag = russian_campaign_active
 			news_event = {
 				id = napoleonic_wars.161
- picture = GFX_NAP_EVENT_10
 				hours = 6
 			}
 		}

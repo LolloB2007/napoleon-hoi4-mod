@@ -34,10 +34,6 @@ ideas = {
 				naval_coordination = 0.10
 				positioning = 0.10
 			}
-			equipment_bonus = {
-				ship_of_the_line_hull = { build_cost_ic = -0.10 instant = yes }
-				frigate_hull = { build_cost_ic = -0.10 instant = yes }
-			}
 		}
 
 		# === First industrial nation ===

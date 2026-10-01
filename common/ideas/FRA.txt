@@ -46,13 +46,6 @@ ideas = {
 				research_speed_factor = 0.10               # broad bonus reflects industrial reform
 				equipment_conversion_speed = 0.20
 			}
-			equipment_bonus = {
-				nap_artillery_equipment = {
-					soft_attack = 0.10
-					reliability = 0.05
-					instant = yes
-				}
-			}
 		}
 
 		# === Bankrupt treasury — drives the Estates-General crisis ===

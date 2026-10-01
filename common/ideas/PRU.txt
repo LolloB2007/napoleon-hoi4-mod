@@ -33,13 +33,6 @@ ideas = {
 				equipment_conversion_speed = 0.10
 				army_speed_factor = -0.05         # rigid formations
 			}
-			equipment_bonus = {
-				musket_equipment = {
-					soft_attack = 0.05
-					reliability = 0.05
-					instant = yes
-				}
-			}
 		}
 
 		# === Junker officer corps ===

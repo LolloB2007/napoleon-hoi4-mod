@@ -19,7 +19,7 @@ class MusicTests(unittest.TestCase):
         self.assertIn('music_station = "base_music"',playlist)
 
     def test_provenance_separates_composition_and_recording(self):
-        text=(ROOT/'music/Credits.txt').read_text()
+        text=(ROOT/'docs/music-credits.md').read_text()
         self.assertIn('original composition',text)
         self.assertIn('public-domain composition',text)
         self.assertIn('source recording: none',text)

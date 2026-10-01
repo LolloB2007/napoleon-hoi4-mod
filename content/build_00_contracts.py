@@ -77,6 +77,11 @@ IDEOLOGIES = {
     'communism': ('Republicanism', ['marxism','leninism','stalinism','anti_revisionism'], '140 30 30'),
     'fascism': ('Bonapartism', ['fascism_ideology','nazism','falangism','rexism'], '100 100 100'),
 }
+VANILLA_SHARED_TAGS = set("""
+FRA ENG RUS PRU SPR POR TUR SWE DEN POL SAR PAP VEN GEN PAR MAL SAX HAN WUR HES
+SWI MOR TUN ALG EGY ETH JAP KOR SIA MYS HYD SIK USA MEX BRA HAI ITA HOL WES NOR GER
+""".split())
+
 TRAITS = {
     'silver_tongued': 'political_power_factor = 0.10',
     'the_cloak_n_dagger_schemer': 'political_power_factor = 0.05 stability_factor = 0.05',
@@ -100,7 +105,8 @@ def build(root):
     names = ['\ufeffl_english:']
     for row in COUNTRIES.splitlines():
         tag, filename, name, colour = row.split('|')
-        tags.append(f'{tag} = "countries/{filename}.txt"')
+        if tag not in VANILLA_SHARED_TAGS:
+            tags.append(f'{tag} = "countries/{filename}.txt"')
         outputs[f'common/countries/{filename}.txt'] = f'graphical_culture = western_european_gfx\ngraphical_culture_2d = western_european_2d\ncolor = {{ {colour} }}\n'
         for suffix in ('','_DEF','_ADJ','_neutrality','_democratic','_communism','_fascism'):
             names.append(f' {tag}{suffix}:0 "{name}"')
@@ -108,16 +114,10 @@ def build(root):
             outputs[f'gfx/flags/{directory}{tag}.tga'] = tga(width,height,tuple(map(int,colour.split())))
     outputs['common/country_tags/00_napoleonic_countries.txt'] = '# Restored namespace. See docs/source-contracts.md for vanilla-tag collision risks.\n' + '\n'.join(tags) + '\n'
     outputs['localisation/english/replace/nap_countries_l_english.yml'] = '\n'.join(names) + '\n'
-    ideology = ['ideologies = {']
     loc = ['\ufeffl_english:']
     for slot, (name, subtypes, colour) in IDEOLOGIES.items():
-        ideology += [f' {slot} = {{', '  types = {']
-        ideology += [f'   {subtype} = {{ can_be_randomly_selected = yes }}' for subtype in subtypes]
-        ideology += ['  }', f'  color = {{ {colour} }}', '  rules = { can_puppet = yes can_send_volunteers = yes can_lower_tension = yes }', '  can_be_boosted = yes', '  war_impact_on_world_tension = 1.0', '  faction_impact_on_world_tension = 1.0', ' }']
         loc.append(f' {slot}:0 "{name}"')
         loc.append(f' {slot}_desc:0 "Political alignment used by the Napoleonic campaign."')
-    ideology.append('}')
-    outputs['common/ideologies/00_ideologies.txt'] = '\n'.join(ideology) + '\n'
     outputs['localisation/english/replace/nap_ideology_slots_l_english.yml'] = '\n'.join(loc) + '\n'
     outputs['common/country_leader/napoleonic_leader_traits.txt'] = 'leader_traits = {\n' + '\n'.join(f' {key} = {{ {value} }}' for key,value in TRAITS.items()) + '\n}\n'
     outputs['gfx/interface/select_date_napoleonic.tga'] = tga(384,152,(49,99,180))

@@ -118,7 +118,6 @@ focus_tree = {
 			add_political_power = 100
 			create_country_leader = {
 				name = "Louis XVI"
-	picture = GFX_NAP_PORTRAIT_LOUIS_XVI
 				ideology = conservatism
 				traits = {
 
@@ -376,7 +375,6 @@ focus_tree = {
 				}
 				create_corps_commander = {
 					name = "Napoléon Bonaparte"
-	picture = GFX_NAP_PORTRAIT_NAPOLON_BONAPARTE
 					traits = {
 						trait_engineer
 						brilliant_strategist
@@ -659,7 +657,6 @@ focus_tree = {
 			set_country_flag = ancien_regime_restored
 			create_country_leader = {
 				name = "Louis XVI"
-	picture = GFX_NAP_PORTRAIT_LOUIS_XVI
 				ideology = despotism
 				traits = {
 					indecisive_leader
