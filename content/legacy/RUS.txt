@@ -116,7 +116,7 @@ focus_tree = {
 		x = 7 y = 2
 		cost = 10
 		completion_reward = {
-			ENG = { add_opinion_modifier = { target = RUS modifier = huge_decrease } }
+			ENG = { add_opinion_modifier = { target = RUS modifier = nap_rus_anglophobe_opinion } }
 			add_political_power = -25
 		}
 	}
