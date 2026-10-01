@@ -1,0 +1,46 @@
+nap_fra_bop_active = {
+ has_power_balance = { id = nap_fra_personal_rule }
+}
+
+nap_fra_bop_napoleon_supreme = {
+ has_power_balance = { id = nap_fra_personal_rule }
+ power_balance_value = { id = nap_fra_personal_rule value < -0.59 }
+}
+
+nap_fra_bop_counterweight_dominant = {
+ has_power_balance = { id = nap_fra_personal_rule }
+ power_balance_value = { id = nap_fra_personal_rule value > 0.59 }
+}
+
+nap_fra_bop_marshals_dominant = {
+ has_power_balance = { id = nap_fra_personal_rule }
+ is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+ power_balance_value = { id = nap_fra_personal_rule value > 0.59 }
+}
+
+nap_fra_bop_can_force_major_campaign = {
+ OR = {
+  NOT = { has_power_balance = { id = nap_fra_personal_rule } }
+  AND = {
+   has_power_balance = { id = nap_fra_personal_rule }
+   OR = {
+    NOT = { is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals } }
+    power_balance_value = { id = nap_fra_personal_rule value < 0.6 }
+    has_country_flag = nap_fra_bop_override_marshals
+    check_variable = { nap_fra_napoleon_prestige > 79 }
+   }
+  }
+ }
+}
+
+nap_fra_bop_marshals_can_force_abdication = {
+ has_power_balance = { id = nap_fra_personal_rule }
+ is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+ power_balance_value = { id = nap_fra_personal_rule value > 0.59 }
+ has_country_flag = empire_of_the_french
+ NOT = { has_country_flag = napoleon_on_elba }
+ OR = {
+  has_country_flag = grande_armee_destroyed
+  check_variable = { nap_war_exhaustion > 59 }
+ }
+}

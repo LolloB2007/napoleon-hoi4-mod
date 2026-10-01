@@ -1,0 +1,305 @@
+nap_fra_bop_refresh = {
+ if = {
+  limit = {
+   tag = FRA
+   OR = { has_country_flag = napoleon_on_elba has_country_flag = bourbon_restoration }
+   NOT = { has_country_flag = hundred_days }
+   has_power_balance = { id = nap_fra_personal_rule }
+  }
+  remove_power_balance = { id = nap_fra_personal_rule }
+ }
+ if = {
+  limit = {
+   tag = FRA
+   has_country_flag = hundred_days
+   NOT = { has_power_balance = { id = nap_fra_personal_rule } }
+  }
+  set_power_balance = {
+   id = nap_fra_personal_rule
+   left_side = nap_fra_bop_napoleon
+   right_side = nap_fra_bop_marshals
+   set_value = 0.10
+  }
+ }
+ if = {
+  limit = {
+   tag = FRA
+   has_country_flag = empire_of_the_french
+   NOT = { has_country_flag = bourbon_restoration }
+   NOT = { has_power_balance = { id = nap_fra_personal_rule } }
+  }
+  set_power_balance = {
+   id = nap_fra_personal_rule
+   left_side = nap_fra_bop_napoleon
+   right_side = nap_fra_bop_assemblies
+   set_value = -0.05
+  }
+ }
+ if = {
+  limit = {
+   tag = FRA
+   has_country_flag = consulate_established
+   NOT = { has_country_flag = empire_of_the_french }
+   NOT = { has_country_flag = bourbon_restoration }
+   NOT = { has_power_balance = { id = nap_fra_personal_rule } }
+  }
+  set_power_balance = {
+   id = nap_fra_personal_rule
+   left_side = nap_fra_bop_napoleon
+   right_side = nap_fra_bop_assemblies
+   set_value = -0.05
+  }
+ }
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   has_country_flag = empire_of_the_french
+   has_country_flag = nap_fra_marshals_appointed
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies }
+  }
+  set_power_balance = {
+   id = nap_fra_personal_rule
+   left_side = nap_fra_bop_napoleon
+   right_side = nap_fra_bop_marshals
+  }
+  if = {
+   limit = { NOT = { has_country_flag = nap_fra_bop_marshalate_transition } }
+   set_country_flag = nap_fra_bop_marshalate_transition
+   add_power_balance_value = { id = nap_fra_personal_rule value = -0.10 tooltip_side = nap_fra_bop_napoleon }
+  }
+ }
+}
+
+nap_fra_bop_monthly = {
+ if = { limit = { tag = FRA } nap_fra_bop_refresh = yes }
+ if = {
+  limit = { tag = FRA has_power_balance = { id = nap_fra_personal_rule } }
+
+  if = {
+   limit = { check_variable = { nap_fra_napoleon_prestige > 69 } }
+   add_power_balance_value = { id = nap_fra_personal_rule value = -0.01 tooltip_side = nap_fra_bop_napoleon }
+  }
+  if = {
+   limit = { check_variable = { nap_fra_napoleon_prestige > 84 } }
+   add_power_balance_value = { id = nap_fra_personal_rule value = -0.01 tooltip_side = nap_fra_bop_napoleon }
+  }
+  if = {
+   limit = { check_variable = { nap_war_exhaustion > 49 } }
+   add_power_balance_value = { id = nap_fra_personal_rule value = 0.01 }
+  }
+  if = {
+   limit = { check_variable = { nap_war_exhaustion > 74 } }
+   add_power_balance_value = { id = nap_fra_personal_rule value = 0.01 }
+  }
+
+  if = {
+   limit = { has_country_flag = nap_legacy_napoleonic_wars_6_settled NOT = { has_country_flag = nap_fra_bop_austerlitz_credit } }
+   set_country_flag = nap_fra_bop_austerlitz_credit
+   add_power_balance_value = { id = nap_fra_personal_rule value = -0.12 tooltip_side = nap_fra_bop_napoleon }
+  }
+  if = {
+   limit = { has_country_flag = nap_legacy_napoleonic_wars_9_settled NOT = { has_country_flag = nap_fra_bop_prussia_credit } }
+   set_country_flag = nap_fra_bop_prussia_credit
+   add_power_balance_value = { id = nap_fra_personal_rule value = -0.08 tooltip_side = nap_fra_bop_napoleon }
+  }
+  if = {
+   limit = { has_country_flag = nap_legacy_napoleonic_wars_13_settled NOT = { has_country_flag = nap_fra_bop_tilsit_credit } }
+   set_country_flag = nap_fra_bop_tilsit_credit
+   add_power_balance_value = { id = nap_fra_personal_rule value = -0.08 tooltip_side = nap_fra_bop_napoleon }
+  }
+  if = {
+   limit = { has_global_flag = trafalgar_fought NOT = { has_country_flag = nap_fra_bop_trafalgar_reaction } }
+   set_country_flag = nap_fra_bop_trafalgar_reaction
+   add_power_balance_value = { id = nap_fra_personal_rule value = 0.05 }
+  }
+  if = {
+   limit = { has_country_flag = grande_armee_destroyed NOT = { has_country_flag = nap_fra_bop_russia_shock } }
+   set_country_flag = nap_fra_bop_russia_shock
+   add_power_balance_value = { id = nap_fra_personal_rule value = 0.35 }
+   add_stability = -0.05
+   add_to_variable = { nap_legitimacy = -4 }
+  }
+  if = {
+   limit = { has_global_flag = waterloo_fought NOT = { has_country_flag = nap_fra_bop_waterloo_shock } }
+   set_country_flag = nap_fra_bop_waterloo_shock
+   add_power_balance_value = { id = nap_fra_personal_rule value = 0.25 }
+  }
+
+  if = {
+   limit = {
+    has_country_flag = russian_campaign_active
+    nap_fra_bop_napoleon_supreme = yes
+   }
+   add_to_variable = { nap_fra_russian_supply = -4 }
+   add_to_variable = { nap_fra_russian_cohesion = -3 }
+   add_to_variable = { nap_war_exhaustion = 1 }
+  }
+  if = {
+   limit = {
+    has_country_flag = russian_campaign_active
+    is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+    power_balance_value = { id = nap_fra_personal_rule value > 0.2 }
+   }
+   add_to_variable = { nap_fra_russian_supply = 2 }
+   add_to_variable = { nap_fra_russian_cohesion = 2 }
+   add_to_variable = { nap_fra_napoleon_prestige = -1 }
+  }
+
+  nap_era_clamp = yes
+  nap_fra_decision_clamp = yes
+ }
+}
+
+nap_fra_bop_govern_by_decree_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = -0.08 tooltip_side = nap_fra_bop_napoleon }
+  add_to_variable = { nap_legitimacy = -3 }
+  add_to_variable = { nap_reform = 2 }
+  add_stability = -0.01
+  nap_era_clamp = yes
+ }
+}
+
+nap_fra_bop_consult_assemblies_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = 0.08 tooltip_side = nap_fra_bop_assemblies }
+  add_to_variable = { nap_legitimacy = 3 }
+  add_stability = 0.02
+  nap_era_clamp = yes
+ }
+}
+
+nap_fra_bop_plebiscite_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_assemblies }
+   power_balance_value = { id = nap_fra_personal_rule value > 0.59 }
+   check_variable = { nap_fra_napoleon_prestige > 49 }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = -0.20 tooltip_side = nap_fra_bop_napoleon }
+  add_to_variable = { nap_legitimacy = -4 }
+  add_to_variable = { nap_fra_napoleon_prestige = 3 }
+  add_stability = -0.03
+  nap_era_clamp = yes
+  nap_fra_decision_clamp = yes
+ }
+}
+
+nap_fra_bop_centralize_command_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = -0.08 tooltip_side = nap_fra_bop_napoleon }
+  add_to_variable = { nap_army_prestige = -2 }
+  add_to_variable = { nap_fra_napoleon_prestige = 3 }
+  add_command_power = 20
+  nap_era_clamp = yes
+  nap_fra_decision_clamp = yes
+ }
+}
+
+nap_fra_bop_reward_marshalate_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+   NOT = { check_variable = { nap_treasury < 8 } }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = 0.08 tooltip_side = nap_fra_bop_marshals }
+  add_to_variable = { nap_treasury = -8 }
+  add_to_variable = { nap_army_prestige = 4 }
+  add_to_variable = { nap_legitimacy = 1 }
+  nap_era_clamp = yes
+ }
+}
+
+nap_fra_bop_delegate_theatres_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = 0.08 tooltip_side = nap_fra_bop_marshals }
+  add_to_variable = { nap_fra_napoleon_prestige = -2 }
+  add_to_variable = { nap_supply_pressure = -3 }
+  army_experience = 10
+  nap_era_clamp = yes
+  nap_fra_decision_clamp = yes
+ }
+}
+
+nap_fra_bop_override_marshals_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   nap_fra_bop_marshals_dominant = yes
+   check_variable = { nap_fra_napoleon_prestige > 69 }
+  }
+  set_country_flag = { flag = nap_fra_bop_override_marshals days = 120 }
+  add_power_balance_value = { id = nap_fra_personal_rule value = -0.18 tooltip_side = nap_fra_bop_napoleon }
+  add_to_variable = { nap_army_prestige = -6 }
+  add_to_variable = { nap_legitimacy = -5 }
+  add_to_variable = { nap_war_exhaustion = 4 }
+  nap_era_clamp = yes
+ }
+}
+
+nap_fra_bop_marshal_council_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   has_power_balance = { id = nap_fra_personal_rule }
+   is_power_balance_side_active = { id = nap_fra_personal_rule side = nap_fra_bop_marshals }
+   check_variable = { nap_war_exhaustion > 39 }
+  }
+  add_power_balance_value = { id = nap_fra_personal_rule value = 0.10 tooltip_side = nap_fra_bop_marshals }
+  add_to_variable = { nap_war_exhaustion = -6 }
+  add_to_variable = { nap_supply_pressure = -4 }
+  add_to_variable = { nap_fra_napoleon_prestige = -3 }
+  nap_era_clamp = yes
+  nap_fra_decision_clamp = yes
+ }
+}
+
+nap_fra_bop_marshals_demand_abdication_effect = {
+ if = {
+  limit = { tag = FRA nap_fra_bop_marshals_can_force_abdication = yes }
+  country_event = { id = napoleonic_collapse.5 hours = 1 }
+ }
+}
+
+nap_fra_bop_fight_on_effect = {
+ if = {
+  limit = {
+   tag = FRA
+   nap_fra_bop_marshals_can_force_abdication = yes
+   check_variable = { nap_fra_napoleon_prestige > 59 }
+  }
+  set_country_flag = { flag = nap_fra_bop_rejected_abdication days = 180 }
+  add_power_balance_value = { id = nap_fra_personal_rule value = -0.25 tooltip_side = nap_fra_bop_napoleon }
+  add_manpower = 75000
+  add_war_support = 0.10
+  add_stability = -0.08
+  add_to_variable = { nap_legitimacy = -8 }
+  add_to_variable = { nap_war_exhaustion = 6 }
+  nap_era_clamp = yes
+ }
+}

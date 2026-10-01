@@ -1,0 +1,18 @@
+on_actions = {
+ on_startup = {
+  effect = {
+   every_country = {
+    limit = { tag = FRA }
+    nap_fra_bop_refresh = yes
+   }
+  }
+ }
+ on_monthly = {
+  effect = {
+   if = {
+    limit = { tag = FRA }
+    nap_fra_bop_monthly = yes
+   }
+  }
+ }
+}

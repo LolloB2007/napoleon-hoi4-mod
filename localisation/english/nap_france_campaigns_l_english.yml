@@ -162,7 +162,7 @@
  nap_fra_russia_winter_quarters:0 "Halt for Winter Quarters"
  nap_fra_russia_winter_quarters_desc:0 "Recover supply and cohesion at the cost of operational prestige. Supply +10, cohesion +15, army prestige -4."
  nap_fra_russia_press_on:0 "Press Deeper into Russia"
- nap_fra_russia_press_on_desc:0 "Trade logistical safety for prestige and operational momentum. Supply -20, cohesion -10, Napoleon prestige +8."
+ nap_fra_russia_press_on_desc:0 "Trade logistical safety for prestige and operational momentum. Supply -20, cohesion -10, Napoleon prestige +8. A dominant Marshalate can veto this unless Napoleon has overwhelming prestige or has explicitly overridden the marshal council."
  nap_fra_russia_settlement:0 "Offer Russia a Continental Settlement"
  nap_fra_russia_settlement_desc:0 "A successful campaign can end through a bounded Tilsit-style settlement instead of a scripted French disaster. Requires supply/cohesion 40 and Napoleon prestige 65."
  nap_fra_russia_retreat:0 "Order an Organized Retreat"

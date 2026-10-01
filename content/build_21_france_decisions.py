@@ -518,7 +518,7 @@ def build(root):
       'Spend political capital coordinating client and allied contingents. Supply preparation +8, cohesion +8.',
       'tag = FRA '+prep_guard,'nap_fra_russia_allies_effect',25,75)
 
-    russia_launch=prep_guard+f' {at_least("russian_supply",45)} RUS = {{ exists = yes }} NOT = {{ has_war_with = RUS }}'
+    russia_launch=prep_guard+f' {at_least("russian_supply",45)} RUS = {{ exists = yes }} NOT = {{ has_war_with = RUS }} nap_fra_bop_can_force_major_campaign = yes'
     add_effect(effects,'nap_fra_russia_launch_effect',russia_launch,
       f'set_country_flag = nap_fra_russian_launch_authorized add_ideas = nap_fra_russian_logistics {vadd("napoleon_prestige",5)} country_event = {{ id = napoleonic_wars.16 hours = 1 }}')
     add_decision(sections,loc,'nap_fra_russian_campaign','nap_fra_russia_launch','Cross the Niemen',
@@ -540,11 +540,12 @@ def build(root):
       'tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS',
       'nap_fra_russia_winter_quarters_effect',25,75)
 
-    add_effect(effects,'nap_fra_russia_press_on_effect','has_country_flag = russian_campaign_active has_war_with = RUS',
+    press_on_guard='has_country_flag = russian_campaign_active has_war_with = RUS nap_fra_bop_can_force_major_campaign = yes'
+    add_effect(effects,'nap_fra_russia_press_on_effect',press_on_guard,
       f'{vadd("russian_supply",-20)} {vadd("russian_cohesion",-10)} {vadd("napoleon_prestige",8)} {change("war_exhaustion",4)}')
     add_decision(sections,loc,'nap_fra_russian_campaign','nap_fra_russia_press_on','Press Deeper into Russia',
-      'Trade logistical safety for prestige and operational momentum. Supply -20, cohesion -10, Napoleon prestige +8.',
-      'tag = FRA has_country_flag = russian_campaign_active has_war_with = RUS',
+      'Trade logistical safety for prestige and operational momentum. Supply -20, cohesion -10, Napoleon prestige +8. A dominant Marshalate can veto this unless Napoleon has overwhelming prestige or has explicitly overridden the marshal council.',
+      'tag = FRA '+press_on_guard,
       'nap_fra_russia_press_on_effect',25,60)
 
     russia_win=f'has_country_flag = russian_campaign_active has_war_with = RUS {at_least("russian_supply",40)} {at_least("russian_cohesion",40)} {at_least("napoleon_prestige",65)}'
