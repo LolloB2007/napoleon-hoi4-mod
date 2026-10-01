@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 sys.path.insert(0, str(ROOT / 'content'))
 from build_00_contracts import build, COUNTRIES, VANILLA_SHARED_TAGS
+from build_content import compile_sources
 from pdx import parse
 
 class BuildTests(unittest.TestCase):
@@ -35,6 +36,14 @@ class BuildTests(unittest.TestCase):
         for path, text in build(ROOT).items():
             if path.endswith('.yml'):
                 self.assertTrue(text.startswith('\ufeffl_english:'))
+
+    def test_compiled_localisation_bom(self):
+        for path, data in compile_sources(ROOT).items():
+            if path.endswith('.yml'):
+                self.assertTrue(
+                    data.startswith(b'\xef\xbb\xbf'),
+                    f'{path}: compiled localisation missing UTF-8 BOM'
+                )
 
 if __name__ == '__main__':
     unittest.main()

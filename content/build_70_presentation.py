@@ -474,6 +474,11 @@ def _patch_oob(text,tag):
     return text
 
 def _polish_loc(text):
+    # _text() reads retained YAML with utf-8-sig, which strips an existing BOM.
+    # Restore it here so every localisation file emitted by the compiler keeps
+    # the BOM required by HOI4's localisation loader.
+    if not text.startswith("\ufeff"):
+        text="\ufeff"+text
     text=text.replace("the the ","the ")
     text=text.replace("These balance values remain provisional.","")
     text=text.replace("Numeric balance remains provisional.","")
