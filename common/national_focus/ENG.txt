@@ -230,7 +230,6 @@ focus_tree = {
 			add_command_power = 30
 			create_corps_commander = {
 				name = "Arthur Wellesley, Duke of Wellington"
-	picture = GFX_NAP_PORTRAIT_ARTHUR_WELLESLEY_DUKE_OF_WELLINGTON
 				traits = {
 					defensive_doctrine
 					logistics_wizard

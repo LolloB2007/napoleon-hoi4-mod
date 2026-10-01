@@ -50,7 +50,7 @@ add_ideas = {
 }
 create_country_leader = {
 	name = "William Pitt the Younger"
-	picture = GFX_NAP_PORTRAIT_WILLIAM_PITT_THE_YOUNGER
+	picture = "nap_william_pitt_the_younger.tga"
 	desc = "Prime Minister at 24. Master of the Treasury and the war effort."
 	ideology = conservatism
 	traits = {
@@ -60,7 +60,7 @@ create_country_leader = {
 }
 create_field_marshal = {
 	name = "Frederick, Duke of York"
-	picture = GFX_NAP_PORTRAIT_FREDERICK_DUKE_OF_YORK
+	picture = "nap_frederick_duke_of_york.tga"
 	desc = "Commander-in-Chief. Reformed army administration despite his battlefield record."
 	traits = {
 		politically_connected
@@ -74,7 +74,7 @@ create_field_marshal = {
 }
 create_field_marshal = {
 	name = "Charles Cornwallis"
-	picture = GFX_NAP_PORTRAIT_CHARLES_CORNWALLIS
+	picture = "nap_charles_cornwallis.tga"
 	desc = "Lost America at Yorktown. Now Governor-General of India — and a Marquess."
 	traits = {
 		old_guard
@@ -88,7 +88,7 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Sir John Moore"
-	picture = GFX_NAP_PORTRAIT_SIR_JOHN_MOORE
+	picture = "nap_sir_john_moore.tga"
 	desc = "Pioneer of British light infantry. Will die a hero at Corunna in 1809."
 	traits = {
 		trait_reckless
@@ -102,7 +102,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Arthur Wellesley"
-	picture = GFX_NAP_PORTRAIT_ARTHUR_WELLESLEY
+	picture = "nap_arthur_wellesley.tga"
 	desc = "An Anglo-Irish ensign of twenty. The world has not yet heard of Wellington."
 	traits = {
 		defensive_doctrine
@@ -116,7 +116,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Ralph Abercromby"
-	picture = GFX_NAP_PORTRAIT_RALPH_ABERCROMBY
+	picture = "nap_ralph_abercromby.tga"
 	traits = {
 		infantry_officer
 		trait_engineer
@@ -129,7 +129,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Sir Eyre Coote"
-	picture = GFX_NAP_PORTRAIT_SIR_EYRE_COOTE
+	picture = "nap_sir_eyre_coote.tga"
 	desc = "Victor of Wandiwash in India. Veteran of the Carnatic Wars."
 	traits = {
 		old_guard
@@ -142,7 +142,7 @@ create_corps_commander = {
 }
 create_navy_leader = {
 	name = "Richard Howe"
-	picture = GFX_NAP_PORTRAIT_RICHARD_HOWE
+	picture = "nap_richard_howe.tga"
 	desc = "Black Dick. Will win the Glorious First of June in 1794."
 	traits = {
 		old_guard_navy
@@ -156,7 +156,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Samuel Hood, 1st Viscount Hood"
-	picture = GFX_NAP_PORTRAIT_SAMUEL_HOOD_1ST_VISCOUNT_HOOD
+	picture = "nap_samuel_hood_1st_viscount_hood.tga"
 	traits = {
 		old_guard_navy
 		ironside
@@ -169,7 +169,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "John Jervis"
-	picture = GFX_NAP_PORTRAIT_JOHN_JERVIS
+	picture = "nap_john_jervis.tga"
 	desc = "The future Earl of St Vincent. Disciplinarian. Nelson's mentor."
 	traits = {
 		old_guard_navy
@@ -183,7 +183,7 @@ create_navy_leader = {
 }
 create_navy_leader = {
 	name = "Horatio Nelson"
-	picture = GFX_NAP_PORTRAIT_HORATIO_NELSON
+	picture = "nap_horatio_nelson.tga"
 	desc = "Captain on half-pay, living on his uncle's farm in Norfolk. The world has not yet heard of Trafalgar."
 	traits = {
 		spotter

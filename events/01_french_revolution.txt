@@ -61,7 +61,6 @@ country_event = {
 			load_oob = FRA_garde_nationale
 			news_event = {
 				id = napoleonic_timeline.1
- picture = GFX_NAP_EVENT_04
 				days = 1
 			}
 		}
@@ -454,12 +453,10 @@ country_event = {
 			set_country_flag = french_republic
 			news_event = {
 				id = napoleonic_timeline.8
- picture = GFX_NAP_EVENT_07
 				hours = 6
 			}
 			create_country_leader = {
 				name = "National Convention"
-	picture = GFX_NAP_PORTRAIT_NATIONAL_CONVENTION
 				ideology = marxism
 				traits = {
 
@@ -564,13 +561,11 @@ country_event = {
 				}
 				country_event = {
 					id = french_revolution.91
- picture = GFX_NAP_EVENT_08
 					days = 2
 				}
 			}
 			news_event = {
 				id = napoleonic_timeline.9
- picture = GFX_NAP_EVENT_04
 				hours = 6
 			}
 		}
@@ -756,7 +751,6 @@ country_event = {
 			set_country_flag = reign_of_terror_active
 			create_country_leader = {
 				name = "Maximilien Robespierre"
-	picture = GFX_NAP_PORTRAIT_MAXIMILIEN_ROBESPIERRE
 				ideology = marxism
 				traits = {
 					incorruptible
@@ -848,7 +842,6 @@ country_event = {
 			add_political_power = 30
 			create_country_leader = {
 				name = "Thermidorian Convention"
-	picture = GFX_NAP_PORTRAIT_THERMIDORIAN_CONVENTION
 				ideology = marxism
 				traits = {
 
@@ -913,7 +906,6 @@ country_event = {
 			remove_ideas = reign_of_terror
 			create_country_leader = {
 				name = "Executive Directory"
-	picture = GFX_NAP_PORTRAIT_EXECUTIVE_DIRECTORY
 				ideology = marxism
 				traits = {
 
@@ -995,13 +987,11 @@ country_event = {
 			add_stability = 0.15
 			news_event = {
 				id = napoleonic_timeline.14
- picture = GFX_NAP_EVENT_05
 				hours = 6
 			}
 			clr_country_flag = french_revolutionary_path
 			create_country_leader = {
 				name = "Napoleon Bonaparte"
-	picture = GFX_NAP_PORTRAIT_NAPOLEON_BONAPARTE
 				ideology = fascism_ideology
 				traits = {
 					military_genius

@@ -30,7 +30,6 @@ country_event = {
 			set_country_flag = grande_armee_destroyed
 			news_event = {
 				id = napoleonic_collapse.11
- picture = GFX_NAP_EVENT_05
 				hours = 6
 			}
 		}
@@ -357,12 +356,10 @@ country_event = {
 			add_stability = -0.10
 			news_event = {
 				id = napoleonic_collapse.61
- picture = GFX_NAP_EVENT_11
 				hours = 6
 			}
 			create_country_leader = {
 				name = "Louis XVIII"
-	picture = GFX_NAP_PORTRAIT_LOUIS_XVIII
 				ideology = despotism
 				traits = {
 
@@ -474,7 +471,6 @@ country_event = {
 			}
 			news_event = {
 				id = napoleonic_collapse.81
- picture = GFX_NAP_EVENT_10
 				hours = 6
 			}
 			set_country_flag = french_bonapartist_path
@@ -483,7 +479,6 @@ country_event = {
 			clr_country_flag = french_revolutionary_path
 			create_country_leader = {
 				name = "Napoleon Bonaparte"
-	picture = GFX_NAP_PORTRAIT_NAPOLEON_BONAPARTE
 				ideology = fascism_ideology
 				traits = {
 					military_genius
@@ -613,7 +608,6 @@ country_event = {
 			}
 			create_country_leader = {
 				name = "Louis XVIII"
-	picture = GFX_NAP_PORTRAIT_LOUIS_XVIII
 				ideology = despotism
 				traits = {
 

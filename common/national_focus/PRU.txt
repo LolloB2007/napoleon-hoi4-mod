@@ -200,7 +200,6 @@ focus_tree = {
 			add_war_support = 0.30
 			create_field_marshal = {
 				name = "Gebhard Leberecht von Blücher"
-	picture = GFX_NAP_PORTRAIT_GEBHARD_LEBERECHT_VON_BLCHER
 				traits = {
 					trait_reckless
 					cavalry_officer

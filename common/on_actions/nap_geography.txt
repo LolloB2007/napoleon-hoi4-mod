@@ -1,1 +1,1 @@
-on_actions = { on_startup = { effect = { nap_geography_initialize = yes } } }
+on_actions = { on_startup = { effect = { FRA = { nap_geography_initialize = yes } } } }

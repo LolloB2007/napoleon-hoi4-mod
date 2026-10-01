@@ -9,4 +9,4 @@ set_politics = { ruling_party = neutrality election_frequency = 0 elections_allo
 set_popularities = { neutrality = 86 democratic = 10 communism = 2 fascism = 2 }
 set_country_flag = hre_member_1789
 create_country_leader = { name = "William IX"
-	picture = GFX_NAP_PORTRAIT_WILLIAM_IX ideology = despotism }
+	picture = "nap_william_ix.tga" ideology = despotism }
