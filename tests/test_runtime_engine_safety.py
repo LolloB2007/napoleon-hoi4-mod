@@ -140,11 +140,41 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         tags = (ROOT/'common/technology_tags/00_napoleonic_tags.txt').read_text()
         cavalry = (ROOT/'common/technologies/cavalry.txt').read_text()
         recon = (ROOT/'common/technologies/recon_corps.txt').read_text()
+        doctrine = (ROOT/'common/technologies/land_doctrine.txt').read_text()
         self.assertNotIn('technology_folders = {', tags)
         self.assertNotIn('cavalry_folder', cavalry)
         self.assertNotIn('recon_corps_folder', recon)
+        self.assertNotIn('name = land_doctrine_folder', doctrine)
         self.assertIn('name = infantry_folder', cavalry)
         self.assertIn('name = support_folder', recon)
+        self.assertIn('name = infantry_folder', doctrine)
+
+    def test_custom_root_technologies_have_gridboxes(self):
+        gui = (ROOT/'interface/countrytechtreeview.gui').read_text()
+        self.assertIn('special_project_tech_icon_offset', gui)
+        self.assertIn('support_category_multipliers_header', gui)
+        roots = (
+            'cavalry_research_1',
+            'line_doctrine_drill_and_discipline',
+            'column_doctrine_march_cadence',
+            'skirmisher_doctrine_light_tradition',
+            'artillery_research_1',
+            'musket_research_1',
+            'ship_of_the_line_1',
+            'frigate_1',
+            'sloop_1',
+            'bomb_ketch_1',
+            'fireship_1',
+            'naval_doctrine_line_ahead',
+            'support_research_1',
+            'scout_squadrons_1',
+            'courier_corps_1',
+            'observation_balloons_1',
+            'intelligence_networks_1',
+            'privateer_command_1',
+        )
+        for root in roots:
+            self.assertIn(f'name = "{root}_tree"', gui, root)
 
     def test_credits_are_not_in_engine_parsed_music_txt(self):
         self.assertFalse((ROOT/'music/Credits.txt').exists())
