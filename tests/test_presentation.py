@@ -49,9 +49,22 @@ class PresentationTests(unittest.TestCase):
     def test_event_blocks_have_period_art(self):
         for path in [p for p in self.outputs if p.startswith('events/') and p.endswith('.txt')]:
             text=self.text(path)
-            count=len(re.findall(r'(?m)^\s*(?:country_event|news_event)\s*=\s*\{',text))
-            pics=len(re.findall(r'\bpicture\s*=\s*GFX_NAP_EVENT_\d\d',text))
-            self.assertEqual(pics,count,path)
+            for match in re.finditer(r'(?m)^\s*(?:country_event|news_event)\s*=\s*\{',text):
+                brace=text.find('{',match.start()); depth=0
+                for pos in range(brace,len(text)):
+                    if text[pos]=='{': depth+=1
+                    elif text[pos]=='}':
+                        depth-=1
+                        if depth==0:
+                            block=text[match.start():pos+1]
+                            break
+                else:
+                    self.fail(path+': unclosed event block')
+                is_definition=re.search(r'(?m)^\s*(?:title|desc)\s*=',block)
+                if is_definition:
+                    self.assertRegex(block,r'\bpicture\s*=\s*GFX_NAP_EVENT_\d\d',path)
+                else:
+                    self.assertNotRegex(block,r'(?m)^\s*picture\s*=',path)
 
     def test_inline_leaders_have_portraits(self):
         paths=[p for p in self.outputs if (p.startswith('history/countries/') or p.startswith('events/') or p.startswith('common/national_focus/')) and p.endswith('.txt')]
@@ -59,7 +72,13 @@ class PresentationTests(unittest.TestCase):
             text=self.text(path)
             for m in re.finditer(r'create_(?:country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{',text):
                 block=text[m.start():text.find('}',m.start())+1]
-                self.assertIn('picture = GFX_NAP_PORTRAIT_',block,path)
+                if path.startswith('history/countries/'):
+                    pic=re.search(r'picture\s*=\s*"([^"]+\.tga)"',block)
+                    self.assertIsNotNone(pic,path)
+                    tag=Path(path).name[:3]
+                    self.assertIn(f'gfx/leaders/{tag}/{pic.group(1)}',self.outputs,path)
+                else:
+                    self.assertIn('picture = GFX_NAP_PORTRAIT_',block,path)
 
     def test_regime_flags_cover_namespace(self):
         tags=[r.split('|')[0] for r in COUNTRIES.splitlines()]

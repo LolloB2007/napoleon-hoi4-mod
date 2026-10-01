@@ -62,6 +62,14 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         text = (ROOT/'common/ideas/FRA_dynamic.txt').read_text()
         self.assertNotIn('reign_of_terror = {', text)
 
+    def test_custom_subunits_do_not_override_vanilla_ids(self):
+        infantry = (ROOT/'common/units/napoleonic_infantry.txt').read_text()
+        support = (ROOT/'common/units/napoleonic_support.txt').read_text()
+        self.assertNotRegex(infantry, r'(?m)^\s*militia\s*=\s*\{')
+        self.assertIn('nap_militia = {', infantry)
+        self.assertNotRegex(support, r'(?m)^\s*field_hospital\s*=\s*\{')
+        self.assertIn('nap_field_hospital = {', support)
+
 
 if __name__ == '__main__':
     unittest.main()
