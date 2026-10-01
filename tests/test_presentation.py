@@ -68,17 +68,32 @@ class PresentationTests(unittest.TestCase):
 
     def test_inline_leaders_have_portraits(self):
         paths=[p for p in self.outputs if (p.startswith('history/countries/') or p.startswith('events/') or p.startswith('common/national_focus/')) and p.endswith('.txt')]
+        presentation=self.text('interface/nap_presentation.gfx')
         for path in paths:
             text=self.text(path)
-            for m in re.finditer(r'create_(?:country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{',text):
+            for m in re.finditer(r'create_(country_leader|field_marshal|corps_commander|navy_leader)\s*=\s*\{',text):
+                kind=m.group(1)
                 block=text[m.start():text.find('}',m.start())+1]
                 if path.startswith('history/countries/'):
-                    pic=re.search(r'picture\s*=\s*"([^"]+\.tga)"',block)
-                    self.assertIsNotNone(pic,path)
                     tag=Path(path).name[:3]
-                    self.assertIn(f'gfx/leaders/{tag}/{pic.group(1)}',self.outputs,path)
+                    if kind=='country_leader':
+                        pic=re.search(r'picture\s*=\s*(GFX_NAP_PORTRAIT_[A-Z0-9_]+)',block)
+                        self.assertIsNotNone(pic,path)
+                        self.assertIn(f'name = "{pic.group(1)}"',presentation,path)
+                        sprite=re.search(
+                            rf'name\s*=\s*"{re.escape(pic.group(1))}"\s+texturefile\s*=\s*"(gfx/leaders/{tag}/[^"]+\.tga)"',
+                            presentation
+                        )
+                        self.assertIsNotNone(sprite,path)
+                        self.assertIn(sprite.group(1),self.outputs,path)
+                    else:
+                        portrait=re.search(r'portrait_path\s*=\s*"(gfx/leaders/[^"]+\.tga)"',block)
+                        self.assertIsNotNone(portrait,path)
+                        self.assertTrue(portrait.group(1).startswith(f'gfx/leaders/{tag}/'),path)
+                        self.assertIn(portrait.group(1),self.outputs,path)
                 else:
-                    self.assertNotIn('picture = GFX_NAP_PORTRAIT_',block,path)
+                    self.assertNotIn('GFX_NAP_PORTRAIT_',block,path)
+                    self.assertNotIn('gfx/leaders/NAP/nap_',block,path)
 
     def test_regime_flags_cover_namespace(self):
         tags=[r.split('|')[0] for r in COUNTRIES.splitlines()]
