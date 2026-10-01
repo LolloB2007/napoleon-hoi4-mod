@@ -437,25 +437,26 @@ def _patch_people(text,tag,updates,interface,people,history_file=False):
         m=re.search(r'\bname\s*=\s*"([^"]+)"',block)
         if not m: continue
         name=m.group(1); key=_slug(name)
-        gfx="GFX_NAP_PORTRAIT_"+key
-        identity=(tag,key,"history" if history_file else "gfx")
         if history_file:
+            # History-file portraits are resolved as real files relative to
+            # gfx/leaders/<TAG>/. A GFX sprite ID is treated as a filename.
             filename=f"nap_{key.lower()}.tga"
             path=f"gfx/leaders/{tag}/{filename}"
+            identity=(tag,key,"history")
+            if identity not in people:
+                people.add(identity)
+                updates[path]=tga(PORTRAIT_W,PORTRAIT_H,art_pixel(name,"portrait",PORTRAIT_W,PORTRAIT_H))
             picture=f'"{filename}"'
+            active=re.search(r"(?m)^\s*picture\s*=",block)
+            if active:
+                block=re.sub(r'(?m)^\s*picture\s*=\s*[^\n]+',f'\tpicture = {picture}',block,count=1)
+            else:
+                block=block[:m.end()]+f"\n\tpicture = {picture}"+block[m.end():]
         else:
-            path=f"gfx/leaders/NAP/{key.lower()}.tga"
-            picture=gfx
-        if identity not in people:
-            people.add(identity)
-            updates[path]=tga(PORTRAIT_W,PORTRAIT_H,art_pixel(name,"portrait",PORTRAIT_W,PORTRAIT_H))
-            if not history_file:
-                interface.append(f'spriteType = {{ name = "{gfx}" texturefile = "{path}" }}')
-        active=re.search(r"(?m)^\s*picture\s*=",block)
-        if active:
-            block=re.sub(r'(?m)^\s*picture\s*=\s*[^\n]+',f'\tpicture = {picture}',block,count=1)
-        else:
-            block=block[:m.end()]+f"\n\tpicture = {picture}"+block[m.end():]
+            # Dynamic create_* effects do not have a stable country portrait
+            # directory. Remove legacy GFX sprite injections rather than hand
+            # the engine a sprite ID where it expects a portrait filename.
+            block=re.sub(r'(?m)^\s*picture\s*=\s*GFX_NAP_PORTRAIT_[^\n]+\n?',"",block)
         text=text[:start]+block+text[end:]
     return text
 

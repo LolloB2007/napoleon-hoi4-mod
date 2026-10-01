@@ -78,7 +78,7 @@ class PresentationTests(unittest.TestCase):
                     tag=Path(path).name[:3]
                     self.assertIn(f'gfx/leaders/{tag}/{pic.group(1)}',self.outputs,path)
                 else:
-                    self.assertIn('picture = GFX_NAP_PORTRAIT_',block,path)
+                    self.assertNotIn('picture = GFX_NAP_PORTRAIT_',block,path)
 
     def test_regime_flags_cover_namespace(self):
         tags=[r.split('|')[0] for r in COUNTRIES.splitlines()]

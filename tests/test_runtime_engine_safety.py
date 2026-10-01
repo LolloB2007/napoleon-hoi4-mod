@@ -62,6 +62,12 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         text = (ROOT/'common/ideas/FRA_dynamic.txt').read_text()
         self.assertNotIn('reign_of_terror = {', text)
 
+    def test_dynamic_leaders_do_not_use_gfx_sprite_as_portrait_filename(self):
+        for root in ('events', 'common/national_focus'):
+            for path in (ROOT/root).glob('*.txt'):
+                text = path.read_text(encoding='utf-8-sig')
+                self.assertNotIn('picture = GFX_NAP_PORTRAIT_', text, str(path))
+
     def test_custom_subunits_do_not_override_vanilla_ids(self):
         infantry = (ROOT/'common/units/napoleonic_infantry.txt').read_text()
         support = (ROOT/'common/units/napoleonic_support.txt').read_text()
