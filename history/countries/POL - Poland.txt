@@ -50,7 +50,7 @@ add_opinion_modifier = { target = HAB modifier = nap_1789_partition_grievance }
 create_country_leader = {
 	name = "Stanisław II Augustus"
 	picture = "nap_stanisaw_ii_augustus.tga"
-	ideology = social_democracy
+	ideology = conservatism
 }
 
 create_corps_commander = {

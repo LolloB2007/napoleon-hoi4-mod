@@ -1,7 +1,6 @@
 # Republic of Venice — 1789.5.5 starting history
 # Foundation setup for Roadmap Milestone 1. Deep country content comes later.
 
-capital = 160
 oob = "VEN_1789"
 
 set_research_slots = 3
