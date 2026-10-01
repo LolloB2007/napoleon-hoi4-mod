@@ -54,6 +54,66 @@ class RuntimeEngineSafetyTests(unittest.TestCase):
         self.assertIn('modifier = nap_rus_anglophobe_opinion', focus)
         self.assertIn('nap_rus_anglophobe_opinion = {', opinions)
 
+    def test_runtime_opinion_modifier_uses_value_key(self):
+        opinions = (ROOT/'common/opinion_modifiers/nap_runtime_opinions.txt').read_text()
+        self.assertIn('value = -50', opinions)
+        self.assertNotRegex(opinions, r'(?m)^\s*opinion\s*=')
+
+    def test_polish_leader_uses_valid_vanilla_subideology(self):
+        text = (ROOT/'history/countries/POL - Poland.txt').read_text(encoding='utf-8-sig')
+        self.assertNotIn('social_democracy', text)
+        self.assertIn('ideology = conservatism', text)
+
+    def test_deferred_capitals_are_set_after_state_transfer(self):
+        prussia = (ROOT/'history/countries/PRU - Prussia.txt').read_text(encoding='utf-8-sig')
+        venice = (ROOT/'history/countries/VEN - Venice.txt').read_text(encoding='utf-8-sig')
+        setup = (ROOT/'common/scripted_effects/napoleonic_state_setup.txt').read_text()
+        self.assertNotRegex(prussia, r'(?m)^\s*capital\s*=\s*64\b')
+        self.assertNotRegex(venice, r'(?m)^\s*capital\s*=\s*160\b')
+        self.assertIn('PRU = { set_capital = 64 }', setup)
+        self.assertIn('VEN = { set_capital = 160 }', setup)
+
+    def test_all_mod_declared_tags_have_history_files(self):
+        tag_file = (ROOT/'common/country_tags/00_napoleonic_countries.txt').read_text()
+        tags = {
+            m.group(1) for m in
+            (re.match(r'\s*([A-Z0-9]{3})\s*=', line) for line in tag_file.splitlines())
+            if m
+        }
+        histories = {p.name[:3] for p in (ROOT/'history/countries').glob('*.txt')}
+        self.assertFalse(tags - histories, sorted(tags - histories))
+
+    def test_generated_tga_assets_are_32bpp(self):
+        for path in (
+            ROOT/'gfx/flags/FRA.tga',
+            ROOT/'gfx/leaders/ENG/nap_william_pitt_the_younger.tga',
+        ):
+            data = path.read_bytes()
+            self.assertGreaterEqual(len(data), 18, str(path))
+            self.assertEqual(data[16], 32, str(path))
+
+    def test_sound_effects_have_category(self):
+        text = (ROOT/'sound/napoleonic.asset').read_text()
+        self.assertIn('name = "nap_event_sfx"', text)
+        for effect in ('nap_dispatch_effect','nap_crowd_effect','nap_cannon_effect'):
+            self.assertIn(effect, text)
+
+    def test_history_portrait_fields_match_leader_type(self):
+        country = (ROOT/'history/countries/ENG - Great Britain.txt').read_text(encoding='utf-8-sig')
+        self.assertRegex(country, r'(?s)create_country_leader\s*=\s*\{.*?picture\s*=\s*GFX_NAP_PORTRAIT_')
+        self.assertRegex(country, r'(?s)create_(?:field_marshal|corps_commander|navy_leader)\s*=\s*\{.*?portrait_path\s*=\s*"gfx/leaders/ENG/')
+
+    def test_opening_non_aggression_pacts_are_not_created_twice(self):
+        text = (ROOT/'common/scripted_effects/napoleonic_diplomacy_setup.txt').read_text()
+        targets = re.findall(
+            r'diplomatic_relation\s*=\s*\{\s*country\s*=\s*([A-Z]{3})\s*relation\s*=\s*non_aggression_pact',
+            text
+        )
+        self.assertEqual(targets.count('HAB'), 1)
+        self.assertEqual(targets.count('PRU'), 1)
+        self.assertEqual(targets.count('NET'), 2)
+        self.assertEqual(targets.count('ENG'), 0)
+
     def test_credits_are_not_in_engine_parsed_music_txt(self):
         self.assertFalse((ROOT/'music/Credits.txt').exists())
         self.assertTrue((ROOT/'docs/music-credits.md').exists())

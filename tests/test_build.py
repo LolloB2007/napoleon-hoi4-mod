@@ -25,9 +25,9 @@ class BuildTests(unittest.TestCase):
                 parse(text)
     def test_flags_sizes(self):
         files = build(ROOT)
-        self.assertEqual(len(files['gfx/flags/FRA.tga']), 18 + 82 * 52 * 3)
-        self.assertEqual(len(files['gfx/flags/medium/FRA.tga']), 18 + 41 * 26 * 3)
-        self.assertEqual(len(files['gfx/flags/small/FRA.tga']), 18 + 10 * 7 * 3)
+        self.assertEqual(len(files['gfx/flags/FRA.tga']), 18 + 82 * 52 * 4)
+        self.assertEqual(len(files['gfx/flags/medium/FRA.tga']), 18 + 41 * 26 * 4)
+        self.assertEqual(len(files['gfx/flags/small/FRA.tga']), 18 + 10 * 7 * 4)
     def test_a02_open_ended_campaign(self):
         defines=(ROOT/'common/defines/napoleonic_defines.lua').read_text()
         self.assertIn('END_DATE = "9999.1.1.1"',defines)
