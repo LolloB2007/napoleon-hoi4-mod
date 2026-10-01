@@ -400,8 +400,12 @@ def _patch_events(text):
         m=re.search(r"\bid\s*=\s*([A-Za-z0-9_.]+)",block)
         if not m: continue
         # Only decorate event definitions. Effect calls contain an id and delay
-        # but must not receive definition-only fields such as picture.
-        if not re.search(r"(?m)^\s*(?:title|desc)\s*=",block): continue
+        # but must not receive definition-only fields such as picture. Also
+        # remove stale picture lines produced by older generator revisions.
+        if not re.search(r"(?m)^\s*(?:title|desc)\s*=",block):
+            block=re.sub(r"(?m)^\s*picture\s*=\s*[^\n]+\n?","",block)
+            text=text[:start]+block+text[end:]
+            continue
         index=(_seed(m.group(1))%12)+1; gfx=f"GFX_NAP_EVENT_{index:02d}"
         if re.search(r"\bpicture\s*=",block):
             block=re.sub(r"\bpicture\s*=\s*[^\s}]+",f"picture = {gfx}",block,count=1)
